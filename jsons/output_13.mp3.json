@@ -1,0 +1,1356 @@
+{
+  "chunks": [
+    {
+      "number": "output",
+      "title": "",
+      "start": 0.0,
+      "end": 7.0,
+      "text": " Okay, great."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 7.0,
+      "end": 18.48,
+      "text": " Well, thank you for the great setup."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 18.48,
+      "end": 21.44,
+      "text": " So for this section, I'm going to talk about some of our work in interpreting mammograms"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 21.44,
+      "end": 25.36,
+      "text": " for cancer, specifically it's going to go into cancer detection and triaging mammograms."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 25.36,
+      "end": 28.8,
+      "text": " Next, we'll talk about kind of our technical approach to breast cancer risk."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 29.28,
+      "end": 32.76,
+      "text": " And then finally close up on the many, many different ways to mess up and the way things"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 32.76,
+      "end": 35.160000000000004,
+      "text": " can go wrong and how to support clinical implementation."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 35.160000000000004,
+      "end": 38.92,
+      "text": " So let's kind of look more closely at the numbers of the actual breast cancer screening"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 38.92,
+      "end": 39.92,
+      "text": " workflow."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 39.92,
+      "end": 43.96,
+      "text": " So as Connie already said, you might see something like a thousand patients, all of them take"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 43.96,
+      "end": 47.760000000000005,
+      "text": " mammograms and of that thousand, on average, maybe a hundred will be called back for additional"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 47.760000000000005,
+      "end": 48.760000000000005,
+      "text": " imaging."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 48.760000000000005,
+      "end": 53.16,
+      "text": " Of that hundred, something like 20 will get biopsied and you'll end up with maybe five"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 53.16,
+      "end": 55.2,
+      "text": " or six diagnoses of breast cancer."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 55.2,
+      "end": 61.040000000000006,
+      "text": " So one very clear thing you see about problems when you look at this funnel is that way over"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 61.040000000000006,
+      "end": 64.72,
+      "text": " 99% of people that you see in a given day are cancer free."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 64.72,
+      "end": 67.32000000000001,
+      "text": " So your actual incidence is very low."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 67.32000000000001,
+      "end": 69.52000000000001,
+      "text": " And so there's kind of a natural question that can come up."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 69.52000000000001,
+      "end": 74.0,
+      "text": " What can you do in terms of modeling, if you have an even okay cancer detection model to"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 74.0,
+      "end": 77.52000000000001,
+      "text": " raise the incidence of this population, but I'm actually reading a portion of the population"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 77.52000000000001,
+      "end": 78.52000000000001,
+      "text": " is healthy."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 78.52000000000001,
+      "end": 80.64,
+      "text": " So everybody just follow that broad idea."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 80.64,
+      "end": 83.76,
+      "text": " Okay, that's enough head nods."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 83.76,
+      "end": 87.36,
+      "text": " So the broad idea here is we're going to train a cancer detection model to try to find"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 87.36,
+      "end": 89.24000000000001,
+      "text": " cancer as well as we can."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 89.24000000000001,
+      "end": 93.04,
+      "text": " Given that, we're going to try to say what's a threshold on a development set such that"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 93.04,
+      "end": 95.72,
+      "text": " we can kind of say below the threshold, no one has cancer."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 95.72,
+      "end": 99.44,
+      "text": " And if we use that at test time, simulating clinical application, what would that look"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 99.44,
+      "end": 103.84,
+      "text": " like and can we actually do better by doing this kind of process?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 103.84,
+      "end": 106.72,
+      "text": " And the kind of broad plan of how I'm going to talk about this, I'm going to do this for"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 106.72,
+      "end": 107.72,
+      "text": " the next product as well."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 107.72,
+      "end": 110.36000000000001,
+      "text": " First, we're going to talk about the kind of data set collection and how we think about"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 110.84,
+      "end": 113.84,
+      "text": " what is good data and how do we think about that."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 113.84,
+      "end": 118.64,
+      "text": " Next, the actual methodology and kind of go into the general challenges when you're modeling"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 118.64,
+      "end": 122.44,
+      "text": " mammograms for any computer vision tasks, specifically in cancer and also obviously"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 122.44,
+      "end": 123.44,
+      "text": " risk."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 123.44,
+      "end": 126.32,
+      "text": " And lastly, how we thought about the analysis and some kind of objectives there."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 126.32,
+      "end": 128.8,
+      "text": " So to kind of dive right into it, we took consecutive mammograms."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 128.8,
+      "end": 129.8,
+      "text": " I'll get back to this later."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 129.8,
+      "end": 131.36,
+      "text": " This is actually quite important."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 131.36,
+      "end": 134.8,
+      "text": " We took consecutive mammograms from 2009 to 2016."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 134.8,
+      "end": 137.8,
+      "text": " This started off with about 280,000 cancers."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 137.8,
+      "end": 142.4,
+      "text": " And once we kind of filtered for at least one year follow-up, we ended up with this"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 142.4,
+      "end": 149.24,
+      "text": " final setting where we had 220,000 mammograms for training and about 26,000 for development"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 149.24,
+      "end": 150.32000000000002,
+      "text": " and testing."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 150.32000000000002,
+      "end": 153.92000000000002,
+      "text": " And the way we had our outcomes to see is this a positive mammogram or not, we didn't"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 153.92000000000002,
+      "end": 156.08,
+      "text": " look at what cancers were caught by the radiologist."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 156.08,
+      "end": 159.84,
+      "text": " We looked at what was cancer that was fine in any means within a year."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 159.84,
+      "end": 163.64000000000001,
+      "text": " And where we looked, we looked through the radiology HR and the partners of kind of five"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 163.64000000000001,
+      "end": 164.92000000000002,
+      "text": " hospital registry."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 165.04,
+      "end": 168.35999999999999,
+      "text": " And they were really trying to say if a cancer, if any way we can tell a cancer occurred,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 168.35999999999999,
+      "end": 172.04,
+      "text": " let's mark it as such, regardless of whether it was caught on MRI or some kind of later"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 172.04,
+      "end": 173.83999999999997,
+      "text": " stage."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 173.83999999999997,
+      "end": 177.88,
+      "text": " And so the thing we're trying to do here is just mimic the real world of what we're trying"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 177.88,
+      "end": 179.27999999999997,
+      "text": " to capture."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 179.27999999999997,
+      "end": 183.39999999999998,
+      "text": " And finally, an important detail is we always split by patient so that you're not just,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 183.39999999999998,
+      "end": 186.95999999999998,
+      "text": " your results aren't just memorizing the specific patient didn't have cancer."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 186.95999999999998,
+      "end": 189.56,
+      "text": " And so you have some overlap that's a bad bias to have."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 189.56,
+      "end": 191.23999999999998,
+      "text": " Okay, that was pretty simple."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 191.23999999999998,
+      "end": 192.51999999999998,
+      "text": " Now let's go into the modeling."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 192.92000000000002,
+      "end": 195.68,
+      "text": " This is going to kind of follow two chunks."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 195.68,
+      "end": 199.64000000000001,
+      "text": " One chunk is going to be on the kind of general challenges and it's kind of shared between"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 199.64000000000001,
+      "end": 200.64000000000001,
+      "text": " the variety of projects."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 200.64000000000001,
+      "end": 205.16000000000003,
+      "text": " And next is going to be kind of more specific analysis for this project."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 205.16000000000003,
+      "end": 208.76000000000002,
+      "text": " So a kind of a general question you might be asking, you know, I have some image, I"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 208.76000000000002,
+      "end": 211.68,
+      "text": " have some outcome, obviously, this is image classification."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 211.68,
+      "end": 213.60000000000002,
+      "text": " How's the image not?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 213.60000000000002,
+      "end": 216.24,
+      "text": " Well, it's quite similar."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 216.24,
+      "end": 217.4,
+      "text": " Most lessons are shared."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 217.4,
+      "end": 219.16000000000003,
+      "text": " But there are some key differences."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 219.16000000000003,
+      "end": 220.52,
+      "text": " So I you know, I give you two examples."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 220.52,
+      "end": 222.88000000000002,
+      "text": " One of them is a scene in my kitchen."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 222.88000000000002,
+      "end": 224.12,
+      "text": " Can anyone tell me what the object is?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 224.12,
+      "end": 226.12,
+      "text": " This is not a particular hard question."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 226.12,
+      "end": 227.12,
+      "text": " Right."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 227.12,
+      "end": 228.12,
+      "text": " Yeah."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 228.12,
+      "end": 231.4,
+      "text": " It is almost all of those things."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 231.4,
+      "end": 233.24,
+      "text": " So that is my dog, the best dog."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 233.24,
+      "end": 238.8,
+      "text": " Okay, so can anyone tell me, now you had some training with Connie, if this mammogram indicates"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 238.8,
+      "end": 239.8,
+      "text": " cancer?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 239.8,
+      "end": 242.44,
+      "text": " Well, it does."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 242.44,
+      "end": 244.88,
+      "text": " And this is this is unfair for a couple of reasons."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 244.88,
+      "end": 247.28,
+      "text": " But let's kind of go into like why this is hard."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 247.28,
+      "end": 249.4,
+      "text": " It's unfair in part because you know, you don't have the training, but it's actually"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 249.4,
+      "end": 252.0,
+      "text": " a much harder signal to learn."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 252.0,
+      "end": 255.8,
+      "text": " So first, let's kind of delve into it."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 255.8,
+      "end": 258.24,
+      "text": " In this kind of task, the image is really huge."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 258.24,
+      "end": 263.56,
+      "text": " So you have something like a 3200 by 2600 pixel image, this is a single view of a breast."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 263.56,
+      "end": 267.12,
+      "text": " And in that the actual cancer looking for might be 50 by 50 pixels."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 267.12,
+      "end": 269.4,
+      "text": " So intuitively, your signal to noise ratio is very different."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 269.4,
+      "end": 273.88,
+      "text": " Whereas an image in that my dog is like the entire image is huge, in real life and in"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 273.88,
+      "end": 275.4,
+      "text": " that photo."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 275.4,
+      "end": 276.68,
+      "text": " And the image itself is much smaller."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 276.76,
+      "end": 280.84000000000003,
+      "text": " So not only do you have much smaller images, but you're kind of like the relative size"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 280.84000000000003,
+      "end": 282.84000000000003,
+      "text": " the object in there is much larger."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 282.84000000000003,
+      "end": 287.04,
+      "text": " To kind of further compound the difficulty, the pattern that you're looking for inside"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 287.04,
+      "end": 289.56,
+      "text": " the mammogram is really context dependent."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 289.56,
+      "end": 293.24,
+      "text": " So if you saw that pattern somewhere else in the breast does not doesn't indicate the"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 293.24,
+      "end": 294.98,
+      "text": " same thing."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 294.98,
+      "end": 298.7,
+      "text": " And so you really care about where in this kind of global context, this comes out."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 298.7,
+      "end": 302.16,
+      "text": " And if you kind of take the mammogram, it's different times with different compressions,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 302.16,
+      "end": 306.20000000000005,
+      "text": " you have this kind of non rigid morphing of the image that's much more difficult to"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 306.20000000000005,
+      "end": 307.20000000000005,
+      "text": " model."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 307.20000000000005,
+      "end": 311.44,
+      "text": " Whereas that's a more or less context independent dog, you see that kind of frame kind of anywhere"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 311.44,
+      "end": 312.44,
+      "text": " you know it's a dog."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 312.44,
+      "end": 317.42,
+      "text": " And so it's a much easier thing to learn in a traditional computer vision setting."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 317.42,
+      "end": 321.32000000000005,
+      "text": " And so the core challenge here is that both images too big and too small."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 321.32000000000005,
+      "end": 325.0,
+      "text": " So if you look at just like the number of cancers we have, it's going to be the cancer"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 325.0,
+      "end": 329.44000000000005,
+      "text": " might be less than 1% of the mammogram, and about point 7% of images have cancer."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 329.76,
+      "end": 334.6,
+      "text": " Even in this data set, which is from 2009 to 2016, MGH, a massive imaging center, in"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 334.6,
+      "end": 339.2,
+      "text": " total across all of that we will still have like less than 2000 cancers."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 339.2,
+      "end": 343.76,
+      "text": " And this is super tiny compared to like regular object classification data sets."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 343.76,
+      "end": 347.24,
+      "text": " And this is, you know, looking at over a million images, look at all the four views of the"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 347.24,
+      "end": 348.24,
+      "text": " exams."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 348.24,
+      "end": 349.96,
+      "text": " And at the same time, it's also too big."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 349.96,
+      "end": 355.32,
+      "text": " So even if I don't simply these images, I can only really fit three of them for a single"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 355.32,
+      "end": 356.74,
+      "text": " GPU."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 356.74,
+      "end": 359.86,
+      "text": " And so this kind of limits the batch size I can work with."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 359.86,
+      "end": 363.26,
+      "text": " And whereas the kind of comparable, such as just the regular image net size, I could fit"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 363.26,
+      "end": 367.02,
+      "text": " batch sizes of 128, easily happy days and do all this parallelization stuff, and it's"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 367.02,
+      "end": 368.90000000000003,
+      "text": " just much easier to play with."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 368.90000000000003,
+      "end": 371.02,
+      "text": " And finally, the actual data set itself is quite large."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 371.02,
+      "end": 374.56,
+      "text": " And so you have to do some, there's nuisances to deal with in terms of like just setting"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 374.56,
+      "end": 378.62,
+      "text": " up your server infrastructure to handle these massive data sets, while still be able to"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 378.62,
+      "end": 381.86,
+      "text": " train efficiently."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 381.86,
+      "end": 385.94,
+      "text": " So you know, the core challenge here across all of these kind of tasks is how do we make"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 386.14,
+      "end": 387.34,
+      "text": " this model actually learn?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 387.34,
+      "end": 389.66,
+      "text": " The core problem is that our signal flow is quite low."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 389.66,
+      "end": 391.9,
+      "text": " So training ends up being quite unstable."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 391.9,
+      "end": 394.84,
+      "text": " And there's a kind of, you know, a couple of simple levers we can play with."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 394.84,
+      "end": 399.22,
+      "text": " The first lever is as often deep learning initialization."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 399.22,
+      "end": 402.06,
+      "text": " Next we're going to talk about kind of the optimization or architecture choice, and how"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 402.06,
+      "end": 406.14,
+      "text": " this compares to what people often do in the community, including in a recent paper from"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 406.14,
+      "end": 407.14,
+      "text": " yesterday."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 407.14,
+      "end": 410.9,
+      "text": " And then finally, we're going to talk about stuff more explicit for the triage idea, how"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 410.9,
+      "end": 413.62,
+      "text": " we actually use this model once it's trained."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 413.66,
+      "end": 417.14,
+      "text": " Okay, so before I kind of go into how we made these choices, I'm just going to say what"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 417.14,
+      "end": 420.38,
+      "text": " we chose to give you context before I dive in."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 420.38,
+      "end": 425.42,
+      "text": " So we follow some like image initialization, we use a relatively large batch size ish of"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 425.42,
+      "end": 426.42,
+      "text": " 24."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 426.42,
+      "end": 429.62,
+      "text": " And the way we do this by just taking four GPUs and just stepping a couple times before"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 429.62,
+      "end": 431.26,
+      "text": " doing an optimizer step."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 431.26,
+      "end": 435.02,
+      "text": " So you do a couple rounds of backprop first to accumulate those gradients before doing"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 435.02,
+      "end": 436.02,
+      "text": " optimization."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 436.02,
+      "end": 438.9,
+      "text": " And you sample balanced batches at training time."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 438.9,
+      "end": 441.06,
+      "text": " And for backbone architecture, we use ResNet-18."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 441.06,
+      "end": 443.14,
+      "text": " So just kind of like fairly standard."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 443.14,
+      "end": 449.7,
+      "text": " Okay, but as I said before, one of the first key decisions is how do you think about initialization?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 449.7,
+      "end": 453.94,
+      "text": " So this is a figure of image initialization versus random initialization."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 453.94,
+      "end": 456.1,
+      "text": " It's not any particular experiment."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 456.1,
+      "end": 457.9,
+      "text": " I've done this across many, many times."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 457.9,
+      "end": 463.3,
+      "text": " It's always like this, where if you use image initialization, your loss drops immediately,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 463.3,
+      "end": 466.5,
+      "text": " both in train loss and development loss, and you actually learn something."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 466.5,
+      "end": 469.98,
+      "text": " Whereas when you do random initialization, you kind of don't learn anything, and your"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 469.98,
+      "end": 474.1,
+      "text": " loss kind of bounds around the top for a very long time before it finds some region"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 474.1,
+      "end": 477.14000000000004,
+      "text": " where it quickly starts learning, and then it'll plateau again for a long time before"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 477.14000000000004,
+      "end": 479.1,
+      "text": " it quickly starts learning."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 479.1,
+      "end": 483.34000000000003,
+      "text": " And to kind of give some context, to give about 15 epochs takes on the order of like"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 483.34000000000003,
+      "end": 486.24,
+      "text": " 15, 16 hours."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 486.24,
+      "end": 490.58000000000004,
+      "text": " And so to wait long enough to even see if random initialization could perform as well"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 490.58000000000004,
+      "end": 492.70000000000005,
+      "text": " is beyond my level of patience."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 492.70000000000005,
+      "end": 496.04,
+      "text": " It just takes too long, and there's other experiments to be running."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 496.04,
+      "end": 500.32,
+      "text": " So this is more of an empirical observation that the image initialization learns immediately,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 500.32,
+      "end": 503.16,
+      "text": " and there's some kind of questions of why is this?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 503.16,
+      "end": 505.40000000000003,
+      "text": " Our theoretical understanding of this is not that strong."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 505.40000000000003,
+      "end": 507.70000000000005,
+      "text": " We have some intuitions of why this might be happening."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 507.70000000000005,
+      "end": 512.72,
+      "text": " We don't think it's anything about this particular filter of this dog is really great for breast"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 512.72,
+      "end": 514.16,
+      "text": " cancer."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 514.16,
+      "end": 515.16,
+      "text": " That's quite implausible."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 515.16,
+      "end": 519.0,
+      "text": " But if you look into a lot of the earlier research in terms of the right kind of random"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 519.0,
+      "end": 523.28,
+      "text": " initialization for things like ReLU networks, a lot of focus was on does the activation"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 523.28,
+      "end": 525.96,
+      "text": " pattern not blow up as you go further down the line?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 526.88,
+      "end": 530.84,
+      "text": " One of the benefits of starting with a pre-trained network is that a lot of those kind of dynamics"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 530.84,
+      "end": 532.84,
+      "text": " are already figured out for a specific task."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 532.84,
+      "end": 537.1600000000001,
+      "text": " And so shifting from that to other tasks has seemed to be not that challenging."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 537.1600000000001,
+      "end": 540.46,
+      "text": " Another possible area of explanation is actually in the batch norm statistics."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 540.46,
+      "end": 543.36,
+      "text": " So if you remember, we can only really fit three images per GPU."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 543.36,
+      "end": 547.88,
+      "text": " And the way the batch normalization is implemented across every deep learning library that I"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 547.88,
+      "end": 552.9000000000001,
+      "text": " know of, it computes it independently per GPU to minimize this kind of inter-GPU communication."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 552.9000000000001,
+      "end": 555.9000000000001,
+      "text": " And so it's also less stable to kind of guess from scratch."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 556.84,
+      "end": 558.98,
+      "text": " But if you're starting with the batch norm statistics, from ImageNet and just slowly"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 558.98,
+      "end": 564.9,
+      "text": " shifting it over, it might also result in some stability benefits."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 564.9,
+      "end": 568.5799999999999,
+      "text": " But in general, a true deep-earth theoretical understanding of what this is still eludes"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 568.5799999999999,
+      "end": 574.1,
+      "text": " us and isn't something I can give too much conclusions about, unfortunately."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 574.1,
+      "end": 576.02,
+      "text": " OK, so that's initialization."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 576.02,
+      "end": 578.66,
+      "text": " And if you don't get this right, nothing works for a very long time."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 578.66,
+      "end": 581.6999999999999,
+      "text": " So if you're going to start a project in this space, try this."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 581.7,
+      "end": 586.1,
+      "text": " Next, another important decision that if you don't do kind of breaks is your optimization"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 586.1,
+      "end": 587.1,
+      "text": " architecture choice."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 587.1,
+      "end": 591.7800000000001,
+      "text": " So as I said before, kind of a core problem in stability here is this idea that our just"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 591.7800000000001,
+      "end": 594.1400000000001,
+      "text": " signal-to-noise ratio is really low."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 594.1400000000001,
+      "end": 597.7,
+      "text": " And so a very common approach throughout a lot of the prior work and things I actually"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 597.7,
+      "end": 600.7,
+      "text": " have tried myself before is to say, OK."
+    }
+  ],
+  "text": " Okay, great. Well, thank you for the great setup. So for this section, I'm going to talk about some of our work in interpreting mammograms for cancer, specifically it's going to go into cancer detection and triaging mammograms. Next, we'll talk about kind of our technical approach to breast cancer risk. And then finally close up on the many, many different ways to mess up and the way things can go wrong and how to support clinical implementation. So let's kind of look more closely at the numbers of the actual breast cancer screening workflow. So as Connie already said, you might see something like a thousand patients, all of them take mammograms and of that thousand, on average, maybe a hundred will be called back for additional imaging. Of that hundred, something like 20 will get biopsied and you'll end up with maybe five or six diagnoses of breast cancer. So one very clear thing you see about problems when you look at this funnel is that way over 99% of people that you see in a given day are cancer free. So your actual incidence is very low. And so there's kind of a natural question that can come up. What can you do in terms of modeling, if you have an even okay cancer detection model to raise the incidence of this population, but I'm actually reading a portion of the population is healthy. So everybody just follow that broad idea. Okay, that's enough head nods. So the broad idea here is we're going to train a cancer detection model to try to find cancer as well as we can. Given that, we're going to try to say what's a threshold on a development set such that we can kind of say below the threshold, no one has cancer. And if we use that at test time, simulating clinical application, what would that look like and can we actually do better by doing this kind of process? And the kind of broad plan of how I'm going to talk about this, I'm going to do this for the next product as well. First, we're going to talk about the kind of data set collection and how we think about what is good data and how do we think about that. Next, the actual methodology and kind of go into the general challenges when you're modeling mammograms for any computer vision tasks, specifically in cancer and also obviously risk. And lastly, how we thought about the analysis and some kind of objectives there. So to kind of dive right into it, we took consecutive mammograms. I'll get back to this later. This is actually quite important. We took consecutive mammograms from 2009 to 2016. This started off with about 280,000 cancers. And once we kind of filtered for at least one year follow-up, we ended up with this final setting where we had 220,000 mammograms for training and about 26,000 for development and testing. And the way we had our outcomes to see is this a positive mammogram or not, we didn't look at what cancers were caught by the radiologist. We looked at what was cancer that was fine in any means within a year. And where we looked, we looked through the radiology HR and the partners of kind of five hospital registry. And they were really trying to say if a cancer, if any way we can tell a cancer occurred, let's mark it as such, regardless of whether it was caught on MRI or some kind of later stage. And so the thing we're trying to do here is just mimic the real world of what we're trying to capture. And finally, an important detail is we always split by patient so that you're not just, your results aren't just memorizing the specific patient didn't have cancer. And so you have some overlap that's a bad bias to have. Okay, that was pretty simple. Now let's go into the modeling. This is going to kind of follow two chunks. One chunk is going to be on the kind of general challenges and it's kind of shared between the variety of projects. And next is going to be kind of more specific analysis for this project. So a kind of a general question you might be asking, you know, I have some image, I have some outcome, obviously, this is image classification. How's the image not? Well, it's quite similar. Most lessons are shared. But there are some key differences. So I you know, I give you two examples. One of them is a scene in my kitchen. Can anyone tell me what the object is? This is not a particular hard question. Right. Yeah. It is almost all of those things. So that is my dog, the best dog. Okay, so can anyone tell me, now you had some training with Connie, if this mammogram indicates cancer? Well, it does. And this is this is unfair for a couple of reasons. But let's kind of go into like why this is hard. It's unfair in part because you know, you don't have the training, but it's actually a much harder signal to learn. So first, let's kind of delve into it. In this kind of task, the image is really huge. So you have something like a 3200 by 2600 pixel image, this is a single view of a breast. And in that the actual cancer looking for might be 50 by 50 pixels. So intuitively, your signal to noise ratio is very different. Whereas an image in that my dog is like the entire image is huge, in real life and in that photo. And the image itself is much smaller. So not only do you have much smaller images, but you're kind of like the relative size the object in there is much larger. To kind of further compound the difficulty, the pattern that you're looking for inside the mammogram is really context dependent. So if you saw that pattern somewhere else in the breast does not doesn't indicate the same thing. And so you really care about where in this kind of global context, this comes out. And if you kind of take the mammogram, it's different times with different compressions, you have this kind of non rigid morphing of the image that's much more difficult to model. Whereas that's a more or less context independent dog, you see that kind of frame kind of anywhere you know it's a dog. And so it's a much easier thing to learn in a traditional computer vision setting. And so the core challenge here is that both images too big and too small. So if you look at just like the number of cancers we have, it's going to be the cancer might be less than 1% of the mammogram, and about point 7% of images have cancer. Even in this data set, which is from 2009 to 2016, MGH, a massive imaging center, in total across all of that we will still have like less than 2000 cancers. And this is super tiny compared to like regular object classification data sets. And this is, you know, looking at over a million images, look at all the four views of the exams. And at the same time, it's also too big. So even if I don't simply these images, I can only really fit three of them for a single GPU. And so this kind of limits the batch size I can work with. And whereas the kind of comparable, such as just the regular image net size, I could fit batch sizes of 128, easily happy days and do all this parallelization stuff, and it's just much easier to play with. And finally, the actual data set itself is quite large. And so you have to do some, there's nuisances to deal with in terms of like just setting up your server infrastructure to handle these massive data sets, while still be able to train efficiently. So you know, the core challenge here across all of these kind of tasks is how do we make this model actually learn? The core problem is that our signal flow is quite low. So training ends up being quite unstable. And there's a kind of, you know, a couple of simple levers we can play with. The first lever is as often deep learning initialization. Next we're going to talk about kind of the optimization or architecture choice, and how this compares to what people often do in the community, including in a recent paper from yesterday. And then finally, we're going to talk about stuff more explicit for the triage idea, how we actually use this model once it's trained. Okay, so before I kind of go into how we made these choices, I'm just going to say what we chose to give you context before I dive in. So we follow some like image initialization, we use a relatively large batch size ish of 24. And the way we do this by just taking four GPUs and just stepping a couple times before doing an optimizer step. So you do a couple rounds of backprop first to accumulate those gradients before doing optimization. And you sample balanced batches at training time. And for backbone architecture, we use ResNet-18. So just kind of like fairly standard. Okay, but as I said before, one of the first key decisions is how do you think about initialization? So this is a figure of image initialization versus random initialization. It's not any particular experiment. I've done this across many, many times. It's always like this, where if you use image initialization, your loss drops immediately, both in train loss and development loss, and you actually learn something. Whereas when you do random initialization, you kind of don't learn anything, and your loss kind of bounds around the top for a very long time before it finds some region where it quickly starts learning, and then it'll plateau again for a long time before it quickly starts learning. And to kind of give some context, to give about 15 epochs takes on the order of like 15, 16 hours. And so to wait long enough to even see if random initialization could perform as well is beyond my level of patience. It just takes too long, and there's other experiments to be running. So this is more of an empirical observation that the image initialization learns immediately, and there's some kind of questions of why is this? Our theoretical understanding of this is not that strong. We have some intuitions of why this might be happening. We don't think it's anything about this particular filter of this dog is really great for breast cancer. That's quite implausible. But if you look into a lot of the earlier research in terms of the right kind of random initialization for things like ReLU networks, a lot of focus was on does the activation pattern not blow up as you go further down the line? One of the benefits of starting with a pre-trained network is that a lot of those kind of dynamics are already figured out for a specific task. And so shifting from that to other tasks has seemed to be not that challenging. Another possible area of explanation is actually in the batch norm statistics. So if you remember, we can only really fit three images per GPU. And the way the batch normalization is implemented across every deep learning library that I know of, it computes it independently per GPU to minimize this kind of inter-GPU communication. And so it's also less stable to kind of guess from scratch. But if you're starting with the batch norm statistics, from ImageNet and just slowly shifting it over, it might also result in some stability benefits. But in general, a true deep-earth theoretical understanding of what this is still eludes us and isn't something I can give too much conclusions about, unfortunately. OK, so that's initialization. And if you don't get this right, nothing works for a very long time. So if you're going to start a project in this space, try this. Next, another important decision that if you don't do kind of breaks is your optimization architecture choice. So as I said before, kind of a core problem in stability here is this idea that our just signal-to-noise ratio is really low. And so a very common approach throughout a lot of the prior work and things I actually have tried myself before is to say, OK."
+}

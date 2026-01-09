@@ -1,0 +1,1342 @@
+{
+  "chunks": [
+    {
+      "number": "output",
+      "title": "",
+      "start": 0.0,
+      "end": 18.12,
+      "text": " Today we'll be talking about risk stratification."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 18.12,
+      "end": 19.44,
+      "text": " After giving you a broad overview"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 19.44,
+      "end": 21.12,
+      "text": " of what I mean by risk stratification,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 21.12,
+      "end": 24.240000000000002,
+      "text": " I'm going to give you a case study, which"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 24.240000000000002,
+      "end": 27.28,
+      "text": " you read about in your readings for today's lecture,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 27.28,
+      "end": 29.92,
+      "text": " coming from early detection of type 2 diabetes."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 29.92,
+      "end": 31.44,
+      "text": " And I won't be, of course, repeating"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 31.44,
+      "end": 35.02,
+      "text": " the same material you heard you write about in your readings."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 35.02,
+      "end": 38.88,
+      "text": " Rather, I'll be giving some interesting color around what"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 38.88,
+      "end": 40.44,
+      "text": " are some of the questions that we"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 40.44,
+      "end": 42.6,
+      "text": " need to be thinking about as machine learning people"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 42.6,
+      "end": 45.36,
+      "text": " when we try to apply machine learning to problems like this."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 45.36,
+      "end": 48.8,
+      "text": " Then I'll talk about some of the subtleties, what"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 48.8,
+      "end": 51.480000000000004,
+      "text": " can go wrong with machine learning-based approaches"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 51.480000000000004,
+      "end": 53.400000000000006,
+      "text": " to risk stratification."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 53.400000000000006,
+      "end": 56.46,
+      "text": " And finally, the last half of today's lecture"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 56.46,
+      "end": 58.7,
+      "text": " is going to be a discussion."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 58.7,
+      "end": 63.38,
+      "text": " So about 3 PM, you'll see a man walk through the door."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 63.38,
+      "end": 66.46000000000001,
+      "text": " His name is Leonard Davolio."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 66.46000000000001,
+      "end": 69.82,
+      "text": " He is a professor at Brigham and Women's Hospital."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 69.82,
+      "end": 73.38,
+      "text": " He also has a startup company called"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 73.38,
+      "end": 76.5,
+      "text": " SIFT, which is working on applying risk stratification"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 76.5,
+      "end": 76.82,
+      "text": " now."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 76.82,
+      "end": 78.18,
+      "text": " And they have lots of clients."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 78.18,
+      "end": 82.12,
+      "text": " And they've been really deep in the details"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 82.12,
+      "end": 83.86,
+      "text": " of how to make this stuff work."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 83.86,
+      "end": 87.34,
+      "text": " And so we'll have an interview between myself and him."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 87.34,
+      "end": 89.34,
+      "text": " And we'll have opportunity for all of you"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 89.34,
+      "end": 90.42,
+      "text": " to ask questions as well."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 90.42,
+      "end": 92.1,
+      "text": " And I think that's what I hope will"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 92.1,
+      "end": 93.98,
+      "text": " be the most exciting part of today's lecture."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 96.5,
+      "end": 99.66,
+      "text": " Then going on beyond today's lecture,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 99.66,
+      "end": 102.2,
+      "text": " we are now in the beginning of a sequence of three lectures"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 102.2,
+      "end": 103.66,
+      "text": " on very similar topics."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 103.66,
+      "end": 106.1,
+      "text": " So next Thursday, we'll be talking about survival"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 106.1,
+      "end": 106.62,
+      "text": " modeling."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 106.62,
+      "end": 109.2,
+      "text": " And you can think about it as an extension of today's lecture,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 109.2,
+      "end": 112.46000000000001,
+      "text": " talking about what you should do if your data has centering,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 112.46,
+      "end": 115.25999999999999,
+      "text": " which I'll define for you shortly."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 115.25999999999999,
+      "end": 117.61999999999999,
+      "text": " Although today's lecture is going to be a little bit more"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 117.61999999999999,
+      "end": 119.74,
+      "text": " high level, next Thursday's lecture"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 119.74,
+      "end": 121.58,
+      "text": " is where we're going to really start to get"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 121.58,
+      "end": 124.17999999999999,
+      "text": " into mathematical details about how"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 124.17999999999999,
+      "end": 126.13999999999999,
+      "text": " one should tackle machine learning"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 126.13999999999999,
+      "end": 127.97999999999999,
+      "text": " problems with censored data."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 127.97999999999999,
+      "end": 130.42,
+      "text": " And then the following lecture after that"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 130.42,
+      "end": 133.01999999999998,
+      "text": " is going to be on physiological data."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 133.01999999999998,
+      "end": 135.74,
+      "text": " And that lecture will also be much more technical in nature"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 135.74,
+      "end": 138.38,
+      "text": " compared to the first couple of weeks of the course."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 139.06,
+      "end": 143.7,
+      "text": " So what is risk stratification?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 143.7,
+      "end": 145.9,
+      "text": " At a high level, you think about risk stratification"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 145.9,
+      "end": 151.26,
+      "text": " as a way of taking in a patient population"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 151.26,
+      "end": 154.28,
+      "text": " and separating out all of your patients"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 154.28,
+      "end": 157.14,
+      "text": " into one of two or more categories,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 157.14,
+      "end": 159.94,
+      "text": " patients with high risk, patients with low risk,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 159.94,
+      "end": 164.14,
+      "text": " and maybe patients somewhere in the middle."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 164.14,
+      "end": 167.62,
+      "text": " Now, the reason why we might want to do risk stratification"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 167.62,
+      "end": 169.66,
+      "text": " is because we usually want to try"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 169.66,
+      "end": 171.62,
+      "text": " to act on those predictions."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 171.62,
+      "end": 175.9,
+      "text": " So the goals are often one of coupling those predictions"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 175.9,
+      "end": 177.5,
+      "text": " with known interventions."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 177.5,
+      "end": 180.06,
+      "text": " So for example, patients in the high risk pool,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 180.06,
+      "end": 182.20000000000002,
+      "text": " we will attempt to do something for those patients"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 182.20000000000002,
+      "end": 188.18,
+      "text": " to prevent whatever that outcome is of interest from occurring."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 188.18,
+      "end": 191.66,
+      "text": " Now, risk stratification is quite different from diagnosis."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 191.66,
+      "end": 198.32,
+      "text": " Diagnosis often has very, very stringent criteria"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 198.32,
+      "end": 200.48,
+      "text": " on performance."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 200.48,
+      "end": 203.14,
+      "text": " If you do a misdiagnosis of something,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 203.14,
+      "end": 205.38,
+      "text": " that can have very severe consequences"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 205.38,
+      "end": 208.48,
+      "text": " in terms of patients being treated for conditions"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 208.48,
+      "end": 212.14,
+      "text": " that they didn't need to be treated for and patients"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 212.14,
+      "end": 218.66,
+      "text": " dying because they were not diagnosed in time."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 218.66,
+      "end": 220.18,
+      "text": " Now, risk stratification, you think"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 220.18,
+      "end": 222.34,
+      "text": " of it as a little bit more fuzzy in nature."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 222.34,
+      "end": 224.18,
+      "text": " We want to do our best job of trying"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 224.18,
+      "end": 226.82,
+      "text": " to push patients into each of these categories,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 226.82,
+      "end": 229.22,
+      "text": " high risk, low risk, and so on."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 229.22,
+      "end": 233.22,
+      "text": " And as I'll show you throughout today's lecture,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 233.22,
+      "end": 235.88,
+      "text": " the performance characteristics that we'll often care about"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 235.88,
+      "end": 237.46,
+      "text": " are going to be a bit different."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 237.46,
+      "end": 240.62,
+      "text": " We're going to look a bit more at quantities"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 240.62,
+      "end": 242.54000000000002,
+      "text": " such as positive predictive value."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 242.54000000000002,
+      "end": 244.70000000000002,
+      "text": " Are we finding of the patients we say are high risk,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 244.70000000000002,
+      "end": 247.42000000000002,
+      "text": " what fraction of them are actually high risk?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 247.42,
+      "end": 250.61999999999998,
+      "text": " And in that way, it differs a bit from diagnosis."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 250.61999999999998,
+      "end": 253.45999999999998,
+      "text": " Also, as a result of the goals being different,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 253.45999999999998,
+      "end": 255.5,
+      "text": " the data that's used is often very different."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 255.5,
+      "end": 256.94,
+      "text": " In risk stratification, often we use"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 256.94,
+      "end": 259.09999999999997,
+      "text": " data which is very diverse."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 261.65999999999997,
+      "end": 265.76,
+      "text": " So you might bring in multiple views of a patient."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 265.76,
+      "end": 269.3,
+      "text": " You might use auxiliary data such as patient's demographics,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 269.3,
+      "end": 271.53999999999996,
+      "text": " maybe even socioeconomic information about a patient,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 271.53999999999996,
+      "end": 274.78,
+      "text": " all of which very much affect their risk profiles"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 274.82,
+      "end": 281.02,
+      "text": " but may not be used for an unbiased diagnosis of a patient."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 284.82,
+      "end": 290.53999999999996,
+      "text": " And finally, in today's economic environment,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 290.53999999999996,
+      "end": 292.7,
+      "text": " risk stratification is very much targeted"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 292.7,
+      "end": 297.46,
+      "text": " towards reducing cost of the US health care setting."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 297.46,
+      "end": 300.29999999999995,
+      "text": " And so I'll give you a few examples of risk stratification,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 300.3,
+      "end": 306.1,
+      "text": " some of which have cost as a major goal, others which don't."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 306.1,
+      "end": 308.58,
+      "text": " The first example is that of predicting an infant's"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 308.58,
+      "end": 311.02000000000004,
+      "text": " risk of severe morbidity."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 311.02000000000004,
+      "end": 316.14,
+      "text": " So this is a premature baby."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 316.14,
+      "end": 319.86,
+      "text": " My niece, for example, was born three months premature."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 319.86,
+      "end": 326.06,
+      "text": " It was really scary for my sister and for my whole family."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 326.06,
+      "end": 330.86,
+      "text": " And the outcomes of patients who were born premature"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 330.86,
+      "end": 335.22,
+      "text": " have really changed dramatically over the last century."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 335.22,
+      "end": 337.5,
+      "text": " And now, patients who were born three months premature,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 337.5,
+      "end": 341.54,
+      "text": " like my niece, actually can survive and do really well"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 341.54,
+      "end": 343.78,
+      "text": " in terms of long-term outcomes."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 343.78,
+      "end": 346.1,
+      "text": " But of the many different inventions"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 346.1,
+      "end": 349.42,
+      "text": " that led to these improved outcomes, one of them"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 349.42,
+      "end": 351.58,
+      "text": " was having a very good understanding"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 351.62,
+      "end": 356.14,
+      "text": " of how risky a particular infant might be."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 356.14,
+      "end": 360.18,
+      "text": " So a very common score that's used"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 360.18,
+      "end": 364.09999999999997,
+      "text": " to try to characterize risk for infant birth,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 364.09999999999997,
+      "end": 367.65999999999997,
+      "text": " generally speaking, is known as the Apgar score."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 367.65999999999997,
+      "end": 369.78,
+      "text": " And for example, when my son was born,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 369.78,
+      "end": 374.82,
+      "text": " I was really excited when a few seconds after my son"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 374.82,
+      "end": 378.46,
+      "text": " was delivered, the nurse took out a piece of paper"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 378.46,
+      "end": 380.02,
+      "text": " and computed the Apgar score."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 380.02,
+      "end": 381.34,
+      "text": " I was like, oh, I studied that."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 381.34,
+      "end": 384.38,
+      "text": " Really interesting, right?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 384.38,
+      "end": 388.38,
+      "text": " And then I got back to some of the other things that I had to."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 388.38,
+      "end": 392.14,
+      "text": " But that score isn't actually as accurate as it could be."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 392.14,
+      "end": 395.65999999999997,
+      "text": " And there is this paper, which we'll talk about actually"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 395.65999999999997,
+      "end": 398.06,
+      "text": " in a week and a half, by Suchi Surya,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 398.06,
+      "end": 400.14,
+      "text": " who's a professor at Johns Hopkins, which"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 400.14,
+      "end": 402.68,
+      "text": " looked at how one could use a machine learning-based approach"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 402.68,
+      "end": 407.38,
+      "text": " to really improve our ability to predict morbidity in infants."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 407.38,
+      "end": 411.54,
+      "text": " Another example, which I'm pulling from the readings"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 411.54,
+      "end": 414.5,
+      "text": " from today's lecture, has to do with,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 414.5,
+      "end": 419.14,
+      "text": " for patients who come into the emergency department"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 419.14,
+      "end": 423.14,
+      "text": " with a heart-related condition, trying to understand,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 423.14,
+      "end": 429.5,
+      "text": " do they need to be admitted to the coronary care unit?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 429.5,
+      "end": 434.1,
+      "text": " Or is it safe enough to let that patient go home and be managed"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 434.1,
+      "end": 436.98,
+      "text": " by their primary care physician or their cardiologist"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 437.06,
+      "end": 439.94,
+      "text": " outside of the hospital setting?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 439.94,
+      "end": 443.90000000000003,
+      "text": " Now, that paper, you might have all noticed, was from 1984."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 443.90000000000003,
+      "end": 445.74,
+      "text": " So this isn't a new concept."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 445.74,
+      "end": 449.70000000000005,
+      "text": " And moreover, if you look at the amount of data"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 449.70000000000005,
+      "end": 453.26,
+      "text": " that they used in that study, it was over 2,000 patients."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 453.26,
+      "end": 455.66,
+      "text": " They had a nontrivial number of variables,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 455.66,
+      "end": 457.90000000000003,
+      "text": " 50-something variables."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 457.90000000000003,
+      "end": 461.5,
+      "text": " And they used a nontrivial machine learning algorithm."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 461.5,
+      "end": 464.58000000000004,
+      "text": " They used logistic regression with a feature selection"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 464.58000000000004,
+      "end": 466.58000000000004,
+      "text": " built in to prevent themselves from overfitting"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 466.65999999999997,
+      "end": 469.26,
+      "text": " to the data."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 469.26,
+      "end": 472.74,
+      "text": " And the goal there was very much cost-oriented."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 472.74,
+      "end": 478.18,
+      "text": " So the premise was that if one could quickly"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 478.18,
+      "end": 481.18,
+      "text": " decide these patients who've just come to the ER"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 481.18,
+      "end": 484.53999999999996,
+      "text": " are not high risk and we can send them home,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 484.53999999999996,
+      "end": 487.02,
+      "text": " then we'll be able to reduce the large amount of cost"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 487.02,
+      "end": 492.18,
+      "text": " associated with those admissions to coronary care units."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 492.18,
+      "end": 494.18,
+      "text": " And the final example I'll give right now"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 494.18,
+      "end": 499.22,
+      "text": " is that of predicting likelihood of hospital readmission."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 499.22,
+      "end": 501.98,
+      "text": " So this is something which is getting"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 501.98,
+      "end": 506.22,
+      "text": " a real lot of attention in the United States health care"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 506.22,
+      "end": 509.86,
+      "text": " space over the last few years because of penalties"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 509.86,
+      "end": 512.66,
+      "text": " which the US government has imposed"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 512.66,
+      "end": 514.9,
+      "text": " on hospitals who have a large number of patients who"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 514.9,
+      "end": 517.42,
+      "text": " have been released from the hospital and then"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 517.42,
+      "end": 520.16,
+      "text": " within the next 30 days readmitted to the hospital."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 520.16,
+      "end": 522.74,
+      "text": " And that's part of the transition to value-based care,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 522.98,
+      "end": 525.78,
+      "text": " which Pete mentioned in earlier lectures."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 525.78,
+      "end": 528.62,
+      "text": " And so the premise is that there are many patients who"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 528.62,
+      "end": 531.74,
+      "text": " are hospitalized but are not managed appropriately"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 531.74,
+      "end": 534.38,
+      "text": " on discharge or after discharge."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 534.38,
+      "end": 538.62,
+      "text": " For example, maybe this patient who has a heart condition"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 538.62,
+      "end": 540.22,
+      "text": " wasn't really clear on what they should"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 540.22,
+      "end": 542.66,
+      "text": " have done when they go home."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 542.66,
+      "end": 545.3,
+      "text": " For example, what medications should they be taking?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 545.3,
+      "end": 548.22,
+      "text": " When should they follow up with their cardiologist?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 548.22,
+      "end": 549.74,
+      "text": " What things they should be looking out"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 549.74,
+      "end": 552.14,
+      "text": " for in terms of warning signs that they should go back"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 552.5,
+      "end": 555.46,
+      "text": " to the hospital or call their doctor for?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 555.46,
+      "end": 560.02,
+      "text": " And as a result of that poor communication,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 560.02,
+      "end": 563.02,
+      "text": " it's conjectured that these poor outcomes might occur."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 563.02,
+      "end": 566.62,
+      "text": " So if we could figure out which of the patients"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 566.62,
+      "end": 569.58,
+      "text": " are likely to have those readmissions,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 569.58,
+      "end": 570.78,
+      "text": " then we could change the way."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 570.78,
+      "end": 571.74,
+      "text": " And if we could do those, if we could"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 571.74,
+      "end": 575.0,
+      "text": " predict that while the patients are still in the hospital,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 575.0,
+      "end": 577.14,
+      "text": " then we could change the way that discharge is done."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 577.14,
+      "end": 582.14,
+      "text": " For example, we could send a nurse or a social worker"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 584.74,
+      "end": 586.8199999999999,
+      "text": " to talk to the patient, go really slowly"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 586.8199999999999,
+      "end": 589.3,
+      "text": " through the discharge instructions."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 589.3,
+      "end": 591.54,
+      "text": " Maybe after the patient is discharged,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 591.54,
+      "end": 594.1,
+      "text": " one could have a nurse follow up at the patient's home"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 594.1,
+      "end": 595.46,
+      "text": " over the next few weeks."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 595.46,
+      "end": 596.86,
+      "text": " And in this way, hopefully reduce"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 596.86,
+      "end": 598.62,
+      "text": " the likelihood of that readmission."
+    }
+  ],
+  "text": " Today we'll be talking about risk stratification. After giving you a broad overview of what I mean by risk stratification, I'm going to give you a case study, which you read about in your readings for today's lecture, coming from early detection of type 2 diabetes. And I won't be, of course, repeating the same material you heard you write about in your readings. Rather, I'll be giving some interesting color around what are some of the questions that we need to be thinking about as machine learning people when we try to apply machine learning to problems like this. Then I'll talk about some of the subtleties, what can go wrong with machine learning-based approaches to risk stratification. And finally, the last half of today's lecture is going to be a discussion. So about 3 PM, you'll see a man walk through the door. His name is Leonard Davolio. He is a professor at Brigham and Women's Hospital. He also has a startup company called SIFT, which is working on applying risk stratification now. And they have lots of clients. And they've been really deep in the details of how to make this stuff work. And so we'll have an interview between myself and him. And we'll have opportunity for all of you to ask questions as well. And I think that's what I hope will be the most exciting part of today's lecture. Then going on beyond today's lecture, we are now in the beginning of a sequence of three lectures on very similar topics. So next Thursday, we'll be talking about survival modeling. And you can think about it as an extension of today's lecture, talking about what you should do if your data has centering, which I'll define for you shortly. Although today's lecture is going to be a little bit more high level, next Thursday's lecture is where we're going to really start to get into mathematical details about how one should tackle machine learning problems with censored data. And then the following lecture after that is going to be on physiological data. And that lecture will also be much more technical in nature compared to the first couple of weeks of the course. So what is risk stratification? At a high level, you think about risk stratification as a way of taking in a patient population and separating out all of your patients into one of two or more categories, patients with high risk, patients with low risk, and maybe patients somewhere in the middle. Now, the reason why we might want to do risk stratification is because we usually want to try to act on those predictions. So the goals are often one of coupling those predictions with known interventions. So for example, patients in the high risk pool, we will attempt to do something for those patients to prevent whatever that outcome is of interest from occurring. Now, risk stratification is quite different from diagnosis. Diagnosis often has very, very stringent criteria on performance. If you do a misdiagnosis of something, that can have very severe consequences in terms of patients being treated for conditions that they didn't need to be treated for and patients dying because they were not diagnosed in time. Now, risk stratification, you think of it as a little bit more fuzzy in nature. We want to do our best job of trying to push patients into each of these categories, high risk, low risk, and so on. And as I'll show you throughout today's lecture, the performance characteristics that we'll often care about are going to be a bit different. We're going to look a bit more at quantities such as positive predictive value. Are we finding of the patients we say are high risk, what fraction of them are actually high risk? And in that way, it differs a bit from diagnosis. Also, as a result of the goals being different, the data that's used is often very different. In risk stratification, often we use data which is very diverse. So you might bring in multiple views of a patient. You might use auxiliary data such as patient's demographics, maybe even socioeconomic information about a patient, all of which very much affect their risk profiles but may not be used for an unbiased diagnosis of a patient. And finally, in today's economic environment, risk stratification is very much targeted towards reducing cost of the US health care setting. And so I'll give you a few examples of risk stratification, some of which have cost as a major goal, others which don't. The first example is that of predicting an infant's risk of severe morbidity. So this is a premature baby. My niece, for example, was born three months premature. It was really scary for my sister and for my whole family. And the outcomes of patients who were born premature have really changed dramatically over the last century. And now, patients who were born three months premature, like my niece, actually can survive and do really well in terms of long-term outcomes. But of the many different inventions that led to these improved outcomes, one of them was having a very good understanding of how risky a particular infant might be. So a very common score that's used to try to characterize risk for infant birth, generally speaking, is known as the Apgar score. And for example, when my son was born, I was really excited when a few seconds after my son was delivered, the nurse took out a piece of paper and computed the Apgar score. I was like, oh, I studied that. Really interesting, right? And then I got back to some of the other things that I had to. But that score isn't actually as accurate as it could be. And there is this paper, which we'll talk about actually in a week and a half, by Suchi Surya, who's a professor at Johns Hopkins, which looked at how one could use a machine learning-based approach to really improve our ability to predict morbidity in infants. Another example, which I'm pulling from the readings from today's lecture, has to do with, for patients who come into the emergency department with a heart-related condition, trying to understand, do they need to be admitted to the coronary care unit? Or is it safe enough to let that patient go home and be managed by their primary care physician or their cardiologist outside of the hospital setting? Now, that paper, you might have all noticed, was from 1984. So this isn't a new concept. And moreover, if you look at the amount of data that they used in that study, it was over 2,000 patients. They had a nontrivial number of variables, 50-something variables. And they used a nontrivial machine learning algorithm. They used logistic regression with a feature selection built in to prevent themselves from overfitting to the data. And the goal there was very much cost-oriented. So the premise was that if one could quickly decide these patients who've just come to the ER are not high risk and we can send them home, then we'll be able to reduce the large amount of cost associated with those admissions to coronary care units. And the final example I'll give right now is that of predicting likelihood of hospital readmission. So this is something which is getting a real lot of attention in the United States health care space over the last few years because of penalties which the US government has imposed on hospitals who have a large number of patients who have been released from the hospital and then within the next 30 days readmitted to the hospital. And that's part of the transition to value-based care, which Pete mentioned in earlier lectures. And so the premise is that there are many patients who are hospitalized but are not managed appropriately on discharge or after discharge. For example, maybe this patient who has a heart condition wasn't really clear on what they should have done when they go home. For example, what medications should they be taking? When should they follow up with their cardiologist? What things they should be looking out for in terms of warning signs that they should go back to the hospital or call their doctor for? And as a result of that poor communication, it's conjectured that these poor outcomes might occur. So if we could figure out which of the patients are likely to have those readmissions, then we could change the way. And if we could do those, if we could predict that while the patients are still in the hospital, then we could change the way that discharge is done. For example, we could send a nurse or a social worker to talk to the patient, go really slowly through the discharge instructions. Maybe after the patient is discharged, one could have a nurse follow up at the patient's home over the next few weeks. And in this way, hopefully reduce the likelihood of that readmission."
+}

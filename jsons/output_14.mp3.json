@@ -1,0 +1,1405 @@
+{
+  "chunks": [
+    {
+      "number": "output",
+      "title": "",
+      "start": 0.0,
+      "end": 19.26,
+      "text": " So today's lecture is going to be about causality."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 22.1,
+      "end": 23.56,
+      "text": " Who's heard about causality before?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 23.56,
+      "end": 24.18,
+      "text": " Raise your hand."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 27.12,
+      "end": 28.96,
+      "text": " What's the number one thing that you"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 28.96,
+      "end": 33.24,
+      "text": " hear about when thinking about causality?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 33.24,
+      "end": 33.74,
+      "text": " Yeah."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 33.74,
+      "end": 36.0,
+      "text": " Correlation does not imply causation."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 36.0,
+      "end": 39.28,
+      "text": " Correlation does not imply causation."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 39.28,
+      "end": 40.36,
+      "text": " Anything else come to mind?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 40.36,
+      "end": 41.480000000000004,
+      "text": " That's what came to my mind."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 41.480000000000004,
+      "end": 42.6,
+      "text": " Anything else come to mind?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 46.56,
+      "end": 48.64,
+      "text": " So up until now in the semester, we've"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 48.64,
+      "end": 50.72,
+      "text": " been talking about purely predictive questions."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 50.72,
+      "end": 52.96,
+      "text": " And for purely predictive questions,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 52.96,
+      "end": 56.16,
+      "text": " one could argue that correlation is good enough."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 56.16,
+      "end": 57.8,
+      "text": " If we have some signs in our data"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 57.8,
+      "end": 60.44,
+      "text": " that are predictive of some outcome of interest,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 60.44,
+      "end": 63.14,
+      "text": " we want to be able to take advantage of that, whether it's"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 63.14,
+      "end": 64.75999999999999,
+      "text": " upstream, downstream."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 64.75999999999999,
+      "end": 70.0,
+      "text": " The causal directionality is irrelevant for that purpose."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 70.0,
+      "end": 72.0,
+      "text": " Although even that isn't quite true,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 72.0,
+      "end": 74.16,
+      "text": " because I've been hinting throughout the semester,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 74.16,
+      "end": 76.2,
+      "text": " people have been hinting throughout the semester,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 76.2,
+      "end": 79.56,
+      "text": " that there are times when the data changes on you."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 79.56,
+      "end": 83.4,
+      "text": " For example, when you go from one institution to another,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 83.4,
+      "end": 86.08,
+      "text": " or when you have non-stationarity."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 86.08,
+      "end": 90.2,
+      "text": " And in those situations, having a deeper understanding"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 90.2,
+      "end": 92.2,
+      "text": " about the data might allow one to build"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 92.2,
+      "end": 95.75999999999999,
+      "text": " an additional robustness to that type of data set shift."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 95.75999999999999,
+      "end": 97.2,
+      "text": " But there are other reasons as well"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 97.2,
+      "end": 99.84,
+      "text": " why understanding something about your underlying data"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 99.84,
+      "end": 101.84,
+      "text": " generating process could be really important."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 101.84,
+      "end": 103.5,
+      "text": " It's because often the questions that we"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 103.5,
+      "end": 106.0,
+      "text": " want to answer when it comes to health care"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 106.0,
+      "end": 107.6,
+      "text": " are not predictive questions."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 107.6,
+      "end": 108.72,
+      "text": " They're causal questions."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 108.72,
+      "end": 111.22,
+      "text": " And so what I'll do now is I'll walk through a few examples"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 111.22,
+      "end": 113.2,
+      "text": " of what I mean by this."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 113.2,
+      "end": 116.48,
+      "text": " I'm going to start out with what we saw in lecture four"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 116.48,
+      "end": 119.68,
+      "text": " and problem set two, where we looked"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 119.68,
+      "end": 122.14,
+      "text": " at the question of how we can do early detection of type 2"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 122.14,
+      "end": 122.64,
+      "text": " diabetes."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 125.64,
+      "end": 128.4,
+      "text": " You used Truven MarketScan's data"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 128.4,
+      "end": 132.72,
+      "text": " set to build a risk stratification algorithm"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 132.72,
+      "end": 136.32,
+      "text": " for detecting who's going to be newly diagnosed with diabetes"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 136.32,
+      "end": 137.96,
+      "text": " one to three years from now."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 137.96,
+      "end": 140.28,
+      "text": " And if you think about how one might then try to deploy"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 140.32,
+      "end": 143.2,
+      "text": " this algorithm, you might, for example,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 143.2,
+      "end": 148.2,
+      "text": " try to get patients into the clinic to get them diagnosed."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 148.2,
+      "end": 150.08,
+      "text": " But the next set of questions are usually"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 150.08,
+      "end": 151.48,
+      "text": " about the so what question."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 151.48,
+      "end": 155.04,
+      "text": " What are you going to do based on that prediction?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 155.04,
+      "end": 157.64,
+      "text": " Once diagnosed, how will you intervene?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 157.64,
+      "end": 159.64,
+      "text": " And at the end of the day, the interesting goal"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 159.64,
+      "end": 161.56,
+      "text": " is not one of how do you find them early,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 161.56,
+      "end": 163.76,
+      "text": " but how do you prevent them from developing diabetes,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 163.76,
+      "end": 166.0,
+      "text": " or how do you prevent the patient from developing"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 166.0,
+      "end": 169.72,
+      "text": " complications of diabetes?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 169.72,
+      "end": 174.56,
+      "text": " And those are questions about causality."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 174.56,
+      "end": 176.52,
+      "text": " Now, when we built our predictive models"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 176.52,
+      "end": 178.07999999999998,
+      "text": " and we introspected at the weight,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 178.07999999999998,
+      "end": 180.0,
+      "text": " we might have noticed some interesting things."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 180.0,
+      "end": 184.16,
+      "text": " For example, if you looked at the highest negative weight,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 184.16,
+      "end": 187.36,
+      "text": " which I'm not sure if we did as part of the assignment,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 187.36,
+      "end": 190.06,
+      "text": " but something that I did as part of my research study,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 190.06,
+      "end": 191.96,
+      "text": " you see that gastric bypass surgery"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 191.96,
+      "end": 196.28,
+      "text": " has the biggest negative weight."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 196.32,
+      "end": 201.0,
+      "text": " Does that mean that if you give an obese person gastric bypass"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 201.0,
+      "end": 204.14000000000001,
+      "text": " surgery, that will prevent them from developing"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 204.14000000000001,
+      "end": 206.0,
+      "text": " type 2 diabetes?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 206.0,
+      "end": 207.84,
+      "text": " That's an example of a causal question which"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 207.84,
+      "end": 210.2,
+      "text": " is raised by this predictive model."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 210.2,
+      "end": 212.44,
+      "text": " But just by looking at the weight alone,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 212.44,
+      "end": 215.16,
+      "text": " as I'll show you this week, you won't"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 215.16,
+      "end": 219.84,
+      "text": " be able to correctly infer that there is a causal relationship."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 219.84,
+      "end": 221.64,
+      "text": " And so part of what we'll be doing"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 221.64,
+      "end": 223.84,
+      "text": " is coming up with a mathematical language"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 223.84,
+      "end": 226.64000000000001,
+      "text": " for thinking about how does one answer,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 226.64000000000001,
+      "end": 229.32,
+      "text": " is there a causal relationship here?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 229.32,
+      "end": 231.6,
+      "text": " Here's a second example."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 231.6,
+      "end": 234.04,
+      "text": " Right before spring break, we had a series of lectures"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 234.04,
+      "end": 237.12,
+      "text": " about diagnosis, particularly diagnosis"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 237.12,
+      "end": 240.68,
+      "text": " from imaging data of a variety of kinds,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 240.68,
+      "end": 243.24,
+      "text": " whether it be radiology or pathology."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 243.24,
+      "end": 245.4,
+      "text": " And often, questions are of this sort."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 245.4,
+      "end": 247.52,
+      "text": " Here is a woman's breast."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 247.52,
+      "end": 249.2,
+      "text": " She has breast cancer."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 249.2,
+      "end": 252.56,
+      "text": " Maybe you have an associated pathology slide as well."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 252.56,
+      "end": 256.8,
+      "text": " And you want to know, what is the risk of this person dying"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 256.8,
+      "end": 259.52,
+      "text": " in the next five years?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 259.52,
+      "end": 263.36,
+      "text": " So one can take a deep learning model,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 263.36,
+      "end": 266.72,
+      "text": " learn to predict what one observes."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 266.72,
+      "end": 269.06,
+      "text": " So in the patients in your data set, you have the input."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 269.06,
+      "end": 270.52,
+      "text": " You have, let's say, survival time."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 270.52,
+      "end": 272.32,
+      "text": " And you might use that to predict something"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 272.32,
+      "end": 278.68,
+      "text": " about how long it takes from diagnosis to death."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 278.68,
+      "end": 281.32,
+      "text": " And based on those predictions, you might take actions."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 281.32,
+      "end": 288.2,
+      "text": " For example, if you predict that a patient is not risky,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 288.2,
+      "end": 291.15999999999997,
+      "text": " then you might conclude that they"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 291.15999999999997,
+      "end": 294.04,
+      "text": " don't need to get treatment."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 294.04,
+      "end": 296.84,
+      "text": " But that could be really, really dangerous."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 296.84,
+      "end": 301.44,
+      "text": " And I'll just give you one example"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 301.44,
+      "end": 303.6,
+      "text": " of why that could be dangerous."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 306.28,
+      "end": 307.68,
+      "text": " These predictive models, if you're"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 307.68,
+      "end": 311.96,
+      "text": " learning them in this way, the outcome, in this case,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 311.96,
+      "end": 313.68,
+      "text": " let's say, time to death, is going"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 313.68,
+      "end": 317.12,
+      "text": " to be affected by what's happened in between."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 317.12,
+      "end": 319.88,
+      "text": " So for example, this patient might"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 319.88,
+      "end": 322.04,
+      "text": " have been receiving treatment."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 322.04,
+      "end": 324.4,
+      "text": " And because of them receiving treatment"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 324.4,
+      "end": 327.68,
+      "text": " in between the time from diagnosis to death,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 327.68,
+      "end": 330.16,
+      "text": " it might have prolonged their life."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 330.16,
+      "end": 331.92,
+      "text": " And so for this patient in your data set,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 331.92,
+      "end": 335.52,
+      "text": " you might have observed that they lived a very long time."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 335.52,
+      "end": 337.32,
+      "text": " But if you ignore what happens in between,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 337.46,
+      "end": 342.04,
+      "text": " and you simply learn to predict y from x, x being the input,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 342.04,
+      "end": 343.44,
+      "text": " then a new patient comes along."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 343.44,
+      "end": 344.78,
+      "text": " You predict that that new patient"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 344.78,
+      "end": 346.56,
+      "text": " is going to survive a long time."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 346.56,
+      "end": 348.56,
+      "text": " And it would be completely the wrong conclusion"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 348.56,
+      "end": 350.88,
+      "text": " to say that you don't need to treat that patient."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 350.88,
+      "end": 353.2,
+      "text": " Because in fact, the only reason the patients like them"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 353.2,
+      "end": 354.8,
+      "text": " in the training data lived a long time"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 354.8,
+      "end": 357.48,
+      "text": " is because they were treated."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 357.48,
+      "end": 360.44,
+      "text": " And so when it comes to this field of machine learning"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 360.44,
+      "end": 363.84,
+      "text": " and health care, we need to think really carefully"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 363.84,
+      "end": 365.36,
+      "text": " about these types of questions."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 365.36,
+      "end": 368.3,
+      "text": " Because an error in the way that we formalize our problem"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 368.3,
+      "end": 370.34000000000003,
+      "text": " could kill people because of mistakes like this."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 373.92,
+      "end": 376.0,
+      "text": " Now, other questions are one about not"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 376.0,
+      "end": 379.76,
+      "text": " how do we predict outcomes, but how do we"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 379.76,
+      "end": 383.44,
+      "text": " guide treatment decisions."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 383.44,
+      "end": 386.28000000000003,
+      "text": " So for example, as data from pathology"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 386.28000000000003,
+      "end": 388.40000000000003,
+      "text": " gets richer and richer and richer,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 388.40000000000003,
+      "end": 390.68,
+      "text": " we might think that we can now use computers"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 390.68,
+      "end": 393.84000000000003,
+      "text": " to try to better predict who is likely to benefit"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 393.84,
+      "end": 396.2,
+      "text": " from a treatment than humans could do alone."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 398.76,
+      "end": 401.11999999999995,
+      "text": " But the challenge with using algorithms to do that"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 401.11999999999995,
+      "end": 403.56,
+      "text": " is that people respond differently to treatment."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 403.56,
+      "end": 408.28,
+      "text": " And the data which is being used to guide treatment"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 408.28,
+      "end": 412.67999999999995,
+      "text": " is biased based on existing treatment guidelines."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 415.44,
+      "end": 418.28,
+      "text": " So similarly to the previous question,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 418.28,
+      "end": 421.35999999999996,
+      "text": " we could ask what would happen if we trained to predict"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 421.35999999999996,
+      "end": 422.44,
+      "text": " past treatment decisions."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 422.44,
+      "end": 423.82,
+      "text": " This would be the most naive way"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 423.82,
+      "end": 426.6,
+      "text": " to try to use data to guide treatment decisions."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 426.6,
+      "end": 428.92,
+      "text": " So maybe you see David gets treatment A,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 428.92,
+      "end": 431.36,
+      "text": " John gets treatment B, Juana gets treatment A."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 431.36,
+      "end": 434.68,
+      "text": " And you might ask, then, OK, a new patient comes in."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 434.68,
+      "end": 437.46,
+      "text": " What should this new patient be treated with?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 437.46,
+      "end": 439.62,
+      "text": " And if you just learned a model to predict from what"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 439.62,
+      "end": 442.54,
+      "text": " you know about David the treatment that David is likely"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 442.54,
+      "end": 445.44,
+      "text": " to get, then the best that you could hope to do"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 445.44,
+      "end": 449.88,
+      "text": " is to do as well as existing clinical practice."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 449.88,
+      "end": 453.21999999999997,
+      "text": " So if we want to go beyond current clinical practice,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 453.21999999999997,
+      "end": 455.8,
+      "text": " for example, to recognize that there is heterogeneity"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 455.8,
+      "end": 458.06,
+      "text": " in treatment response, then we have"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 458.06,
+      "end": 464.04,
+      "text": " to somehow change the question that we're asking."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 464.04,
+      "end": 466.06,
+      "text": " I'll give you one last example, which"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 466.06,
+      "end": 470.6,
+      "text": " is perhaps a more traditional question of does X cause Y?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 470.6,
+      "end": 473.24,
+      "text": " For example, does smoking cause lung cancer"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 473.24,
+      "end": 479.08,
+      "text": " is a major question of societal importance."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 479.08,
+      "end": 482.91999999999996,
+      "text": " Now, you might be familiar with the traditional way"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 482.91999999999996,
+      "end": 485.15999999999997,
+      "text": " of trying to answer questions of this nature, which"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 485.15999999999997,
+      "end": 487.4,
+      "text": " would be to do a randomized control trial."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 487.4,
+      "end": 490.03999999999996,
+      "text": " Except this isn't exactly the type of setting"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 490.03999999999996,
+      "end": 491.91999999999996,
+      "text": " where you could do a randomized control trial."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 491.91999999999996,
+      "end": 496.2,
+      "text": " How would you feel if you were a smoker,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 496.2,
+      "end": 497.7,
+      "text": " and someone came up to you and said,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 497.7,
+      "end": 501.0,
+      "text": " you have to stop smoking because I need to see what happens?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 501.0,
+      "end": 503.68,
+      "text": " Or how would you feel if you were a non-smoker,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 503.68,
+      "end": 508.12,
+      "text": " and someone came up to you and said, you have to start smoking?"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 508.12,
+      "end": 511.92,
+      "text": " That would be both not feasible and completely unethical."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 511.92,
+      "end": 513.92,
+      "text": " And so if we want to try to answer questions"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 513.92,
+      "end": 516.36,
+      "text": " like this from data, we need to start thinking about how"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 516.36,
+      "end": 523.08,
+      "text": " can we design, using observational data, ways"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 523.08,
+      "end": 525.2,
+      "text": " of answering questions like this."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 525.2,
+      "end": 526.6,
+      "text": " And the challenge is that there's"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 526.6,
+      "end": 530.5600000000001,
+      "text": " going to be bias in the data because of who decides to smoke"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 530.5600000000001,
+      "end": 532.36,
+      "text": " and who decides not to smoke."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 532.36,
+      "end": 533.84,
+      "text": " So for example, the most naive way"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 533.84,
+      "end": 535.32,
+      "text": " you might try to answer this question"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 535.32,
+      "end": 537.28,
+      "text": " would be to look at the conditional likelihood"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 537.52,
+      "end": 539.72,
+      "text": " getting lung cancer among smokers"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 539.72,
+      "end": 541.8,
+      "text": " and getting lung cancer among non-smokers."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 544.56,
+      "end": 547.04,
+      "text": " But those numbers, as you'll see in the next few slides,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 547.04,
+      "end": 549.3199999999999,
+      "text": " can be very misleading because there"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 549.3199999999999,
+      "end": 558.48,
+      "text": " might be confounding factors, factors that would, for example,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 558.48,
+      "end": 561.88,
+      "text": " both cause people to be a smoker and cause"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 561.88,
+      "end": 566.68,
+      "text": " them to receive lung cancer, which"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 566.7199999999999,
+      "end": 569.0,
+      "text": " would differentiate between these two numbers."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 569.0,
+      "end": 570.64,
+      "text": " And we'll have a very concrete example"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 570.64,
+      "end": 572.92,
+      "text": " of this in just a few minutes."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 572.92,
+      "end": 575.0,
+      "text": " So to properly answer all of these questions,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 575.0,
+      "end": 577.4799999999999,
+      "text": " one needs to be thinking in terms of causal graphs."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 577.4799999999999,
+      "end": 580.88,
+      "text": " So rather than the traditional setup in machine learning,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 580.88,
+      "end": 591.92,
+      "text": " where you just have inputs and outputs,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 591.92,
+      "end": 593.9599999999999,
+      "text": " now we need to have triplets."
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 593.9599999999999,
+      "end": 595.5999999999999,
+      "text": " Rather than having inputs and outputs,"
+    },
+    {
+      "number": "output",
+      "title": "",
+      "start": 595.6,
+      "end": 600.16,
+      "text": " we need to be thinking of inputs, interventions."
+    }
+  ],
+  "text": " So today's lecture is going to be about causality. Who's heard about causality before? Raise your hand. What's the number one thing that you hear about when thinking about causality? Yeah. Correlation does not imply causation. Correlation does not imply causation. Anything else come to mind? That's what came to my mind. Anything else come to mind? So up until now in the semester, we've been talking about purely predictive questions. And for purely predictive questions, one could argue that correlation is good enough. If we have some signs in our data that are predictive of some outcome of interest, we want to be able to take advantage of that, whether it's upstream, downstream. The causal directionality is irrelevant for that purpose. Although even that isn't quite true, because I've been hinting throughout the semester, people have been hinting throughout the semester, that there are times when the data changes on you. For example, when you go from one institution to another, or when you have non-stationarity. And in those situations, having a deeper understanding about the data might allow one to build an additional robustness to that type of data set shift. But there are other reasons as well why understanding something about your underlying data generating process could be really important. It's because often the questions that we want to answer when it comes to health care are not predictive questions. They're causal questions. And so what I'll do now is I'll walk through a few examples of what I mean by this. I'm going to start out with what we saw in lecture four and problem set two, where we looked at the question of how we can do early detection of type 2 diabetes. You used Truven MarketScan's data set to build a risk stratification algorithm for detecting who's going to be newly diagnosed with diabetes one to three years from now. And if you think about how one might then try to deploy this algorithm, you might, for example, try to get patients into the clinic to get them diagnosed. But the next set of questions are usually about the so what question. What are you going to do based on that prediction? Once diagnosed, how will you intervene? And at the end of the day, the interesting goal is not one of how do you find them early, but how do you prevent them from developing diabetes, or how do you prevent the patient from developing complications of diabetes? And those are questions about causality. Now, when we built our predictive models and we introspected at the weight, we might have noticed some interesting things. For example, if you looked at the highest negative weight, which I'm not sure if we did as part of the assignment, but something that I did as part of my research study, you see that gastric bypass surgery has the biggest negative weight. Does that mean that if you give an obese person gastric bypass surgery, that will prevent them from developing type 2 diabetes? That's an example of a causal question which is raised by this predictive model. But just by looking at the weight alone, as I'll show you this week, you won't be able to correctly infer that there is a causal relationship. And so part of what we'll be doing is coming up with a mathematical language for thinking about how does one answer, is there a causal relationship here? Here's a second example. Right before spring break, we had a series of lectures about diagnosis, particularly diagnosis from imaging data of a variety of kinds, whether it be radiology or pathology. And often, questions are of this sort. Here is a woman's breast. She has breast cancer. Maybe you have an associated pathology slide as well. And you want to know, what is the risk of this person dying in the next five years? So one can take a deep learning model, learn to predict what one observes. So in the patients in your data set, you have the input. You have, let's say, survival time. And you might use that to predict something about how long it takes from diagnosis to death. And based on those predictions, you might take actions. For example, if you predict that a patient is not risky, then you might conclude that they don't need to get treatment. But that could be really, really dangerous. And I'll just give you one example of why that could be dangerous. These predictive models, if you're learning them in this way, the outcome, in this case, let's say, time to death, is going to be affected by what's happened in between. So for example, this patient might have been receiving treatment. And because of them receiving treatment in between the time from diagnosis to death, it might have prolonged their life. And so for this patient in your data set, you might have observed that they lived a very long time. But if you ignore what happens in between, and you simply learn to predict y from x, x being the input, then a new patient comes along. You predict that that new patient is going to survive a long time. And it would be completely the wrong conclusion to say that you don't need to treat that patient. Because in fact, the only reason the patients like them in the training data lived a long time is because they were treated. And so when it comes to this field of machine learning and health care, we need to think really carefully about these types of questions. Because an error in the way that we formalize our problem could kill people because of mistakes like this. Now, other questions are one about not how do we predict outcomes, but how do we guide treatment decisions. So for example, as data from pathology gets richer and richer and richer, we might think that we can now use computers to try to better predict who is likely to benefit from a treatment than humans could do alone. But the challenge with using algorithms to do that is that people respond differently to treatment. And the data which is being used to guide treatment is biased based on existing treatment guidelines. So similarly to the previous question, we could ask what would happen if we trained to predict past treatment decisions. This would be the most naive way to try to use data to guide treatment decisions. So maybe you see David gets treatment A, John gets treatment B, Juana gets treatment A. And you might ask, then, OK, a new patient comes in. What should this new patient be treated with? And if you just learned a model to predict from what you know about David the treatment that David is likely to get, then the best that you could hope to do is to do as well as existing clinical practice. So if we want to go beyond current clinical practice, for example, to recognize that there is heterogeneity in treatment response, then we have to somehow change the question that we're asking. I'll give you one last example, which is perhaps a more traditional question of does X cause Y? For example, does smoking cause lung cancer is a major question of societal importance. Now, you might be familiar with the traditional way of trying to answer questions of this nature, which would be to do a randomized control trial. Except this isn't exactly the type of setting where you could do a randomized control trial. How would you feel if you were a smoker, and someone came up to you and said, you have to stop smoking because I need to see what happens? Or how would you feel if you were a non-smoker, and someone came up to you and said, you have to start smoking? That would be both not feasible and completely unethical. And so if we want to try to answer questions like this from data, we need to start thinking about how can we design, using observational data, ways of answering questions like this. And the challenge is that there's going to be bias in the data because of who decides to smoke and who decides not to smoke. So for example, the most naive way you might try to answer this question would be to look at the conditional likelihood getting lung cancer among smokers and getting lung cancer among non-smokers. But those numbers, as you'll see in the next few slides, can be very misleading because there might be confounding factors, factors that would, for example, both cause people to be a smoker and cause them to receive lung cancer, which would differentiate between these two numbers. And we'll have a very concrete example of this in just a few minutes. So to properly answer all of these questions, one needs to be thinking in terms of causal graphs. So rather than the traditional setup in machine learning, where you just have inputs and outputs, now we need to have triplets. Rather than having inputs and outputs, we need to be thinking of inputs, interventions."
+}
