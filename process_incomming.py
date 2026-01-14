@@ -39,4 +39,4 @@ new_df = df.loc[max_indx]
 
 
 for index, item in new_df.iterrows():
-    print(index,item["title"],item["number"],item["text"])            
+    print(index,item["title"],item["number"],item["text"],item["start"],item["end"])            
