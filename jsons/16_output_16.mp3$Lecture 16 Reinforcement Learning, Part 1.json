@@ -1,0 +1,943 @@
+{
+  "chunks": [
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 0.0,
+      "end": 19.04,
+      "text": " Hi everyone, we're going to get started now."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 19.04,
+      "end": 22.72,
+      "text": " So this week's lecture is really picking up where last week's left off."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 22.72,
+      "end": 26.560000000000002,
+      "text": " You might remember we spent the last week talking about problems and friends, and I"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 26.56,
+      "end": 31.68,
+      "text": " told you how for last week we were just going to focus on the one-time step setting."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 31.68,
+      "end": 36.68,
+      "text": " Well as we know, lots of medicine has to do with multiple sequential decisions across"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 36.68,
+      "end": 41.28,
+      "text": " time, and that'll be the focus of this whole week's worth of discussions."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 41.28,
+      "end": 45.879999999999995,
+      "text": " And as I thought about really what should I teach in this lecture, I realized that the"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 45.879999999999995,
+      "end": 52.4,
+      "text": " person who knew the most about the topic was in fact a postdoctoral researcher in my lab."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 52.4,
+      "end": 60.04,
+      "text": " So I'll take it, I'll take that, I'll take that."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 60.04,
+      "end": 63.32,
+      "text": " It's very fair, it's very fair."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 63.32,
+      "end": 69.56,
+      "text": " And so I invited him to come to us today to give this as an invited lecture, and this"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 69.56,
+      "end": 75.68,
+      "text": " is Frederik Johansson, he'll be a professor in Chalmers in Sweden starting in September."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 75.68,
+      "end": 78.92,
+      "text": " Thank you so much David, that's very generous."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 78.92,
+      "end": 84.48,
+      "text": " So as David mentioned, last time we looked a lot at causal effects, and that's where"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 84.48,
+      "end": 87.56,
+      "text": " we will start this discussion too."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 87.56,
+      "end": 89.12,
+      "text": " So I'll just start with this reminder here."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 89.12,
+      "end": 94.16,
+      "text": " We essentially introduced four quantities last time, or the last two lectures as far"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 94.16,
+      "end": 95.36,
+      "text": " as I know."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 95.36,
+      "end": 100.72,
+      "text": " We had two potential outcomes, which represented the outcomes that we would see of some treatment"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 100.72,
+      "end": 105.72,
+      "text": " choice under the various choices, or the two different choices, one and zero."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 105.72,
+      "end": 111.96,
+      "text": " And we had two covariates, or sorry, we had a set of covariates, x and a treatment t."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 111.96,
+      "end": 115.2,
+      "text": " And we were interested essentially what is the effect of this treatment t on the outcome"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 115.2,
+      "end": 117.8,
+      "text": " y given the covariates x."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 117.8,
+      "end": 123.64,
+      "text": " And the effect that we focused on that time was the conditional average treatment effect,"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 123.64,
+      "end": 129.07999999999998,
+      "text": " which is exactly the difference between these potential outcomes conditioned on the features."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 129.07999999999998,
+      "end": 135.57999999999998,
+      "text": " So the whole last week was about trying to identify this quantity using various methods."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 136.44000000000003,
+      "end": 140.10000000000002,
+      "text": " And the question that didn't come up so much, or one question that didn't come up so much"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 140.10000000000002,
+      "end": 142.18,
+      "text": " is how do we use this quantity?"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 142.18,
+      "end": 148.54000000000002,
+      "text": " We might be interested in it just in terms of its absolute magnitude, how large is the"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 148.54000000000002,
+      "end": 153.92000000000002,
+      "text": " effect, but we might also be interested in designing a policy for how to treat our patients"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 153.92000000000002,
+      "end": 156.26000000000002,
+      "text": " based on this quantity."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 156.26000000000002,
+      "end": 160.04000000000002,
+      "text": " So today we will focus on policies."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 160.04000000000002,
+      "end": 164.96,
+      "text": " And what I mean by that specifically is something that takes into account what we know about"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 165.34,
+      "end": 171.38,
+      "text": " a patient and produces a choice or an action as an output."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 171.38,
+      "end": 175.9,
+      "text": " Typically we'll think of policies as depending on medical history, perhaps which treatments"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 175.9,
+      "end": 181.70000000000002,
+      "text": " they have received previously, what state is the patient currently in."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 181.70000000000002,
+      "end": 185.46,
+      "text": " But we can also base it purely on this number that we produced last time, the conditional"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 185.46,
+      "end": 186.78,
+      "text": " average treatment effect."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 186.78,
+      "end": 192.28,
+      "text": " And one very natural policy is to say pi of x is equal to the indicator function representing"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 192.28,
+      "end": 194.5,
+      "text": " if this case is positive."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 195.04,
+      "end": 197.32,
+      "text": " So if the effect is positive, we treat the patient."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 197.32,
+      "end": 199.12,
+      "text": " If the effect is negative, we don't."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 199.12,
+      "end": 203.72,
+      "text": " And of course positive will be relative to the usefulness of the outcome being high,"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 203.72,
+      "end": 208.44,
+      "text": " but this is a very natural policy to consider."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 208.44,
+      "end": 215.88,
+      "text": " However, we can also think about much more complicated policies that are not just based"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 215.88,
+      "end": 219.5,
+      "text": " on this number, the quality of the outcome."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 219.52,
+      "end": 224.0,
+      "text": " We can think about policies that take into account legislation or cost of medication"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 224.0,
+      "end": 225.4,
+      "text": " or side effects."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 225.4,
+      "end": 227.8,
+      "text": " We're not going to do that today, but that's something that you can keep in mind as we"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 227.8,
+      "end": 231.72,
+      "text": " discuss these things."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 231.72,
+      "end": 236.6,
+      "text": " So David mentioned we should now move from the one-step setting where we have a single"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 236.6,
+      "end": 241.04,
+      "text": " treatment acting at a single time, and we only have to take into account the state of"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 241.04,
+      "end": 243.64,
+      "text": " a patient once, basically."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 243.64,
+      "end": 246.08,
+      "text": " And we will move from that to the sequential setting."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 246.22,
+      "end": 251.34,
+      "text": " My first example of such a setting is sepsis management."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 251.34,
+      "end": 257.78000000000003,
+      "text": " So sepsis is a complication of an infection, which can have very disastrous consequences."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 257.78000000000003,
+      "end": 259.7,
+      "text": " It can lead to organ failure and ultimately death."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 259.7,
+      "end": 263.82,
+      "text": " And it's actually one of the leading causes of deaths in the ICU."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 263.82,
+      "end": 269.3,
+      "text": " So it's, of course, important that we can manage and treat this condition."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 269.3,
+      "end": 272.3,
+      "text": " When you start treating sepsis, the primary target, the first thing you should think about"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 272.3,
+      "end": 275.06,
+      "text": " fixing is the infection itself."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 275.08,
+      "end": 279.56,
+      "text": " If we don't treat the infection, things are going to keep being bad."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 279.56,
+      "end": 283.08,
+      "text": " But even if we figure out the right antibiotic to treat the infection that is the source"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 283.08,
+      "end": 289.12,
+      "text": " of the septic shock or the septic inflammation, there are a lot of different conditions that"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 289.12,
+      "end": 290.84000000000003,
+      "text": " we need to manage."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 290.84000000000003,
+      "end": 297.64,
+      "text": " Because the infection itself can lead to fever, breathing difficulties, low blood pressure,"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 297.64,
+      "end": 303.2,
+      "text": " high heart rate, all these kinds of things that are symptoms but not the cause themselves,"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 303.21999999999997,
+      "end": 309.42,
+      "text": " we still have to manage them somehow so that the patient survives and is comfortable."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 309.42,
+      "end": 315.76,
+      "text": " So when I say sepsis management, I'm talking about managing such quantities over time,"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 315.76,
+      "end": 319.38,
+      "text": " over a patient's stay in the hospital."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 319.38,
+      "end": 324.98,
+      "text": " So last time, again, just to really hammer this in, we talked about potential outcomes"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 324.98,
+      "end": 327.62,
+      "text": " and the choice of a single treatment."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 327.62,
+      "end": 332.15999999999997,
+      "text": " So we can think about this in the septic setting as a patient coming in or a patient already"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 332.18,
+      "end": 336.74,
+      "text": " being in the hospital, presumably, and is presenting with breathing difficulties."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 336.74,
+      "end": 340.02000000000004,
+      "text": " So that means that their blood oxygen will be low because they can't breathe on their"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 340.02000000000004,
+      "end": 344.06,
+      "text": " own and we might want to put them on mechanical ventilation so that we can ensure that they"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 344.06,
+      "end": 346.94000000000005,
+      "text": " get sufficient oxygen."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 346.94000000000005,
+      "end": 349.18,
+      "text": " We can view this as a single choice."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 349.18,
+      "end": 353.70000000000005,
+      "text": " Should we put the patient on mechanical ventilation or not?"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 353.70000000000005,
+      "end": 359.70000000000005,
+      "text": " But what we need to take into account here is what will happen after we make that choice."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 359.71999999999997,
+      "end": 362.36,
+      "text": " What will be the side effects of this choice going further?"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 362.36,
+      "end": 366.0,
+      "text": " Because we want to make sure that the patient is comfortable and in good health throughout"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 366.0,
+      "end": 368.47999999999996,
+      "text": " their stay."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 368.47999999999996,
+      "end": 373.59999999999997,
+      "text": " So today, we will move towards sequential decision making."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 373.59999999999997,
+      "end": 378.58,
+      "text": " And in particular, what I alluded to just now is that decisions made in sequence may"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 378.58,
+      "end": 383.84,
+      "text": " have the property that choices early on rule out certain choices later."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 383.84,
+      "end": 386.82,
+      "text": " We'll see an example of that very, very soon."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 386.92,
+      "end": 390.8,
+      "text": " And in particular, we'll be interested in coming up with a policy for making decisions"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 390.8,
+      "end": 396.24,
+      "text": " repeatedly that optimizes a given outcome, something that we care about."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 396.24,
+      "end": 400.64,
+      "text": " It could minimize the risk of death."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 400.64,
+      "end": 405.36,
+      "text": " It could be a reward that says that the vitals of a patient are in the right range."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 405.36,
+      "end": 407.84,
+      "text": " We might want to optimize that."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 407.84,
+      "end": 413.88,
+      "text": " But essentially, think about it now as having this choice of administering a medication"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 413.9,
+      "end": 418.9,
+      "text": " or an intervention at any time t and having the best policy for doing so."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 418.9,
+      "end": 419.9,
+      "text": " OK."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 419.9,
+      "end": 422.9,
+      "text": " I'm going to skip that one."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 422.9,
+      "end": 423.9,
+      "text": " OK."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 423.9,
+      "end": 428.14,
+      "text": " So I mentioned already one potential choice that we might want to make in the management"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 428.14,
+      "end": 431.42,
+      "text": " of a septic patient, which is to put them on mechanical ventilation because they can't"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 431.42,
+      "end": 433.98,
+      "text": " breathe on their own."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 433.98,
+      "end": 439.82,
+      "text": " A side effect of doing so is that they might suffer discomfort from being intubated."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 439.82,
+      "end": 443.58,
+      "text": " And well, the procedure is not painless."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 444.28,
+      "end": 445.28,
+      "text": " It's not without discomfort."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 445.28,
+      "end": 449.12,
+      "text": " So something that you might have to do, putting them on mechanical ventilation, is to sedate"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 449.12,
+      "end": 451.4,
+      "text": " the patient."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 451.4,
+      "end": 456.44,
+      "text": " So this is an action that is informed by the previous action because if we didn't put the"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 456.44,
+      "end": 464.0,
+      "text": " patient on mechanical ventilation, maybe we wouldn't consider them for sedation."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 464.0,
+      "end": 468.96,
+      "text": " When we sedate a patient, we run the risk of lowering their blood pressure."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 468.96,
+      "end": 471.88,
+      "text": " So we might need to manage that, too."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 472.18,
+      "end": 476.54,
+      "text": " So if their blood pressure gets too low, maybe we need to administer vasopressors, which"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 476.54,
+      "end": 480.54,
+      "text": " artificially raise the blood pressure, or fluids or anything else that takes care of"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 480.54,
+      "end": 482.7,
+      "text": " this issue."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 482.7,
+      "end": 489.06,
+      "text": " So just think of this as an example of choices cascading in terms of their consequences as"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 489.06,
+      "end": 492.54,
+      "text": " we roll forward in time."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 492.54,
+      "end": 497.78,
+      "text": " Ultimately, we will face the end of the patient's stay."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 497.88,
+      "end": 504.11999999999995,
+      "text": " And hopefully, we manage the patient in a successful way so that their response or their"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 504.11999999999995,
+      "end": 507.64,
+      "text": " outcome is a good one."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 507.64,
+      "end": 512.1999999999999,
+      "text": " What I'm illustrating here is that for any one patient in our hospitals or in the health"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 512.1999999999999,
+      "end": 516.52,
+      "text": " care system, we will only observe one trajectory through these options."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 516.52,
+      "end": 521.56,
+      "text": " So I will show this type of illustration many, many times."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 521.56,
+      "end": 527.9,
+      "text": " But I hope you can realize the scope of the decision space here."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 527.9,
+      "end": 530.9399999999999,
+      "text": " Essentially, at any point, we can choose a different action."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 530.9399999999999,
+      "end": 537.78,
+      "text": " And usually, the number of decisions that we make in an ICU setting, for example, is"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 537.78,
+      "end": 542.66,
+      "text": " much larger than we could ever test in a randomized trial."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 542.66,
+      "end": 548.4599999999999,
+      "text": " Think of all of these different trajectories as being different arms in a randomized control"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 548.48,
+      "end": 553.1600000000001,
+      "text": " trial that you want to compare the effects or the outcomes of."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 553.1600000000001,
+      "end": 555.4000000000001,
+      "text": " It's infeasible to run such a trial, typically."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 555.4000000000001,
+      "end": 559.5600000000001,
+      "text": " So one of the big reasons that we are talking about reinforcement learning today and talking"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 559.5600000000001,
+      "end": 564.4000000000001,
+      "text": " about learning policies rather than causal effects in the setup that we did last week"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 564.4000000000001,
+      "end": 572.76,
+      "text": " is because the space of possible action trajectories is so large."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 572.78,
+      "end": 582.38,
+      "text": " So having said that, we now turn to trying to find, essentially, the policy that picks"
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 582.38,
+      "end": 585.54,
+      "text": " this orange path here that leads to a good outcome."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 585.54,
+      "end": 591.3,
+      "text": " And to reason about such a thing, we need to also reason about what is a good outcome."
+    },
+    {
+      "number": "output",
+      "title": " Lecture 16 Reinforcement Learning, Part 1",
+      "start": 591.3,
+      "end": 599.06,
+      "text": " What is a good reward for our agent as it proceeds through time and makes choices?"
+    }
+  ],
+  "text": " Hi everyone, we're going to get started now. So this week's lecture is really picking up where last week's left off. You might remember we spent the last week talking about problems and friends, and I told you how for last week we were just going to focus on the one-time step setting. Well as we know, lots of medicine has to do with multiple sequential decisions across time, and that'll be the focus of this whole week's worth of discussions. And as I thought about really what should I teach in this lecture, I realized that the person who knew the most about the topic was in fact a postdoctoral researcher in my lab. So I'll take it, I'll take that, I'll take that. It's very fair, it's very fair. And so I invited him to come to us today to give this as an invited lecture, and this is Frederik Johansson, he'll be a professor in Chalmers in Sweden starting in September. Thank you so much David, that's very generous. So as David mentioned, last time we looked a lot at causal effects, and that's where we will start this discussion too. So I'll just start with this reminder here. We essentially introduced four quantities last time, or the last two lectures as far as I know. We had two potential outcomes, which represented the outcomes that we would see of some treatment choice under the various choices, or the two different choices, one and zero. And we had two covariates, or sorry, we had a set of covariates, x and a treatment t. And we were interested essentially what is the effect of this treatment t on the outcome y given the covariates x. And the effect that we focused on that time was the conditional average treatment effect, which is exactly the difference between these potential outcomes conditioned on the features. So the whole last week was about trying to identify this quantity using various methods. And the question that didn't come up so much, or one question that didn't come up so much is how do we use this quantity? We might be interested in it just in terms of its absolute magnitude, how large is the effect, but we might also be interested in designing a policy for how to treat our patients based on this quantity. So today we will focus on policies. And what I mean by that specifically is something that takes into account what we know about a patient and produces a choice or an action as an output. Typically we'll think of policies as depending on medical history, perhaps which treatments they have received previously, what state is the patient currently in. But we can also base it purely on this number that we produced last time, the conditional average treatment effect. And one very natural policy is to say pi of x is equal to the indicator function representing if this case is positive. So if the effect is positive, we treat the patient. If the effect is negative, we don't. And of course positive will be relative to the usefulness of the outcome being high, but this is a very natural policy to consider. However, we can also think about much more complicated policies that are not just based on this number, the quality of the outcome. We can think about policies that take into account legislation or cost of medication or side effects. We're not going to do that today, but that's something that you can keep in mind as we discuss these things. So David mentioned we should now move from the one-step setting where we have a single treatment acting at a single time, and we only have to take into account the state of a patient once, basically. And we will move from that to the sequential setting. My first example of such a setting is sepsis management. So sepsis is a complication of an infection, which can have very disastrous consequences. It can lead to organ failure and ultimately death. And it's actually one of the leading causes of deaths in the ICU. So it's, of course, important that we can manage and treat this condition. When you start treating sepsis, the primary target, the first thing you should think about fixing is the infection itself. If we don't treat the infection, things are going to keep being bad. But even if we figure out the right antibiotic to treat the infection that is the source of the septic shock or the septic inflammation, there are a lot of different conditions that we need to manage. Because the infection itself can lead to fever, breathing difficulties, low blood pressure, high heart rate, all these kinds of things that are symptoms but not the cause themselves, we still have to manage them somehow so that the patient survives and is comfortable. So when I say sepsis management, I'm talking about managing such quantities over time, over a patient's stay in the hospital. So last time, again, just to really hammer this in, we talked about potential outcomes and the choice of a single treatment. So we can think about this in the septic setting as a patient coming in or a patient already being in the hospital, presumably, and is presenting with breathing difficulties. So that means that their blood oxygen will be low because they can't breathe on their own and we might want to put them on mechanical ventilation so that we can ensure that they get sufficient oxygen. We can view this as a single choice. Should we put the patient on mechanical ventilation or not? But what we need to take into account here is what will happen after we make that choice. What will be the side effects of this choice going further? Because we want to make sure that the patient is comfortable and in good health throughout their stay. So today, we will move towards sequential decision making. And in particular, what I alluded to just now is that decisions made in sequence may have the property that choices early on rule out certain choices later. We'll see an example of that very, very soon. And in particular, we'll be interested in coming up with a policy for making decisions repeatedly that optimizes a given outcome, something that we care about. It could minimize the risk of death. It could be a reward that says that the vitals of a patient are in the right range. We might want to optimize that. But essentially, think about it now as having this choice of administering a medication or an intervention at any time t and having the best policy for doing so. OK. I'm going to skip that one. OK. So I mentioned already one potential choice that we might want to make in the management of a septic patient, which is to put them on mechanical ventilation because they can't breathe on their own. A side effect of doing so is that they might suffer discomfort from being intubated. And well, the procedure is not painless. It's not without discomfort. So something that you might have to do, putting them on mechanical ventilation, is to sedate the patient. So this is an action that is informed by the previous action because if we didn't put the patient on mechanical ventilation, maybe we wouldn't consider them for sedation. When we sedate a patient, we run the risk of lowering their blood pressure. So we might need to manage that, too. So if their blood pressure gets too low, maybe we need to administer vasopressors, which artificially raise the blood pressure, or fluids or anything else that takes care of this issue. So just think of this as an example of choices cascading in terms of their consequences as we roll forward in time. Ultimately, we will face the end of the patient's stay. And hopefully, we manage the patient in a successful way so that their response or their outcome is a good one. What I'm illustrating here is that for any one patient in our hospitals or in the health care system, we will only observe one trajectory through these options. So I will show this type of illustration many, many times. But I hope you can realize the scope of the decision space here. Essentially, at any point, we can choose a different action. And usually, the number of decisions that we make in an ICU setting, for example, is much larger than we could ever test in a randomized trial. Think of all of these different trajectories as being different arms in a randomized control trial that you want to compare the effects or the outcomes of. It's infeasible to run such a trial, typically. So one of the big reasons that we are talking about reinforcement learning today and talking about learning policies rather than causal effects in the setup that we did last week is because the space of possible action trajectories is so large. So having said that, we now turn to trying to find, essentially, the policy that picks this orange path here that leads to a good outcome. And to reason about such a thing, we need to also reason about what is a good outcome. What is a good reward for our agent as it proceeds through time and makes choices?"
+}

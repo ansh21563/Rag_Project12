@@ -1,0 +1,1244 @@
+{
+  "chunks": [
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 0.0,
+      "end": 20.0,
+      "text": " So today, I'm going to talk about precision medicine."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 20.0,
+      "end": 22.76,
+      "text": " And we don't really have a very precise idea"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 22.76,
+      "end": 25.080000000000002,
+      "text": " of what precision medicine is."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 25.080000000000002,
+      "end": 26.88,
+      "text": " And so I'm going to start by talking"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 26.88,
+      "end": 29.36,
+      "text": " about that a little bit."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 29.36,
+      "end": 31.9,
+      "text": " David talked about disease subtyping."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 31.9,
+      "end": 35.28,
+      "text": " And if you think about how do you figure out"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 35.28,
+      "end": 38.24,
+      "text": " what are the subtypes of a disease,"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 38.24,
+      "end": 40.32,
+      "text": " you do it by some kind of clustering"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 40.32,
+      "end": 42.92,
+      "text": " on a bunch of different sorts of data."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 42.92,
+      "end": 46.0,
+      "text": " And so we have data like demographics, comorbidities,"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 46.0,
+      "end": 49.4,
+      "text": " vital signs, medications, procedures, disease"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 49.4,
+      "end": 54.32,
+      "text": " trajectories, whatever those mean, image similarities."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 54.32,
+      "end": 57.0,
+      "text": " And today, mostly, I'm going to focus on genetics,"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 57.0,
+      "end": 61.04,
+      "text": " because this was the great hope of the Human Genome Project,"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 61.04,
+      "end": 64.84,
+      "text": " that as we understood more about the genetic influences"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 64.84,
+      "end": 70.08,
+      "text": " on disease, it would help us create precise ways of dealing"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 70.08,
+      "end": 73.2,
+      "text": " with various diseases and figuring out"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 73.2,
+      "end": 76.6,
+      "text": " the right therapies for them and so on."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 76.6,
+      "end": 81.03999999999999,
+      "text": " So I want to start by reviewing a little bit a study that"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 81.03999999999999,
+      "end": 84.28,
+      "text": " was done by the National Research Council,"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 84.28,
+      "end": 86.68,
+      "text": " so the National Academies."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 86.84,
+      "end": 89.92,
+      "text": " And it's called Tewart Precision Medicine."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 89.92,
+      "end": 94.08000000000001,
+      "text": " This was fairly recent, 2017."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 94.08000000000001,
+      "end": 96.16000000000001,
+      "text": " And they have some interesting observations."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 96.16000000000001,
+      "end": 99.76,
+      "text": " So they start off and they say, well,"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 99.76,
+      "end": 103.36000000000001,
+      "text": " why is this relevant now when it may not"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 103.36000000000001,
+      "end": 105.4,
+      "text": " have been relevant before?"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 105.4,
+      "end": 108.34,
+      "text": " And of course, the biggie is new capabilities"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 108.34,
+      "end": 110.56,
+      "text": " to compile molecular data on patients"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 110.56,
+      "end": 114.28,
+      "text": " on a scale that was unimaginable 20 years ago."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 114.28,
+      "end": 117.96000000000001,
+      "text": " So people estimated that getting the first human genome"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 117.96000000000001,
+      "end": 119.36,
+      "text": " cost about $3 billion."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 122.0,
+      "end": 127.56,
+      "text": " Today, getting a human genome costs less than $1,000."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 127.56,
+      "end": 131.72,
+      "text": " I have some figures later in the talk showing some of the ads"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 131.72,
+      "end": 134.48,
+      "text": " that people are running."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 134.48,
+      "end": 137.46,
+      "text": " Increasing success in utilizing molecular information"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 137.46,
+      "end": 139.84,
+      "text": " to improve diagnosis and treatment."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 139.84,
+      "end": 141.76,
+      "text": " We'll talk about some of those."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 141.76,
+      "end": 147.72,
+      "text": " Advances in IT so that we have bigger capabilities of dealing"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 147.72,
+      "end": 151.1,
+      "text": " with so-called big data."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 151.1,
+      "end": 154.16,
+      "text": " A perfect storm among stakeholders"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 154.16,
+      "end": 156.28,
+      "text": " that has made them much more receptive"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 156.28,
+      "end": 158.32,
+      "text": " to this kind of information."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 158.32,
+      "end": 162.64,
+      "text": " So the fact that costs in the health care system in the US"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 162.64,
+      "end": 166.92,
+      "text": " keep rising and quality doesn't keep rising proportionately"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 166.92,
+      "end": 168.95999999999998,
+      "text": " makes everybody desperate to come up"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 168.96,
+      "end": 172.56,
+      "text": " with new ways of dealing with this problem."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 172.56,
+      "end": 178.60000000000002,
+      "text": " And so this looks like the next great hope for how to do it."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 178.60000000000002,
+      "end": 181.8,
+      "text": " And shifting public attitudes toward molecular data."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 181.8,
+      "end": 186.04000000000002,
+      "text": " So how many of you have seen the movie Gattaca?"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 186.04000000000002,
+      "end": 186.96,
+      "text": " A few."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 186.96,
+      "end": 190.08,
+      "text": " So that's a dystopian view of what"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 190.08,
+      "end": 193.06,
+      "text": " happens when people are genotyped"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 193.06,
+      "end": 196.68,
+      "text": " and can therefore be tracked by their genetics."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 196.68,
+      "end": 200.6,
+      "text": " And it is true that there are horror stories that can happen."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 200.6,
+      "end": 205.6,
+      "text": " But nevertheless, people seem to be more relaxed today"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 205.6,
+      "end": 209.64000000000001,
+      "text": " about allowing that kind of data to be collected and used"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 209.64000000000001,
+      "end": 214.62,
+      "text": " because they see the potential benefits outweighing the costs."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 214.62,
+      "end": 217.98000000000002,
+      "text": " Not everybody, but that continues"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 217.98000000000002,
+      "end": 221.28,
+      "text": " to be a serious issue."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 221.28,
+      "end": 225.0,
+      "text": " So this report goes on and says, let's"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 225.0,
+      "end": 229.28,
+      "text": " think about how to integrate all kinds of different data"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 229.28,
+      "end": 231.18,
+      "text": " about individuals."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 231.18,
+      "end": 233.0,
+      "text": " And they start off and they say, you"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 233.0,
+      "end": 237.28,
+      "text": " know, one good example of this has been Google Maps."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 237.28,
+      "end": 240.28,
+      "text": " So Google Maps has a coordinate system,"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 240.28,
+      "end": 243.04,
+      "text": " which is basically longitude and latitude"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 243.04,
+      "end": 245.16,
+      "text": " for every point on the Earth."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 245.16,
+      "end": 248.8,
+      "text": " And they can use that coordinate system in order"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 248.8,
+      "end": 252.04,
+      "text": " to layer on top of each other information"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 252.04,
+      "end": 255.79999999999998,
+      "text": " about postal codes, built structures, census tracts,"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 255.79999999999998,
+      "end": 259.88,
+      "text": " land use, transportation, everything."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 259.88,
+      "end": 261.76,
+      "text": " And they said, wow, this is really cool."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 261.76,
+      "end": 265.12,
+      "text": " If only we could do this in health care."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 265.12,
+      "end": 268.94,
+      "text": " And so their vision is to try to do that in health care"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 268.94,
+      "end": 271.59999999999997,
+      "text": " by saying, well, what corresponds"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 271.59999999999997,
+      "end": 276.4,
+      "text": " to latitude and longitude is individual patients."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 276.4,
+      "end": 279.71999999999997,
+      "text": " And these individual patients have various kinds"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 279.76000000000005,
+      "end": 283.0,
+      "text": " of data about them, including their microbiome,"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 283.0,
+      "end": 287.92,
+      "text": " their epigenome, their genome, clinical signs and symptoms,"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 287.92,
+      "end": 291.98,
+      "text": " the exposome, what are they exposed to."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 291.98,
+      "end": 294.64000000000004,
+      "text": " And so there's been a real attempt"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 294.64000000000004,
+      "end": 299.12,
+      "text": " to go out and create large collections of data"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 299.12,
+      "end": 303.08000000000004,
+      "text": " that bring together all of this kind of information."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 303.08000000000004,
+      "end": 307.52000000000004,
+      "text": " One of those that is notable is the Department of Health,"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 307.52,
+      "end": 311.71999999999997,
+      "text": " well, NIH basically started a project about a year and a half"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 311.71999999999997,
+      "end": 313.84,
+      "text": " ago called All of Us."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 313.84,
+      "end": 316.08,
+      "text": " Sounds sort of menacing."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 316.08,
+      "end": 319.32,
+      "text": " But it's really a million of us."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 319.32,
+      "end": 323.15999999999997,
+      "text": " And they have asked institutions around the United States"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 323.15999999999997,
+      "end": 327.0,
+      "text": " to get volunteers to volunteer to provide"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 327.0,
+      "end": 331.56,
+      "text": " their genetic information, their clinical data, where they live,"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 331.56,
+      "end": 334.2,
+      "text": " where they commute, things like that,"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 334.2,
+      "end": 337.5,
+      "text": " so that they can get environmental data about them."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 337.5,
+      "end": 341.78,
+      "text": " And then it's meant to be an ongoing collection of data"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 341.78,
+      "end": 344.86,
+      "text": " about a million people who are supposed"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 344.86,
+      "end": 348.34,
+      "text": " to be a representative sample of the United States."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 348.34,
+      "end": 350.14,
+      "text": " So you'll see in some of the projects"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 350.14,
+      "end": 353.3,
+      "text": " I talk about later today that many of the studies"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 353.3,
+      "end": 357.02,
+      "text": " have been done in populations of European ancestry."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 357.02,
+      "end": 360.94,
+      "text": " And so they may not apply to people of other ethnicities."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 360.94,
+      "end": 365.1,
+      "text": " This is attempting to sample accurately"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 365.1,
+      "end": 369.1,
+      "text": " so that the fraction of African-Americans and Asians"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 369.1,
+      "end": 372.54,
+      "text": " and Hispanics and so on corresponds"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 372.54,
+      "end": 376.18,
+      "text": " to the sample in the United States population."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 376.18,
+      "end": 377.86,
+      "text": " There's a long history."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 377.86,
+      "end": 381.58000000000004,
+      "text": " How many of you have heard of the Framingham Heart Study?"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 381.58000000000004,
+      "end": 382.34000000000003,
+      "text": " A lot of people."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 382.34000000000003,
+      "end": 385.70000000000005,
+      "text": " So Framingham in the 1940s agreed"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 385.70000000000005,
+      "end": 389.36,
+      "text": " to become the subject of a long-term experiment."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 389.36,
+      "end": 394.3,
+      "text": " I think it's now run by Boston University, where"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 394.3,
+      "end": 400.54,
+      "text": " every year or two, they go out and they survey,"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 400.54,
+      "end": 402.54,
+      "text": " I can't remember the number of people."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 402.54,
+      "end": 407.34000000000003,
+      "text": " It's something started as something like 50,000 people"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 407.34000000000003,
+      "end": 409.94,
+      "text": " about their habits and whether they smoke"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 409.94,
+      "end": 414.3,
+      "text": " and what their weight and height is and any clinical problems"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 414.3,
+      "end": 417.3,
+      "text": " they've had, surgical procedures, et cetera."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 417.3,
+      "end": 419.58000000000004,
+      "text": " And they've been collecting that database now"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 419.58000000000004,
+      "end": 422.82,
+      "text": " over several generations of people"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 422.86,
+      "end": 425.18,
+      "text": " that descend from those."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 425.18,
+      "end": 428.26,
+      "text": " And they've started collecting genetic data as well."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 428.26,
+      "end": 432.82,
+      "text": " So all of us is really doing this on a very large scale."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 432.82,
+      "end": 436.86,
+      "text": " Now, the vision of this study was"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 436.86,
+      "end": 441.5,
+      "text": " to say that we're going to build this information commons, which"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 441.5,
+      "end": 444.26,
+      "text": " collects all this kind of information."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 444.26,
+      "end": 446.62,
+      "text": " And then we're going to develop knowledge"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 446.62,
+      "end": 450.78,
+      "text": " from that information or from that data."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 450.78,
+      "end": 453.29999999999995,
+      "text": " And that knowledge will become the substrate"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 453.29999999999995,
+      "end": 456.26,
+      "text": " on which biomedical research can rest."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 456.26,
+      "end": 459.5,
+      "text": " So if we find significant associations,"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 459.5,
+      "end": 462.61999999999995,
+      "text": " then that suggests that one should do studies,"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 462.61999999999995,
+      "end": 465.53999999999996,
+      "text": " which will not necessarily be answered by the data"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 465.53999999999996,
+      "end": 466.94,
+      "text": " that they've collected."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 466.94,
+      "end": 469.9,
+      "text": " You may have to grow knockout mice or something in order"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 469.9,
+      "end": 472.58,
+      "text": " to test whether an idea really works."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 472.58,
+      "end": 474.65999999999997,
+      "text": " But this is a way of integrating all"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 474.65999999999997,
+      "end": 476.82,
+      "text": " of that type of information."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 476.82,
+      "end": 479.44,
+      "text": " And of course, it can affect diagnosis, treatment,"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 479.48,
+      "end": 482.48,
+      "text": " and health outcomes, which are the holy grail for what"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 482.48,
+      "end": 485.88,
+      "text": " you'd like to do in medicine."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 485.88,
+      "end": 489.04,
+      "text": " Now, here's an interesting problem."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 489.04,
+      "end": 494.4,
+      "text": " So the focus, notice, was on taxonomies."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 494.4,
+      "end": 501.52,
+      "text": " So Sam Johnson was a very famous 17th century British writer."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 501.52,
+      "end": 506.32,
+      "text": " And he built encyclopedias and dictionaries"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 506.32,
+      "end": 510.68,
+      "text": " and was a poet and a reviewer and a commentator"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 510.68,
+      "end": 514.2,
+      "text": " and did all kinds of fancy things."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 514.2,
+      "end": 516.92,
+      "text": " And one of his quotes is, my diseases"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 516.92,
+      "end": 520.4,
+      "text": " are an asthma and a dropsy and what is less curable,"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 520.4,
+      "end": 523.04,
+      "text": " 75 years old."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 523.04,
+      "end": 526.4,
+      "text": " So he was funny, too."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 526.4,
+      "end": 532.52,
+      "text": " Now, if you look up dropsy in a dictionary, how many of you"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 532.52,
+      "end": 535.36,
+      "text": " have heard of dropsy?"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 535.36,
+      "end": 536.56,
+      "text": " A couple."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 536.56,
+      "end": 538.1999999999999,
+      "text": " So how did you hear of it?"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 541.88,
+      "end": 542.76,
+      "text": " Sorry?"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 542.76,
+      "end": 544.48,
+      "text": " From a novel?"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 544.48,
+      "end": 544.98,
+      "text": " Yeah."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 544.98,
+      "end": 545.72,
+      "text": " AUDIENCE MEMBER 1."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 545.72,
+      "end": 548.64,
+      "text": " Yeah, so they had dropsy in London."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 548.64,
+      "end": 552.36,
+      "text": " Yeah, I mean, I learned about it by watching masterpiece theater"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 552.36,
+      "end": 557.92,
+      "text": " with 19th century people where the grandmother would"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 557.92,
+      "end": 561.24,
+      "text": " take to her bed with the dropsy."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 561.24,
+      "end": 563.88,
+      "text": " And it didn't turn out well, typically,"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 563.88,
+      "end": 567.04,
+      "text": " but it took a long time for those people to die."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 567.04,
+      "end": 571.0,
+      "text": " So dropsy is water sickness, swelling, edema, et cetera."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 571.0,
+      "end": 572.8,
+      "text": " It's actually not a disease."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 572.8,
+      "end": 575.8,
+      "text": " It's a symptom of a whole bunch of diseases."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 575.8,
+      "end": 579.44,
+      "text": " So it could be pulmonary disease, heart failure,"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 579.44,
+      "end": 582.2,
+      "text": " kidney disease, et cetera."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 582.2,
+      "end": 583.22,
+      "text": " And it's interesting."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 583.22,
+      "end": 584.36,
+      "text": " I look back on this."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 584.36,
+      "end": 587.84,
+      "text": " I couldn't find it for putting together this lecture."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 587.84,
+      "end": 591.96,
+      "text": " But at one point, I did discover that the last time dropsy"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 591.96,
+      "end": 595.2,
+      "text": " was listed as the cause of death of a patient in the United"
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 595.2,
+      "end": 598.52,
+      "text": " States was in 1949."
+    },
+    {
+      "number": "output",
+      "title":" Lecture 20 Precision Medicine",
+      "start": 598.52,
+      "end": 601.48,
+      "text": " So since then, it's disappeared."
+    }
+  ],
+  "text": " So today, I'm going to talk about precision medicine. And we don't really have a very precise idea of what precision medicine is. And so I'm going to start by talking about that a little bit. David talked about disease subtyping. And if you think about how do you figure out what are the subtypes of a disease, you do it by some kind of clustering on a bunch of different sorts of data. And so we have data like demographics, comorbidities, vital signs, medications, procedures, disease trajectories, whatever those mean, image similarities. And today, mostly, I'm going to focus on genetics, because this was the great hope of the Human Genome Project, that as we understood more about the genetic influences on disease, it would help us create precise ways of dealing with various diseases and figuring out the right therapies for them and so on. So I want to start by reviewing a little bit a study that was done by the National Research Council, so the National Academies. And it's called Tewart Precision Medicine. This was fairly recent, 2017. And they have some interesting observations. So they start off and they say, well, why is this relevant now when it may not have been relevant before? And of course, the biggie is new capabilities to compile molecular data on patients on a scale that was unimaginable 20 years ago. So people estimated that getting the first human genome cost about $3 billion. Today, getting a human genome costs less than $1,000. I have some figures later in the talk showing some of the ads that people are running. Increasing success in utilizing molecular information to improve diagnosis and treatment. We'll talk about some of those. Advances in IT so that we have bigger capabilities of dealing with so-called big data. A perfect storm among stakeholders that has made them much more receptive to this kind of information. So the fact that costs in the health care system in the US keep rising and quality doesn't keep rising proportionately makes everybody desperate to come up with new ways of dealing with this problem. And so this looks like the next great hope for how to do it. And shifting public attitudes toward molecular data. So how many of you have seen the movie Gattaca? A few. So that's a dystopian view of what happens when people are genotyped and can therefore be tracked by their genetics. And it is true that there are horror stories that can happen. But nevertheless, people seem to be more relaxed today about allowing that kind of data to be collected and used because they see the potential benefits outweighing the costs. Not everybody, but that continues to be a serious issue. So this report goes on and says, let's think about how to integrate all kinds of different data about individuals. And they start off and they say, you know, one good example of this has been Google Maps. So Google Maps has a coordinate system, which is basically longitude and latitude for every point on the Earth. And they can use that coordinate system in order to layer on top of each other information about postal codes, built structures, census tracts, land use, transportation, everything. And they said, wow, this is really cool. If only we could do this in health care. And so their vision is to try to do that in health care by saying, well, what corresponds to latitude and longitude is individual patients. And these individual patients have various kinds of data about them, including their microbiome, their epigenome, their genome, clinical signs and symptoms, the exposome, what are they exposed to. And so there's been a real attempt to go out and create large collections of data that bring together all of this kind of information. One of those that is notable is the Department of Health, well, NIH basically started a project about a year and a half ago called All of Us. Sounds sort of menacing. But it's really a million of us. And they have asked institutions around the United States to get volunteers to volunteer to provide their genetic information, their clinical data, where they live, where they commute, things like that, so that they can get environmental data about them. And then it's meant to be an ongoing collection of data about a million people who are supposed to be a representative sample of the United States. So you'll see in some of the projects I talk about later today that many of the studies have been done in populations of European ancestry. And so they may not apply to people of other ethnicities. This is attempting to sample accurately so that the fraction of African-Americans and Asians and Hispanics and so on corresponds to the sample in the United States population. There's a long history. How many of you have heard of the Framingham Heart Study? A lot of people. So Framingham in the 1940s agreed to become the subject of a long-term experiment. I think it's now run by Boston University, where every year or two, they go out and they survey, I can't remember the number of people. It's something started as something like 50,000 people about their habits and whether they smoke and what their weight and height is and any clinical problems they've had, surgical procedures, et cetera. And they've been collecting that database now over several generations of people that descend from those. And they've started collecting genetic data as well. So all of us is really doing this on a very large scale. Now, the vision of this study was to say that we're going to build this information commons, which collects all this kind of information. And then we're going to develop knowledge from that information or from that data. And that knowledge will become the substrate on which biomedical research can rest. So if we find significant associations, then that suggests that one should do studies, which will not necessarily be answered by the data that they've collected. You may have to grow knockout mice or something in order to test whether an idea really works. But this is a way of integrating all of that type of information. And of course, it can affect diagnosis, treatment, and health outcomes, which are the holy grail for what you'd like to do in medicine. Now, here's an interesting problem. So the focus, notice, was on taxonomies. So Sam Johnson was a very famous 17th century British writer. And he built encyclopedias and dictionaries and was a poet and a reviewer and a commentator and did all kinds of fancy things. And one of his quotes is, my diseases are an asthma and a dropsy and what is less curable, 75 years old. So he was funny, too. Now, if you look up dropsy in a dictionary, how many of you have heard of dropsy? A couple. So how did you hear of it? Sorry? From a novel? Yeah. AUDIENCE MEMBER 1. Yeah, so they had dropsy in London. Yeah, I mean, I learned about it by watching masterpiece theater with 19th century people where the grandmother would take to her bed with the dropsy. And it didn't turn out well, typically, but it took a long time for those people to die. So dropsy is water sickness, swelling, edema, et cetera. It's actually not a disease. It's a symptom of a whole bunch of diseases. So it could be pulmonary disease, heart failure, kidney disease, et cetera. And it's interesting. I look back on this. I couldn't find it for putting together this lecture. But at one point, I did discover that the last time dropsy was listed as the cause of death of a patient in the United States was in 1949. So since then, it's disappeared."
+}

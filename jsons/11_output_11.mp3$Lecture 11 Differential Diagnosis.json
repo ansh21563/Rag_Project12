@@ -1,0 +1,1167 @@
+{
+  "chunks": [
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 0.0,
+      "end": 16.88,
+      "text": " OK."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 16.88,
+      "end": 20.68,
+      "text": " Today's topic is differential diagnosis."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 20.68,
+      "end": 23.240000000000002,
+      "text": " And so I'm just quoting Wikipedia here."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 23.240000000000002,
+      "end": 27.32,
+      "text": " Diagnosis is the identification of the nature and cause"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 27.32,
+      "end": 29.2,
+      "text": " of a certain phenomenon."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 29.2,
+      "end": 33.04,
+      "text": " And differential diagnosis is the distinguishing"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 33.04,
+      "end": 35.8,
+      "text": " of a particular disease or condition"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 35.8,
+      "end": 39.480000000000004,
+      "text": " from others that present similar clinical features."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 39.480000000000004,
+      "end": 43.72,
+      "text": " So doctors typically talk about differential diagnosis"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 43.72,
+      "end": 46.08,
+      "text": " when they're faced with a patient"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 46.08,
+      "end": 49.08,
+      "text": " and they make a list of what are the things that"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 49.08,
+      "end": 51.56,
+      "text": " might be wrong with this patient."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 51.56,
+      "end": 53.16,
+      "text": " And then they go through the process"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 53.16,
+      "end": 56.56,
+      "text": " of trying to figure out which one it actually is."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 56.56,
+      "end": 59.800000000000004,
+      "text": " So that's what we're going to focus on today."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 59.800000000000004,
+      "end": 65.52000000000001,
+      "text": " Now, just to scare you, here's a lovely model"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 65.52000000000001,
+      "end": 69.4,
+      "text": " of human circulatory physiology."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 69.4,
+      "end": 75.72,
+      "text": " So this is from Guyton's textbook of cardiology."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 75.72,
+      "end": 80.16,
+      "text": " And I'm not going to hold you responsible for all"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 80.16,
+      "end": 83.48,
+      "text": " of the details of this model."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 83.48,
+      "end": 87.96000000000001,
+      "text": " But it's interesting because this is, at least as of maybe"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 87.96000000000001,
+      "end": 92.2,
+      "text": " 20 years ago, the state of the art of how people understood"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 92.2,
+      "end": 95.0,
+      "text": " what happens in the circulatory system."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 95.0,
+      "end": 98.56,
+      "text": " And it has various control inputs"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 98.56,
+      "end": 104.2,
+      "text": " that determine things like how your hormone levels change"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 104.2,
+      "end": 107.80000000000001,
+      "text": " various aspects of the cardiovascular system"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 107.80000000000001,
+      "end": 112.04,
+      "text": " and how the interactions between different components"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 112.04,
+      "end": 117.2,
+      "text": " of the cardiovascular system affect each other."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 117.2,
+      "end": 122.60000000000001,
+      "text": " And so in principle, if I could tune this model to me,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 122.60000000000001,
+      "end": 126.08000000000001,
+      "text": " then I could make all kinds of pretty good predictions"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 126.08000000000001,
+      "end": 131.56,
+      "text": " that say, if I increase my systemic vascular resistance,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 131.56,
+      "end": 134.92000000000002,
+      "text": " then here's what's going to happen as the rest of the system"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 134.92000000000002,
+      "end": 136.56,
+      "text": " adjusts."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 136.56,
+      "end": 140.60000000000002,
+      "text": " And if I get a blockage in a coronary artery,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 140.6,
+      "end": 144.32,
+      "text": " then here's what's going to happen to my cardiac output"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 144.32,
+      "end": 147.07999999999998,
+      "text": " and various other things."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 147.07999999999998,
+      "end": 148.48,
+      "text": " So this would be terrific."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 148.48,
+      "end": 152.4,
+      "text": " And if we had this kind of model for not just"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 152.4,
+      "end": 155.88,
+      "text": " the cardiovascular system but the entire body,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 155.88,
+      "end": 159.56,
+      "text": " then we'd say, OK, we've solved medicine."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 159.56,
+      "end": 164.48,
+      "text": " Well, we don't have this kind of model for most systems."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 164.48,
+      "end": 167.24,
+      "text": " And also, there's this minor problem"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 167.24,
+      "end": 170.68,
+      "text": " that if I give you this model and say,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 170.68,
+      "end": 175.0,
+      "text": " how does this relate to a particular patient,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 175.0,
+      "end": 177.24,
+      "text": " how would you figure that out?"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 177.24,
+      "end": 179.76000000000002,
+      "text": " This has hundreds of differential equations"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 179.76000000000002,
+      "end": 182.60000000000002,
+      "text": " that are being represented by this diagram."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 182.60000000000002,
+      "end": 185.84,
+      "text": " And they have many hundreds of parameters."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 185.84,
+      "end": 189.54000000000002,
+      "text": " And so we were joking when we started"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 189.54000000000002,
+      "end": 192.86,
+      "text": " working with this model that you'd really"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 192.86,
+      "end": 194.78,
+      "text": " have to kill the patient in order"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 194.78,
+      "end": 201.06,
+      "text": " to do enough measurements to be able to tune this model"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 201.06,
+      "end": 203.62,
+      "text": " to their particular physiology."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 203.62,
+      "end": 208.02,
+      "text": " And of course, that's probably not a good practical approach."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 208.02,
+      "end": 210.70000000000002,
+      "text": " We're getting a little better by developing"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 210.70000000000002,
+      "end": 216.5,
+      "text": " more non-invasive ways of measuring these things."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 216.5,
+      "end": 218.82000000000002,
+      "text": " But that's moving along very slowly."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 218.85999999999999,
+      "end": 223.01999999999998,
+      "text": " And I don't expect that I or maybe even any of you"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 223.01999999999998,
+      "end": 226.78,
+      "text": " will live long enough that this approach"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 226.78,
+      "end": 230.42,
+      "text": " to doing medical reasoning and medical diagnosis"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 230.42,
+      "end": 234.1,
+      "text": " is actually going to happen."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 234.1,
+      "end": 237.66,
+      "text": " So what we're going to look at today"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 237.66,
+      "end": 244.66,
+      "text": " is what simpler models are there for diagnostic reasoning?"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 244.66,
+      "end": 248.26,
+      "text": " And I'm going to take the liberty of inflicting"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 248.26,
+      "end": 251.32,
+      "text": " a bit of history on you, because I"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 251.32,
+      "end": 255.45999999999998,
+      "text": " think it's interesting where a lot of these ideas came from."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 255.45999999999998,
+      "end": 260.53999999999996,
+      "text": " So the first idea was to build flow charts."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 260.53999999999996,
+      "end": 265.62,
+      "text": " Oh, and by the way, signs and symptoms,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 265.62,
+      "end": 269.09999999999997,
+      "text": " I've forgotten if we've talked about that in the class."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 269.09999999999997,
+      "end": 273.65999999999997,
+      "text": " So a sign is something that a doctor sees."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 273.65999999999997,
+      "end": 277.9,
+      "text": " And a symptom is something that the patient experiences."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 278.02,
+      "end": 279.65999999999997,
+      "text": " So a sign is objective."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 279.65999999999997,
+      "end": 282.94,
+      "text": " It's something that can be told outside your body."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 282.94,
+      "end": 285.65999999999997,
+      "text": " A symptom is something that you feel."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 285.65999999999997,
+      "end": 289.06,
+      "text": " So if you're feeling dizzy, then that's"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 289.06,
+      "end": 293.82,
+      "text": " a symptom, because it's not obvious to somebody outside you"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 293.82,
+      "end": 298.64,
+      "text": " that you're dizzy or that you have a pain or such things."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 298.64,
+      "end": 301.97999999999996,
+      "text": " Normally, we talk about manifestations or findings,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 301.97999999999996,
+      "end": 305.26,
+      "text": " which is sort of a super category of all the things"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 305.26,
+      "end": 309.65999999999997,
+      "text": " that are determinable about a patient."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 309.65999999999997,
+      "end": 314.06,
+      "text": " So we'll talk about flow charts, models"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 314.06,
+      "end": 317.18,
+      "text": " based on associations between diseases"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 317.18,
+      "end": 319.38,
+      "text": " and these manifestations."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 319.38,
+      "end": 321.34,
+      "text": " Then there are some issues about whether you're"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 321.34,
+      "end": 323.94,
+      "text": " trying to diagnose a single disease"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 323.94,
+      "end": 327.18,
+      "text": " or a multiplicity of diseases, which makes the models much"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 327.18,
+      "end": 330.3,
+      "text": " more complicated, whether you're trying"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 330.3,
+      "end": 335.58,
+      "text": " to do probabilistic diagnosis or definitive or categorical."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 335.58,
+      "end": 339.42,
+      "text": " And then we'll talk about some utility theoretic methods."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 339.42,
+      "end": 342.18,
+      "text": " And I'll just mention some rule-based and pattern"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 342.18,
+      "end": 345.02000000000004,
+      "text": " matching kinds of approaches."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 345.02000000000004,
+      "end": 347.66,
+      "text": " So this is kind of cute."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 347.66,
+      "end": 350.54,
+      "text": " This is from 1973."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 350.54,
+      "end": 354.90000000000003,
+      "text": " And if you were a woman and walked into the MIT Health"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 354.90000000000003,
+      "end": 359.42,
+      "text": " Center and complained of potentially a urinary tract"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 359.5,
+      "end": 362.78000000000003,
+      "text": " infection, they would take out this sheet"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 362.78000000000003,
+      "end": 365.74,
+      "text": " of paper, which was nicely color-coded,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 365.74,
+      "end": 368.1,
+      "text": " and they would check a bunch of boxes."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 368.1,
+      "end": 373.06,
+      "text": " And if you hit a red box, that represented a conclusion."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 373.06,
+      "end": 375.94,
+      "text": " And otherwise, it gave you suggestions"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 375.94,
+      "end": 378.58000000000004,
+      "text": " about what further tests to do."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 378.58000000000004,
+      "end": 381.34000000000003,
+      "text": " And this was essentially a triage instrument."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 381.34000000000003,
+      "end": 385.02000000000004,
+      "text": " It said, does this woman have a problem that"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 385.02000000000004,
+      "end": 387.06,
+      "text": " requires immediate attention?"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 387.1,
+      "end": 390.54,
+      "text": " So we should either call an ambulance"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 390.54,
+      "end": 392.46,
+      "text": " and take them to a hospital."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 392.46,
+      "end": 396.42,
+      "text": " Or is it something where we can just"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 396.42,
+      "end": 399.54,
+      "text": " tell them to come back the next day and see a doctor?"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 399.54,
+      "end": 402.02,
+      "text": " Or is it, in fact, some self-limited thing"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 402.02,
+      "end": 406.18,
+      "text": " where we say, take two aspirin, and it'll go away?"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 406.18,
+      "end": 408.86,
+      "text": " So that was the attempt here."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 408.86,
+      "end": 411.1,
+      "text": " Now, interestingly, if you look at the history"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 411.1,
+      "end": 414.78,
+      "text": " of this project between the Beth Israel Hospital and Lincoln"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 414.82,
+      "end": 419.05999999999995,
+      "text": " Laboratories, it started off as a computer aid."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 419.05999999999995,
+      "end": 422.41999999999996,
+      "text": " So they were building a computer system"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 422.41999999999996,
+      "end": 425.94,
+      "text": " that was supposed to do this."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 425.94,
+      "end": 430.38,
+      "text": " But you can imagine, in the late 1960s, early 1970s,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 430.38,
+      "end": 433.97999999999996,
+      "text": " computers were pretty clunky."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 433.97999999999996,
+      "end": 435.82,
+      "text": " PCs hadn't been invented yet."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 435.82,
+      "end": 439.09999999999997,
+      "text": " So this was like mainframe kinds of operations."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 439.09999999999997,
+      "end": 441.78,
+      "text": " It was very hard to use."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 441.78,
+      "end": 445.61999999999995,
+      "text": " And so they said, well, this is a small enough program"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 445.61999999999995,
+      "end": 451.65999999999997,
+      "text": " that we can reduce it to about 20 sheets like this, which"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 451.65999999999997,
+      "end": 454.08,
+      "text": " they proceeded to print up."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 454.08,
+      "end": 460.46,
+      "text": " And I was amused, because around 1980, I was working in my office"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 460.46,
+      "end": 463.09999999999997,
+      "text": " one night, and I got this splitting headache."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 463.09999999999997,
+      "end": 465.53999999999996,
+      "text": " And I went over to MIT Medical."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 465.53999999999996,
+      "end": 467.94,
+      "text": " And sure enough, the nurse pulled out"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 467.94,
+      "end": 470.46,
+      "text": " one of these sheets for headaches"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 470.46,
+      "end": 474.46,
+      "text": " and went through it with me and decided that a couple of Tylenol"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 474.46,
+      "end": 476.41999999999996,
+      "text": " should fix me."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 476.41999999999996,
+      "end": 477.85999999999996,
+      "text": " But it was interesting."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 477.85999999999996,
+      "end": 480.73999999999995,
+      "text": " So this was really in use for a while."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 480.73999999999995,
+      "end": 483.9,
+      "text": " Now, the difficulty with approaches"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 483.9,
+      "end": 486.82,
+      "text": " like this, of which there have been many, many, many"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 486.82,
+      "end": 491.17999999999995,
+      "text": " in the medical world, is that they're very fragile."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 491.17999999999995,
+      "end": 493.53999999999996,
+      "text": " They're very specific."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 493.53999999999996,
+      "end": 498.38,
+      "text": " They don't take account of unusual cases."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 498.38,
+      "end": 502.08,
+      "text": " And there's a lot of effort in coming to consensus"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 502.08,
+      "end": 503.62,
+      "text": " to build these things."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 503.62,
+      "end": 507.1,
+      "text": " And then they're not necessarily useful for a long time."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 507.1,
+      "end": 510.82,
+      "text": " So MIT actually stopped using them shortly"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 510.82,
+      "end": 513.62,
+      "text": " after my headache experience."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 513.62,
+      "end": 516.7,
+      "text": " But if you go over to a hospital and you"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 516.7,
+      "end": 521.9,
+      "text": " look on the bookshelf of a junior doctor,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 521.9,
+      "end": 525.74,
+      "text": " you will still find manuals that look kind of like this,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 525.74,
+      "end": 530.98,
+      "text": " that say, how do we deal with tropical diseases?"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 530.98,
+      "end": 532.74,
+      "text": " So you ask a bunch of questions."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 532.74,
+      "end": 535.78,
+      "text": " And then depending on the branching logic of the flow"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 535.78,
+      "end": 539.98,
+      "text": " chart, it'll tell you whether this is serious or not."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 539.98,
+      "end": 542.7,
+      "text": " And the reason is because if you do your medical training"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 542.7,
+      "end": 546.78,
+      "text": " in Boston, you're not going to see very many tropical diseases."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 546.78,
+      "end": 550.2,
+      "text": " And so you don't have a base of experience"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 550.2,
+      "end": 553.38,
+      "text": " on the basis of which you can learn and become"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 553.38,
+      "end": 554.74,
+      "text": " an expert at doing it."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 554.74,
+      "end": 556.98,
+      "text": " So they use this as a kind of cheat sheet."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 560.0600000000001,
+      "end": 565.86,
+      "text": " I mentioned that the association between diseases and symptoms"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 565.86,
+      "end": 569.86,
+      "text": " is another important way of doing diagnosis."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 569.86,
+      "end": 574.1,
+      "text": " And I swear to you, there was a paper in the 1960s,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 574.1,
+      "end": 577.1800000000001,
+      "text": " I think, that actually proposed this."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 577.1800000000001,
+      "end": 581.78,
+      "text": " So if any of you have hung around ancient libraries,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 581.78,
+      "end": 584.62,
+      "text": " libraries used to have card catalogs"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 584.62,
+      "end": 588.74,
+      "text": " that were physical pieces of paper, cardboard."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 588.74,
+      "end": 591.62,
+      "text": " And one of the things they did with these"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 591.62,
+      "end": 597.26,
+      "text": " was each card would be a book."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 11 Differential Diagnosis",
+      "start": 597.26,
+      "end": 601.78,
+      "text": " And then around the edges were a bunch of photographs."
+    }
+  ],
+  "text": " OK. Today's topic is differential diagnosis. And so I'm just quoting Wikipedia here. Diagnosis is the identification of the nature and cause of a certain phenomenon. And differential diagnosis is the distinguishing of a particular disease or condition from others that present similar clinical features. So doctors typically talk about differential diagnosis when they're faced with a patient and they make a list of what are the things that might be wrong with this patient. And then they go through the process of trying to figure out which one it actually is. So that's what we're going to focus on today. Now, just to scare you, here's a lovely model of human circulatory physiology. So this is from Guyton's textbook of cardiology. And I'm not going to hold you responsible for all of the details of this model. But it's interesting because this is, at least as of maybe 20 years ago, the state of the art of how people understood what happens in the circulatory system. And it has various control inputs that determine things like how your hormone levels change various aspects of the cardiovascular system and how the interactions between different components of the cardiovascular system affect each other. And so in principle, if I could tune this model to me, then I could make all kinds of pretty good predictions that say, if I increase my systemic vascular resistance, then here's what's going to happen as the rest of the system adjusts. And if I get a blockage in a coronary artery, then here's what's going to happen to my cardiac output and various other things. So this would be terrific. And if we had this kind of model for not just the cardiovascular system but the entire body, then we'd say, OK, we've solved medicine. Well, we don't have this kind of model for most systems. And also, there's this minor problem that if I give you this model and say, how does this relate to a particular patient, how would you figure that out? This has hundreds of differential equations that are being represented by this diagram. And they have many hundreds of parameters. And so we were joking when we started working with this model that you'd really have to kill the patient in order to do enough measurements to be able to tune this model to their particular physiology. And of course, that's probably not a good practical approach. We're getting a little better by developing more non-invasive ways of measuring these things. But that's moving along very slowly. And I don't expect that I or maybe even any of you will live long enough that this approach to doing medical reasoning and medical diagnosis is actually going to happen. So what we're going to look at today is what simpler models are there for diagnostic reasoning? And I'm going to take the liberty of inflicting a bit of history on you, because I think it's interesting where a lot of these ideas came from. So the first idea was to build flow charts. Oh, and by the way, signs and symptoms, I've forgotten if we've talked about that in the class. So a sign is something that a doctor sees. And a symptom is something that the patient experiences. So a sign is objective. It's something that can be told outside your body. A symptom is something that you feel. So if you're feeling dizzy, then that's a symptom, because it's not obvious to somebody outside you that you're dizzy or that you have a pain or such things. Normally, we talk about manifestations or findings, which is sort of a super category of all the things that are determinable about a patient. So we'll talk about flow charts, models based on associations between diseases and these manifestations. Then there are some issues about whether you're trying to diagnose a single disease or a multiplicity of diseases, which makes the models much more complicated, whether you're trying to do probabilistic diagnosis or definitive or categorical. And then we'll talk about some utility theoretic methods. And I'll just mention some rule-based and pattern matching kinds of approaches. So this is kind of cute. This is from 1973. And if you were a woman and walked into the MIT Health Center and complained of potentially a urinary tract infection, they would take out this sheet of paper, which was nicely color-coded, and they would check a bunch of boxes. And if you hit a red box, that represented a conclusion. And otherwise, it gave you suggestions about what further tests to do. And this was essentially a triage instrument. It said, does this woman have a problem that requires immediate attention? So we should either call an ambulance and take them to a hospital. Or is it something where we can just tell them to come back the next day and see a doctor? Or is it, in fact, some self-limited thing where we say, take two aspirin, and it'll go away? So that was the attempt here. Now, interestingly, if you look at the history of this project between the Beth Israel Hospital and Lincoln Laboratories, it started off as a computer aid. So they were building a computer system that was supposed to do this. But you can imagine, in the late 1960s, early 1970s, computers were pretty clunky. PCs hadn't been invented yet. So this was like mainframe kinds of operations. It was very hard to use. And so they said, well, this is a small enough program that we can reduce it to about 20 sheets like this, which they proceeded to print up. And I was amused, because around 1980, I was working in my office one night, and I got this splitting headache. And I went over to MIT Medical. And sure enough, the nurse pulled out one of these sheets for headaches and went through it with me and decided that a couple of Tylenol should fix me. But it was interesting. So this was really in use for a while. Now, the difficulty with approaches like this, of which there have been many, many, many in the medical world, is that they're very fragile. They're very specific. They don't take account of unusual cases. And there's a lot of effort in coming to consensus to build these things. And then they're not necessarily useful for a long time. So MIT actually stopped using them shortly after my headache experience. But if you go over to a hospital and you look on the bookshelf of a junior doctor, you will still find manuals that look kind of like this, that say, how do we deal with tropical diseases? So you ask a bunch of questions. And then depending on the branching logic of the flow chart, it'll tell you whether this is serious or not. And the reason is because if you do your medical training in Boston, you're not going to see very many tropical diseases. And so you don't have a base of experience on the basis of which you can learn and become an expert at doing it. So they use this as a kind of cheat sheet. I mentioned that the association between diseases and symptoms is another important way of doing diagnosis. And I swear to you, there was a paper in the 1960s, I think, that actually proposed this. So if any of you have hung around ancient libraries, libraries used to have card catalogs that were physical pieces of paper, cardboard. And one of the things they did with these was each card would be a book. And then around the edges were a bunch of photographs."
+}

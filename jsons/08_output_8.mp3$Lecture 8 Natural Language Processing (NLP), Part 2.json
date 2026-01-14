@@ -1,0 +1,1209 @@
+{
+  "chunks": [
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 0.0,
+      "end": 15.96,
+      "text": " All right."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 15.96,
+      "end": 17.92,
+      "text": " Let's get started."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 17.92,
+      "end": 20.12,
+      "text": " Good afternoon."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 20.12,
+      "end": 24.88,
+      "text": " So last time, I started talking about the use"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 24.88,
+      "end": 29.76,
+      "text": " of natural language processing to process clinical data."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 29.76,
+      "end": 32.4,
+      "text": " And things went a little bit slowly,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 32.4,
+      "end": 36.160000000000004,
+      "text": " so we didn't get through a lot of the material."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 36.160000000000004,
+      "end": 39.56,
+      "text": " I'm going to try to rush a bit more today."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 39.56,
+      "end": 44.6,
+      "text": " And as a result, I have a lot of stuff to cover."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 44.6,
+      "end": 49.52,
+      "text": " So if you remember last time, I started"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 49.52,
+      "end": 54.0,
+      "text": " by saying that a lot of the NLP work"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 54.0,
+      "end": 57.72,
+      "text": " involves coming up with phrases that one might be interested"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 57.72,
+      "end": 63.16,
+      "text": " in to help identify the kinds of data that you want,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 63.16,
+      "end": 66.2,
+      "text": " and then just looking for those in text."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 66.2,
+      "end": 68.2,
+      "text": " So that's a very simple method, but it's"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 68.2,
+      "end": 70.36,
+      "text": " one that works reasonably well."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 70.36,
+      "end": 72.6,
+      "text": " And then Kat Liao was here to talk"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 72.6,
+      "end": 76.08,
+      "text": " about some of the applications of that kind of work"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 76.08,
+      "end": 80.4,
+      "text": " in what she's been doing in cohort selection."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 80.4,
+      "end": 82.06,
+      "text": " So what I want to talk about today"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 82.06,
+      "end": 84.8,
+      "text": " is more sophisticated versions of that,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 84.8,
+      "end": 89.12,
+      "text": " and then move on to more contemporary approaches"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 89.12,
+      "end": 91.47999999999999,
+      "text": " to natural language processing."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 91.47999999999999,
+      "end": 96.16,
+      "text": " So this is a paper that was given to you"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 96.16,
+      "end": 99.03999999999999,
+      "text": " as one of the optional readings last time."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 99.03999999999999,
+      "end": 102.24,
+      "text": " And it's work from David Sontag's lab,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 102.24,
+      "end": 106.14,
+      "text": " where they said, well, how do we make this more sophisticated?"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 106.14,
+      "end": 107.67999999999999,
+      "text": " So they start the same way."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 107.67999999999999,
+      "end": 112.28,
+      "text": " They say, OK, Dr. Liao, let's say,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 112.28,
+      "end": 116.56,
+      "text": " give me terms that are very good indicators that I"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 116.56,
+      "end": 119.96000000000001,
+      "text": " have the right kind of patient if I find them"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 119.96000000000001,
+      "end": 121.8,
+      "text": " in the patient's notes."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 121.8,
+      "end": 124.84,
+      "text": " So these are things with high predictive value."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 124.84,
+      "end": 129.24,
+      "text": " So you don't want to use a term like sick,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 129.24,
+      "end": 131.48,
+      "text": " because that's going to find way too many people."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 131.48,
+      "end": 135.62,
+      "text": " But you want to find something that is very specific,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 135.62,
+      "end": 138.4,
+      "text": " but that has a high predictive value that you're"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 138.4,
+      "end": 140.86,
+      "text": " going to find the right person."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 140.86,
+      "end": 142.74,
+      "text": " And then what they did is they built"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 142.74,
+      "end": 151.62,
+      "text": " a model that tries to predict the presence of that word"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 151.62,
+      "end": 156.62,
+      "text": " in the text from everything else in the medical record."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 156.62,
+      "end": 161.5,
+      "text": " So now this is an example of sort of a silver standard way"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 161.5,
+      "end": 165.22000000000003,
+      "text": " of training a model that says, well, I"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 165.22000000000003,
+      "end": 167.42000000000002,
+      "text": " don't have the energy or the time"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 167.45999999999998,
+      "end": 170.7,
+      "text": " to get doctors to look through thousands and thousands"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 170.7,
+      "end": 172.01999999999998,
+      "text": " of records."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 172.01999999999998,
+      "end": 175.33999999999997,
+      "text": " But if I select these anchors well enough,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 175.33999999999997,
+      "end": 179.29999999999998,
+      "text": " then I'm going to get a high yield of correct responses"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 179.29999999999998,
+      "end": 180.42,
+      "text": " from those."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 180.42,
+      "end": 182.38,
+      "text": " And then I train a machine learning model"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 182.38,
+      "end": 191.73999999999998,
+      "text": " that learns to identify those same terms or those same"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 191.73999999999998,
+      "end": 194.42,
+      "text": " records that have those terms in them."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 194.42,
+      "end": 196.42,
+      "text": " And by the way, from that, we're going"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 196.42,
+      "end": 198.89999999999998,
+      "text": " to learn a whole bunch of other terms"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 198.89999999999998,
+      "end": 202.94,
+      "text": " that are proxies for the ones that we started with."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 202.94,
+      "end": 207.42,
+      "text": " So this is a way of enlarging that set of terms"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 207.42,
+      "end": 210.14,
+      "text": " automatically."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 210.14,
+      "end": 212.94,
+      "text": " And so there are a bunch of technical details"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 212.94,
+      "end": 218.22,
+      "text": " that you can find out about by reading the paper."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 218.22,
+      "end": 220.98,
+      "text": " They used a relatively simple representation,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 220.98,
+      "end": 225.14,
+      "text": " which is essentially a bag of words representation."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 225.14,
+      "end": 229.98,
+      "text": " They then sort of masked the three words around the word"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 229.98,
+      "end": 233.77999999999997,
+      "text": " that actually is the one they're trying to predict,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 233.77999999999997,
+      "end": 237.26,
+      "text": " just to get rid of sort of short-term syntactic"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 237.26,
+      "end": 239.1,
+      "text": " correlations."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 239.1,
+      "end": 243.2,
+      "text": " And then they built an L2 regularized logistic regression"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 243.2,
+      "end": 246.89999999999998,
+      "text": " model that said, what are the features that predict"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 246.89999999999998,
+      "end": 248.85999999999999,
+      "text": " the occurrence of this word?"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 248.85999999999999,
+      "end": 252.38,
+      "text": " And then they expanded the search vocabulary"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 252.38,
+      "end": 254.85999999999999,
+      "text": " to include those features as well."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 254.86,
+      "end": 256.62,
+      "text": " And again, there are tons of details"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 256.62,
+      "end": 261.5,
+      "text": " about how to discretize continuous values and things"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 261.5,
+      "end": 263.90000000000003,
+      "text": " like that that you can find out about."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 263.90000000000003,
+      "end": 265.78000000000003,
+      "text": " So you build a phenotype estimator"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 265.78000000000003,
+      "end": 269.34000000000003,
+      "text": " from the anchors and the chosen predictors."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 269.34000000000003,
+      "end": 272.06,
+      "text": " They calculated a calibration score"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 272.06,
+      "end": 275.1,
+      "text": " for each of these other predictors that told you"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 275.1,
+      "end": 277.78000000000003,
+      "text": " sort of how well it predicted."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 277.78000000000003,
+      "end": 281.36,
+      "text": " And then you can build a joint estimator"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 281.36,
+      "end": 283.26,
+      "text": " that uses all of these."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 283.26,
+      "end": 285.9,
+      "text": " And the bottom line is that they did very well."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 285.9,
+      "end": 291.21999999999997,
+      "text": " So they looked at, in order to evaluate this,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 291.21999999999997,
+      "end": 295.42,
+      "text": " they looked at eight different phenotypes for which they"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 295.42,
+      "end": 298.98,
+      "text": " had human judgment data."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 298.98,
+      "end": 300.98,
+      "text": " And so this tells you that they're"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 300.98,
+      "end": 307.09999999999997,
+      "text": " getting AUCs of between 0.83 and 0.95"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 307.09999999999997,
+      "end": 310.7,
+      "text": " for these different phenotypes."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 310.7,
+      "end": 313.06,
+      "text": " So that's quite good."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 313.06,
+      "end": 316.86,
+      "text": " They, in fact, were estimating not only these eight phenotypes"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 316.86,
+      "end": 319.02,
+      "text": " but 40-something."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 319.02,
+      "end": 320.98,
+      "text": " I don't remember the exact number."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 320.98,
+      "end": 323.78000000000003,
+      "text": " Much larger number, but they didn't"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 323.78000000000003,
+      "end": 327.62,
+      "text": " have validated data against which to test the others."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 327.62,
+      "end": 330.46,
+      "text": " But the expectation is that if it does well on these,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 330.46,
+      "end": 333.46,
+      "text": " it probably does well on the others as well."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 333.46,
+      "end": 335.78,
+      "text": " So this was a very nice idea."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 335.78,
+      "end": 338.98,
+      "text": " And just to illustrate, if you start with something"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 338.98,
+      "end": 341.94,
+      "text": " like diabetes as a phenotype and you say,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 341.94,
+      "end": 344.66,
+      "text": " well, I'm going to look for anchors that"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 344.66,
+      "end": 348.7,
+      "text": " are a code 250 diabetes mellitus,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 348.7,
+      "end": 352.3,
+      "text": " or I'm going to look at medication history"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 352.3,
+      "end": 355.12,
+      "text": " for diabetic therapy."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 355.12,
+      "end": 358.22,
+      "text": " So those are the initial, the silver standard goals"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 358.22,
+      "end": 360.14,
+      "text": " that I'm looking at."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 360.14,
+      "end": 363.7,
+      "text": " And those, in fact, have a high predictive value for somebody"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 363.7,
+      "end": 365.34,
+      "text": " being in the cohort."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 365.34,
+      "end": 368.86,
+      "text": " And then they identify all these other features"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 368.86,
+      "end": 372.26,
+      "text": " that predict those and therefore, in turn,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 372.26,
+      "end": 375.22,
+      "text": " predict appropriate selectors for the phenotype"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 375.22,
+      "end": 377.06,
+      "text": " that they're interested in."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 377.06,
+      "end": 378.78000000000003,
+      "text": " And if you look at the paper again,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 378.78000000000003,
+      "end": 384.38,
+      "text": " what you see is that this outperforms over time"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 384.38,
+      "end": 387.1,
+      "text": " the standard sort of supervised baseline"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 387.1,
+      "end": 390.3,
+      "text": " that they're comparing against, where you're getting much"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 390.3,
+      "end": 393.90000000000003,
+      "text": " higher accuracy early in a patient's visit"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 393.9,
+      "end": 399.7,
+      "text": " to be able to identify them as belonging to this cohort."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 399.7,
+      "end": 405.09999999999997,
+      "text": " I'm going to come back later to look at another similar attempt"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 405.09999999999997,
+      "end": 410.17999999999995,
+      "text": " to generalize from a core using a different set of techniques."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 410.17999999999995,
+      "end": 415.85999999999996,
+      "text": " So you should see that in about 45 minutes, I hope."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 415.85999999999996,
+      "end": 417.38,
+      "text": " OK."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 417.38,
+      "end": 419.84,
+      "text": " Well, context is important."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 419.84,
+      "end": 421.41999999999996,
+      "text": " So if you look at a sentence like,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 421.46000000000004,
+      "end": 424.54,
+      "text": " Mr. Huntington was treated for Huntington's disease"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 424.54,
+      "end": 428.46000000000004,
+      "text": " at Huntington Hospital located on Huntington Avenue,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 428.46000000000004,
+      "end": 433.26,
+      "text": " each of those mentions of the word Huntington is different."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 433.26,
+      "end": 436.90000000000003,
+      "text": " And for example, if you're interested in eliminating"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 436.90000000000003,
+      "end": 439.84000000000003,
+      "text": " personally identifiable health information"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 439.84000000000003,
+      "end": 443.28000000000003,
+      "text": " from a record like this, then certainly you"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 443.28000000000003,
+      "end": 446.54,
+      "text": " want to get rid of the Mr. Huntington part."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 446.54,
+      "end": 449.14,
+      "text": " You don't want to get rid of Huntington's disease"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 449.14,
+      "end": 453.7,
+      "text": " because that's a medically relevant fact."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 453.7,
+      "end": 455.94,
+      "text": " And you probably do want to get rid"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 455.94,
+      "end": 460.84,
+      "text": " of Huntington Hospital and its location on Huntington Avenue,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 460.84,
+      "end": 464.38,
+      "text": " although those are not necessarily something"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 464.38,
+      "end": 466.58,
+      "text": " that you're prohibited from retaining."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 466.58,
+      "end": 470.59999999999997,
+      "text": " So for example, if you're trying to do quality studies"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 470.59999999999997,
+      "end": 472.86,
+      "text": " among different hospitals, then it"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 472.86,
+      "end": 476.47999999999996,
+      "text": " would make sense to retain the name of the hospital, which"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 476.52000000000004,
+      "end": 480.20000000000005,
+      "text": " is not considered identifying of the individual."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 480.20000000000005,
+      "end": 485.40000000000003,
+      "text": " So we, in fact, did a study back in the mid-2000s"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 485.40000000000003,
+      "end": 491.24,
+      "text": " where we were trying to build an improved de-identifier."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 491.24,
+      "end": 494.52000000000004,
+      "text": " And here's the way we went about it."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 494.52000000000004,
+      "end": 497.16,
+      "text": " This is a kind of kitchen sink approach"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 497.16,
+      "end": 503.32,
+      "text": " that says, OK, take the text, tokenize it,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 503.32,
+      "end": 507.88,
+      "text": " look at every single token, and derive things from it."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 507.88,
+      "end": 511.84,
+      "text": " So the words that make up the token, the part of speech,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 511.84,
+      "end": 516.16,
+      "text": " how it's capitalized, whether there's punctuation around it,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 516.16,
+      "end": 520.52,
+      "text": " which document section is it in."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 520.52,
+      "end": 524.06,
+      "text": " Many databases have sort of conventional document"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 524.06,
+      "end": 524.68,
+      "text": " structure."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 524.68,
+      "end": 528.24,
+      "text": " If you've looked at the MIMIC discharge summaries,"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 528.24,
+      "end": 531.52,
+      "text": " for example, there's a kind of prototypical way"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 531.56,
+      "end": 534.64,
+      "text": " in which that flows from beginning to end."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 534.64,
+      "end": 537.92,
+      "text": " And you can use that structural information."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 537.92,
+      "end": 541.92,
+      "text": " We then identified a bunch of patterns and thesaurus terms."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 541.92,
+      "end": 546.64,
+      "text": " So we looked up in the UMLS words and phrases"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 546.64,
+      "end": 550.56,
+      "text": " to see if they matched some clinically meaningful term."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 550.56,
+      "end": 555.04,
+      "text": " We had patterns that identified things like phone numbers"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 555.04,
+      "end": 559.04,
+      "text": " and social security numbers and addresses and so on."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 559.04,
+      "end": 562.52,
+      "text": " And then we did parsing of the text."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 562.52,
+      "end": 564.7199999999999,
+      "text": " So in those days, we used something"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 564.7199999999999,
+      "end": 567.74,
+      "text": " called the link grammar parser, which"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 567.74,
+      "end": 570.4399999999999,
+      "text": " doesn't make a whole lot of difference what parser."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 570.4399999999999,
+      "end": 573.88,
+      "text": " But you get either a constituent or a constituency"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 573.88,
+      "end": 576.48,
+      "text": " or a dependency parse, which gives you"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 576.48,
+      "end": 579.3199999999999,
+      "text": " relationships among the words."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 579.3199999999999,
+      "end": 584.3199999999999,
+      "text": " And so it allows you to include as features"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 584.3199999999999,
+      "end": 587.16,
+      "text": " the way in which a word that you're looking at"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 587.16,
+      "end": 589.8,
+      "text": " relates to other words around it."
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 589.8,
+      "end": 594.0799999999999,
+      "text": " And so what we did is we said, OK, the lexical context"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 594.0799999999999,
+      "end": 597.88,
+      "text": " includes all of the above kind of information"
+    },
+    {
+      "number": "output",
+      "title": "Lecture 8 Natural Language Processing (NLP), Part 2",
+      "start": 597.88,
+      "end": 601.48,
+      "text": " for all of the words that are equal."
+    }
+  ],
+  "text": " All right. Let's get started. Good afternoon. So last time, I started talking about the use of natural language processing to process clinical data. And things went a little bit slowly, so we didn't get through a lot of the material. I'm going to try to rush a bit more today. And as a result, I have a lot of stuff to cover. So if you remember last time, I started by saying that a lot of the NLP work involves coming up with phrases that one might be interested in to help identify the kinds of data that you want, and then just looking for those in text. So that's a very simple method, but it's one that works reasonably well. And then Kat Liao was here to talk about some of the applications of that kind of work in what she's been doing in cohort selection. So what I want to talk about today is more sophisticated versions of that, and then move on to more contemporary approaches to natural language processing. So this is a paper that was given to you as one of the optional readings last time. And it's work from David Sontag's lab, where they said, well, how do we make this more sophisticated? So they start the same way. They say, OK, Dr. Liao, let's say, give me terms that are very good indicators that I have the right kind of patient if I find them in the patient's notes. So these are things with high predictive value. So you don't want to use a term like sick, because that's going to find way too many people. But you want to find something that is very specific, but that has a high predictive value that you're going to find the right person. And then what they did is they built a model that tries to predict the presence of that word in the text from everything else in the medical record. So now this is an example of sort of a silver standard way of training a model that says, well, I don't have the energy or the time to get doctors to look through thousands and thousands of records. But if I select these anchors well enough, then I'm going to get a high yield of correct responses from those. And then I train a machine learning model that learns to identify those same terms or those same records that have those terms in them. And by the way, from that, we're going to learn a whole bunch of other terms that are proxies for the ones that we started with. So this is a way of enlarging that set of terms automatically. And so there are a bunch of technical details that you can find out about by reading the paper. They used a relatively simple representation, which is essentially a bag of words representation. They then sort of masked the three words around the word that actually is the one they're trying to predict, just to get rid of sort of short-term syntactic correlations. And then they built an L2 regularized logistic regression model that said, what are the features that predict the occurrence of this word? And then they expanded the search vocabulary to include those features as well. And again, there are tons of details about how to discretize continuous values and things like that that you can find out about. So you build a phenotype estimator from the anchors and the chosen predictors. They calculated a calibration score for each of these other predictors that told you sort of how well it predicted. And then you can build a joint estimator that uses all of these. And the bottom line is that they did very well. So they looked at, in order to evaluate this, they looked at eight different phenotypes for which they had human judgment data. And so this tells you that they're getting AUCs of between 0.83 and 0.95 for these different phenotypes. So that's quite good. They, in fact, were estimating not only these eight phenotypes but 40-something. I don't remember the exact number. Much larger number, but they didn't have validated data against which to test the others. But the expectation is that if it does well on these, it probably does well on the others as well. So this was a very nice idea. And just to illustrate, if you start with something like diabetes as a phenotype and you say, well, I'm going to look for anchors that are a code 250 diabetes mellitus, or I'm going to look at medication history for diabetic therapy. So those are the initial, the silver standard goals that I'm looking at. And those, in fact, have a high predictive value for somebody being in the cohort. And then they identify all these other features that predict those and therefore, in turn, predict appropriate selectors for the phenotype that they're interested in. And if you look at the paper again, what you see is that this outperforms over time the standard sort of supervised baseline that they're comparing against, where you're getting much higher accuracy early in a patient's visit to be able to identify them as belonging to this cohort. I'm going to come back later to look at another similar attempt to generalize from a core using a different set of techniques. So you should see that in about 45 minutes, I hope. OK. Well, context is important. So if you look at a sentence like, Mr. Huntington was treated for Huntington's disease at Huntington Hospital located on Huntington Avenue, each of those mentions of the word Huntington is different. And for example, if you're interested in eliminating personally identifiable health information from a record like this, then certainly you want to get rid of the Mr. Huntington part. You don't want to get rid of Huntington's disease because that's a medically relevant fact. And you probably do want to get rid of Huntington Hospital and its location on Huntington Avenue, although those are not necessarily something that you're prohibited from retaining. So for example, if you're trying to do quality studies among different hospitals, then it would make sense to retain the name of the hospital, which is not considered identifying of the individual. So we, in fact, did a study back in the mid-2000s where we were trying to build an improved de-identifier. And here's the way we went about it. This is a kind of kitchen sink approach that says, OK, take the text, tokenize it, look at every single token, and derive things from it. So the words that make up the token, the part of speech, how it's capitalized, whether there's punctuation around it, which document section is it in. Many databases have sort of conventional document structure. If you've looked at the MIMIC discharge summaries, for example, there's a kind of prototypical way in which that flows from beginning to end. And you can use that structural information. We then identified a bunch of patterns and thesaurus terms. So we looked up in the UMLS words and phrases to see if they matched some clinically meaningful term. We had patterns that identified things like phone numbers and social security numbers and addresses and so on. And then we did parsing of the text. So in those days, we used something called the link grammar parser, which doesn't make a whole lot of difference what parser. But you get either a constituent or a constituency or a dependency parse, which gives you relationships among the words. And so it allows you to include as features the way in which a word that you're looking at relates to other words around it. And so what we did is we said, OK, the lexical context includes all of the above kind of information for all of the words that are equal."
+}
