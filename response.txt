@@ -1,0 +1,14 @@
+Based on the provided video subtitle chunks, it appears that reinforcement learning is discussed in at least two videos:
+
+1. Lecture 17 Reinforcement Learning, Part 2 (Video #output) - This video starts at timestamp 72.56 seconds and ends at 74.12 seconds.
+   The start time of this video is 72.56 seconds.
+
+In the following section of Video #output it says: "and reinforcement learning" which means that there are some prior sections to Video #output, but their titles aren't provided, only the title of Video #output.
+
+2. Lecture 17 Reinforcement Learning, Part 1 (Video #output) - This video starts at timestamp 18.0 seconds and ends at 20.32 seconds.
+   The start time of this video is 18.0 seconds.
+
+3. Lecture 18 Disease Progression Modeling and Subtyping, Part 2 (Video #output) - This video starts at timestamp 444.28 seconds and ends at 446.7 seconds.
+   The start time of this video is 444.28 seconds.
+
+In the following section of Video #output it says: "and reinforcement learning." Which means that there are some prior sections to Video #output but their titles aren't provided, only the title of Video #output.
