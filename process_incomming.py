@@ -3,6 +3,10 @@ import numpy as np
 import joblib
 from sklearn.metrics.pairwise import cosine_similarity
 import requests
+from openai import OpenAI
+from config import api_key
+
+client = OpenAI(api_key=api_key)
 # from read_chunks import create_embedding
 
 
@@ -25,6 +29,15 @@ def inference(prompt):
     response = r.json()
     print(response)
     return response
+
+def inference_openai(prompt):
+    response = client.responses.create(
+    model="gpt-4.1",
+    input="prompt"    
+    )
+    
+    return response.output_text
+
 
 df = joblib.load('embeddings.joblib')
 
@@ -58,8 +71,10 @@ User asked this question related to the video chunks, you have to answer where a
 with open("prompt.txt", "w") as f:
     f.write(prompt)
 
-response = inference(prompt)["response"]
-print(response)
+# response = inference(prompt)["response"]
+# print(response)
+
+response = inference_openai(prompt)
 
 with open("response.txt","w") as f:
     f.write(response)
