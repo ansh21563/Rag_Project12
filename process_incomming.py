@@ -19,21 +19,21 @@ def create_embedding(text_list):
     embedding = r.json()['embeddings']
     return embedding
 
-def inference(prompt):
-    r = requests.post("http://localhost:11434/api/generate",json={
-        "model": "llama3.2",
-        "prompt": prompt,
-        "stream": False
-    })     
+# def inference(prompt):
+#     r = requests.post("http://localhost:11434/api/generate",json={
+#         "model": "llama3.2",
+#         "prompt": prompt,
+#         "stream": False
+#     })     
 
-    response = r.json()
-    print(response)
-    return response
+#     response = r.json()
+#     print(response)  
+#     return response
 
 def inference_openai(prompt):
     print("Thinking....")
     response = client.responses.create(
-    model="gpt-4.1",
+    model="gpt-5",
     input=prompt    
     )
     

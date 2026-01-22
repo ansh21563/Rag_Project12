@@ -1,14 +1,15 @@
-Based on the provided video subtitle chunks, it appears that reinforcement learning is discussed in at least two videos:
+From the clips you shared, the course focuses on applying and evaluating machine learning in healthcare—connecting model outputs to real clinical use, grappling with interpretability, critically reading popular ML papers, and emphasizing proper validation (e.g., prospective studies). Here’s where to see those themes:
 
-1. Lecture 17 Reinforcement Learning, Part 2 (Video #output) - This video starts at timestamp 72.56 seconds and ends at 74.12 seconds.
-   The start time of this video is 72.56 seconds.
+- Lecture 4 (lec4), 6:06–6:22 (366.16–381.96) — ~16 seconds
+  Topic: Connecting ML results back to what clinicians will do with them; noting that interpretability challenges exist (and are explored further in follow-on courses).
+  How to watch: Open Lecture 4 and jump to 6:06.
 
-In the following section of Video #output it says: "and reinforcement learning" which means that there are some prior sections to Video #output, but their titles aren't provided, only the title of Video #output.
+- Lecture 5 (lec5), 3:03–3:10 (182.72–189.54) — ~7 seconds
+  Topic: Critical appraisal of widely cited ML papers—asking “what is this actually doing?” to probe true value and mechanism.
+  How to watch: Open Lecture 5 and jump to 3:03.
 
-2. Lecture 17 Reinforcement Learning, Part 1 (Video #output) - This video starts at timestamp 18.0 seconds and ends at 20.32 seconds.
-   The start time of this video is 18.0 seconds.
+- Lecture 5 (lec5), 9:59–10:00 (598.94–600.14) — ~1 second
+  Topic: Importance of doing a prospective study for validation in healthcare.
+  How to watch: Open Lecture 5 and jump to 9:59.
 
-3. Lecture 18 Disease Progression Modeling and Subtyping, Part 2 (Video #output) - This video starts at timestamp 444.28 seconds and ends at 446.7 seconds.
-   The start time of this video is 444.28 seconds.
-
-In the following section of Video #output it says: "and reinforcement learning." Which means that there are some prior sections to Video #output but their titles aren't provided, only the title of Video #output.
+If you share more subtitle chunks, I can give a fuller, timestamped outline of the course content.
