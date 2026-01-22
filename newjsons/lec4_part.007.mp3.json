@@ -1,0 +1,110 @@
+{
+    "chunks": [
+        {
+            "number": "lec4",
+            "title": "part.007.mp3",
+            "start": 0.0,
+            "end": 8.36,
+            "text": " it makes sense that another data source may boost,  then we'll try it.  If it's free, we'll try it quicker.  If it costs money, we'll talk to the client about it.  It's just for both of us."
+        },
+        {
+            "number": "lec4",
+            "title": "part.007.mp3",
+            "start": 8.36,
+            "end": 22.36,
+            "text": " I'll give you my answer to that question,  which is if you have a high dimensional enough starting  place, often that can give you hints of where to go next.  So in the example I showed you there,  even though obesity is very seldom coded in claims data,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.007.mp3",
+            "start": 22.36,
+            "end": 35.24,
+            "text": " we saw that it still showed up as a useful feature.  So that then hints to us, well, maybe  if we got higher quality obesity data,  it would be an even better model.  And so sometimes you can use that type of trick."
+        },
+        {
+            "number": "lec4",
+            "title": "part.007.mp3",
+            "start": 35.24,
+            "end": 47.76,
+            "text": " There was a question over here.  Do you use cost effectiveness data  by calculating how much the hospital will  gain by implementing a policy?  OK, so this is going to be the last question that we're"
+        },
+        {
+            "number": "lec4",
+            "title": "part.007.mp3",
+            "start": 47.76,
+            "end": 62.32,
+            "text": " going to end on.  And it really has to do with one of evaluation  and thinking about the impact of an intervention based  on the predictions.  How much does that causal effect show up"
+        },
+        {
+            "number": "lec4",
+            "title": "part.007.mp3",
+            "start": 62.32,
+            "end": 72.56,
+            "text": " in both the way that you formalize problems  and evaluate the effect of your interventions,  of your predictions?  Yeah, so the most important thing to know  is no customer will ever pay you for a positive predictive"
+        },
+        {
+            "number": "lec4",
+            "title": "part.007.mp3",
+            "start": 72.56,
+            "end": 82.36,
+            "text": " value.  They don't care.  They care about will you help them save or make  money solving a problem.  So cost effectiveness starts at the beginning."
+        },
+        {
+            "number": "lec4",
+            "title": "part.007.mp3",
+            "start": 82.36,
+            "end": 92.88000000000001,
+            "text": " But the nice thing about a positive predictive value  approach, and there's so much literature  that can tell you what is the average cost of certain things  having happened.  So the very first part of any engagement for us"
+        },
+        {
+            "number": "lec4",
+            "title": "part.007.mp3",
+            "start": 92.88000000000001,
+            "end": 106.96000000000001,
+            "text": " is, well, you guys are here.  This is the cost of being there if you improve by 10%.  If we can get approval to that, then we start to model.  And we say, well, look, of the top 100 people, 70 of them  are the right people."
+        },
+        {
+            "number": "lec4",
+            "title": "part.007.mp3",
+            "start": 106.96000000000001,
+            "end": 118.52000000000001,
+            "text": " Multiply that by the potential cost.  If you think you can prevent 10 of those terrible things  from occurring, that's worth this much.  So cost effectiveness data is at the start.  It's in the modeling stage."
+        },
+        {
+            "number": "lec4",
+            "title": "part.007.mp3",
+            "start": 118.52000000000001,
+            "end": 128.0,
+            "text": " And then at the end, we never show them  how good we did at predicting.  We showed them the baseline.  We say baseline activities outcomes.  Where were you?"
+        },
+        {
+            "number": "lec4",
+            "title": "part.007.mp3",
+            "start": 128.0,
+            "end": 135.86,
+            "text": " What are you doing?  And then did it make a difference?  And that's always in dollars.  The last part is always in dollars and cents too.  Now, although Len didn't mention it here,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.007.mp3",
+            "start": 135.86,
+            "end": 146.56,
+            "text": " he also does quite some work when  trying to think through this causal effectiveness.  And we talk about how you use propensity matching,  for example, in your work.  We won't be able to get into that."
+        },
+        {
+            "number": "lec4",
+            "title": "part.007.mp3",
+            "start": 146.56,
+            "end": 151.64000000000001,
+            "text": " In today's discussion.  But we'll come back to those questions  when we talk about causal inference in a few weeks.  That's all for today.  Thanks."
+        },
+        {
+            "number": "lec4",
+            "title": "part.007.mp3",
+            "start": 151.64000000000001,
+            "end": 155.0,
+            "text": " Thank you.  Thank you.  Thank you.  Thank you."
+        }
+    ],
+    "text": " it makes sense that another data source may boost, then we'll try it. If it's free, we'll try it quicker. If it costs money, we'll talk to the client about it. It's just for both of us. I'll give you my answer to that question, which is if you have a high dimensional enough starting place, often that can give you hints of where to go next. So in the example I showed you there, even though obesity is very seldom coded in claims data, we saw that it still showed up as a useful feature. So that then hints to us, well, maybe if we got higher quality obesity data, it would be an even better model. And so sometimes you can use that type of trick. There was a question over here. Do you use cost effectiveness data by calculating how much the hospital will gain by implementing a policy? OK, so this is going to be the last question that we're going to end on. And it really has to do with one of evaluation and thinking about the impact of an intervention based on the predictions. How much does that causal effect show up in both the way that you formalize problems and evaluate the effect of your interventions, of your predictions? Yeah, so the most important thing to know is no customer will ever pay you for a positive predictive value. They don't care. They care about will you help them save or make money solving a problem. So cost effectiveness starts at the beginning. But the nice thing about a positive predictive value approach, and there's so much literature that can tell you what is the average cost of certain things having happened. So the very first part of any engagement for us is, well, you guys are here. This is the cost of being there if you improve by 10%. If we can get approval to that, then we start to model. And we say, well, look, of the top 100 people, 70 of them are the right people. Multiply that by the potential cost. If you think you can prevent 10 of those terrible things from occurring, that's worth this much. So cost effectiveness data is at the start. It's in the modeling stage. And then at the end, we never show them how good we did at predicting. We showed them the baseline. We say baseline activities outcomes. Where were you? What are you doing? And then did it make a difference? And that's always in dollars. The last part is always in dollars and cents too. Now, although Len didn't mention it here, he also does quite some work when trying to think through this causal effectiveness. And we talk about how you use propensity matching, for example, in your work. We won't be able to get into that. In today's discussion. But we'll come back to those questions when we talk about causal inference in a few weeks. That's all for today. Thanks. Thank you. Thank you. Thank you. Thank you."
+}

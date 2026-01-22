@@ -1,0 +1,68 @@
+{
+    "chunks": [
+        {
+            "number": "lec15",
+            "title": "part.006.mp3",
+            "start": 0.0,
+            "end": 17.52,
+            "text": " estimates of average treatment effect.  I'm going to skip this and just jump to the summary  now, which is that we presented two different approaches  for causal inference from observational data, covariate  adjustment, and propensity score-based methods."
+        },
+        {
+            "number": "lec15",
+            "title": "part.006.mp3",
+            "start": 17.52,
+            "end": 32.480000000000004,
+            "text": " And both of these, I need to stress,  are only going to give you valid results under the assumptions  we outlined in the previous lecture.  For example, that your causal graph is correct, critically,  that there's no unobserved confounding."
+        },
+        {
+            "number": "lec15",
+            "title": "part.006.mp3",
+            "start": 32.480000000000004,
+            "end": 52.72,
+            "text": " And second, that you have overlap between your two  treatment classes.  And third, if you're using a nonparametric regression  approach, overlap is extremely important,  because without overlap, your model"
+        },
+        {
+            "number": "lec15",
+            "title": "part.006.mp3",
+            "start": 52.72,
+            "end": 69.6,
+            "text": " is undefined in regions of space.  And thus, as a result, you have no way  of verifying if your extrapolations are correct.  And so one has to use trust in the model, which is not  something we really like."
+        },
+        {
+            "number": "lec15",
+            "title": "part.006.mp3",
+            "start": 69.6,
+            "end": 85.0,
+            "text": " And in propensity score methods, overlap is very important,  because if you don't have that, you  get inverse propensity scores that are either  which are infinite and lead to extremely high variance  estimators."
+        },
+        {
+            "number": "lec15",
+            "title": "part.006.mp3",
+            "start": 85.0,
+            "end": 97.72,
+            "text": " So in the end of the slides, which  are already posted online, I include some references  that I strongly encourage folks to follow up on.  First, references to two recent workshops  that have been held in the machine learning community,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.006.mp3",
+            "start": 97.72,
+            "end": 110.0,
+            "text": " so that you can get a sense of what the latest and greatest,  in terms of research and causal inference, are.  Two different books on causal inference  that you can download for free from MIT.  And finally, some papers that I think"
+        },
+        {
+            "number": "lec15",
+            "title": "part.006.mp3",
+            "start": 110.0,
+            "end": 122.16000000000001,
+            "text": " are really interesting, particularly of interest  potentially to course projects.  So we are at time now.  I will hang around for a few minutes after lecture,  as I would normally."
+        },
+        {
+            "number": "lec15",
+            "title": "part.006.mp3",
+            "start": 122.16000000000001,
+            "end": 126.2,
+            "text": " But I'm going to stop the recording of the lecture."
+        }
+    ],
+    "text": " estimates of average treatment effect. I'm going to skip this and just jump to the summary now, which is that we presented two different approaches for causal inference from observational data, covariate adjustment, and propensity score-based methods. And both of these, I need to stress, are only going to give you valid results under the assumptions we outlined in the previous lecture. For example, that your causal graph is correct, critically, that there's no unobserved confounding. And second, that you have overlap between your two treatment classes. And third, if you're using a nonparametric regression approach, overlap is extremely important, because without overlap, your model is undefined in regions of space. And thus, as a result, you have no way of verifying if your extrapolations are correct. And so one has to use trust in the model, which is not something we really like. And in propensity score methods, overlap is very important, because if you don't have that, you get inverse propensity scores that are either which are infinite and lead to extremely high variance estimators. So in the end of the slides, which are already posted online, I include some references that I strongly encourage folks to follow up on. First, references to two recent workshops that have been held in the machine learning community, so that you can get a sense of what the latest and greatest, in terms of research and causal inference, are. Two different books on causal inference that you can download for free from MIT. And finally, some papers that I think are really interesting, particularly of interest potentially to course projects. So we are at time now. I will hang around for a few minutes after lecture, as I would normally. But I'm going to stop the recording of the lecture."
+}

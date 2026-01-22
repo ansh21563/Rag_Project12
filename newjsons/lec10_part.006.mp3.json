@@ -1,0 +1,278 @@
+{
+    "chunks": [
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 0.0,
+            "end": 22.0,
+            "text": " whether what distinguishes the ones that you're able to find well.  That's a good point.  I don't know in the sense that I haven't looked that closely,  but I'm going to guess they're very thick and very obvious in that sort of sense.  We have an ECG model that may pick this up."
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 22.0,
+            "end": 37.0,
+            "text": " What you want is something that picks it up when it's treatable,  not having something that's ridiculously exaggerated.  You may need multiple modalities, some of which are more sensitive than others,  that can catch earlier stage disease to be able to do that.  There are interesting things about this disease in particular."
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 37.0,
+            "end": 52.0,
+            "text": " Cataracts sometimes happen before these.  Ideally, the way you would do this is,  and I'm actually consulting around something like this,  you ideally want a mixture of electronic health record,  something from other findings, neuro findings, eye findings,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 52.0,
+            "end": 69.0,
+            "text": " plus maybe something cardiac,  plus have something that ideally catches the disease in the ideal most treated state.  Maybe echo is not the best one.  I think we'll come back to that at the end.  We have a little bit of time."
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 69.0,
+            "end": 87.0,
+            "text": " UCSF is filing, I don't know,  I don't think this is actually patentable, but they are filing for a patent.  I'm just filling the paperwork out today in terms of this.  My code is all freely available anyway.  For academic non-profit use."
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 87.0,
+            "end": 100.0,
+            "text": " We're just trying to make it better.  I think ultimately my view as an academic here is to try to show what's possible.  If you want to get a commercial product,  then you need people to weigh in on the industry side  and make something pretty and make it usable and all that."
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 100.0,
+            "end": 117.0,
+            "text": " But I think ultimately I'm trying to just show,  hey, if we can do this in a scalable way and find out something new,  then you guys can catch up and do something that ultimately can be deployed.  What's interesting is I have a collaborator in New Zealand.  They're resource poor, so they have a huge backlog of patients."
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 117.0,
+            "end": 134.0,
+            "text": " They don't have enough sonographers and they don't have enough cardiologists.  They're trying to implement this super ultra quick five minute study  and then have automation.  They want us to have accuracy to be a little bit better,  but I think they're ready to roll out if we're able to get something"
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 134.0,
+            "end": 144.0,
+            "text": " that has probably more training data.  Yes?  Are you from New Zealand?  No.  I think you started talking about it, the tradeoff between accuracy."
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 144.0,
+            "end": 166.0,
+            "text": " In academia I get the sense that we're always chasing perfect accuracy.  But as you said, we're not going to get rid of cardiologists in the diagnosis.  So I have a philosophical question of are you chasing the wrong thing?  Should we chase perfect accuracy?  Repeat the question a little bit."
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 166.0,
+            "end": 189.0,
+            "text": " The question is around what should our goals be.  I think it's a should we be just chasing after a level of accuracy  that may be either very, very difficult to attain  and especially if there's never a scenario where there will be no clinician involved,  should we instead be thinking about something that gets good enough to that next step?"
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 189.0,
+            "end": 210.0,
+            "text": " I think that's a really good point.  The field, and what's interesting is, and also it's interesting from the industry side,  is the field starts with the mimicking mode because it's much harder to change practice.  It's much easier to just pop something in and say,  hey, I know you have to make these measurements."
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 210.0,
+            "end": 222.0,
+            "text": " Let me make them for you, and you can look at them and see if you agree.  So that's what ECGs do.  Nobody these days is measuring the QRS width, and nobody does that.  That's just not done.  If you've got a number that's absurd, you'll change it,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 222.0,
+            "end": 239.0,
+            "text": " but for the most part you're like, ah, it's close enough.  But you almost have to start with that.  To do something that's transformative is very hard to do.  So I think something that involves, and I talked to David about this,  is the man-machine interface is fascinating to think about"
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 239.0,
+            "end": 261.0,
+            "text": " how do we together come up with something better,  but it's just much harder to get that adopted because it requires buy-in  in a way that's different than just you do my work for me,  but more that we come together to do something better.  I think that's going to be interesting as to how to chip away at that problem."
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 261.0,
+            "end": 272.0,
+            "text": " So a couple of musings, then I'm going to talk a little bit about one brave idea.  If we have time, or I can take questions.  Actually, I'll stop and take questions instead  because it's a little bit of a biology venture.  So I do think that we should really look,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 272.0,
+            "end": 286.0,
+            "text": " when people ask, people give me a hard time around echo,  and I'm like, well, ECG's been around for a long time and there's automation there,  so let's think about how it's used there  and then see whether or not it's not as outlandish as people think.  So I think a lot of these routine measurements are just going to be done"
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 286.0,
+            "end": 295.0,
+            "text": " in an automated way.  And then you can, I mean, we already in our software,  you can put out a little picture, overlay the segmentation on the original image  and say how good it looks.  So that's easy."
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 295.0,
+            "end": 309.0,
+            "text": " So you can do that.  And then this kind of idea of point of care automated diagnoses  can make some sense around some emergency type situations.  So maybe you need a quick check of function.  Maybe you want to know if they have a lot of fluid around the heart"
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 309.0,
+            "end": 322.0,
+            "text": " and you don't necessarily want to wait.  So those will be the places where there may be some kind of innovations  around just getting something done quickly,  and then you always have somebody checking in the background later on,  a little like the heart attack thing I showed you."
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 322.0,
+            "end": 337.0,
+            "text": " And I think this problem in echo is there.  If you need skilled people to be able to acquire the data in the first place,  you're stuck because they can read an echo really well.  I mean, a really good sonographer can read the whole study for you.  So if you already have that person involved in the pipeline,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 337.0,
+            "end": 352.0,
+            "text": " then it's really hard to sort of introduce a big advance.  So you need to figure out how to take a primary care doc off the street,  put a machine in their hand, and let them get the image  and then automate all the interpretation for them.  And so until you can kind of task shift into that space,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 352.0,
+            "end": 366.0,
+            "text": " you're stuck with having still too high a level of skill.  So there are these companies that are in this space now.  I mean, there's a few that are trying to...  I mean, it's easy to imagine if you can train a neural network to classify a view,  you can get it to recognize..."
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 366.0,
+            "end": 379.0,
+            "text": " I mean, this kind of gets to this idea of registration a little bit.  You can recognize if you're off by 10 degrees or if you need a translation.  I mean, you could just train a model to be able to do that.  So I think that's already happening right now.  So it's a question as to whether that will get adopted or not."
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 379.0,
+            "end": 396.0,
+            "text": " But I think that ultimately, if you want to sort of get shifting  towards sort of less skilled personnel, you need to do something in that space.  Okay, so this is where it gets a little bit harder,  is to think about how to make stuff and elevate medicine beyond what we're doing.  And this gets back to this problem I mentioned,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 396.0,
+            "end": 411.0,
+            "text": " is that at the end of the day, you can't find new uses for echo  unless the data is already there for you to be able to show  that there's more value than there currently is.  So sort of this chicken and egg thing.  So in some sense, what I'm trying to hope to introduce"
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 411.0,
+            "end": 423.0,
+            "text": " is some way that we can get much bigger data sets.  And they don't have to be 100 video data sets.  They can be like three video data sets.  But we want to be able to sort of figure out  how to enable more and more of these studies."
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 423.0,
+            "end": 437.0,
+            "text": " So then you can sort of imagine learning many more complicated things.  You want to track people over time.  You want to look at treatment responses.  So you've got to look at where the money is already and see who could do this.  So pharma companies are interested because they have these phase 2 trials."
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 437.0,
+            "end": 451.0,
+            "text": " They may only have three months or six months to show some benefit for a drug.  And then they're really interested in seeing whether there's differences  after a month, two months, three months, four months.  So that may be a place where you get, and they're being frugal,  but they have money."
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 451.0,
+            "end": 469.0,
+            "text": " So you could imagine if you could introduce sort of this pipeline in there  and just have handheld, simple, quick to acquire, far more frequency,  and you show a treatment response, then that's kind of transformative then  because then you could imagine that can get rolled out in practice after that.  So you need somebody to bankroll this to start with,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 469.0,
+            "end": 481.0,
+            "text": " and then you could imagine once you have a use case,  then you could imagine it getting much more.  And this kind of idea of surveillance, you could imagine that would be very doable,  is that you could just have something kind of taking.  I mean, the problem is you can't even get the data in the archives anyways,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 481.0,
+            "end": 493.0,
+            "text": " but let's say you could get that.  You could just have this system looking for amyloid, looking for whatever,  and that would be a win too is to be able to imagine doing something like that.  It's not putting any pressure on the clinical workflow.  It's not making anybody look bad."
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 493.0,
+            "end": 508.0,
+            "text": " I think ultimately it's trying to just figure out if they're, well,  somebody may be looking bad, I guess, if they miss something.  But, yeah, I think it is just trying to sort of identify individuals.  And so this is an area I think that's hard.  And so this kind of idea, this is where I started a little bit,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 508.0,
+            "end": 529.0,
+            "text": " around this kind of idea of disease subclassification and risk models.  And so that's more sophisticated than anything we're doing.  I think we're pretty crude at this kind of stuff,  but one of the challenges is people just aren't interested in new categories  or new risk models if they don't have some way that they can change practice."
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 529.0,
+            "end": 549.0,
+            "text": " And that becomes more difficult because then you need to not only introduce  the model, you need to show how incorporating that model in some way  is able to either identify people who respond to therapy.  I mean, it always comes down to therapies at the end of the day.  So can you tell me some subclass of people who will do better on this drug?"
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 549.0,
+            "end": 562.0,
+            "text": " Which means that you have to have trial data that has all those people  with all that data.  And unfortunately, because echoes are so expensive,  and places like the Brigham charge like $3,000 per echo,  then you only have like 100 people who have an echo in a trial,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 562.0,
+            "end": 576.0,
+            "text": " or 300 people in an echo.  You have a 5,000-person trial and 5% of them have an echo.  So you need to change the way that gets done because you're massively  sort of underpowered to be able to detect anything that's sort of a subgroup  within that kind of work."
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 576.0,
+            "end": 591.0,
+            "text": " So yeah, unfortunately, the research pace of things outpaces the change  in practice in terms of the space until we're able to sort of enable  more data collection.  So I can stop there.  I was going to talk about blood cells and slides, but..."
+        },
+        {
+            "number": "lec10",
+            "title": "part.006.mp3",
+            "start": 591.0,
+            "end": 600.0,
+            "text": " Take some questions and see if we have time remaining.  Yeah, yeah. Okay, why don't we do that?  Yes.  All right."
+        }
+    ],
+    "text": " whether what distinguishes the ones that you're able to find well. That's a good point. I don't know in the sense that I haven't looked that closely, but I'm going to guess they're very thick and very obvious in that sort of sense. We have an ECG model that may pick this up. What you want is something that picks it up when it's treatable, not having something that's ridiculously exaggerated. You may need multiple modalities, some of which are more sensitive than others, that can catch earlier stage disease to be able to do that. There are interesting things about this disease in particular. Cataracts sometimes happen before these. Ideally, the way you would do this is, and I'm actually consulting around something like this, you ideally want a mixture of electronic health record, something from other findings, neuro findings, eye findings, plus maybe something cardiac, plus have something that ideally catches the disease in the ideal most treated state. Maybe echo is not the best one. I think we'll come back to that at the end. We have a little bit of time. UCSF is filing, I don't know, I don't think this is actually patentable, but they are filing for a patent. I'm just filling the paperwork out today in terms of this. My code is all freely available anyway. For academic non-profit use. We're just trying to make it better. I think ultimately my view as an academic here is to try to show what's possible. If you want to get a commercial product, then you need people to weigh in on the industry side and make something pretty and make it usable and all that. But I think ultimately I'm trying to just show, hey, if we can do this in a scalable way and find out something new, then you guys can catch up and do something that ultimately can be deployed. What's interesting is I have a collaborator in New Zealand. They're resource poor, so they have a huge backlog of patients. They don't have enough sonographers and they don't have enough cardiologists. They're trying to implement this super ultra quick five minute study and then have automation. They want us to have accuracy to be a little bit better, but I think they're ready to roll out if we're able to get something that has probably more training data. Yes? Are you from New Zealand? No. I think you started talking about it, the tradeoff between accuracy. In academia I get the sense that we're always chasing perfect accuracy. But as you said, we're not going to get rid of cardiologists in the diagnosis. So I have a philosophical question of are you chasing the wrong thing? Should we chase perfect accuracy? Repeat the question a little bit. The question is around what should our goals be. I think it's a should we be just chasing after a level of accuracy that may be either very, very difficult to attain and especially if there's never a scenario where there will be no clinician involved, should we instead be thinking about something that gets good enough to that next step? I think that's a really good point. The field, and what's interesting is, and also it's interesting from the industry side, is the field starts with the mimicking mode because it's much harder to change practice. It's much easier to just pop something in and say, hey, I know you have to make these measurements. Let me make them for you, and you can look at them and see if you agree. So that's what ECGs do. Nobody these days is measuring the QRS width, and nobody does that. That's just not done. If you've got a number that's absurd, you'll change it, but for the most part you're like, ah, it's close enough. But you almost have to start with that. To do something that's transformative is very hard to do. So I think something that involves, and I talked to David about this, is the man-machine interface is fascinating to think about how do we together come up with something better, but it's just much harder to get that adopted because it requires buy-in in a way that's different than just you do my work for me, but more that we come together to do something better. I think that's going to be interesting as to how to chip away at that problem. So a couple of musings, then I'm going to talk a little bit about one brave idea. If we have time, or I can take questions. Actually, I'll stop and take questions instead because it's a little bit of a biology venture. So I do think that we should really look, when people ask, people give me a hard time around echo, and I'm like, well, ECG's been around for a long time and there's automation there, so let's think about how it's used there and then see whether or not it's not as outlandish as people think. So I think a lot of these routine measurements are just going to be done in an automated way. And then you can, I mean, we already in our software, you can put out a little picture, overlay the segmentation on the original image and say how good it looks. So that's easy. So you can do that. And then this kind of idea of point of care automated diagnoses can make some sense around some emergency type situations. So maybe you need a quick check of function. Maybe you want to know if they have a lot of fluid around the heart and you don't necessarily want to wait. So those will be the places where there may be some kind of innovations around just getting something done quickly, and then you always have somebody checking in the background later on, a little like the heart attack thing I showed you. And I think this problem in echo is there. If you need skilled people to be able to acquire the data in the first place, you're stuck because they can read an echo really well. I mean, a really good sonographer can read the whole study for you. So if you already have that person involved in the pipeline, then it's really hard to sort of introduce a big advance. So you need to figure out how to take a primary care doc off the street, put a machine in their hand, and let them get the image and then automate all the interpretation for them. And so until you can kind of task shift into that space, you're stuck with having still too high a level of skill. So there are these companies that are in this space now. I mean, there's a few that are trying to... I mean, it's easy to imagine if you can train a neural network to classify a view, you can get it to recognize... I mean, this kind of gets to this idea of registration a little bit. You can recognize if you're off by 10 degrees or if you need a translation. I mean, you could just train a model to be able to do that. So I think that's already happening right now. So it's a question as to whether that will get adopted or not. But I think that ultimately, if you want to sort of get shifting towards sort of less skilled personnel, you need to do something in that space. Okay, so this is where it gets a little bit harder, is to think about how to make stuff and elevate medicine beyond what we're doing. And this gets back to this problem I mentioned, is that at the end of the day, you can't find new uses for echo unless the data is already there for you to be able to show that there's more value than there currently is. So sort of this chicken and egg thing. So in some sense, what I'm trying to hope to introduce is some way that we can get much bigger data sets. And they don't have to be 100 video data sets. They can be like three video data sets. But we want to be able to sort of figure out how to enable more and more of these studies. So then you can sort of imagine learning many more complicated things. You want to track people over time. You want to look at treatment responses. So you've got to look at where the money is already and see who could do this. So pharma companies are interested because they have these phase 2 trials. They may only have three months or six months to show some benefit for a drug. And then they're really interested in seeing whether there's differences after a month, two months, three months, four months. So that may be a place where you get, and they're being frugal, but they have money. So you could imagine if you could introduce sort of this pipeline in there and just have handheld, simple, quick to acquire, far more frequency, and you show a treatment response, then that's kind of transformative then because then you could imagine that can get rolled out in practice after that. So you need somebody to bankroll this to start with, and then you could imagine once you have a use case, then you could imagine it getting much more. And this kind of idea of surveillance, you could imagine that would be very doable, is that you could just have something kind of taking. I mean, the problem is you can't even get the data in the archives anyways, but let's say you could get that. You could just have this system looking for amyloid, looking for whatever, and that would be a win too is to be able to imagine doing something like that. It's not putting any pressure on the clinical workflow. It's not making anybody look bad. I think ultimately it's trying to just figure out if they're, well, somebody may be looking bad, I guess, if they miss something. But, yeah, I think it is just trying to sort of identify individuals. And so this is an area I think that's hard. And so this kind of idea, this is where I started a little bit, around this kind of idea of disease subclassification and risk models. And so that's more sophisticated than anything we're doing. I think we're pretty crude at this kind of stuff, but one of the challenges is people just aren't interested in new categories or new risk models if they don't have some way that they can change practice. And that becomes more difficult because then you need to not only introduce the model, you need to show how incorporating that model in some way is able to either identify people who respond to therapy. I mean, it always comes down to therapies at the end of the day. So can you tell me some subclass of people who will do better on this drug? Which means that you have to have trial data that has all those people with all that data. And unfortunately, because echoes are so expensive, and places like the Brigham charge like $3,000 per echo, then you only have like 100 people who have an echo in a trial, or 300 people in an echo. You have a 5,000-person trial and 5% of them have an echo. So you need to change the way that gets done because you're massively sort of underpowered to be able to detect anything that's sort of a subgroup within that kind of work. So yeah, unfortunately, the research pace of things outpaces the change in practice in terms of the space until we're able to sort of enable more data collection. So I can stop there. I was going to talk about blood cells and slides, but... Take some questions and see if we have time remaining. Yeah, yeah. Okay, why don't we do that? Yes. All right."
+}

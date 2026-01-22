@@ -207,8 +207,10 @@ marimo/_lsp/
 __marimo__/
 
 # audios and videos 
-audios/
+audios_full_mp3s/
 videos/
 unused/
 output.mp3/
 config.py
+audios/
+jsons/

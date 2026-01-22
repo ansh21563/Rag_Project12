@@ -1,0 +1,264 @@
+{
+    "chunks": [
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 0.0,
+            "end": 20.06,
+            "text": " replicated on two independent data sets.  So that's interesting.  And that's an attempt to fight back against this problem.  It's a different solution than what Ianid is recommending.  So this was a study by Enrico Cuera."
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 20.06,
+            "end": 35.96,
+            "text": " And he's talking about what it means to replicate.  And again, I'm not going to go through all this.  But there's a notion of replication  might mean exact replication, i.e.  you do exactly the same thing on exactly the same kind of data,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 35.96,
+            "end": 52.040000000000006,
+            "text": " but in a different data set.  And then partial replication, conceptual replication,  which says you follow the same procedures,  but in a different environment.  And then quasi-replication, either partial or conceptual."
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 52.040000000000006,
+            "end": 69.0,
+            "text": " And these have various characteristics  that you can look at.  It's an interesting framework.  So this is not a new idea.  The first edition of this book, Evaluation Methods"
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 69.0,
+            "end": 84.28,
+            "text": " in Biomedical Informatics, was called Evaluation Methods  in Medical Informatics by the same authors  and was published a long time ago.  I can't remember.  This one is relatively recent."
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 84.28,
+            "end": 101.08,
+            "text": " And so they do a multi-hundred page, very detailed evaluation  of exactly how one should evaluate  clinical systems like this.  And it's very careful and very cautious.  But it's also very conservative."
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 101.08,
+            "end": 116.75999999999999,
+            "text": " So for example, one of the things that they recommend  is that the people doing the evaluation  should not be the people who develop the technique,  because there's innately bias.  I want my technique to succeed."
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 116.75999999999999,
+            "end": 134.32,
+            "text": " And so they say, hand it off to somebody else  who doesn't have that same vested interest,  and then you're going to get a more careful evaluation.  So Steve Pauker and I wrote a response  to one of their early papers recommending this that said,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 134.32,
+            "end": 151.12,
+            "text": " well, that's so conservative that it sort of throws the baby  up with the bathwater.  Because if you make it so difficult to do an evaluation,  you'll never get anything past it.  And so we proposed instead a kind of staged evaluation"
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 151.12,
+            "end": 166.32000000000002,
+            "text": " that says, first of all, you should do regression testing  so that every time you use these agile development methods,  you should have the set of cases that your program has worked  on before.  You should automatically rerun them"
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 166.32000000000002,
+            "end": 177.64000000000001,
+            "text": " and see which ones you've made better  and which ones you've made worse.  And that'll give you some insight  into whether what you're doing is reasonable.  And then you might also build tools"
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 177.64000000000001,
+            "end": 194.66,
+            "text": " that look at automating ways of looking  for inconsistencies in the models that you're building.  Then you have retrospective review judged by clinicians.  So you run a program that you like  over a whole bunch of existing data,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 194.66,
+            "end": 212.94000000000003,
+            "text": " like what you're doing with MIMIC or with MarketScan.  And then you do it prospectively,  but without actually affecting patients.  So you do it in real time as the data is coming in,  but you don't tell anybody what the program results in."
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 212.94000000000003,
+            "end": 225.54000000000002,
+            "text": " You just ask them to evaluate in retrospect  to see whether it was right.  And you might say, well, what's the difference  between collecting the data in real time  and collecting the data retrospectively?"
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 225.54000000000002,
+            "end": 243.86,
+            "text": " And historically, the answer is there is a difference.  Circumstances differ.  The mechanisms that you have for collecting the data differ.  So this turns out to be an important issue.  And then you can run a prospective controlled trial"
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 243.86,
+            "end": 258.58,
+            "text": " where you're interested in evaluating both the answer  that you get from the program and ultimately the effect  on health outcomes.  So if I have a decision support system,  the ultimate proof of the pudding"
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 258.62,
+            "end": 273.86,
+            "text": " is if I run that decision support system,  I give advice to clinicians.  The clinicians change their behavior sometimes,  and the patients get a better outcome.  Then I'm convinced that this is really useful."
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 273.86,
+            "end": 287.7,
+            "text": " But you have to get there slowly because you don't want  to give them worse outcomes.  That's unethical and probably illegal.  And you want to compare this to the performance  of unaided doctors."
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 287.7,
+            "end": 304.94,
+            "text": " So the Food and Drug Administration  has been dealing with this issue for many, many years.  I remember talking to them in about 1976  when they were reading about the very first expert system  programs for diagnosis and therapy selection."
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 304.94,
+            "end": 317.86,
+            "text": " And they said, well, how should we regulate these?  And they said, well, we should regulate  And they said, well, how should we regulate these?  And my response at the time was, God help us.  Keep your hands off."
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 317.86,
+            "end": 333.21999999999997,
+            "text": " Because if you regulate it, then you're  going to slow down progress.  And in any case, none of these programs are being used.  These programs are being developed  as experimental programs in experimental settings."
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 333.21999999999997,
+            "end": 350.58,
+            "text": " They're not coming anywhere close  to being used on real patients.  And so there is not a regulatory issue.  And about every five years, FDA has revisited that question.  And they have continued to make essentially the same decision"
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 350.58,
+            "end": 364.34,
+            "text": " based on the rationale that, for example, they  don't regulate books.  If I write a textbook that explains something  about medicine, the FDA is not going  to see whether it's correct or not."
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 364.34,
+            "end": 379.08,
+            "text": " And the reason is because the expectation is  that the textbook is making recommendations, so to speak,  to clinical practitioners who are  responsible experts themselves.  And so the ultimate responsibility"
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 379.08,
+            "end": 394.53999999999996,
+            "text": " for how they behave rests with them and not with the textbook.  And they said, we're going to treat these computer programs  as if they were dynamic textbooks,  rather than colleagues who are acting independently and giving  advice."
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 394.54,
+            "end": 412.74,
+            "text": " Now, as soon as you try to give that advice not  to a professional but to a patient,  then you're immediately under the regulatory auspices of FDA  because now there is no professional intermediate that  can evaluate the quality of that advice."
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 412.74,
+            "end": 432.82,
+            "text": " So what FDA has done just in the past year  is they've said that we're going  to treat these AI-based, quote unquote,  devices as medical devices.  And we're going to apply the same regulatory requirements"
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 432.82,
+            "end": 448.58000000000004,
+            "text": " that we have for these devices, except we don't really  know how to do this.  And so there's a kind of experiment going on right now  where they're saying, OK, submit applications  for review of these devices to us."
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 448.65999999999997,
+            "end": 470.02,
+            "text": " We will review them.  And we will use these criteria, product quality, patient  safety, clinical responsibility, cybersecurity responsibility,  and a so-called proactive culture in the organization  that's developing them, in order to make a judgment of whether"
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 470.02,
+            "end": 489.98,
+            "text": " or not to let you proceed with marketing one of these things.  So if you look, there are, in fact, about 10 devices,  quote unquote, these are all software,  that have been approved so far by FDA.  And almost all of them are imaging devices."
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 489.98,
+            "end": 506.62,
+            "text": " They're things that do convolutional networks  over one thing or another.  And so here are just a few examples.  Imogen has OsteoDetect, which analyzes  two-dimensional x-ray images for signs"
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 506.62,
+            "end": 524.3,
+            "text": " of distal radius fracture.  So if you break your wrist, then this system  will look at the x-ray and decide whether or not  you've done that.  Here's one from IDX, which looks at the photographs"
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 524.3,
+            "end": 537.78,
+            "text": " of your retina and decides whether you  have diabetic retinopathy.  And actually, they've published a lot  of papers that show that they can also identify heart  disease and stroke risk and various other things"
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 537.78,
+            "end": 558.58,
+            "text": " from those same photographs.  So FDA has granted them approval to market this thing.  Another one is VIS, which automatically analyzes  CT scans for ER patients and is looking for blockages  in major brain blood vessels."
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 558.58,
+            "end": 576.62,
+            "text": " So this can obviously lead to a stroke.  And this is an automated technique that does that.  And here's another one.  Arteries measures and tracks tumors or potential cancers  in radiology images."
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 576.62,
+            "end": 593.22,
+            "text": " So these are the ones that have been approved.  And then I just wanted to remind you  that there's actually plenty of literature  about this kind of stuff.  So the book on the left actually comes out next week."
+        },
+        {
+            "number": "lec9",
+            "title": "part.003.mp3",
+            "start": 593.22,
+            "end": 601.22,
+            "text": " And I got to read a preprint of it  by Eric Topol, who's one of these doctors."
+        }
+    ],
+    "text": " replicated on two independent data sets. So that's interesting. And that's an attempt to fight back against this problem. It's a different solution than what Ianid is recommending. So this was a study by Enrico Cuera. And he's talking about what it means to replicate. And again, I'm not going to go through all this. But there's a notion of replication might mean exact replication, i.e. you do exactly the same thing on exactly the same kind of data, but in a different data set. And then partial replication, conceptual replication, which says you follow the same procedures, but in a different environment. And then quasi-replication, either partial or conceptual. And these have various characteristics that you can look at. It's an interesting framework. So this is not a new idea. The first edition of this book, Evaluation Methods in Biomedical Informatics, was called Evaluation Methods in Medical Informatics by the same authors and was published a long time ago. I can't remember. This one is relatively recent. And so they do a multi-hundred page, very detailed evaluation of exactly how one should evaluate clinical systems like this. And it's very careful and very cautious. But it's also very conservative. So for example, one of the things that they recommend is that the people doing the evaluation should not be the people who develop the technique, because there's innately bias. I want my technique to succeed. And so they say, hand it off to somebody else who doesn't have that same vested interest, and then you're going to get a more careful evaluation. So Steve Pauker and I wrote a response to one of their early papers recommending this that said, well, that's so conservative that it sort of throws the baby up with the bathwater. Because if you make it so difficult to do an evaluation, you'll never get anything past it. And so we proposed instead a kind of staged evaluation that says, first of all, you should do regression testing so that every time you use these agile development methods, you should have the set of cases that your program has worked on before. You should automatically rerun them and see which ones you've made better and which ones you've made worse. And that'll give you some insight into whether what you're doing is reasonable. And then you might also build tools that look at automating ways of looking for inconsistencies in the models that you're building. Then you have retrospective review judged by clinicians. So you run a program that you like over a whole bunch of existing data, like what you're doing with MIMIC or with MarketScan. And then you do it prospectively, but without actually affecting patients. So you do it in real time as the data is coming in, but you don't tell anybody what the program results in. You just ask them to evaluate in retrospect to see whether it was right. And you might say, well, what's the difference between collecting the data in real time and collecting the data retrospectively? And historically, the answer is there is a difference. Circumstances differ. The mechanisms that you have for collecting the data differ. So this turns out to be an important issue. And then you can run a prospective controlled trial where you're interested in evaluating both the answer that you get from the program and ultimately the effect on health outcomes. So if I have a decision support system, the ultimate proof of the pudding is if I run that decision support system, I give advice to clinicians. The clinicians change their behavior sometimes, and the patients get a better outcome. Then I'm convinced that this is really useful. But you have to get there slowly because you don't want to give them worse outcomes. That's unethical and probably illegal. And you want to compare this to the performance of unaided doctors. So the Food and Drug Administration has been dealing with this issue for many, many years. I remember talking to them in about 1976 when they were reading about the very first expert system programs for diagnosis and therapy selection. And they said, well, how should we regulate these? And they said, well, we should regulate And they said, well, how should we regulate these? And my response at the time was, God help us. Keep your hands off. Because if you regulate it, then you're going to slow down progress. And in any case, none of these programs are being used. These programs are being developed as experimental programs in experimental settings. They're not coming anywhere close to being used on real patients. And so there is not a regulatory issue. And about every five years, FDA has revisited that question. And they have continued to make essentially the same decision based on the rationale that, for example, they don't regulate books. If I write a textbook that explains something about medicine, the FDA is not going to see whether it's correct or not. And the reason is because the expectation is that the textbook is making recommendations, so to speak, to clinical practitioners who are responsible experts themselves. And so the ultimate responsibility for how they behave rests with them and not with the textbook. And they said, we're going to treat these computer programs as if they were dynamic textbooks, rather than colleagues who are acting independently and giving advice. Now, as soon as you try to give that advice not to a professional but to a patient, then you're immediately under the regulatory auspices of FDA because now there is no professional intermediate that can evaluate the quality of that advice. So what FDA has done just in the past year is they've said that we're going to treat these AI-based, quote unquote, devices as medical devices. And we're going to apply the same regulatory requirements that we have for these devices, except we don't really know how to do this. And so there's a kind of experiment going on right now where they're saying, OK, submit applications for review of these devices to us. We will review them. And we will use these criteria, product quality, patient safety, clinical responsibility, cybersecurity responsibility, and a so-called proactive culture in the organization that's developing them, in order to make a judgment of whether or not to let you proceed with marketing one of these things. So if you look, there are, in fact, about 10 devices, quote unquote, these are all software, that have been approved so far by FDA. And almost all of them are imaging devices. They're things that do convolutional networks over one thing or another. And so here are just a few examples. Imogen has OsteoDetect, which analyzes two-dimensional x-ray images for signs of distal radius fracture. So if you break your wrist, then this system will look at the x-ray and decide whether or not you've done that. Here's one from IDX, which looks at the photographs of your retina and decides whether you have diabetic retinopathy. And actually, they've published a lot of papers that show that they can also identify heart disease and stroke risk and various other things from those same photographs. So FDA has granted them approval to market this thing. Another one is VIS, which automatically analyzes CT scans for ER patients and is looking for blockages in major brain blood vessels. So this can obviously lead to a stroke. And this is an automated technique that does that. And here's another one. Arteries measures and tracks tumors or potential cancers in radiology images. So these are the ones that have been approved. And then I just wanted to remind you that there's actually plenty of literature about this kind of stuff. So the book on the left actually comes out next week. And I got to read a preprint of it by Eric Topol, who's one of these doctors."
+}

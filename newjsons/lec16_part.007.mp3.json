@@ -1,0 +1,229 @@
+{
+    "chunks": [
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 0.0,
+            "end": 17.48,
+            "text": " the sequential ignorability assumption.  How can we break that?  How can we break ignorability when  it comes to the sequential setting?  Well, if you have an action here,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 17.48,
+            "end": 31.16,
+            "text": " so the outcome at a later point depends on an earlier choice.  That might certainly be the case,  because we could have a delayed effect of something.  So if we measure, say, a lab value,  which could be in the right range or not,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 31.16,
+            "end": 44.6,
+            "text": " it could very well depend on medication  we gave a long time ago.  And it's also likely that the reward  could depend on a state, which is much earlier,  depending on what we include in that state variable."
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 44.6,
+            "end": 53.32,
+            "text": " We already have an example, I think, from the audience  on that.  So actually, ignorability should have a big red cross over it,  because it doesn't hold there.  And it's luckily on the next slide,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 53.32,
+            "end": 64.8,
+            "text": " because there are even more errors  that we can have conceivably in the medical setting.  The example that we got from Pete before was essentially  that if we have tried an action previously,  we might not want to try it again."
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 64.8,
+            "end": 75.32,
+            "text": " Or if we knew that something worked previously,  we might want to do it again.  So if we had a good reward here, we  might want to do the same thing twice.  And this arrow here says that if we"
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 75.32,
+            "end": 87.48,
+            "text": " know that a patient had a symptom earlier on,  we might want to base our actions on it later.  Or if we know that the patient had an allergic reaction  at some point, for example, we might not  want to use that medication at a later time."
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 87.48,
+            "end": 94.03999999999999,
+            "text": " Yeah, go ahead.  But you can always put everything in a state.  Exactly.  Exactly.  So this depends on what you put in the state."
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 94.03999999999999,
+            "end": 113.56,
+            "text": " So this is an example where I introduce these arrows  to show that if I haven't got that information here,  then I introduce this dependence.  So if I don't have the information about, what was it,  an allergic reaction or some symptom before in here,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 114.56,
+            "end": 132.24,
+            "text": " then I have to do something else.  So exactly that is the point.  If I can summarize history in some good way,  if I can compress all of these four variables  into some variable h, standing for the history,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 132.24,
+            "end": 150.12,
+            "text": " then I have inner ability with respect to that history h.  The problem with that, I mean, this is your solution  and it introduces a new problem.  Because history is usually a really large thing.  Usually, I mean, we know that history grows with time,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 150.12,
+            "end": 158.76000000000002,
+            "text": " obviously.  But usually, we don't serve patients  for the same number of time points.  So how do we represent that for a program?  How do we represent that to a learning algorithm?"
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 158.76000000000002,
+            "end": 169.0,
+            "text": " That's something we have to deal with.  And you can pad a history with zeros, et cetera.  But if you keep every time step and repeat  every variable in every time step,  you get a very large object."
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 169.0,
+            "end": 179.4,
+            "text": " That might introduce statistical problems,  because now you have much more variance  if you have new variables, et cetera.  So one thing that people do is that they look  some amount of time backwards."
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 179.4,
+            "end": 191.04,
+            "text": " So instead of just looking at one time step back,  you now look at a length k window.  And your state essentially grows by a factor k.  And another alternative is to try and learn a summary  function."
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 191.04,
+            "end": 205.68,
+            "text": " Learn some function that is relevant for predicting  the outcome that takes all of the history into account,  but has a smaller representation than just t times the variables  that you have.  But this is something that needs to happen, usually."
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 205.68,
+            "end": 220.4,
+            "text": " If you work with most health care data in practice,  you have to make choices about this.  I just want to stress that that's something  you really can't avoid.  The last point I want to make is that unobserved confounding"
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 220.4,
+            "end": 233.84,
+            "text": " is also a problem that is not avoidable just  due to summarizing history.  We can introduce new confounding.  That is a problem if we don't summarize history well.  But we can also have unobserved confounders just like we"
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 233.84,
+            "end": 249.56,
+            "text": " can in the one-step setting.  So one example is if we have an unobserved confounder  in the same way as we did before.  It impacts both the action at time 1  and the reward at time 1."
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 249.56,
+            "end": 260.22,
+            "text": " But of course, now we're in the sequential setting.  The confounding structure could be much more complicated.  We could have a confounder that influences an early action  and a late reward.  So it might be a little harder for us"
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 260.22,
+            "end": 270.84000000000003,
+            "text": " to characterize what is the set of potential confounders.  So I just wanted to point that out  and to reinforce that this is only harder than the one-step  setting.  So we're wrapping up now."
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 270.84000000000003,
+            "end": 287.28000000000003,
+            "text": " I just want to end on a point about the games  that we looked at before.  One of the big reasons that these algorithms  were so successful in playing games  was that we have full observability"
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 287.28000000000003,
+            "end": 301.6,
+            "text": " in these settings.  We know everything from the game board  itself when it comes to Go, at least.  We can debate that when it comes to the video games.  But in Go, we have complete observability of the board."
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 301.6,
+            "end": 317.36,
+            "text": " Everything we need to know for an optimal decision  is there at any time point.  So not only can we observe it through the history,  but in the case of Go, you don't even need to look at history.  We certainly have Markov dynamics with respect"
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 317.36,
+            "end": 329.76,
+            "text": " to the board itself.  You don't ever have to remember what was a move earlier on,  unless you want to read into your opponent, I suppose.  But that's a game theoretic notion  we're not going to get into here."
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 329.76,
+            "end": 341.16,
+            "text": " But more importantly, we can explore  the dynamics of these systems almost limitlessly  just by simulation and self-play.  And that's true regardless if you have full observability  or not."
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 341.16,
+            "end": 353.36,
+            "text": " In StarCraft, you might not have full observability,  but you can try your things out endlessly  and contrast that with having, I don't know,  700 patients with rheumatoid arthritis  or something like that."
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 353.36,
+            "end": 368.36,
+            "text": " Those are the samples you have.  You're not going to get new ones.  So that is an amazing obstacle for us  to overcome if we want to do this in a good way.  The current algorithms are really, really inefficient"
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 368.36,
+            "end": 382.0,
+            "text": " with the data that they use.  And that's why this limitless exploration or simulation  has been so important for these games.  And that's also why the games are the success stories  of this."
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 382.0,
+            "end": 396.0,
+            "text": " A last point is that typically for these settings  that I put here, we have no noise, essentially.  We get perfect observations of actions and states and outcomes  and everything like that.  And that's rarely true in any real world application."
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 396.0,
+            "end": 408.08000000000004,
+            "text": " All right, I'm going to wrap up tomorrow.  No, Thursday.  David is going to talk about more explicitly  if we want to do this properly in health care, what's  going to happen."
+        },
+        {
+            "number": "lec16",
+            "title": "part.007.mp3",
+            "start": 408.08000000000004,
+            "end": 416.64,
+            "text": " And we're going to have a great discussion, I'm sure, as well.  So don't mind the slide.  It's Thursday.  All right, thanks a lot.  Thank you."
+        }
+    ],
+    "text": " the sequential ignorability assumption. How can we break that? How can we break ignorability when it comes to the sequential setting? Well, if you have an action here, so the outcome at a later point depends on an earlier choice. That might certainly be the case, because we could have a delayed effect of something. So if we measure, say, a lab value, which could be in the right range or not, it could very well depend on medication we gave a long time ago. And it's also likely that the reward could depend on a state, which is much earlier, depending on what we include in that state variable. We already have an example, I think, from the audience on that. So actually, ignorability should have a big red cross over it, because it doesn't hold there. And it's luckily on the next slide, because there are even more errors that we can have conceivably in the medical setting. The example that we got from Pete before was essentially that if we have tried an action previously, we might not want to try it again. Or if we knew that something worked previously, we might want to do it again. So if we had a good reward here, we might want to do the same thing twice. And this arrow here says that if we know that a patient had a symptom earlier on, we might want to base our actions on it later. Or if we know that the patient had an allergic reaction at some point, for example, we might not want to use that medication at a later time. Yeah, go ahead. But you can always put everything in a state. Exactly. Exactly. So this depends on what you put in the state. So this is an example where I introduce these arrows to show that if I haven't got that information here, then I introduce this dependence. So if I don't have the information about, what was it, an allergic reaction or some symptom before in here, then I have to do something else. So exactly that is the point. If I can summarize history in some good way, if I can compress all of these four variables into some variable h, standing for the history, then I have inner ability with respect to that history h. The problem with that, I mean, this is your solution and it introduces a new problem. Because history is usually a really large thing. Usually, I mean, we know that history grows with time, obviously. But usually, we don't serve patients for the same number of time points. So how do we represent that for a program? How do we represent that to a learning algorithm? That's something we have to deal with. And you can pad a history with zeros, et cetera. But if you keep every time step and repeat every variable in every time step, you get a very large object. That might introduce statistical problems, because now you have much more variance if you have new variables, et cetera. So one thing that people do is that they look some amount of time backwards. So instead of just looking at one time step back, you now look at a length k window. And your state essentially grows by a factor k. And another alternative is to try and learn a summary function. Learn some function that is relevant for predicting the outcome that takes all of the history into account, but has a smaller representation than just t times the variables that you have. But this is something that needs to happen, usually. If you work with most health care data in practice, you have to make choices about this. I just want to stress that that's something you really can't avoid. The last point I want to make is that unobserved confounding is also a problem that is not avoidable just due to summarizing history. We can introduce new confounding. That is a problem if we don't summarize history well. But we can also have unobserved confounders just like we can in the one-step setting. So one example is if we have an unobserved confounder in the same way as we did before. It impacts both the action at time 1 and the reward at time 1. But of course, now we're in the sequential setting. The confounding structure could be much more complicated. We could have a confounder that influences an early action and a late reward. So it might be a little harder for us to characterize what is the set of potential confounders. So I just wanted to point that out and to reinforce that this is only harder than the one-step setting. So we're wrapping up now. I just want to end on a point about the games that we looked at before. One of the big reasons that these algorithms were so successful in playing games was that we have full observability in these settings. We know everything from the game board itself when it comes to Go, at least. We can debate that when it comes to the video games. But in Go, we have complete observability of the board. Everything we need to know for an optimal decision is there at any time point. So not only can we observe it through the history, but in the case of Go, you don't even need to look at history. We certainly have Markov dynamics with respect to the board itself. You don't ever have to remember what was a move earlier on, unless you want to read into your opponent, I suppose. But that's a game theoretic notion we're not going to get into here. But more importantly, we can explore the dynamics of these systems almost limitlessly just by simulation and self-play. And that's true regardless if you have full observability or not. In StarCraft, you might not have full observability, but you can try your things out endlessly and contrast that with having, I don't know, 700 patients with rheumatoid arthritis or something like that. Those are the samples you have. You're not going to get new ones. So that is an amazing obstacle for us to overcome if we want to do this in a good way. The current algorithms are really, really inefficient with the data that they use. And that's why this limitless exploration or simulation has been so important for these games. And that's also why the games are the success stories of this. A last point is that typically for these settings that I put here, we have no noise, essentially. We get perfect observations of actions and states and outcomes and everything like that. And that's rarely true in any real world application. All right, I'm going to wrap up tomorrow. No, Thursday. David is going to talk about more explicitly if we want to do this properly in health care, what's going to happen. And we're going to have a great discussion, I'm sure, as well. So don't mind the slide. It's Thursday. All right, thanks a lot. Thank you."
+}

@@ -1,0 +1,257 @@
+{
+    "chunks": [
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 0.0,
+            "end": 17.38,
+            "text": " Yeah?  And we evaluated it in the context  of chronic obstructive pulmonary disorder, or COPD.  COPD is a condition of the lungs typically caused  by air pollution or smoking."
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 17.38,
+            "end": 32.22,
+            "text": " And it has a reasonably good staging mechanism.  One uses what's called a spirometry device in order  to measure the lung function of the individual at any one  point in time.  So for example, you take this spirometry device,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 32.22,
+            "end": 50.14,
+            "text": " you stick it in your mouth, and you breathe in.  And then you exhale.  And one measures how long it takes in order  to exhale all of your air.  And that is going to be a measure of how good"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 50.14,
+            "end": 69.14,
+            "text": " your lungs are.  And so then one can take that measure of your lung function,  and one can stage how severe the person's COPD is.  And that goes by what's called the gold criteria.  So for example, in stage 1 of COPD,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 69.14,
+            "end": 85.46000000000001,
+            "text": " common treatments involve just vaccinations  using a short-acting bronchodilator only when  needed.  When the disease stage gets much more severe, like stage 4,  then often treatment is recommended"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 85.46,
+            "end": 104.13999999999999,
+            "text": " to be inhaled glucocorticoid steroids  if there are repeated exasperations of the disease,  long-term oxygen if respiratory failure occurs, and so on.  And so this is a disease that's reasonably well understood  because there exists a good staging mechanism."
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 104.13999999999999,
+            "end": 116.78,
+            "text": " And I would argue that when we want  to understand how to do disease staging in a data-driven  fashion, we should first start by working  with either synthetic data, or we  should start with working with a disease"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 116.78,
+            "end": 128.42,
+            "text": " where we have some idea of what the actual true disease  staging is.  And that way, we can look to see what our algorithms would  recover in those scenarios, and does it  align with what we would expect, either"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 128.42,
+            "end": 141.9,
+            "text": " from the way the data was generated  or from the existing medical literature.  And that's why we chose COPD, because it's well understood,  and there's a wealth of literature on it,  and because we have data on it which"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 141.9,
+            "end": 158.58,
+            "text": " is much messier than the type of data that  went into the original studies.  And we could ask, could we come to the same conclusions  as those original studies?  So in this work, we're going to use data"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 158.58,
+            "end": 172.42000000000002,
+            "text": " from the electronic medical record.  We're only going to look at a subset of the EMR,  in particular, diagnosis codes that  are recorded for patient at any point in time.  And we're going to assume that we do not have access"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 172.42,
+            "end": 186.94,
+            "text": " to spirometry data at all.  So we don't have any obvious way of staging the patient's  disease.  The general approach is going to be  to build a generative model for disease progression."
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 189.83999999999997,
+            "end": 209.34,
+            "text": " At a very high level, this is a Markov model.  It's a model that specifies the distribution of the patient's  data, which is shown here in the bottom,  as it evolves over time according  to a number of hidden variables that are shown in the top,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 209.34,
+            "end": 221.54000000000002,
+            "text": " these S variables that denote disease stages,  and these X variables that denote comorbidities  that the patient might have at that point in time.  These X and S variables are always  assumed to be unobserved."
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 221.54000000000002,
+            "end": 234.51999999999998,
+            "text": " So if you were to clump them together into one variable,  this would look exactly like a hidden Markov model.  And moreover, we're not going to assume  that we have a lot of longitudinal data  for a patient."
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 234.51999999999998,
+            "end": 251.98,
+            "text": " In particular, COPD evolves over 10 to 20 years.  And the data that we'll be learning from here  has data only over one to three-year time range.  The challenge will be, can we take data in this one  to three-year time range and somehow stitch it together"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 251.98,
+            "end": 262.52000000000004,
+            "text": " across large numbers of patients to get  a picture of what the 20-year progression of the disease  might look like?  The way that we're going to do that  is by learning the parameters of this probabilistic model."
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 262.52000000000004,
+            "end": 276.0,
+            "text": " And then from the parameters, we're  going to either infer the patient's actual disease stage  and thus sort them, or actually simulate data from this model  to see what a 20-year trajectory might look like.  Is the goal clear?"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 278.6,
+            "end": 291.8,
+            "text": " All right, so now what I'm going to do  is I'm going to step into this model piece by piece  to tell you what each of these components are.  And I'll start out with the very topmost piece.  Shown here by the red box."
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 291.8,
+            "end": 310.48,
+            "text": " So this is the model of the patient's disease progression  at any one point in time.  So this variable, S1, for example,  might denote the patient's disease stage on March 2011.  S2 might denote the patient's disease stage April 2011."
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 310.48,
+            "end": 324.88,
+            "text": " S capital T might denote the patient's disease stage June  2012.  So we're going to have one random variable  for each observation of the patient's data that we have.  And notice that the observations of the patient's data"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 324.88,
+            "end": 344.35999999999996,
+            "text": " might be at very irregular time intervals.  And that's going to be OK with this approach.  So notice that there is a one-month gap between S1  and S2, but a four-month gap between ST minus 1 and ST.  So we're going to model the patient's disease stage"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 344.36,
+            "end": 365.68,
+            "text": " at the point in time when we have  an observation for the patient.  S denotes a discrete disease stage in this model.  So S might be a value from 1 up to 4, maybe 1 up to 10,  where 1 is denoting a early disease stage,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 365.68,
+            "end": 381.48,
+            "text": " and 4 or 10 might denote a much later disease stage.  If we have a sequence of observations for a patient,  for example, we might have an observation on March  and then in April.  We're going to denote the disease stage by S1 and S2."
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 381.48,
+            "end": 394.12,
+            "text": " What this model is going to talk about  is the probability distribution of transitioning  from whatever the disease stage at S1  is to whatever the disease stage at S2.  Now, because the time intervals between stages"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 394.12,
+            "end": 414.79999999999995,
+            "text": " are not homogeneous, we have to have a transition distribution  that takes into consideration that time gap.  And to do that, we use what's known as a continuous time  Markov process.  Formally, we say that the transition distribution,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 414.79999999999995,
+            "end": 438.32,
+            "text": " so the probability of transitioning from stage  i at time t minus 1 to stage j at time t,  given as input the difference in time intervals,  so the difference in time points, delta.  So delta is the number of months between the two observations."
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 438.32,
+            "end": 460.48,
+            "text": " So this conditional distribution is  going to be given by the matrix exponential of this time  interval times a matrix Q.  And then here, the matrix Q gives us the parameters  that we want to learn."
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 460.48,
+            "end": 482.20000000000005,
+            "text": " So let me contrast this to things  that you might already be used to.  In a typical hidden Markov model,  you might have St goes to St, or St minus 1 goes to St.  And you might imagine just parameterizing"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 482.20000000000005,
+            "end": 505.09999999999997,
+            "text": " St given St minus 1 just by a lookup table.  So for example, if the number of states for each random variable  is 3, then you would have a 3 by 3 table,  where for each state St minus 1, you  have some probability of transition"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 505.09999999999997,
+            "end": 528.9399999999999,
+            "text": " to the corresponding state St. So this  might be something like 0.9, 0.9, 0.9,  where notice I'm having a very large value along the diagonal  because it's if, let's say, a very small period of,  so a priori, we might believe that patients"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 528.9399999999999,
+            "end": 550.26,
+            "text": " stay in the state with disease.  And then one might imagine that the probability of transitioning  from state 1 at time t minus 1 to state 2 at time t  might be something like 0.09.  And the probability of skipping state 2,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 550.26,
+            "end": 565.66,
+            "text": " going directly to state 3 from state 1,  might be something much smaller, like 0.01.  And we might say something like that the probability,  we might imagine that the probability of going  in the first direction, going from stage 2 at time t minus 1"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 565.66,
+            "end": 583.5799999999999,
+            "text": " to, let's say, stage 1 at time t, that might be 0.  So you might imagine that actually this is the model.  And what that's saying is something  like you never go in the backwards direction,  and you're more likely to transition"
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 583.5799999999999,
+            "end": 598.46,
+            "text": " to the state immediately adjacent to the current stage  and very unlikely to skip a stage.  So this would be an example of how you would parametrize  the transition distribution in a typical discrete time Markov  model."
+        },
+        {
+            "number": "lec19",
+            "title": "part.001.mp3",
+            "start": 598.46,
+            "end": 601.5400000000001,
+            "text": " And the story here is going to be different."
+        }
+    ],
+    "text": " Yeah? And we evaluated it in the context of chronic obstructive pulmonary disorder, or COPD. COPD is a condition of the lungs typically caused by air pollution or smoking. And it has a reasonably good staging mechanism. One uses what's called a spirometry device in order to measure the lung function of the individual at any one point in time. So for example, you take this spirometry device, you stick it in your mouth, and you breathe in. And then you exhale. And one measures how long it takes in order to exhale all of your air. And that is going to be a measure of how good your lungs are. And so then one can take that measure of your lung function, and one can stage how severe the person's COPD is. And that goes by what's called the gold criteria. So for example, in stage 1 of COPD, common treatments involve just vaccinations using a short-acting bronchodilator only when needed. When the disease stage gets much more severe, like stage 4, then often treatment is recommended to be inhaled glucocorticoid steroids if there are repeated exasperations of the disease, long-term oxygen if respiratory failure occurs, and so on. And so this is a disease that's reasonably well understood because there exists a good staging mechanism. And I would argue that when we want to understand how to do disease staging in a data-driven fashion, we should first start by working with either synthetic data, or we should start with working with a disease where we have some idea of what the actual true disease staging is. And that way, we can look to see what our algorithms would recover in those scenarios, and does it align with what we would expect, either from the way the data was generated or from the existing medical literature. And that's why we chose COPD, because it's well understood, and there's a wealth of literature on it, and because we have data on it which is much messier than the type of data that went into the original studies. And we could ask, could we come to the same conclusions as those original studies? So in this work, we're going to use data from the electronic medical record. We're only going to look at a subset of the EMR, in particular, diagnosis codes that are recorded for patient at any point in time. And we're going to assume that we do not have access to spirometry data at all. So we don't have any obvious way of staging the patient's disease. The general approach is going to be to build a generative model for disease progression. At a very high level, this is a Markov model. It's a model that specifies the distribution of the patient's data, which is shown here in the bottom, as it evolves over time according to a number of hidden variables that are shown in the top, these S variables that denote disease stages, and these X variables that denote comorbidities that the patient might have at that point in time. These X and S variables are always assumed to be unobserved. So if you were to clump them together into one variable, this would look exactly like a hidden Markov model. And moreover, we're not going to assume that we have a lot of longitudinal data for a patient. In particular, COPD evolves over 10 to 20 years. And the data that we'll be learning from here has data only over one to three-year time range. The challenge will be, can we take data in this one to three-year time range and somehow stitch it together across large numbers of patients to get a picture of what the 20-year progression of the disease might look like? The way that we're going to do that is by learning the parameters of this probabilistic model. And then from the parameters, we're going to either infer the patient's actual disease stage and thus sort them, or actually simulate data from this model to see what a 20-year trajectory might look like. Is the goal clear? All right, so now what I'm going to do is I'm going to step into this model piece by piece to tell you what each of these components are. And I'll start out with the very topmost piece. Shown here by the red box. So this is the model of the patient's disease progression at any one point in time. So this variable, S1, for example, might denote the patient's disease stage on March 2011. S2 might denote the patient's disease stage April 2011. S capital T might denote the patient's disease stage June 2012. So we're going to have one random variable for each observation of the patient's data that we have. And notice that the observations of the patient's data might be at very irregular time intervals. And that's going to be OK with this approach. So notice that there is a one-month gap between S1 and S2, but a four-month gap between ST minus 1 and ST. So we're going to model the patient's disease stage at the point in time when we have an observation for the patient. S denotes a discrete disease stage in this model. So S might be a value from 1 up to 4, maybe 1 up to 10, where 1 is denoting a early disease stage, and 4 or 10 might denote a much later disease stage. If we have a sequence of observations for a patient, for example, we might have an observation on March and then in April. We're going to denote the disease stage by S1 and S2. What this model is going to talk about is the probability distribution of transitioning from whatever the disease stage at S1 is to whatever the disease stage at S2. Now, because the time intervals between stages are not homogeneous, we have to have a transition distribution that takes into consideration that time gap. And to do that, we use what's known as a continuous time Markov process. Formally, we say that the transition distribution, so the probability of transitioning from stage i at time t minus 1 to stage j at time t, given as input the difference in time intervals, so the difference in time points, delta. So delta is the number of months between the two observations. So this conditional distribution is going to be given by the matrix exponential of this time interval times a matrix Q. And then here, the matrix Q gives us the parameters that we want to learn. So let me contrast this to things that you might already be used to. In a typical hidden Markov model, you might have St goes to St, or St minus 1 goes to St. And you might imagine just parameterizing St given St minus 1 just by a lookup table. So for example, if the number of states for each random variable is 3, then you would have a 3 by 3 table, where for each state St minus 1, you have some probability of transition to the corresponding state St. So this might be something like 0.9, 0.9, 0.9, where notice I'm having a very large value along the diagonal because it's if, let's say, a very small period of, so a priori, we might believe that patients stay in the state with disease. And then one might imagine that the probability of transitioning from state 1 at time t minus 1 to state 2 at time t might be something like 0.09. And the probability of skipping state 2, going directly to state 3 from state 1, might be something much smaller, like 0.01. And we might say something like that the probability, we might imagine that the probability of going in the first direction, going from stage 2 at time t minus 1 to, let's say, stage 1 at time t, that might be 0. So you might imagine that actually this is the model. And what that's saying is something like you never go in the backwards direction, and you're more likely to transition to the state immediately adjacent to the current stage and very unlikely to skip a stage. So this would be an example of how you would parametrize the transition distribution in a typical discrete time Markov model. And the story here is going to be different."
+}

@@ -1,0 +1,278 @@
+{
+    "chunks": [
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 0.0,
+            "end": 16.22,
+            "text": " being linear with respect to the potential outcome,  and then looking at the coefficient of the treatment  as telling you something about the average treatment  effect of that intervention or treatment.  Moreover, that also tells us why it's often very important"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 16.22,
+            "end": 36.5,
+            "text": " to look at confidence intervals.  So one might want to know, OK, we have some small data set.  We get some estimate of gamma hat.  But what if you had a different data set?  So what happens if you had a new sample of this 100 data points?"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 36.5,
+            "end": 58.18,
+            "text": " How would your estimated gamma hat vary?  And so you might be interested, for example,  in confidence intervals, like a 95% confidence interval that  says that gamma hat is between, let's say,  between 1 and, let's say, maybe 0.5 with probability 0.95."
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 58.18,
+            "end": 68.46,
+            "text": " That would be an example of a confidence  interval around gamma hat.  And such a confidence interval then  gives you a confidence interval around the coefficients,  then gives you confidence intervals"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 68.46,
+            "end": 84.98,
+            "text": " around the average treatment effect via this analysis.  So the second observation is, what  happens if the true model isn't linear,  but we hadn't realized that as a modeler,  and we had just assumed that, well, a linear model is"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 84.98,
+            "end": 97.10000000000001,
+            "text": " probably good enough?  And maybe even the linear model gets  pretty good prediction performance.  Well, let's look at the extreme example of this.  Let's now assume that the true data generating process,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 97.10000000000001,
+            "end": 116.26,
+            "text": " instead of being just beta x plus gamma t,  we're going to add in now a new term, delta times x squared.  Now, this is the most naive extension  of the original linear model that you could imagine,  because I'm not even adding any interaction terms,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 116.30000000000001,
+            "end": 131.66,
+            "text": " like 10 times xt.  So no interaction terms involving  treatment and covariate.  The potential outcome is still linear in treatment.  We're just adding a single non-linear term"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 131.66,
+            "end": 147.3,
+            "text": " involving one of the features.  Now, if you compute the average treatment effect  via the same analysis we did before,  you'll again find average treatment effect is gamma.  Let's suppose now that we hadn't known that there was"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 147.3,
+            "end": 161.26,
+            "text": " that delta x squared term in there,  and we hypothesized that the potential outcome was given to  you by this linear model involving x and t.  And I'm going to use y hat to denote  that that's going to be the function family that we're"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 161.26,
+            "end": 175.3,
+            "text": " going to be fitting.  So we now fit that beta hat and gamma hat.  And if you had infinite data drawn  from this true generating process, which is, again,  known, what one can show is that the gamma hat that you would"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 175.3,
+            "end": 194.5,
+            "text": " estimate using any reasonable estimator,  like a least squares estimator, is actually  equal to gamma, the true ATE value,  plus delta times this term.  And notice that this term does not depend on beta or gamma."
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 194.5,
+            "end": 208.1,
+            "text": " What this means is, depending on delta,  your gamma hat could be made arbitrarily large  or arbitrarily small.  So for example, if delta is very large,  gamma hat might become positive when"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 208.1,
+            "end": 221.38,
+            "text": " gamma might have been negative.  And so your conclusions about the average treatment effect  could be completely wrong.  And this should scare you.  This is the thing which makes using covariate adjustment so"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 221.38,
+            "end": 237.66,
+            "text": " dangerous, which is that if you're  making the wrong assumptions about the true potential  outcomes, you could get very, very wrong conclusions.  So because of that, one typically  wants to live in a world where you"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 237.66,
+            "end": 252.3,
+            "text": " don't have to make many assumptions about the form  so that you could try to fit the data as well as possible.  So here you see that there is this nonlinear term.  Well, obviously, if you had used some nonlinear modeling  algorithm, like a neural network or maybe a random forest,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 252.3,
+            "end": 264.58000000000004,
+            "text": " then it would have the potential to fit  that nonlinear function and then maybe  wouldn't get caught in this same trap.  And there are a variety of machine learning algorithms  that have been applied to causal inference, everything"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 264.58000000000004,
+            "end": 277.18,
+            "text": " from random forests and Bayesian additive regression  trees to algorithms like Gaussian processes  and deep neural networks.  I'll just briefly highlight the last two.  So Gaussian processes are very often"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 277.18,
+            "end": 297.02000000000004,
+            "text": " used to model continuous valued potential outcomes.  And there are a couple of ways in which they can be done.  So for example, one class of models  might treat y1 and y0 as two separate Gaussian processes  and fit those to the data."
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 297.02000000000004,
+            "end": 320.7,
+            "text": " A different approach, shown on the right here,  would be to treat y as treat x and t as additional covariates.  So now you have x and t as your features  and fit a Gaussian process for that joint model.  When it comes to neural networks,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 320.7,
+            "end": 340.23999999999995,
+            "text": " neural networks had been used in causal inference going back  about 20, 30 years, but really started catching on a few years  ago with a paper that I wrote in my group  as being one of the earliest papers  from this recent generation of using neural networks"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 340.23999999999995,
+            "end": 366.74,
+            "text": " for causal inference.  And one of the things that we found to work very effectively  is to use a joint model for predicting the causal effect.  So we're going to be learning a model that  takes an f that takes as input x and t and has to predict y."
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 366.74,
+            "end": 381.06,
+            "text": " And the advantage of that is that it's  going to allow us to share parameters across your t  equals 1 and t equals 0 samples.  But rather than feeding in x and t  in your first layer of your neural network,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 381.06,
+            "end": 393.02,
+            "text": " we're only going to feed in x in the initial layer  of the neural network.  And we're going to learn a shared representation, which  is going to be used for both predicting t equals 0 and t  equals 1."
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 393.02,
+            "end": 410.78,
+            "text": " And then for predicting t is 0, for predicting  when t is equal to 0, we use a different head  from predicting t equals 1.  So f0 is a function that concatenates these shared  layers with several new layers used"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 410.78,
+            "end": 423.5,
+            "text": " to predict for when t is equal to 0 and similarly for 1.  And we found that that architecture  works substantially better than the naive architectures  when doing causal inference on several different benchmark  data sets."
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 424.06,
+            "end": 444.18,
+            "text": " Now, the last thing I want to talk about for covariate  adjustment before I move on to a new set of techniques  is a method called matching that is intuitively very pleasing.  It's a very, what seemed to be a really natural approach  to do causal inference."
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 444.18,
+            "end": 455.94,
+            "text": " And at first glance, may look like it  has nothing to do with covariate adjustment technique.  What I'll do now is I'll show you  What I'll do now is I'm going to first introduce you  to the matching technique."
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 455.94,
+            "end": 467.38,
+            "text": " And then I will show you that it actually  is precisely identical to covariate adjustment  with a particular assumption of what the functional family  for f is.  So not Gaussian processes, not deep neural networks,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 467.38,
+            "end": 480.9,
+            "text": " but it'll be something else.  So before I get into that, what is  matching as a technique for causal inference?  Well, the key idea of matching is  to use each individual's twin to try"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 480.97999999999996,
+            "end": 494.5,
+            "text": " to get some intuition about what their potential outcome might  have been.  So I created these slides a few years ago  when President Obama was in office.  And you might imagine this is the actual President"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 494.5,
+            "end": 508.62,
+            "text": " Obama who did go to law school.  You might imagine who might have been that other president.  What would President Obama have been  like had he not gone to law school,  but let's say gone to business school?"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 508.66,
+            "end": 521.38,
+            "text": " So you can now imagine trying to find in your data  set someone else who looks just like Barack Obama,  but who instead of going to law school  went to business school.  And then you would then ask the following question."
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 521.38,
+            "end": 534.42,
+            "text": " For example, would this individual  have gone to become a president had he gone to law school  versus had he gone to business school?  If you find someone else who's just  like Barack Obama who went to business school,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 534.42,
+            "end": 549.14,
+            "text": " look to see did that person become president eventually,  that would in some sense give you that counterfactual.  Obviously, this is a contrived example  because you would never get the sample size to see that.  So that's the general idea."
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 549.14,
+            "end": 568.3,
+            "text": " And now I'll show it to you in a picture.  So here now we have two covariates or features,  a patient's age and their Charlson comorbidity index.  This is some measure of what types of conditions  or comorbidities the patient might have."
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 568.3,
+            "end": 578.3399999999999,
+            "text": " Do they have diabetes?  Do they have hypertension?  And so on.  And notably, what I'm not showing you here  is the outcome y."
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 578.3399999999999,
+            "end": 593.26,
+            "text": " All I'm showing you are the original data points  and what treatment did they receive.  So blue are the individuals who received the control treatment  or t was 0.  And red are the individuals who received treatment 1."
+        },
+        {
+            "number": "lec15",
+            "title": "part.002.mp3",
+            "start": 593.26,
+            "end": 600.3,
+            "text": " So you can imagine trying to find nearest neighbors.  For example, the nearest neighbor to this data point  over here is."
+        }
+    ],
+    "text": " being linear with respect to the potential outcome, and then looking at the coefficient of the treatment as telling you something about the average treatment effect of that intervention or treatment. Moreover, that also tells us why it's often very important to look at confidence intervals. So one might want to know, OK, we have some small data set. We get some estimate of gamma hat. But what if you had a different data set? So what happens if you had a new sample of this 100 data points? How would your estimated gamma hat vary? And so you might be interested, for example, in confidence intervals, like a 95% confidence interval that says that gamma hat is between, let's say, between 1 and, let's say, maybe 0.5 with probability 0.95. That would be an example of a confidence interval around gamma hat. And such a confidence interval then gives you a confidence interval around the coefficients, then gives you confidence intervals around the average treatment effect via this analysis. So the second observation is, what happens if the true model isn't linear, but we hadn't realized that as a modeler, and we had just assumed that, well, a linear model is probably good enough? And maybe even the linear model gets pretty good prediction performance. Well, let's look at the extreme example of this. Let's now assume that the true data generating process, instead of being just beta x plus gamma t, we're going to add in now a new term, delta times x squared. Now, this is the most naive extension of the original linear model that you could imagine, because I'm not even adding any interaction terms, like 10 times xt. So no interaction terms involving treatment and covariate. The potential outcome is still linear in treatment. We're just adding a single non-linear term involving one of the features. Now, if you compute the average treatment effect via the same analysis we did before, you'll again find average treatment effect is gamma. Let's suppose now that we hadn't known that there was that delta x squared term in there, and we hypothesized that the potential outcome was given to you by this linear model involving x and t. And I'm going to use y hat to denote that that's going to be the function family that we're going to be fitting. So we now fit that beta hat and gamma hat. And if you had infinite data drawn from this true generating process, which is, again, known, what one can show is that the gamma hat that you would estimate using any reasonable estimator, like a least squares estimator, is actually equal to gamma, the true ATE value, plus delta times this term. And notice that this term does not depend on beta or gamma. What this means is, depending on delta, your gamma hat could be made arbitrarily large or arbitrarily small. So for example, if delta is very large, gamma hat might become positive when gamma might have been negative. And so your conclusions about the average treatment effect could be completely wrong. And this should scare you. This is the thing which makes using covariate adjustment so dangerous, which is that if you're making the wrong assumptions about the true potential outcomes, you could get very, very wrong conclusions. So because of that, one typically wants to live in a world where you don't have to make many assumptions about the form so that you could try to fit the data as well as possible. So here you see that there is this nonlinear term. Well, obviously, if you had used some nonlinear modeling algorithm, like a neural network or maybe a random forest, then it would have the potential to fit that nonlinear function and then maybe wouldn't get caught in this same trap. And there are a variety of machine learning algorithms that have been applied to causal inference, everything from random forests and Bayesian additive regression trees to algorithms like Gaussian processes and deep neural networks. I'll just briefly highlight the last two. So Gaussian processes are very often used to model continuous valued potential outcomes. And there are a couple of ways in which they can be done. So for example, one class of models might treat y1 and y0 as two separate Gaussian processes and fit those to the data. A different approach, shown on the right here, would be to treat y as treat x and t as additional covariates. So now you have x and t as your features and fit a Gaussian process for that joint model. When it comes to neural networks, neural networks had been used in causal inference going back about 20, 30 years, but really started catching on a few years ago with a paper that I wrote in my group as being one of the earliest papers from this recent generation of using neural networks for causal inference. And one of the things that we found to work very effectively is to use a joint model for predicting the causal effect. So we're going to be learning a model that takes an f that takes as input x and t and has to predict y. And the advantage of that is that it's going to allow us to share parameters across your t equals 1 and t equals 0 samples. But rather than feeding in x and t in your first layer of your neural network, we're only going to feed in x in the initial layer of the neural network. And we're going to learn a shared representation, which is going to be used for both predicting t equals 0 and t equals 1. And then for predicting t is 0, for predicting when t is equal to 0, we use a different head from predicting t equals 1. So f0 is a function that concatenates these shared layers with several new layers used to predict for when t is equal to 0 and similarly for 1. And we found that that architecture works substantially better than the naive architectures when doing causal inference on several different benchmark data sets. Now, the last thing I want to talk about for covariate adjustment before I move on to a new set of techniques is a method called matching that is intuitively very pleasing. It's a very, what seemed to be a really natural approach to do causal inference. And at first glance, may look like it has nothing to do with covariate adjustment technique. What I'll do now is I'll show you What I'll do now is I'm going to first introduce you to the matching technique. And then I will show you that it actually is precisely identical to covariate adjustment with a particular assumption of what the functional family for f is. So not Gaussian processes, not deep neural networks, but it'll be something else. So before I get into that, what is matching as a technique for causal inference? Well, the key idea of matching is to use each individual's twin to try to get some intuition about what their potential outcome might have been. So I created these slides a few years ago when President Obama was in office. And you might imagine this is the actual President Obama who did go to law school. You might imagine who might have been that other president. What would President Obama have been like had he not gone to law school, but let's say gone to business school? So you can now imagine trying to find in your data set someone else who looks just like Barack Obama, but who instead of going to law school went to business school. And then you would then ask the following question. For example, would this individual have gone to become a president had he gone to law school versus had he gone to business school? If you find someone else who's just like Barack Obama who went to business school, look to see did that person become president eventually, that would in some sense give you that counterfactual. Obviously, this is a contrived example because you would never get the sample size to see that. So that's the general idea. And now I'll show it to you in a picture. So here now we have two covariates or features, a patient's age and their Charlson comorbidity index. This is some measure of what types of conditions or comorbidities the patient might have. Do they have diabetes? Do they have hypertension? And so on. And notably, what I'm not showing you here is the outcome y. All I'm showing you are the original data points and what treatment did they receive. So blue are the individuals who received the control treatment or t was 0. And red are the individuals who received treatment 1. So you can imagine trying to find nearest neighbors. For example, the nearest neighbor to this data point over here is."
+}

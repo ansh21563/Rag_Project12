@@ -1,0 +1,229 @@
+{
+    "chunks": [
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 0.0,
+            "end": 17.32,
+            "text": " their data unless you, I think if, I mean,  they're pretty good about collaborating with people.  So if you're willing to become a volunteer employee  at Vanderbilt, they could probably take you.  But I just made that up."
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 17.32,
+            "end": 35.86,
+            "text": " But every hospital has very strong controls.  Now, what is available is the NCBI  has GEO, the gene expression omnibus,  which has enormous amounts, like I think hundreds  of billions of sample data."
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 35.86,
+            "end": 53.8,
+            "text": " But you don't often know exactly what the sample is from.  So it comes with an accession number  and an English description of what kind of data it is.  And there are actually lots of papers  where people have done natural language processing"
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 53.8,
+            "end": 64.86,
+            "text": " on those English descriptions in order  to try to figure out what kind of data this is.  And then they can make use of it.  So you can be clever.  And there's a ton of data out there,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 64.86,
+            "end": 79.7,
+            "text": " but it's not well-curated data.  Now, what's interesting is you don't always  get what you expect.  So for example, that SNP was selected  because it's thought to be associated"
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 79.7,
+            "end": 100.62,
+            "text": " with multiple sclerosis and lupus.  But in reality, the association with lupus is not significant.  It's p-value of 0.5, which is not very impressive.  The association with multiple sclerosis is significant.  And so they found in this particular study"
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 100.62,
+            "end": 120.62,
+            "text": " a couple of things that had been expected but didn't work out.  So for example, this SNP, which was  associated with coronary artery disease  and thought to be associated with this carotid plaque  deposition in your carotid artery, just isn't."
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 120.62,
+            "end": 136.7,
+            "text": " p-value of 0.82 is not impressive at all.  OK, onward.  So that was done for SNPs.  Now, a very popular idea today is  to look at expression levels, partly"
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 136.7,
+            "end": 152.48,
+            "text": " because of those prices I showed you  where you can very cheaply get expression levels  from lots of samples.  And so there's this whole notion of expression  quantitative trait loci, or EQTLs, that says, hey,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 152.48,
+            "end": 172.56,
+            "text": " instead of working as hard as the Vanderbilt guys  did to figure out these hundreds of categories of disease,  let's just take your gene expression levels  and use those as defining the trait that we're interested in.  So now we're looking at the relationship"
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 172.56,
+            "end": 189.34,
+            "text": " between your genome and the expression levels.  And so you might say, well, that ought to be easy,  because if the gene is there, it's going to get expressed.  But of course, that's not telling you  whether the gene is being activated or repressed"
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 189.34,
+            "end": 211.72,
+            "text": " or enhanced or whether any of these other complications  that I talked about earlier are present.  And so this is an interesting empirical question.  And so people say, well, maybe a small genetic variation  will cause different expression levels of some RNA."
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 211.72,
+            "end": 233.3,
+            "text": " And we can measure these and then use those  to do this kind of analysis.  So differential expression in different populations.  There's evidence that, for example,  if you take 16 people of African descent,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 233.3,
+            "end": 257.98,
+            "text": " then 17% of the genes in a small sample of 16 people  differ in their expression level among those individuals.  And similarly, 26% in this Asian population  and 17% to 29% in a HapMap sample.  Of course, some of these differences"
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 257.98,
+            "end": 277.34000000000003,
+            "text": " may be because of confounders like environment,  different tissues, limited correlation of these expression  levels to disease phenotypes.  Nevertheless, this type of analysis  has uncovered relationships between these EQTLs"
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 277.34000000000003,
+            "end": 303.26,
+            "text": " and asthma and Crohn's disease.  So I'll let you read the conclusion  of one of these studies.  So this is saying what I said before,  that we probably know all the Mendelian diseases."
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 303.26,
+            "end": 320.09999999999997,
+            "text": " So the diseases that we're interested in understanding  better today are the ones that are not Mendelian,  but they're some complicated combination of effects  from different genes.  That makes it, of course, a much harder problem."
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 322.58,
+            "end": 346.53999999999996,
+            "text": " There's an interesting recent paper, well, not that recent,  2005, that uses Bayesian network technology  to try to get at this.  And so they say, well, if you have some quantitative trait  locus and you treat the RNA expression level as this"
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 346.54,
+            "end": 366.5,
+            "text": " expression quantitative trait locus,  and then you take C as some complex trait, which  might be a disease or it might be a proclivity for something  or it might be one of Josh Denny's categories or whatever,  then there are a number of different Bayesian network"
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 366.5,
+            "end": 384.62,
+            "text": " style models that you can build.  So you can say, ah, the genetic variant  causes a difference in gene expression, which  in turn causes the disease.  Or you could say, hm, the genetic trait"
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 384.62,
+            "end": 405.28,
+            "text": " causes the disease, which in turn  causes the observable difference in gene expression.  Or you can say that the genetic variant causes both  the expression level and the disease,  but they're not necessarily coupled."
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 405.28,
+            "end": 421.86,
+            "text": " So they may be conditionally independent  given the genetic variant.  Or you can have more complex issues,  like you could have the gene causing changes in expression  level of a whole bunch of different RNA, which"
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 421.86,
+            "end": 435.26,
+            "text": " combined cause some disease.  Or you can have different genetic changes,  all impacting the expression of some RNA, which  causes the disease.  Or just wait for it."
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 440.62,
+            "end": 460.66,
+            "text": " You can have models like this that say,  you know, we have some environmental contributions  and a bunch of different genes which  affect the expression of a bunch of different EQTLs, which  cause a bunch of clinical traits, which"
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 460.66,
+            "end": 483.90000000000003,
+            "text": " cause changes in a bunch of reactive RNA, which  cause comorbidities.  So the approach that they take is to say,  well, we can generate a large set of hypotheses like this  and then just calculate the likelihood of the data given"
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 483.90000000000003,
+            "end": 502.3,
+            "text": " each of these hypotheses.  And whichever one assigns the greatest likelihood to the data  is most likely to be the one that's close to correct.  So let me just blast through the rest of this quickly.  Scaling up genome-phenome association studies,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 502.3,
+            "end": 521.22,
+            "text": " the UK Biobank is sort of like this All of Us project.  But they do make their data available.  All of Us will also, but it hasn't been collected yet.  UK Biobank has about half a million  de-identified individuals with full exome sequencing,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 521.22,
+            "end": 538.88,
+            "text": " although they only have about 10% of what they want now.  And many of them will have worn 24-hour activity monitors  so that we have behavioral data.  Some of them have had repeat measurements.  They do online questionnaires."
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 538.88,
+            "end": 557.18,
+            "text": " About a fifth of them will have imaging.  And it's linked to their electronic health record.  So we know if they died or if they  had cancer or various hospital episodes, et cetera.  And there's an ongoing website here"
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 557.18,
+            "end": 573.84,
+            "text": " which publishes the latest analyses.  And so you see on April 18th, genetic variants  that protect against obesity and type 2 diabetes discovered.  Moderate meat eaters are at risk of bowel cancer.  And research identifies genetic causes of poor sleep."
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 573.84,
+            "end": 591.6800000000001,
+            "text": " So this is all over the place.  But these are all the studies that are being done by this.  I'll skip this.  But there is a group here at MGH and the Broad  that is using this data to do large scale, many, many gene"
+        },
+        {
+            "number": "lec20",
+            "title": "part.007.mp3",
+            "start": 591.6800000000001,
+            "end": 600.2800000000001,
+            "text": " wide association studies.  And one of the things that I promised you,  which is interesting, is from these studies,"
+        }
+    ],
+    "text": " their data unless you, I think if, I mean, they're pretty good about collaborating with people. So if you're willing to become a volunteer employee at Vanderbilt, they could probably take you. But I just made that up. But every hospital has very strong controls. Now, what is available is the NCBI has GEO, the gene expression omnibus, which has enormous amounts, like I think hundreds of billions of sample data. But you don't often know exactly what the sample is from. So it comes with an accession number and an English description of what kind of data it is. And there are actually lots of papers where people have done natural language processing on those English descriptions in order to try to figure out what kind of data this is. And then they can make use of it. So you can be clever. And there's a ton of data out there, but it's not well-curated data. Now, what's interesting is you don't always get what you expect. So for example, that SNP was selected because it's thought to be associated with multiple sclerosis and lupus. But in reality, the association with lupus is not significant. It's p-value of 0.5, which is not very impressive. The association with multiple sclerosis is significant. And so they found in this particular study a couple of things that had been expected but didn't work out. So for example, this SNP, which was associated with coronary artery disease and thought to be associated with this carotid plaque deposition in your carotid artery, just isn't. p-value of 0.82 is not impressive at all. OK, onward. So that was done for SNPs. Now, a very popular idea today is to look at expression levels, partly because of those prices I showed you where you can very cheaply get expression levels from lots of samples. And so there's this whole notion of expression quantitative trait loci, or EQTLs, that says, hey, instead of working as hard as the Vanderbilt guys did to figure out these hundreds of categories of disease, let's just take your gene expression levels and use those as defining the trait that we're interested in. So now we're looking at the relationship between your genome and the expression levels. And so you might say, well, that ought to be easy, because if the gene is there, it's going to get expressed. But of course, that's not telling you whether the gene is being activated or repressed or enhanced or whether any of these other complications that I talked about earlier are present. And so this is an interesting empirical question. And so people say, well, maybe a small genetic variation will cause different expression levels of some RNA. And we can measure these and then use those to do this kind of analysis. So differential expression in different populations. There's evidence that, for example, if you take 16 people of African descent, then 17% of the genes in a small sample of 16 people differ in their expression level among those individuals. And similarly, 26% in this Asian population and 17% to 29% in a HapMap sample. Of course, some of these differences may be because of confounders like environment, different tissues, limited correlation of these expression levels to disease phenotypes. Nevertheless, this type of analysis has uncovered relationships between these EQTLs and asthma and Crohn's disease. So I'll let you read the conclusion of one of these studies. So this is saying what I said before, that we probably know all the Mendelian diseases. So the diseases that we're interested in understanding better today are the ones that are not Mendelian, but they're some complicated combination of effects from different genes. That makes it, of course, a much harder problem. There's an interesting recent paper, well, not that recent, 2005, that uses Bayesian network technology to try to get at this. And so they say, well, if you have some quantitative trait locus and you treat the RNA expression level as this expression quantitative trait locus, and then you take C as some complex trait, which might be a disease or it might be a proclivity for something or it might be one of Josh Denny's categories or whatever, then there are a number of different Bayesian network style models that you can build. So you can say, ah, the genetic variant causes a difference in gene expression, which in turn causes the disease. Or you could say, hm, the genetic trait causes the disease, which in turn causes the observable difference in gene expression. Or you can say that the genetic variant causes both the expression level and the disease, but they're not necessarily coupled. So they may be conditionally independent given the genetic variant. Or you can have more complex issues, like you could have the gene causing changes in expression level of a whole bunch of different RNA, which combined cause some disease. Or you can have different genetic changes, all impacting the expression of some RNA, which causes the disease. Or just wait for it. You can have models like this that say, you know, we have some environmental contributions and a bunch of different genes which affect the expression of a bunch of different EQTLs, which cause a bunch of clinical traits, which cause changes in a bunch of reactive RNA, which cause comorbidities. So the approach that they take is to say, well, we can generate a large set of hypotheses like this and then just calculate the likelihood of the data given each of these hypotheses. And whichever one assigns the greatest likelihood to the data is most likely to be the one that's close to correct. So let me just blast through the rest of this quickly. Scaling up genome-phenome association studies, the UK Biobank is sort of like this All of Us project. But they do make their data available. All of Us will also, but it hasn't been collected yet. UK Biobank has about half a million de-identified individuals with full exome sequencing, although they only have about 10% of what they want now. And many of them will have worn 24-hour activity monitors so that we have behavioral data. Some of them have had repeat measurements. They do online questionnaires. About a fifth of them will have imaging. And it's linked to their electronic health record. So we know if they died or if they had cancer or various hospital episodes, et cetera. And there's an ongoing website here which publishes the latest analyses. And so you see on April 18th, genetic variants that protect against obesity and type 2 diabetes discovered. Moderate meat eaters are at risk of bowel cancer. And research identifies genetic causes of poor sleep. So this is all over the place. But these are all the studies that are being done by this. I'll skip this. But there is a group here at MGH and the Broad that is using this data to do large scale, many, many gene wide association studies. And one of the things that I promised you, which is interesting, is from these studies,"
+}

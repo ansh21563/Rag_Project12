@@ -1,0 +1,208 @@
+{
+    "chunks": [
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 0.0,
+            "end": 22.44,
+            "text": " would is exactly analogous to what we did in reinforcement  learning.  In essence, what we're going to say  is we evaluate the quality of the policy  by summing over your empirical data of pi of xi."
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 22.44,
+            "end": 48.120000000000005,
+            "text": " So this is going to be 1 if the policy says to give treatment  1 to individual xi.  In that case, we say that the value is f of x comma 1.  Or if you gave the second, if the policy would give treatment  0, the value of the policy on that individual"
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 48.120000000000005,
+            "end": 83.08,
+            "text": " is 1 minus pi of x times f of x comma 0.  So I'm going to call this an empirical estimate of what  you should think about as the reward for a policy pi.  And it's exactly analogous to the estimate of v of pi  that you would get from a reinforcement learning context."
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 83.08,
+            "end": 105.44,
+            "text": " But now we're talking about policies explicitly.  So let's try to dig down a little bit deeper  and think about what this is actually saying.  Imagine the story where you just have a single covariate, x.  We'll think about x as being, let's say, the patient's age."
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 105.44,
+            "end": 132.0,
+            "text": " And unfortunately, there's just one color here,  but I'll do my best with that.  And imagine that the potential outcome y0  as a function of the patient's age, x, looks like this.  Now imagine that the other potential outcome, y1,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 132.0,
+            "end": 149.79999999999998,
+            "text": " look like that.  So I'll call this the y1 potential outcome.  Suppose now that the policy that we're defining is this.  So we're going to give treatment 1  if the conditional average treatment effect is positive"
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 149.79999999999998,
+            "end": 169.64000000000001,
+            "text": " and 0 otherwise.  I want everyone to draw what the value of that policy  is on a piece of paper.  I want everyone to write on a piece of paper  what the value of the policy would be for each individual."
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 169.64000000000001,
+            "end": 195.20000000000002,
+            "text": " So it's going to be a function of x.  And now I want it to be, I'm looking for y of pi of x.  So I'm looking for you to draw that plot.  And feel free to talk to your neighbor.  In fact, I encourage you to talk to your neighbor."
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 196.36,
+            "end": 223.56,
+            "text": " OK?  Just to try to connect this a little bit better  to what I have up here, I'm going to assume that f,  this is f of x1, and this is f of x0.  All right, any guesses?"
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 223.56,
+            "end": 239.96,
+            "text": " What does this plot look like?  Someone who hasn't spoken in the last one week and a half,  if possible.  Yeah?  AUDIENCE 1"
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 239.96,
+            "end": 252.32000000000002,
+            "text": " Does it take the max of the functions at all points?  So it could be y0 up until the intersect,  and then y1 afterwards?  So it would be something like this  until the intersection point, and then that afterwards."
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 252.32000000000002,
+            "end": 269.2,
+            "text": " Yeah, that's exactly what I'm going for.  And let's try to think through, why is  that the value of the policy?  Well, here, the kate, which is looking  at the difference between these two lines, is negative."
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 269.2,
+            "end": 288.15999999999997,
+            "text": " So for every x up to this crossing point,  the policy that we've defined over there  is going to perform action.  Wait, am I drawing this correctly?  Maybe it's actually the opposite."
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 288.15999999999997,
+            "end": 311.84,
+            "text": " It should be doing action 1.  So here, the kate is negative.  And so by my definition, the action performed is action 0.  And so the value of the policy is actually this one.  Oh, wait."
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 311.84,
+            "end": 320.24,
+            "text": " Oh, good.  No, it's what we wanted.  Because this is the graph I have in my notes.  Good, OK.  I was getting worried."
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 320.24,
+            "end": 343.96,
+            "text": " So it's this action, all the way up until you get over here.  And then over here, now the kate suddenly becomes positive.  And so the action chosen is 1.  And so the value of that policy is y1.  And so one could write this a little bit differently"
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 343.96,
+            "end": 379.48,
+            "text": " for, in the case of just two policies,  and now I'm going to write this in a way that is really clear.  In the case of just two actions, one  could write this equivalently as an average over the data  points of the maximum of f x comma 0 and f of x comma 1."
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 379.48,
+            "end": 396.59999999999997,
+            "text": " And this simplification, turning this formula into this formula,  is making the assumption that the pi  that we're being evaluated on is precisely this pi.  So this simplification is only for that pi.  For another policy, which is not looking at kate,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 396.59999999999997,
+            "end": 407.32,
+            "text": " or for example, which might threshold kate at a gamma,  it wouldn't quite be this.  It would be something else.  But I've gone a step further here.  So what I've shown you right here"
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 407.32,
+            "end": 423.71999999999997,
+            "text": " is not the average value, but sort of individual values.  I've shown you the max function.  But what this is actually looking at  is the expected reward, which is now averaging across all x.  So to truly draw a connection between this plot we're"
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 423.72,
+            "end": 446.76000000000005,
+            "text": " drawing and the average reward of that policy, what we should  be looking at is the average of these two functions, which  is, we'll say, something like that.  And that value is the expected reward.  Now, this all goes to show that the expected reward"
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 446.76000000000005,
+            "end": 457.59999999999997,
+            "text": " of this policy is not a quantity that we've considered  in the previous lectures, at least not the previous lectures  on causal inference.  This is not the same as the average treatment effect,  for example."
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 465.74,
+            "end": 481.61999999999995,
+            "text": " So I've just given you one way to think through, number one,  what is the policy that you might  want to derive when you're doing causal inference?  And number two, what is one way to estimate  the value of that policy which goes"
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 481.61999999999995,
+            "end": 496.85999999999996,
+            "text": " through the process of estimating potential outcomes  via covariate adjustment?  But we might wonder, just like when  we talked about in causal inference, where  I said there are two approaches, or more than two,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 496.85999999999996,
+            "end": 508.65999999999997,
+            "text": " but we focused on two, using covariate adjustment  and doing inverse propensity score weighting,  you might wonder, is there another approach  to this problem altogether?  Is there an approach which wouldn't have had to go"
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 508.70000000000005,
+            "end": 528.7,
+            "text": " through estimating the potential outcomes?  And that's what I'll spend the rest of this third  of the lecture focused talking about.  And so to help you page this back in,  remember that we derived in last Thursday's lecture"
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 528.7,
+            "end": 555.7,
+            "text": " an estimator for the average treatment effect, which  was 1 over n times the sum over data points  that got treatment 1 of Yi, the observed outcome for that data  point, divided by the propensity score, which I'm just  going to write as Ei."
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 555.7,
+            "end": 593.82,
+            "text": " So Ei is equal to the probability of observing  treat t equals 1 given the data point Xi minus a sum over data  points i such that ti equals 0 of Yi divided by 1 minus Ei.  And by the way, there's a lot of confusion in class.  Why do I have a 1 over n here, 1 over n here?"
+        },
+        {
+            "number": "lec17",
+            "title": "part.001.mp3",
+            "start": 594.2,
+            "end": 601.46,
+            "text": " Right now I just took it out altogether.  And not 1 over the number of positive data points in Yi."
+        }
+    ],
+    "text": " would is exactly analogous to what we did in reinforcement learning. In essence, what we're going to say is we evaluate the quality of the policy by summing over your empirical data of pi of xi. So this is going to be 1 if the policy says to give treatment 1 to individual xi. In that case, we say that the value is f of x comma 1. Or if you gave the second, if the policy would give treatment 0, the value of the policy on that individual is 1 minus pi of x times f of x comma 0. So I'm going to call this an empirical estimate of what you should think about as the reward for a policy pi. And it's exactly analogous to the estimate of v of pi that you would get from a reinforcement learning context. But now we're talking about policies explicitly. So let's try to dig down a little bit deeper and think about what this is actually saying. Imagine the story where you just have a single covariate, x. We'll think about x as being, let's say, the patient's age. And unfortunately, there's just one color here, but I'll do my best with that. And imagine that the potential outcome y0 as a function of the patient's age, x, looks like this. Now imagine that the other potential outcome, y1, look like that. So I'll call this the y1 potential outcome. Suppose now that the policy that we're defining is this. So we're going to give treatment 1 if the conditional average treatment effect is positive and 0 otherwise. I want everyone to draw what the value of that policy is on a piece of paper. I want everyone to write on a piece of paper what the value of the policy would be for each individual. So it's going to be a function of x. And now I want it to be, I'm looking for y of pi of x. So I'm looking for you to draw that plot. And feel free to talk to your neighbor. In fact, I encourage you to talk to your neighbor. OK? Just to try to connect this a little bit better to what I have up here, I'm going to assume that f, this is f of x1, and this is f of x0. All right, any guesses? What does this plot look like? Someone who hasn't spoken in the last one week and a half, if possible. Yeah? AUDIENCE 1 Does it take the max of the functions at all points? So it could be y0 up until the intersect, and then y1 afterwards? So it would be something like this until the intersection point, and then that afterwards. Yeah, that's exactly what I'm going for. And let's try to think through, why is that the value of the policy? Well, here, the kate, which is looking at the difference between these two lines, is negative. So for every x up to this crossing point, the policy that we've defined over there is going to perform action. Wait, am I drawing this correctly? Maybe it's actually the opposite. It should be doing action 1. So here, the kate is negative. And so by my definition, the action performed is action 0. And so the value of the policy is actually this one. Oh, wait. Oh, good. No, it's what we wanted. Because this is the graph I have in my notes. Good, OK. I was getting worried. So it's this action, all the way up until you get over here. And then over here, now the kate suddenly becomes positive. And so the action chosen is 1. And so the value of that policy is y1. And so one could write this a little bit differently for, in the case of just two policies, and now I'm going to write this in a way that is really clear. In the case of just two actions, one could write this equivalently as an average over the data points of the maximum of f x comma 0 and f of x comma 1. And this simplification, turning this formula into this formula, is making the assumption that the pi that we're being evaluated on is precisely this pi. So this simplification is only for that pi. For another policy, which is not looking at kate, or for example, which might threshold kate at a gamma, it wouldn't quite be this. It would be something else. But I've gone a step further here. So what I've shown you right here is not the average value, but sort of individual values. I've shown you the max function. But what this is actually looking at is the expected reward, which is now averaging across all x. So to truly draw a connection between this plot we're drawing and the average reward of that policy, what we should be looking at is the average of these two functions, which is, we'll say, something like that. And that value is the expected reward. Now, this all goes to show that the expected reward of this policy is not a quantity that we've considered in the previous lectures, at least not the previous lectures on causal inference. This is not the same as the average treatment effect, for example. So I've just given you one way to think through, number one, what is the policy that you might want to derive when you're doing causal inference? And number two, what is one way to estimate the value of that policy which goes through the process of estimating potential outcomes via covariate adjustment? But we might wonder, just like when we talked about in causal inference, where I said there are two approaches, or more than two, but we focused on two, using covariate adjustment and doing inverse propensity score weighting, you might wonder, is there another approach to this problem altogether? Is there an approach which wouldn't have had to go through estimating the potential outcomes? And that's what I'll spend the rest of this third of the lecture focused talking about. And so to help you page this back in, remember that we derived in last Thursday's lecture an estimator for the average treatment effect, which was 1 over n times the sum over data points that got treatment 1 of Yi, the observed outcome for that data point, divided by the propensity score, which I'm just going to write as Ei. So Ei is equal to the probability of observing treat t equals 1 given the data point Xi minus a sum over data points i such that ti equals 0 of Yi divided by 1 minus Ei. And by the way, there's a lot of confusion in class. Why do I have a 1 over n here, 1 over n here? Right now I just took it out altogether. And not 1 over the number of positive data points in Yi."
+}

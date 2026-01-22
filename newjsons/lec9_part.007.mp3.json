@@ -1,0 +1,383 @@
+{
+    "chunks": [
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 0.0,
+            "end": 10.82,
+            "text": " That can be pretty similar between organizations.  If they're really bound up in a particular workflow,  they assume that you're doing this task, this task,  this task in this order, they tend  to transfer really poorly."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 10.82,
+            "end": 20.04,
+            "text": " So I would say that our general approach has  been to take a model that somebody has,  run it retrospectively on our data warehouse,  and see if it's accurate.  And if it is, we might go forward with it."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 20.04,
+            "end": 29.52,
+            "text": " If it's not, we would try to retrain it on our data  and then see how much improvement we get  by retraining it.  And so have you, in fact, imported such models  from other places?"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 30.08,
+            "end": 45.44,
+            "text": " Epic provides five or six models.  And we just started using some of them at the Brigham,  or just kind of signed a license to begin using them.  And I think Epic's guidance in our experience  is that they can work pretty well out of the box."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 45.44,
+            "end": 57.2,
+            "text": " So could you say a little bit more about these risk scores  that are being deployed?  Maybe they work, maybe they don't.  How can you really tell whether they're working?  Can you even just be on sort of like patient shift over time?"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 57.2,
+            "end": 66.44,
+            "text": " Just like how people react to the scores.  I know a lot of the bias of fairness works.  It's like people, if a score agrees with their intuition,  don't trust it.  And if it doesn't, they ignore the score."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 66.44,
+            "end": 75.92,
+            "text": " So what does the process look like for you?  Deploy the score thing, and then see whether it's working.  Yeah, absolutely.  So the question is, we get a risk score,  we deploy a new risk score."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 75.92,
+            "end": 84.88,
+            "text": " It says patient has a risk of falling,  or patient has a risk of having sepsis,  or something like that.  We tend to do several levels of evaluation.  So the first level is, when we show the score,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 84.88,
+            "end": 94.11999999999999,
+            "text": " what do people do?  If we, typically we don't just show a score,  we make a recommendation.  Based on the score, we think you should order a lactate  to see if the patient is at risk of having sepsis."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 94.11999999999999,
+            "end": 102.24,
+            "text": " First, we look to see if people do what we say.  So we think it's a good sign  if people sort of follow the suggestions.  But ultimately, we view ourselves  as sort of clinical trialists."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 102.24,
+            "end": 113.12,
+            "text": " So we deploy this model with an intent to move something,  to reduce the rate of sepsis,  or to reduce the rate of mortality in sepsis.  And so we would try to sort of measure,  if nothing else, do a before and after study."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 113.12,
+            "end": 122.24,
+            "text": " Measure the rates before, implement this intervention,  and measure the rates after.  In cases where we're sort of less sure,  or we really care about the results,  we'll even do a randomized trial."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 122.24,
+            "end": 132.88,
+            "text": " So we'll give half of the units, we'll get the alert,  half the units won't get the alert,  and we'll actually compare the effect on a clinical outcome  and see what the difference is.  In our opinion, unless we can show sort of an effect"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 132.88,
+            "end": 143.48,
+            "text": " on these clinical measures,  we shouldn't be bothering people.  Pete made this point that, what's the purpose of having,  if we have a thousand alerts, everyone will be overwhelmed.  So we should only keep alerts on"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 143.48,
+            "end": 152.88,
+            "text": " if we can show that they're making  a real clinical difference.  And are those sort of like just internal checks,  or are there papers of like some of these deployments?  It's our intent to publish everything, right?"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 152.88,
+            "end": 160.95999999999998,
+            "text": " I mean, I think we're behind,  but I'd say, you know, we publish everything.  We have some things that we finished  that we haven't published yet.  They're sort of the next thing to sort of come out."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 160.95999999999998,
+            "end": 174.2,
+            "text": " Yeah.  Yeah, I guess, so earlier we were talking about how  certain, the models are just used to give recommendations  to doctors.  Do you have any metric in terms of"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 174.2,
+            "end": 183.32,
+            "text": " how often the model recommendation matches  with the doctor's decision?  Yeah, absolutely.  So, oh yeah, thanks.  So the question is, do we ever check to see"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 183.32,
+            "end": 192.92,
+            "text": " how often the model recommendation matches  what the doctor does?  And so there's sort of two ways we do that.  We'll often retrospectively test the model back.  And so I think Pete shared a paper from Cerner"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 192.92,
+            "end": 202.76,
+            "text": " where they looked at these sort of suggestions  that they made to order lactates  or to do other sort of sepsis works,  and they looked to see whether the recommendations  that they made matched what the doctors had actually done."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 202.76,
+            "end": 211.44,
+            "text": " And they showed that they, in many cases, did.  So that'll be the first thing that we do  is before we even turn the model on,  we'll run it in sort of silent mode  and see if the doctor does what we suggest."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 211.44,
+            "end": 219.12,
+            "text": " Now, the doctor is not a perfect supervision, right?  Because the doctor may neglect to do something  that would be good to do.  So then when we turn it on,  we actually look to see whether the doctor"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 219.12,
+            "end": 229.76,
+            "text": " takes the action that we suggested.  And if we're doing it in this randomized mode,  we would then look to see  whether the doctor takes the action we suggested  more often in the case where we show the alert"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 229.76,
+            "end": 246.35999999999999,
+            "text": " than where we generate the alert,  but sort of just log it and don't show it.  Yeah.  So you mentioned how there's the sort of like  kind of related to the oncology,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 246.35999999999999,
+            "end": 258.48,
+            "text": " like if it's a code blue, like these alarms are on.  And you said that cockpits have like,  like pilots and all that have similar parameters.  My very limited understanding of like aviation  is that if you're flying like say below 10,000 feet,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 258.48,
+            "end": 268.8,
+            "text": " then like almost all of the alarms get turned off  I don't know if there seems to be an analog  for that for hospitals yet.  And is that just because the technology workflow  is not mature enough yet, only like 10 years old,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 268.8,
+            "end": 280.04,
+            "text": " or is that like kind of to Pete's question  about the incentives between, you know,  if you build a tool and it doesn't flag this,  then if it dies, then they could get sued.  And so they're just waiting."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 280.04,
+            "end": 288.96,
+            "text": " No, we try, right?  So we often don't know about the situations  in a structured way at the EHR.  So most of our alerts are suppressed  in the operating room, right?"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 288.96,
+            "end": 300.76,
+            "text": " So during an, when a patient is on anesthesia,  you know, their physiology is being sort of  manually controlled by a doctor.  And so we often suppress the alerts in those situations.  I guess I didn't say the question,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 300.76,
+            "end": 310.2,
+            "text": " but the question was, do we try to take situations  into account or how much can we?  We didn't used to know that a code blue was going on  because we used to do most of our code blue  documentation on paper."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 310.2,
+            "end": 317.2,
+            "text": " We now use this code narrator, right?  So we can tell when a code blue starts,  when a code blue ends.  A code blue is like a cardiac arrest  or resuscitation of a patient."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 317.24,
+            "end": 329.59999999999997,
+            "text": " And so we actually do increasingly turn  a lot of alerting off during a code blue.  I get an email or a page whenever a doctor  overrides an alert and like writes a cranky message.  And they'll often say something like, you know,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 329.59999999999997,
+            "end": 338.12,
+            "text": " this patient is dying of, you know,  of myocardial infarction right now.  And you're bothering me about this influenza vaccination.  And then what I'll do is I'll go back,  no, seriously, I got that yesterday."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 338.12,
+            "end": 345.71999999999997,
+            "text": " And so what I'll do is I'll go back  and look in the record and say,  what signs did I have that this patient  was sort of an extremist?  And in that particular case,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 345.72,
+            "end": 355.40000000000003,
+            "text": " it was a patient who came into the ED  and like very little documentation had been started.  And so there actually were very few signs  that the patient was in this sort of acute state.  I think someday could we be smarter"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 355.40000000000003,
+            "end": 364.64000000000004,
+            "text": " by integrating monitor data and device data  to figure that out.  But at that point, we didn't have a good  structured data element in the chart  that said this patient is like so ill"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 364.64000000000004,
+            "end": 376.92,
+            "text": " that it's offensive to suggest  the influenza vaccination right now.  Now there are hospitals that have started experimenting  with things like acquiring data from the ambulance  as the patient is coming in"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 376.92,
+            "end": 389.88,
+            "text": " so that the ED is already primed with preliminary data.  And in that circumstance, you could tell.  So this is the interoperability challenge, right?  So we actually get the run sheet,  all the ambulance data to us."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 389.88,
+            "end": 402.72,
+            "text": " It comes in as a PDF that's transmitted  from the ambulance emergency management system to our EHR.  And so it's not coming in in a way  that we can sort of read it well,  but to your point exactly,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 402.72,
+            "end": 414.28,
+            "text": " if we were better at interoperability,  I've also talked to hospitals who use things  like video cameras and people's badges.  And if there's 50 people sort of hovering around a patient,  that's a sign that something bad is happening."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 414.28,
+            "end": 433.23999999999995,
+            "text": " And so we might be able to use something like that.  But yeah, we'd like to be better at that.  So why did HL7 version three not solve all these problems?  This is a good philosophical question.  Come to BMI 701 and 702 and we'll talk about standards."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 433.24,
+            "end": 443.04,
+            "text": " HL7 version two, his question,  version two was a very practical standard.  Version three was a very deeply philosophical standard.  Aspirational.  Aspirational that never quite caught on."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 444.28000000000003,
+            "end": 456.52,
+            "text": " And it did in pieces.  I mean, SMART, FHIR is a simplification of that.  So I think usually the machinery models  are like evaluated statistically.  Yes, sir."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 456.52,
+            "end": 467.12,
+            "text": " When it comes to a particular patient,  they should know how reliable the model is.  Yeah, I mean, there's calibration, right?  So we can say this model works particularly well  in these patients or not as well in these patients."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 467.12,
+            "end": 477.28000000000003,
+            "text": " There are some very simple equations or models  that we use, for example, where we use a different model  in African American patients  versus non African American patients.  Because there's some data that says"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 477.28000000000003,
+            "end": 488.52000000000004,
+            "text": " this model is better calibrated  in this subgroup of patients versus another.  I do think though, to your point,  that there's a suggestion, an inference from a model.  This patient is at risk of a fall."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 488.52,
+            "end": 504.59999999999997,
+            "text": " And then there's this whole set of value judgments  and beliefs and knowledge and understanding  about a patient's circumstances that are very human.  And I think that that's largely why  we deliver these suggestions to a doctor or to a nurse."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 504.59999999999997,
+            "end": 518.72,
+            "text": " And then that human uses that information  plus their expertise and their relationship  and their experience to make a suggestion  rather than just having the computer  adjust the knob on the ventilator itself."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 518.72,
+            "end": 529.5200000000001,
+            "text": " A question that people always ask me  and you should ask me is,  will we eventually not need that human?  And I think I'm more optimistic than some people  that there are cases where the computer is good enough"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 529.5200000000001,
+            "end": 542.36,
+            "text": " or the human is poor enough that it would be safe  to sort of have a close to closed loop.  However, I think those cases are not the norm.  I think that there'll be more cases  where human doctors are still very much needed."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 542.4,
+            "end": 558.6,
+            "text": " So I'd just add that there are tasks  where patients are fungible in the words  that I used a few lectures ago.  So for example, a lot of hospitals  are developing models that predict"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 558.6,
+            "end": 576.32,
+            "text": " whether a patient will show up for their optional surgery  because then they can do a better job of overscheduling  the operating room in the same way  that the airlines oversell seats  because statistically you could win doing that."
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 576.32,
+            "end": 588.2,
+            "text": " Those are very safe predictions  because the worst thing that happens is you get delayed,  but it's not gonna have a harmful outcome  on an individual patient.  Conversely, there are people that are working"
+        },
+        {
+            "number": "lec9",
+            "title": "part.007.mp3",
+            "start": 588.2,
+            "end": 600.8000000000001,
+            "text": " on machine learning systems for dosing insulin  or adjusting people's ventilator settings.  And those are high risk jobs.  All right, last question, because we have to wrap up."
+        }
+    ],
+    "text": " That can be pretty similar between organizations. If they're really bound up in a particular workflow, they assume that you're doing this task, this task, this task in this order, they tend to transfer really poorly. So I would say that our general approach has been to take a model that somebody has, run it retrospectively on our data warehouse, and see if it's accurate. And if it is, we might go forward with it. If it's not, we would try to retrain it on our data and then see how much improvement we get by retraining it. And so have you, in fact, imported such models from other places? Epic provides five or six models. And we just started using some of them at the Brigham, or just kind of signed a license to begin using them. And I think Epic's guidance in our experience is that they can work pretty well out of the box. So could you say a little bit more about these risk scores that are being deployed? Maybe they work, maybe they don't. How can you really tell whether they're working? Can you even just be on sort of like patient shift over time? Just like how people react to the scores. I know a lot of the bias of fairness works. It's like people, if a score agrees with their intuition, don't trust it. And if it doesn't, they ignore the score. So what does the process look like for you? Deploy the score thing, and then see whether it's working. Yeah, absolutely. So the question is, we get a risk score, we deploy a new risk score. It says patient has a risk of falling, or patient has a risk of having sepsis, or something like that. We tend to do several levels of evaluation. So the first level is, when we show the score, what do people do? If we, typically we don't just show a score, we make a recommendation. Based on the score, we think you should order a lactate to see if the patient is at risk of having sepsis. First, we look to see if people do what we say. So we think it's a good sign if people sort of follow the suggestions. But ultimately, we view ourselves as sort of clinical trialists. So we deploy this model with an intent to move something, to reduce the rate of sepsis, or to reduce the rate of mortality in sepsis. And so we would try to sort of measure, if nothing else, do a before and after study. Measure the rates before, implement this intervention, and measure the rates after. In cases where we're sort of less sure, or we really care about the results, we'll even do a randomized trial. So we'll give half of the units, we'll get the alert, half the units won't get the alert, and we'll actually compare the effect on a clinical outcome and see what the difference is. In our opinion, unless we can show sort of an effect on these clinical measures, we shouldn't be bothering people. Pete made this point that, what's the purpose of having, if we have a thousand alerts, everyone will be overwhelmed. So we should only keep alerts on if we can show that they're making a real clinical difference. And are those sort of like just internal checks, or are there papers of like some of these deployments? It's our intent to publish everything, right? I mean, I think we're behind, but I'd say, you know, we publish everything. We have some things that we finished that we haven't published yet. They're sort of the next thing to sort of come out. Yeah. Yeah, I guess, so earlier we were talking about how certain, the models are just used to give recommendations to doctors. Do you have any metric in terms of how often the model recommendation matches with the doctor's decision? Yeah, absolutely. So, oh yeah, thanks. So the question is, do we ever check to see how often the model recommendation matches what the doctor does? And so there's sort of two ways we do that. We'll often retrospectively test the model back. And so I think Pete shared a paper from Cerner where they looked at these sort of suggestions that they made to order lactates or to do other sort of sepsis works, and they looked to see whether the recommendations that they made matched what the doctors had actually done. And they showed that they, in many cases, did. So that'll be the first thing that we do is before we even turn the model on, we'll run it in sort of silent mode and see if the doctor does what we suggest. Now, the doctor is not a perfect supervision, right? Because the doctor may neglect to do something that would be good to do. So then when we turn it on, we actually look to see whether the doctor takes the action that we suggested. And if we're doing it in this randomized mode, we would then look to see whether the doctor takes the action we suggested more often in the case where we show the alert than where we generate the alert, but sort of just log it and don't show it. Yeah. So you mentioned how there's the sort of like kind of related to the oncology, like if it's a code blue, like these alarms are on. And you said that cockpits have like, like pilots and all that have similar parameters. My very limited understanding of like aviation is that if you're flying like say below 10,000 feet, then like almost all of the alarms get turned off I don't know if there seems to be an analog for that for hospitals yet. And is that just because the technology workflow is not mature enough yet, only like 10 years old, or is that like kind of to Pete's question about the incentives between, you know, if you build a tool and it doesn't flag this, then if it dies, then they could get sued. And so they're just waiting. No, we try, right? So we often don't know about the situations in a structured way at the EHR. So most of our alerts are suppressed in the operating room, right? So during an, when a patient is on anesthesia, you know, their physiology is being sort of manually controlled by a doctor. And so we often suppress the alerts in those situations. I guess I didn't say the question, but the question was, do we try to take situations into account or how much can we? We didn't used to know that a code blue was going on because we used to do most of our code blue documentation on paper. We now use this code narrator, right? So we can tell when a code blue starts, when a code blue ends. A code blue is like a cardiac arrest or resuscitation of a patient. And so we actually do increasingly turn a lot of alerting off during a code blue. I get an email or a page whenever a doctor overrides an alert and like writes a cranky message. And they'll often say something like, you know, this patient is dying of, you know, of myocardial infarction right now. And you're bothering me about this influenza vaccination. And then what I'll do is I'll go back, no, seriously, I got that yesterday. And so what I'll do is I'll go back and look in the record and say, what signs did I have that this patient was sort of an extremist? And in that particular case, it was a patient who came into the ED and like very little documentation had been started. And so there actually were very few signs that the patient was in this sort of acute state. I think someday could we be smarter by integrating monitor data and device data to figure that out. But at that point, we didn't have a good structured data element in the chart that said this patient is like so ill that it's offensive to suggest the influenza vaccination right now. Now there are hospitals that have started experimenting with things like acquiring data from the ambulance as the patient is coming in so that the ED is already primed with preliminary data. And in that circumstance, you could tell. So this is the interoperability challenge, right? So we actually get the run sheet, all the ambulance data to us. It comes in as a PDF that's transmitted from the ambulance emergency management system to our EHR. And so it's not coming in in a way that we can sort of read it well, but to your point exactly, if we were better at interoperability, I've also talked to hospitals who use things like video cameras and people's badges. And if there's 50 people sort of hovering around a patient, that's a sign that something bad is happening. And so we might be able to use something like that. But yeah, we'd like to be better at that. So why did HL7 version three not solve all these problems? This is a good philosophical question. Come to BMI 701 and 702 and we'll talk about standards. HL7 version two, his question, version two was a very practical standard. Version three was a very deeply philosophical standard. Aspirational. Aspirational that never quite caught on. And it did in pieces. I mean, SMART, FHIR is a simplification of that. So I think usually the machinery models are like evaluated statistically. Yes, sir. When it comes to a particular patient, they should know how reliable the model is. Yeah, I mean, there's calibration, right? So we can say this model works particularly well in these patients or not as well in these patients. There are some very simple equations or models that we use, for example, where we use a different model in African American patients versus non African American patients. Because there's some data that says this model is better calibrated in this subgroup of patients versus another. I do think though, to your point, that there's a suggestion, an inference from a model. This patient is at risk of a fall. And then there's this whole set of value judgments and beliefs and knowledge and understanding about a patient's circumstances that are very human. And I think that that's largely why we deliver these suggestions to a doctor or to a nurse. And then that human uses that information plus their expertise and their relationship and their experience to make a suggestion rather than just having the computer adjust the knob on the ventilator itself. A question that people always ask me and you should ask me is, will we eventually not need that human? And I think I'm more optimistic than some people that there are cases where the computer is good enough or the human is poor enough that it would be safe to sort of have a close to closed loop. However, I think those cases are not the norm. I think that there'll be more cases where human doctors are still very much needed. So I'd just add that there are tasks where patients are fungible in the words that I used a few lectures ago. So for example, a lot of hospitals are developing models that predict whether a patient will show up for their optional surgery because then they can do a better job of overscheduling the operating room in the same way that the airlines oversell seats because statistically you could win doing that. Those are very safe predictions because the worst thing that happens is you get delayed, but it's not gonna have a harmful outcome on an individual patient. Conversely, there are people that are working on machine learning systems for dosing insulin or adjusting people's ventilator settings. And those are high risk jobs. All right, last question, because we have to wrap up."
+}

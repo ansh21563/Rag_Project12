@@ -1,0 +1,292 @@
+{
+    "chunks": [
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 0.0,
+            "end": 14.22,
+            "text": " in reason, but because you arrive in minus 1.  OK, so that's the first step and the second step done.  We initialized q's to be 0.  And then we picked these two parameters of the problem,  alpha and gamma, to be 1."
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 14.22,
+            "end": 28.28,
+            "text": " And then we did the first iteration of Q-learning,  where we set the Q to be the old version of Q, which was 0,  plus alpha times this thing here.  So Q was 0.  That means that this is also 0."
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 28.32,
+            "end": 44.0,
+            "text": " So the only thing we need to look at is this thing here.  This also is 0, because the Q's for all states were 0.  So the only thing we end up with is R.  And that's what populated this table here.  OK?"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 44.0,
+            "end": 54.82,
+            "text": " Next time step, I'm doing Q-learning now  in a way where I update all the states at once, all the states  and action pairs at once.  How can I do that?  Well, it depends on the question I got there, essentially."
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 54.82,
+            "end": 71.12,
+            "text": " What data do I observe, or how do I  get to know the rewards of the SNA pairs?  We'll come back to that.  So in the next step, I have to update everything again.  So it's the previous Q value, which"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 71.12,
+            "end": 87.24000000000001,
+            "text": " was minus 0.04 for a lot of things,  then plus the immediate reward, which was this RT.  And I have to keep going.  So the dominant thing for the table this time  was that the best Q value for almost all of these boxes"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 87.24000000000001,
+            "end": 98.48,
+            "text": " was minus 0.04.  So essentially, I will add the immediate reward plus that  almost everywhere.  What is interesting, though, is that here, the best Q value  was 0.96."
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 98.48,
+            "end": 113.92,
+            "text": " And it will remain so.  That means that the best Q value for the adjacent states  would look at this max here and get 0.96 out, OK?  And then add the immediate reward.  So this thing here, getting to here,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 113.92,
+            "end": 132.56,
+            "text": " gives me 0.96 minus 0.04 for the immediate reward.  And now we can figure out what will happen next.  These values would spread out as you go further away  from the plus 1.  I don't think we should go through all of this."
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 132.56,
+            "end": 146.12,
+            "text": " But you get a sense for essentially  how information is moved from the plus 1 and away.  And I'm sure that's sort of how you solved it yourself  in your head.  But this makes it clear why you can do that,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 146.12,
+            "end": 160.28,
+            "text": " even if you don't know where the terminal states are  or where the value of these state action pairs are.  Yep?  Doesn't this calculation assume that if you  want to move in a certain direction,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 160.28,
+            "end": 165.72,
+            "text": " you will move in that direction?  Yes.  Sorry.  Thanks for reminding me.  That should have been on the slide."
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 165.72,
+            "end": 172.35999999999999,
+            "text": " Yes.  Thank you.  Yeah.  I'm going to skip the rest of this.  I hope you forgive me."
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 172.35999999999999,
+            "end": 187.2,
+            "text": " We can talk more about it later.  But one of the things that is, thanks for reminding me,  Pete, there, that one of the things I exploited here  was that I assumed deterministic transitions.  Another thing that I relied very heavily on here"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 187.2,
+            "end": 198.96,
+            "text": " is that I can represent this Q function as a table.  Like I drew all these boxes and I filled the numbers in.  That's easy enough.  But what if I have thousands of states and thousands of actions?  That's a large table."
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 198.96,
+            "end": 211.32000000000002,
+            "text": " And not only is it a large table for me to keep in memory,  it's also very bad for me statistically.  If I want to observe anything about a state action pair,  I have to do that action in that state.  And if you think about treating patients in a hospital,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 211.32000000000002,
+            "end": 224.04000000000002,
+            "text": " you're not going to try everything in every state,  usually.  You're also not going to have infinite numbers of patients.  So how do you figure out what is the immediate reward  of taking a certain action in a certain state?"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 224.04,
+            "end": 241.84,
+            "text": " And this is where function approximation comes in.  Essentially, if you can't represent your data  as a table, either for statistical reasons  or for memory reasons, let's say,  you might want to approximate the Q function"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 241.84,
+            "end": 259.34,
+            "text": " with a parametric function or with a nonparametric function.  And this is exactly what we can do.  So we can draw now an analogy to what we did last week.  I'm going to come back to this.  Essentially, instead of doing this fixed point iteration"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 259.34,
+            "end": 285.38,
+            "text": " that we did before, we will try and look for a function Q theta  that is equal to R plus gamma max Q.  And this is the, remember before we had the Bellman inequality?  We said that Q star SA is equal to R SA, let's say,  plus gamma max A prime."
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 291.53999999999996,
+            "end": 313.06,
+            "text": " Q star S prime A prime, where S prime  is the state we get to after taking action A in state S.  So the only thing I've done here is to take this equality  and make it instead a loss function  on the violation of this equality."
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 313.06,
+            "end": 327.38,
+            "text": " So by minimizing this quantity, we'll  find something that has approximately the Bellman  equality that we talked about before.  This is the idea of fitted Q learning, where  you substitute the tabular representation"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 327.38,
+            "end": 338.78,
+            "text": " with a function approximation, essentially.  So just to make this a bit more concrete,  we can think about the case where  we have only a single step.  There's only a single action to make,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 338.78,
+            "end": 348.54,
+            "text": " which means that there is no future part of this equation  here.  This part goes away, because there's only  one stage in our trajectory.  So we have only the immediate reward,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 348.54,
+            "end": 368.82,
+            "text": " and we have only the Q function.  Now, this is exactly a regression equation  in the way that you've seen it when estimating potential  outcomes.  RT here represents the outcome of doing action A in state S."
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 368.82,
+            "end": 386.18,
+            "text": " And Q here will be our estimate of this RT.  So if we only, again, I've said this before,  if we have a single time point in our process,  the problem reduces to estimating potential outcomes,  just as the way we saw it last time."
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 386.26,
+            "end": 402.86,
+            "text": " We have curves that correspond to the outcomes  under different actions, and we can do regression adjustment,  trying to find an F such that this quantity is small,  so that we can model each different potential outcomes.  And that's exactly what happens with the Fitted-Q iteration"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 402.86,
+            "end": 421.98,
+            "text": " if you have a single time step, too.  So to make it even more concrete,  we can say that there's some target value, g hat, which  represents the immediate reward and the future rewards.  That is the target of our regression,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 421.98,
+            "end": 443.7,
+            "text": " and we're fitting some function to that value.  So the question we got before was, how do I make use of,  or how do I know the transition matrix?  How do I get any information about this thing?  I say here on the slide that, OK, we have some target."
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 443.7,
+            "end": 458.02,
+            "text": " That's r plus future Q values.  We have some prediction, and we have an expectation  over transitions here.  But how do I evaluate this thing?  The transitions I have to get from somewhere, right?"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 458.02,
+            "end": 473.09999999999997,
+            "text": " And another way to say that is, what  are the inputs and the outputs of our regression?  Because when we estimate potential outcomes,  we have a very clear idea of this.  We know that y is the outcome itself is a target,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 473.1,
+            "end": 486.14000000000004,
+            "text": " and the input is the covariance x.  But here, we have a sort of moving target,  because this y, or this Q hat, it  has to come from somewhere, too.  This is something that we estimate as well."
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 486.14000000000004,
+            "end": 502.02000000000004,
+            "text": " So usually what happens is that we  alternate between updating this target Q and Q theta.  So essentially, we copy Q theta to become our new Q hat.  We iterate this somehow.  But I still haven't told you how to evaluate this expectation."
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 502.02,
+            "end": 521.8199999999999,
+            "text": " So usually in RL, there are a few different ways to do this.  And either depending on where you come from,  essentially, these are different,  or these are varyingly viable.  So if we look back at this thing here,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 521.8199999999999,
+            "end": 536.3,
+            "text": " it relies on having two pools of transitions, the state,  the action, the next state, and the reward that I got.  So I have to somehow observe those.  And I can obtain them in various ways.  A very common one when it comes to learning"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 536.3,
+            "end": 546.26,
+            "text": " to play video games, for example,  is that you do something called unpolicy exploration.  That means that you observe data from the policy  that you're currently optimizing.  You just play the game according to the policy"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 546.26,
+            "end": 557.22,
+            "text": " that you have at the moment.  And the analogy in health care would  be that you have some idea of how to treat patients,  and you just do that and see what happens.  That could be problematic, especially"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 557.22,
+            "end": 572.5,
+            "text": " if you got that policy, like if you randomly initialized it,  or if you got it from somewhere very suboptimal.  A different thing that we're more perhaps comfortable  with in health care, in a restricted setting,  is the idea of a randomized trial,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 572.5,
+            "end": 587.5400000000001,
+            "text": " where instead of trying out some policy that you're currently  learning, you decide on a population  where it's OK to flip a coin, essentially,  between different actions that you have.  The difference here between the sequential setting"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 587.5400000000001,
+            "end": 598.9599999999999,
+            "text": " and the one-step setting is that now we  have to randomize a sequence of actions, which  is a little bit unlike the clinical trial  that you have seen before, I think.  The last one, which is the most studied one when"
+        },
+        {
+            "number": "lec16",
+            "title": "part.005.mp3",
+            "start": 598.9599999999999,
+            "end": 601.48,
+            "text": " it comes to practice."
+        }
+    ],
+    "text": " in reason, but because you arrive in minus 1. OK, so that's the first step and the second step done. We initialized q's to be 0. And then we picked these two parameters of the problem, alpha and gamma, to be 1. And then we did the first iteration of Q-learning, where we set the Q to be the old version of Q, which was 0, plus alpha times this thing here. So Q was 0. That means that this is also 0. So the only thing we need to look at is this thing here. This also is 0, because the Q's for all states were 0. So the only thing we end up with is R. And that's what populated this table here. OK? Next time step, I'm doing Q-learning now in a way where I update all the states at once, all the states and action pairs at once. How can I do that? Well, it depends on the question I got there, essentially. What data do I observe, or how do I get to know the rewards of the SNA pairs? We'll come back to that. So in the next step, I have to update everything again. So it's the previous Q value, which was minus 0.04 for a lot of things, then plus the immediate reward, which was this RT. And I have to keep going. So the dominant thing for the table this time was that the best Q value for almost all of these boxes was minus 0.04. So essentially, I will add the immediate reward plus that almost everywhere. What is interesting, though, is that here, the best Q value was 0.96. And it will remain so. That means that the best Q value for the adjacent states would look at this max here and get 0.96 out, OK? And then add the immediate reward. So this thing here, getting to here, gives me 0.96 minus 0.04 for the immediate reward. And now we can figure out what will happen next. These values would spread out as you go further away from the plus 1. I don't think we should go through all of this. But you get a sense for essentially how information is moved from the plus 1 and away. And I'm sure that's sort of how you solved it yourself in your head. But this makes it clear why you can do that, even if you don't know where the terminal states are or where the value of these state action pairs are. Yep? Doesn't this calculation assume that if you want to move in a certain direction, you will move in that direction? Yes. Sorry. Thanks for reminding me. That should have been on the slide. Yes. Thank you. Yeah. I'm going to skip the rest of this. I hope you forgive me. We can talk more about it later. But one of the things that is, thanks for reminding me, Pete, there, that one of the things I exploited here was that I assumed deterministic transitions. Another thing that I relied very heavily on here is that I can represent this Q function as a table. Like I drew all these boxes and I filled the numbers in. That's easy enough. But what if I have thousands of states and thousands of actions? That's a large table. And not only is it a large table for me to keep in memory, it's also very bad for me statistically. If I want to observe anything about a state action pair, I have to do that action in that state. And if you think about treating patients in a hospital, you're not going to try everything in every state, usually. You're also not going to have infinite numbers of patients. So how do you figure out what is the immediate reward of taking a certain action in a certain state? And this is where function approximation comes in. Essentially, if you can't represent your data as a table, either for statistical reasons or for memory reasons, let's say, you might want to approximate the Q function with a parametric function or with a nonparametric function. And this is exactly what we can do. So we can draw now an analogy to what we did last week. I'm going to come back to this. Essentially, instead of doing this fixed point iteration that we did before, we will try and look for a function Q theta that is equal to R plus gamma max Q. And this is the, remember before we had the Bellman inequality? We said that Q star SA is equal to R SA, let's say, plus gamma max A prime. Q star S prime A prime, where S prime is the state we get to after taking action A in state S. So the only thing I've done here is to take this equality and make it instead a loss function on the violation of this equality. So by minimizing this quantity, we'll find something that has approximately the Bellman equality that we talked about before. This is the idea of fitted Q learning, where you substitute the tabular representation with a function approximation, essentially. So just to make this a bit more concrete, we can think about the case where we have only a single step. There's only a single action to make, which means that there is no future part of this equation here. This part goes away, because there's only one stage in our trajectory. So we have only the immediate reward, and we have only the Q function. Now, this is exactly a regression equation in the way that you've seen it when estimating potential outcomes. RT here represents the outcome of doing action A in state S. And Q here will be our estimate of this RT. So if we only, again, I've said this before, if we have a single time point in our process, the problem reduces to estimating potential outcomes, just as the way we saw it last time. We have curves that correspond to the outcomes under different actions, and we can do regression adjustment, trying to find an F such that this quantity is small, so that we can model each different potential outcomes. And that's exactly what happens with the Fitted-Q iteration if you have a single time step, too. So to make it even more concrete, we can say that there's some target value, g hat, which represents the immediate reward and the future rewards. That is the target of our regression, and we're fitting some function to that value. So the question we got before was, how do I make use of, or how do I know the transition matrix? How do I get any information about this thing? I say here on the slide that, OK, we have some target. That's r plus future Q values. We have some prediction, and we have an expectation over transitions here. But how do I evaluate this thing? The transitions I have to get from somewhere, right? And another way to say that is, what are the inputs and the outputs of our regression? Because when we estimate potential outcomes, we have a very clear idea of this. We know that y is the outcome itself is a target, and the input is the covariance x. But here, we have a sort of moving target, because this y, or this Q hat, it has to come from somewhere, too. This is something that we estimate as well. So usually what happens is that we alternate between updating this target Q and Q theta. So essentially, we copy Q theta to become our new Q hat. We iterate this somehow. But I still haven't told you how to evaluate this expectation. So usually in RL, there are a few different ways to do this. And either depending on where you come from, essentially, these are different, or these are varyingly viable. So if we look back at this thing here, it relies on having two pools of transitions, the state, the action, the next state, and the reward that I got. So I have to somehow observe those. And I can obtain them in various ways. A very common one when it comes to learning to play video games, for example, is that you do something called unpolicy exploration. That means that you observe data from the policy that you're currently optimizing. You just play the game according to the policy that you have at the moment. And the analogy in health care would be that you have some idea of how to treat patients, and you just do that and see what happens. That could be problematic, especially if you got that policy, like if you randomly initialized it, or if you got it from somewhere very suboptimal. A different thing that we're more perhaps comfortable with in health care, in a restricted setting, is the idea of a randomized trial, where instead of trying out some policy that you're currently learning, you decide on a population where it's OK to flip a coin, essentially, between different actions that you have. The difference here between the sequential setting and the one-step setting is that now we have to randomize a sequence of actions, which is a little bit unlike the clinical trial that you have seen before, I think. The last one, which is the most studied one when it comes to practice."
+}

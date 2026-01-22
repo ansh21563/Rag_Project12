@@ -1,0 +1,250 @@
+{
+    "chunks": [
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 0.0,
+            "end": 13.72,
+            "text": " the number of white blood count measurements at night  and relate it to mortality.  So false means people lived, and true means they died.  But you see that there's not a whole lot of difference  between the distributions."
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 13.72,
+            "end": 31.72,
+            "text": " But you also see that the number of white blood counts  is relatively small in this database.  And so I think we just don't have enough data to do it.  On the other hand, if you look at a panel of different drugs,  you look at mean values of blood urea, nitrogen, or calcium,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 31.72,
+            "end": 50.32,
+            "text": " chloride, CO2, et cetera, you see that there  is variation across time.  So there is some sort of variance  that's either caused by the diurnal physiology  of the human body or by the routine practice of medicine"
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 50.32,
+            "end": 75.2,
+            "text": " about when people choose to take lab measurements.  And in fact, if you look at the fraction of high and low lab  values, they do vary by hour.  And in particular, if you look at white blood counts,  you see that the fraction of high values goes up at night"
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 75.2,
+            "end": 93.68,
+            "text": " and the fraction of low values goes down  at night, which is consistent with what they saw as well.  There's another way to measure it,  which is instead of using normal ranges,  the lab actually gives you a call that says,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 93.68,
+            "end": 107.24000000000001,
+            "text": " is this value normal, low, or high?  And we can use that.  That's a little bit more subtle because it  depends on calibration of the equipment  and is updated as the calibration changes."
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 107.24000000000001,
+            "end": 125.58,
+            "text": " So that's probably a little bit more accurate.  But you see essentially the same phenomenon here.  But if you look at the distributions of when  measurements are done that turn out  to be normal versus when they turn out to be abnormal,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 125.58,
+            "end": 143.26,
+            "text": " there's a lot of similarity between the normal  and the abnormal curves of when those measurements are taken.  So we're not seeing that.  OK, let me race through to the end.  This is my heartbeat from my watch."
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 143.26,
+            "end": 157.7,
+            "text": " You can actually download the stuff  and put it in your favorite analysis engine  and take a look.  So here I was running across the Harvard Bridge.  And if you look at my heart rate variability over the 30 seconds"
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 157.7,
+            "end": 178.62,
+            "text": " or so, you see that the interbeat interval ranges  from about 550 to about 630, 620 milliseconds.  And so you could calculate my heart rate variability,  which is thought to be an indicator of heart health  and so on."
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 178.62,
+            "end": 201.35999999999999,
+            "text": " You can calculate that I was running at a pace of about 100.  My heart was beating at a pace of about 100 beats per minute.  So there's all sorts of information like that available.  Now, as I said, I'm not going to get into this today.  But this was a very successful recently published paper"
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 201.35999999999999,
+            "end": 222.01999999999998,
+            "text": " where they're able to take a look at images of the lung.  So this is a transverse scan of the lung.  And they have a deep learning machine  that is able to identify these two yellow marked things,  a pulmonary emboli, as opposed to these other things that"
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 222.01999999999998,
+            "end": 238.06,
+            "text": " are just random flecks in the tissue.  And I can't do that by eyeball.  Maybe a good radiologist might be able to.  But this is claimed in the paper to outperform  decent radiologists already."
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 238.06,
+            "end": 255.06,
+            "text": " This was one of the articles that  led Geoff Hinton to make this rather stupid pronouncement  that said, tell your children not to become radiologists,  because the profession will be over by the time  they get fully trained, which I don't believe."
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 255.06,
+            "end": 273.94,
+            "text": " They may do different things, but they won't go away.  This was a slide from Ron Kikinis at the Brigham.  And they're using automated techniques  of analyzing white matter in order  to identify lupus lesions."
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 273.94,
+            "end": 301.34,
+            "text": " So lupus is a bad disease that shows up  in these magnetic resonance images in certain ways.  The last thing I want to talk about today is notes.  So my students did a little exercise last semester  where we tried to see how good is the average ape, namely"
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 301.34,
+            "end": 318.8,
+            "text": " member of my research group, at predicting mortality.  And so we took a bunch of cases from the MIMIC data set,  blinded to the question of whether the person lived  or died.  We gave the data to people in a kind of visualization tool,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 318.8,
+            "end": 336.76000000000005,
+            "text": " sort of like the one that I showed you earlier,  that summarizes the case, and then also gave people  access to the notes, the de-identified notes,  about those cases to see whether people could predict better  than a coin flip whether somebody"
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 336.76000000000005,
+            "end": 352.88000000000005,
+            "text": " was going to live or die.  And the answer is, yes, slightly better.  Not immensely better, but slightly better.  And furthermore, it looks like by giving them feedback,  so as they're looking at these cases"
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 352.88000000000005,
+            "end": 363.48,
+            "text": " and trying to make the prediction,  they make a prediction.  You tell them if they were right or wrong.  We learn.  And so we get slightly better than slightly better"
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 363.48,
+            "end": 379.35999999999996,
+            "text": " than random.  It was kind of interesting.  One of the things I discovered is  that at least when I was playing the monkey in this exercise,  I found the notes to be immensely useful,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 379.35999999999996,
+            "end": 398.67999999999995,
+            "text": " much more useful than the trend lines of laboratory data.  Partly it's because I'm used to reading English.  I'm not so used to reading graphs of laboratory data.  But part of it is that there is a level of human understanding  that is transmitted in the nursing notes"
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 398.68,
+            "end": 414.96000000000004,
+            "text": " and in the discharge summaries and so on  that you don't get from just looking at raw data.  And so there is very much the sense,  which we're going to talk about in a couple of weeks,  of how can we take advantage of that information,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 414.96000000000004,
+            "end": 429.40000000000003,
+            "text": " extract it, and use it in the kinds of modeling  that we want to do.  So in MIMIC, if you look, we have nursing notes  and radiology reports and more nursing notes  and electrocardiogram reports and doctor's notes"
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 429.40000000000003,
+            "end": 444.8,
+            "text": " and discharge summaries and echocardiograms, respiratory,  et cetera.  And if you look at the distribution  of the length of these, these are unfortunately  not on the same scale."
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 444.8,
+            "end": 456.36,
+            "text": " But the discharge summary is the thing  that's written at the time you leave the hospital.  So this is sort of the summary of everything  that happened to you during your hospitalization.  And it's long."
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 456.36,
+            "end": 473.52,
+            "text": " So it goes up to like 30,000 characters.  It's a small, it's a short story, not so short,  short story.  Nursing notes tend to be shorter.  They run up to about 3,000 characters."
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 473.52,
+            "end": 489.04,
+            "text": " This other set of nursing notes, which I think  comes from the other system, is a little bit longer.  It goes up to about 5,000.  Doctor's notes are a little bit longer.  Yet they go up to about 10,000, 15,000 characters typically."
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 489.04,
+            "end": 506.20000000000005,
+            "text": " And there are various other kinds of notes.  So I just wanted to show you a few of these.  Here's a brief nursing note.  So this is a patient who is hypotensive but not in shock.  Patient remains on this drug drip at 0.75 micrograms"
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 506.20000000000005,
+            "end": 523.2800000000001,
+            "text": " per kilogram per minute.  No titration needed at this time.  Their blood pressure is stable at more than 100.  The mean arterial pressure is 65, greater than 65.  Wean them from this drug, presumably, if it's tolerated."
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 523.2800000000001,
+            "end": 544.1999999999999,
+            "text": " Wound infection, so anterior groin area open and oozing.  Moderate amounts of thin pink-tinged serous fluid.  Patient stooling with small amounts of stool on something  and dangerously close to the open wound, et cetera.  So this is sort of the nurse's snapshot."
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 544.1999999999999,
+            "end": 562.28,
+            "text": " She just went in, saw the patient.  By the way, I say she, but probably a vast majority  of nurses in Boston-area hospitals really are women.  But there are some male nurses.  And we'll record sort of a snapshot of what's"
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 562.28,
+            "end": 574.1600000000001,
+            "text": " going on with the patient.  What are the concerns?  In principle, this is going to be useful not only  as a part of the medical record,  but also when this nurse goes off shift"
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 574.1600000000001,
+            "end": 590.76,
+            "text": " and the next nurse comes on shift,  then this is a recording of what the state of the patient  was the last time they were seen by the nurse.  In reality, the nurses tend to tell each other verbally  rather than relying on the written version."
+        },
+        {
+            "number": "lec3",
+            "title": "part.006.mp3",
+            "start": 590.76,
+            "end": 600.16,
+            "text": " I remember one time talking to a nurse in an intensive care  unit in another part of the country.  And I said, so whoever reads your notes."
+        }
+    ],
+    "text": " the number of white blood count measurements at night and relate it to mortality. So false means people lived, and true means they died. But you see that there's not a whole lot of difference between the distributions. But you also see that the number of white blood counts is relatively small in this database. And so I think we just don't have enough data to do it. On the other hand, if you look at a panel of different drugs, you look at mean values of blood urea, nitrogen, or calcium, chloride, CO2, et cetera, you see that there is variation across time. So there is some sort of variance that's either caused by the diurnal physiology of the human body or by the routine practice of medicine about when people choose to take lab measurements. And in fact, if you look at the fraction of high and low lab values, they do vary by hour. And in particular, if you look at white blood counts, you see that the fraction of high values goes up at night and the fraction of low values goes down at night, which is consistent with what they saw as well. There's another way to measure it, which is instead of using normal ranges, the lab actually gives you a call that says, is this value normal, low, or high? And we can use that. That's a little bit more subtle because it depends on calibration of the equipment and is updated as the calibration changes. So that's probably a little bit more accurate. But you see essentially the same phenomenon here. But if you look at the distributions of when measurements are done that turn out to be normal versus when they turn out to be abnormal, there's a lot of similarity between the normal and the abnormal curves of when those measurements are taken. So we're not seeing that. OK, let me race through to the end. This is my heartbeat from my watch. You can actually download the stuff and put it in your favorite analysis engine and take a look. So here I was running across the Harvard Bridge. And if you look at my heart rate variability over the 30 seconds or so, you see that the interbeat interval ranges from about 550 to about 630, 620 milliseconds. And so you could calculate my heart rate variability, which is thought to be an indicator of heart health and so on. You can calculate that I was running at a pace of about 100. My heart was beating at a pace of about 100 beats per minute. So there's all sorts of information like that available. Now, as I said, I'm not going to get into this today. But this was a very successful recently published paper where they're able to take a look at images of the lung. So this is a transverse scan of the lung. And they have a deep learning machine that is able to identify these two yellow marked things, a pulmonary emboli, as opposed to these other things that are just random flecks in the tissue. And I can't do that by eyeball. Maybe a good radiologist might be able to. But this is claimed in the paper to outperform decent radiologists already. This was one of the articles that led Geoff Hinton to make this rather stupid pronouncement that said, tell your children not to become radiologists, because the profession will be over by the time they get fully trained, which I don't believe. They may do different things, but they won't go away. This was a slide from Ron Kikinis at the Brigham. And they're using automated techniques of analyzing white matter in order to identify lupus lesions. So lupus is a bad disease that shows up in these magnetic resonance images in certain ways. The last thing I want to talk about today is notes. So my students did a little exercise last semester where we tried to see how good is the average ape, namely member of my research group, at predicting mortality. And so we took a bunch of cases from the MIMIC data set, blinded to the question of whether the person lived or died. We gave the data to people in a kind of visualization tool, sort of like the one that I showed you earlier, that summarizes the case, and then also gave people access to the notes, the de-identified notes, about those cases to see whether people could predict better than a coin flip whether somebody was going to live or die. And the answer is, yes, slightly better. Not immensely better, but slightly better. And furthermore, it looks like by giving them feedback, so as they're looking at these cases and trying to make the prediction, they make a prediction. You tell them if they were right or wrong. We learn. And so we get slightly better than slightly better than random. It was kind of interesting. One of the things I discovered is that at least when I was playing the monkey in this exercise, I found the notes to be immensely useful, much more useful than the trend lines of laboratory data. Partly it's because I'm used to reading English. I'm not so used to reading graphs of laboratory data. But part of it is that there is a level of human understanding that is transmitted in the nursing notes and in the discharge summaries and so on that you don't get from just looking at raw data. And so there is very much the sense, which we're going to talk about in a couple of weeks, of how can we take advantage of that information, extract it, and use it in the kinds of modeling that we want to do. So in MIMIC, if you look, we have nursing notes and radiology reports and more nursing notes and electrocardiogram reports and doctor's notes and discharge summaries and echocardiograms, respiratory, et cetera. And if you look at the distribution of the length of these, these are unfortunately not on the same scale. But the discharge summary is the thing that's written at the time you leave the hospital. So this is sort of the summary of everything that happened to you during your hospitalization. And it's long. So it goes up to like 30,000 characters. It's a small, it's a short story, not so short, short story. Nursing notes tend to be shorter. They run up to about 3,000 characters. This other set of nursing notes, which I think comes from the other system, is a little bit longer. It goes up to about 5,000. Doctor's notes are a little bit longer. Yet they go up to about 10,000, 15,000 characters typically. And there are various other kinds of notes. So I just wanted to show you a few of these. Here's a brief nursing note. So this is a patient who is hypotensive but not in shock. Patient remains on this drug drip at 0.75 micrograms per kilogram per minute. No titration needed at this time. Their blood pressure is stable at more than 100. The mean arterial pressure is 65, greater than 65. Wean them from this drug, presumably, if it's tolerated. Wound infection, so anterior groin area open and oozing. Moderate amounts of thin pink-tinged serous fluid. Patient stooling with small amounts of stool on something and dangerously close to the open wound, et cetera. So this is sort of the nurse's snapshot. She just went in, saw the patient. By the way, I say she, but probably a vast majority of nurses in Boston-area hospitals really are women. But there are some male nurses. And we'll record sort of a snapshot of what's going on with the patient. What are the concerns? In principle, this is going to be useful not only as a part of the medical record, but also when this nurse goes off shift and the next nurse comes on shift, then this is a recording of what the state of the patient was the last time they were seen by the nurse. In reality, the nurses tend to tell each other verbally rather than relying on the written version. I remember one time talking to a nurse in an intensive care unit in another part of the country. And I said, so whoever reads your notes."
+}

@@ -1,0 +1,390 @@
+{
+    "chunks": [
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 0.0,
+            "end": 15.72,
+            "text": " one, because automated systems for ECG interpretation  have been around for 40 or 50 years.  And they really got going around the early 2000s  when people realized that there's  a pattern called an ST elevation."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 15.72,
+            "end": 26.76,
+            "text": " I'm not sure if you guys talked about that.  This is a marker of complete stoppage of blood flow  to the heart.  So muscle starts to die.  And in the early 2000s, there was a quality measure,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 26.76,
+            "end": 37.64,
+            "text": " kind of a quality kind of movement that said,  as soon as anybody sees that, you  should get to somebody doing something about it  within an hour and a half or so.  And so the problem was that the old days,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 37.64,
+            "end": 47.94,
+            "text": " and the old way to do this, and even this  is around the time I was a resident,  you would have to first call the cardiologist, wake them up.  They would come.  You would send them the image."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 47.94,
+            "end": 55.08,
+            "text": " They would look at it.  Then they would decide whether or not  this was the pattern they were seeing.  And then they would activate the lab, the cath lab.  They would come in."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 55.08,
+            "end": 67.6,
+            "text": " And you were losing about an hour, hour and a half  in this process.  And so instead, they decided that automated systems  could be used to be able to enable ambulance personnel  or emergency room docs, so non-cardiologists,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 67.6,
+            "end": 74.4,
+            "text": " to be able to say, hey, look, this  is what we think is going on.  Let's bring the team in.  And so people would get mobilized.  People would come to the hospital."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 74.4,
+            "end": 84.4,
+            "text": " Nobody would do anything in terms of starting the case  until somebody confirmed it.  But already, the whole wheel's returning.  And so you have this sort of triage system where  you're making a decision."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 84.4,
+            "end": 91.08000000000001,
+            "text": " You're not finalizing the decision,  but you're speeding things up.  And so this is an example where you  could imagine it's important to try  to offload this to something."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 91.08000000000001,
+            "end": 100.84,
+            "text": " So this is an example.  And there's going to be false positives.  And people will laugh and mock the emergency room doctors  and mock the ambulance drivers and say,  ah, they don't know what they're doing."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 100.84,
+            "end": 110.4,
+            "text": " They don't have any experience.  But ultimately, people were dying  because they were waiting for the cardiologist  to be available to read the ECG.  So you've got to think about those in terms of places"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 110.4,
+            "end": 126.16,
+            "text": " where there may be cost for delay.  So coming back to echoes, so what is an echo study?  Because this is probably not something that is typical.  It's kind of a compilation of videos.  And there are about 70 different videos typically"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 126.16,
+            "end": 135.44,
+            "text": " in the studies that we do at the centers that we're at.  And they're taken over multiple cycles  and multiple different views.  And often, it takes somebody pretty skilled  to acquire those views."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 135.44,
+            "end": 146.12,
+            "text": " And they take about 45 minutes to an hour  to gather that data, multiple different views.  The sonographer is sort of changing the depth  to zoom in on given structures.  And so you can understand that there's already"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 146.12,
+            "end": 158.16,
+            "text": " somebody who was already very experienced in this process,  even collecting the data, which is a problem.  Because you need to take them out of the picture  because they're expensive to be able to do those things.  So we were doing at UCSF 12,000 to 15,000."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 158.16,
+            "end": 174.07999999999998,
+            "text": " Brigham was probably a little busier at 30,000 to 35,000.  Medicare back in 2011 had 7 million of these performed.  And there's probably hundreds of millions of these archives.  So lots of data.  So we published a paper last year"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 174.07999999999998,
+            "end": 186.67999999999998,
+            "text": " trying to automate really all of the main processes around this.  And part of the reason to do all is  it doesn't help you to have one little bit automated.  Because at the end of the day, if you  have to have a cardiologist doing everything else"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 186.67999999999998,
+            "end": 198.12,
+            "text": " and a sonographer doing everything else,  what have you really saved by having one little step?  So the goal here was to start from raw study coming straight  off the machine and try to do everything.  And so that involves sorting through all"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 198.12,
+            "end": 211.44,
+            "text": " these different views, coming up with an empirical quality  score with it, segmenting all the five primary views  that we use, directly detecting some diseases,  and then computing all the standard mass and volume  types of measurements that come from this."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 211.44,
+            "end": 221.95999999999998,
+            "text": " So we wanted to do it all.  And I think it wasn't strikingly original  in the algorithms that were used.  But at the same time, it was very bold  for anybody in the community to try to take this on."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 221.95999999999998,
+            "end": 231.32,
+            "text": " And of course, it engendered all the backlash  you could imagine when you try to do something like this.  I'm still hearing it.  But there's excitement.  And certainly on the industry side, there's"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 231.32,
+            "end": 249.28,
+            "text": " really excitement that this is feasible.  So I was running a biology lab back in 2016 or so.  And then decided, so my cousin's husband  is the dean of engineering at Penn.  And I emailed him and said, do you know anyone at Berkeley?"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 249.28,
+            "end": 256.4,
+            "text": " I live near there.  I had a very long commute.  So I was like, closer to there.  Is there anybody you know there?  And he's like, yeah, I know Rujnab Ashti there."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 256.4,
+            "end": 264.15999999999997,
+            "text": " She used to be at Penn.  And I know Aljosha Efros.  And so he just emailed them and said, can you meet?  And actually, Dutendra Malik also.  And so I met some of them."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 264.15999999999997,
+            "end": 274.92,
+            "text": " And then I tried to find some people who were willing to work.  So I actually spent a day a week there for about two years  just hanging out, writing code, and trying  to get this kind of project off the ground.  So we have a few different institutions."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 274.92,
+            "end": 288.24,
+            "text": " Jeff Zeng was a senior undergraduate at the time.  He's at Illinois right now as a graduate student.  It's interesting, because it's hard to get  grad student level people excited over stuff that's  applications of existing algorithms."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 288.24,
+            "end": 297.20000000000005,
+            "text": " But they're happy to advise.  And I think that that's, so I ended up  having to write a lot of the code myself.  And undergraduates are, of course,  excited to do these kind of things,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 297.20000000000005,
+            "end": 305.96000000000004,
+            "text": " because it's better than homework.  And I can pay.  But I think ultimately, it's interesting to try  to find that sweet spot.  And also find things that ultimately"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 305.96000000000004,
+            "end": 318.88,
+            "text": " could be interesting from an algorithmic standpoint, too.  I'm trying to do more of that these days.  So we aren't the first to even do something  around classifying views.  So somebody already had published something."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 318.88,
+            "end": 328.52,
+            "text": " But we wanted to be a little bit more nuanced than that,  in that we wanted to be able to distinguish,  for example, whether this structure, the left ventricle,  is cut off.  Because we don't want to measure it if it's cut off."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 328.52,
+            "end": 336.84000000000003,
+            "text": " And we don't want to measure the atrium if it's completely cut  off here.  So we wanted to be able to have a classifier that  able to distinguish between some of those things.  It's not an easy task."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 336.84000000000003,
+            "end": 349.6,
+            "text": " And a lot of these labels were me, me riding the train  in my very long commute from East Bay in California to UCSF.  And so I did a lot of labeling.  And I did a lot of segmentation, too.  So I complied a lot."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 349.6,
+            "end": 358.56,
+            "text": " And the other thing that's kind of interesting  is that you often need, even to do the grunt work,  you may need somebody fairly specialized to do it,  which is OK.  But yeah, so that ended up being me for a lot of this."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 358.56,
+            "end": 370.44,
+            "text": " So I traced a lot of these images.  And then I got some other people to help out.  But you're not going to get a computer science undergraduate  to trace art structures for you.  Nor are you going to get them excited about doing things."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 370.44,
+            "end": 381.96000000000004,
+            "text": " So we didn't end up having that much data.  And I think we could probably get better than that.  But we had the sort of five main views.  And we implemented a modified version of unit algorithm.  We imposed a bit of a penalty to keep this sort of problem"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 381.96000000000004,
+            "end": 392.68,
+            "text": " of, for example, a little stray ventral being out there.  We imposed a penalty to say, well,  if that's too far away from the center,  then we're going to have the loss function take  that into account."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 392.68,
+            "end": 402.12,
+            "text": " That helped somewhat.  So that was our approach to it.  And this is a pretty substantial deal  to be able to do all these things that normally  would be very tedious."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 402.12,
+            "end": 411.36,
+            "text": " And as a result, when we start to analyze things,  we can segment every single frame of every single video.  The typical echo reader will take two frames and trace them.  That's it.  That's all you get."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 411.36,
+            "end": 421.96,
+            "text": " So we can do everything over every single cardiac cycle  because there's amazing variability from beat to beat.  And so it's sort of silly to think  that that should be the gold standard.  But that is the gold standard."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 421.96,
+            "end": 431.03999999999996,
+            "text": " So we had thousands of echoes.  So that's the other thing.  So it turns out that it's almost impossible  to get access to echoes.  So I wrote a keystroke encoder that sat at the front end"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 431.03999999999996,
+            "end": 442.59999999999997,
+            "text": " and just mimicked me entering in studies and downloading them.  So that was the only way I could get.  So I had about 30,000 studies built up over a year.  But there's no way to do bulk download.  And so again, that was sort of you"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 442.59999999999997,
+            "end": 456.56,
+            "text": " got to do some grunt work to be willing to play in this space.  So we had a fair number of studies  we could use in terms of where we had measurements and decent  values in terms of that.  I think it's interesting in terms"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 456.56,
+            "end": 467.24,
+            "text": " of thinking about how good one can, how close one can get.  And one of the things we found is that when there were big  deviations, so these are Bland-Altman plots,  almost always the manual ones were wrong.  What is that?"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 467.24,
+            "end": 479.88,
+            "text": " Oh, OK.  So Bland-Altman plots are, so people  don't like using correlations in the medical.  So Bland-Altman published a paper in Lancet about 30 years  ago complaining that correlations and correlation"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 479.88,
+            "end": 491.47999999999996,
+            "text": " coefficients are ultimately not good metrics  because you could have some substantial bias.  And really, you want to know if this is the gold standard,  you need to get that value.  So it really is just looking at differences"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 491.47999999999996,
+            "end": 503.35999999999996,
+            "text": " between, let's say, the reference value  and the, let's say, the automated value,  and then plotting that against the mean of the two.  So that's it.  I did it as percentages here, but ultimately, it's"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 503.35999999999996,
+            "end": 514.12,
+            "text": " just that, is that so you have, you're  just kind of taking the mean of, let's say,  the left ventricular volume.  You have a sort of a mean of the automated  versus the manually measured one."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 514.12,
+            "end": 523.0,
+            "text": " And then you compare what the difference  is of one minus the other.  And so you'll be on one side or the other.  So ideally, you would just be sitting perfectly on this line.  And then you're going to look and see"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 523.0,
+            "end": 532.92,
+            "text": " whether or not you're sort of clustered  on one side or the other.  So that's just sort of the typical thing.  People try to avoid correlation coefficients  because they kind of consider them to be not really telling"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 532.92,
+            "end": 547.0,
+            "text": " you whether or not.  There really is a gold standard, and there truly is a value here.  And you want to be near that value.  And so that is the standard for looking  at comparison of diagnostics."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 547.0,
+            "end": 555.6800000000001,
+            "text": " So we had about 8,000 things.  So the reviewers gave us a hard time for the space up here.  And there are not that many studies up here,  but ultimately, there are some.  And when we manually looked at a bunch of them,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 555.6800000000001,
+            "end": 565.6400000000001,
+            "text": " they were always the manual ones were just wrong.  Either there was a typo or something like that.  So that was reassuring.  But we were sometimes very wrong.  And you'd find that the places we'd be wrong"
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 565.6400000000001,
+            "end": 579.04,
+            "text": " would be these ridiculously complex congenital heart  studies that we had never given examples like that before.  So it's a lesson to be learned is  that sometimes you're going to be really off  in these sorts of approaches."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 579.04,
+            "end": 590.3199999999999,
+            "text": " And you have to kind of think a little bit.  And what we ended up doing was having an error of cycle  where we would identify those and feed them back in  and kind of keep on doing that.  But that still needs to be improved upon."
+        },
+        {
+            "number": "lec10",
+            "title": "part.004.mp3",
+            "start": 590.3199999999999,
+            "end": 597.72,
+            "text": " So function, again, a couple of measures of function.  So there's a few.  There's a company that has something out there"
+        }
+    ],
+    "text": " one, because automated systems for ECG interpretation have been around for 40 or 50 years. And they really got going around the early 2000s when people realized that there's a pattern called an ST elevation. I'm not sure if you guys talked about that. This is a marker of complete stoppage of blood flow to the heart. So muscle starts to die. And in the early 2000s, there was a quality measure, kind of a quality kind of movement that said, as soon as anybody sees that, you should get to somebody doing something about it within an hour and a half or so. And so the problem was that the old days, and the old way to do this, and even this is around the time I was a resident, you would have to first call the cardiologist, wake them up. They would come. You would send them the image. They would look at it. Then they would decide whether or not this was the pattern they were seeing. And then they would activate the lab, the cath lab. They would come in. And you were losing about an hour, hour and a half in this process. And so instead, they decided that automated systems could be used to be able to enable ambulance personnel or emergency room docs, so non-cardiologists, to be able to say, hey, look, this is what we think is going on. Let's bring the team in. And so people would get mobilized. People would come to the hospital. Nobody would do anything in terms of starting the case until somebody confirmed it. But already, the whole wheel's returning. And so you have this sort of triage system where you're making a decision. You're not finalizing the decision, but you're speeding things up. And so this is an example where you could imagine it's important to try to offload this to something. So this is an example. And there's going to be false positives. And people will laugh and mock the emergency room doctors and mock the ambulance drivers and say, ah, they don't know what they're doing. They don't have any experience. But ultimately, people were dying because they were waiting for the cardiologist to be available to read the ECG. So you've got to think about those in terms of places where there may be cost for delay. So coming back to echoes, so what is an echo study? Because this is probably not something that is typical. It's kind of a compilation of videos. And there are about 70 different videos typically in the studies that we do at the centers that we're at. And they're taken over multiple cycles and multiple different views. And often, it takes somebody pretty skilled to acquire those views. And they take about 45 minutes to an hour to gather that data, multiple different views. The sonographer is sort of changing the depth to zoom in on given structures. And so you can understand that there's already somebody who was already very experienced in this process, even collecting the data, which is a problem. Because you need to take them out of the picture because they're expensive to be able to do those things. So we were doing at UCSF 12,000 to 15,000. Brigham was probably a little busier at 30,000 to 35,000. Medicare back in 2011 had 7 million of these performed. And there's probably hundreds of millions of these archives. So lots of data. So we published a paper last year trying to automate really all of the main processes around this. And part of the reason to do all is it doesn't help you to have one little bit automated. Because at the end of the day, if you have to have a cardiologist doing everything else and a sonographer doing everything else, what have you really saved by having one little step? So the goal here was to start from raw study coming straight off the machine and try to do everything. And so that involves sorting through all these different views, coming up with an empirical quality score with it, segmenting all the five primary views that we use, directly detecting some diseases, and then computing all the standard mass and volume types of measurements that come from this. So we wanted to do it all. And I think it wasn't strikingly original in the algorithms that were used. But at the same time, it was very bold for anybody in the community to try to take this on. And of course, it engendered all the backlash you could imagine when you try to do something like this. I'm still hearing it. But there's excitement. And certainly on the industry side, there's really excitement that this is feasible. So I was running a biology lab back in 2016 or so. And then decided, so my cousin's husband is the dean of engineering at Penn. And I emailed him and said, do you know anyone at Berkeley? I live near there. I had a very long commute. So I was like, closer to there. Is there anybody you know there? And he's like, yeah, I know Rujnab Ashti there. She used to be at Penn. And I know Aljosha Efros. And so he just emailed them and said, can you meet? And actually, Dutendra Malik also. And so I met some of them. And then I tried to find some people who were willing to work. So I actually spent a day a week there for about two years just hanging out, writing code, and trying to get this kind of project off the ground. So we have a few different institutions. Jeff Zeng was a senior undergraduate at the time. He's at Illinois right now as a graduate student. It's interesting, because it's hard to get grad student level people excited over stuff that's applications of existing algorithms. But they're happy to advise. And I think that that's, so I ended up having to write a lot of the code myself. And undergraduates are, of course, excited to do these kind of things, because it's better than homework. And I can pay. But I think ultimately, it's interesting to try to find that sweet spot. And also find things that ultimately could be interesting from an algorithmic standpoint, too. I'm trying to do more of that these days. So we aren't the first to even do something around classifying views. So somebody already had published something. But we wanted to be a little bit more nuanced than that, in that we wanted to be able to distinguish, for example, whether this structure, the left ventricle, is cut off. Because we don't want to measure it if it's cut off. And we don't want to measure the atrium if it's completely cut off here. So we wanted to be able to have a classifier that able to distinguish between some of those things. It's not an easy task. And a lot of these labels were me, me riding the train in my very long commute from East Bay in California to UCSF. And so I did a lot of labeling. And I did a lot of segmentation, too. So I complied a lot. And the other thing that's kind of interesting is that you often need, even to do the grunt work, you may need somebody fairly specialized to do it, which is OK. But yeah, so that ended up being me for a lot of this. So I traced a lot of these images. And then I got some other people to help out. But you're not going to get a computer science undergraduate to trace art structures for you. Nor are you going to get them excited about doing things. So we didn't end up having that much data. And I think we could probably get better than that. But we had the sort of five main views. And we implemented a modified version of unit algorithm. We imposed a bit of a penalty to keep this sort of problem of, for example, a little stray ventral being out there. We imposed a penalty to say, well, if that's too far away from the center, then we're going to have the loss function take that into account. That helped somewhat. So that was our approach to it. And this is a pretty substantial deal to be able to do all these things that normally would be very tedious. And as a result, when we start to analyze things, we can segment every single frame of every single video. The typical echo reader will take two frames and trace them. That's it. That's all you get. So we can do everything over every single cardiac cycle because there's amazing variability from beat to beat. And so it's sort of silly to think that that should be the gold standard. But that is the gold standard. So we had thousands of echoes. So that's the other thing. So it turns out that it's almost impossible to get access to echoes. So I wrote a keystroke encoder that sat at the front end and just mimicked me entering in studies and downloading them. So that was the only way I could get. So I had about 30,000 studies built up over a year. But there's no way to do bulk download. And so again, that was sort of you got to do some grunt work to be willing to play in this space. So we had a fair number of studies we could use in terms of where we had measurements and decent values in terms of that. I think it's interesting in terms of thinking about how good one can, how close one can get. And one of the things we found is that when there were big deviations, so these are Bland-Altman plots, almost always the manual ones were wrong. What is that? Oh, OK. So Bland-Altman plots are, so people don't like using correlations in the medical. So Bland-Altman published a paper in Lancet about 30 years ago complaining that correlations and correlation coefficients are ultimately not good metrics because you could have some substantial bias. And really, you want to know if this is the gold standard, you need to get that value. So it really is just looking at differences between, let's say, the reference value and the, let's say, the automated value, and then plotting that against the mean of the two. So that's it. I did it as percentages here, but ultimately, it's just that, is that so you have, you're just kind of taking the mean of, let's say, the left ventricular volume. You have a sort of a mean of the automated versus the manually measured one. And then you compare what the difference is of one minus the other. And so you'll be on one side or the other. So ideally, you would just be sitting perfectly on this line. And then you're going to look and see whether or not you're sort of clustered on one side or the other. So that's just sort of the typical thing. People try to avoid correlation coefficients because they kind of consider them to be not really telling you whether or not. There really is a gold standard, and there truly is a value here. And you want to be near that value. And so that is the standard for looking at comparison of diagnostics. So we had about 8,000 things. So the reviewers gave us a hard time for the space up here. And there are not that many studies up here, but ultimately, there are some. And when we manually looked at a bunch of them, they were always the manual ones were just wrong. Either there was a typo or something like that. So that was reassuring. But we were sometimes very wrong. And you'd find that the places we'd be wrong would be these ridiculously complex congenital heart studies that we had never given examples like that before. So it's a lesson to be learned is that sometimes you're going to be really off in these sorts of approaches. And you have to kind of think a little bit. And what we ended up doing was having an error of cycle where we would identify those and feed them back in and kind of keep on doing that. But that still needs to be improved upon. So function, again, a couple of measures of function. So there's a few. There's a company that has something out there"
+}

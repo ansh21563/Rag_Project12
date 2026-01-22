@@ -1,0 +1,257 @@
+{
+    "chunks": [
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 0.0,
+            "end": 18.1,
+            "text": " So if you look at these, you say, well, again,  how many tests per admission?  Again, a huge long tail, up to about 15,000  for a very small number of patients.  If you look at lab tests per admission,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 18.1,
+            "end": 33.58,
+            "text": " you can do a log transform and get  something that looks like a more reasonable distribution.  By the way, that's a very generic lesson  when we're going to do analyses of these data,  is that often doing a transform of some sort,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 33.58,
+            "end": 51.1,
+            "text": " like in this case a log, takes some funny looking distribution  and turns it into something that looks plausibly normal, which  is better for a lot of the techniques we use.  Yeah?  Across hospitals, do long curves mean the same thing?"
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 51.1,
+            "end": 56.620000000000005,
+            "text": " Yes.  They might look at one hospital and at the other  it's the same?  Yes.  It's always the same?"
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 56.62,
+            "end": 67.39999999999999,
+            "text": " Yes.  That's the whole idea of creating the standard.  And that has been pretty successful,  pretty successfully adopted.  OK."
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 67.39999999999999,
+            "end": 81.12,
+            "text": " Chart events.  So these are the things that nurses typically  enter at the bedside.  And so there are 5.1, 5.2 million heart rates  measured in the MIMIC database."
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 81.12,
+            "end": 96.10000000000001,
+            "text": " And a CalPrevFlug is an artifact.  It exists in every record.  And it's some calibration, something or other,  that doesn't mean anything.  I've never been able to figure out exactly what it is."
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 96.10000000000001,
+            "end": 112.98,
+            "text": " SpO2 is the partial pressure of oxygen in your blood.  If you use a pulse oximeter, that's what that's measuring.  Respiratory rate, heart rhythm, ectopy type, dot, dot, dot.  Now, you might be troubled by the fact  that here's heart rate again."
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 113.68,
+            "end": 132.04,
+            "text": " Right?  But I've already shown you this, that heart rate in CareView  and heart rate in MetaVision were  coded under different codes in the joint system  that we created out of those two databases."
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 132.04,
+            "end": 149.82,
+            "text": " And so you have to take care of figuring out  what's what if you're trying to analyze this data.  Not only do we have that problem of different age  distributions across the two different data sets,  but we also just have the mechanical problem"
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 149.82,
+            "end": 167.98,
+            "text": " that there will be things with the same label that  may or may not represent the same measurement  at different times in the system.  This is the number of chart entries per admission,  again, on a log scale."
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 168.28,
+            "end": 190.83999999999997,
+            "text": " You see that there are about 10 to the 3.5 chart  entries per admission, so thousands of admissions,  of chart events per admission.  We also track outputs.  So Foley catheter allows your bladder"
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 190.83999999999997,
+            "end": 201.9,
+            "text": " to drain without your having consciously  to go to the bathroom.  So they collect that information.  There are 1.9 million recordings of how much fluid  came out of your bladder."
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 204.82,
+            "end": 225.22,
+            "text": " Chest tubes will drain stuff out of your chest  if you have congestion.  Urine is if you pee regularly, stool out, et cetera.  And again, I'm not sure I understand  what the difference is between urine out Foley versus Foley."
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 225.24,
+            "end": 243.6,
+            "text": " They may be the same thing, but one from CareView  and one from MetaVision.  So again, typical kinds of problems.  If you look at the number of output events per admission,  you're seeing on the order of 100, roughly."
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 247.96,
+            "end": 266.34,
+            "text": " Well, if you're tracking outputs,  you should also track inputs.  And so they do.  And so D5W is this dextrose in water, 0.9% normal saline.  Propofol is an anesthetic, insulin, heparin,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 266.34,
+            "end": 284.2,
+            "text": " blood thinner, et cetera.  Fentanyl is, I think, an opioid, if I remember right.  So these are various things that are given to people.  And they affect the volume of the person.  So this is an attempt to keep the person in balance"
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 284.2,
+            "end": 299.56,
+            "text": " and keep track of that.  MetaVision inputs are classified somewhat differently,  but they have similar kinds of data.  And if you combine them, you get, again,  a distribution on a log scale that"
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 299.56,
+            "end": 313.7,
+            "text": " shows that there are on the order of 10  to the fifth input events.  So quite a few input events, because this  is recorded periodically.  Now, the paper that I had, yeah?"
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 313.7,
+            "end": 321.46000000000004,
+            "text": " Is this like one input event again?  Is that like when you come into the hospital  and I was late, or just when I came in?  No, no, no.  It's an input into you."
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 321.46000000000004,
+            "end": 334.98,
+            "text": " So it's like you drink a glass of water.  The nurse is supposed to record it,  although she doesn't always, because she may not notice it.  But if they hang an IV bag and pour a liter of liquid  into you, they do record that."
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 335.8,
+            "end": 352.84000000000003,
+            "text": " OK?  All right.  So I had you read this interesting paper.  And a discussion prior to that paper,  because one of the authors is a former student of mine,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 352.84000000000003,
+            "end": 371.46,
+            "text": " and I know one of the other guys pretty well.  And the former student, Zach Kohane,  came back some years ago from a conference in California  and was explaining to me that he ran into a venture capitalist  who discovered that there is an interesting"
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 371.46,
+            "end": 389.78000000000003,
+            "text": " physiological variation in the abnormality of lab tests  that are done at night.  And he suspected that there is a diurnal variation,  that lab tests actually become more abnormal at night  than they do during the day."
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 389.91999999999996,
+            "end": 407.67999999999995,
+            "text": " And Zach, who is not only a computer science PhD,  but also a practicing doctor, turns to him  and says, you're an idiot.  Who has their blood drawn at 3 o'clock in the morning?  It's typically not healthy people."
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 410.67999999999995,
+            "end": 429.02000000000004,
+            "text": " So this is another of these nice confounding stories  where if you have a test done in the middle of the night,  it probably indicates that you're sicker.  So he and Griffin recruited their third author  and went off and did a very large scale"
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 429.02000000000004,
+            "end": 445.0,
+            "text": " study of this question, which is what the paper that I asked  you to read reports on.  And so I said, well, I wonder if I  could reproduce that study in the MIMIC database.  And the answer, just in case you get your hopes up,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 445.0,
+            "end": 464.92,
+            "text": " was no, in large part because we just don't  have the right kind of data.  So there are not that many white blood counts  that were measured in the MIMIC database, for example.  But if you look at the this is MIMIC data, and if you say,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 464.92,
+            "end": 479.38,
+            "text": " what's the fraction of abnormal white blood count  values by hour?  So this is midnight to midnight.  And each hour, there's some fraction of these test results  that are abnormal."
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 479.38,
+            "end": 497.68,
+            "text": " And sure enough, what you see is that at 5 o'clock  in the morning, a much higher fraction of them  is abnormal than at 3 o'clock in the afternoon, which  is consistent with Zach's peremptory comment  about the guy being an idiot."
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 500.6,
+            "end": 513.5,
+            "text": " So once again, I said, well, can we  build a really simple model that predicts  who's going to die in the hospital in this case?  That's the easiest one to predict,  because I have that data."
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 513.5,
+            "end": 528.12,
+            "text": " We could get three-year survival data, which  is what they were looking at.  But it's harder, and it runs into censoring problems  of what happens if the person was hospitalized  less than three years before the end of our data collection"
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 528.12,
+            "end": 551.4,
+            "text": " period and so on.  And so I avoided that.  But what this is showing you is for each of the hours 0 to 24,  what is the number of measurements?  And for each of those hours, what"
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 551.4599999999999,
+            "end": 567.62,
+            "text": " is the fraction of those measurements that's abnormal?  So I said, well, let's just throw it  into a logistic regression model.  And what comes out is something really weird,  which is that a few particular hours are significant,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 567.62,
+            "end": 589.9599999999999,
+            "text": " but most of them are not.  And that looks like noise to me, because you wouldn't expect  that at 8 o'clock in the morning,  the fact that you had something measured matters.  But at 9 o'clock in the morning, it doesn't."
+        },
+        {
+            "number": "lec3",
+            "title": "part.005.mp3",
+            "start": 589.9599999999999,
+            "end": 601.16,
+            "text": " That doesn't seem sensible.  So I don't think there's enough signal here.  And in fact, when I looked at the data,"
+        }
+    ],
+    "text": " So if you look at these, you say, well, again, how many tests per admission? Again, a huge long tail, up to about 15,000 for a very small number of patients. If you look at lab tests per admission, you can do a log transform and get something that looks like a more reasonable distribution. By the way, that's a very generic lesson when we're going to do analyses of these data, is that often doing a transform of some sort, like in this case a log, takes some funny looking distribution and turns it into something that looks plausibly normal, which is better for a lot of the techniques we use. Yeah? Across hospitals, do long curves mean the same thing? Yes. They might look at one hospital and at the other it's the same? Yes. It's always the same? Yes. That's the whole idea of creating the standard. And that has been pretty successful, pretty successfully adopted. OK. Chart events. So these are the things that nurses typically enter at the bedside. And so there are 5.1, 5.2 million heart rates measured in the MIMIC database. And a CalPrevFlug is an artifact. It exists in every record. And it's some calibration, something or other, that doesn't mean anything. I've never been able to figure out exactly what it is. SpO2 is the partial pressure of oxygen in your blood. If you use a pulse oximeter, that's what that's measuring. Respiratory rate, heart rhythm, ectopy type, dot, dot, dot. Now, you might be troubled by the fact that here's heart rate again. Right? But I've already shown you this, that heart rate in CareView and heart rate in MetaVision were coded under different codes in the joint system that we created out of those two databases. And so you have to take care of figuring out what's what if you're trying to analyze this data. Not only do we have that problem of different age distributions across the two different data sets, but we also just have the mechanical problem that there will be things with the same label that may or may not represent the same measurement at different times in the system. This is the number of chart entries per admission, again, on a log scale. You see that there are about 10 to the 3.5 chart entries per admission, so thousands of admissions, of chart events per admission. We also track outputs. So Foley catheter allows your bladder to drain without your having consciously to go to the bathroom. So they collect that information. There are 1.9 million recordings of how much fluid came out of your bladder. Chest tubes will drain stuff out of your chest if you have congestion. Urine is if you pee regularly, stool out, et cetera. And again, I'm not sure I understand what the difference is between urine out Foley versus Foley. They may be the same thing, but one from CareView and one from MetaVision. So again, typical kinds of problems. If you look at the number of output events per admission, you're seeing on the order of 100, roughly. Well, if you're tracking outputs, you should also track inputs. And so they do. And so D5W is this dextrose in water, 0.9% normal saline. Propofol is an anesthetic, insulin, heparin, blood thinner, et cetera. Fentanyl is, I think, an opioid, if I remember right. So these are various things that are given to people. And they affect the volume of the person. So this is an attempt to keep the person in balance and keep track of that. MetaVision inputs are classified somewhat differently, but they have similar kinds of data. And if you combine them, you get, again, a distribution on a log scale that shows that there are on the order of 10 to the fifth input events. So quite a few input events, because this is recorded periodically. Now, the paper that I had, yeah? Is this like one input event again? Is that like when you come into the hospital and I was late, or just when I came in? No, no, no. It's an input into you. So it's like you drink a glass of water. The nurse is supposed to record it, although she doesn't always, because she may not notice it. But if they hang an IV bag and pour a liter of liquid into you, they do record that. OK? All right. So I had you read this interesting paper. And a discussion prior to that paper, because one of the authors is a former student of mine, and I know one of the other guys pretty well. And the former student, Zach Kohane, came back some years ago from a conference in California and was explaining to me that he ran into a venture capitalist who discovered that there is an interesting physiological variation in the abnormality of lab tests that are done at night. And he suspected that there is a diurnal variation, that lab tests actually become more abnormal at night than they do during the day. And Zach, who is not only a computer science PhD, but also a practicing doctor, turns to him and says, you're an idiot. Who has their blood drawn at 3 o'clock in the morning? It's typically not healthy people. So this is another of these nice confounding stories where if you have a test done in the middle of the night, it probably indicates that you're sicker. So he and Griffin recruited their third author and went off and did a very large scale study of this question, which is what the paper that I asked you to read reports on. And so I said, well, I wonder if I could reproduce that study in the MIMIC database. And the answer, just in case you get your hopes up, was no, in large part because we just don't have the right kind of data. So there are not that many white blood counts that were measured in the MIMIC database, for example. But if you look at the this is MIMIC data, and if you say, what's the fraction of abnormal white blood count values by hour? So this is midnight to midnight. And each hour, there's some fraction of these test results that are abnormal. And sure enough, what you see is that at 5 o'clock in the morning, a much higher fraction of them is abnormal than at 3 o'clock in the afternoon, which is consistent with Zach's peremptory comment about the guy being an idiot. So once again, I said, well, can we build a really simple model that predicts who's going to die in the hospital in this case? That's the easiest one to predict, because I have that data. We could get three-year survival data, which is what they were looking at. But it's harder, and it runs into censoring problems of what happens if the person was hospitalized less than three years before the end of our data collection period and so on. And so I avoided that. But what this is showing you is for each of the hours 0 to 24, what is the number of measurements? And for each of those hours, what is the fraction of those measurements that's abnormal? So I said, well, let's just throw it into a logistic regression model. And what comes out is something really weird, which is that a few particular hours are significant, but most of them are not. And that looks like noise to me, because you wouldn't expect that at 8 o'clock in the morning, the fact that you had something measured matters. But at 9 o'clock in the morning, it doesn't. That doesn't seem sensible. So I don't think there's enough signal here. And in fact, when I looked at the data,"
+}

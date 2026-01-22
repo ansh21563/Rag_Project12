@@ -1,0 +1,292 @@
+{
+    "chunks": [
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 0.0,
+            "end": 12.34,
+            "text": " Now, that paper, they also start from something like this,  from this perspective.  And they say that, oh, now that you have,  we're working in this framework, one  could think about what happens if you have actually"
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 12.34,
+            "end": 25.560000000000002,
+            "text": " unobserved confounding.  So there, you might not actually know the true propensity  scores because there are unobserved confounders  that you don't observe.  And you can think about trying to bound"
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 25.560000000000002,
+            "end": 41.480000000000004,
+            "text": " how wrong your estimator can be as a function of how  much you don't know this quantity.  And they show that when you try to,  if you think about having some backup strategy,  like if your goal is to find a new policy which performs"
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 41.480000000000004,
+            "end": 55.1,
+            "text": " as best as possible with respect to an old policy,  then it gives you a really elegant framework  for trying to think about a robust optimization of this,  even taking into consideration the fact  that there might be unobserved confounding."
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 55.1,
+            "end": 69.6,
+            "text": " And that works also in this framework.  So I'm nearly done now.  I just want to now finish with the thought,  can we do the same thing for policies  learned by reinforcement learning?"
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 69.6,
+            "end": 92.24,
+            "text": " So now that we've sort of built up this language,  let's return to the RL setting.  And there, one can show that you can get a similar estimate  for the value of a policy by summing over your observed  sequences, summing over the time steps of that sequence,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 92.24,
+            "end": 118.36,
+            "text": " of the reward observed at that time step,  times a ratio of probabilities, which  is going from the first time step up to time little t,  of the probability that you would actually  take the observed action t prime,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 118.36,
+            "end": 141.2,
+            "text": " given that you were in the observed state t prime,  divided by the probability.  This is the analogy of the propensity  to score, the probability under the data generating process  of seeing action a, given that you were in state t prime."
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 141.2,
+            "end": 160.95999999999998,
+            "text": " So if, as we discussed there, you had a deterministic policy,  then this pi would just be a delta function.  And so this would just be looking at what this would,  this estimator would only be looking at sequences  where the precise sequence of actions taken"
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 160.95999999999998,
+            "end": 175.35999999999999,
+            "text": " are identical to the precise sequence of actions  that the policy would have taken.  And the difference here is that now,  instead of having a single propensity score,  one has a product of these propensity scores,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 175.35999999999999,
+            "end": 189.44,
+            "text": " corresponding to the propensity of observing  that action given the corresponding state  at each point along the sequence.  And so this is nice, because this gives you  one way to do what's called off-policy evaluation."
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 189.44,
+            "end": 213.0,
+            "text": " And this is an estimator, which is completely analogous  to the estimator that we got from Q-learning.  So if all assumptions were correct  and you had a lot of data, then those two  should give you precisely the same answer."
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 213.0,
+            "end": 225.48000000000002,
+            "text": " But here, like in the causal inference setting,  we are not making the assumption that we  can do covariate adjustment well.  Or said differently, we're not assuming  that we can fit the Q function well."
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 225.48000000000002,
+            "end": 236.88,
+            "text": " And this is now just like there, based on the assumption  that we have the ability to really accurately know  what the propensity scores are.  So it now gives you an alternative approach  to do evaluation."
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 236.88,
+            "end": 249.32000000000002,
+            "text": " And you could think about looking  at the robustness of your estimates  from these two different estimators.  And here, if you're in there, this  is the most naive of the estimators."
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 249.32000000000002,
+            "end": 273.12,
+            "text": " There are many ways to try to make this better,  such as by doing doubly robust estimators.  And if you want to learn more, I recommend  reading this paper by Thomas and Emma Brunskill in ICML 2016.  And with that, I want Barbara to come up and get set up."
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 273.12,
+            "end": 289.68,
+            "text": " And we're going to transition to the next part of the lecture.  Yes?  Why do we sum over t and take the product across all t?  One easy way to think about this is,  suppose that you only had a reward at the last time step."
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 289.68,
+            "end": 299.6,
+            "text": " If you only had a reward at the last time step,  then you wouldn't have this sum over t,  because the rewards in the earlier steps would be 0.  You would just have that product going from 0 up to capital T,  the last time step."
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 299.6,
+            "end": 315.40000000000003,
+            "text": " The reason why you have it up at each time step  is because one wants to be able to appropriately weigh  the likelihood of seeing that reward at that point in time.  One could rewrite this in other ways.  I want to hold other questions, because this part of the lecture"
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 315.40000000000003,
+            "end": 327.36,
+            "text": " is going to be much more interesting than my part  of the lecture.  And with that, I want to introduce Barbara.  Barbara, I first met her when she  invited me to give a talk in her class last year."
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 327.36,
+            "end": 345.92,
+            "text": " She's an instructor at Harvard Medical School,  or School of Public Health, I was thinking.  She recently finished her PhD in 2018.  And her PhD looked at many questions  related to the themes of the last couple of weeks."
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 345.92,
+            "end": 358.08,
+            "text": " Since that time, in addition to continuing her research,  she's been really leading the way  in creating data science curriculum over at Harvard.  So please take it away.  Thank you so much for the introduction, David."
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 358.08,
+            "end": 371.12,
+            "text": " I'm very happy to be here to share  some of my work on evaluating dynamic treatment  strategies, which you've been talking about  over the past few lectures.  So my goals for today, I'm just going"
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 371.12,
+            "end": 385.8,
+            "text": " to breeze over defining dynamic treatment strategies,  as you're already familiar with it.  But I would like to touch on when  we need a special class of methods called G methods.  And then we'll talk about two different applications,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 385.8,
+            "end": 399.76,
+            "text": " different analyses that have focused  on evaluating dynamic treatment strategies.  So the first will be an application  of the parametric G formula, which is a powerful G  method to cancer research."
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 399.76,
+            "end": 415.04,
+            "text": " And so the goal here is to give you my causal inference  perspective on how we think about this task  of sequential decision making.  And then with whatever time remains,  we'll be discussing a recent publication on the AI clinician"
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 415.04,
+            "end": 426.08,
+            "text": " to talk through the reinforcement learning  perspective.  So I think it'll be a really interesting discussion where  we can share these perspectives, talk  about the relative strengths and limitations as well."
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 426.08,
+            "end": 435.48,
+            "text": " And please stop me if you have any questions.  So you already know this.  When it comes to treatment strategies,  there's three main types.  There's point interventions happening"
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 435.48,
+            "end": 446.0,
+            "text": " at a single point in time.  There's sustained interventions happening over time.  When it comes to clinical care, this is often  what we're most interested in.  Within that, there's static strategies,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 446.0,
+            "end": 458.4,
+            "text": " which are constant over time.  And then there's dynamic strategies,  which we're going to focus on.  And these differ in that the intervention over time  depends on evolving characteristics."
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 458.4,
+            "end": 472.61999999999995,
+            "text": " So for example, initiate treatment at baseline  and continue it over follow up until a contraindication  occurs, at which point you may stop treatment and decide  with your doctor whether you're going to switch  to an alternate treatment."
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 472.61999999999995,
+            "end": 484.53999999999996,
+            "text": " You would still be adhering to that strategy,  even though you quit.  The comparison here being do not initiate treatment  over follow up, likewise, unless an indication occurs,  at which point you may start treatment"
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 484.53999999999996,
+            "end": 496.9,
+            "text": " and still be adhering to the strategy.  So we're focusing on these because they're  the most clinically relevant.  And so clinicians encounter these every day in practice.  So when they're making a recommendation"
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 496.9,
+            "end": 509.06,
+            "text": " to their patient about a prevention intervention,  they're going to be taking into consideration the patient's  evolving comorbidities.  Or when they're deciding the next screening interval,  they'll consider the previous result"
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 509.06,
+            "end": 523.22,
+            "text": " from the last screening test when deciding that.  Likewise for treatment, deciding whether to keep  the patient on treatment or not, is the patient  having any changes in symptoms or lab values  that may reflect toxicity?"
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 523.22,
+            "end": 537.82,
+            "text": " So one thing to note is that while many of the strategies  that you may see in clinical guidelines  and in clinical practice are dynamic strategies,  these may not be the optimal strategies.  So maybe what we're recommending and doing"
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 537.82,
+            "end": 553.1800000000001,
+            "text": " is not optimal for patients.  However, the optimal strategies will be dynamic in some way,  in that they will be adapting to individuals'  unique and evolving characteristics.  So that's why we care about them."
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 553.18,
+            "end": 565.06,
+            "text": " So what's the problem?  So one problem deals with something  called treatment confounder feedback, which you may  have spoken about in this class.  So conventional statistical methods"
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 565.06,
+            "end": 581.62,
+            "text": " cannot appropriately compare dynamic treatment strategies  in the presence of treatment confounder feedback.  So this is when time-varying confounders are  affected by previous treatment.  So if we kind of ground this in a concrete example"
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 581.62,
+            "end": 598.62,
+            "text": " with this causal diagram, let's say  we're interested in estimating the effect of some intervention  A, vasopressors, or it could be IV fluids,  on some outcome Y, which we'll call survival here.  We know that vasopressors affect blood pressure."
+        },
+        {
+            "number": "lec17",
+            "title": "part.003.mp3",
+            "start": 598.62,
+            "end": 601.66,
+            "text": " And blood pressure will affect survival."
+        }
+    ],
+    "text": " Now, that paper, they also start from something like this, from this perspective. And they say that, oh, now that you have, we're working in this framework, one could think about what happens if you have actually unobserved confounding. So there, you might not actually know the true propensity scores because there are unobserved confounders that you don't observe. And you can think about trying to bound how wrong your estimator can be as a function of how much you don't know this quantity. And they show that when you try to, if you think about having some backup strategy, like if your goal is to find a new policy which performs as best as possible with respect to an old policy, then it gives you a really elegant framework for trying to think about a robust optimization of this, even taking into consideration the fact that there might be unobserved confounding. And that works also in this framework. So I'm nearly done now. I just want to now finish with the thought, can we do the same thing for policies learned by reinforcement learning? So now that we've sort of built up this language, let's return to the RL setting. And there, one can show that you can get a similar estimate for the value of a policy by summing over your observed sequences, summing over the time steps of that sequence, of the reward observed at that time step, times a ratio of probabilities, which is going from the first time step up to time little t, of the probability that you would actually take the observed action t prime, given that you were in the observed state t prime, divided by the probability. This is the analogy of the propensity to score, the probability under the data generating process of seeing action a, given that you were in state t prime. So if, as we discussed there, you had a deterministic policy, then this pi would just be a delta function. And so this would just be looking at what this would, this estimator would only be looking at sequences where the precise sequence of actions taken are identical to the precise sequence of actions that the policy would have taken. And the difference here is that now, instead of having a single propensity score, one has a product of these propensity scores, corresponding to the propensity of observing that action given the corresponding state at each point along the sequence. And so this is nice, because this gives you one way to do what's called off-policy evaluation. And this is an estimator, which is completely analogous to the estimator that we got from Q-learning. So if all assumptions were correct and you had a lot of data, then those two should give you precisely the same answer. But here, like in the causal inference setting, we are not making the assumption that we can do covariate adjustment well. Or said differently, we're not assuming that we can fit the Q function well. And this is now just like there, based on the assumption that we have the ability to really accurately know what the propensity scores are. So it now gives you an alternative approach to do evaluation. And you could think about looking at the robustness of your estimates from these two different estimators. And here, if you're in there, this is the most naive of the estimators. There are many ways to try to make this better, such as by doing doubly robust estimators. And if you want to learn more, I recommend reading this paper by Thomas and Emma Brunskill in ICML 2016. And with that, I want Barbara to come up and get set up. And we're going to transition to the next part of the lecture. Yes? Why do we sum over t and take the product across all t? One easy way to think about this is, suppose that you only had a reward at the last time step. If you only had a reward at the last time step, then you wouldn't have this sum over t, because the rewards in the earlier steps would be 0. You would just have that product going from 0 up to capital T, the last time step. The reason why you have it up at each time step is because one wants to be able to appropriately weigh the likelihood of seeing that reward at that point in time. One could rewrite this in other ways. I want to hold other questions, because this part of the lecture is going to be much more interesting than my part of the lecture. And with that, I want to introduce Barbara. Barbara, I first met her when she invited me to give a talk in her class last year. She's an instructor at Harvard Medical School, or School of Public Health, I was thinking. She recently finished her PhD in 2018. And her PhD looked at many questions related to the themes of the last couple of weeks. Since that time, in addition to continuing her research, she's been really leading the way in creating data science curriculum over at Harvard. So please take it away. Thank you so much for the introduction, David. I'm very happy to be here to share some of my work on evaluating dynamic treatment strategies, which you've been talking about over the past few lectures. So my goals for today, I'm just going to breeze over defining dynamic treatment strategies, as you're already familiar with it. But I would like to touch on when we need a special class of methods called G methods. And then we'll talk about two different applications, different analyses that have focused on evaluating dynamic treatment strategies. So the first will be an application of the parametric G formula, which is a powerful G method to cancer research. And so the goal here is to give you my causal inference perspective on how we think about this task of sequential decision making. And then with whatever time remains, we'll be discussing a recent publication on the AI clinician to talk through the reinforcement learning perspective. So I think it'll be a really interesting discussion where we can share these perspectives, talk about the relative strengths and limitations as well. And please stop me if you have any questions. So you already know this. When it comes to treatment strategies, there's three main types. There's point interventions happening at a single point in time. There's sustained interventions happening over time. When it comes to clinical care, this is often what we're most interested in. Within that, there's static strategies, which are constant over time. And then there's dynamic strategies, which we're going to focus on. And these differ in that the intervention over time depends on evolving characteristics. So for example, initiate treatment at baseline and continue it over follow up until a contraindication occurs, at which point you may stop treatment and decide with your doctor whether you're going to switch to an alternate treatment. You would still be adhering to that strategy, even though you quit. The comparison here being do not initiate treatment over follow up, likewise, unless an indication occurs, at which point you may start treatment and still be adhering to the strategy. So we're focusing on these because they're the most clinically relevant. And so clinicians encounter these every day in practice. So when they're making a recommendation to their patient about a prevention intervention, they're going to be taking into consideration the patient's evolving comorbidities. Or when they're deciding the next screening interval, they'll consider the previous result from the last screening test when deciding that. Likewise for treatment, deciding whether to keep the patient on treatment or not, is the patient having any changes in symptoms or lab values that may reflect toxicity? So one thing to note is that while many of the strategies that you may see in clinical guidelines and in clinical practice are dynamic strategies, these may not be the optimal strategies. So maybe what we're recommending and doing is not optimal for patients. However, the optimal strategies will be dynamic in some way, in that they will be adapting to individuals' unique and evolving characteristics. So that's why we care about them. So what's the problem? So one problem deals with something called treatment confounder feedback, which you may have spoken about in this class. So conventional statistical methods cannot appropriately compare dynamic treatment strategies in the presence of treatment confounder feedback. So this is when time-varying confounders are affected by previous treatment. So if we kind of ground this in a concrete example with this causal diagram, let's say we're interested in estimating the effect of some intervention A, vasopressors, or it could be IV fluids, on some outcome Y, which we'll call survival here. We know that vasopressors affect blood pressure. And blood pressure will affect survival."
+}

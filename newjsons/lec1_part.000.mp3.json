@@ -1,0 +1,208 @@
+{
+    "chunks": [
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 0.0,
+            "end": 30.44,
+            "text": " So welcome to Spring 2019 Machine Learning for Healthcare.  My name is David Sontag.  I'm a professor in computer science.  Also I'm in the Institute for Medical Engineering and Science.  My co-instructor today will be Pete Solvitz, who I'll introduce more towards the end of"
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 30.44,
+            "end": 51.2,
+            "text": " today's lecture, along with the rest of the course staff.  So the problem.  The problem is that healthcare in the United States costs too much.  Currently we're spending $3 trillion a year, and we're not even necessarily doing a very  good job."
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 51.2,
+            "end": 80.48,
+            "text": " Patients who have chronic disease often find that these chronic diseases are diagnosed  late, they're often not managed well, and that happens even in a country with some of  the world's best clinicians.  Moreover, medical errors are happening all of the time.  Errors that, if caught, would have prevented needless deaths, needless worsening of disease,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 80.48,
+            "end": 108.64,
+            "text": " and more.  And healthcare impacts all of us.  So I imagine that almost everyone here in this room have had a family member, a loved  one, a dear friend, or even themselves suffer from a health condition which impacts your  quality of life, which has affected your work, your studies, and possibly has led to a needless"
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 108.64,
+            "end": 128.32,
+            "text": " death.  And so the question that we're asking in this course today is how can we use machine learning  artificial intelligence as one piece of a bigger puzzle to try to transform healthcare?  So all of us have some personal stories.  I myself have personal stories that have led me to be interested in this area."
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 128.32,
+            "end": 148.12,
+            "text": " My grandfather, who had Alzheimer's disease, was diagnosed quite late in his Alzheimer's  disease.  There aren't good treatments today for Alzheimer's, and so it's not that I would have expected  the outcome to be different, but had he been diagnosed earlier, our family would have recognized  that many of the erratic things that he was doing towards the later years of his life"
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 148.12,
+            "end": 168.72,
+            "text": " were due to this disease and not due to some other reason.  My mother, who had multiple myeloma, a blood cancer, who was diagnosed four years ago,  or five years ago now, never started treatment for her cancer before she died two years ago,  or one year ago.  Now why did she die?"
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 169.6,
+            "end": 197.12,
+            "text": " Well, it was believed that her cancer was still in its very early stages.  Her blood markers that were used to track the progress of the cancer put her in a low-risk category.  She didn't yet have visible complications of the disease that would, according to today's  standard guidelines, require treatment to be initiated.  As a result, the belief was the best strategy was to wait and see."
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 197.12,
+            "end": 226.56,
+            "text": " But unbeknownst to her and to my family, her blood cancer, which was caused by light  chains which were accumulating, ended up leading to organ damage.  In this case, the light chains were accumulating in her heart, and she died of heart failure.  Had we recognized that her disease was further along, she might have initiated treatment,  and there are now over 20 treatments for multiple myeloma which are believed to have life-lengthening"
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 227.28,
+            "end": 244.2,
+            "text": " effect.  I can give you four or five other stories from my own personal family and my friends  where similar things have happened, and I have no doubt that all of you have as well.  So what can we do about it is the question that we want to try to understand in today's  course."
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 244.2,
+            "end": 258.88,
+            "text": " And don't get me wrong, machine learning, artificial intelligence will only be one piece  of the puzzle.  There are so many other systematic changes that we're going to have to make into our  health care system.  But let's try to understand what those AI elements might be."
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 258.88,
+            "end": 277.24,
+            "text": " So let's start in today's lecture by giving a bit of a background on artificial intelligence  and machine learning health care.  And I'll tell you why I think the time is right now in 2019 to really start to make  a big dent at this problem.  Then I'll give you a few examples of how machine learning is likely to transform health care"
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 277.24,
+            "end": 291.92,
+            "text": " over the next decade.  Of course, we're just guessing, but this is really guided by the latest and greatest in  research.  And then we'll close today's lecture with an overview of what's different, what's unique  about machine learning health care."
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 291.92,
+            "end": 311.24,
+            "text": " All of you have taken some machine learning course in the past, and so you know the basics  of supervised prediction.  Many of you have studied things like clustering.  And you're certainly paying attention to the news where you see news every single day about  Google, Facebook, Microsoft's latest advances in speech recognition, computer vision, and"
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 311.24,
+            "end": 323.04,
+            "text": " so on.  So what's really different about trying to apply these techniques in the health care  domain?  The answer is that there's a huge amount of difference, and there are a lot of subtleties  to doing machine learning right here."
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 323.04,
+            "end": 342.76,
+            "text": " And we'll talk about that throughout the whole entire semester.  So to begin, this isn't a new field.  Artificial intelligence and medicine goes back to the 1970s or sometime even in the  60s.  One of the earliest examples of trying to use artificial intelligence for diagnosis"
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 342.76,
+            "end": 372.96,
+            "text": " was this myosin system developed at Stanford, where the goal was to try to identify bacteria  that might cause infection and then to try to guide what would be the appropriate therapy  for that bacteria.  Now, it was found that this algorithm, this simple AI algorithm, was able to propose a  good therapy in 69% of cases, which at the time was better than the best or very good"
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 372.96,
+            "end": 394.12,
+            "text": " infectious disease experts.  Now it also had some other elements of it which were quite interesting.  So those of you who've been following the latest in chat bots might find this a little  present.  So there's a dialogue interface where the computer says, I am ready."
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 394.12,
+            "end": 410.24,
+            "text": " The clinician responds, this is a 26-year-old male patient.  The computer tests its understanding of what's going on.  It says the age of the patient is 26.  The sex of the patient is male.  The clinician writes, five days ago, he had respiratory tract infections."
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 410.24,
+            "end": 424.84,
+            "text": " The computer asks, what is his name?  Joe.  The computer responds, my understanding is the name of the patient is Joe.  Respiratory tract is one of the symptoms the patient had.  Then the clinician writes, a couple of days before the admission, he had malaise, which"
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 424.88,
+            "end": 441.67999999999995,
+            "text": " is general tiredness.  The computer responds, please give me a date of admission.  The clinician responds, March 12, 1979.  And the computer again confirmed that it's understood appropriately.  And this is the preface to the later diagnostic stages."
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 441.67999999999995,
+            "end": 467.84000000000003,
+            "text": " So the ideas of how AI can really impact medicine have been around a long time.  Yet these algorithms, which have been shown to be very effective, even going back to the  70s, didn't translate into clinical care.  A second example, also equally impressive in its nature, was work from the 1980s in  Pittsburgh developing what's known as the Internist-1, or quick medical reference system."
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 467.84000000000003,
+            "end": 489.42,
+            "text": " This was now used not for infectious diseases, but for primary care.  Here one might ask, how can we try to do diagnosis at a much larger scale, where patients might  come in with one of hundreds of different diseases and could report thousands of different  symptoms, each one giving you some view, noisy view, into what might be going on with the  patient's health."
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 489.42,
+            "end": 505.5,
+            "text": " And at a high level, they modeled this as something like a Bayesian network.  It wasn't strictly a Bayesian network.  It was a bit more heuristic at the time.  It was later developed to be so.  But at a high level, there were a number of latent variables, or hidden variables, corresponding"
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 505.5,
+            "end": 520.54,
+            "text": " to different diseases the patient might have, like flu, or pneumonia, or diabetes.  And then there were a number of variables on the very bottom, which were symptoms, which  are all binary.  So the diseases are either on or off.  And here the symptoms are either present or not."
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 520.54,
+            "end": 543.3,
+            "text": " And these symptoms could include things like fatigue or cough.  They could also be things that result from laboratory test results, like a high value  of hemoglobin A1c.  And this algorithm would then take this model, take the symptoms that were reported for the  patient, and try to do reasoning over what actually might be going on with that patient"
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 543.3,
+            "end": 567.06,
+            "text": " to figure out what the differential diagnosis is.  There were over 40,000 edges connecting diseases to symptoms that those diseases were believed  to have caused.  And this knowledge base, which was probabilistic in nature because it captured the idea that  some symptoms would only occur with some probability for a disease, took over 15 person"
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 567.06,
+            "end": 585.38,
+            "text": " years to elicit from a large medical team.  So it was a lot of effort.  And even in going forward to today's time, there have been few similar efforts at a scale  as impressive as this one.  But again, what happened?"
+        },
+        {
+            "number": "lec1",
+            "title": "part.000.mp3",
+            "start": 585.38,
+            "end": 600.7,
+            "text": " These algorithms are not being used anywhere today in our clinical workflows.  And the challenges that have prevented them from being used today are numerous.  But I used a one-time example."
+        }
+    ],
+    "text": " So welcome to Spring 2019 Machine Learning for Healthcare. My name is David Sontag. I'm a professor in computer science. Also I'm in the Institute for Medical Engineering and Science. My co-instructor today will be Pete Solvitz, who I'll introduce more towards the end of today's lecture, along with the rest of the course staff. So the problem. The problem is that healthcare in the United States costs too much. Currently we're spending $3 trillion a year, and we're not even necessarily doing a very good job. Patients who have chronic disease often find that these chronic diseases are diagnosed late, they're often not managed well, and that happens even in a country with some of the world's best clinicians. Moreover, medical errors are happening all of the time. Errors that, if caught, would have prevented needless deaths, needless worsening of disease, and more. And healthcare impacts all of us. So I imagine that almost everyone here in this room have had a family member, a loved one, a dear friend, or even themselves suffer from a health condition which impacts your quality of life, which has affected your work, your studies, and possibly has led to a needless death. And so the question that we're asking in this course today is how can we use machine learning artificial intelligence as one piece of a bigger puzzle to try to transform healthcare? So all of us have some personal stories. I myself have personal stories that have led me to be interested in this area. My grandfather, who had Alzheimer's disease, was diagnosed quite late in his Alzheimer's disease. There aren't good treatments today for Alzheimer's, and so it's not that I would have expected the outcome to be different, but had he been diagnosed earlier, our family would have recognized that many of the erratic things that he was doing towards the later years of his life were due to this disease and not due to some other reason. My mother, who had multiple myeloma, a blood cancer, who was diagnosed four years ago, or five years ago now, never started treatment for her cancer before she died two years ago, or one year ago. Now why did she die? Well, it was believed that her cancer was still in its very early stages. Her blood markers that were used to track the progress of the cancer put her in a low-risk category. She didn't yet have visible complications of the disease that would, according to today's standard guidelines, require treatment to be initiated. As a result, the belief was the best strategy was to wait and see. But unbeknownst to her and to my family, her blood cancer, which was caused by light chains which were accumulating, ended up leading to organ damage. In this case, the light chains were accumulating in her heart, and she died of heart failure. Had we recognized that her disease was further along, she might have initiated treatment, and there are now over 20 treatments for multiple myeloma which are believed to have life-lengthening effect. I can give you four or five other stories from my own personal family and my friends where similar things have happened, and I have no doubt that all of you have as well. So what can we do about it is the question that we want to try to understand in today's course. And don't get me wrong, machine learning, artificial intelligence will only be one piece of the puzzle. There are so many other systematic changes that we're going to have to make into our health care system. But let's try to understand what those AI elements might be. So let's start in today's lecture by giving a bit of a background on artificial intelligence and machine learning health care. And I'll tell you why I think the time is right now in 2019 to really start to make a big dent at this problem. Then I'll give you a few examples of how machine learning is likely to transform health care over the next decade. Of course, we're just guessing, but this is really guided by the latest and greatest in research. And then we'll close today's lecture with an overview of what's different, what's unique about machine learning health care. All of you have taken some machine learning course in the past, and so you know the basics of supervised prediction. Many of you have studied things like clustering. And you're certainly paying attention to the news where you see news every single day about Google, Facebook, Microsoft's latest advances in speech recognition, computer vision, and so on. So what's really different about trying to apply these techniques in the health care domain? The answer is that there's a huge amount of difference, and there are a lot of subtleties to doing machine learning right here. And we'll talk about that throughout the whole entire semester. So to begin, this isn't a new field. Artificial intelligence and medicine goes back to the 1970s or sometime even in the 60s. One of the earliest examples of trying to use artificial intelligence for diagnosis was this myosin system developed at Stanford, where the goal was to try to identify bacteria that might cause infection and then to try to guide what would be the appropriate therapy for that bacteria. Now, it was found that this algorithm, this simple AI algorithm, was able to propose a good therapy in 69% of cases, which at the time was better than the best or very good infectious disease experts. Now it also had some other elements of it which were quite interesting. So those of you who've been following the latest in chat bots might find this a little present. So there's a dialogue interface where the computer says, I am ready. The clinician responds, this is a 26-year-old male patient. The computer tests its understanding of what's going on. It says the age of the patient is 26. The sex of the patient is male. The clinician writes, five days ago, he had respiratory tract infections. The computer asks, what is his name? Joe. The computer responds, my understanding is the name of the patient is Joe. Respiratory tract is one of the symptoms the patient had. Then the clinician writes, a couple of days before the admission, he had malaise, which is general tiredness. The computer responds, please give me a date of admission. The clinician responds, March 12, 1979. And the computer again confirmed that it's understood appropriately. And this is the preface to the later diagnostic stages. So the ideas of how AI can really impact medicine have been around a long time. Yet these algorithms, which have been shown to be very effective, even going back to the 70s, didn't translate into clinical care. A second example, also equally impressive in its nature, was work from the 1980s in Pittsburgh developing what's known as the Internist-1, or quick medical reference system. This was now used not for infectious diseases, but for primary care. Here one might ask, how can we try to do diagnosis at a much larger scale, where patients might come in with one of hundreds of different diseases and could report thousands of different symptoms, each one giving you some view, noisy view, into what might be going on with the patient's health. And at a high level, they modeled this as something like a Bayesian network. It wasn't strictly a Bayesian network. It was a bit more heuristic at the time. It was later developed to be so. But at a high level, there were a number of latent variables, or hidden variables, corresponding to different diseases the patient might have, like flu, or pneumonia, or diabetes. And then there were a number of variables on the very bottom, which were symptoms, which are all binary. So the diseases are either on or off. And here the symptoms are either present or not. And these symptoms could include things like fatigue or cough. They could also be things that result from laboratory test results, like a high value of hemoglobin A1c. And this algorithm would then take this model, take the symptoms that were reported for the patient, and try to do reasoning over what actually might be going on with that patient to figure out what the differential diagnosis is. There were over 40,000 edges connecting diseases to symptoms that those diseases were believed to have caused. And this knowledge base, which was probabilistic in nature because it captured the idea that some symptoms would only occur with some probability for a disease, took over 15 person years to elicit from a large medical team. So it was a lot of effort. And even in going forward to today's time, there have been few similar efforts at a scale as impressive as this one. But again, what happened? These algorithms are not being used anywhere today in our clinical workflows. And the challenges that have prevented them from being used today are numerous. But I used a one-time example."
+}

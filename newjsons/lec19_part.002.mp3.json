@@ -1,0 +1,320 @@
+{
+    "chunks": [
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 0.0,
+            "end": 11.38,
+            "text": " different specifically because we  don't know the time intervals.  So intuitively, if a lot of time has  passed between the two observations,  then we want to allow for an accelerated process."
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 11.38,
+            "end": 19.8,
+            "text": " We want to allow for the fact that you might  want to skip many different stages  to go to your next time step, to go  to the stage of the next time step,  because so much time has passed."
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 19.8,
+            "end": 31.279999999999998,
+            "text": " And that intuitively is what this scaling of this matrix Q  by delta corresponds to.  So the number of parameters in this parameterization  is actually identical to the number of parameters  in this parameterization."
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 31.279999999999998,
+            "end": 45.78,
+            "text": " So you have a matrix Q, which is given to you, in essence,  by the number of states squared, really  the number of states.  There's an additional redundancy there,  because it has to sum up to 1, but that's irrelevant."
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 45.78,
+            "end": 63.44,
+            "text": " And so the same story here, but we're  going to now parameterize the process by, in some sense,  the infinitesimally small time probability of transitioning.  So if you were to take the derivative of this transition  distribution as the time interval shrinks,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 63.44,
+            "end": 80.72,
+            "text": " and then you were to integrate over the time interval that  was observed, the probability of transitioning from any state  to any other state with that infinitesimally small  probability of transitioning, what you get out  is exactly this form."
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 80.72,
+            "end": 93.82,
+            "text": " And I'll leave this paper in the optional readings  for today's lecture.  And you can read through it to get more intuition  about the continuous time marker process.  Any questions so far?"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 93.82,
+            "end": 102.42,
+            "text": " Yeah.  AUDIENCE 2.  So is Q the same for both patients?  PROFESSOR ERIK GERMANN-KURZKEYSER Yes.  In this model, Q is assumed to be the same for all patients."
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 102.42,
+            "end": 112.66,
+            "text": " You might imagine if there were disease subtypes, which  there aren't in this approach, that Q  might be different for each subtype.  For example, you might transition  between stages much more quickly for some subtypes"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 112.66,
+            "end": 125.0,
+            "text": " than for others.  Other questions?  Yeah.  AUDIENCE 3.  So Q, you said, it's just like a screen number."
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 125.0,
+            "end": 135.12,
+            "text": " Beforehand, you kind of specified  the stages you picked as these subtypes.  PROFESSOR ERIK GERMANN-KURZKEYSER Correct.  Yeah.  So you pre-specify the number of stages that you want to model."
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 135.12,
+            "end": 148.85999999999999,
+            "text": " And there are many ways to try to choose that parameter.  For example, you could look at held-out likelihood  under this model, which is learned  with a different number of stages.  You could use typical model selection techniques"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 148.85999999999999,
+            "end": 161.18,
+            "text": " from machine learning, also, as another approach,  where you try to penalize complexity in some way.  Or what we found here, because of some of the other things  that I'm about to tell you, it doesn't actually  matter that much."
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 161.18,
+            "end": 175.92000000000002,
+            "text": " So similarly to when one does hierarchical clustering,  or even k-means clustering, or even learning a probabilistic  topic model, if you use a very small number of topics  or number of clusters, you tend to learn  very coarse-grained topics or clusters."
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 175.92000000000002,
+            "end": 187.96,
+            "text": " If you use a much larger number of topics,  you tend to learn much more fine-grained topics.  Same story is going to happen here.  If you use a small number of disease stages,  you're going to learn very coarse-grained notions"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 187.96,
+            "end": 196.68,
+            "text": " of disease stages.  If you use more disease stages, you're  going to learn a fine-grained notion.  But the overall sorting of the patients  is going to end up being very similar."
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 196.68,
+            "end": 207.26,
+            "text": " But to make that statement, we're  going to need to make some additional assumptions, which  I'm going to show you in a few minutes.  Any other questions?  These are great questions."
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 207.26,
+            "end": 216.72,
+            "text": " Yeah?  So do we know the staging of the disease that people have?  No.  And that's critical here.  So I'm assuming that these variables, these S's,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 216.72,
+            "end": 230.86,
+            "text": " are all hidden variables here.  And the way that we're going to learn this model  is by maximum likelihood estimation,  where we marginalize over the hidden variables,  just like you would do in any EM-type algorithm."
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 230.86,
+            "end": 246.06,
+            "text": " Any other questions?  All right.  So what I've just shown you is the topmost part of the model.  Now I'm going to talk about a horizontal slice.  So I'm going to talk about one of these time points."
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 250.3,
+            "end": 270.04,
+            "text": " So if you were to look at the rotation of one  of those time points, what you would get out is this model.  These X's are also hidden variables.  And we have pre-specified them to characterize  different axes by which we want to understand the patient's"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 270.04,
+            "end": 288.04,
+            "text": " disease progression.  So in Thursday's lecture, we characterized patient's disease  subtype by just a single number.  And similarly, in this example, it was just by a single number.  But we might want to understand what's"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 288.04,
+            "end": 301.46000000000004,
+            "text": " really unique about each subtype.  So for example, sorry, what's really unique  about each disease stage?  So for example, how is the patient's endocrine function  in that disease stage?"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 301.46000000000004,
+            "end": 320.92,
+            "text": " How is the patient's psychiatric status in that disease stage?  Has the patient developed lung cancer yet  at that disease stage?  And so on.  And we're going to ask that we want"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 320.92,
+            "end": 335.96000000000004,
+            "text": " to be able to read out from this model according to these axes.  And this will become very clear at the end of this section,  where I show you a simulation of what 20 years looks like  for COPD according to these quantities.  When does the patient typically develop diabetes?"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 335.96000000000004,
+            "end": 348.66,
+            "text": " When does the patient typically become depressed?  When does the patient typically develop lung cancer, and so on?  So these are the quantities in which  we want to be able to really talk about what happens  to a patient at any one disease stage."
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 348.66,
+            "end": 360.94,
+            "text": " But the challenge is we never actually  observe these quantities in the data that we have.  Rather, all we observe are things like laboratory test  results, or diagnosis codes, or procedures that have been  formed, and so on, which I'm going"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 360.94,
+            "end": 371.94,
+            "text": " to call the clinical findings in the bottom.  And as we've been discussing throughout this course,  one could think about things as diagnosis codes  as giving you information about the disease  status of the patient."
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 371.94,
+            "end": 388.46000000000004,
+            "text": " But they're not one and the same as the diagnosis,  because there's so much noise and bias that  goes into the assigning of diagnosis codes for patients.  And so the way that we're going to model the raw data  as a function of these hidden variables"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 388.46000000000004,
+            "end": 404.90000000000003,
+            "text": " that we want to characterize is using what's  known as a noisy OR network.  So we're going to suppose that there  is some generative distribution where the observations you see,  for example, diagnosis codes, are"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 404.90000000000003,
+            "end": 420.94,
+            "text": " likely to be observed as a function of whether the patient  has these phenotypes or comorbidities  with some probability.  And that probability can be specified by these edge weights.  So for example, a diagnosis code for diabetes"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 420.94,
+            "end": 431.18,
+            "text": " is very likely to be observed in the patient data  if the patient truly has diabetes.  But of course, it may not be recorded  in the data for every single visit  the patient has to a clinician."
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 431.18,
+            "end": 439.92,
+            "text": " There might be some visits to clinicians  that have nothing to do with their patient's endocrine  function.  And diabetes, the diagnosis code,  might not be recorded for that visit."
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 439.92,
+            "end": 458.6,
+            "text": " So it's going to be a noisy process.  And that noise rate is going to be captured by that edge.  So part of the learning algorithm  is going to be to learn the transition distributions.  So for example, that Q matrix I showed you in the earlier"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 458.6,
+            "end": 469.84,
+            "text": " slide.  But the other role of the learning algorithm  is to learn all of the parameters  of this noisier distribution, namely these edge weights.  So that's going to be discovered as part of the learning"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 469.84,
+            "end": 483.6,
+            "text": " algorithm.  And a key question that you have to ask me  is, if I know I want to read out from the model according  to these axes, but these axes are never,  I'm never assuming that they're explicitly observed"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 483.6,
+            "end": 497.34000000000003,
+            "text": " in the data, how do I ground the learning algorithm  to give meaning to these hidden variables?  Because otherwise, if we left them otherwise unconstrained  and you did maximum likelihood estimation,  just like in any factor analysis type model,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 497.34000000000003,
+            "end": 509.66,
+            "text": " you might discover some factors here.  But they might not be the factors you care about.  And if the learning problem was not identifiable,  as is often the case in unsupervised learning,  then you might not discover what you're interested in."
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 509.66,
+            "end": 523.72,
+            "text": " So to ground the hidden variables,  we introduced, we used a technique  that you already saw in an earlier  lecture from lecture 8 called anchors.  So a domain expert is going to specify"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 523.72,
+            "end": 539.44,
+            "text": " for each one of the comorbidities  one or more anchors, which are observations which we are going  to conjecture could only have arisen from the corresponding  hidden variable.  So notice here that this diagnosis code,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 539.44,
+            "end": 554.22,
+            "text": " which is for type 2 diabetes, has only an edge from x1.  That is an assumption that we're making in the learning  algorithm.  We are actually explicitly zeroing out  all of the other edges from all of the other comorbidities"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 554.22,
+            "end": 565.52,
+            "text": " to 0, 1.  We're not going to pre-specify what this edge weight is.  We're going to allow for the fact that this might be noisy.  It's not always observed, even if the patient has diabetes.  But we're going to say this could not"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 565.52,
+            "end": 582.36,
+            "text": " be explained by any of the other comorbidities.  And so for each one of the comorbidities or phenotypes  that we want to model, we're going  to specify some small number of anchors, which  correspond to a type of sparsity assumption on that graph."
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 582.36,
+            "end": 594.44,
+            "text": " And these are the anchors that we chose.  For asthma, we chose a diagnosis code corresponding to asthma.  For lung cancer, we chose several diagnosis codes  corresponding to lung cancer.  For obesity, we chose a diagnosis code"
+        },
+        {
+            "number": "lec19",
+            "title": "part.002.mp3",
+            "start": 594.44,
+            "end": 599.88,
+            "text": " corresponding to morbid obesity, and so on.  And so these are ways that we're going to give meaning"
+        }
+    ],
+    "text": " different specifically because we don't know the time intervals. So intuitively, if a lot of time has passed between the two observations, then we want to allow for an accelerated process. We want to allow for the fact that you might want to skip many different stages to go to your next time step, to go to the stage of the next time step, because so much time has passed. And that intuitively is what this scaling of this matrix Q by delta corresponds to. So the number of parameters in this parameterization is actually identical to the number of parameters in this parameterization. So you have a matrix Q, which is given to you, in essence, by the number of states squared, really the number of states. There's an additional redundancy there, because it has to sum up to 1, but that's irrelevant. And so the same story here, but we're going to now parameterize the process by, in some sense, the infinitesimally small time probability of transitioning. So if you were to take the derivative of this transition distribution as the time interval shrinks, and then you were to integrate over the time interval that was observed, the probability of transitioning from any state to any other state with that infinitesimally small probability of transitioning, what you get out is exactly this form. And I'll leave this paper in the optional readings for today's lecture. And you can read through it to get more intuition about the continuous time marker process. Any questions so far? Yeah. AUDIENCE 2. So is Q the same for both patients? PROFESSOR ERIK GERMANN-KURZKEYSER Yes. In this model, Q is assumed to be the same for all patients. You might imagine if there were disease subtypes, which there aren't in this approach, that Q might be different for each subtype. For example, you might transition between stages much more quickly for some subtypes than for others. Other questions? Yeah. AUDIENCE 3. So Q, you said, it's just like a screen number. Beforehand, you kind of specified the stages you picked as these subtypes. PROFESSOR ERIK GERMANN-KURZKEYSER Correct. Yeah. So you pre-specify the number of stages that you want to model. And there are many ways to try to choose that parameter. For example, you could look at held-out likelihood under this model, which is learned with a different number of stages. You could use typical model selection techniques from machine learning, also, as another approach, where you try to penalize complexity in some way. Or what we found here, because of some of the other things that I'm about to tell you, it doesn't actually matter that much. So similarly to when one does hierarchical clustering, or even k-means clustering, or even learning a probabilistic topic model, if you use a very small number of topics or number of clusters, you tend to learn very coarse-grained topics or clusters. If you use a much larger number of topics, you tend to learn much more fine-grained topics. Same story is going to happen here. If you use a small number of disease stages, you're going to learn very coarse-grained notions of disease stages. If you use more disease stages, you're going to learn a fine-grained notion. But the overall sorting of the patients is going to end up being very similar. But to make that statement, we're going to need to make some additional assumptions, which I'm going to show you in a few minutes. Any other questions? These are great questions. Yeah? So do we know the staging of the disease that people have? No. And that's critical here. So I'm assuming that these variables, these S's, are all hidden variables here. And the way that we're going to learn this model is by maximum likelihood estimation, where we marginalize over the hidden variables, just like you would do in any EM-type algorithm. Any other questions? All right. So what I've just shown you is the topmost part of the model. Now I'm going to talk about a horizontal slice. So I'm going to talk about one of these time points. So if you were to look at the rotation of one of those time points, what you would get out is this model. These X's are also hidden variables. And we have pre-specified them to characterize different axes by which we want to understand the patient's disease progression. So in Thursday's lecture, we characterized patient's disease subtype by just a single number. And similarly, in this example, it was just by a single number. But we might want to understand what's really unique about each subtype. So for example, sorry, what's really unique about each disease stage? So for example, how is the patient's endocrine function in that disease stage? How is the patient's psychiatric status in that disease stage? Has the patient developed lung cancer yet at that disease stage? And so on. And we're going to ask that we want to be able to read out from this model according to these axes. And this will become very clear at the end of this section, where I show you a simulation of what 20 years looks like for COPD according to these quantities. When does the patient typically develop diabetes? When does the patient typically become depressed? When does the patient typically develop lung cancer, and so on? So these are the quantities in which we want to be able to really talk about what happens to a patient at any one disease stage. But the challenge is we never actually observe these quantities in the data that we have. Rather, all we observe are things like laboratory test results, or diagnosis codes, or procedures that have been formed, and so on, which I'm going to call the clinical findings in the bottom. And as we've been discussing throughout this course, one could think about things as diagnosis codes as giving you information about the disease status of the patient. But they're not one and the same as the diagnosis, because there's so much noise and bias that goes into the assigning of diagnosis codes for patients. And so the way that we're going to model the raw data as a function of these hidden variables that we want to characterize is using what's known as a noisy OR network. So we're going to suppose that there is some generative distribution where the observations you see, for example, diagnosis codes, are likely to be observed as a function of whether the patient has these phenotypes or comorbidities with some probability. And that probability can be specified by these edge weights. So for example, a diagnosis code for diabetes is very likely to be observed in the patient data if the patient truly has diabetes. But of course, it may not be recorded in the data for every single visit the patient has to a clinician. There might be some visits to clinicians that have nothing to do with their patient's endocrine function. And diabetes, the diagnosis code, might not be recorded for that visit. So it's going to be a noisy process. And that noise rate is going to be captured by that edge. So part of the learning algorithm is going to be to learn the transition distributions. So for example, that Q matrix I showed you in the earlier slide. But the other role of the learning algorithm is to learn all of the parameters of this noisier distribution, namely these edge weights. So that's going to be discovered as part of the learning algorithm. And a key question that you have to ask me is, if I know I want to read out from the model according to these axes, but these axes are never, I'm never assuming that they're explicitly observed in the data, how do I ground the learning algorithm to give meaning to these hidden variables? Because otherwise, if we left them otherwise unconstrained and you did maximum likelihood estimation, just like in any factor analysis type model, you might discover some factors here. But they might not be the factors you care about. And if the learning problem was not identifiable, as is often the case in unsupervised learning, then you might not discover what you're interested in. So to ground the hidden variables, we introduced, we used a technique that you already saw in an earlier lecture from lecture 8 called anchors. So a domain expert is going to specify for each one of the comorbidities one or more anchors, which are observations which we are going to conjecture could only have arisen from the corresponding hidden variable. So notice here that this diagnosis code, which is for type 2 diabetes, has only an edge from x1. That is an assumption that we're making in the learning algorithm. We are actually explicitly zeroing out all of the other edges from all of the other comorbidities to 0, 1. We're not going to pre-specify what this edge weight is. We're going to allow for the fact that this might be noisy. It's not always observed, even if the patient has diabetes. But we're going to say this could not be explained by any of the other comorbidities. And so for each one of the comorbidities or phenotypes that we want to model, we're going to specify some small number of anchors, which correspond to a type of sparsity assumption on that graph. And these are the anchors that we chose. For asthma, we chose a diagnosis code corresponding to asthma. For lung cancer, we chose several diagnosis codes corresponding to lung cancer. For obesity, we chose a diagnosis code corresponding to morbid obesity, and so on. And so these are ways that we're going to give meaning"
+}

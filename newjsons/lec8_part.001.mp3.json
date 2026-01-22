@@ -1,0 +1,250 @@
+{
+    "chunks": [
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 0.0,
+            "end": 17.900000000000002,
+            "text": " either literally adjacent or within n words  of the original word that you're focusing on,  or that are linked by within k links through the parse  to that word.  So this gives you a very large set of features."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 17.900000000000002,
+            "end": 39.72,
+            "text": " And of course, parsing is not a solved problem.  And so this is an example from that story  that I showed you last time.  And if you see, it comes up with 24 ambiguous parses  of this sentence."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 39.72,
+            "end": 57.519999999999996,
+            "text": " So there are technical problems about how to deal with that.  Today, you could use a different parser.  The Stanford parser, for example,  probably does a better job than the one  we were using 14 years ago and gives you"
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 57.52,
+            "end": 75.10000000000001,
+            "text": " at least more definitive answers.  And so you could use that instead.  And so if you look at what we did, we said, well,  here is the text, Mr. And here are all the ways  that you can look it up in the UMLS."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 75.10000000000001,
+            "end": 91.84,
+            "text": " And it turns out to be very ambiguous.  So MR stands not only for Mr., but it also  stands for magnetic resonance.  And it stands for a whole bunch of other things.  And so you get huge amounts of ambiguity."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 91.84,
+            "end": 109.2,
+            "text": " Blind turns out also to give you various ambiguities.  So it maps here to four different concept  unique identifiers.  Is is OK.  79-year-old is OK."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 109.24000000000001,
+            "end": 125.48,
+            "text": " And then male, again, maps to five different concept  unique identifiers.  So there are all these problems of overgeneration  from this database.  And here's some more, but I'm going to skip over that."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 125.48,
+            "end": 139.39999999999998,
+            "text": " And then the learning model, in our case,  was a support vector machine for this project,  in which we just said, well, throw in all the,  you know, it's the kill them all and God will sort them out  kind of approach."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 139.39999999999998,
+            "end": 154.0,
+            "text": " So we just threw in all these features and said,  oh, support vector machines are really  good at picking out exactly what are the best features.  And so we just relied on that.  And sure enough, so you wind up with literally"
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 154.0,
+            "end": 170.6,
+            "text": " millions of features.  But sure enough, it worked pretty well.  And so stat DID was our program.  And you see that on real discharge summaries,  we're getting precision and recall on PHI up around 98"
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 170.6,
+            "end": 188.07999999999998,
+            "text": " and 1,5, 95 and 1,25%, which was much better  than the previous state of the art, which  had been based on rules and dictionaries as a way  of de-identifying things.  So this was a successful example of that approach."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 188.07999999999998,
+            "end": 206.83999999999997,
+            "text": " And of course, this is usable not only for de-identification,  but it's also usable for entity recognition,  because instead of selecting entities that are personally  identifiable health information, you  could train it to select entities that are diseases"
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 206.83999999999997,
+            "end": 223.04,
+            "text": " or that are medications or that are various other things.  And so this was, in the 2000s, a pretty typical way for people  to approach these kinds of problems.  And it's still used today.  I mean, there are tools around that let you do this."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 223.04,
+            "end": 236.72,
+            "text": " And they work reasonably effectively.  They're not state of the art at the moment,  but they're simpler than many of today's state of the art  methods.  So here's another approach."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 236.72,
+            "end": 256.56,
+            "text": " This was something we published a few years ago,  where we started working with some psychiatrists and said,  could we predict 30-day readmission  for a psychiatric patient with any degree of reliability?  That's a hard prediction."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 256.56,
+            "end": 270.8,
+            "text": " Willie is currently running an experiment  where we're asking psychiatrists to predict that.  And it turns out they're barely better than chance  at that prediction.  So it's not an easy task."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 270.8,
+            "end": 287.4,
+            "text": " And what we did is we said, well, let's use topic modeling.  And so we had this cohort of patients,  close to 5,000 patients.  About 10% of them were readmitted  with a psych diagnosis."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 287.4,
+            "end": 301.71999999999997,
+            "text": " And almost 3,000 of them were readmitted  with other diagnoses.  So one thing this tells you right away  is that if you're dealing with psychiatric patients,  they come and go to the hospital frequently."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 301.71999999999997,
+            "end": 317.84000000000003,
+            "text": " And this is not good for the hospital's bottom line  because of reimbursement policies of insurance  companies and so on.  So only of the 4,700, only 1,240 were not  readmitted within 30 days."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 317.84000000000003,
+            "end": 337.6,
+            "text": " So there's very frequent bounce back.  So we said, well, let's try building a baseline model using  a support vector machine from baseline clinical features  like age, gender, public health insurances  as a proxy for socioeconomic status."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 337.6,
+            "end": 354.92,
+            "text": " So if you're on Medicaid, you're probably poor.  And if you have private insurance,  then you're probably an MIT employee and are better off.  So that's a frequently used proxy.  A comorbidity index that tells you"
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 354.92,
+            "end": 370.12,
+            "text": " how sick you are from things other  than your psychiatric problems.  And then we said, well, what if we  add to that model common words from notes?  So we said, let's do a TF-IDF calculation."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 370.12,
+            "end": 386.40000000000003,
+            "text": " So this is term frequency divided by log  of the document frequency.  So it's sort of how specific is a term  to identify a particular kind of condition.  And we take the 1,000 most informative words."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 386.40000000000003,
+            "end": 407.76,
+            "text": " And so there are a lot of these.  So if you use 1,000 most informative words  from these nearly 5,000 patients,  you wind up with something like 66,000 words,  unique words that are informative for some patient."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 407.76,
+            "end": 421.56,
+            "text": " But if you limit yourself to the top 10,  then it only uses 18,000 words.  And if you limit yourself to the top one,  then it uses about 3,000 words.  And then we said, well, instead of doing individual words,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 421.56,
+            "end": 442.4,
+            "text": " let's do latent Dirichlet allocation, so topic modeling,  on all of the words as a bag of words.  So no sequence information, just the collection of words.  And so we calculated 75 topics from using  LDA on all these notes."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 442.4,
+            "end": 458.4,
+            "text": " So just to remind you, the LDA process  is a model that says every document consists  of a certain mixture of topics.  And each of those topics probabilistically  generates certain words."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 458.4,
+            "end": 476.47999999999996,
+            "text": " And so you can build a model like this  and then solve it using complicated techniques.  And you wind up with topics in this study as follows.  I don't know, can you read these?  They may be too small."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 477.20000000000005,
+            "end": 497.0,
+            "text": " So these are unsupervised topics.  And if you look at the first one,  it says patient, alcohol, withdrawal, depression,  drinking, and, adivan, etoH, drinks, medications,  clinic inpatient diagnosis, days, hospital, substance use"
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 497.0,
+            "end": 513.4,
+            "text": " treatment program name.  That's a de-identified use abuse problem number.  And we had our experts look at these topics.  And they said, oh, well, that topic  is related to alcohol abuse, which seems reasonable."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 513.4,
+            "end": 529.8,
+            "text": " And then you see on the bottom, psychosis, thought features,  paranoid psychosis, paranoia, symptoms, psychiatric, et  cetera.  And they said, OK, that's a psychosis topic.  So in retrospect, you can assign meaning to these topics."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 529.8,
+            "end": 551.4,
+            "text": " But in fact, they're generated without any a priori notion  of what they ought to be.  They're just a statistical summarization  of the common co-occurrences of words in these documents.  But what you find is that if you use the baseline model, which"
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 551.4,
+            "end": 570.92,
+            "text": " used just the sociodemographic and clinical variables,  and you say, what's the difference in survival,  in this case, in time to readmission,  between one set and another in this cohort?  And the answer is they're pretty similar."
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 570.92,
+            "end": 587.14,
+            "text": " Whereas if you use a model that predicts  based on the baseline and 75 topics, the 75 topics  that we identified, you get a much bigger separation.  And of course, this is statistically significant.  And it tells you that this technique"
+        },
+        {
+            "number": "lec8",
+            "title": "part.001.mp3",
+            "start": 587.14,
+            "end": 601.86,
+            "text": " is useful for being able to improve  the prediction of a cohort that's  more likely to be readmitted from a cohort that's  less likely to be readmitted.  It's not a terrific model."
+        }
+    ],
+    "text": " either literally adjacent or within n words of the original word that you're focusing on, or that are linked by within k links through the parse to that word. So this gives you a very large set of features. And of course, parsing is not a solved problem. And so this is an example from that story that I showed you last time. And if you see, it comes up with 24 ambiguous parses of this sentence. So there are technical problems about how to deal with that. Today, you could use a different parser. The Stanford parser, for example, probably does a better job than the one we were using 14 years ago and gives you at least more definitive answers. And so you could use that instead. And so if you look at what we did, we said, well, here is the text, Mr. And here are all the ways that you can look it up in the UMLS. And it turns out to be very ambiguous. So MR stands not only for Mr., but it also stands for magnetic resonance. And it stands for a whole bunch of other things. And so you get huge amounts of ambiguity. Blind turns out also to give you various ambiguities. So it maps here to four different concept unique identifiers. Is is OK. 79-year-old is OK. And then male, again, maps to five different concept unique identifiers. So there are all these problems of overgeneration from this database. And here's some more, but I'm going to skip over that. And then the learning model, in our case, was a support vector machine for this project, in which we just said, well, throw in all the, you know, it's the kill them all and God will sort them out kind of approach. So we just threw in all these features and said, oh, support vector machines are really good at picking out exactly what are the best features. And so we just relied on that. And sure enough, so you wind up with literally millions of features. But sure enough, it worked pretty well. And so stat DID was our program. And you see that on real discharge summaries, we're getting precision and recall on PHI up around 98 and 1,5, 95 and 1,25%, which was much better than the previous state of the art, which had been based on rules and dictionaries as a way of de-identifying things. So this was a successful example of that approach. And of course, this is usable not only for de-identification, but it's also usable for entity recognition, because instead of selecting entities that are personally identifiable health information, you could train it to select entities that are diseases or that are medications or that are various other things. And so this was, in the 2000s, a pretty typical way for people to approach these kinds of problems. And it's still used today. I mean, there are tools around that let you do this. And they work reasonably effectively. They're not state of the art at the moment, but they're simpler than many of today's state of the art methods. So here's another approach. This was something we published a few years ago, where we started working with some psychiatrists and said, could we predict 30-day readmission for a psychiatric patient with any degree of reliability? That's a hard prediction. Willie is currently running an experiment where we're asking psychiatrists to predict that. And it turns out they're barely better than chance at that prediction. So it's not an easy task. And what we did is we said, well, let's use topic modeling. And so we had this cohort of patients, close to 5,000 patients. About 10% of them were readmitted with a psych diagnosis. And almost 3,000 of them were readmitted with other diagnoses. So one thing this tells you right away is that if you're dealing with psychiatric patients, they come and go to the hospital frequently. And this is not good for the hospital's bottom line because of reimbursement policies of insurance companies and so on. So only of the 4,700, only 1,240 were not readmitted within 30 days. So there's very frequent bounce back. So we said, well, let's try building a baseline model using a support vector machine from baseline clinical features like age, gender, public health insurances as a proxy for socioeconomic status. So if you're on Medicaid, you're probably poor. And if you have private insurance, then you're probably an MIT employee and are better off. So that's a frequently used proxy. A comorbidity index that tells you how sick you are from things other than your psychiatric problems. And then we said, well, what if we add to that model common words from notes? So we said, let's do a TF-IDF calculation. So this is term frequency divided by log of the document frequency. So it's sort of how specific is a term to identify a particular kind of condition. And we take the 1,000 most informative words. And so there are a lot of these. So if you use 1,000 most informative words from these nearly 5,000 patients, you wind up with something like 66,000 words, unique words that are informative for some patient. But if you limit yourself to the top 10, then it only uses 18,000 words. And if you limit yourself to the top one, then it uses about 3,000 words. And then we said, well, instead of doing individual words, let's do latent Dirichlet allocation, so topic modeling, on all of the words as a bag of words. So no sequence information, just the collection of words. And so we calculated 75 topics from using LDA on all these notes. So just to remind you, the LDA process is a model that says every document consists of a certain mixture of topics. And each of those topics probabilistically generates certain words. And so you can build a model like this and then solve it using complicated techniques. And you wind up with topics in this study as follows. I don't know, can you read these? They may be too small. So these are unsupervised topics. And if you look at the first one, it says patient, alcohol, withdrawal, depression, drinking, and, adivan, etoH, drinks, medications, clinic inpatient diagnosis, days, hospital, substance use treatment program name. That's a de-identified use abuse problem number. And we had our experts look at these topics. And they said, oh, well, that topic is related to alcohol abuse, which seems reasonable. And then you see on the bottom, psychosis, thought features, paranoid psychosis, paranoia, symptoms, psychiatric, et cetera. And they said, OK, that's a psychosis topic. So in retrospect, you can assign meaning to these topics. But in fact, they're generated without any a priori notion of what they ought to be. They're just a statistical summarization of the common co-occurrences of words in these documents. But what you find is that if you use the baseline model, which used just the sociodemographic and clinical variables, and you say, what's the difference in survival, in this case, in time to readmission, between one set and another in this cohort? And the answer is they're pretty similar. Whereas if you use a model that predicts based on the baseline and 75 topics, the 75 topics that we identified, you get a much bigger separation. And of course, this is statistically significant. And it tells you that this technique is useful for being able to improve the prediction of a cohort that's more likely to be readmitted from a cohort that's less likely to be readmitted. It's not a terrific model."
+}

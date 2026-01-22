@@ -1,0 +1,278 @@
+{
+    "chunks": [
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 0.0,
+            "end": 13.040000000000001,
+            "text": " and all their data at a particular moment,  we're going to feed it into an algorithm.  It'll come up with a diagnosis.  We're done.  And that wasn't very useful, because it"
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 13.040000000000001,
+            "end": 28.2,
+            "text": " didn't obey the cyclic nature of the process of providing  health care.  And so this was a revolution that started really  around the 1980s, when people realized  that you had to be in it for the long run"
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 28.2,
+            "end": 50.16,
+            "text": " and not for single interactions.  Well, this is just some definitions  of these care processes.  So here I've listed some ideas that  came from a 1976 paper by several of my colleagues, who"
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 50.16,
+            "end": 68.44,
+            "text": " said, well, here's a cognitive theory of diagnosis.  From the initial complaints, guess a suitable hypothesis.  Use the current active hypotheses  to guide questioning, so to order more tests,  to ask questions of the patient."
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 68.44,
+            "end": 85.76,
+            "text": " And it's the failure to satisfy expectations  that's the strongest clue to how to develop a better  hypothesis.  And then the hypotheses could be an activated, deactivated,  confirmed, or rejected state."
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 85.76,
+            "end": 104.32,
+            "text": " They actually built a computer program  that implemented this theory of diagnostic reasoning.  And these rules, essentially, about whether to activate,  deactivate, confirm, or reject something  could be based both on logical criteria"
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 104.32,
+            "end": 124.92,
+            "text": " and on a kind of very bad probabilistic model.  So it was very bad, because what they really needed  was Bayesian networks.  And those were about a decade in the future at that point.  So they and every other system built in the 1970s"
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 124.92,
+            "end": 140.76,
+            "text": " had really horrible probabilistic models,  because we didn't understand how to do it correctly.  Now, what's interesting is somebody  noticed that if you strip away the medicine from this,  this is kind of like the scientific method."
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 140.76,
+            "end": 151.2,
+            "text": " If you're trying to understand something,  you form a hypothesis.  You perform an experiment.  If the experiment is consistent with your expectations,  then you go on."
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 151.2,
+            "end": 162.51999999999998,
+            "text": " And you've gotten a little bit more confident  in your hypothesis.  If your experiment is inconsistent  with your expectations, then you have to change your theory,  change your hypothesis."
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 162.51999999999998,
+            "end": 175.42,
+            "text": " You go back and gather more data,  and then keep doing this until you're  satisfied that you've come up with an adequate theory.  So this was a surprise to doctors,  because they thought of themselves more"
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 175.42,
+            "end": 188.39999999999998,
+            "text": " as artists than as scientists.  But in a way, they act like scientists,  which is kind of cool.  All right, this doesn't stop with caring  for a single patient."
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 188.39999999999998,
+            "end": 205.32,
+            "text": " So we have all these meta-level processes  about the acquisition and the application of knowledge,  about education, quality control and process improvement,  cost containment, and developing references.  So this is a picture from David Margulies,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 205.32,
+            "end": 222.44,
+            "text": " who was chief information officer at Children's Hospital  here.  And the cycle that I described is the one right here.  This is the care team taking care of a patient.  But of course, at some point, that patient is discharged."
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 222.44,
+            "end": 238.08,
+            "text": " And then they're in community care and self-care.  And then maybe they're in some sort of active health status  management.  And then if that goes badly, then there's  some episode where they reconnect to the health care"
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 238.08,
+            "end": 251.20000000000002,
+            "text": " system.  They get authorized to come back.  They get scheduled for a visit.  And they're back in this cycle.  And so the process of care involves"
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 251.20000000000002,
+            "end": 261.08,
+            "text": " people going to the hospital, getting taken care of.  They get better.  They get discharged.  They live in their lives for a while.  Maybe they get sick again."
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 261.08,
+            "end": 278.52,
+            "text": " They come back.  And so there's this larger cycle around that issue.  And then around that are all kinds  of things about health plan design and membership  and what coverage you have and so on."
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 278.52,
+            "end": 297.36,
+            "text": " And then I would add one more idea,  which is that if you have a system like this,  you actually want to study at the next meta level  that system, make observations about it,  analyze it, model it, plan some improvements,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 297.36,
+            "end": 319.92,
+            "text": " and then intervene in the system and observe how it's working  and try to make it better.  So in terms of tasks that are important for us  in this class, this class of tasks  is central because one of the things we're trying to do"
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 319.92,
+            "end": 332.72,
+            "text": " is to look at the way health care works  and to figure out how to make it better  by examining its operation.  And that can be done at any of these three levels.  It can be done in the more acute phase"
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 332.72,
+            "end": 346.08000000000004,
+            "text": " where we're dealing with somebody who's  in the middle of an illness.  It can be done at the larger phase of somebody  who's going through the cycle of being well for a while  and then being sick and then being well again and being sick"
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 346.08000000000004,
+            "end": 359.12,
+            "text": " again.  And it can be in terms of the system  itself of how do you design a health care system that works  better for the population.  So this notion of a learning health care system"
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 359.12,
+            "end": 377.68,
+            "text": " is now a journal.  So in 2017, Chuck Friedman at the University of Michigan  started this new journal.  And it's full of articles about this third level  of external cycle."
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 377.68,
+            "end": 396.0,
+            "text": " So how does the health care system learn?  Well, I'll tell you an anecdote.  In the mid-1980s, I was teaching an AI expert systems course.  And I had just come back from a conference  of medical informatics people where"
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 396.0,
+            "end": 409.68,
+            "text": " they were talking about this great new idea called  evidence-based medicine.  And I remember mentioning this to a bunch of MIT engineering  students.  And one of them raised his hand and said, as opposed to what?"
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 412.52,
+            "end": 426.72,
+            "text": " To an engineer, it's obvious that evidence  is the basis on which you analyze things and make things  better.  But it wasn't obvious to doctors.  So this was almost a revolutionary change."
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 426.72,
+            "end": 441.84000000000003,
+            "text": " And the idea that they fostered was  the idea of the randomized controlled clinical trial.  So I'm going to sketch what that looks like.  Of course, there are many variations.  But suppose that I'm one of the drug companies"
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 441.84000000000003,
+            "end": 454.14000000000004,
+            "text": " around Kendall Square.  And I come up with a new drug.  And I want to prove that it's more effective for condition  X than some existing drug B.  So what do I do?"
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 454.14000000000004,
+            "end": 468.62,
+            "text": " I find some patients who are suffering from X.  And I try very hard to find patients who are not  suffering from anything else.  I want the purest case possible.  I then go to my statisticians."
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 468.62,
+            "end": 484.09999999999997,
+            "text": " And I say, let's design an experiment  where we're going to collect a standard set of data  about all these patients.  And then we're going to give some of them the drug A  and some of them drug B. And we'll"
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 484.09999999999997,
+            "end": 501.61999999999995,
+            "text": " see which of them do better.  And we'll predefine what we mean by do better.  So like not dying is considered doing better,  or not suffering some bad thing that people are suffering from  is considered doing better."
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 501.61999999999995,
+            "end": 520.98,
+            "text": " And then the statisticians also will tell me,  given that you expect drug A to be, let's say,  10% better than drug B, how many patients  do you have to enroll in this trial  in order to be likely to get a statistically significant"
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 520.98,
+            "end": 533.7,
+            "text": " answer to that question?  And then they do it.  The statisticians analyze the data.  Hopefully, you've gotten P less than 0.05.  You go to the Food and Drug Administration"
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 533.74,
+            "end": 549.86,
+            "text": " and say, give me permission to market this drug  as the hottest new cure for something or other.  And then you make billions of dollars.  This is the standard way that Pharma works.  Now, there are some problems."
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 549.86,
+            "end": 571.86,
+            "text": " So most of the cases to which the results of a trial  like this are applied wouldn't have  qualified to be in the trial.  Because, for example, we talked about morbidities,  about chronic problems that people have."
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 571.86,
+            "end": 584.46,
+            "text": " Well, if you're dealing with one disease,  you want to make sure that those populations you're dealing with  don't have any of these other diseases.  But in the real world, people do.  And so we've never actually measured"
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 584.46,
+            "end": 599.62,
+            "text": " what happens to those people if you give them this drug  and they have these comorbidities.  The other problem is that the drug company  wants to start making these billions of dollars  as soon as possible."
+        },
+        {
+            "number": "lec2",
+            "title": "part.004.mp3",
+            "start": 599.62,
+            "end": 602.06,
+            "text": " And so they have to be careful."
+        }
+    ],
+    "text": " and all their data at a particular moment, we're going to feed it into an algorithm. It'll come up with a diagnosis. We're done. And that wasn't very useful, because it didn't obey the cyclic nature of the process of providing health care. And so this was a revolution that started really around the 1980s, when people realized that you had to be in it for the long run and not for single interactions. Well, this is just some definitions of these care processes. So here I've listed some ideas that came from a 1976 paper by several of my colleagues, who said, well, here's a cognitive theory of diagnosis. From the initial complaints, guess a suitable hypothesis. Use the current active hypotheses to guide questioning, so to order more tests, to ask questions of the patient. And it's the failure to satisfy expectations that's the strongest clue to how to develop a better hypothesis. And then the hypotheses could be an activated, deactivated, confirmed, or rejected state. They actually built a computer program that implemented this theory of diagnostic reasoning. And these rules, essentially, about whether to activate, deactivate, confirm, or reject something could be based both on logical criteria and on a kind of very bad probabilistic model. So it was very bad, because what they really needed was Bayesian networks. And those were about a decade in the future at that point. So they and every other system built in the 1970s had really horrible probabilistic models, because we didn't understand how to do it correctly. Now, what's interesting is somebody noticed that if you strip away the medicine from this, this is kind of like the scientific method. If you're trying to understand something, you form a hypothesis. You perform an experiment. If the experiment is consistent with your expectations, then you go on. And you've gotten a little bit more confident in your hypothesis. If your experiment is inconsistent with your expectations, then you have to change your theory, change your hypothesis. You go back and gather more data, and then keep doing this until you're satisfied that you've come up with an adequate theory. So this was a surprise to doctors, because they thought of themselves more as artists than as scientists. But in a way, they act like scientists, which is kind of cool. All right, this doesn't stop with caring for a single patient. So we have all these meta-level processes about the acquisition and the application of knowledge, about education, quality control and process improvement, cost containment, and developing references. So this is a picture from David Margulies, who was chief information officer at Children's Hospital here. And the cycle that I described is the one right here. This is the care team taking care of a patient. But of course, at some point, that patient is discharged. And then they're in community care and self-care. And then maybe they're in some sort of active health status management. And then if that goes badly, then there's some episode where they reconnect to the health care system. They get authorized to come back. They get scheduled for a visit. And they're back in this cycle. And so the process of care involves people going to the hospital, getting taken care of. They get better. They get discharged. They live in their lives for a while. Maybe they get sick again. They come back. And so there's this larger cycle around that issue. And then around that are all kinds of things about health plan design and membership and what coverage you have and so on. And then I would add one more idea, which is that if you have a system like this, you actually want to study at the next meta level that system, make observations about it, analyze it, model it, plan some improvements, and then intervene in the system and observe how it's working and try to make it better. So in terms of tasks that are important for us in this class, this class of tasks is central because one of the things we're trying to do is to look at the way health care works and to figure out how to make it better by examining its operation. And that can be done at any of these three levels. It can be done in the more acute phase where we're dealing with somebody who's in the middle of an illness. It can be done at the larger phase of somebody who's going through the cycle of being well for a while and then being sick and then being well again and being sick again. And it can be in terms of the system itself of how do you design a health care system that works better for the population. So this notion of a learning health care system is now a journal. So in 2017, Chuck Friedman at the University of Michigan started this new journal. And it's full of articles about this third level of external cycle. So how does the health care system learn? Well, I'll tell you an anecdote. In the mid-1980s, I was teaching an AI expert systems course. And I had just come back from a conference of medical informatics people where they were talking about this great new idea called evidence-based medicine. And I remember mentioning this to a bunch of MIT engineering students. And one of them raised his hand and said, as opposed to what? To an engineer, it's obvious that evidence is the basis on which you analyze things and make things better. But it wasn't obvious to doctors. So this was almost a revolutionary change. And the idea that they fostered was the idea of the randomized controlled clinical trial. So I'm going to sketch what that looks like. Of course, there are many variations. But suppose that I'm one of the drug companies around Kendall Square. And I come up with a new drug. And I want to prove that it's more effective for condition X than some existing drug B. So what do I do? I find some patients who are suffering from X. And I try very hard to find patients who are not suffering from anything else. I want the purest case possible. I then go to my statisticians. And I say, let's design an experiment where we're going to collect a standard set of data about all these patients. And then we're going to give some of them the drug A and some of them drug B. And we'll see which of them do better. And we'll predefine what we mean by do better. So like not dying is considered doing better, or not suffering some bad thing that people are suffering from is considered doing better. And then the statisticians also will tell me, given that you expect drug A to be, let's say, 10% better than drug B, how many patients do you have to enroll in this trial in order to be likely to get a statistically significant answer to that question? And then they do it. The statisticians analyze the data. Hopefully, you've gotten P less than 0.05. You go to the Food and Drug Administration and say, give me permission to market this drug as the hottest new cure for something or other. And then you make billions of dollars. This is the standard way that Pharma works. Now, there are some problems. So most of the cases to which the results of a trial like this are applied wouldn't have qualified to be in the trial. Because, for example, we talked about morbidities, about chronic problems that people have. Well, if you're dealing with one disease, you want to make sure that those populations you're dealing with don't have any of these other diseases. But in the real world, people do. And so we've never actually measured what happens to those people if you give them this drug and they have these comorbidities. The other problem is that the drug company wants to start making these billions of dollars as soon as possible. And so they have to be careful."
+}

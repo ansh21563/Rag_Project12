@@ -1,0 +1,96 @@
+{
+    "chunks": [
+        {
+            "number": "lec3",
+            "title": "part.008.mp3",
+            "start": 0.0,
+            "end": 12.48,
+            "text": " companies, and they yelled at them,  and they made them promise that there  would be interoperability.  They promised, and out of that came FHIR.  It was probably simultaneously developed,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.008.mp3",
+            "start": 12.48,
+            "end": 30.020000000000003,
+            "text": " but they adopted it.  And so now, in principle, it's possible to exchange data  between different hospitals, at least  to the level of that degree of harmonization of the data.  In reality, the companies don't want you to do that,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.008.mp3",
+            "start": 30.020000000000003,
+            "end": 44.900000000000006,
+            "text": " because they like there to be friction in not  being able to take all your data to a different hospital,  because it is more likely to leave you  at the one that you're at.  So there's complicated socioeconomic kinds"
+        },
+        {
+            "number": "lec3",
+            "title": "part.008.mp3",
+            "start": 44.900000000000006,
+            "end": 58.0,
+            "text": " of issues in all this, but at least the standard exists  and is becoming more and more widely deployed,  as long as Congress pays attention.  It's ugly.  So here's what a patient looks like."
+        },
+        {
+            "number": "lec3",
+            "title": "part.008.mp3",
+            "start": 58.0,
+            "end": 77.6,
+            "text": " It's the usual unreadable XML garbage,  but fortunately, there are parsers  that can turn it into JSON and simpler representations,  and so that's pretty common.  So the terminologies that exist are LOINC and NDC, ICD-9 and 10."
+        },
+        {
+            "number": "lec3",
+            "title": "part.008.mp3",
+            "start": 77.6,
+            "end": 93.72,
+            "text": " SNOMED, I didn't talk about today.  DSM-5 is the Diagnostic and Statistical Manual  for Psychiatrists that's used as a common coding  method for describing psychiatric disease,  and there are many more of these."
+        },
+        {
+            "number": "lec3",
+            "title": "part.008.mp3",
+            "start": 93.72,
+            "end": 115.48,
+            "text": " There's something called the Unified Medical Language  Systems Metathesaurus from the National Library of Medicine  that integrates about 180 of these different terminologies.  And so there is a nice one-stop shop  where you can get all these things from them."
+        },
+        {
+            "number": "lec3",
+            "title": "part.008.mp3",
+            "start": 119.6,
+            "end": 132.07999999999998,
+            "text": " So takeaway lessons.  Know your data.  Remember that first example of the heart rates.  That comes up over and over again.  And doing machine learning and analysis on data"
+        },
+        {
+            "number": "lec3",
+            "title": "part.008.mp3",
+            "start": 132.07999999999998,
+            "end": 144.52,
+            "text": " that you don't understand is likely to lead you  to false conclusions.  Harmonization is difficult and time consuming,  and there are lots of things for which we just  don't have standards."
+        },
+        {
+            "number": "lec3",
+            "title": "part.008.mp3",
+            "start": 144.52,
+            "end": 160.60000000000002,
+            "text": " And so everybody develops their own representations.  I had a PhD student about a decade ago  who, in his thesis, wrote that he spent about half  his time cleaning data.  And I gave that thesis to another student"
+        },
+        {
+            "number": "lec3",
+            "title": "part.008.mp3",
+            "start": 160.60000000000002,
+            "end": 175.76000000000002,
+            "text": " who started a few years later who read it,  and he comes to me with just awestruck.  And he says, what?  He only spent half his time cleaning data?  Unfortunately, that's roughly where we are in this field."
+        },
+        {
+            "number": "lec3",
+            "title": "part.008.mp3",
+            "start": 175.76000000000002,
+            "end": 191.52,
+            "text": " So sorry to be a downer, but that's  the current state of the art.  And next time, David will start by looking at actually building  some models with these kinds of data  and showing you what we can accomplish."
+        },
+        {
+            "number": "lec3",
+            "title": "part.008.mp3",
+            "start": 191.52,
+            "end": 198.8,
+            "text": " Thank you.  Thank you."
+        }
+    ],
+    "text": " companies, and they yelled at them, and they made them promise that there would be interoperability. They promised, and out of that came FHIR. It was probably simultaneously developed, but they adopted it. And so now, in principle, it's possible to exchange data between different hospitals, at least to the level of that degree of harmonization of the data. In reality, the companies don't want you to do that, because they like there to be friction in not being able to take all your data to a different hospital, because it is more likely to leave you at the one that you're at. So there's complicated socioeconomic kinds of issues in all this, but at least the standard exists and is becoming more and more widely deployed, as long as Congress pays attention. It's ugly. So here's what a patient looks like. It's the usual unreadable XML garbage, but fortunately, there are parsers that can turn it into JSON and simpler representations, and so that's pretty common. So the terminologies that exist are LOINC and NDC, ICD-9 and 10. SNOMED, I didn't talk about today. DSM-5 is the Diagnostic and Statistical Manual for Psychiatrists that's used as a common coding method for describing psychiatric disease, and there are many more of these. There's something called the Unified Medical Language Systems Metathesaurus from the National Library of Medicine that integrates about 180 of these different terminologies. And so there is a nice one-stop shop where you can get all these things from them. So takeaway lessons. Know your data. Remember that first example of the heart rates. That comes up over and over again. And doing machine learning and analysis on data that you don't understand is likely to lead you to false conclusions. Harmonization is difficult and time consuming, and there are lots of things for which we just don't have standards. And so everybody develops their own representations. I had a PhD student about a decade ago who, in his thesis, wrote that he spent about half his time cleaning data. And I gave that thesis to another student who started a few years later who read it, and he comes to me with just awestruck. And he says, what? He only spent half his time cleaning data? Unfortunately, that's roughly where we are in this field. So sorry to be a downer, but that's the current state of the art. And next time, David will start by looking at actually building some models with these kinds of data and showing you what we can accomplish. Thank you. Thank you."
+}

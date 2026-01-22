@@ -1,0 +1,376 @@
+{
+    "chunks": [
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 0.0,
+            "end": 11.84,
+            "text": " OK, let's just break down this problem.  We can train at a patch level first.  We're going to take just subsets of the mammogram,  maybe this little bonding box, have  it annotated for radiology findings like benign masses"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 11.84,
+            "end": 20.84,
+            "text": " or calcification, things of that sort.  We're going to pre-train on that task  to have this kind of pixel-level prediction.  And then once we're done with that,  we're going to just fine-tune that initialized model"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 20.84,
+            "end": 34.28,
+            "text": " across the entire image.  So you can have this two-stage training procedure.  And actually, another paper that came out just yesterday  does the exact same approach with some slightly  different details."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 34.28,
+            "end": 44.8,
+            "text": " So one of the things we wanted to investigate  is if you just, oh, and the base architecture  is always used for this.  There is quite a few valid options  of things that just get reasonable performance"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 44.8,
+            "end": 58.44,
+            "text": " in ImageNet, things like VGG, wide ResNets, and ResNets.  In my experience, they all perform fairly similarly.  So it's kind of a speed-benefit trade-off.  And there's an advantage to using fully convolutional  architectures, because if you have fully connected layers"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 58.44,
+            "end": 68.28,
+            "text": " that assume a specific dimensionality,  you can convert them to convolutional layers.  But they're just more convenient to start  with a fully convolutional architecture that's  going to be resolution-invariant."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 68.28,
+            "end": 78.52,
+            "text": " Yes?  When, in the last slide, when you do patches,  how do you label every single patch?  And are they just labeled using the global label?  Or do you have to actually look at each patch"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 78.52,
+            "end": 89.64,
+            "text": " and figure out what's happening?  So normally, what you do is you have positive patches labeled.  And then you randomly sample other patches.  So from your annotation, so for example,  a lot of people do this on public data sets,"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 89.64,
+            "end": 101.24,
+            "text": " like the Florida DDSM data set, that  has some annotations like here, benign masses, benign calcs,  malignant calcs, et cetera.  What people do then is they take those annotations.  They will randomly select other patches and say,"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 101.24,
+            "end": 109.16,
+            "text": " if it's not there, it's negative.  And we're going to call it healthy.  And then they'll say, if this bounding box  overlaps with the patch by some marginal call,  it's the same label."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 109.16,
+            "end": 118.52,
+            "text": " So they do this heuristically.  And other data sets that are proprietary also  kind of play with a similar trick.  In general, they don't actually label every single pixel  accordingly."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 118.52,
+            "end": 128.24,
+            "text": " But there's relatively minor differences  in how people do this.  But the results are fairly similar regardless.  Yes?  When you go from the patch level to the full image,"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 128.24,
+            "end": 136.72,
+            "text": " if I understand correctly, the architecture  doesn't quite change because it's just convolution  and it's over a larger.  Exactly.  So the end thing, right before you do the prediction,"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 136.72,
+            "end": 149.12,
+            "text": " is normally ResNet, for example, does a global average pool  channelized across the entire feature map.  And so they just, for the patch level,  they take in an image that's 250 by 250,  do the global average pool across that"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 149.12,
+            "end": 159.68,
+            "text": " to make the prediction.  And when they just go up to the full resolution image,  now you're taking a global average pool over a 3,000  by 2,000.  And presumably, there might be some scaling issues"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 159.68,
+            "end": 173.68,
+            "text": " that you might need to adjust.  Do you do any of that?  So you feed it in at the full resolution the entire time.  So you just see what I mean?  You're taking a crop."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 173.68,
+            "end": 185.32000000000002,
+            "text": " So the resolution isn't changing.  So the same filter map should be able to scale accordingly.  But if you do things like average pooling,  then any one thing that has a very high activation  will get averaged down lower."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 185.32000000000002,
+            "end": 194.88,
+            "text": " And so, for example, in our work,  we use max pooling to get around that.  Any other questions?  But if this is complicated, have no worries  because we actually think it's totally unnecessary."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 194.88,
+            "end": 207.64000000000001,
+            "text": " And that's the next slide.  So good for you.  So as I said before, one of the problems is the signal to noise.  So one obvious thing to think about is, OK,  maybe doing SGD with a batch size of 3"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 207.64000000000001,
+            "end": 222.32000000000002,
+            "text": " when the lesion is less than 1% of the image is a bad idea.  If I just take less noisy gradients  by increasing my batch size, which just means use more GPUs,  take more steps for doing the weight update,  we actually find that the need to do this actually"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 222.32000000000002,
+            "end": 234.36,
+            "text": " goes away completely.  So these are experiments I did on the publicly available data  set a while back while we were figuring this out.  If you take this kind of patch of architecture  and fine tune to the batch size of 2, 4, 10, 16,"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 234.36,
+            "end": 245.08,
+            "text": " and compare that to just a one-stage training where you  just do the end-to-end task from the beginning,  initialize an image net, and just use different batch sizes,  you quickly start to close the gap on the development that you  see."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 245.08,
+            "end": 258.24,
+            "text": " And so for all the experiments that we do broadly,  we find that we actually get reasonably stable training  by just using a batch size of 20 and above.  And this kind of comes down to, if you use batch size of 1,  it's just particularly unstable."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 258.24,
+            "end": 265.92,
+            "text": " Another detail is that we always sample balanced batches.  Because otherwise, you'd be sampling 20 batches  before you see a single positive sample,  and you don't learn anything.  Cool."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 265.92,
+            "end": 275.8,
+            "text": " So that is like, if you do that, you  don't do anything complicated.  You don't do any fancy cropping or anything of that sort,  or dealing with region annotations.  And we found that using region annotations for this task"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 275.8,
+            "end": 285.28000000000003,
+            "text": " is not actually helpful.  OK, no questions?  Yes?  So with the larger batch sizes, you  don't use the magnified patches?"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 285.28000000000003,
+            "end": 295.92,
+            "text": " We don't.  We just take the whole image from the beginning,  you just assume your annotation is whole image,  cancer within a year.  It's a much simpler setup."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 295.92,
+            "end": 305.12,
+            "text": " I don't get it.  That was the same thing that you said  you couldn't do for memory reasons.  Oh, so you just, instead of, so normally when you do,  you're going to train the network,"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 305.12,
+            "end": 312.48,
+            "text": " the most common approach is you back prop it in step.  If you just do back prop several times,  you're accumulating the gradients,  at least in PyTorch.  And then you can do step afterwards."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 312.48,
+            "end": 324.18,
+            "text": " So you can, instead of doing the whole batch at one time,  you should do it serially.  So there you're just trading time for space.  The minimum, though, is you have to fit at least a single image  per GPU."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 324.18,
+            "end": 335.18,
+            "text": " And in our case, we can fit three.  But to make this actually scalable,  we use four GPUs at a time.  Yes?  How much is the trade-off with time?"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 335.18,
+            "end": 345.94,
+            "text": " So if I want to make my batch size any bigger,  I would normally do it in increments of, let's say, 12,  because that's how much I can fit within my set of GPUs  at the same time.  But to control the size of the experiment,"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 345.94,
+            "end": 355.18,
+            "text": " you want to have the same number of gradient  updates per experiment.  So if I want to use batch size of 48,  it's not my experiment.  Instead of taking about half a day, it takes about a day."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 355.18,
+            "end": 363.46,
+            "text": " And so there's this natural trade-off as you're going  along.  So one of the things I mentioned at the very end  is we're considering some adversarial approach  for something."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 363.46,
+            "end": 371.94,
+            "text": " And one of the annoying things about that  is that if I have five discriminator steps, oh my god,  my experiment's going to take three days per experiment.  And your gradient update, as someone  who's trying to design a better model,"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 371.94,
+            "end": 385.42,
+            "text": " becomes really slow when the experiment  is taking this long.  Yes?  So you said the annotations didn't help with the training.  Is that because the actual cancer itself"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 385.42,
+            "end": 397.82000000000005,
+            "text": " is not very different from the dense tissue?  And the location of that matters and not  the actual granularity of it?  What is the reason?  So in general, when something doesn't help,"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 397.82000000000005,
+            "end": 408.14,
+            "text": " there's always a possibility of two things.  One thing is that the whole image signal subsumes  that smaller scale signal.  Or there's a better way to do it I haven't  found that would help."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 408.14,
+            "end": 422.26,
+            "text": " And in this thing, list two is always very hard.  As of now, so the task we're evaluating on  is whole image classification.  And so on that task, it's possible that the surrounding  context, so when you do a patchable annotation,"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 422.26,
+            "end": 436.08000000000004,
+            "text": " you're losing the context which it appears in.  So it's possible that just by looking at the whole context  every time, it's as good.  You don't get any benefit from the zooming boxes.  However, we're not evaluating on an object detection"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 436.08000000000004,
+            "end": 446.32000000000005,
+            "text": " type evaluation metric.  We say, how well are we at catching the box?  And if we were, we'd probably have much better luck  with using the re-gene annotation.  Because you might be able to tell some level"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 446.32000000000005,
+            "end": 457.76000000000005,
+            "text": " of discrimination by this looks like a breast that's  likely to develop cancer at all.  And the ability of the model to do that  is part of why we can do risk modeling, which  is going to be the last bit of the talk."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 457.76000000000005,
+            "end": 467.56,
+            "text": " Yes?  So do you do the object detection  after you identify whether there's cancer or not?  So as of now, we don't do object detection, in part,  because we're framing the problem as triage."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 467.56,
+            "end": 480.40000000000003,
+            "text": " So there is quite a few kind of toolkits  out there to draw more boxes on the mammogram.  But the insight is that if there's 1,000 things to look  at, looking at 2,000 things, you drew more boxes per image  isn't necessarily the problem we're trying to look at."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 480.40000000000003,
+            "end": 491.54,
+            "text": " There's quite a bit of effort there.  And it's something we might look into later in the future,  but it's not the focus of this work.  Yes?  So Connie was saying that the same pattern appearing"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 491.54,
+            "end": 512.98,
+            "text": " in different parts of the breast can mean different things.  But when you're looking at the entire image at once,  I would worry intuitively about whether  the convolutional architecture is  going to be able to pick that up."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 512.98,
+            "end": 527.9000000000001,
+            "text": " Because you're looking for a very small cancer  in a very large image.  And then you're looking for the significance  of that very small cancer in different parts of the image  or in different contexts in the image."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 527.9000000000001,
+            "end": 538.82,
+            "text": " And I'm just, I mean, it's a pleasant surprise  that this works.  So there's kind of like two pieces  that can help explain that.  So the first is if you look at the receptive fields"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 538.82,
+            "end": 552.7800000000001,
+            "text": " in a given last receptive map at the very end of the network,  each of those summarizes, through these convolutions,  a fairly sizable part of the image.  And so you are kind of like each pixel at the very end  ends up being something like a 50 by 50 image that's"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 552.7800000000001,
+            "end": 563.6600000000001,
+            "text": " by 512 dimensions.  And so each part does summarize this local context  decently well.  And when you do max-splitting at the very end,  you get some not perfect, but OK global summary."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 563.6600000000001,
+            "end": 574.62,
+            "text": " What is the context of this image?  So something like, let's say, some of the lower dimensions  can summarize is this a dense breast  or some of the other pattern information that might tell you  what kind of breast this is."
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 574.62,
+            "end": 589.0600000000001,
+            "text": " Whereas any one of them can tell you  this looks like a cancer given its local context.  So you have some level of summarization,  both because of the channelized maximum at the end  and because each point through the many, many convolutions"
+        },
+        {
+            "number": "lec13",
+            "title": "part.001.mp3",
+            "start": 589.0600000000001,
+            "end": 600.86,
+            "text": " of different strides gives you some of that summary effect.  OK, great.  I'm going to jump forward.  So we talked about how to make this learn.  It's actually not a very simple thing."
+        }
+    ],
+    "text": " OK, let's just break down this problem. We can train at a patch level first. We're going to take just subsets of the mammogram, maybe this little bonding box, have it annotated for radiology findings like benign masses or calcification, things of that sort. We're going to pre-train on that task to have this kind of pixel-level prediction. And then once we're done with that, we're going to just fine-tune that initialized model across the entire image. So you can have this two-stage training procedure. And actually, another paper that came out just yesterday does the exact same approach with some slightly different details. So one of the things we wanted to investigate is if you just, oh, and the base architecture is always used for this. There is quite a few valid options of things that just get reasonable performance in ImageNet, things like VGG, wide ResNets, and ResNets. In my experience, they all perform fairly similarly. So it's kind of a speed-benefit trade-off. And there's an advantage to using fully convolutional architectures, because if you have fully connected layers that assume a specific dimensionality, you can convert them to convolutional layers. But they're just more convenient to start with a fully convolutional architecture that's going to be resolution-invariant. Yes? When, in the last slide, when you do patches, how do you label every single patch? And are they just labeled using the global label? Or do you have to actually look at each patch and figure out what's happening? So normally, what you do is you have positive patches labeled. And then you randomly sample other patches. So from your annotation, so for example, a lot of people do this on public data sets, like the Florida DDSM data set, that has some annotations like here, benign masses, benign calcs, malignant calcs, et cetera. What people do then is they take those annotations. They will randomly select other patches and say, if it's not there, it's negative. And we're going to call it healthy. And then they'll say, if this bounding box overlaps with the patch by some marginal call, it's the same label. So they do this heuristically. And other data sets that are proprietary also kind of play with a similar trick. In general, they don't actually label every single pixel accordingly. But there's relatively minor differences in how people do this. But the results are fairly similar regardless. Yes? When you go from the patch level to the full image, if I understand correctly, the architecture doesn't quite change because it's just convolution and it's over a larger. Exactly. So the end thing, right before you do the prediction, is normally ResNet, for example, does a global average pool channelized across the entire feature map. And so they just, for the patch level, they take in an image that's 250 by 250, do the global average pool across that to make the prediction. And when they just go up to the full resolution image, now you're taking a global average pool over a 3,000 by 2,000. And presumably, there might be some scaling issues that you might need to adjust. Do you do any of that? So you feed it in at the full resolution the entire time. So you just see what I mean? You're taking a crop. So the resolution isn't changing. So the same filter map should be able to scale accordingly. But if you do things like average pooling, then any one thing that has a very high activation will get averaged down lower. And so, for example, in our work, we use max pooling to get around that. Any other questions? But if this is complicated, have no worries because we actually think it's totally unnecessary. And that's the next slide. So good for you. So as I said before, one of the problems is the signal to noise. So one obvious thing to think about is, OK, maybe doing SGD with a batch size of 3 when the lesion is less than 1% of the image is a bad idea. If I just take less noisy gradients by increasing my batch size, which just means use more GPUs, take more steps for doing the weight update, we actually find that the need to do this actually goes away completely. So these are experiments I did on the publicly available data set a while back while we were figuring this out. If you take this kind of patch of architecture and fine tune to the batch size of 2, 4, 10, 16, and compare that to just a one-stage training where you just do the end-to-end task from the beginning, initialize an image net, and just use different batch sizes, you quickly start to close the gap on the development that you see. And so for all the experiments that we do broadly, we find that we actually get reasonably stable training by just using a batch size of 20 and above. And this kind of comes down to, if you use batch size of 1, it's just particularly unstable. Another detail is that we always sample balanced batches. Because otherwise, you'd be sampling 20 batches before you see a single positive sample, and you don't learn anything. Cool. So that is like, if you do that, you don't do anything complicated. You don't do any fancy cropping or anything of that sort, or dealing with region annotations. And we found that using region annotations for this task is not actually helpful. OK, no questions? Yes? So with the larger batch sizes, you don't use the magnified patches? We don't. We just take the whole image from the beginning, you just assume your annotation is whole image, cancer within a year. It's a much simpler setup. I don't get it. That was the same thing that you said you couldn't do for memory reasons. Oh, so you just, instead of, so normally when you do, you're going to train the network, the most common approach is you back prop it in step. If you just do back prop several times, you're accumulating the gradients, at least in PyTorch. And then you can do step afterwards. So you can, instead of doing the whole batch at one time, you should do it serially. So there you're just trading time for space. The minimum, though, is you have to fit at least a single image per GPU. And in our case, we can fit three. But to make this actually scalable, we use four GPUs at a time. Yes? How much is the trade-off with time? So if I want to make my batch size any bigger, I would normally do it in increments of, let's say, 12, because that's how much I can fit within my set of GPUs at the same time. But to control the size of the experiment, you want to have the same number of gradient updates per experiment. So if I want to use batch size of 48, it's not my experiment. Instead of taking about half a day, it takes about a day. And so there's this natural trade-off as you're going along. So one of the things I mentioned at the very end is we're considering some adversarial approach for something. And one of the annoying things about that is that if I have five discriminator steps, oh my god, my experiment's going to take three days per experiment. And your gradient update, as someone who's trying to design a better model, becomes really slow when the experiment is taking this long. Yes? So you said the annotations didn't help with the training. Is that because the actual cancer itself is not very different from the dense tissue? And the location of that matters and not the actual granularity of it? What is the reason? So in general, when something doesn't help, there's always a possibility of two things. One thing is that the whole image signal subsumes that smaller scale signal. Or there's a better way to do it I haven't found that would help. And in this thing, list two is always very hard. As of now, so the task we're evaluating on is whole image classification. And so on that task, it's possible that the surrounding context, so when you do a patchable annotation, you're losing the context which it appears in. So it's possible that just by looking at the whole context every time, it's as good. You don't get any benefit from the zooming boxes. However, we're not evaluating on an object detection type evaluation metric. We say, how well are we at catching the box? And if we were, we'd probably have much better luck with using the re-gene annotation. Because you might be able to tell some level of discrimination by this looks like a breast that's likely to develop cancer at all. And the ability of the model to do that is part of why we can do risk modeling, which is going to be the last bit of the talk. Yes? So do you do the object detection after you identify whether there's cancer or not? So as of now, we don't do object detection, in part, because we're framing the problem as triage. So there is quite a few kind of toolkits out there to draw more boxes on the mammogram. But the insight is that if there's 1,000 things to look at, looking at 2,000 things, you drew more boxes per image isn't necessarily the problem we're trying to look at. There's quite a bit of effort there. And it's something we might look into later in the future, but it's not the focus of this work. Yes? So Connie was saying that the same pattern appearing in different parts of the breast can mean different things. But when you're looking at the entire image at once, I would worry intuitively about whether the convolutional architecture is going to be able to pick that up. Because you're looking for a very small cancer in a very large image. And then you're looking for the significance of that very small cancer in different parts of the image or in different contexts in the image. And I'm just, I mean, it's a pleasant surprise that this works. So there's kind of like two pieces that can help explain that. So the first is if you look at the receptive fields in a given last receptive map at the very end of the network, each of those summarizes, through these convolutions, a fairly sizable part of the image. And so you are kind of like each pixel at the very end ends up being something like a 50 by 50 image that's by 512 dimensions. And so each part does summarize this local context decently well. And when you do max-splitting at the very end, you get some not perfect, but OK global summary. What is the context of this image? So something like, let's say, some of the lower dimensions can summarize is this a dense breast or some of the other pattern information that might tell you what kind of breast this is. Whereas any one of them can tell you this looks like a cancer given its local context. So you have some level of summarization, both because of the channelized maximum at the end and because each point through the many, many convolutions of different strides gives you some of that summary effect. OK, great. I'm going to jump forward. So we talked about how to make this learn. It's actually not a very simple thing."
+}

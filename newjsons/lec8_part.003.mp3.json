@@ -1,0 +1,236 @@
+{
+    "chunks": [
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 0.0,
+            "end": 16.0,
+            "text": " is parsing.  There's a reference to his paper on the first slide  in this section if you're interested in the details.  It's described there.  OK, so what he wound up with is a tensor"
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 16.0,
+            "end": 33.56,
+            "text": " that has patients on one axis, the words appearing  in the text on another axis.  So he's still using a bag of words representation.  But the third axis is these language concept subgraphs  that we were talking about."
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 33.56,
+            "end": 54.64,
+            "text": " And then he does tensor factorization on this.  And what's interesting is that it works  much better than I expected.  So if you look at his technique, which he called S-A-N-T-F,  the precision and recall are about 0.72 and 0.85"
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 54.64,
+            "end": 78.4,
+            "text": " for macro average and 0.75 for micro average, which  is much better than the non-negative matrix  factorization results, which only use patient by word  or patient by subgraph, or in fact, one  where you simply do patient and concatenate the subgraphs"
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 78.4,
+            "end": 93.96000000000001,
+            "text": " on the words in one dimension.  So that means that this is actually  taking advantage of the three-way relationship.  If you read papers from about 15, 20 years ago,  people got very excited about the idea"
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 93.96000000000001,
+            "end": 110.84,
+            "text": " of biclustering, which is, in modern terms,  the equivalent of matrix factorization.  So it says, given two dimensions of data,  and I want to cluster things, but I  want to cluster them in such a way"
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 110.84,
+            "end": 133.32,
+            "text": " that the clustering of one dimension  helps the clustering of the other dimension.  So this is a formal way of doing that relatively efficiently.  And tensor factorization is essentially triclustering.  OK, so now I'm going to turn to the last of today's big topics,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 133.32,
+            "end": 148.68,
+            "text": " which is language modeling.  And this is really where the action is nowadays  in natural language processing in general.  I would say that the natural language processing  on clinical data is somewhat behind the state of the art"
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 148.68,
+            "end": 164.0,
+            "text": " in natural language processing overall.  There are fewer corpora that are available.  There are fewer people working on it.  And so we're catching up.  But I'm going to lead into this somewhat gently."
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 164.0,
+            "end": 180.8,
+            "text": " So what does it mean to model a language?  You could imagine saying it's coming up  with a set of parsing rules that define  the syntactic structure of the language.  Or you could imagine saying, as we suggested last time,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 180.8,
+            "end": 200.89999999999998,
+            "text": " coming up with a corresponding set of semantic rules  that say terms in the language correspond to certain concepts  and that they are combinatorially,  functionally combined as the syntax directs  in order to give us a semantic representation."
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 200.89999999999998,
+            "end": 218.89999999999998,
+            "text": " So we don't know how to do either of those very well.  And so the current, the contemporary idea  about language modeling is to say, given a sequence of tokens,  predict the next token.  If you could do that perfectly, presumably you"
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 218.89999999999998,
+            "end": 236.24,
+            "text": " would have a good language model.  So obviously, you can't do it perfectly  because we don't always say the same word  after some sequence of previous words when we speak.  But probabilistically, you can get close to that."
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 236.24,
+            "end": 259.8,
+            "text": " And there's usually some kind of Markov assumption  that says that the probability of emitting  a token given the stuff that came before it  is ordinarily dependent only on n previous words  rather than on all of history, on everything you've ever"
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 259.8,
+            "end": 279.92,
+            "text": " said before in your life.  And there's a measure called perplexity,  which is the entropy of the probability distribution  over the predicted words.  And roughly speaking, it's the number of likely ways"
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 279.92,
+            "end": 302.36,
+            "text": " that you could continue the text if all of the possibilities  were equally likely.  So perplexity is often used, for example, in speech processing.  We did a study where we were trying  to build a speech system that understood"
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 302.36,
+            "end": 316.64,
+            "text": " a conversation between a doctor and a patient.  And we ran into real problems because we  were using software that had been developed  to interpret dictation by doctors.  And that was very well-trained."
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 316.64,
+            "end": 336.36,
+            "text": " But it turned out, we didn't know this when we started,  that the language that doctors use in dictating medical notes  is pretty straightforward, pretty simple.  And so its perplexity is about 9,  whereas conversations are much more free-flowing"
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 336.36,
+            "end": 354.0,
+            "text": " and cover many more topics.  And so its perplexity is about 73.  And so the model that works well for perplexity 9  doesn't work as well for perplexity 73.  And so what this tells you about the difficulty"
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 354.0,
+            "end": 370.8,
+            "text": " of accurately transcribing speech is that it's hard.  It's much harder.  And that's still not a solved problem.  Now, you probably all know about Zipf's law.  So if you empirically just take all the words"
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 370.8,
+            "end": 389.84000000000003,
+            "text": " and all the literature of, let's say, English, what you discover  is that the n-th word is about 1 over n  as probable as the first word.  So there is a long-tailed distribution.  One thing you should realize, of course,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 389.84000000000003,
+            "end": 407.96000000000004,
+            "text": " is if you integrate 1 over n from 0 to infinity,  it's infinite.  And that may not be an inaccurate representation  of language, because language is productive and changes,  and people make up new words all the time, and so on."
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 407.96000000000004,
+            "end": 423.64,
+            "text": " So it may actually be infinite.  But roughly speaking, there is a kind of decline like this.  And interestingly, in the brown corpus,  the top 10 words make up almost a quarter  of the size of the corpus."
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 423.64,
+            "end": 445.52,
+            "text": " So you write a lot of thes, ofs, ands, ays, tos, ins, et  cetera, and much less hematemesis, obviously.  OK, so what about N-gram models?  Well, remember, if we make this Markov assumption,  then all we have to do is pay attention"
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 445.52,
+            "end": 461.71999999999997,
+            "text": " to the last N tokens before the one that  we're interested in predicting.  And so people have generated these large corpora of N-grams.  So for example, somebody a couple of decades ago  took all of Shakespeare's writings."
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 461.71999999999997,
+            "end": 476.56,
+            "text": " I think they were trying to decide whether he had written  all his works or whether the earl of somebody or other  was actually the guy who wrote Shakespeare.  You know about this controversy?  Yeah."
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 476.56,
+            "end": 497.48,
+            "text": " So that's why they were doing it.  But anyway, they created this corpus.  And they said, so Shakespeare had a vocabulary  of about 30,000 words and about 300,000 bigrams,  and out of 844 million possible bigrams,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 497.48,
+            "end": 516.24,
+            "text": " so 99.96% of bigrams were never seen.  So there's a certain regularity to his production of language.  Now, Google, of course, did Shakespeare one better.  And they said, hmm, we can take a terabyte corpus.  This was in 2006."
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 516.24,
+            "end": 531.3199999999999,
+            "text": " I wouldn't be surprised if it's a petabyte corpus today.  And they published this.  They just made it available.  So there were 13.6 million unique words  that occurred at least 200 times in this teraword corpus."
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 531.32,
+            "end": 545.24,
+            "text": " And there were 1.2 billion five-word sequences  that occurred at least 40 times.  So these are the statistics.  And if you're interested, there's a URL.  And here's a very tiny part of their database."
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 545.24,
+            "end": 567.8,
+            "text": " So ceramics collectibles collectibles, I don't know,  occurred 55 times in a terabyte of text.  Ceramics collectibles find, ceramics collectibles buy,  pottery, cooking, comma, period, end of sentence,  and, at, is, et cetera, different number of times."
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 567.8,
+            "end": 585.4799999999999,
+            "text": " Ceramics comes from occurred 660 times,  which is a reasonably large number compared  to some of its competitors here.  If you look at fourgrams, you see things  like serve as the incoming, blah, blah, blah, 92 times,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.003.mp3",
+            "start": 585.48,
+            "end": 600.44,
+            "text": " serve as the index, 223 times, serve as the initial 5,300  times.  So you've got all these statistics.  And now, given those statistics, you"
+        }
+    ],
+    "text": " is parsing. There's a reference to his paper on the first slide in this section if you're interested in the details. It's described there. OK, so what he wound up with is a tensor that has patients on one axis, the words appearing in the text on another axis. So he's still using a bag of words representation. But the third axis is these language concept subgraphs that we were talking about. And then he does tensor factorization on this. And what's interesting is that it works much better than I expected. So if you look at his technique, which he called S-A-N-T-F, the precision and recall are about 0.72 and 0.85 for macro average and 0.75 for micro average, which is much better than the non-negative matrix factorization results, which only use patient by word or patient by subgraph, or in fact, one where you simply do patient and concatenate the subgraphs on the words in one dimension. So that means that this is actually taking advantage of the three-way relationship. If you read papers from about 15, 20 years ago, people got very excited about the idea of biclustering, which is, in modern terms, the equivalent of matrix factorization. So it says, given two dimensions of data, and I want to cluster things, but I want to cluster them in such a way that the clustering of one dimension helps the clustering of the other dimension. So this is a formal way of doing that relatively efficiently. And tensor factorization is essentially triclustering. OK, so now I'm going to turn to the last of today's big topics, which is language modeling. And this is really where the action is nowadays in natural language processing in general. I would say that the natural language processing on clinical data is somewhat behind the state of the art in natural language processing overall. There are fewer corpora that are available. There are fewer people working on it. And so we're catching up. But I'm going to lead into this somewhat gently. So what does it mean to model a language? You could imagine saying it's coming up with a set of parsing rules that define the syntactic structure of the language. Or you could imagine saying, as we suggested last time, coming up with a corresponding set of semantic rules that say terms in the language correspond to certain concepts and that they are combinatorially, functionally combined as the syntax directs in order to give us a semantic representation. So we don't know how to do either of those very well. And so the current, the contemporary idea about language modeling is to say, given a sequence of tokens, predict the next token. If you could do that perfectly, presumably you would have a good language model. So obviously, you can't do it perfectly because we don't always say the same word after some sequence of previous words when we speak. But probabilistically, you can get close to that. And there's usually some kind of Markov assumption that says that the probability of emitting a token given the stuff that came before it is ordinarily dependent only on n previous words rather than on all of history, on everything you've ever said before in your life. And there's a measure called perplexity, which is the entropy of the probability distribution over the predicted words. And roughly speaking, it's the number of likely ways that you could continue the text if all of the possibilities were equally likely. So perplexity is often used, for example, in speech processing. We did a study where we were trying to build a speech system that understood a conversation between a doctor and a patient. And we ran into real problems because we were using software that had been developed to interpret dictation by doctors. And that was very well-trained. But it turned out, we didn't know this when we started, that the language that doctors use in dictating medical notes is pretty straightforward, pretty simple. And so its perplexity is about 9, whereas conversations are much more free-flowing and cover many more topics. And so its perplexity is about 73. And so the model that works well for perplexity 9 doesn't work as well for perplexity 73. And so what this tells you about the difficulty of accurately transcribing speech is that it's hard. It's much harder. And that's still not a solved problem. Now, you probably all know about Zipf's law. So if you empirically just take all the words and all the literature of, let's say, English, what you discover is that the n-th word is about 1 over n as probable as the first word. So there is a long-tailed distribution. One thing you should realize, of course, is if you integrate 1 over n from 0 to infinity, it's infinite. And that may not be an inaccurate representation of language, because language is productive and changes, and people make up new words all the time, and so on. So it may actually be infinite. But roughly speaking, there is a kind of decline like this. And interestingly, in the brown corpus, the top 10 words make up almost a quarter of the size of the corpus. So you write a lot of thes, ofs, ands, ays, tos, ins, et cetera, and much less hematemesis, obviously. OK, so what about N-gram models? Well, remember, if we make this Markov assumption, then all we have to do is pay attention to the last N tokens before the one that we're interested in predicting. And so people have generated these large corpora of N-grams. So for example, somebody a couple of decades ago took all of Shakespeare's writings. I think they were trying to decide whether he had written all his works or whether the earl of somebody or other was actually the guy who wrote Shakespeare. You know about this controversy? Yeah. So that's why they were doing it. But anyway, they created this corpus. And they said, so Shakespeare had a vocabulary of about 30,000 words and about 300,000 bigrams, and out of 844 million possible bigrams, so 99.96% of bigrams were never seen. So there's a certain regularity to his production of language. Now, Google, of course, did Shakespeare one better. And they said, hmm, we can take a terabyte corpus. This was in 2006. I wouldn't be surprised if it's a petabyte corpus today. And they published this. They just made it available. So there were 13.6 million unique words that occurred at least 200 times in this teraword corpus. And there were 1.2 billion five-word sequences that occurred at least 40 times. So these are the statistics. And if you're interested, there's a URL. And here's a very tiny part of their database. So ceramics collectibles collectibles, I don't know, occurred 55 times in a terabyte of text. Ceramics collectibles find, ceramics collectibles buy, pottery, cooking, comma, period, end of sentence, and, at, is, et cetera, different number of times. Ceramics comes from occurred 660 times, which is a reasonably large number compared to some of its competitors here. If you look at fourgrams, you see things like serve as the incoming, blah, blah, blah, 92 times, serve as the index, 223 times, serve as the initial 5,300 times. So you've got all these statistics. And now, given those statistics, you"
+}

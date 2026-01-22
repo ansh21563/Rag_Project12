@@ -1,0 +1,390 @@
+{
+    "chunks": [
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 0.0,
+            "end": 10.52,
+            "text": " projection fraction.  So I think we're better than their numbers overall.  But yeah, I think that's just one of those things  that you're sort of expected to be able to do.  And then here's a problem that we ran into."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 10.52,
+            "end": 29.2,
+            "text": " So we're comparing to the status quo, which, like I said,  is one person tracing two images and comparing them.  That's it.  So we're processing potentially 200, 300 different frames  per study and competing sort of median, smoothing across."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 29.2,
+            "end": 41.56,
+            "text": " We're doing a whole lot more than that.  So what do we do about that in terms of the gold standard?  And if you just take interobservable variability,  you're going to have up to 8% to 9% in absolute compared  to 60% of the reference."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 41.56,
+            "end": 51.86,
+            "text": " So that's horrible.  So what are you supposed to do?  And I think one thing people do is they take multiple readers  and ask them to do that.  But this is like, are you going to get a bunch of cardiologists"
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 51.86,
+            "end": 61.96,
+            "text": " to do 1,000 studies for you?  It's just very hard to imagine somebody doing that.  You could compare to another modality.  So we haven't done this yet.  But you could, for example, compare it to MRI"
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 61.96,
+            "end": 70.75999999999999,
+            "text": " and say whether or not you're sort of more  consistent with another modality.  And then this is sort of indirect.  But you can go to outcomes in a trial  and see whether or not you do a better job."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 70.75999999999999,
+            "end": 84.86,
+            "text": " So there are things you can do.  One of the things we decided to do  is look for kind of correlations of structures  within a study itself and say, well, the mass.  So we know that, for example, thickened hearts"
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 84.86,
+            "end": 92.7,
+            "text": " lead to larger increases of pressure  in left atrial enlargement.  So we can look for correlations between those things  and see whether we do a better job.  I'd say, for the most part, we're"
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 92.7,
+            "end": 99.68,
+            "text": " about on par with everything that's there.  So I don't think we're any better.  Sometimes we're better.  Sometimes we're worse.  And I think, for the most part, this"
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 99.68,
+            "end": 109.12,
+            "text": " was sort of another way to try to get at this  because we were stuck with this.  I mean, how do you work with a gold standard  that ultimately I don't think anybody really  trusts is a gold standard?"
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 109.12,
+            "end": 118.88,
+            "text": " And this is a problem that just kind of  has to keep on coming up.  This is just an example of where you  could sort of facilitate this sort of idea of low cost  serially imaging at point of care."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 118.88,
+            "end": 135.2,
+            "text": " So these are patients who are getting chemotherapy.  And so Herceptin, sorry, not Herception, Herceptin,  it's like inception, is a EGFR inhibitor  that causes cardiotoxicity.  And so people are getting screening echoes."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 135.2,
+            "end": 143.44,
+            "text": " So you could imagine, if you make it easier to acquire  and interpret that, all you want to care about  is the function and the size.  So you could imagine automating that.  So we just did this as sort of proof of concept"
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 143.44,
+            "end": 157.84,
+            "text": " that you could imagine doing something like this.  And for the last thing I want to talk about,  so we, or sorry, the last thing in this space  is that you could also imagine directly detected disease.  And so you have to say, well, why is that even worthwhile?"
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 157.84,
+            "end": 170.16000000000003,
+            "text": " Yes.  I was curious, I guess it's going back a second,  but if you thought about blended models between human ground  truth and maybe a biological ground truth  to say that in a more crude way, so sort of like thinking"
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 170.16000000000003,
+            "end": 181.88,
+            "text": " about sort of a consensus among cardiologists  versus sort of like what you would  need to get from an MRI or something,  or maybe not necessarily an MRI, but what  you were saying sort of based on underlying biology,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 181.88,
+            "end": 192.28,
+            "text": " or if those two things are generally kept.  Yeah, I mean, I think everything is,  these are early days for a lot of this.  And I think any time you make anything more complicated,  then the readers will give you a hard time."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 192.28,
+            "end": 202.64,
+            "text": " But you could imagine that, and especially you  may want to tune things to be able to be closer to something  like that.  So yeah, I think unfortunately people  are pretty conservative in terms of how they interpret."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 202.64,
+            "end": 214.28,
+            "text": " But it does make some sense that there's  probably something that, ideally, you  want to be able to have something that is useful.  And useful may not be exactly the same thing  as mimicking what humans are doing."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 214.28,
+            "end": 224.68,
+            "text": " So no, I think it's a good idea.  And I think that this is going to be,  this next wave is going to be thinking a little bit more  about that in terms of how do we improve  on what's going on over there rather than simply dragging it"
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 224.68,
+            "end": 235.0,
+            "text": " back to that.  So there are multiple rare diseases.  I used to have a clinic that would focus on these.  And they tend to get missed at centers  that don't see them that often."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 235.0,
+            "end": 246.2,
+            "text": " So one place you could imagine is  you could focus on trying to pick those up.  And you could imagine this could be just surveillance  running in the background.  It doesn't have to be real time identification."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 246.2,
+            "end": 255.04,
+            "text": " So there's a few diseases where it's  very reasonable to do these things where  it's sort of very obvious.  So this is a disease called hypertrophic cardiomyopathy.  I used to see in my clinic."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 255.04,
+            "end": 265.96000000000004,
+            "text": " Abnormally thickened hearts, leading cause  of sudden death in young athletes.  So Reggie Lewis, Hank Gatt.  There's a bunch of people who have died suddenly  from this condition."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 265.96000000000004,
+            "end": 278.04,
+            "text": " Unstable heart rhythm, sudden death, heart failure.  It runs in families.  And there are things you can do if you identified it.  And so it's actually a fairly easy task in the sense  that it tends to be quite obvious."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 278.04,
+            "end": 288.12,
+            "text": " So we built a classification model around this.  And we tried to understand what it was doing.  And so we tried to do some of these kind of attention  or saliency type things.  And they were very unsatisfying in part"
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 288.12,
+            "end": 294.36,
+            "text": " because I think there's so many different features  across the whole image.  So you're just getting this blob.  But I think maybe we just weren't implementing it  correctly."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 294.36,
+            "end": 303.8,
+            "text": " I'm not really sure.  But you were getting it because the left atrium get bigger.  The heart gets thicker.  And there's so many changes across the image.  It was sort of unsatisfying in terms of that."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 303.8,
+            "end": 312.96,
+            "text": " So we did something simple and just  took the output of the probabilities  and compared it to some simple things  that we actually know about these things  and found that there was some degree of correlation."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 312.96,
+            "end": 322.68,
+            "text": " But I would like to make that a little bit better.  Cardic amyloid, a very popular disease for which there are now  therapies.  And so pharma is very interested in identifying  these people."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 322.68,
+            "end": 335.64,
+            "text": " And they really get missed at a pretty high rate.  So we built another model for this.  Usually, we had about 250 or 300 cases for each of these things  and maybe a few thousand controls.  And then this one's a little interesting in that this"
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 335.64,
+            "end": 348.36,
+            "text": " is mitral valve prolapse.  So this is what a prolapsing valve looks like.  So if you imagine the plane of the valve here,  it buckles back.  So it does this."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 348.40000000000003,
+            "end": 356.76,
+            "text": " And that's abnormal.  And this is a normal valve.  So you notice it doesn't buckle back in.  So it's a little interesting in that there's really  only one part of the cardiac cycle"
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 356.76,
+            "end": 367.52000000000004,
+            "text": " that would really highlight this abnormality.  At least, that's the way that it's read clinically,  is people kind of wait for this one part of the cardiac cycle  that's buckled back.  They draw an imaginary line across."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 367.52000000000004,
+            "end": 377.8,
+            "text": " And they measure what the displacement is there.  And so we built a reasonable model focusing.  So we phased these images and picked  the part of the cardiac cycle that was relevant,  all in an automated way, and built a model around that."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 377.8,
+            "end": 389.0,
+            "text": " And pretty good in terms of being  able to do that, in terms of being able to detect that.  Yes?  And so is this model on images at a certain time?  Or can you just go back?"
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 389.0,
+            "end": 398.36,
+            "text": " Because obviously, you weren't doing it on videos, right?  Well, so we take the whole video.  We were segmenting it.  We were phasing it, figuring out what  the part of the, when was the end systole in that,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 398.36,
+            "end": 407.32,
+            "text": " and then using those as the, so using a stack of those  to be able to classify.  And so how would you know the time point?  Well, that's what I'm saying.  I'm just saying the variation in the volumes."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 407.32,
+            "end": 416.28000000000003,
+            "text": " Oh, OK.  Segmentation would allow you to know the time.  Yeah, exactly, exactly.  So a typical echo will have an ECG to use to gate,  but the handhelds don't."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 416.28000000000003,
+            "end": 426.48,
+            "text": " So we want to move away from the things that  involve the fanciness and all the bells and whistles.  We're trying to use the image alone  to be able to tell the cardiac cycle.  So that's how we did it."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 426.48,
+            "end": 434.1,
+            "text": " Yes, Steve?  So did you mention handhelds?  Wouldn't the bell or sounds of handhelds  look a bit different from these?  Do you think?"
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 434.1,
+            "end": 443.47999999999996,
+            "text": " They look pretty similar.  We got some now.  And they look pretty similar in terms  of the quality of the images.  And you can acquire the very same view."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 443.47999999999996,
+            "end": 455.08,
+            "text": " So I think we haven't shown that we can do it off those,  in part because there just isn't enough training data.  But they look pretty nice.  And I know at UCSF and at Brigham,  all the fellows are using it."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 455.08,
+            "end": 463.88,
+            "text": " It looks pretty much the same in terms of the transducers  are sort of similar.  And image quality is very good.  Resolution is very good.  Frame rate probably doesn't get up as high necessarily."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 464.24,
+            "end": 476.04,
+            "text": " But for the most part, I don't think it's that different.  So that is kind of the next phase.  Yes?  Could you comment on, you mentioned  how each of these three examples could be used"
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 476.04,
+            "end": 485.6,
+            "text": " in a surveillance algorithm.  Could you comment on the where along  this true positive, false positive trade-off  would actually be realistic to use?  Yeah, it's a good point."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 485.6,
+            "end": 500.41999999999996,
+            "text": " I think it would vary for every single one of those.  And you really want to have some kind of costs on what the.  I would typically err on the side of higher sensitivity  and dump it on the cardiologist to be able to.  So I would work in."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 500.41999999999996,
+            "end": 512.4599999999999,
+            "text": " But I think you have to sort of pick some.  Let's say you're a project manager.  Choose one of these three and maybe pick two out of three.  Yeah.  So this is a pretty rare disease."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 512.4599999999999,
+            "end": 533.86,
+            "text": " So your priors are pretty low in terms of these individuals.  And so I think you probably would probably  want to err somewhere along this area here.  And so just working on what the.  So you probably will still be a relatively high rate"
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 533.86,
+            "end": 548.3,
+            "text": " of false positives, even in that space.  But I would argue that it would take the treating cardiologist  potentially just a few minutes to look at that study again.  And if you picked up one of those patients,  that would be a big win."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 548.3,
+            "end": 558.14,
+            "text": " So I think the cost probably wouldn't be that high.  And you just have to make the case.  And I think the best.  So therapy for amyloid, for example,  with these nice sort of sharp upstroke there."
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 558.14,
+            "end": 572.02,
+            "text": " There's new drugs out there that are sort of begging for patients.  And they're having a real hard time identifying them.  So you could imagine, again, it's  sort of a calculus based on what the benefits would  be for that identification and what burden you're"
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 572.02,
+            "end": 585.4599999999999,
+            "text": " placing on the individuals to have to overread something.  And you could probably tune that depending  on what the disease is and who you're pitching it to.  But you're right.  You're going to crush people if one in 100"
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 585.4599999999999,
+            "end": 595.9,
+            "text": " ends up being a true positive.  Then you're not going to win many fans.  Yes?  Could you comment on whether, for example,  for amyloidases, the ones that you're"
+        },
+        {
+            "number": "lec10",
+            "title": "part.005.mp3",
+            "start": 595.9,
+            "end": 600.5,
+            "text": " able to predict very well, so for example,  at that point you just chose."
+        }
+    ],
+    "text": " projection fraction. So I think we're better than their numbers overall. But yeah, I think that's just one of those things that you're sort of expected to be able to do. And then here's a problem that we ran into. So we're comparing to the status quo, which, like I said, is one person tracing two images and comparing them. That's it. So we're processing potentially 200, 300 different frames per study and competing sort of median, smoothing across. We're doing a whole lot more than that. So what do we do about that in terms of the gold standard? And if you just take interobservable variability, you're going to have up to 8% to 9% in absolute compared to 60% of the reference. So that's horrible. So what are you supposed to do? And I think one thing people do is they take multiple readers and ask them to do that. But this is like, are you going to get a bunch of cardiologists to do 1,000 studies for you? It's just very hard to imagine somebody doing that. You could compare to another modality. So we haven't done this yet. But you could, for example, compare it to MRI and say whether or not you're sort of more consistent with another modality. And then this is sort of indirect. But you can go to outcomes in a trial and see whether or not you do a better job. So there are things you can do. One of the things we decided to do is look for kind of correlations of structures within a study itself and say, well, the mass. So we know that, for example, thickened hearts lead to larger increases of pressure in left atrial enlargement. So we can look for correlations between those things and see whether we do a better job. I'd say, for the most part, we're about on par with everything that's there. So I don't think we're any better. Sometimes we're better. Sometimes we're worse. And I think, for the most part, this was sort of another way to try to get at this because we were stuck with this. I mean, how do you work with a gold standard that ultimately I don't think anybody really trusts is a gold standard? And this is a problem that just kind of has to keep on coming up. This is just an example of where you could sort of facilitate this sort of idea of low cost serially imaging at point of care. So these are patients who are getting chemotherapy. And so Herceptin, sorry, not Herception, Herceptin, it's like inception, is a EGFR inhibitor that causes cardiotoxicity. And so people are getting screening echoes. So you could imagine, if you make it easier to acquire and interpret that, all you want to care about is the function and the size. So you could imagine automating that. So we just did this as sort of proof of concept that you could imagine doing something like this. And for the last thing I want to talk about, so we, or sorry, the last thing in this space is that you could also imagine directly detected disease. And so you have to say, well, why is that even worthwhile? Yes. I was curious, I guess it's going back a second, but if you thought about blended models between human ground truth and maybe a biological ground truth to say that in a more crude way, so sort of like thinking about sort of a consensus among cardiologists versus sort of like what you would need to get from an MRI or something, or maybe not necessarily an MRI, but what you were saying sort of based on underlying biology, or if those two things are generally kept. Yeah, I mean, I think everything is, these are early days for a lot of this. And I think any time you make anything more complicated, then the readers will give you a hard time. But you could imagine that, and especially you may want to tune things to be able to be closer to something like that. So yeah, I think unfortunately people are pretty conservative in terms of how they interpret. But it does make some sense that there's probably something that, ideally, you want to be able to have something that is useful. And useful may not be exactly the same thing as mimicking what humans are doing. So no, I think it's a good idea. And I think that this is going to be, this next wave is going to be thinking a little bit more about that in terms of how do we improve on what's going on over there rather than simply dragging it back to that. So there are multiple rare diseases. I used to have a clinic that would focus on these. And they tend to get missed at centers that don't see them that often. So one place you could imagine is you could focus on trying to pick those up. And you could imagine this could be just surveillance running in the background. It doesn't have to be real time identification. So there's a few diseases where it's very reasonable to do these things where it's sort of very obvious. So this is a disease called hypertrophic cardiomyopathy. I used to see in my clinic. Abnormally thickened hearts, leading cause of sudden death in young athletes. So Reggie Lewis, Hank Gatt. There's a bunch of people who have died suddenly from this condition. Unstable heart rhythm, sudden death, heart failure. It runs in families. And there are things you can do if you identified it. And so it's actually a fairly easy task in the sense that it tends to be quite obvious. So we built a classification model around this. And we tried to understand what it was doing. And so we tried to do some of these kind of attention or saliency type things. And they were very unsatisfying in part because I think there's so many different features across the whole image. So you're just getting this blob. But I think maybe we just weren't implementing it correctly. I'm not really sure. But you were getting it because the left atrium get bigger. The heart gets thicker. And there's so many changes across the image. It was sort of unsatisfying in terms of that. So we did something simple and just took the output of the probabilities and compared it to some simple things that we actually know about these things and found that there was some degree of correlation. But I would like to make that a little bit better. Cardic amyloid, a very popular disease for which there are now therapies. And so pharma is very interested in identifying these people. And they really get missed at a pretty high rate. So we built another model for this. Usually, we had about 250 or 300 cases for each of these things and maybe a few thousand controls. And then this one's a little interesting in that this is mitral valve prolapse. So this is what a prolapsing valve looks like. So if you imagine the plane of the valve here, it buckles back. So it does this. And that's abnormal. And this is a normal valve. So you notice it doesn't buckle back in. So it's a little interesting in that there's really only one part of the cardiac cycle that would really highlight this abnormality. At least, that's the way that it's read clinically, is people kind of wait for this one part of the cardiac cycle that's buckled back. They draw an imaginary line across. And they measure what the displacement is there. And so we built a reasonable model focusing. So we phased these images and picked the part of the cardiac cycle that was relevant, all in an automated way, and built a model around that. And pretty good in terms of being able to do that, in terms of being able to detect that. Yes? And so is this model on images at a certain time? Or can you just go back? Because obviously, you weren't doing it on videos, right? Well, so we take the whole video. We were segmenting it. We were phasing it, figuring out what the part of the, when was the end systole in that, and then using those as the, so using a stack of those to be able to classify. And so how would you know the time point? Well, that's what I'm saying. I'm just saying the variation in the volumes. Oh, OK. Segmentation would allow you to know the time. Yeah, exactly, exactly. So a typical echo will have an ECG to use to gate, but the handhelds don't. So we want to move away from the things that involve the fanciness and all the bells and whistles. We're trying to use the image alone to be able to tell the cardiac cycle. So that's how we did it. Yes, Steve? So did you mention handhelds? Wouldn't the bell or sounds of handhelds look a bit different from these? Do you think? They look pretty similar. We got some now. And they look pretty similar in terms of the quality of the images. And you can acquire the very same view. So I think we haven't shown that we can do it off those, in part because there just isn't enough training data. But they look pretty nice. And I know at UCSF and at Brigham, all the fellows are using it. It looks pretty much the same in terms of the transducers are sort of similar. And image quality is very good. Resolution is very good. Frame rate probably doesn't get up as high necessarily. But for the most part, I don't think it's that different. So that is kind of the next phase. Yes? Could you comment on, you mentioned how each of these three examples could be used in a surveillance algorithm. Could you comment on the where along this true positive, false positive trade-off would actually be realistic to use? Yeah, it's a good point. I think it would vary for every single one of those. And you really want to have some kind of costs on what the. I would typically err on the side of higher sensitivity and dump it on the cardiologist to be able to. So I would work in. But I think you have to sort of pick some. Let's say you're a project manager. Choose one of these three and maybe pick two out of three. Yeah. So this is a pretty rare disease. So your priors are pretty low in terms of these individuals. And so I think you probably would probably want to err somewhere along this area here. And so just working on what the. So you probably will still be a relatively high rate of false positives, even in that space. But I would argue that it would take the treating cardiologist potentially just a few minutes to look at that study again. And if you picked up one of those patients, that would be a big win. So I think the cost probably wouldn't be that high. And you just have to make the case. And I think the best. So therapy for amyloid, for example, with these nice sort of sharp upstroke there. There's new drugs out there that are sort of begging for patients. And they're having a real hard time identifying them. So you could imagine, again, it's sort of a calculus based on what the benefits would be for that identification and what burden you're placing on the individuals to have to overread something. And you could probably tune that depending on what the disease is and who you're pitching it to. But you're right. You're going to crush people if one in 100 ends up being a true positive. Then you're not going to win many fans. Yes? Could you comment on whether, for example, for amyloidases, the ones that you're able to predict very well, so for example, at that point you just chose."
+}

@@ -1,0 +1,278 @@
+{
+    "chunks": [
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 0.0,
+            "end": 27.28,
+            "text": " Today we'll be talking about risk stratification.  After giving you a broad overview  of what I mean by risk stratification,  I'm going to give you a case study, which  you read about in your readings for today's lecture,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 27.28,
+            "end": 40.44,
+            "text": " coming from early detection of type 2 diabetes.  And I won't be, of course, repeating  the same material you heard you write about in your readings.  Rather, I'll be giving some interesting color around what  are some of the questions that we"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 40.44,
+            "end": 53.400000000000006,
+            "text": " need to be thinking about as machine learning people  when we try to apply machine learning to problems like this.  Then I'll talk about some of the subtleties, what  can go wrong with machine learning-based approaches  to risk stratification."
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 53.400000000000006,
+            "end": 69.82,
+            "text": " And finally, the last half of today's lecture  is going to be a discussion.  So about 3 PM, you'll see a man walk through the door.  His name is Leonard Davolio.  He is a professor at Brigham and Women's Hospital."
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 69.82,
+            "end": 82.12,
+            "text": " He also has a startup company called  SIFT, which is working on applying risk stratification  now.  And they have lots of clients.  And they've been really deep in the details"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 82.12,
+            "end": 92.1,
+            "text": " of how to make this stuff work.  And so we'll have an interview between myself and him.  And we'll have opportunity for all of you  to ask questions as well.  And I think that's what I hope will"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 92.1,
+            "end": 105.94,
+            "text": " be the most exciting part of today's lecture.  Then going on beyond today's lecture,  we are now in the beginning of a sequence of three lectures  on very similar topics.  So next Thursday, we'll be talking about survival"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 105.94,
+            "end": 117.61999999999999,
+            "text": " modeling.  And you can think about it as an extension of today's lecture,  talking about what you should do if your data has centering,  which I'll define for you shortly.  Although today's lecture is going to be a little bit more"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 117.61999999999999,
+            "end": 127.97999999999999,
+            "text": " high level, next Thursday's lecture  is where we're going to really start to get  into mathematical details about how  one should tackle machine learning  problems with censored data."
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 127.97999999999999,
+            "end": 143.7,
+            "text": " And then the following lecture after that  is going to be on physiological data.  And that lecture will also be much more technical in nature  compared to the first couple of weeks of the course.  So what is risk stratification?"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 143.7,
+            "end": 159.94,
+            "text": " At a high level, you think about risk stratification  as a way of taking in a patient population  and separating out all of your patients  into one of two or more categories,  patients with high risk, patients with low risk,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 159.94,
+            "end": 175.9,
+            "text": " and maybe patients somewhere in the middle.  Now, the reason why we might want to do risk stratification  is because we usually want to try  to act on those predictions.  So the goals are often one of coupling those predictions"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 175.9,
+            "end": 191.66,
+            "text": " with known interventions.  So for example, patients in the high risk pool,  we will attempt to do something for those patients  to prevent whatever that outcome is of interest from occurring.  Now, risk stratification is quite different from diagnosis."
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 191.66,
+            "end": 208.48,
+            "text": " Diagnosis often has very, very stringent criteria  on performance.  If you do a misdiagnosis of something,  that can have very severe consequences  in terms of patients being treated for conditions"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 208.48,
+            "end": 224.18,
+            "text": " that they didn't need to be treated for and patients  dying because they were not diagnosed in time.  Now, risk stratification, you think  of it as a little bit more fuzzy in nature.  We want to do our best job of trying"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 224.18,
+            "end": 237.46,
+            "text": " to push patients into each of these categories,  high risk, low risk, and so on.  And as I'll show you throughout today's lecture,  the performance characteristics that we'll often care about  are going to be a bit different."
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 237.46,
+            "end": 250.61999999999998,
+            "text": " We're going to look a bit more at quantities  such as positive predictive value.  Are we finding of the patients we say are high risk,  what fraction of them are actually high risk?  And in that way, it differs a bit from diagnosis."
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 250.61999999999998,
+            "end": 265.76,
+            "text": " Also, as a result of the goals being different,  the data that's used is often very different.  In risk stratification, often we use  data which is very diverse.  So you might bring in multiple views of a patient."
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 265.76,
+            "end": 290.53999999999996,
+            "text": " You might use auxiliary data such as patient's demographics,  maybe even socioeconomic information about a patient,  all of which very much affect their risk profiles  but may not be used for an unbiased diagnosis of a patient.  And finally, in today's economic environment,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 290.53999999999996,
+            "end": 308.58,
+            "text": " risk stratification is very much targeted  towards reducing cost of the US health care setting.  And so I'll give you a few examples of risk stratification,  some of which have cost as a major goal, others which don't.  The first example is that of predicting an infant's"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 308.58,
+            "end": 330.86,
+            "text": " risk of severe morbidity.  So this is a premature baby.  My niece, for example, was born three months premature.  It was really scary for my sister and for my whole family.  And the outcomes of patients who were born premature"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 330.86,
+            "end": 346.1,
+            "text": " have really changed dramatically over the last century.  And now, patients who were born three months premature,  like my niece, actually can survive and do really well  in terms of long-term outcomes.  But of the many different inventions"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 346.1,
+            "end": 364.09999999999997,
+            "text": " that led to these improved outcomes, one of them  was having a very good understanding  of how risky a particular infant might be.  So a very common score that's used  to try to characterize risk for infant birth,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 364.09999999999997,
+            "end": 380.02,
+            "text": " generally speaking, is known as the Apgar score.  And for example, when my son was born,  I was really excited when a few seconds after my son  was delivered, the nurse took out a piece of paper  and computed the Apgar score."
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 380.02,
+            "end": 392.14,
+            "text": " I was like, oh, I studied that.  Really interesting, right?  And then I got back to some of the other things  that I had to do.  But that score isn't actually as accurate as it could be."
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 392.14,
+            "end": 407.38,
+            "text": " And there is this paper, which we'll talk about actually  in a week and a half, by Suchi Surya,  who's a professor at Johns Hopkins, which  looked at how one could use a machine learning-based approach  to really improve our ability to predict morbidity in infants."
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 407.38,
+            "end": 423.62,
+            "text": " Another example, which I'm pulling  from the readings for today's lecture,  has to do with for patients who come into the emergency  department with a heart-related condition,  trying to understand do they need"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 423.62,
+            "end": 443.90000000000003,
+            "text": " to be admitted to the coronary care unit?  Or is it safe enough to let that patient go home and be managed  by their primary care physician or their cardiologist  outside of the hospital setting?  Now, that paper, you might have all noticed, was from 1984."
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 443.90000000000003,
+            "end": 457.90000000000003,
+            "text": " So this isn't a new concept.  And moreover, if you look at the amount of data  that they used in that study, it was over 2,000 patients.  They had a nontrivial number of variables,  50-something variables."
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 457.90000000000003,
+            "end": 472.74,
+            "text": " And they used a nontrivial machine learning algorithm.  They used logistic regression with a feature selection  built in to prevent themselves from overfitting  to the data.  And the goal there was very much cost-oriented."
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 472.74,
+            "end": 492.18,
+            "text": " So the premise was that if one could quickly  decide these patients who've just come to the ER  are not high risk and we can send them home,  then we'll be able to reduce the large amount of cost  associated with those admissions to coronary care units."
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 492.18,
+            "end": 509.86,
+            "text": " And the final example I'll give right now  is that of predicting likelihood of hospital readmission.  So this is something which is getting  a real lot of attention in the United States health care  space over the last few years because of penalties"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 509.86,
+            "end": 522.74,
+            "text": " which the US government has imposed on hospitals who  have a large number of patients who have been released  from the hospital and then within the next 30 days  readmitted to the hospital.  And that's part of the transition to value-based care,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 522.98,
+            "end": 538.62,
+            "text": " which Pete mentioned in earlier lectures.  And so the premise is that there are many patients who  are hospitalized but are not managed appropriately  on discharge or after discharge.  For example, maybe this patient who has a heart condition"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 538.62,
+            "end": 549.74,
+            "text": " wasn't really clear on what they should  have done when they go home.  For example, what medications should they be taking?  When should they follow up with their cardiologist?  What things they should be looking out"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 549.74,
+            "end": 566.62,
+            "text": " for in terms of warning signs that they should go back  to the hospital or call their doctor for?  And as a result of that poor communication,  it's conjectured that these poor outcomes might occur.  So if we could figure out which of the patients"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 566.62,
+            "end": 577.14,
+            "text": " are likely to have those readmissions,  then we could change the way.  And if we could do those, if we could  predict that while the patients are still in the hospital,  then we could change the way that discharge is done."
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 577.14,
+            "end": 594.1,
+            "text": " For example, we could send a nurse or a social worker  to talk to the patient, go really slowly  through the discharge instructions.  Maybe after the patient is discharged,  one could have a nurse follow up at the patient's home"
+        },
+        {
+            "number": "lec4",
+            "title": "part.000.mp3",
+            "start": 594.1,
+            "end": 601.9399999999999,
+            "text": " over the next few weeks.  And in this way, hopefully reduce the likelihood  of that readmission.  So that's the idea."
+        }
+    ],
+    "text": " Today we'll be talking about risk stratification. After giving you a broad overview of what I mean by risk stratification, I'm going to give you a case study, which you read about in your readings for today's lecture, coming from early detection of type 2 diabetes. And I won't be, of course, repeating the same material you heard you write about in your readings. Rather, I'll be giving some interesting color around what are some of the questions that we need to be thinking about as machine learning people when we try to apply machine learning to problems like this. Then I'll talk about some of the subtleties, what can go wrong with machine learning-based approaches to risk stratification. And finally, the last half of today's lecture is going to be a discussion. So about 3 PM, you'll see a man walk through the door. His name is Leonard Davolio. He is a professor at Brigham and Women's Hospital. He also has a startup company called SIFT, which is working on applying risk stratification now. And they have lots of clients. And they've been really deep in the details of how to make this stuff work. And so we'll have an interview between myself and him. And we'll have opportunity for all of you to ask questions as well. And I think that's what I hope will be the most exciting part of today's lecture. Then going on beyond today's lecture, we are now in the beginning of a sequence of three lectures on very similar topics. So next Thursday, we'll be talking about survival modeling. And you can think about it as an extension of today's lecture, talking about what you should do if your data has centering, which I'll define for you shortly. Although today's lecture is going to be a little bit more high level, next Thursday's lecture is where we're going to really start to get into mathematical details about how one should tackle machine learning problems with censored data. And then the following lecture after that is going to be on physiological data. And that lecture will also be much more technical in nature compared to the first couple of weeks of the course. So what is risk stratification? At a high level, you think about risk stratification as a way of taking in a patient population and separating out all of your patients into one of two or more categories, patients with high risk, patients with low risk, and maybe patients somewhere in the middle. Now, the reason why we might want to do risk stratification is because we usually want to try to act on those predictions. So the goals are often one of coupling those predictions with known interventions. So for example, patients in the high risk pool, we will attempt to do something for those patients to prevent whatever that outcome is of interest from occurring. Now, risk stratification is quite different from diagnosis. Diagnosis often has very, very stringent criteria on performance. If you do a misdiagnosis of something, that can have very severe consequences in terms of patients being treated for conditions that they didn't need to be treated for and patients dying because they were not diagnosed in time. Now, risk stratification, you think of it as a little bit more fuzzy in nature. We want to do our best job of trying to push patients into each of these categories, high risk, low risk, and so on. And as I'll show you throughout today's lecture, the performance characteristics that we'll often care about are going to be a bit different. We're going to look a bit more at quantities such as positive predictive value. Are we finding of the patients we say are high risk, what fraction of them are actually high risk? And in that way, it differs a bit from diagnosis. Also, as a result of the goals being different, the data that's used is often very different. In risk stratification, often we use data which is very diverse. So you might bring in multiple views of a patient. You might use auxiliary data such as patient's demographics, maybe even socioeconomic information about a patient, all of which very much affect their risk profiles but may not be used for an unbiased diagnosis of a patient. And finally, in today's economic environment, risk stratification is very much targeted towards reducing cost of the US health care setting. And so I'll give you a few examples of risk stratification, some of which have cost as a major goal, others which don't. The first example is that of predicting an infant's risk of severe morbidity. So this is a premature baby. My niece, for example, was born three months premature. It was really scary for my sister and for my whole family. And the outcomes of patients who were born premature have really changed dramatically over the last century. And now, patients who were born three months premature, like my niece, actually can survive and do really well in terms of long-term outcomes. But of the many different inventions that led to these improved outcomes, one of them was having a very good understanding of how risky a particular infant might be. So a very common score that's used to try to characterize risk for infant birth, generally speaking, is known as the Apgar score. And for example, when my son was born, I was really excited when a few seconds after my son was delivered, the nurse took out a piece of paper and computed the Apgar score. I was like, oh, I studied that. Really interesting, right? And then I got back to some of the other things that I had to do. But that score isn't actually as accurate as it could be. And there is this paper, which we'll talk about actually in a week and a half, by Suchi Surya, who's a professor at Johns Hopkins, which looked at how one could use a machine learning-based approach to really improve our ability to predict morbidity in infants. Another example, which I'm pulling from the readings for today's lecture, has to do with for patients who come into the emergency department with a heart-related condition, trying to understand do they need to be admitted to the coronary care unit? Or is it safe enough to let that patient go home and be managed by their primary care physician or their cardiologist outside of the hospital setting? Now, that paper, you might have all noticed, was from 1984. So this isn't a new concept. And moreover, if you look at the amount of data that they used in that study, it was over 2,000 patients. They had a nontrivial number of variables, 50-something variables. And they used a nontrivial machine learning algorithm. They used logistic regression with a feature selection built in to prevent themselves from overfitting to the data. And the goal there was very much cost-oriented. So the premise was that if one could quickly decide these patients who've just come to the ER are not high risk and we can send them home, then we'll be able to reduce the large amount of cost associated with those admissions to coronary care units. And the final example I'll give right now is that of predicting likelihood of hospital readmission. So this is something which is getting a real lot of attention in the United States health care space over the last few years because of penalties which the US government has imposed on hospitals who have a large number of patients who have been released from the hospital and then within the next 30 days readmitted to the hospital. And that's part of the transition to value-based care, which Pete mentioned in earlier lectures. And so the premise is that there are many patients who are hospitalized but are not managed appropriately on discharge or after discharge. For example, maybe this patient who has a heart condition wasn't really clear on what they should have done when they go home. For example, what medications should they be taking? When should they follow up with their cardiologist? What things they should be looking out for in terms of warning signs that they should go back to the hospital or call their doctor for? And as a result of that poor communication, it's conjectured that these poor outcomes might occur. So if we could figure out which of the patients are likely to have those readmissions, then we could change the way. And if we could do those, if we could predict that while the patients are still in the hospital, then we could change the way that discharge is done. For example, we could send a nurse or a social worker to talk to the patient, go really slowly through the discharge instructions. Maybe after the patient is discharged, one could have a nurse follow up at the patient's home over the next few weeks. And in this way, hopefully reduce the likelihood of that readmission. So that's the idea."
+}

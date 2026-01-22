@@ -1,0 +1,299 @@
+{
+    "chunks": [
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 0.0,
+            "end": 8.88,
+            "text": " sort of get out the point that the probabilities themselves  could be important.  And having the probabilities be meaningful  is something that one can now quantify.  So how do we quantify it?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 8.88,
+            "end": 37.44,
+            "text": " Well, one way to try to quantify it  is to create the following plot.  Actually, I'll call it a histogram.  So on the x-axis is the predicted probability.  So that's what I meant by p hat."
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 37.44,
+            "end": 49.400000000000006,
+            "text": " On the y-axis is the true probability.  It's what I mean when I say the fraction of individuals  with that predicted probability that actually  got the positive outcome.  That's going to be the y-axis."
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 49.400000000000006,
+            "end": 74.16,
+            "text": " So I'll call that the true probability.  And what we would like to see is that this is a line,  a straight line, meaning these two should always be equal.  And in the example I gave, remember  I said that there were a bunch of people with 0.7 probability"
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 74.16,
+            "end": 92.44,
+            "text": " predicted, but for whom only one out of them  actually got the positive event.  So that would have been something like over here,  whereas you would have expected it to be over there.  So you might ask, how do I create"
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 92.44,
+            "end": 112.64,
+            "text": " such a plot from finite data?  Well, a common way to do so is to bin your data.  So you'll say you'll create intervals.  So this bin is the bin from 0 to 0.1.  This bin is the bin from 0.1 to 0.2, and so on."
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 112.64,
+            "end": 125.52000000000001,
+            "text": " And then you look to see, OK, how many people  for whom the predicted probability was between 0  and 0.1 actually died?  And you'll get a number out.  And now here's where I can go to this plot."
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 125.52000000000001,
+            "end": 136.02,
+            "text": " That's exactly what I'm showing you here.  So for now, ignore the bar charts in the bottom  and just look at the line.  So let's focus on just the green line.  Here I'm showing you several different models."
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 136.42000000000002,
+            "end": 147.5,
+            "text": " For now, just focus on the green line.  So the green line, by the way, notice it looks pretty good.  It's almost a straight line.  So how did I compute it?  Well, first of all, notice the number of ticks"
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 147.5,
+            "end": 162.94,
+            "text": " are 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.  OK, so there are 10 points along this line.  And each of those corresponds to one of these bins.  So the first point is the 0 to 0.1 bin.  The second point is the 0.1 to 0.2 bin, and so on."
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 162.94,
+            "end": 175.94,
+            "text": " So that's how I computed this.  The next thing you'll notice is that I have confidence  intervals.  And the reason I compute these confidence intervals  is because sometimes you just might not have that much data"
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 175.94,
+            "end": 187.14,
+            "text": " in one of these bins.  So for example, suppose your algorithm almost never  said that someone has a predicted probability of 0.99.  Then you're not going to have an event.  Until you get a ton of data, you're"
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 187.14,
+            "end": 199.26,
+            "text": " not going to know what fraction of those individuals  actually went on to develop the event.  And so you should be looking at the confidence  interval of this line, which should  take that into consideration."
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 199.26,
+            "end": 210.5,
+            "text": " And a different way to try to understand that notion,  now looking at the numbers, is what  I'm showing you in the bar charts in the bottom.  On the bar charts, I'm showing you  the number of individuals, or the fraction of individuals,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 210.5,
+            "end": 229.34,
+            "text": " who actually got that predicted probability.  So now let's start comparing the lines.  So the blue line shown here is a machine learning algorithm,  which is predicting infection in the emergency room.  So this is a slightly different problem than the diabetes one"
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 229.34,
+            "end": 245.42,
+            "text": " we looked at earlier.  And it's using a bag of words model from clinical text.  The red line is using just chief complaint.  So it's using one piece of structured data  that you get at one point in time in the ER."
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 245.42,
+            "end": 262.68,
+            "text": " So it's using very little information.  And you can see that both models are somewhat well  calibrated.  But the intervals, the confidence intervals  of both the red and the purple lines"
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 262.68,
+            "end": 278.0,
+            "text": " gets really big towards the end.  And if you look at these bar charts,  it explains why, because the models that  use less information end up being much more risk averse.  So they will never predict a very high probability."
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 278.0,
+            "end": 295.56,
+            "text": " They always sort of stay in this lower regime.  And that's why we have very big confidence intervals there.  So that's all I want to say about evaluation.  And I won't take any questions on this right now,  because I really want to get on to the rest of the lecture."
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 295.56,
+            "end": 313.52,
+            "text": " But again, if you have any questions, post to Piazza.  And I'm happy to discuss them with you offline.  So in summary, we've talked about how  to reduce risk stratification to binary classification.  I've told you how to derive the labels."
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 313.52,
+            "end": 326.62,
+            "text": " I've given you one example of a machine learning  algorithm you could use.  And I talked to you about how to evaluate it.  What could possibly go wrong?  So let's look at some examples."
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 326.62,
+            "end": 335.96,
+            "text": " And these are a small number of examples of what  could possibly go wrong.  There are many more.  So here's some data.  I'm showing you for the same problem"
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 335.96,
+            "end": 353.88,
+            "text": " we looked at before, diabetes onset.  I'm showing you the prevalence of type 2 diabetes  as recorded by, let's say, diagnosis codes across time.  So over here is 1980.  Over here is 2012."
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 353.88,
+            "end": 366.0,
+            "text": " Look at that.  It's not a flat line.  Now, what does that mean?  Does that mean that the population  is eating much more unhealthy from 1980 to 2012,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 366.0,
+            "end": 382.96000000000004,
+            "text": " and so more people are becoming diabetic?  That would be one plausible answer.  Another plausible explanation is that something has changed.  So in fact, I'm showing you with these blue lines  when, in fact, there was a change"
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 382.96000000000004,
+            "end": 397.4,
+            "text": " in the diagnostic criteria for diabetes.  And so now the patient population actually  didn't change much between, let's say,  this time point and that time point.  But what really led to this big uptick,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 397.4,
+            "end": 408.48,
+            "text": " according to one theory, is because the diagnostic criteria  changed.  So who we're calling diabetic has changed,  because diseases are, at the end of the day,  a human-made concept."
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 408.48,
+            "end": 424.48,
+            "text": " What do we call some disease?  And so the data is changing, as you see here.  Let me show you another example.  So the consequence of that is that automatically derived  labels, for example, if you use one of those phenotyping"
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 424.48,
+            "end": 439.48,
+            "text": " algorithms I showed you earlier, the rules,  what the label is derived for over here  might be very different from the label that's  derived from over here, particularly if it's using data  such as diagnosis codes that have changed"
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 439.48,
+            "end": 448.0,
+            "text": " in meaning over the years.  So that's one consequence.  There'll be other consequences I'll tell you about later.  Here's another example.  This notion is called non-stationarity,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 448.0,
+            "end": 464.79999999999995,
+            "text": " that the data is changing across time.  It's not stationary.  Here's another example.  On the x-axis, again, I'm showing you time.  Here, each column is a month from 2005 to 2014."
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 464.79999999999995,
+            "end": 483.35999999999996,
+            "text": " And on the y-axis, I'm showing you,  for every row of this table, I'm showing you a laboratory test.  And here, we're not looking at the results of the lab test.  We're only looking at what fraction of how many lab  tests of that type were performed"
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 483.35999999999996,
+            "end": 503.88,
+            "text": " at this point in time.  Now, you might expect that, broadly speaking,  the number of glucose tests, the number of white blood cell  count tests, the number of neutrophil tests, and so on  might be pretty constant across time, on average,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 503.88,
+            "end": 516.24,
+            "text": " because you're averaging over lots of people.  But indeed, what you see here is that, in fact, there  is a huge amount of non-stationarity.  Which tests are ordered dramatically  changes across time."
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 516.24,
+            "end": 530.48,
+            "text": " So for example, you see this one line over here,  where it's all blue, meaning no one is ordering the test  until this point in time when people start using it.  What could that be?  Any ideas?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 530.48,
+            "end": 537.34,
+            "text": " Yeah?  AUDIENCE MEMBER 4 So that the test was used less,  and then you realized that it was not used?  So the test was used less, or really, in this case,  not used at all."
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 537.34,
+            "end": 547.66,
+            "text": " And then suddenly, it was used.  Why might that happen in the back?  AUDIENCE MEMBER 4 A new test?  A new test, because technology changes.  Suddenly, we come up with a new diagnostic test, a new lab"
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 547.66,
+            "end": 558.08,
+            "text": " test.  And we can start using it, where it didn't exist before.  So obviously, there was no data on it before.  What's another reason why it might have suddenly showed up?  Yeah?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 558.08,
+            "end": 571.0400000000001,
+            "text": " AUDIENCE MEMBER 5 It could be that annual checkups become  mandatory, or that it's part of the test  at an admission at the hospital.  It's an additional test.  AUDIENCE MEMBER 4 I'll stick with your first example."
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 571.0400000000001,
+            "end": 587.68,
+            "text": " Maybe that test becomes mandatory.  So maybe there's a clinical guideline  that is created at this point in time, right there.  And health insurers decide, we're  going to reimburse for this test at this point in time."
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 587.68,
+            "end": 596.1999999999999,
+            "text": " And the test might have been really expensive.  So no one would have done it beforehand.  And now that the health insurance companies  are going to pay for it, now people start doing it.  So it might have existed beforehand."
+        },
+        {
+            "number": "lec5",
+            "title": "part.003.mp3",
+            "start": 596.1999999999999,
+            "end": 601.8,
+            "text": " But if no one would pay for it, no one would use it.  What's the other reason?"
+        }
+    ],
+    "text": " sort of get out the point that the probabilities themselves could be important. And having the probabilities be meaningful is something that one can now quantify. So how do we quantify it? Well, one way to try to quantify it is to create the following plot. Actually, I'll call it a histogram. So on the x-axis is the predicted probability. So that's what I meant by p hat. On the y-axis is the true probability. It's what I mean when I say the fraction of individuals with that predicted probability that actually got the positive outcome. That's going to be the y-axis. So I'll call that the true probability. And what we would like to see is that this is a line, a straight line, meaning these two should always be equal. And in the example I gave, remember I said that there were a bunch of people with 0.7 probability predicted, but for whom only one out of them actually got the positive event. So that would have been something like over here, whereas you would have expected it to be over there. So you might ask, how do I create such a plot from finite data? Well, a common way to do so is to bin your data. So you'll say you'll create intervals. So this bin is the bin from 0 to 0.1. This bin is the bin from 0.1 to 0.2, and so on. And then you look to see, OK, how many people for whom the predicted probability was between 0 and 0.1 actually died? And you'll get a number out. And now here's where I can go to this plot. That's exactly what I'm showing you here. So for now, ignore the bar charts in the bottom and just look at the line. So let's focus on just the green line. Here I'm showing you several different models. For now, just focus on the green line. So the green line, by the way, notice it looks pretty good. It's almost a straight line. So how did I compute it? Well, first of all, notice the number of ticks are 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. OK, so there are 10 points along this line. And each of those corresponds to one of these bins. So the first point is the 0 to 0.1 bin. The second point is the 0.1 to 0.2 bin, and so on. So that's how I computed this. The next thing you'll notice is that I have confidence intervals. And the reason I compute these confidence intervals is because sometimes you just might not have that much data in one of these bins. So for example, suppose your algorithm almost never said that someone has a predicted probability of 0.99. Then you're not going to have an event. Until you get a ton of data, you're not going to know what fraction of those individuals actually went on to develop the event. And so you should be looking at the confidence interval of this line, which should take that into consideration. And a different way to try to understand that notion, now looking at the numbers, is what I'm showing you in the bar charts in the bottom. On the bar charts, I'm showing you the number of individuals, or the fraction of individuals, who actually got that predicted probability. So now let's start comparing the lines. So the blue line shown here is a machine learning algorithm, which is predicting infection in the emergency room. So this is a slightly different problem than the diabetes one we looked at earlier. And it's using a bag of words model from clinical text. The red line is using just chief complaint. So it's using one piece of structured data that you get at one point in time in the ER. So it's using very little information. And you can see that both models are somewhat well calibrated. But the intervals, the confidence intervals of both the red and the purple lines gets really big towards the end. And if you look at these bar charts, it explains why, because the models that use less information end up being much more risk averse. So they will never predict a very high probability. They always sort of stay in this lower regime. And that's why we have very big confidence intervals there. So that's all I want to say about evaluation. And I won't take any questions on this right now, because I really want to get on to the rest of the lecture. But again, if you have any questions, post to Piazza. And I'm happy to discuss them with you offline. So in summary, we've talked about how to reduce risk stratification to binary classification. I've told you how to derive the labels. I've given you one example of a machine learning algorithm you could use. And I talked to you about how to evaluate it. What could possibly go wrong? So let's look at some examples. And these are a small number of examples of what could possibly go wrong. There are many more. So here's some data. I'm showing you for the same problem we looked at before, diabetes onset. I'm showing you the prevalence of type 2 diabetes as recorded by, let's say, diagnosis codes across time. So over here is 1980. Over here is 2012. Look at that. It's not a flat line. Now, what does that mean? Does that mean that the population is eating much more unhealthy from 1980 to 2012, and so more people are becoming diabetic? That would be one plausible answer. Another plausible explanation is that something has changed. So in fact, I'm showing you with these blue lines when, in fact, there was a change in the diagnostic criteria for diabetes. And so now the patient population actually didn't change much between, let's say, this time point and that time point. But what really led to this big uptick, according to one theory, is because the diagnostic criteria changed. So who we're calling diabetic has changed, because diseases are, at the end of the day, a human-made concept. What do we call some disease? And so the data is changing, as you see here. Let me show you another example. So the consequence of that is that automatically derived labels, for example, if you use one of those phenotyping algorithms I showed you earlier, the rules, what the label is derived for over here might be very different from the label that's derived from over here, particularly if it's using data such as diagnosis codes that have changed in meaning over the years. So that's one consequence. There'll be other consequences I'll tell you about later. Here's another example. This notion is called non-stationarity, that the data is changing across time. It's not stationary. Here's another example. On the x-axis, again, I'm showing you time. Here, each column is a month from 2005 to 2014. And on the y-axis, I'm showing you, for every row of this table, I'm showing you a laboratory test. And here, we're not looking at the results of the lab test. We're only looking at what fraction of how many lab tests of that type were performed at this point in time. Now, you might expect that, broadly speaking, the number of glucose tests, the number of white blood cell count tests, the number of neutrophil tests, and so on might be pretty constant across time, on average, because you're averaging over lots of people. But indeed, what you see here is that, in fact, there is a huge amount of non-stationarity. Which tests are ordered dramatically changes across time. So for example, you see this one line over here, where it's all blue, meaning no one is ordering the test until this point in time when people start using it. What could that be? Any ideas? Yeah? AUDIENCE MEMBER 4 So that the test was used less, and then you realized that it was not used? So the test was used less, or really, in this case, not used at all. And then suddenly, it was used. Why might that happen in the back? AUDIENCE MEMBER 4 A new test? A new test, because technology changes. Suddenly, we come up with a new diagnostic test, a new lab test. And we can start using it, where it didn't exist before. So obviously, there was no data on it before. What's another reason why it might have suddenly showed up? Yeah? AUDIENCE MEMBER 5 It could be that annual checkups become mandatory, or that it's part of the test at an admission at the hospital. It's an additional test. AUDIENCE MEMBER 4 I'll stick with your first example. Maybe that test becomes mandatory. So maybe there's a clinical guideline that is created at this point in time, right there. And health insurers decide, we're going to reimburse for this test at this point in time. And the test might have been really expensive. So no one would have done it beforehand. And now that the health insurance companies are going to pay for it, now people start doing it. So it might have existed beforehand. But if no one would pay for it, no one would use it. What's the other reason?"
+}

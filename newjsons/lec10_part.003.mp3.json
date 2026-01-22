@@ -1,0 +1,397 @@
+{
+    "chunks": [
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 0.0,
+            "end": 12.92,
+            "text": " dilated convolutions, and so that you have sort of  convolutions built on convolutions.  And so ultimately, you have a much bigger receptive field  for this layer, though you haven't really  increased the number of parameters"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 12.92,
+            "end": 19.400000000000002,
+            "text": " that you have to learn.  So there are some.  It seems like there's lots.  This is not just a problem for us,  but a problem for many people in this field."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 19.400000000000002,
+            "end": 29.28,
+            "text": " So we need to be a little bit more adventurous in terms  of trying some of these other methods.  We did try a little bit of that and didn't find huge gains,  but I think ultimately, there still  needs to be a little bit more work there."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 29.28,
+            "end": 37.34,
+            "text": " OK.  So the last thing I'm going to talk about  before getting into my work is really  this idea of image registration.  So I talked about how there are sometimes"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 37.34,
+            "end": 49.78,
+            "text": " some techniques that have limitations,  either in terms of spatial resolution  or temporal resolution.  So this is a PET scan here, this sort of reddish glow here.  And in the background, we have a CAT scan of the heart."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 49.78,
+            "end": 61.26,
+            "text": " And so clearly, this is a poorly registered image  where you have the PET scan kind of floating out here,  but it really should be lined up here.  And so you have something that's registered better there.  I also mentioned this problem about gating."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 61.26,
+            "end": 71.54,
+            "text": " So ultimately, if you have an image taken  from different cardiac cycles, you're  going to have to align them in some way.  So this is a very, it sounds like a very mature problem  in the computer vision world."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 71.54,
+            "end": 83.1,
+            "text": " We haven't done anything in this space,  but ultimately, it has sort of been around for decades.  Thought I would just at least touch upon it.  So this is sort of the old school way,  and then now people are starting to use"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 83.1,
+            "end": 96.26,
+            "text": " conditional variational autoencoders  to be able to learn geometric transformations.  This is the Siemens group out in Princeton that has this paper.  Again, nothing I'm going to focus on.  Just wanted to bring it up as being an area that"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 96.26,
+            "end": 107.14,
+            "text": " remains of interest.  So I think we're doing OK.  But you said 4.  355.  OK."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 107.14,
+            "end": 113.26,
+            "text": " All right.  And interrupt.  Please interrupt.  I'm hoping that I'm not talking too fast.  OK."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 113.26,
+            "end": 123.18,
+            "text": " So I'm going to talk about, as David said,  this was not my field.  But increasingly, there is some interest  in terms of getting involved in it,  in part because of my frustrations"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 123.18,
+            "end": 133.86,
+            "text": " with clinical medicine.  So this is one of my frustrations  with clinical medicine.  So cardiology has not really changed.  And one of the things it fails at miserably"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 133.86,
+            "end": 147.5,
+            "text": " is picking up early onset disease.  So here's a kind of a typical profile, a little facetious.  So people like me in our early 40s  start to already have some problems  with some of these numbers."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 147.5,
+            "end": 160.42,
+            "text": " So I like to joke that since I came back to the Harvard  system from California, my blood pressure  has gone up 10 points, which is true, unfortunately.  So these changes already start to happen.  And nobody does anything about it."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 160.42,
+            "end": 167.01999999999998,
+            "text": " So you can go to your doctor.  And you're also saying, no, I don't  want to be on any medicines.  They're like, no, no, no.  You shouldn't be on any medicines."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 167.01999999999998,
+            "end": 176.42000000000002,
+            "text": " So you kind of hem and haw.  And a decade goes by.  15 years go by.  And then finally, you're like, OK,  at least my co-worker's on some medicine."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 176.42000000000002,
+            "end": 185.12,
+            "text": " So maybe I'll be willing to do that.  And so then we have lots of stuff you can be treated with.  But it is often very difficult. And you see this  at the doctor level, too.  Yes?"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 185.12,
+            "end": 203.14000000000001,
+            "text": " For the optimal values, how much personal deviation  is there of the cardiac pain?  So the optimal value is fixed and is just  like a reference value.  And you can be off by blood pressure, let's say."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 203.38,
+            "end": 215.89999999999998,
+            "text": " So people consider optimal to be less than 120 over less than 80.  People are in the 200s.  So you'd be treated in the 200s.  But there'll be lots of people in the 140s and the 150s.  And there'll be a degree of kind of nihilism"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 215.89999999999998,
+            "end": 227.22,
+            "text": " about that for some time.  And my patients would be like, oh, I  got into the fight with the parking attendant.  I just had a really bad phone call.  There's countless excuses for why"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 227.22,
+            "end": 235.06,
+            "text": " it is that one shouldn't start a medication.  And this can go on for a long time.  Yes?  Rishabh Rangne, how can you assess the risk  of, for instance, blood pressure?"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 235.06,
+            "end": 252.06,
+            "text": " Does that make noise?  In the Germans, if you go once to the doctor,  they take your blood pressure, decide your risk as?  Yes, so that's a great point.  So the question is that many of the things"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 252.06,
+            "end": 263.38,
+            "text": " that we're seeing as risk factors  have invariant variability to them.  Blood sugar is another great example of those things.  So how are you, if you're going to have a single point estimate  that arises in the setting of a single clinic visit,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 263.38,
+            "end": 274.7,
+            "text": " how much do you trust that?  So there's a couple of things related to that.  So one of them is that people can be sent home with monitors,  and they can have 24-hour monitors.  In Europe, that's much more often done than here."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 274.7,
+            "end": 284.85999999999996,
+            "text": " And then the thing is that they'll say that,  and then you go look at six consecutive visits,  and they all have something elevated.  But it's true.  So this is a noisy point estimate."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 284.85999999999996,
+            "end": 299.34000000000003,
+            "text": " And people have shown that averages tend to do better.  But at the same time, if that's all you have, it's, you know.  And the bias is interesting, because the bias  comes from some degree of stress.  But we have lots of stress in our life."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 299.34000000000003,
+            "end": 307.5,
+            "text": " I hopefully am not the most stressful part  of my patient's life.  And so I think that ultimately, there are.  So that, I mean, that's a, that's,  and the problem with that is that's a,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 307.5,
+            "end": 318.22,
+            "text": " it's a good reason for someone to talk you out  of starting them on anything.  And that's what ends up happening.  And so this could be a really long period of time.  And I think this is, OK, so this is the grim part, OK?"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 318.22,
+            "end": 331.06,
+            "text": " Turns out that once symptoms develop for something  like heart failure, decline is fast.  So 50% mortality in five years after somebody  gets hospitalized for their first heart failure admission.  And often, the symptoms are just around that time."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 331.06,
+            "end": 339.94000000000005,
+            "text": " So unfortunately, these things tend  to be these sort of irreversible changes that  happen in the background.  And largely, you don't really have any symptoms  until late in the game."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 339.94000000000005,
+            "end": 349.74,
+            "text": " So we have this problem where we have this huge stretch.  We know that there is risk factors.  But we have this huge stretch where nobody's  doing anything about them.  And then we have sort of things going downhill relatively"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 349.74,
+            "end": 359.26,
+            "text": " quickly after that.  And unfortunately, I would make a case  that probably responsiveness is probably  best at this phase over there.  Expense is really all over there."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 359.26,
+            "end": 368.94,
+            "text": " So we really want to find, and this  is what I consider to be mystical medicine.  I'm going to come back to this again a little bit later on.  But really, we want to have these kind of,  if you're going to do something in this asymptomatic phase,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 368.94,
+            "end": 380.48,
+            "text": " it better be cheap.  You're not going to be getting MRIs every day  or every year for people who have these no symptoms.  The system will bankrupt if you have that.  So we need these kind of low-cost metrics"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 380.48,
+            "end": 392.32,
+            "text": " that can tell us at an individual level,  not just if we had 1,000 people like you,  somebody would benefit.  But really, and this is what my patients would say,  is they would be so excited about their EKG"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 392.32,
+            "end": 405.8,
+            "text": " or their echo being done every year, because they want to know  how does it look like compared to last year.  They want some comparison at their level,  not just some public health kind of report about so-and-so  being, this being a benefit to 100 people like you."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 406.28000000000003,
+            "end": 416.8,
+            "text": " So it should be both kind of low-cost,  should be reflective at something at an individual  level, should be relatively specific to the disease  process, expressive in some way, and should  get better with therapy."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 416.8,
+            "end": 427.12,
+            "text": " I think that's one of the things that's pretty important,  is if somebody does the things you ask them to do,  hopefully that will look better.  And then that would be motivating.  And I think that's kind of how people get motivated,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 427.12,
+            "end": 437.44,
+            "text": " is that they get responses.  So I would make a case that even simple things like an ultrasound,  and I have one showed here, really  does capture some of these things.  Not all those things, but they have some of those things."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 437.44,
+            "end": 446.59999999999997,
+            "text": " So you have, for example, that in the setting of high blood  pressure, the left ventricular mass starts to thicken.  And this is a kind of a quantitative, continuous  measure.  It just thickens over time."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 446.59999999999997,
+            "end": 458.2,
+            "text": " And the heart starts to change.  The pumping function can get worse over time.  The left atrium, which is this structure over here,  this thin walled structure, is amazing in the sense  that it's almost this barometer for the pressure in the heart."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 458.2,
+            "end": 468.24,
+            "text": " And that it's, oh, that's a horrible reference.  But it tends to get kind of bigger and bigger  in a very subtle way before any symptoms happen.  And this is just one view.  So this is a simple view acquired"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 468.24,
+            "end": 478.8,
+            "text": " from an ultrasound that captures some of these things  at an individual level.  So this gets to some of my thoughts  around where we could imagine automated interpretation  benefiting."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 478.8,
+            "end": 495.12,
+            "text": " So if you want to think about where you're less likely,  so with these kind of very, very difficult kind of end  stage or complex decisions where you have a super skilled person  even collecting the data in the first place,  they've gone through training, they're"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 495.12,
+            "end": 503.32000000000005,
+            "text": " sort of super experienced.  You have a very expensive piece of hardware  used to collect the data.  You have an expert interpreting it.  This is done late in the disease course."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 503.32000000000005,
+            "end": 513.72,
+            "text": " You have to make really hard decisions.  You don't want to mess it up.  So probably not good places to try to stick  in a automated system in there.  But what would be attractive would"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 513.72,
+            "end": 526.72,
+            "text": " be to try to enable studies that are not even being done at all.  So move to the primary care setting,  use low cost handheld.  There's even now companies that are  starting to try to automate acquisition of the data"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 526.72,
+            "end": 537.2800000000001,
+            "text": " by helping people collect it and guide them  to collecting the right views.  Early in the disease course, no real symptoms here.  Decision support, just around whether you  should start some meds or intensify them,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 537.2800000000001,
+            "end": 547.6800000000001,
+            "text": " low liability, low cost.  So this is a place where we wanted  to focus in terms of being able to introduce  some kind of innovations in this space.  So this comes back to the sort of slide of,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 547.6800000000001,
+            "end": 561.92,
+            "text": " I talked about where you could imagine some of these things  being low hanging fruit.  But maybe those aren't the ones that we should be focusing on.  We should instead be focusing on enabling more data  at low cost, getting more out of the data that we're collecting,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 561.92,
+            "end": 569.5,
+            "text": " and helping people even acquire it in the first place.  So that's one category of things.  And that's the one I just highlighted  in the previous slide.  You can imagine something running"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 569.5,
+            "end": 578.12,
+            "text": " in the background at a hospital system level  and just checking to see whether there's anybody who  was missed in some ways.  And then triage, I'm going to talk about in the next slide.  We'll come back to that."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 578.12,
+            "end": 588.2399999999999,
+            "text": " And then really, and this is, again,  one of the reasons I got into this,  we want to do something that elevates practice  beyond just simply repeating what we already do.  And so this kind of idea of quantitative tracking"
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 588.2399999999999,
+            "end": 598.12,
+            "text": " of intermediate states, subclasses of diseases,  which is actually the real reason I got into this space  is because I wanted to increase scale of data  to be able to do this.  And this is where you potentially would like to go."
+        },
+        {
+            "number": "lec10",
+            "title": "part.003.mp3",
+            "start": 598.12,
+            "end": 601.7199999999999,
+            "text": " So the ECG example is an interesting example."
+        }
+    ],
+    "text": " dilated convolutions, and so that you have sort of convolutions built on convolutions. And so ultimately, you have a much bigger receptive field for this layer, though you haven't really increased the number of parameters that you have to learn. So there are some. It seems like there's lots. This is not just a problem for us, but a problem for many people in this field. So we need to be a little bit more adventurous in terms of trying some of these other methods. We did try a little bit of that and didn't find huge gains, but I think ultimately, there still needs to be a little bit more work there. OK. So the last thing I'm going to talk about before getting into my work is really this idea of image registration. So I talked about how there are sometimes some techniques that have limitations, either in terms of spatial resolution or temporal resolution. So this is a PET scan here, this sort of reddish glow here. And in the background, we have a CAT scan of the heart. And so clearly, this is a poorly registered image where you have the PET scan kind of floating out here, but it really should be lined up here. And so you have something that's registered better there. I also mentioned this problem about gating. So ultimately, if you have an image taken from different cardiac cycles, you're going to have to align them in some way. So this is a very, it sounds like a very mature problem in the computer vision world. We haven't done anything in this space, but ultimately, it has sort of been around for decades. Thought I would just at least touch upon it. So this is sort of the old school way, and then now people are starting to use conditional variational autoencoders to be able to learn geometric transformations. This is the Siemens group out in Princeton that has this paper. Again, nothing I'm going to focus on. Just wanted to bring it up as being an area that remains of interest. So I think we're doing OK. But you said 4. 355. OK. All right. And interrupt. Please interrupt. I'm hoping that I'm not talking too fast. OK. So I'm going to talk about, as David said, this was not my field. But increasingly, there is some interest in terms of getting involved in it, in part because of my frustrations with clinical medicine. So this is one of my frustrations with clinical medicine. So cardiology has not really changed. And one of the things it fails at miserably is picking up early onset disease. So here's a kind of a typical profile, a little facetious. So people like me in our early 40s start to already have some problems with some of these numbers. So I like to joke that since I came back to the Harvard system from California, my blood pressure has gone up 10 points, which is true, unfortunately. So these changes already start to happen. And nobody does anything about it. So you can go to your doctor. And you're also saying, no, I don't want to be on any medicines. They're like, no, no, no. You shouldn't be on any medicines. So you kind of hem and haw. And a decade goes by. 15 years go by. And then finally, you're like, OK, at least my co-worker's on some medicine. So maybe I'll be willing to do that. And so then we have lots of stuff you can be treated with. But it is often very difficult. And you see this at the doctor level, too. Yes? For the optimal values, how much personal deviation is there of the cardiac pain? So the optimal value is fixed and is just like a reference value. And you can be off by blood pressure, let's say. So people consider optimal to be less than 120 over less than 80. People are in the 200s. So you'd be treated in the 200s. But there'll be lots of people in the 140s and the 150s. And there'll be a degree of kind of nihilism about that for some time. And my patients would be like, oh, I got into the fight with the parking attendant. I just had a really bad phone call. There's countless excuses for why it is that one shouldn't start a medication. And this can go on for a long time. Yes? Rishabh Rangne, how can you assess the risk of, for instance, blood pressure? Does that make noise? In the Germans, if you go once to the doctor, they take your blood pressure, decide your risk as? Yes, so that's a great point. So the question is that many of the things that we're seeing as risk factors have invariant variability to them. Blood sugar is another great example of those things. So how are you, if you're going to have a single point estimate that arises in the setting of a single clinic visit, how much do you trust that? So there's a couple of things related to that. So one of them is that people can be sent home with monitors, and they can have 24-hour monitors. In Europe, that's much more often done than here. And then the thing is that they'll say that, and then you go look at six consecutive visits, and they all have something elevated. But it's true. So this is a noisy point estimate. And people have shown that averages tend to do better. But at the same time, if that's all you have, it's, you know. And the bias is interesting, because the bias comes from some degree of stress. But we have lots of stress in our life. I hopefully am not the most stressful part of my patient's life. And so I think that ultimately, there are. So that, I mean, that's a, that's, and the problem with that is that's a, it's a good reason for someone to talk you out of starting them on anything. And that's what ends up happening. And so this could be a really long period of time. And I think this is, OK, so this is the grim part, OK? Turns out that once symptoms develop for something like heart failure, decline is fast. So 50% mortality in five years after somebody gets hospitalized for their first heart failure admission. And often, the symptoms are just around that time. So unfortunately, these things tend to be these sort of irreversible changes that happen in the background. And largely, you don't really have any symptoms until late in the game. So we have this problem where we have this huge stretch. We know that there is risk factors. But we have this huge stretch where nobody's doing anything about them. And then we have sort of things going downhill relatively quickly after that. And unfortunately, I would make a case that probably responsiveness is probably best at this phase over there. Expense is really all over there. So we really want to find, and this is what I consider to be mystical medicine. I'm going to come back to this again a little bit later on. But really, we want to have these kind of, if you're going to do something in this asymptomatic phase, it better be cheap. You're not going to be getting MRIs every day or every year for people who have these no symptoms. The system will bankrupt if you have that. So we need these kind of low-cost metrics that can tell us at an individual level, not just if we had 1,000 people like you, somebody would benefit. But really, and this is what my patients would say, is they would be so excited about their EKG or their echo being done every year, because they want to know how does it look like compared to last year. They want some comparison at their level, not just some public health kind of report about so-and-so being, this being a benefit to 100 people like you. So it should be both kind of low-cost, should be reflective at something at an individual level, should be relatively specific to the disease process, expressive in some way, and should get better with therapy. I think that's one of the things that's pretty important, is if somebody does the things you ask them to do, hopefully that will look better. And then that would be motivating. And I think that's kind of how people get motivated, is that they get responses. So I would make a case that even simple things like an ultrasound, and I have one showed here, really does capture some of these things. Not all those things, but they have some of those things. So you have, for example, that in the setting of high blood pressure, the left ventricular mass starts to thicken. And this is a kind of a quantitative, continuous measure. It just thickens over time. And the heart starts to change. The pumping function can get worse over time. The left atrium, which is this structure over here, this thin walled structure, is amazing in the sense that it's almost this barometer for the pressure in the heart. And that it's, oh, that's a horrible reference. But it tends to get kind of bigger and bigger in a very subtle way before any symptoms happen. And this is just one view. So this is a simple view acquired from an ultrasound that captures some of these things at an individual level. So this gets to some of my thoughts around where we could imagine automated interpretation benefiting. So if you want to think about where you're less likely, so with these kind of very, very difficult kind of end stage or complex decisions where you have a super skilled person even collecting the data in the first place, they've gone through training, they're sort of super experienced. You have a very expensive piece of hardware used to collect the data. You have an expert interpreting it. This is done late in the disease course. You have to make really hard decisions. You don't want to mess it up. So probably not good places to try to stick in a automated system in there. But what would be attractive would be to try to enable studies that are not even being done at all. So move to the primary care setting, use low cost handheld. There's even now companies that are starting to try to automate acquisition of the data by helping people collect it and guide them to collecting the right views. Early in the disease course, no real symptoms here. Decision support, just around whether you should start some meds or intensify them, low liability, low cost. So this is a place where we wanted to focus in terms of being able to introduce some kind of innovations in this space. So this comes back to the sort of slide of, I talked about where you could imagine some of these things being low hanging fruit. But maybe those aren't the ones that we should be focusing on. We should instead be focusing on enabling more data at low cost, getting more out of the data that we're collecting, and helping people even acquire it in the first place. So that's one category of things. And that's the one I just highlighted in the previous slide. You can imagine something running in the background at a hospital system level and just checking to see whether there's anybody who was missed in some ways. And then triage, I'm going to talk about in the next slide. We'll come back to that. And then really, and this is, again, one of the reasons I got into this, we want to do something that elevates practice beyond just simply repeating what we already do. And so this kind of idea of quantitative tracking of intermediate states, subclasses of diseases, which is actually the real reason I got into this space is because I wanted to increase scale of data to be able to do this. And this is where you potentially would like to go. So the ECG example is an interesting example."
+}

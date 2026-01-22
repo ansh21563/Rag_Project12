@@ -1,0 +1,306 @@
+{
+    "chunks": [
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 0.0,
+            "end": 9.52,
+            "text": " the blood test results and their age.  And it gives you a number out.  And from that number, you can get some sense  of where the patient is in this trajectory.  But it's really coarse grained, and it's not at all"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 9.52,
+            "end": 22.48,
+            "text": " predictive about when the patient  is going to progress to the next stage of the disease.  Now, other conditions, for example, some cancers,  like I'll tell you about next, don't  follow that linear trajectory."
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 22.48,
+            "end": 34.78,
+            "text": " Rather, patients' conditions and the disease burden,  which is what I'm showing in the y-axis here,  might get worse, better, worse again, better again, worse  again, and so on.  And of course, it's a function of the treatment"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 34.78,
+            "end": 47.900000000000006,
+            "text": " for the patient and other things that are going on with them.  And understanding what influences  how a patient's disease is going to progress  and when is that progression going to happen  could be enormously valuable for many"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 47.900000000000006,
+            "end": 67.3,
+            "text": " of those different parts of the health care ecosystem.  So one concrete example of how that type of prediction  could be used would be in a type of precision medicine.  So returning back to the example that I mentioned  in the very beginning of today's lecture of multiple myeloma,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 67.3,
+            "end": 81.58000000000001,
+            "text": " which I said my mother died of, there  are a large number of existing treatments  for multiple myeloma.  And we don't really know which treatments work best for whom.  But imagine a day where we have algorithms"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 81.58000000000001,
+            "end": 92.78,
+            "text": " that could take what you know about the patient at one point  in time.  That might include, for example, blood test results.  It might include RNA-seq, which gives you  some sense of the gene expression for the patient"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 92.78,
+            "end": 106.78,
+            "text": " that, in this case, will be derived from a sample taken  from the patient's bone marrow.  You could take that data and try to predict  what would happen to a patient under two different scenarios.  The blue scenario that I'm showing you here,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 106.78,
+            "end": 116.34,
+            "text": " if you give them treatment A, or this red scenario  here, where you give them treatment B.  And of course, treatment A and treatment B  aren't just one-time treatments,  but they're treatment strategies."
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 116.34,
+            "end": 132.18,
+            "text": " So they're repeated treatments across time  with some intervals.  And if your algorithm says that under treatment B,  this is what's going to happen, then the clinician  might think, OK, treatment B is probably the way to go here."
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 132.18,
+            "end": 146.98,
+            "text": " It's going to long-term control the patient's disease  burden the best.  And this is an example of a causal question,  because we want to know, how do we  cause a change in the patient's disease trajectory?"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 146.98,
+            "end": 158.22,
+            "text": " And we can try to answer this now using data.  So for example, one of the data sets  that's available for you to use in your course projects  is from the Multiple Myeloma Research Foundation.  It's an example of a disease registry,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 158.22,
+            "end": 168.78,
+            "text": " just like the disease registry I talked to you  about earlier for rheumatoid arthritis.  And it follows about 1,000 patients  across time, patients who have multiple myeloma,  what treatments they're getting,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 168.78,
+            "end": 183.34,
+            "text": " what their symptoms are, and at a couple of different stages,  very detailed biological data about their cancer,  in this case, RNA-seq.  And one could attempt to use that data to learn models  to make predictions like this."
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 183.34,
+            "end": 195.88,
+            "text": " But such predictions are fraught with errors.  And one of the things that Peter and I  will be teaching you in this course  is that there's a very big difference between prediction  and prediction for the purpose of making causal statements."
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 195.88,
+            "end": 207.07999999999998,
+            "text": " And the way that you interpret the data  that you have when your goal is to do treatment suggestion  or optimization is going to be very  different from what you were taught  in the introductory machine learning algorithms class."
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 207.07999999999998,
+            "end": 219.4,
+            "text": " So other ways that we could try to treat and manage patients  with chronic disease include early diagnosis,  for example, of patients with Alzheimer's disease.  There's been some really interesting results  just in the last few years here."
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 219.4,
+            "end": 238.12,
+            "text": " Or new modalities altogether, for example,  liquid biopsies that are able to do early diagnosis of cancer  even without having to do a biopsy of the cancer tumor  itself.  We can also think about how do we better track and measure"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 238.12,
+            "end": 252.28,
+            "text": " chronic disease.  So one example shown on the left here  is from Dina Khatabi's lab here at MIT and CSAIL,  where they've developed a system called  Amarode, which is using wireless signals, the same wireless"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 252.28,
+            "end": 263.52,
+            "text": " signals that we have in this room today,  to try to track patients.  And they can actually see behind walls,  which is quite impressive.  So using this wireless signal, you"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 263.52,
+            "end": 277.24,
+            "text": " could install what looks like just a regular wireless router  in an elderly person's home.  And you could detect if that elderly patient falls.  And of course, if the patient has falled  and they're elderly, it might be very hard for them"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 277.24,
+            "end": 286.68,
+            "text": " to get back up.  And they might have broken a hip, for example.  And one could then alert the caregivers, maybe if necessary,  bring in emergency support.  And that could have a long-term outcome"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 286.68,
+            "end": 300.20000000000005,
+            "text": " for this patient, which could really help them.  So this is an example of what I mean by better tracking  chronic patients with chronic disease.  Another example comes for patients  who have type 1 diabetes."
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 300.20000000000005,
+            "end": 322.03999999999996,
+            "text": " Type 1 diabetes, as opposed to type 2 diabetes,  generally develops in patients at a very early age,  usually as children it's diagnosed.  And one is typically managed by having a insulin pump, which  is attached to a patient and can give injections of insulin"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 322.03999999999996,
+            "end": 335.12,
+            "text": " on the fly as necessary.  But there's a really challenging control problem there.  If you give the patient too much insulin, you could kill them.  If you give them too little insulin,  you could really hurt them."
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 335.12,
+            "end": 346.06,
+            "text": " And how much insulin you give them  is going to be a function of their activity.  It's going to be a function of what food they're eating  and various other factors.  So this is a question which the control theory community"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 346.06,
+            "end": 357.18,
+            "text": " has been thinking through for a number of years.  And there are a number of sophisticated algorithms  that are present in today's products.  And I wouldn't be surprised if one or two people in the room  today have one of these."
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 357.18,
+            "end": 368.14,
+            "text": " But it also presents a really interesting opportunity  for machine learning.  Because right now, we're not doing a very good job  at predicting future glucose levels, which  is essential for figuring out how to regulate insulin."
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 368.14,
+            "end": 382.29999999999995,
+            "text": " And if we had algorithms that could, for example, take  a patient's phone, take a picture of the food  that a patient is eating, have that automatically feed  into an algorithm that predicts its caloric content  and how quickly that will be processed by the body,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 382.29999999999995,
+            "end": 393.62,
+            "text": " and then as a result of that, think about when,  based on this patient's metabolic system,  when should you start increasing insulin levels  and by how much?  That could have a huge impact on quality of life"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 393.62,
+            "end": 408.06,
+            "text": " of these types of patients.  So finally, we've talked a lot about how do we manage health  care, but equally important is about discovery.  So the same data that we could use  to try to change the way that algorithms are implemented"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 408.06,
+            "end": 421.46,
+            "text": " could be used to think through what would be new treatments  and make new discoveries about disease subtypes.  So at one point later in the semester,  we'll be talking about disease progression modeling.  And we'll talk about how to use data-driven approaches"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 421.46,
+            "end": 436.62,
+            "text": " to discover different subtypes of disease.  And on the left here, I'm showing an example of a really  nice study from back in 2008 that  used a k-means clustering algorithm  to discover subtypes of asthma."
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 436.62,
+            "end": 455.38,
+            "text": " One could also use machine learning  to try to make discoveries about what proteins, for example,  are important in regulating disease.  How could we differentiate at a biological level  which patients will progress quickly, which patients"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 455.38,
+            "end": 470.86,
+            "text": " will respond to treatment?  And that, of course, will then suggest new ways of new drug  targets for new pharmaceutical efforts.  Another direction also studied here at MIT  by quite a few labs, actually, has"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 470.86,
+            "end": 489.94,
+            "text": " to do with drug creation or discovery.  So one could use machine learning algorithms  to try to predict what would a good antibody be for trying  to bind with a particular target.  So that's all for my overview."
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 489.94,
+            "end": 502.18,
+            "text": " And in the remaining 20 minutes, I'm  going to tell you a little bit about what's  unique about machine learning in health care,  and then an overview of the class syllabus.  And I do see that it says replace lamp in six minutes,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 502.18,
+            "end": 510.65999999999997,
+            "text": " or power will turn off and go into standby mode.  But we have that one, right?  Ah, OK.  Good.  You're hired."
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 510.65999999999997,
+            "end": 522.26,
+            "text": " If you didn't get into the class, talk to me afterwards.  All right.  I'll just stick to your defenses.  We hope.  So what's unique about machine learning in health care?"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 522.26,
+            "end": 541.58,
+            "text": " I gave you already some hints at this.  So first, health care is ultimately, unfortunately,  about life or death decisions.  So we need robust algorithms that don't screw up.  A prime example of this, which I'll tell you"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 541.58,
+            "end": 567.4,
+            "text": " a little bit more about towards the end of the semester,  is from a major software error that occurred something  like 20, 30 years ago in an x-ray type device,  where an overwhelming amount of radiation  was exposed to a patient just because of a software overflow"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 567.4,
+            "end": 586.22,
+            "text": " problem, a bug.  And of course, that resulted in a number of patients dying.  So that was a software error from decades ago,  where there was no machine learning in the loop.  And as a result of that and similar types of disasters,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.005.mp3",
+            "start": 586.22,
+            "end": 602.0999999999999,
+            "text": " including in the space industry and airplanes and so on,  led to a whole area of research in computer science  in formal methods.  And how do we design computer algorithms that can check  that a problem exists?"
+        }
+    ],
+    "text": " the blood test results and their age. And it gives you a number out. And from that number, you can get some sense of where the patient is in this trajectory. But it's really coarse grained, and it's not at all predictive about when the patient is going to progress to the next stage of the disease. Now, other conditions, for example, some cancers, like I'll tell you about next, don't follow that linear trajectory. Rather, patients' conditions and the disease burden, which is what I'm showing in the y-axis here, might get worse, better, worse again, better again, worse again, and so on. And of course, it's a function of the treatment for the patient and other things that are going on with them. And understanding what influences how a patient's disease is going to progress and when is that progression going to happen could be enormously valuable for many of those different parts of the health care ecosystem. So one concrete example of how that type of prediction could be used would be in a type of precision medicine. So returning back to the example that I mentioned in the very beginning of today's lecture of multiple myeloma, which I said my mother died of, there are a large number of existing treatments for multiple myeloma. And we don't really know which treatments work best for whom. But imagine a day where we have algorithms that could take what you know about the patient at one point in time. That might include, for example, blood test results. It might include RNA-seq, which gives you some sense of the gene expression for the patient that, in this case, will be derived from a sample taken from the patient's bone marrow. You could take that data and try to predict what would happen to a patient under two different scenarios. The blue scenario that I'm showing you here, if you give them treatment A, or this red scenario here, where you give them treatment B. And of course, treatment A and treatment B aren't just one-time treatments, but they're treatment strategies. So they're repeated treatments across time with some intervals. And if your algorithm says that under treatment B, this is what's going to happen, then the clinician might think, OK, treatment B is probably the way to go here. It's going to long-term control the patient's disease burden the best. And this is an example of a causal question, because we want to know, how do we cause a change in the patient's disease trajectory? And we can try to answer this now using data. So for example, one of the data sets that's available for you to use in your course projects is from the Multiple Myeloma Research Foundation. It's an example of a disease registry, just like the disease registry I talked to you about earlier for rheumatoid arthritis. And it follows about 1,000 patients across time, patients who have multiple myeloma, what treatments they're getting, what their symptoms are, and at a couple of different stages, very detailed biological data about their cancer, in this case, RNA-seq. And one could attempt to use that data to learn models to make predictions like this. But such predictions are fraught with errors. And one of the things that Peter and I will be teaching you in this course is that there's a very big difference between prediction and prediction for the purpose of making causal statements. And the way that you interpret the data that you have when your goal is to do treatment suggestion or optimization is going to be very different from what you were taught in the introductory machine learning algorithms class. So other ways that we could try to treat and manage patients with chronic disease include early diagnosis, for example, of patients with Alzheimer's disease. There's been some really interesting results just in the last few years here. Or new modalities altogether, for example, liquid biopsies that are able to do early diagnosis of cancer even without having to do a biopsy of the cancer tumor itself. We can also think about how do we better track and measure chronic disease. So one example shown on the left here is from Dina Khatabi's lab here at MIT and CSAIL, where they've developed a system called Amarode, which is using wireless signals, the same wireless signals that we have in this room today, to try to track patients. And they can actually see behind walls, which is quite impressive. So using this wireless signal, you could install what looks like just a regular wireless router in an elderly person's home. And you could detect if that elderly patient falls. And of course, if the patient has falled and they're elderly, it might be very hard for them to get back up. And they might have broken a hip, for example. And one could then alert the caregivers, maybe if necessary, bring in emergency support. And that could have a long-term outcome for this patient, which could really help them. So this is an example of what I mean by better tracking chronic patients with chronic disease. Another example comes for patients who have type 1 diabetes. Type 1 diabetes, as opposed to type 2 diabetes, generally develops in patients at a very early age, usually as children it's diagnosed. And one is typically managed by having a insulin pump, which is attached to a patient and can give injections of insulin on the fly as necessary. But there's a really challenging control problem there. If you give the patient too much insulin, you could kill them. If you give them too little insulin, you could really hurt them. And how much insulin you give them is going to be a function of their activity. It's going to be a function of what food they're eating and various other factors. So this is a question which the control theory community has been thinking through for a number of years. And there are a number of sophisticated algorithms that are present in today's products. And I wouldn't be surprised if one or two people in the room today have one of these. But it also presents a really interesting opportunity for machine learning. Because right now, we're not doing a very good job at predicting future glucose levels, which is essential for figuring out how to regulate insulin. And if we had algorithms that could, for example, take a patient's phone, take a picture of the food that a patient is eating, have that automatically feed into an algorithm that predicts its caloric content and how quickly that will be processed by the body, and then as a result of that, think about when, based on this patient's metabolic system, when should you start increasing insulin levels and by how much? That could have a huge impact on quality of life of these types of patients. So finally, we've talked a lot about how do we manage health care, but equally important is about discovery. So the same data that we could use to try to change the way that algorithms are implemented could be used to think through what would be new treatments and make new discoveries about disease subtypes. So at one point later in the semester, we'll be talking about disease progression modeling. And we'll talk about how to use data-driven approaches to discover different subtypes of disease. And on the left here, I'm showing an example of a really nice study from back in 2008 that used a k-means clustering algorithm to discover subtypes of asthma. One could also use machine learning to try to make discoveries about what proteins, for example, are important in regulating disease. How could we differentiate at a biological level which patients will progress quickly, which patients will respond to treatment? And that, of course, will then suggest new ways of new drug targets for new pharmaceutical efforts. Another direction also studied here at MIT by quite a few labs, actually, has to do with drug creation or discovery. So one could use machine learning algorithms to try to predict what would a good antibody be for trying to bind with a particular target. So that's all for my overview. And in the remaining 20 minutes, I'm going to tell you a little bit about what's unique about machine learning in health care, and then an overview of the class syllabus. And I do see that it says replace lamp in six minutes, or power will turn off and go into standby mode. But we have that one, right? Ah, OK. Good. You're hired. If you didn't get into the class, talk to me afterwards. All right. I'll just stick to your defenses. We hope. So what's unique about machine learning in health care? I gave you already some hints at this. So first, health care is ultimately, unfortunately, about life or death decisions. So we need robust algorithms that don't screw up. A prime example of this, which I'll tell you a little bit more about towards the end of the semester, is from a major software error that occurred something like 20, 30 years ago in an x-ray type device, where an overwhelming amount of radiation was exposed to a patient just because of a software overflow problem, a bug. And of course, that resulted in a number of patients dying. So that was a software error from decades ago, where there was no machine learning in the loop. And as a result of that and similar types of disasters, including in the space industry and airplanes and so on, led to a whole area of research in computer science in formal methods. And how do we design computer algorithms that can check that a problem exists?"
+}

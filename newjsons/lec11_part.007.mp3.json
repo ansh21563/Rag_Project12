@@ -1,0 +1,257 @@
+{
+    "chunks": [
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 0.0,
+            "end": 15.44,
+            "text": " question-asking strategy than another.  The degree of refinement, people talk about things  like just-in-time algorithms, where  if you run out of time to think more deliberatively,  you can just take the best answer that's"
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 15.44,
+            "end": 31.919999999999998,
+            "text": " available to you now.  And so taking the value of information,  the value of computation, and the value of experimentation  into account in doing this meta-level reasoning  is important to come up with the most effective strategies."
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 31.919999999999998,
+            "end": 55.36,
+            "text": " So he gives an example of a time-pressured decision  problem where you have a patient, a 75-year-old woman  in the ICU, and she develops sudden breathing difficulties.  So what do you do?  Well, it's a challenge."
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 55.36,
+            "end": 69.16,
+            "text": " You could be very deliberative, but the problem  is that she may die because she's not breathing well.  Or you could impulsively say, well,  let's put her on a mechanical ventilator  because we know that that'll prevent her"
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 69.16,
+            "end": 83.2,
+            "text": " from dying in the short term.  But that may be the wrong decision  because that has bad side effects.  She may get an infection, get pneumonia, and die that way.  And you certainly don't want to subject her to that risk"
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 83.2,
+            "end": 97.72,
+            "text": " if she didn't need to take that risk.  So they designed an architecture that says,  well, this is the decision that you're  trying to make, which they're modeling by an influence  diagram."
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 97.72,
+            "end": 112.92,
+            "text": " So this is a Bayesian network with the addition of decision  nodes and value nodes.  But you use Bayesian network techniques  to calculate optimal decisions here.  And then this is kind of the background knowledge"
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 112.92,
+            "end": 129.58,
+            "text": " of what we understand about the relationships  among different things in the intensive care unit.  And this is a representation of the meta reasoning  that says, which utility model should we use?  Which reasoning technique should we use?"
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 129.58,
+            "end": 144.18,
+            "text": " And so on.  And they built an architecture that integrates  these various approaches.  And then in my last two minutes, I  just want to tell you about an interesting,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 144.18,
+            "end": 164.4,
+            "text": " this is a modern view, not historical.  So this was a paper presented at the last NeurIPS meeting,  which said, the kind of problems that we've  been talking about, like the acute renal failure problem  or like any of these others, we can reformulate this"
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 164.4,
+            "end": 185.92,
+            "text": " as a reinforcement learning problem.  So the idea is that if you treat all activities,  including putting somebody on a ventilator  or concluding a diagnostic conclusion  or asking a question or any of the other things"
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 185.92,
+            "end": 206.38,
+            "text": " that we've contemplated, if you treat those all in a uniform  way and say, these are actions, we then  model the universe as a Markov decision process,  where every time that you take one of these actions,  it changes the state of the patient"
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 206.38,
+            "end": 222.66,
+            "text": " or the state of our knowledge about the patient.  And then you do reinforcement learning  to figure out what is the optimal policy  to apply under all possible states  in order to maximize the expected outcome."
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 222.66,
+            "end": 240.26,
+            "text": " So that's exactly the approach that they're taking.  The state space is the set of positive and negative findings.  The action space is to ask about a finding  or conclude a diagnosis.  The reward is the correct or incorrect single diagnosis."
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 240.26,
+            "end": 253.06,
+            "text": " So once you reach a diagnosis, the process stops,  and you get your reward.  It's finite horizon because they impose a limit  on the number of questions.  If you don't get an answer by then, you lose."
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 253.06,
+            "end": 272.0,
+            "text": " You get a minus 1 reward.  There's a discount factor so that the further away  a reward is, the less value it has to you  at any point, which encourages shorter question sequences.  And they use a pretty standard Q-learning framework,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 272.0,
+            "end": 287.11999999999995,
+            "text": " or at least a modern Q-learning framework,  using a double deep neural network strategy.  And then there are two pieces of magic sauce  that make this work better.  And one of them is that they want"
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 287.11999999999995,
+            "end": 300.02,
+            "text": " to encourage asking questions that  are likely to have positive answers rather  than negative answers.  And the reason is because in their world,  there are hundreds and hundreds of questions."
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 300.02,
+            "end": 314.58,
+            "text": " And of course, most patients don't  have most of those findings.  And so you don't want to ask a whole bunch of questions  to which the answer is no, no, no, no, no, no, no, no, no, no,  because that doesn't give you very much guidance."
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 314.58,
+            "end": 337.29999999999995,
+            "text": " You want to ask questions where the answer is yes,  because that helps you clue in on what's really going on.  So they actually have a nice proof  that they do this thing they call reward shaping, which  basically adds some incremental reward for asking questions"
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 337.34000000000003,
+            "end": 352.5,
+            "text": " that will have a positive answer,  but that they can prove that an optimal policy learned  from that reward function is also  optimal for the reward function that would not include it.  So that's kind of cool."
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 352.5,
+            "end": 370.26,
+            "text": " And then the other thing they do is  to try to identify a reduced space of findings  by what they call feature rebuilding.  And this is essentially a dimension reduction technique  where they're co-training in this dual network"
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 370.26,
+            "end": 390.76,
+            "text": " architecture.  They're co-training the policy model that's, of course,  the neural network model, this being the 2010s.  And so they're generating a sequence, a deep layered set  of neural networks that generate an output, which"
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 390.76,
+            "end": 414.0,
+            "text": " is the m questions and the n conclusions that can be made.  And I think it does a soft max over these  to come up with the right policy for any particular situation.  But at the same time, they co-train it  in order to predict a number of all of the manifestations"
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 414.0,
+            "end": 430.58000000000004,
+            "text": " from what they've observed before.  So it's learning a probabilistic model  that says, if you've answered the following questions  in the following ways, here are the likely answers  that you would give to the remaining manifestations."
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 430.58000000000004,
+            "end": 443.66,
+            "text": " And the reason they can do that, of course,  is because they really are not independent.  They're very often co-varying.  And so they learn that co-variance  and therefore can predict which answers are"
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 443.66,
+            "end": 461.22,
+            "text": " going to get yes answers, which questions are  going to get yes answers.  And therefore, they can bias the learning toward doing that.  So last slide.  So this system is called ReFuel."
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 461.22,
+            "end": 484.62,
+            "text": " It's been tested on a simulated data set of 650 diseases  and 375 symptoms.  And what they show is that the red line is their algorithm.  The yellow line uses only this reward reshaping.  And the blue line is just a straight reinforcement"
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 484.62,
+            "end": 500.78000000000003,
+            "text": " learning approach.  And you can see that they're doing much better  after many fewer epochs of training in doing this.  Now, take this with a grain of salt. This is all fake data.  So they didn't have real data sets to test this on."
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 500.78000000000003,
+            "end": 517.34,
+            "text": " They got statistics on what diseases are common  and what symptoms are common in those diseases.  And then they had a generative model  that generated this fake data.  And then they learned from that generative model."
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 517.34,
+            "end": 530.46,
+            "text": " So of course, it would be really important to redo  this study with real data.  But they've not done that.  And this was just published a few months ago.  So that's sort of where we are at the moment in diagnosis"
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 530.46,
+            "end": 548.1800000000001,
+            "text": " and in differential diagnosis.  And I wanted to start by sort of introducing  these ideas in a kind of historical framework.  But it means that there are a tremendous number of papers,  as you can imagine, that have been written since the 1990s"
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 548.1800000000001,
+            "end": 565.46,
+            "text": " and 80s that I was showing you that are essentially  elaborations on the same themes.  And it's only in the past decade of the advent  of these neural network models that people  have changed strategy so that instead"
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 565.5,
+            "end": 580.98,
+            "text": " of learning explicit probabilities, for example,  like you do in a Bayesian network,  you just say, well, this is simply a prediction task.  And so we'll predict the way we predict everything else  with neural network models, which"
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 580.98,
+            "end": 594.42,
+            "text": " is we build a CNN or an RNN or some combination of things  or some attention model or something.  And we throw that at it.  And it does typically a slightly better job  than any of the previous learning methods"
+        },
+        {
+            "number": "lec11",
+            "title": "part.007.mp3",
+            "start": 594.42,
+            "end": 599.82,
+            "text": " that we've used typically, but not always.  OK, peace."
+        }
+    ],
+    "text": " question-asking strategy than another. The degree of refinement, people talk about things like just-in-time algorithms, where if you run out of time to think more deliberatively, you can just take the best answer that's available to you now. And so taking the value of information, the value of computation, and the value of experimentation into account in doing this meta-level reasoning is important to come up with the most effective strategies. So he gives an example of a time-pressured decision problem where you have a patient, a 75-year-old woman in the ICU, and she develops sudden breathing difficulties. So what do you do? Well, it's a challenge. You could be very deliberative, but the problem is that she may die because she's not breathing well. Or you could impulsively say, well, let's put her on a mechanical ventilator because we know that that'll prevent her from dying in the short term. But that may be the wrong decision because that has bad side effects. She may get an infection, get pneumonia, and die that way. And you certainly don't want to subject her to that risk if she didn't need to take that risk. So they designed an architecture that says, well, this is the decision that you're trying to make, which they're modeling by an influence diagram. So this is a Bayesian network with the addition of decision nodes and value nodes. But you use Bayesian network techniques to calculate optimal decisions here. And then this is kind of the background knowledge of what we understand about the relationships among different things in the intensive care unit. And this is a representation of the meta reasoning that says, which utility model should we use? Which reasoning technique should we use? And so on. And they built an architecture that integrates these various approaches. And then in my last two minutes, I just want to tell you about an interesting, this is a modern view, not historical. So this was a paper presented at the last NeurIPS meeting, which said, the kind of problems that we've been talking about, like the acute renal failure problem or like any of these others, we can reformulate this as a reinforcement learning problem. So the idea is that if you treat all activities, including putting somebody on a ventilator or concluding a diagnostic conclusion or asking a question or any of the other things that we've contemplated, if you treat those all in a uniform way and say, these are actions, we then model the universe as a Markov decision process, where every time that you take one of these actions, it changes the state of the patient or the state of our knowledge about the patient. And then you do reinforcement learning to figure out what is the optimal policy to apply under all possible states in order to maximize the expected outcome. So that's exactly the approach that they're taking. The state space is the set of positive and negative findings. The action space is to ask about a finding or conclude a diagnosis. The reward is the correct or incorrect single diagnosis. So once you reach a diagnosis, the process stops, and you get your reward. It's finite horizon because they impose a limit on the number of questions. If you don't get an answer by then, you lose. You get a minus 1 reward. There's a discount factor so that the further away a reward is, the less value it has to you at any point, which encourages shorter question sequences. And they use a pretty standard Q-learning framework, or at least a modern Q-learning framework, using a double deep neural network strategy. And then there are two pieces of magic sauce that make this work better. And one of them is that they want to encourage asking questions that are likely to have positive answers rather than negative answers. And the reason is because in their world, there are hundreds and hundreds of questions. And of course, most patients don't have most of those findings. And so you don't want to ask a whole bunch of questions to which the answer is no, no, no, no, no, no, no, no, no, no, because that doesn't give you very much guidance. You want to ask questions where the answer is yes, because that helps you clue in on what's really going on. So they actually have a nice proof that they do this thing they call reward shaping, which basically adds some incremental reward for asking questions that will have a positive answer, but that they can prove that an optimal policy learned from that reward function is also optimal for the reward function that would not include it. So that's kind of cool. And then the other thing they do is to try to identify a reduced space of findings by what they call feature rebuilding. And this is essentially a dimension reduction technique where they're co-training in this dual network architecture. They're co-training the policy model that's, of course, the neural network model, this being the 2010s. And so they're generating a sequence, a deep layered set of neural networks that generate an output, which is the m questions and the n conclusions that can be made. And I think it does a soft max over these to come up with the right policy for any particular situation. But at the same time, they co-train it in order to predict a number of all of the manifestations from what they've observed before. So it's learning a probabilistic model that says, if you've answered the following questions in the following ways, here are the likely answers that you would give to the remaining manifestations. And the reason they can do that, of course, is because they really are not independent. They're very often co-varying. And so they learn that co-variance and therefore can predict which answers are going to get yes answers, which questions are going to get yes answers. And therefore, they can bias the learning toward doing that. So last slide. So this system is called ReFuel. It's been tested on a simulated data set of 650 diseases and 375 symptoms. And what they show is that the red line is their algorithm. The yellow line uses only this reward reshaping. And the blue line is just a straight reinforcement learning approach. And you can see that they're doing much better after many fewer epochs of training in doing this. Now, take this with a grain of salt. This is all fake data. So they didn't have real data sets to test this on. They got statistics on what diseases are common and what symptoms are common in those diseases. And then they had a generative model that generated this fake data. And then they learned from that generative model. So of course, it would be really important to redo this study with real data. But they've not done that. And this was just published a few months ago. So that's sort of where we are at the moment in diagnosis and in differential diagnosis. And I wanted to start by sort of introducing these ideas in a kind of historical framework. But it means that there are a tremendous number of papers, as you can imagine, that have been written since the 1990s and 80s that I was showing you that are essentially elaborations on the same themes. And it's only in the past decade of the advent of these neural network models that people have changed strategy so that instead of learning explicit probabilities, for example, like you do in a Bayesian network, you just say, well, this is simply a prediction task. And so we'll predict the way we predict everything else with neural network models, which is we build a CNN or an RNN or some combination of things or some attention model or something. And we throw that at it. And it does typically a slightly better job than any of the previous learning methods that we've used typically, but not always. OK, peace."
+}

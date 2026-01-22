@@ -1,0 +1,250 @@
+{
+    "chunks": [
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 0.0,
+            "end": 29.76,
+            "text": " All right.  Let's get started.  Good afternoon.  So last time, I started talking about the use  of natural language processing to process clinical data."
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 29.76,
+            "end": 49.52,
+            "text": " And things went a little bit slowly,  so we didn't get through a lot of the material.  I'm going to try to rush a bit more today.  And as a result, I have a lot of stuff to cover.  So if you remember last time, I started"
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 49.52,
+            "end": 68.2,
+            "text": " by saying that a lot of the NLP work  involves coming up with phrases that one might be interested  in to help identify the kinds of data that you want,  and then just looking for those in text.  So that's a very simple method, but it's"
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 68.2,
+            "end": 82.08,
+            "text": " one that works reasonably well.  And then Kat Liao was here to talk  about some of the applications of that kind of work  in what she's been doing in cohort selection.  So what I want to talk about today"
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 82.08,
+            "end": 99.03999999999999,
+            "text": " is more sophisticated versions of that,  and then move on to more contemporary approaches  to natural language processing.  So this is a paper that was given to you  as one of the optional readings last time."
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 99.03999999999999,
+            "end": 116.56,
+            "text": " And it's work from David Sontag's lab,  where they said, well, how do we make this more sophisticated?  So they start the same way.  They say, OK, Dr. Liao, let's say,  give me terms that are very good indicators that I"
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 116.56,
+            "end": 131.48,
+            "text": " have the right kind of patient if I find them  in the patient's notes.  So these are things with high predictive value.  So you don't want to use a term like sick,  because that's going to find way too many people."
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 131.48,
+            "end": 151.62,
+            "text": " But you want to find something that is very specific,  but that has a high predictive value that you're  going to find the right person.  And then what they did is they built  a model that tries to predict the presence of that word"
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 151.62,
+            "end": 170.72,
+            "text": " in the text from everything else in the medical record.  So now this is an example of sort of a silver standard way  of training a model that says, well, I  don't have the energy or the time  to get doctors to look through thousands and thousands"
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 170.72,
+            "end": 182.4,
+            "text": " of records.  But if I select these anchors well enough,  then I'm going to get a high yield of correct responses  from those.  And then I train a machine learning model"
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 182.4,
+            "end": 203.06,
+            "text": " that learns to identify those same terms,  or those same records that have those terms in them.  And by the way, from that, we're going  to learn a whole bunch of other terms  that are proxies for the ones that we started with."
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 203.06,
+            "end": 220.98,
+            "text": " So this is a way of enlarging that set of terms  automatically.  And so there are a bunch of technical details  that you can find out about by reading the paper.  They used a relatively simple representation,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 220.98,
+            "end": 239.1,
+            "text": " which is essentially a bag of words representation.  They then sort of masked the three words around the word  that actually is the one they're trying to predict,  just to get rid of sort of short-term syntactic  correlations."
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 239.1,
+            "end": 254.85999999999999,
+            "text": " And then they built an L2 regularized logistic regression  model that said, what are the features that predict  the occurrence of this word?  And then they expanded the search vocabulary  to include those features as well."
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 254.86,
+            "end": 269.34000000000003,
+            "text": " And again, there are tons of details  about how to discretize continuous values and things  like that that you can find out about.  So you build a phenotype estimator  from the anchors and the chosen predictors."
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 269.34000000000003,
+            "end": 283.26,
+            "text": " They calculated a calibration score  for each of these other predictors that told you  sort of how well it predicted.  And then you can build a joint estimator  that uses all of these."
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 283.26,
+            "end": 300.98,
+            "text": " And the bottom line is that they did very well.  So they looked at, in order to evaluate this,  they looked at eight different phenotypes for which they  had human judgment data.  And so this tells you that they're"
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 300.98,
+            "end": 319.02,
+            "text": " getting AUCs of between 0.83 and 0.95  for these different phenotypes.  So that's quite good.  They, in fact, were estimating not only these eight phenotypes  but 40-something."
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 319.02,
+            "end": 333.46,
+            "text": " I don't remember the exact number.  Much larger number, but they didn't  have validated data against which to test the others.  But the expectation is that if it does well on these,  it probably does well on the others as well."
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 333.46,
+            "end": 348.7,
+            "text": " So this was a very nice idea.  And just to illustrate, if you start with something  like diabetes as a phenotype and you say,  well, I'm going to look for anchors that  are a code 250 diabetes mellitus,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 348.7,
+            "end": 363.02,
+            "text": " or I'm going to look at medication history  for diabetic therapy.  So those are the initial, the silver standard goals  that I'm looking at.  And those, in fact, have a high predictive value"
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 363.02,
+            "end": 377.06,
+            "text": " for somebody being in the cohort.  And then they identify all these other features  that predict those and therefore, in turn,  predict appropriate selectors for the phenotype  that they're interested in."
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 377.06,
+            "end": 393.90000000000003,
+            "text": " And if you look at the paper again,  what you see is that this outperforms over time  the standard sort of supervised baseline  that they're comparing against, where you're getting much  higher accuracy early in a patient's visit"
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 393.9,
+            "end": 417.38,
+            "text": " to be able to identify them as belonging to this cohort.  I'm going to come back later to look at another similar attempt  to generalize from a core using a different set of techniques.  So you should see that in about 45 minutes, I hope.  OK."
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 417.38,
+            "end": 433.26,
+            "text": " Well, context is important.  So if you look at a sentence like,  Mr. Huntington was treated for Huntington's disease  at Huntington Hospital located on Huntington Avenue,  each of those mentions of the word Huntington is different."
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 433.26,
+            "end": 449.14,
+            "text": " And for example, if you're interested in eliminating  personally identifiable health information  from a record like this, then certainly you  want to get rid of the Mr. Huntington part.  You don't want to get rid of Huntington's disease"
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 449.14,
+            "end": 466.58,
+            "text": " because that's a medically relevant fact.  And you probably do want to get rid  of Huntington Hospital and its location on Huntington Avenue,  although those are not necessarily something  that you're prohibited from retaining."
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 466.58,
+            "end": 485.40000000000003,
+            "text": " So for example, if you're trying to do quality studies  among different hospitals, then it  would make sense to retain the name of the hospital, which  is not considered identifying of the individual.  So we, in fact, did a study back in the mid-2000s"
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 485.40000000000003,
+            "end": 507.88,
+            "text": " where we were trying to build an improved de-identifier.  And here's the way we went about it.  This is a kind of kitchen sink approach  that says, OK, take the text, tokenize it,  look at every single token, and derive things from it."
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 507.88,
+            "end": 524.68,
+            "text": " So the words that make up the token, the part of speech,  how it's capitalized, whether there's punctuation around it,  which document section is it in.  Many databases have sort of conventional document  structure."
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 524.68,
+            "end": 541.92,
+            "text": " If you've looked at the MIMIC discharge summaries,  for example, there's a kind of prototypical way  in which that flows from beginning to end.  And you can use that structural information.  We then identified a bunch of patterns and thesaurus terms."
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 541.92,
+            "end": 562.52,
+            "text": " So we looked up in the UMLS words and phrases  to see if they matched some clinically meaningful term.  We had patterns that identified things like phone numbers  and social security numbers and addresses and so on.  And then we did parsing of the text."
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 562.52,
+            "end": 576.48,
+            "text": " So in those days, we used something  called the link grammar parser, which  doesn't make a whole lot of difference what parser.  But you get either a constituent or a constituency  or a dependency parse, which gives you"
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 576.48,
+            "end": 594.0799999999999,
+            "text": " relationships among the words.  And so it allows you to include as features  the way in which a word that you're looking at  relates to other words around it.  And so what we did is we said, OK, the lexical context"
+        },
+        {
+            "number": "lec8",
+            "title": "part.000.mp3",
+            "start": 594.0799999999999,
+            "end": 601.52,
+            "text": " includes all of the above kind of information  for all of the words that are equal."
+        }
+    ],
+    "text": " All right. Let's get started. Good afternoon. So last time, I started talking about the use of natural language processing to process clinical data. And things went a little bit slowly, so we didn't get through a lot of the material. I'm going to try to rush a bit more today. And as a result, I have a lot of stuff to cover. So if you remember last time, I started by saying that a lot of the NLP work involves coming up with phrases that one might be interested in to help identify the kinds of data that you want, and then just looking for those in text. So that's a very simple method, but it's one that works reasonably well. And then Kat Liao was here to talk about some of the applications of that kind of work in what she's been doing in cohort selection. So what I want to talk about today is more sophisticated versions of that, and then move on to more contemporary approaches to natural language processing. So this is a paper that was given to you as one of the optional readings last time. And it's work from David Sontag's lab, where they said, well, how do we make this more sophisticated? So they start the same way. They say, OK, Dr. Liao, let's say, give me terms that are very good indicators that I have the right kind of patient if I find them in the patient's notes. So these are things with high predictive value. So you don't want to use a term like sick, because that's going to find way too many people. But you want to find something that is very specific, but that has a high predictive value that you're going to find the right person. And then what they did is they built a model that tries to predict the presence of that word in the text from everything else in the medical record. So now this is an example of sort of a silver standard way of training a model that says, well, I don't have the energy or the time to get doctors to look through thousands and thousands of records. But if I select these anchors well enough, then I'm going to get a high yield of correct responses from those. And then I train a machine learning model that learns to identify those same terms, or those same records that have those terms in them. And by the way, from that, we're going to learn a whole bunch of other terms that are proxies for the ones that we started with. So this is a way of enlarging that set of terms automatically. And so there are a bunch of technical details that you can find out about by reading the paper. They used a relatively simple representation, which is essentially a bag of words representation. They then sort of masked the three words around the word that actually is the one they're trying to predict, just to get rid of sort of short-term syntactic correlations. And then they built an L2 regularized logistic regression model that said, what are the features that predict the occurrence of this word? And then they expanded the search vocabulary to include those features as well. And again, there are tons of details about how to discretize continuous values and things like that that you can find out about. So you build a phenotype estimator from the anchors and the chosen predictors. They calculated a calibration score for each of these other predictors that told you sort of how well it predicted. And then you can build a joint estimator that uses all of these. And the bottom line is that they did very well. So they looked at, in order to evaluate this, they looked at eight different phenotypes for which they had human judgment data. And so this tells you that they're getting AUCs of between 0.83 and 0.95 for these different phenotypes. So that's quite good. They, in fact, were estimating not only these eight phenotypes but 40-something. I don't remember the exact number. Much larger number, but they didn't have validated data against which to test the others. But the expectation is that if it does well on these, it probably does well on the others as well. So this was a very nice idea. And just to illustrate, if you start with something like diabetes as a phenotype and you say, well, I'm going to look for anchors that are a code 250 diabetes mellitus, or I'm going to look at medication history for diabetic therapy. So those are the initial, the silver standard goals that I'm looking at. And those, in fact, have a high predictive value for somebody being in the cohort. And then they identify all these other features that predict those and therefore, in turn, predict appropriate selectors for the phenotype that they're interested in. And if you look at the paper again, what you see is that this outperforms over time the standard sort of supervised baseline that they're comparing against, where you're getting much higher accuracy early in a patient's visit to be able to identify them as belonging to this cohort. I'm going to come back later to look at another similar attempt to generalize from a core using a different set of techniques. So you should see that in about 45 minutes, I hope. OK. Well, context is important. So if you look at a sentence like, Mr. Huntington was treated for Huntington's disease at Huntington Hospital located on Huntington Avenue, each of those mentions of the word Huntington is different. And for example, if you're interested in eliminating personally identifiable health information from a record like this, then certainly you want to get rid of the Mr. Huntington part. You don't want to get rid of Huntington's disease because that's a medically relevant fact. And you probably do want to get rid of Huntington Hospital and its location on Huntington Avenue, although those are not necessarily something that you're prohibited from retaining. So for example, if you're trying to do quality studies among different hospitals, then it would make sense to retain the name of the hospital, which is not considered identifying of the individual. So we, in fact, did a study back in the mid-2000s where we were trying to build an improved de-identifier. And here's the way we went about it. This is a kind of kitchen sink approach that says, OK, take the text, tokenize it, look at every single token, and derive things from it. So the words that make up the token, the part of speech, how it's capitalized, whether there's punctuation around it, which document section is it in. Many databases have sort of conventional document structure. If you've looked at the MIMIC discharge summaries, for example, there's a kind of prototypical way in which that flows from beginning to end. And you can use that structural information. We then identified a bunch of patterns and thesaurus terms. So we looked up in the UMLS words and phrases to see if they matched some clinically meaningful term. We had patterns that identified things like phone numbers and social security numbers and addresses and so on. And then we did parsing of the text. So in those days, we used something called the link grammar parser, which doesn't make a whole lot of difference what parser. But you get either a constituent or a constituency or a dependency parse, which gives you relationships among the words. And so it allows you to include as features the way in which a word that you're looking at relates to other words around it. And so what we did is we said, OK, the lexical context includes all of the above kind of information for all of the words that are equal."
+}

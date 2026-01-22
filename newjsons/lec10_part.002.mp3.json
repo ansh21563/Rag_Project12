@@ -1,0 +1,390 @@
+{
+    "chunks": [
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 0.0,
+            "end": 14.4,
+            "text": " So the software involves clicking at one point,  stretching something, and clicking another point.  So it's a little better than pulling the ruler out  of your back pocket, but not that much better.  So we're going to talk about three little areas."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 14.4,
+            "end": 24.32,
+            "text": " And again, this is not, I mean, I  got involved in this really in the last two years or so.  It's nice of David to ask me to speak here.  But I think there are probably people in this room  who have a lot more experience in this space."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 24.32,
+            "end": 34.32,
+            "text": " But the areas that have been relevant to what we've been  doing has been image classification, and then  semantic segmentation.  So image classification being assigning a label to an image,  very great."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 34.32,
+            "end": 45.239999999999995,
+            "text": " Semantic segmentation, assigning each pixel to a class label.  And we haven't done anything around the image registration.  But there are some interesting problems  that I'm thinking about there.  And that's really mapping different sets of images"
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 45.239999999999995,
+            "end": 56.54,
+            "text": " onto one coordinate system.  So it seems obvious that image classification would  be something that you would imagine a physician does.  And so maybe we can mimic that.  It seems like a reasonable thing that happens."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 57.019999999999996,
+            "end": 66.53999999999999,
+            "text": " Lots of things that radiologists,  people who interpret images, do involved  in terms of recognition.  And they're really fast.  So it takes them a couple of minutes"
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 66.53999999999999,
+            "end": 77.02,
+            "text": " to often do things like detect if there's lung cancer,  detect if somebody has pneumonia,  detect if there's breast cancer in a mammogram,  tell if there's fluid in the heart.  And even less than that, one minute often, 30 seconds."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 77.02,
+            "end": 88.82,
+            "text": " They can sort of vary very fast.  So you can imagine the wave of excitement  around image classification was really  post-ImageNet.  So maybe about three years, four years or so ago."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 88.82,
+            "end": 98.61999999999999,
+            "text": " We're always a little slow in medicine, so a little bit  behind other fields.  And the places that they went were the places where  there are huge data sets already and where there's  simple recognition tasks."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 98.61999999999999,
+            "end": 108.06,
+            "text": " So chest X-rays and mammograms were both places  that they had a lot of attention.  And other places have been slowed down by just how hard  it is to get data.  So if you can't get a big enough data set,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 108.06,
+            "end": 120.86,
+            "text": " then you're not going to be able to do much.  So David mentioned you guys already covered very nicely.  And this is probably kind of old hat.  But I would say that prior to convolutional neural networks,  nothing was happening in the image classification"
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 120.86,
+            "end": 126.78,
+            "text": " space in medicine.  It was just not.  I mean, people weren't even thinking  that it was even worth doing.  Now there's a lot of interest."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 126.78,
+            "end": 139.42000000000002,
+            "text": " And so I have many different companies  coming and sort of asking for help with some of these things.  And so it is now a very attractive sort of thing  in terms of thinking.  And I think people haven't thought out all that well"
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 139.42000000000002,
+            "end": 151.74,
+            "text": " how we're going to use that.  So for example, if it takes a radiologist a minute  to two minutes to read something,  how much benefit are you going to get to automate it?  And the real problem is you can't take that radiologist"
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 151.74,
+            "end": 158.46,
+            "text": " away.  They're still there, because they're  the ones who are on the hook.  And they're going to get sued.  And it's among the most sued profession in medicine."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 158.46,
+            "end": 169.34,
+            "text": " So I mean, there's lots of people who can read an X-ray.  You don't need to have all that training.  But if you're the one who's going to be sued,  it ends up being that there really isn't  any task shifting in medicine."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 169.34,
+            "end": 179.62,
+            "text": " There isn't that kind of, oh, I'm  going to let such and such take on 99%  and just tell me when there's a problem.  It just doesn't happen, because they ultimately  don't feel comfortable passing that on."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 179.62,
+            "end": 190.18,
+            "text": " So that's something to think about.  So you have a task that's relatively easily  for a very, very expensive and skilled person to do.  And they refuse to give it up.  So that's a problem."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 190.18,
+            "end": 200.78,
+            "text": " But you can imagine there are some scenarios.  And we'll talk more about this as to where that could be.  So let's say it's overnight.  The radiologist is sleeping comfortably at home.  And you have a bunch of studies being"
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 200.78,
+            "end": 210.3,
+            "text": " done in the emergency room.  And you want to figure out, OK, which one  should we call them about?  So you can imagine there could be triage,  because the status quo would be, we'll take them one by one."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 210.3,
+            "end": 218.46,
+            "text": " Maybe you could imagine sifting through them quickly  and then reprioritizing them.  They'll still be looked at.  Every single one will still be looked at.  It's just the order may change."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 218.46,
+            "end": 229.38,
+            "text": " So that's an example.  And you can imagine there could be separate.  Someone else could read at the same time.  And we'll come back to this in terms of whether or not  you could have two streams and whether or not that is a scenario"
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 229.38,
+            "end": 237.82000000000002,
+            "text": " that would make some sense.  And maybe in resource-poor settings,  where we're not teaming the radiologists,  maybe that makes sense too.  So we'll come back to that too."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 237.82000000000002,
+            "end": 251.3,
+            "text": " So here's another problem.  So almost everything in medicine requires  some element of confirmation of a visual finding.  And some of the reasons are very simple.  So let's say you want to talk about there being a tumor."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 251.3,
+            "end": 261.02000000000004,
+            "text": " So if you're going to ask a surgeon to biopsy it,  you better tell them where it is.  It's not enough to just say, this image  has a tumor somewhere in it.  So there's some element of that that you're"
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 261.02000000000004,
+            "end": 273.62,
+            "text": " going to need to be a little bit more detailed than simply  making a classification with level and image.  But I would say beyond that.  Let's say I'm going to try to get one of my patients  to go for valve surgery."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 273.62,
+            "end": 285.70000000000005,
+            "text": " I'll sit with them, bring up their echo,  sit side by side with them, and point them to where it is,  bring up a normal one and compare.  Because I want them to be involved in the decision.  I want them to feel like they're not just trust."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 285.70000000000005,
+            "end": 291.34000000000003,
+            "text": " And they have to trust me.  At the end of the day, they don't even know that I'm  showing them.  I'll show them their name.  But ultimately, there is some element of trust."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 291.34000000000003,
+            "end": 300.3,
+            "text": " They're not able to do this.  But at the same time, there is this sense  of shared decision making.  You're trying to communicate to somebody  whose life is really at risk here"
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 300.3,
+            "end": 311.34000000000003,
+            "text": " that this is why we're doing this decision.  So the more you can imagine that there is obscuring,  the more difficult it is to make that case.  So medicine is this.  I found this review by Bin Yu from Berkeley."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 311.34000000000003,
+            "end": 322.94,
+            "text": " It just came out.  And it talks about this tension between predictive accuracy  and descriptive accuracy.  So this is the typical thing we think about that matters.  And there's lots of people who've written"
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 322.94,
+            "end": 334.18,
+            "text": " about this sort of thing.  And medicine is tough in that it's  very demanding in this space here.  And it's almost inflexible in this space here.  So it's a tough nut to crack in terms"
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 334.18,
+            "end": 345.66,
+            "text": " of being able to make some progress.  And so we'll talk more about when that's likely to happen.  So this, again, may be something that's very familiar, too.  So we had this problem in terms of some of the disease  detection models."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 345.66,
+            "end": 356.18,
+            "text": " And I didn't find this all that satisfying in terms  of being able to successfully localize.  So just digging through the literature,  it looks like this sort of idea of being  able to explain what part of the image"
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 356.18,
+            "end": 370.22,
+            "text": " is driving a certain classification.  That field is modestly old.  Maybe it goes back before that.  But ultimately, there's two broad ways.  You can imagine finding an exemplar image that maximally"
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 370.22,
+            "end": 383.14,
+            "text": " activates the class score.  Or you can take a given image and say what aspect of it  is driving the classification.  And so in this paper here, we did both those things.  They either went through and optimized this."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 383.14,
+            "end": 393.46000000000004,
+            "text": " Starting from an average of all the training data,  they optimized the intensities until they maximized  the score for a given class.  So that's what's shown here.  And then another way to do it is that in some sense,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 393.46000000000004,
+            "end": 402.78000000000003,
+            "text": " you could take a derivative of the score function  relative to the intensities of all the pixels  and come up with something like this.  But you can imagine if you show this to a patient,  they wouldn't be very satisfied."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 402.78,
+            "end": 414.65999999999997,
+            "text": " So it's very difficult to make a case that this is super useful.  But it seems like this field has progressed somewhat.  And I haven't tried this out.  This is a paper by Max Welling and Company  out by a couple of years."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 414.65999999999997,
+            "end": 432.18,
+            "text": " And maybe you guys have some familiarity with this.  But this ultimately is a little bit of a different approach  in the sense that they take patches, the purple-like patch  here, and they compare the final score or class label  relative to what it is."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 432.18,
+            "end": 447.38,
+            "text": " So taking the intensity here and replacing it  by a conditional result sampling from the periphery  and just comparing those two things and seeing whether or not  you either get activation, which is the red here, which  is this is the way that they did the conditional sampling."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 447.38,
+            "end": 457.97999999999996,
+            "text": " And then blue would be the negative contributors.  And then you can imagine there's a little bit more distinction  here and then something a little bit more on the medical side.  This is a brain MRI.  And so depending on this patch size,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 457.98,
+            "end": 472.06,
+            "text": " you get a different degree of resolution  to localizing some areas of the image that are relevant.  So this is something that we're going  to expect a lot of demands from the medical field in terms  of being able to show this."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 472.06,
+            "end": 481.70000000000005,
+            "text": " And at least our initial forays weren't very satisfying  doing this with what we were doing.  But maybe these algorithms have gotten better.  So next thing that matters.  So this is what people do."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 481.70000000000005,
+            "end": 492.65999999999997,
+            "text": " So I spent, I did my cardiology fellowship at MGH.  And I just traced circles.  That's what I did.  I just traced circles.  And I stretched a ruler across and then fed that."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 492.65999999999997,
+            "end": 505.7,
+            "text": " And at least the program computed the volumes for me,  the areas and volumes.  But otherwise, you have to do this yourself.  And so this is like a task that's done.  And sometimes you may have to sort of,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 505.7,
+            "end": 516.86,
+            "text": " so here's sort of an example of volumes  being computed by tracing these sorts of things.  And much of radiology reports just involve doing that.  So this seems like a very obvious task  we should be able to improve on."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 516.86,
+            "end": 527.3000000000001,
+            "text": " So medicine tends to be not the most creative in terms  of trying a bunch of different architectures.  So if you look at the papers, they sort of all  jump on the U-net as being the sort  of the favorite sort of architecture"
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 527.3000000000001,
+            "end": 539.4200000000001,
+            "text": " for semantic segmentation.  So maybe familiar to people here,  really just it kind of captures this sort of encoding  or contracting layer where you're downsampling.  And then there's sort of a symmetric upsampling"
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 539.4200000000001,
+            "end": 551.22,
+            "text": " that takes place.  And then ultimately, there's these sort of skip connections  where you take an image, and then you concatenate it  with this sort of upsampled layer.  And this helps get a little bit more localization."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 551.22,
+            "end": 560.9399999999999,
+            "text": " So we use this for our paper.  And we'll talk about this a little bit.  And it's very popular within the medical literature.  One of the things that was quite annoying  is that what you would find for some of the images,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 560.9399999999999,
+            "end": 568.18,
+            "text": " you'd find, let's say, a ventricle.  You'd find this nicely segmented area.  And then you'd find this little satellite ventricle  that the image would just pick.  So you'd get this."
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 568.18,
+            "end": 579.1800000000001,
+            "text": " The problem is that this sort of pixel level classification  tends to be a problem.  And a human would never make that mistake.  But that tends to be something that  sounds like it is common in the, this"
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 579.1800000000001,
+            "end": 592.4200000000001,
+            "text": " is a kind of a common tension, is  that this sort of focusing on relatively limited scales  ends up being problematic when it  comes to kind of picking up global architecture.  And so there's lots of different solutions"
+        },
+        {
+            "number": "lec10",
+            "title": "part.002.mp3",
+            "start": 592.4200000000001,
+            "end": 601.1400000000001,
+            "text": " it looks like in the literature.  I just highlighted some of these from a paper that  was published from Google a little while ago.  One of the things that's captured  is these sort of ideas of interdependence."
+        }
+    ],
+    "text": " So the software involves clicking at one point, stretching something, and clicking another point. So it's a little better than pulling the ruler out of your back pocket, but not that much better. So we're going to talk about three little areas. And again, this is not, I mean, I got involved in this really in the last two years or so. It's nice of David to ask me to speak here. But I think there are probably people in this room who have a lot more experience in this space. But the areas that have been relevant to what we've been doing has been image classification, and then semantic segmentation. So image classification being assigning a label to an image, very great. Semantic segmentation, assigning each pixel to a class label. And we haven't done anything around the image registration. But there are some interesting problems that I'm thinking about there. And that's really mapping different sets of images onto one coordinate system. So it seems obvious that image classification would be something that you would imagine a physician does. And so maybe we can mimic that. It seems like a reasonable thing that happens. Lots of things that radiologists, people who interpret images, do involved in terms of recognition. And they're really fast. So it takes them a couple of minutes to often do things like detect if there's lung cancer, detect if somebody has pneumonia, detect if there's breast cancer in a mammogram, tell if there's fluid in the heart. And even less than that, one minute often, 30 seconds. They can sort of vary very fast. So you can imagine the wave of excitement around image classification was really post-ImageNet. So maybe about three years, four years or so ago. We're always a little slow in medicine, so a little bit behind other fields. And the places that they went were the places where there are huge data sets already and where there's simple recognition tasks. So chest X-rays and mammograms were both places that they had a lot of attention. And other places have been slowed down by just how hard it is to get data. So if you can't get a big enough data set, then you're not going to be able to do much. So David mentioned you guys already covered very nicely. And this is probably kind of old hat. But I would say that prior to convolutional neural networks, nothing was happening in the image classification space in medicine. It was just not. I mean, people weren't even thinking that it was even worth doing. Now there's a lot of interest. And so I have many different companies coming and sort of asking for help with some of these things. And so it is now a very attractive sort of thing in terms of thinking. And I think people haven't thought out all that well how we're going to use that. So for example, if it takes a radiologist a minute to two minutes to read something, how much benefit are you going to get to automate it? And the real problem is you can't take that radiologist away. They're still there, because they're the ones who are on the hook. And they're going to get sued. And it's among the most sued profession in medicine. So I mean, there's lots of people who can read an X-ray. You don't need to have all that training. But if you're the one who's going to be sued, it ends up being that there really isn't any task shifting in medicine. There isn't that kind of, oh, I'm going to let such and such take on 99% and just tell me when there's a problem. It just doesn't happen, because they ultimately don't feel comfortable passing that on. So that's something to think about. So you have a task that's relatively easily for a very, very expensive and skilled person to do. And they refuse to give it up. So that's a problem. But you can imagine there are some scenarios. And we'll talk more about this as to where that could be. So let's say it's overnight. The radiologist is sleeping comfortably at home. And you have a bunch of studies being done in the emergency room. And you want to figure out, OK, which one should we call them about? So you can imagine there could be triage, because the status quo would be, we'll take them one by one. Maybe you could imagine sifting through them quickly and then reprioritizing them. They'll still be looked at. Every single one will still be looked at. It's just the order may change. So that's an example. And you can imagine there could be separate. Someone else could read at the same time. And we'll come back to this in terms of whether or not you could have two streams and whether or not that is a scenario that would make some sense. And maybe in resource-poor settings, where we're not teaming the radiologists, maybe that makes sense too. So we'll come back to that too. So here's another problem. So almost everything in medicine requires some element of confirmation of a visual finding. And some of the reasons are very simple. So let's say you want to talk about there being a tumor. So if you're going to ask a surgeon to biopsy it, you better tell them where it is. It's not enough to just say, this image has a tumor somewhere in it. So there's some element of that that you're going to need to be a little bit more detailed than simply making a classification with level and image. But I would say beyond that. Let's say I'm going to try to get one of my patients to go for valve surgery. I'll sit with them, bring up their echo, sit side by side with them, and point them to where it is, bring up a normal one and compare. Because I want them to be involved in the decision. I want them to feel like they're not just trust. And they have to trust me. At the end of the day, they don't even know that I'm showing them. I'll show them their name. But ultimately, there is some element of trust. They're not able to do this. But at the same time, there is this sense of shared decision making. You're trying to communicate to somebody whose life is really at risk here that this is why we're doing this decision. So the more you can imagine that there is obscuring, the more difficult it is to make that case. So medicine is this. I found this review by Bin Yu from Berkeley. It just came out. And it talks about this tension between predictive accuracy and descriptive accuracy. So this is the typical thing we think about that matters. And there's lots of people who've written about this sort of thing. And medicine is tough in that it's very demanding in this space here. And it's almost inflexible in this space here. So it's a tough nut to crack in terms of being able to make some progress. And so we'll talk more about when that's likely to happen. So this, again, may be something that's very familiar, too. So we had this problem in terms of some of the disease detection models. And I didn't find this all that satisfying in terms of being able to successfully localize. So just digging through the literature, it looks like this sort of idea of being able to explain what part of the image is driving a certain classification. That field is modestly old. Maybe it goes back before that. But ultimately, there's two broad ways. You can imagine finding an exemplar image that maximally activates the class score. Or you can take a given image and say what aspect of it is driving the classification. And so in this paper here, we did both those things. They either went through and optimized this. Starting from an average of all the training data, they optimized the intensities until they maximized the score for a given class. So that's what's shown here. And then another way to do it is that in some sense, you could take a derivative of the score function relative to the intensities of all the pixels and come up with something like this. But you can imagine if you show this to a patient, they wouldn't be very satisfied. So it's very difficult to make a case that this is super useful. But it seems like this field has progressed somewhat. And I haven't tried this out. This is a paper by Max Welling and Company out by a couple of years. And maybe you guys have some familiarity with this. But this ultimately is a little bit of a different approach in the sense that they take patches, the purple-like patch here, and they compare the final score or class label relative to what it is. So taking the intensity here and replacing it by a conditional result sampling from the periphery and just comparing those two things and seeing whether or not you either get activation, which is the red here, which is this is the way that they did the conditional sampling. And then blue would be the negative contributors. And then you can imagine there's a little bit more distinction here and then something a little bit more on the medical side. This is a brain MRI. And so depending on this patch size, you get a different degree of resolution to localizing some areas of the image that are relevant. So this is something that we're going to expect a lot of demands from the medical field in terms of being able to show this. And at least our initial forays weren't very satisfying doing this with what we were doing. But maybe these algorithms have gotten better. So next thing that matters. So this is what people do. So I spent, I did my cardiology fellowship at MGH. And I just traced circles. That's what I did. I just traced circles. And I stretched a ruler across and then fed that. And at least the program computed the volumes for me, the areas and volumes. But otherwise, you have to do this yourself. And so this is like a task that's done. And sometimes you may have to sort of, so here's sort of an example of volumes being computed by tracing these sorts of things. And much of radiology reports just involve doing that. So this seems like a very obvious task we should be able to improve on. So medicine tends to be not the most creative in terms of trying a bunch of different architectures. So if you look at the papers, they sort of all jump on the U-net as being the sort of the favorite sort of architecture for semantic segmentation. So maybe familiar to people here, really just it kind of captures this sort of encoding or contracting layer where you're downsampling. And then there's sort of a symmetric upsampling that takes place. And then ultimately, there's these sort of skip connections where you take an image, and then you concatenate it with this sort of upsampled layer. And this helps get a little bit more localization. So we use this for our paper. And we'll talk about this a little bit. And it's very popular within the medical literature. One of the things that was quite annoying is that what you would find for some of the images, you'd find, let's say, a ventricle. You'd find this nicely segmented area. And then you'd find this little satellite ventricle that the image would just pick. So you'd get this. The problem is that this sort of pixel level classification tends to be a problem. And a human would never make that mistake. But that tends to be something that sounds like it is common in the, this is a kind of a common tension, is that this sort of focusing on relatively limited scales ends up being problematic when it comes to kind of picking up global architecture. And so there's lots of different solutions it looks like in the literature. I just highlighted some of these from a paper that was published from Google a little while ago. One of the things that's captured is these sort of ideas of interdependence."
+}

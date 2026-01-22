@@ -1,0 +1,236 @@
+{
+    "chunks": [
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 0.0,
+            "end": 29.939999999999998,
+            "text": " OK.  So today and next Tuesday, we're talking  about the role of natural language processing  in machine learning in health care.  And this is going to be a heterogeneous kind"
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 29.939999999999998,
+            "end": 46.22,
+            "text": " of presentation.  Mainly today, I'm going to talk about stuff that happened  or that takes advantage of methods that are not  based on neural network representations.  And on Tuesday, I'm going to speak mostly"
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 46.22,
+            "end": 66.86,
+            "text": " about stuff that does depend on neural network representations.  But I'm not sure where the boundary is going to fall.  I've also invited Dr. Catherine Liao over there,  who will join me in a question and answer session,  an interview like we did a couple of weeks ago with David."
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 66.86,
+            "end": 87.06,
+            "text": " Cat is a rheumatologist in the Partners Health Care System.  And you'll actually be hearing about some of the work  that we've done together in the past  before we go to the interview.  So roughly, the outline of these two lectures"
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 87.06,
+            "end": 110.42,
+            "text": " is that I want to talk a little bit about why  we care about clinical text.  And then I'm going to talk about some conceptually very  appealing but practically not very feasible methods that  involve analyzing these narrative texts"
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 110.42,
+            "end": 128.9,
+            "text": " as linguistic entities, as linguistic objects,  in the way that a linguist might approach them.  And then we're going to talk about what is very often done,  which is a kind of term spotting approach that says, well,  we may not be able to understand exactly everything that"
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 128.9,
+            "end": 143.5,
+            "text": " goes on in the narratives.  But we can identify certain words and certain phrases that  are very highly indicative that the patient has  a certain disease, a certain symptom,  that some particular thing was done to them."
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 143.5,
+            "end": 162.54,
+            "text": " And so this is a lot of the bread and butter  of how clinical research is done nowadays.  And then I'll go on to some other techniques.  So here's an example.  This is a discharge summary from MIMIC."
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 162.54,
+            "end": 183.66,
+            "text": " When you played with MIMIC, you notice that it's de-identified.  And so names and things are replaced  with square brackets, star, star, star kinds of things.  And here I have re-replaced those with synthetic names.  So Mr. Blind isn't really Mr. Blind."
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 183.66,
+            "end": 207.54,
+            "text": " And November 15 probably really isn't November 15, et cetera.  But I wanted something that read like real text.  So if you look at something like this,  you see that Mr. Blind is a 79-year-old white, white male.  So somebody repeated a word with a history of diabetes"
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 207.54,
+            "end": 224.22,
+            "text": " mellitus in inferior MI who underwent  open repair of his increased diverticulum on November 13  at some, again, that's not the name of the actual place,  medical center.  And then he developed hebatemisis."
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 224.3,
+            "end": 237.1,
+            "text": " So he was spitting up blood and was  intubated for respiratory distress.  So he wasn't breathing well.  So these are all really important things  about what happened to Mr. Blind."
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 237.1,
+            "end": 260.14,
+            "text": " And so we'd like to be able to take advantage of this.  And in fact, to give you a slightly more quantitative  version of this, Kat and I worked on a project  back around 2010 where we were looking  at trying to understand what are the genetic correlates"
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 260.14,
+            "end": 276.82,
+            "text": " of rheumatoid arthritis.  And so we went to the research patient data  repository of Mass General and the Brigham Partners  Health Care.  And we said, OK, who are the patients"
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 276.86,
+            "end": 294.86,
+            "text": " who have been billed for a rheumatoid arthritis visit?  And there are many thousands of those people.  And then we selected a random set of, I think,  400 of those patients.  We gave them to rheumatologists."
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 294.86,
+            "end": 311.58000000000004,
+            "text": " And we said, which of these people  actually have rheumatoid arthritis?  So these were based on billing codes.  So what would you guess is the positive predictive value  of having a billing code for rheumatoid arthritis"
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 311.58000000000004,
+            "end": 326.86,
+            "text": " in this data set?  I mean, how many people think it's more than 50%?  OK, that would be nice.  But it's not.  How many people think it's more than 25%?"
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 327.86,
+            "end": 350.58000000000004,
+            "text": " God, you guys are getting really pessimistic.  Well, it also isn't.  So it turned out to be something like 19% in this cohort.  Now, before you start calling the fraud investigators,  you have to ask yourself, why is it"
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 350.58000000000004,
+            "end": 365.58,
+            "text": " that this data is so lousy?  And there's a systematic reason.  Because those billing codes were not  created in order to specify what's wrong with the patient.  They were created in order to tell an insurance"
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 365.58,
+            "end": 382.9,
+            "text": " company or Medicare or somebody how much of a payment  is deserved by the doctors taking care of them.  And so what this means is that, for example,  if I clutch my chest and I'm going to have a heart attack,  is that, for example, if I clutch my chest and go,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 382.9,
+            "end": 399.65999999999997,
+            "text": " oh, and an ambulance rushes me over to Mass General,  and they do a whole bunch of tests,  and they decide that I'm not having a heart attack,  the correct billing code for that visit  is myocardial infarction."
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 399.65999999999997,
+            "end": 411.94,
+            "text": " Because, of course, the work that they  had to do in order to figure out that I'm not  having a heart attack is the same as the work  they would have had to do to figure out  that I was having a heart attack."
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 411.94,
+            "end": 429.62,
+            "text": " And so the billing codes, we've talked about this a little bit  before, but they're a very imperfect representation  of reality.  So we said, well, OK, what if we insisted  that you have three billing codes for rheumatoid arthritis"
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 429.62,
+            "end": 444.3,
+            "text": " rather than just one?  And that turned out to raise the positive predictive value  all the way up to 27%.  So you go, really?  How could you get billed three times?"
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 444.3,
+            "end": 461.86,
+            "text": " Well, the answer is that you get billed for every aspirin  you take at the hospital.  And so, for example, it's very easy  to accumulate three billing codes for the same thing.  Because you go see a doctor, the doctor"
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 461.86,
+            "end": 479.82,
+            "text": " bills you for a rheumatoid arthritis visit.  He or she sends you to a radiologist  to take an X-ray of your fingers, your joints.  That bill is another billing code for RA.  The doctor also sends you to the lab"
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 479.82,
+            "end": 493.94,
+            "text": " to have a blood drawn so that they can  check your anti-CCP titer.  That's another billing code for rheumatoid arthritis.  And it may be that all of this is negative  and you don't actually have the disease."
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 493.94,
+            "end": 514.94,
+            "text": " So this is something that's really important to think  about and to remember when you're analyzing these data.  And so we started off in this project saying, well,  we need to get a positive predictive value more  on the order of 95%."
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 514.94,
+            "end": 533.34,
+            "text": " Because we wanted a very pure sample of people who really did  have the disease because we were going to take blood samples  from those patients, pay a bunch of money to the Broad  to analyze them, and then hopefully come up  with a better understanding of the relationship"
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 533.34,
+            "end": 553.2199999999999,
+            "text": " between their genetics and their disease.  And of course, if you talk to a biostatistician, as we did,  they told us that if we have more than about 5%  corruption of that database, then we're  going to get meaningless results from it."
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 553.2199999999999,
+            "end": 571.78,
+            "text": " So that's the goal here.  So what we did is to say, well, if you  train a data set that tries to tell you whether somebody  really has rheumatoid arthritis or not based on just codified  data."
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 571.78,
+            "end": 596.46,
+            "text": " So codified data is things like lab values and prescriptions  and demographics and stuff that is in tabular form.  Then we were getting a positive predictive value of about 88%.  And we said, well, how well could we  do by instead of looking at that codified data,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.000.mp3",
+            "start": 596.46,
+            "end": 600.62,
+            "text": " looking at the narrative text in the data set?"
+        }
+    ],
+    "text": " OK. So today and next Tuesday, we're talking about the role of natural language processing in machine learning in health care. And this is going to be a heterogeneous kind of presentation. Mainly today, I'm going to talk about stuff that happened or that takes advantage of methods that are not based on neural network representations. And on Tuesday, I'm going to speak mostly about stuff that does depend on neural network representations. But I'm not sure where the boundary is going to fall. I've also invited Dr. Catherine Liao over there, who will join me in a question and answer session, an interview like we did a couple of weeks ago with David. Cat is a rheumatologist in the Partners Health Care System. And you'll actually be hearing about some of the work that we've done together in the past before we go to the interview. So roughly, the outline of these two lectures is that I want to talk a little bit about why we care about clinical text. And then I'm going to talk about some conceptually very appealing but practically not very feasible methods that involve analyzing these narrative texts as linguistic entities, as linguistic objects, in the way that a linguist might approach them. And then we're going to talk about what is very often done, which is a kind of term spotting approach that says, well, we may not be able to understand exactly everything that goes on in the narratives. But we can identify certain words and certain phrases that are very highly indicative that the patient has a certain disease, a certain symptom, that some particular thing was done to them. And so this is a lot of the bread and butter of how clinical research is done nowadays. And then I'll go on to some other techniques. So here's an example. This is a discharge summary from MIMIC. When you played with MIMIC, you notice that it's de-identified. And so names and things are replaced with square brackets, star, star, star kinds of things. And here I have re-replaced those with synthetic names. So Mr. Blind isn't really Mr. Blind. And November 15 probably really isn't November 15, et cetera. But I wanted something that read like real text. So if you look at something like this, you see that Mr. Blind is a 79-year-old white, white male. So somebody repeated a word with a history of diabetes mellitus in inferior MI who underwent open repair of his increased diverticulum on November 13 at some, again, that's not the name of the actual place, medical center. And then he developed hebatemisis. So he was spitting up blood and was intubated for respiratory distress. So he wasn't breathing well. So these are all really important things about what happened to Mr. Blind. And so we'd like to be able to take advantage of this. And in fact, to give you a slightly more quantitative version of this, Kat and I worked on a project back around 2010 where we were looking at trying to understand what are the genetic correlates of rheumatoid arthritis. And so we went to the research patient data repository of Mass General and the Brigham Partners Health Care. And we said, OK, who are the patients who have been billed for a rheumatoid arthritis visit? And there are many thousands of those people. And then we selected a random set of, I think, 400 of those patients. We gave them to rheumatologists. And we said, which of these people actually have rheumatoid arthritis? So these were based on billing codes. So what would you guess is the positive predictive value of having a billing code for rheumatoid arthritis in this data set? I mean, how many people think it's more than 50%? OK, that would be nice. But it's not. How many people think it's more than 25%? God, you guys are getting really pessimistic. Well, it also isn't. So it turned out to be something like 19% in this cohort. Now, before you start calling the fraud investigators, you have to ask yourself, why is it that this data is so lousy? And there's a systematic reason. Because those billing codes were not created in order to specify what's wrong with the patient. They were created in order to tell an insurance company or Medicare or somebody how much of a payment is deserved by the doctors taking care of them. And so what this means is that, for example, if I clutch my chest and I'm going to have a heart attack, is that, for example, if I clutch my chest and go, oh, and an ambulance rushes me over to Mass General, and they do a whole bunch of tests, and they decide that I'm not having a heart attack, the correct billing code for that visit is myocardial infarction. Because, of course, the work that they had to do in order to figure out that I'm not having a heart attack is the same as the work they would have had to do to figure out that I was having a heart attack. And so the billing codes, we've talked about this a little bit before, but they're a very imperfect representation of reality. So we said, well, OK, what if we insisted that you have three billing codes for rheumatoid arthritis rather than just one? And that turned out to raise the positive predictive value all the way up to 27%. So you go, really? How could you get billed three times? Well, the answer is that you get billed for every aspirin you take at the hospital. And so, for example, it's very easy to accumulate three billing codes for the same thing. Because you go see a doctor, the doctor bills you for a rheumatoid arthritis visit. He or she sends you to a radiologist to take an X-ray of your fingers, your joints. That bill is another billing code for RA. The doctor also sends you to the lab to have a blood drawn so that they can check your anti-CCP titer. That's another billing code for rheumatoid arthritis. And it may be that all of this is negative and you don't actually have the disease. So this is something that's really important to think about and to remember when you're analyzing these data. And so we started off in this project saying, well, we need to get a positive predictive value more on the order of 95%. Because we wanted a very pure sample of people who really did have the disease because we were going to take blood samples from those patients, pay a bunch of money to the Broad to analyze them, and then hopefully come up with a better understanding of the relationship between their genetics and their disease. And of course, if you talk to a biostatistician, as we did, they told us that if we have more than about 5% corruption of that database, then we're going to get meaningless results from it. So that's the goal here. So what we did is to say, well, if you train a data set that tries to tell you whether somebody really has rheumatoid arthritis or not based on just codified data. So codified data is things like lab values and prescriptions and demographics and stuff that is in tabular form. Then we were getting a positive predictive value of about 88%. And we said, well, how well could we do by instead of looking at that codified data, looking at the narrative text in the data set?"
+}

@@ -1,0 +1,236 @@
+{
+    "chunks": [
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 0.0,
+            "end": 41.019999999999996,
+            "text": " So today's lecture is going to continue on the lecture that you saw on Tuesday,  which was introducing you to causal inference.  So the causal inference setting which we're studying in this course  is a really simplistic one from a causal graphs perspective.  There are three sets of variables of interest."
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 41.019999999999996,
+            "end": 61.26,
+            "text": " Everything you know about an individual or patient, which we're calling x over  here, an intervention or action, which for today's lecture,  we're going to suppose that it's either 0 or 1, so a binary intervention.  You either take it or don't.  And an outcome, y."
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 61.26,
+            "end": 79.9,
+            "text": " And what makes this problem of understanding  the impact of the intervention on the outcome challenging  is that we have to make that inference from observational data, where  we don't have the ability, at least not in medicine,  we typically don't have the ability to make interventions,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 79.9,
+            "end": 93.98,
+            "text": " active interventions.  And the goal of what we will be discussing in this course  is about how to take data that was collected  from the practice of medicine, where actions or interventions were taken,  and then use that to infer something about the causal effect."
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 93.98,
+            "end": 111.22,
+            "text": " And obviously, there are also randomized control trials  where one intentionally does randomize, but the focus of today's lecture  is going to be using observational data, already collected data,  to try to make these conclusions.  So we introduced the language of potential outcomes on Tuesday."
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 111.22,
+            "end": 129.86,
+            "text": " Potential outcomes is the mathematical framework  for trying to answer these questions.  But then with that definition of potential outcomes,  we can define the conditional average treatment effect,  which is the difference between y1 and y0 for the individual xi."
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 129.86,
+            "end": 145.34,
+            "text": " So you'll notice here that I have tation.  So I'm treating the potential outcome as a random variable  in case there might be some spasticity.  So sometimes, maybe if you were to give someone a treatment, it works.  And sometimes it doesn't."
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 145.34,
+            "end": 165.9,
+            "text": " So that's what the expectation is accounting for.  Any questions before I move on?  So with respect to this definition of conditional average treatment effect,  then you could ask, well, what would happen in aggregate for the population?  And you can compute that by taking the average"
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 165.9,
+            "end": 184.01999999999998,
+            "text": " of the conditional average treatment effect over all of the individuals.  So that's just this expectation with respect to now p of x.  Now, critically, this distribution p of x,  you should think about as the distribution of everyone  that exists in your data."
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 184.01999999999998,
+            "end": 197.01999999999998,
+            "text": " So some of those individuals might have received treatment 1.  In the past, some of them might have received treatment 0.  But when we ask this question about the average treatment effect,  we're asking for both of those populations, what  would have been the effect?"
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 197.01999999999998,
+            "end": 221.74,
+            "text": " What would have been the difference of outcomes  had they received treatment 1 minus had they received treatment 0?  Now, I wanted to take this opportunity  to start thinking a little bit bigger picture about how  causal inference can be important in a variety of societal questions."
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 221.74,
+            "end": 237.86,
+            "text": " And so I'd like to now spend just a couple of minutes thinking with you  about what some causal questions might be that we urgently need  to answer about the COVID-19 pandemic.  And as you try to think through these questions,  I want you to have this causal graph in mind."
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 237.86,
+            "end": 257.97999999999996,
+            "text": " So there is the general population.  There is some action that you want to perform.  And the whole notion of causal inference  is assessing the effect of that action on some outcome of interest.  So in trying to give the answer to my various answers to my questions"
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 257.97999999999996,
+            "end": 274.41999999999996,
+            "text": " of what are some causal inference questions of relevance to the current  pandemic, I want you to try to frame your answers in terms  of these x, t's, and y's.  It's also obviously very hard to answer using the types of techniques  that we will be discussing in this course,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 274.41999999999996,
+            "end": 296.14000000000004,
+            "text": " and partly because the techniques that I'm focusing on  are very much data-driven techniques.  That said, the general framework that I've introduced on Tuesday  for covariate adjustment of come up with a model  and use that model to make a prediction and the assumptions that"
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 296.14000000000004,
+            "end": 312.5,
+            "text": " underlie that in terms of, well, where is that model coming from?  If you're fitting the parameters from data,  having to have common support in order to be  able to have any trust in the downstream conclusions,  those underlying assumptions and the general premises will still hold."
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 312.5,
+            "end": 328.58000000000004,
+            "text": " But here, obviously, when it comes to something like social distancing,  there are complicated network effects.  And so whereas up until now, we've been making the assumption of what  was called sattva.  It was an assumption that I probably didn't even"
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 328.58000000000004,
+            "end": 344.21999999999997,
+            "text": " talk about in Tuesday's lecture.  But intuitively, what the sattva assumption says  is that each of your training examples are independent of each other.  And that might make sense when you think about giving a patient  a medication or not."
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 344.21999999999997,
+            "end": 363.85999999999996,
+            "text": " But it certainly doesn't make sense when you think about social distancing  type measures, where if some people social distance but other people don't,  it has, obviously, a very different impact on society.  So one needs a different class of models  to try to think about that, which have to relax that sattva assumption."
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 363.85999999999996,
+            "end": 383.82000000000005,
+            "text": " So those were all really good answers to my question.  And in some sense, now, so there's the epidemiological type questions  that we last spoke about.  But the first few set of questions about really  how does one treat patients who have COVID"
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 383.82000000000005,
+            "end": 396.9,
+            "text": " are the types of questions that only now we can really start to answer.  Now, unfortunately, because we're starting  to get a lot of data in the United States and internationally.  And so for example, my own personal research group,  we're starting to really scale up our research"
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 396.9,
+            "end": 413.26,
+            "text": " on these types of questions.  Now, one very simplified example that I  wanted to give of how a causal inference lens can be useful here  is by trying to understand case fatality rates.  So for example, in Italy, it was reported"
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 413.26,
+            "end": 433.14,
+            "text": " that 4.3% of individuals who had this condition passed away.  Whereas in China, it was reported that 2.3%  of individuals who had this condition passed away.  Now, you might ask, based on just those two numbers,  is something different about China, for example,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 433.14,
+            "end": 457.9,
+            "text": " might it be that the way that COVID is being managed in China  is better than in Italy?  You might also wonder if the strain of the disease  might be different between China and Italy.  So perhaps there were some mutations since it left Wuhan."
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 457.9,
+            "end": 475.46,
+            "text": " But if you dig a little bit deeper,  you see that if you plot case fatality rates by age group,  you get this plot that I'm showing over here.  And you see that if you compare Italy, which is the orange,  to China, which is blue, now stratified by age range,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 475.46,
+            "end": 495.58,
+            "text": " you see that for every single age range,  the percentage of deaths is lower in Italy  than in China, which would seem to be  a contradiction with what we saw with the aggregate numbers,  where we see that the case fatality rate in Italy"
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 495.58,
+            "end": 513.06,
+            "text": " is higher than in China.  And so the reason why this can happen  has to do with the fact that the populations are very different.  And by the way, this paradox goes by the name  of Simpson's paradox."
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 513.06,
+            "end": 529.5799999999999,
+            "text": " So if you dig a bit deeper, you see then  that if you're to look at, well, what  is the distribution of individuals in China and Italy  that have been reported to have COVID,  you see that in Italy, it's much more highly weighted"
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 529.5799999999999,
+            "end": 547.74,
+            "text": " towards these older ages.  And if you then combine that with the total number of cases,  you get to these discrepancies.  So it now fully explains these two numbers in the plot  that you see."
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 547.74,
+            "end": 563.1,
+            "text": " Now, if we were to try to think about this a bit more formally,  we would try to formalize it in terms  of the following causal graph.  And so here, we have the same notions of x, t, and y,  where x is the age of an individual who"
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 563.1,
+            "end": 579.14,
+            "text": " has been diagnosed with COVID.  t is now country.  So we're going to think about the intervention  here as transporting ourselves from China to Italy,  so thinking about changing the environment altogether."
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 579.14,
+            "end": 594.26,
+            "text": " And y is the outcome on an individual-level basis.  And so the formal question that one might want to ask  is about the causal impact of changing  the country on the outcome y.  Now, for this particular causal question,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.000.mp3",
+            "start": 594.26,
+            "end": 601.38,
+            "text": " this causal graph that I'm drawing here is the wrong one.  And in fact, the right causal graph probably  has an x."
+        }
+    ],
+    "text": " So today's lecture is going to continue on the lecture that you saw on Tuesday, which was introducing you to causal inference. So the causal inference setting which we're studying in this course is a really simplistic one from a causal graphs perspective. There are three sets of variables of interest. Everything you know about an individual or patient, which we're calling x over here, an intervention or action, which for today's lecture, we're going to suppose that it's either 0 or 1, so a binary intervention. You either take it or don't. And an outcome, y. And what makes this problem of understanding the impact of the intervention on the outcome challenging is that we have to make that inference from observational data, where we don't have the ability, at least not in medicine, we typically don't have the ability to make interventions, active interventions. And the goal of what we will be discussing in this course is about how to take data that was collected from the practice of medicine, where actions or interventions were taken, and then use that to infer something about the causal effect. And obviously, there are also randomized control trials where one intentionally does randomize, but the focus of today's lecture is going to be using observational data, already collected data, to try to make these conclusions. So we introduced the language of potential outcomes on Tuesday. Potential outcomes is the mathematical framework for trying to answer these questions. But then with that definition of potential outcomes, we can define the conditional average treatment effect, which is the difference between y1 and y0 for the individual xi. So you'll notice here that I have tation. So I'm treating the potential outcome as a random variable in case there might be some spasticity. So sometimes, maybe if you were to give someone a treatment, it works. And sometimes it doesn't. So that's what the expectation is accounting for. Any questions before I move on? So with respect to this definition of conditional average treatment effect, then you could ask, well, what would happen in aggregate for the population? And you can compute that by taking the average of the conditional average treatment effect over all of the individuals. So that's just this expectation with respect to now p of x. Now, critically, this distribution p of x, you should think about as the distribution of everyone that exists in your data. So some of those individuals might have received treatment 1. In the past, some of them might have received treatment 0. But when we ask this question about the average treatment effect, we're asking for both of those populations, what would have been the effect? What would have been the difference of outcomes had they received treatment 1 minus had they received treatment 0? Now, I wanted to take this opportunity to start thinking a little bit bigger picture about how causal inference can be important in a variety of societal questions. And so I'd like to now spend just a couple of minutes thinking with you about what some causal questions might be that we urgently need to answer about the COVID-19 pandemic. And as you try to think through these questions, I want you to have this causal graph in mind. So there is the general population. There is some action that you want to perform. And the whole notion of causal inference is assessing the effect of that action on some outcome of interest. So in trying to give the answer to my various answers to my questions of what are some causal inference questions of relevance to the current pandemic, I want you to try to frame your answers in terms of these x, t's, and y's. It's also obviously very hard to answer using the types of techniques that we will be discussing in this course, and partly because the techniques that I'm focusing on are very much data-driven techniques. That said, the general framework that I've introduced on Tuesday for covariate adjustment of come up with a model and use that model to make a prediction and the assumptions that underlie that in terms of, well, where is that model coming from? If you're fitting the parameters from data, having to have common support in order to be able to have any trust in the downstream conclusions, those underlying assumptions and the general premises will still hold. But here, obviously, when it comes to something like social distancing, there are complicated network effects. And so whereas up until now, we've been making the assumption of what was called sattva. It was an assumption that I probably didn't even talk about in Tuesday's lecture. But intuitively, what the sattva assumption says is that each of your training examples are independent of each other. And that might make sense when you think about giving a patient a medication or not. But it certainly doesn't make sense when you think about social distancing type measures, where if some people social distance but other people don't, it has, obviously, a very different impact on society. So one needs a different class of models to try to think about that, which have to relax that sattva assumption. So those were all really good answers to my question. And in some sense, now, so there's the epidemiological type questions that we last spoke about. But the first few set of questions about really how does one treat patients who have COVID are the types of questions that only now we can really start to answer. Now, unfortunately, because we're starting to get a lot of data in the United States and internationally. And so for example, my own personal research group, we're starting to really scale up our research on these types of questions. Now, one very simplified example that I wanted to give of how a causal inference lens can be useful here is by trying to understand case fatality rates. So for example, in Italy, it was reported that 4.3% of individuals who had this condition passed away. Whereas in China, it was reported that 2.3% of individuals who had this condition passed away. Now, you might ask, based on just those two numbers, is something different about China, for example, might it be that the way that COVID is being managed in China is better than in Italy? You might also wonder if the strain of the disease might be different between China and Italy. So perhaps there were some mutations since it left Wuhan. But if you dig a little bit deeper, you see that if you plot case fatality rates by age group, you get this plot that I'm showing over here. And you see that if you compare Italy, which is the orange, to China, which is blue, now stratified by age range, you see that for every single age range, the percentage of deaths is lower in Italy than in China, which would seem to be a contradiction with what we saw with the aggregate numbers, where we see that the case fatality rate in Italy is higher than in China. And so the reason why this can happen has to do with the fact that the populations are very different. And by the way, this paradox goes by the name of Simpson's paradox. So if you dig a bit deeper, you see then that if you're to look at, well, what is the distribution of individuals in China and Italy that have been reported to have COVID, you see that in Italy, it's much more highly weighted towards these older ages. And if you then combine that with the total number of cases, you get to these discrepancies. So it now fully explains these two numbers in the plot that you see. Now, if we were to try to think about this a bit more formally, we would try to formalize it in terms of the following causal graph. And so here, we have the same notions of x, t, and y, where x is the age of an individual who has been diagnosed with COVID. t is now country. So we're going to think about the intervention here as transporting ourselves from China to Italy, so thinking about changing the environment altogether. And y is the outcome on an individual-level basis. And so the formal question that one might want to ask is about the causal impact of changing the country on the outcome y. Now, for this particular causal question, this causal graph that I'm drawing here is the wrong one. And in fact, the right causal graph probably has an x."
+}

@@ -1,0 +1,250 @@
+{
+    "chunks": [
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 0.0,
+            "end": 18.8,
+            "text": " nursing notes, doctor's notes, discharge summaries,  various other sources.  Could we do as well or better?  And the answer turned out that we were getting about 89%  using only the natural language processing on these notes."
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 18.8,
+            "end": 41.88,
+            "text": " And not surprisingly, when you put them together,  the joint model gave us about 94%.  So that was definitely an improvement.  So this was published in 2010.  And so this is not the latest hot off the bench results."
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 41.88,
+            "end": 56.88,
+            "text": " But to me, it's a very compelling story  that says there is real value in these clinical narratives.  OK.  OK.  So how did we do this?"
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 56.88,
+            "end": 80.08,
+            "text": " Well, we took about 4 million patients in the EMR.  We selected about 29,000 of them by requiring  that they have at least one ICD-9 code  for rheumatoid arthritis or that they've had an anti-CCP titer  done in the lab."
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 80.08,
+            "end": 101.4,
+            "text": " And then we, oh, it was 500, not 400.  So we looked at 500 cases, which  we got gold standard readings on.  And then we trained an algorithm that  predicted whether this patient really had RA or not."
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 101.4,
+            "end": 121.84,
+            "text": " And that predicted about 3,585 cases.  We then sampled a validation set of 400 of those.  We threatened our rheumatologists  with bodily harm if they didn't read all those cases  and give us a gold standard judgment."
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 121.84,
+            "end": 135.28,
+            "text": " No, I'm kidding.  I mean, they're actually really cooperative.  And there are some details here that you  can look at in the slide.  And I had a pointer to the original paper"
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 135.28,
+            "end": 154.2,
+            "text": " if you're interested in the details.  But we were looking at ICD-9 codes for rheumatoid arthritis  and related diseases.  We excluded some ICD-9 codes that  fall under the general category of rheumatoid diseases"
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 154.2,
+            "end": 171.0,
+            "text": " because they're not correct for the sample  that we were interested in.  We dealt with this multiple coding  by ignoring codes that happened within a week  of each other so that we didn't get"
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 171.0,
+            "end": 188.52,
+            "text": " this problem of multiple bills from the same visit.  And then we looked for electronic prescriptions  of various sorts.  We looked for lab tests, mainly RF rheumatoid factor  and anticyclic citrullinated peptide,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 188.52,
+            "end": 202.36,
+            "text": " if I pronounced that correctly.  And another thing we found, not only in this study,  but in a number of others, is it's very helpful just  to count up how many facts are on the database  about a particular patient."
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 202.36,
+            "end": 217.72,
+            "text": " That's not a bad proxy for how sick they are.  If you're not very sick, you tend  to have a little bit of data.  And if you're sicker, you tend to have more data.  So these were the cohort selection."
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 217.72,
+            "end": 234.68,
+            "text": " And then for the narrative text, we  used a system that was built by Ching Zhang and her colleagues  at the time.  It was called HITECH.  It's definitely not state of the art today."
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 234.68,
+            "end": 260.42,
+            "text": " But this was a system that extracted entities  from narrative text and did a capable job for its era.  And we did this from health care provider notes, radiology,  and pathology reports, discharge summaries, operative reports.  And we also extracted disease diagnosis notes,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 260.42,
+            "end": 278.82,
+            "text": " mentions from the same data, medications, lab data,  radiology findings, et cetera.  And then we had augmented the list  that came with that tool with a sort of hand-curated list  of alternative ways of saying the same thing in order"
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 278.82,
+            "end": 293.42,
+            "text": " to expand our coverage.  And we played with negation detection, because of course,  if a note says the patient does not have X,  then you don't want to say the patient had  X because X was mentioned."
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 293.42,
+            "end": 309.48,
+            "text": " And I'll say a few more words about that in a minute.  So if you look at the model we built  using logistic regression, which is a very common method, what  you find is that there are positive and negative  predictors."
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 309.48,
+            "end": 326.92,
+            "text": " And the predictors actually are an interesting mix  of ones based on natural language processing  and ones that are codified.  So for example, you have rheumatoid arthritis.  If a note says the patient has rheumatoid arthritis,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 326.92,
+            "end": 343.68,
+            "text": " that's pretty good evidence that they do.  If somebody is characterized as being seropositive,  that's again good evidence.  And then erosions and so on.  But there are also codified things,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 343.68,
+            "end": 358.08,
+            "text": " like if you see that the rheumatoid factor in a lab  test was negative, then actually, what?  I don't know why that's a no.  That counts against.  OK."
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 358.08,
+            "end": 378.09999999999997,
+            "text": " And then various exclusions.  So these were the things selected  by our regularized logistic regression algorithm.  And I showed you the results before.  So we were able to get a positive predictive value"
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 378.09999999999997,
+            "end": 383.91999999999996,
+            "text": " of about 0.94.  Yeah?  AUDIENCE 2.  In the previous slide, you said standardized regression  coefficients."
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 383.91999999999996,
+            "end": 416.91999999999996,
+            "text": " So why did you standardize?  Maybe I got the words wrong, but just one previous slide.  So the regression coefficients in a logistic regression  are typically just odds ratios.  So they tell you whether something makes a diagnosis"
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 416.92,
+            "end": 429.20000000000005,
+            "text": " more or less likely.  And where does it say standardized?  It's in a column heading.  Oh, standardized.  I don't know why it says standardized."
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 429.20000000000005,
+            "end": 441.24,
+            "text": " Do you know why it says standardized?  So a couple of things.  One is when you run an algorithm right on your data set,  you can't afford it using the same coefficients,  because it's going to be different for each one."
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 441.24,
+            "end": 453.26,
+            "text": " So we didn't want people to feel like they can just add it on.  The other thing when you standardize it  is you can see the relative weight of each coefficient.  Kind of a measure, not exactly, of how important  each coefficient was."
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 453.26,
+            "end": 471.26,
+            "text": " So that's our way of, if you can see,  we ranked it by the standardized regression coefficient.  So NLPRA is up top at 1.11.  So that has the highest weight, whereas the other DMARs  lend it only a little bit more."
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 471.26,
+            "end": 481.7,
+            "text": " OK.  So yes?  The variables, the word NLPRA, where  it says rheumatoid arthritis in the text,  are these presents of, or is it count?"
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 481.7,
+            "end": 496.02,
+            "text": " Yeah, assuming it's present.  So the negation algorithm hopefully  would have picked up if it said it's absent,  and you wouldn't get that feature.  All right."
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 496.02,
+            "end": 511.86,
+            "text": " So here's an interesting thing.  This group, I was not involved in this particular project,  said, well, could we replicate this study at Vanderbilt  and at Northwestern University?  So we have colleagues in those places."
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 511.86,
+            "end": 526.14,
+            "text": " They also have electronic medical record systems.  They also are interested in identifying people  with rheumatoid arthritis.  And so Partners had about 4 million patients.  Northwestern had 2.2."
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 526.14,
+            "end": 546.32,
+            "text": " Vanderbilt had 1.7.  We couldn't run exactly the same stuff, because of course,  these are different systems.  And so the medications, for example,  were extracted from their local EMR in very different ways."
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 546.32,
+            "end": 563.88,
+            "text": " And the natural language queries were also  extracted in different ways, because Vanderbilt,  for example, already had a tool in place  where they would try to translate  any text in their notes into UMLS concepts, which we'll"
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 563.88,
+            "end": 581.4000000000001,
+            "text": " talk about again in a little while.  So my expectation when I heard about this study  is that this would be a disaster,  that it would simply not work, because there  are local effects, local factors, local ways"
+        },
+        {
+            "number": "lec7",
+            "title": "part.001.mp3",
+            "start": 581.4000000000001,
+            "end": 600.2800000000001,
+            "text": " that people have of describing patients that I thought  would be very different between Nashville, Chicago, and Boston.  And much to my surprise, what they found  was that, in fact, it kind of worked."
+        }
+    ],
+    "text": " nursing notes, doctor's notes, discharge summaries, various other sources. Could we do as well or better? And the answer turned out that we were getting about 89% using only the natural language processing on these notes. And not surprisingly, when you put them together, the joint model gave us about 94%. So that was definitely an improvement. So this was published in 2010. And so this is not the latest hot off the bench results. But to me, it's a very compelling story that says there is real value in these clinical narratives. OK. OK. So how did we do this? Well, we took about 4 million patients in the EMR. We selected about 29,000 of them by requiring that they have at least one ICD-9 code for rheumatoid arthritis or that they've had an anti-CCP titer done in the lab. And then we, oh, it was 500, not 400. So we looked at 500 cases, which we got gold standard readings on. And then we trained an algorithm that predicted whether this patient really had RA or not. And that predicted about 3,585 cases. We then sampled a validation set of 400 of those. We threatened our rheumatologists with bodily harm if they didn't read all those cases and give us a gold standard judgment. No, I'm kidding. I mean, they're actually really cooperative. And there are some details here that you can look at in the slide. And I had a pointer to the original paper if you're interested in the details. But we were looking at ICD-9 codes for rheumatoid arthritis and related diseases. We excluded some ICD-9 codes that fall under the general category of rheumatoid diseases because they're not correct for the sample that we were interested in. We dealt with this multiple coding by ignoring codes that happened within a week of each other so that we didn't get this problem of multiple bills from the same visit. And then we looked for electronic prescriptions of various sorts. We looked for lab tests, mainly RF rheumatoid factor and anticyclic citrullinated peptide, if I pronounced that correctly. And another thing we found, not only in this study, but in a number of others, is it's very helpful just to count up how many facts are on the database about a particular patient. That's not a bad proxy for how sick they are. If you're not very sick, you tend to have a little bit of data. And if you're sicker, you tend to have more data. So these were the cohort selection. And then for the narrative text, we used a system that was built by Ching Zhang and her colleagues at the time. It was called HITECH. It's definitely not state of the art today. But this was a system that extracted entities from narrative text and did a capable job for its era. And we did this from health care provider notes, radiology, and pathology reports, discharge summaries, operative reports. And we also extracted disease diagnosis notes, mentions from the same data, medications, lab data, radiology findings, et cetera. And then we had augmented the list that came with that tool with a sort of hand-curated list of alternative ways of saying the same thing in order to expand our coverage. And we played with negation detection, because of course, if a note says the patient does not have X, then you don't want to say the patient had X because X was mentioned. And I'll say a few more words about that in a minute. So if you look at the model we built using logistic regression, which is a very common method, what you find is that there are positive and negative predictors. And the predictors actually are an interesting mix of ones based on natural language processing and ones that are codified. So for example, you have rheumatoid arthritis. If a note says the patient has rheumatoid arthritis, that's pretty good evidence that they do. If somebody is characterized as being seropositive, that's again good evidence. And then erosions and so on. But there are also codified things, like if you see that the rheumatoid factor in a lab test was negative, then actually, what? I don't know why that's a no. That counts against. OK. And then various exclusions. So these were the things selected by our regularized logistic regression algorithm. And I showed you the results before. So we were able to get a positive predictive value of about 0.94. Yeah? AUDIENCE 2. In the previous slide, you said standardized regression coefficients. So why did you standardize? Maybe I got the words wrong, but just one previous slide. So the regression coefficients in a logistic regression are typically just odds ratios. So they tell you whether something makes a diagnosis more or less likely. And where does it say standardized? It's in a column heading. Oh, standardized. I don't know why it says standardized. Do you know why it says standardized? So a couple of things. One is when you run an algorithm right on your data set, you can't afford it using the same coefficients, because it's going to be different for each one. So we didn't want people to feel like they can just add it on. The other thing when you standardize it is you can see the relative weight of each coefficient. Kind of a measure, not exactly, of how important each coefficient was. So that's our way of, if you can see, we ranked it by the standardized regression coefficient. So NLPRA is up top at 1.11. So that has the highest weight, whereas the other DMARs lend it only a little bit more. OK. So yes? The variables, the word NLPRA, where it says rheumatoid arthritis in the text, are these presents of, or is it count? Yeah, assuming it's present. So the negation algorithm hopefully would have picked up if it said it's absent, and you wouldn't get that feature. All right. So here's an interesting thing. This group, I was not involved in this particular project, said, well, could we replicate this study at Vanderbilt and at Northwestern University? So we have colleagues in those places. They also have electronic medical record systems. They also are interested in identifying people with rheumatoid arthritis. And so Partners had about 4 million patients. Northwestern had 2.2. Vanderbilt had 1.7. We couldn't run exactly the same stuff, because of course, these are different systems. And so the medications, for example, were extracted from their local EMR in very different ways. And the natural language queries were also extracted in different ways, because Vanderbilt, for example, already had a tool in place where they would try to translate any text in their notes into UMLS concepts, which we'll talk about again in a little while. So my expectation when I heard about this study is that this would be a disaster, that it would simply not work, because there are local effects, local factors, local ways that people have of describing patients that I thought would be very different between Nashville, Chicago, and Boston. And much to my surprise, what they found was that, in fact, it kind of worked."
+}

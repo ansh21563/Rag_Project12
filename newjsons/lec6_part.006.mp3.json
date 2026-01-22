@@ -1,0 +1,299 @@
+{
+    "chunks": [
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 0.0,
+            "end": 13.1,
+            "text": " Where we have very little data, we're  using a lot of domain knowledge, the actual details  of how one does the math, in particular,  the approximate inference, can make a really big difference  in the performance of the system."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 13.1,
+            "end": 28.64,
+            "text": " And so it's something that one should really  think deeply about as well.  I'm going to skip that slide and then just mention  very briefly this one.  This is showing an inference of the events."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 28.64,
+            "end": 48.2,
+            "text": " So here, I'm showing you three different observations.  And on the bottom here, I'm showing the prediction  of when two different artifactual events happened.  And these predictions were actually quite good  using this model."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 48.2,
+            "end": 68.68,
+            "text": " So I'm done with that first example.  And just to recap, the important point to that example  was that we had almost no labeled data.  We're tackling this problem using a cleverly chosen  statistical model with some domain knowledge built in."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 68.68,
+            "end": 86.4,
+            "text": " And that can go really far.  So now we'll shift gears to talk about a different type  of problem involving physiological data,  and that's of detecting atrial fibrillation.  So what I'm showing you here is a live core device."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 86.4,
+            "end": 103.04,
+            "text": " I own one of these.  So if you want to drop on my E25 545 office,  you can play around with it.  And if you attach it to your mobile phone,  it'll show you your electrical conductance"
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 103.04,
+            "end": 114.88000000000001,
+            "text": " through your heart as measured through your two fingers  touching this device shown over here.  And from that, one can try to detect whether the patient has  atrial fibrillation.  So what is atrial fibrillation?"
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 117.4,
+            "end": 136.48000000000002,
+            "text": " Good question.  It's not an avocado.  So this is from the American Heart Association.  They define atrial fibrillation as a quivering  or irregular heartbeat, also known as arrhythmia."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 136.48000000000002,
+            "end": 146.04000000000002,
+            "text": " And one of the big challenges is that it  could lead to blood clots, stroke, heart failure,  and so on.  So here's how a patient might describe  having atrial fibrillation."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 146.04,
+            "end": 157.7,
+            "text": " My heart flip-flops, skits, beats,  feels like it's banging against my chest wall,  particularly when I'm carrying stuff up my stairs  or bending down.  Now let's try to look at a picture of it."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 168.07999999999998,
+            "end": 188.52,
+            "text": " So this is a normal heartbeat.  The heart's pumping like this.  And if you were to look at the signal output of the EKG  of a normal heartbeat, it would look like this.  And it's roughly corresponding to the different signals"
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 188.52,
+            "end": 205.72,
+            "text": " corresponding to different cycles of the heartbeat.  Now for a patient who has atrial fibrillation,  looks more like this.  So much more obviously abnormal,  at least in this figure."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 205.72,
+            "end": 219.84,
+            "text": " And if you look at the car spinning signal,  it also looks very different.  So this is just to give you some intuition about what  I mean by atrial fibrillation.  So what we're going to try to do now is to detect it."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 219.84,
+            "end": 242.56,
+            "text": " So we're going to take data like that  and try to classify it into a number of different categories.  Now this is something which has been studied for decades.  And last year, in 2017, there was a competition  run by Professor Roger Mark, who is here at MIT,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 242.56,
+            "end": 253.56,
+            "text": " which is trying to say, well, how good are we  at trying to figure out which patients have  different types of heart rhythms based on data  that looks like this?  So this is a normal rhythm, which is also"
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 253.56,
+            "end": 265.2,
+            "text": " called a sinus rhythm.  And over here, it's atrial.  This is an example of one patient  who has atrial fibrillation.  This is another type of rhythm that's not atrial fibrillation"
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 265.2,
+            "end": 275.2,
+            "text": " but is abnormal.  And this is a noisy recording.  For example, the patient doesn't really  have their two fingers very well put onto the two  leads of the device."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 275.2,
+            "end": 288.96,
+            "text": " So given one of these categories,  can we predict one of these signals,  can we predict which category it came from?  So if you looked at this, you might recognize that, oh, they  look a bit different."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 288.96,
+            "end": 307.36,
+            "text": " So could some of you guess what might be predictive features  that differentiate one of these signals from the other?  In the back.  AUDIENCE 1 The presence or absence  of one of the peaks, the QRS complex, are like the T-wave."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 307.36,
+            "end": 318.48,
+            "text": " So speak in English for people who  don't know what these terms mean.  There is one large peak, which can probably  be consumed as one millivolt.  And there is another peak, which is sort of like,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 318.48,
+            "end": 324.8,
+            "text": " they have reverse polarity between normal rhythm  and ear frequency.  Good.  So are you a cardiologist?  No."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 324.8,
+            "end": 341.32000000000005,
+            "text": " No, OK.  So what the student suggested is one  could look for these inversions to try to describe  a little differently.  So here, you're suggesting the lack of those inversions"
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 341.32000000000005,
+            "end": 352.24,
+            "text": " is predictive of an abnormal rhythm.  What about another feature that could be predictive?  Yeah.  AUDIENCE 2 The spacing between the peaks  is more irregular with the AF rhythm."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 352.24,
+            "end": 361.6,
+            "text": " The spacing between beats is more irregular  with the AF rhythm.  So you're sort of looking at this.  You see how here, this spacing is  very different from this spacing,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 361.6,
+            "end": 372.96000000000004,
+            "text": " whereas in the normal rhythm, sort of the spacing  looks pretty darn regular.  All right, good.  OK, so if I was to show you 40 examples of these  and then ask you to classify some new ones,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 372.96000000000004,
+            "end": 390.52000000000004,
+            "text": " how well do you think you'll be able to do?  Pretty well?  I would be surprised if you couldn't do reasonably well,  at least distinguishing between normal rhythm and AF rhythm,  because there seem to be some pretty clear signals here."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 390.52000000000004,
+            "end": 399.52,
+            "text": " Of course, as you get into alternatives,  the story gets much more complex.  But let me dig in a little bit deeper  into what I mean by this.  So let's define some of these terms."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 399.52,
+            "end": 419.24,
+            "text": " Well, cardiologists have studied this for a really long time.  So what I'm showing you here is one heart cycle.  And you can put names to each of the peaks  that you would see in a regular heart cycle.  So for example, that very high peak is known as the R peak."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 419.24,
+            "end": 435.6,
+            "text": " And you could look at, for example, the interval.  So this is one beat.  You could look at the interval between the R peak of one beat  and the R peak of another peak and define that  to be the RR interval."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 435.6,
+            "end": 453.91999999999996,
+            "text": " In a similar way, one could find different distinctive elements  of the signal.  By the way, each time step corresponds  the heart being in a different position.  And for a healthy heart, these are relatively deterministic."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 453.91999999999996,
+            "end": 462.73999999999995,
+            "text": " And so you can look at other distances  and derive features from those distances  as well, just like we were talking about,  both within a beat and across beats.  Yep?"
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 462.73999999999995,
+            "end": 472.35999999999996,
+            "text": " AUDIENCE 2.  So what's the difference between a segment and an interval?  Yeah, I don't know what the difference between a segment  and an interval is.  Does anyone else know?"
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 472.35999999999996,
+            "end": 480.92,
+            "text": " I mean, I guess the interval is between probably  the heads of peaks, whereas segments  might refer to within interval.  That's my guess.  Does someone know better?"
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 484.32,
+            "end": 497.2,
+            "text": " For the purpose of today's class,  that's good enough understanding.  All right.  The point is this is well understood, right?  And one could derive features from this."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 497.2,
+            "end": 512.9599999999999,
+            "text": " By us.  So what would a traditional approach be to this problem?  I'm pulling this figure from a paper from 2002.  What it'll do is it'll take in that signal.  It'll do some filtering of it."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 512.9599999999999,
+            "end": 528.0799999999999,
+            "text": " Then it'll run a peak detection logic,  which will find these peaks.  And then it'll measure intervals between these peaks  and within a beat.  And it'll take those computations"
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 528.0799999999999,
+            "end": 538.84,
+            "text": " and make some decisions based on it.  So that's a traditional algorithm.  And they work pretty reasonably.  And so what do I mean by signal processing?  Well, this is an example of that."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 538.84,
+            "end": 554.32,
+            "text": " I encourage any of you to go home today and try to code up  a peak-finding algorithm.  It's not that hard, at least not to get an OK one.  You might imagine keeping a running tab of what's  the highest signal you've seen so far."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 554.32,
+            "end": 571.28,
+            "text": " Then you look to see what is the first time it drops,  and the next time it goes up larger than, let's say,  the previous, suppose that you want to look for when the drop  is the recent maximum value divided by 2.  And then you reset."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 571.28,
+            "end": 585.5,
+            "text": " And you can imagine in this way very quickly coding up  a peak-finding algorithm.  And so this is just, again, to give you some intuition  behind what a traditional approach would be.  And then you can very quickly see"
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 585.5,
+            "end": 598.84,
+            "text": " that once you start to look at some intervals  between peaks, that alone is often  good enough for predicting whether a patient has  atrial fibrillation.  So this is a figure taken from a paper in 2001."
+        },
+        {
+            "number": "lec6",
+            "title": "part.006.mp3",
+            "start": 598.84,
+            "end": 601.28,
+            "text": " I'm showing a single patient."
+        }
+    ],
+    "text": " Where we have very little data, we're using a lot of domain knowledge, the actual details of how one does the math, in particular, the approximate inference, can make a really big difference in the performance of the system. And so it's something that one should really think deeply about as well. I'm going to skip that slide and then just mention very briefly this one. This is showing an inference of the events. So here, I'm showing you three different observations. And on the bottom here, I'm showing the prediction of when two different artifactual events happened. And these predictions were actually quite good using this model. So I'm done with that first example. And just to recap, the important point to that example was that we had almost no labeled data. We're tackling this problem using a cleverly chosen statistical model with some domain knowledge built in. And that can go really far. So now we'll shift gears to talk about a different type of problem involving physiological data, and that's of detecting atrial fibrillation. So what I'm showing you here is a live core device. I own one of these. So if you want to drop on my E25 545 office, you can play around with it. And if you attach it to your mobile phone, it'll show you your electrical conductance through your heart as measured through your two fingers touching this device shown over here. And from that, one can try to detect whether the patient has atrial fibrillation. So what is atrial fibrillation? Good question. It's not an avocado. So this is from the American Heart Association. They define atrial fibrillation as a quivering or irregular heartbeat, also known as arrhythmia. And one of the big challenges is that it could lead to blood clots, stroke, heart failure, and so on. So here's how a patient might describe having atrial fibrillation. My heart flip-flops, skits, beats, feels like it's banging against my chest wall, particularly when I'm carrying stuff up my stairs or bending down. Now let's try to look at a picture of it. So this is a normal heartbeat. The heart's pumping like this. And if you were to look at the signal output of the EKG of a normal heartbeat, it would look like this. And it's roughly corresponding to the different signals corresponding to different cycles of the heartbeat. Now for a patient who has atrial fibrillation, looks more like this. So much more obviously abnormal, at least in this figure. And if you look at the car spinning signal, it also looks very different. So this is just to give you some intuition about what I mean by atrial fibrillation. So what we're going to try to do now is to detect it. So we're going to take data like that and try to classify it into a number of different categories. Now this is something which has been studied for decades. And last year, in 2017, there was a competition run by Professor Roger Mark, who is here at MIT, which is trying to say, well, how good are we at trying to figure out which patients have different types of heart rhythms based on data that looks like this? So this is a normal rhythm, which is also called a sinus rhythm. And over here, it's atrial. This is an example of one patient who has atrial fibrillation. This is another type of rhythm that's not atrial fibrillation but is abnormal. And this is a noisy recording. For example, the patient doesn't really have their two fingers very well put onto the two leads of the device. So given one of these categories, can we predict one of these signals, can we predict which category it came from? So if you looked at this, you might recognize that, oh, they look a bit different. So could some of you guess what might be predictive features that differentiate one of these signals from the other? In the back. AUDIENCE 1 The presence or absence of one of the peaks, the QRS complex, are like the T-wave. So speak in English for people who don't know what these terms mean. There is one large peak, which can probably be consumed as one millivolt. And there is another peak, which is sort of like, they have reverse polarity between normal rhythm and ear frequency. Good. So are you a cardiologist? No. No, OK. So what the student suggested is one could look for these inversions to try to describe a little differently. So here, you're suggesting the lack of those inversions is predictive of an abnormal rhythm. What about another feature that could be predictive? Yeah. AUDIENCE 2 The spacing between the peaks is more irregular with the AF rhythm. The spacing between beats is more irregular with the AF rhythm. So you're sort of looking at this. You see how here, this spacing is very different from this spacing, whereas in the normal rhythm, sort of the spacing looks pretty darn regular. All right, good. OK, so if I was to show you 40 examples of these and then ask you to classify some new ones, how well do you think you'll be able to do? Pretty well? I would be surprised if you couldn't do reasonably well, at least distinguishing between normal rhythm and AF rhythm, because there seem to be some pretty clear signals here. Of course, as you get into alternatives, the story gets much more complex. But let me dig in a little bit deeper into what I mean by this. So let's define some of these terms. Well, cardiologists have studied this for a really long time. So what I'm showing you here is one heart cycle. And you can put names to each of the peaks that you would see in a regular heart cycle. So for example, that very high peak is known as the R peak. And you could look at, for example, the interval. So this is one beat. You could look at the interval between the R peak of one beat and the R peak of another peak and define that to be the RR interval. In a similar way, one could find different distinctive elements of the signal. By the way, each time step corresponds the heart being in a different position. And for a healthy heart, these are relatively deterministic. And so you can look at other distances and derive features from those distances as well, just like we were talking about, both within a beat and across beats. Yep? AUDIENCE 2. So what's the difference between a segment and an interval? Yeah, I don't know what the difference between a segment and an interval is. Does anyone else know? I mean, I guess the interval is between probably the heads of peaks, whereas segments might refer to within interval. That's my guess. Does someone know better? For the purpose of today's class, that's good enough understanding. All right. The point is this is well understood, right? And one could derive features from this. By us. So what would a traditional approach be to this problem? I'm pulling this figure from a paper from 2002. What it'll do is it'll take in that signal. It'll do some filtering of it. Then it'll run a peak detection logic, which will find these peaks. And then it'll measure intervals between these peaks and within a beat. And it'll take those computations and make some decisions based on it. So that's a traditional algorithm. And they work pretty reasonably. And so what do I mean by signal processing? Well, this is an example of that. I encourage any of you to go home today and try to code up a peak-finding algorithm. It's not that hard, at least not to get an OK one. You might imagine keeping a running tab of what's the highest signal you've seen so far. Then you look to see what is the first time it drops, and the next time it goes up larger than, let's say, the previous, suppose that you want to look for when the drop is the recent maximum value divided by 2. And then you reset. And you can imagine in this way very quickly coding up a peak-finding algorithm. And so this is just, again, to give you some intuition behind what a traditional approach would be. And then you can very quickly see that once you start to look at some intervals between peaks, that alone is often good enough for predicting whether a patient has atrial fibrillation. So this is a figure taken from a paper in 2001. I'm showing a single patient."
+}

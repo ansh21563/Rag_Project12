@@ -1,0 +1,257 @@
+{
+    "chunks": [
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 0.0,
+            "end": 16.240000000000002,
+            "text": " So this is a way of doing it.  And this is typically done.  Unfortunately, of course, it's a difficult ascertainment problem.  And it's also not stable.  So people have done experiments where"
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 16.240000000000002,
+            "end": 28.88,
+            "text": " they get somebody to give them this kind of number  as a hypothetical.  And then when that person winds up actually  faced with such a decision, they no longer  will abide with that number."
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 28.88,
+            "end": 43.879999999999995,
+            "text": " So they've changed their mind when the situation is real.  But it's nice because there's two feet, right?  So you could have run a six-pounder in a suit.  They didn't actually do it.  It was hypothetical."
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 48.0,
+            "end": 64.2,
+            "text": " Next program I want to tell you about, again,  the technique for this was developed as a PhD thesis  here at MIT in 1967.  So this is hot off the presses.  But it's still used, this type of idea."
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 64.2,
+            "end": 78.72,
+            "text": " And so this was a program that was  published in the American Journal of Medicine, which  was a high-impact medical journal.  I think this was actually the first sort  of computational program that that journal had ever"
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 78.72,
+            "end": 93.92,
+            "text": " published as a medical journal.  And it was addressed at the problem  of the diagnosis of acute oliguric renal failure.  Oliguric means you're not peeing enough.  Renal is your kidney."
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 93.92,
+            "end": 114.94,
+            "text": " So this is something's gone wrong with your kidney,  and you're not producing enough urine.  Now, this is a good problem to address with these techniques  because if something happens to you suddenly,  it's very likely that there is one cause for it."
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 114.94,
+            "end": 131.22,
+            "text": " If you are 85 years old, and you have a little heart disease  and a little kidney disease and a little liver disease  and a little lung disease, there is no guarantee  that there was one thing that went wrong with you that  caused all these."
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 131.22,
+            "end": 148.74,
+            "text": " But if you were OK yesterday, and then you stopped peeing,  it's pretty likely that there is one thing that's gone wrong.  So it's a good application of this model.  So what they said is there are 14 potential causes,  and these are exhaustive and mutually exclusive."
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 148.74,
+            "end": 161.98,
+            "text": " There are 27 tests or questions or observations that are  relevant to the differential.  These are cheap tests, so they didn't  involve doing anything either expensive or dangerous  to the patient."
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 161.98,
+            "end": 175.06,
+            "text": " It was measuring something in the lab  or asking questions of the patient.  But they didn't want to have to ask all of them  because that's pretty tedious.  And so they were trying to minimize"
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 175.06,
+            "end": 187.94,
+            "text": " the amount of information that they  needed to gather in order to come up  with an appropriate decision.  Now, in the real problem, there were three invasive tests  that are dangerous and expensive,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 187.94,
+            "end": 201.78,
+            "text": " and then eight different treatments  that could be applied.  And I'm only going to tell you about the first part  of this problem.  This 1973 article shows you what the program looked like."
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 201.78,
+            "end": 219.10000000000002,
+            "text": " It was a computer terminal where it gave you choices,  and you would type in an answer.  And so that was the state of the art at the time.  But what I'm going to do is, God willing,  I'm going to demonstrate a reconstruction"
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 219.10000000000002,
+            "end": 240.9,
+            "text": " that I made of this program.  So these guys are the potential causes of stopping TP,  acute tubular necrosis, functional acute renal failure,  urinary tract obstruction, acute glomerulonephritis, et  cetera."
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 240.9,
+            "end": 257.94,
+            "text": " And these are the prior probabilities.  Now, I have to warn you, these numbers were, in fact,  estimated by people sticking their finger in the air  and figuring out which way the wind was blowing.  Because in 1973, there were not great databases"
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 257.94,
+            "end": 271.78,
+            "text": " that you could turn to.  And then these are the questions that  were available to be asked.  And what you see in the first column,  at least if you're sitting close to the screen,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 271.78,
+            "end": 291.26000000000005,
+            "text": " is the expected entropy of the probability distribution  if you answered this question.  So this is basically saying, if I ask this question,  how likely is each of the possible answers,  given my disease distribution probabilities?"
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 291.26000000000005,
+            "end": 306.36,
+            "text": " And then for each of those answers,  I do a Bayesian revision.  Then I weight the entropy of that resulting distribution  by the probability of getting that answer.  And that gets me the expected entropy"
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 306.40000000000003,
+            "end": 319.64,
+            "text": " for asking that question.  And the idea is that the lower the expected entropy,  the more valuable the question.  Makes sense.  So if we look, for example, the most valuable question"
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 319.64,
+            "end": 345.12,
+            "text": " is, what was the blood pressure at the onset of oliguria?  And I can click on this and say it was, let's say,  moderately elevated.  And what this little colorful graph is showing you  is that if you look at the initial probability"
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 345.12,
+            "end": 364.88,
+            "text": " distribution, acute tubular necrosis was about 25%  and has gone down to a very small amount,  whereas some of these others have grown  in importance considerably.  So we can answer more questions."
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 364.88,
+            "end": 382.6,
+            "text": " We can say, let's see, what is the degree of,  is there protein in the urine?  And we say, no, there isn't.  I think we say, no, there isn't.  Zero."
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 382.6,
+            "end": 399.0,
+            "text": " And that revises the probability distribution.  And then it says, the next most important thing is kidney size.  And we say, let's say, the kidney size is normal.  So now all of a sudden, functional acute renal  failure, which, by the way, is one"
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 399.0,
+            "end": 415.0,
+            "text": " of these funny medical categories that  says it doesn't work well.  Doesn't explain to you why it doesn't work well,  but it's sort of a generic thing.  And sure enough, we can keep answering questions about,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 415.0,
+            "end": 432.22,
+            "text": " are you producing less than 50 cc's of urine, which  is a tiny amount, or somewhere between 50 and 400?  Remember, this is for people who are not producing enough.  So normally, you'd be over 400.  So these are the only choices."
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 432.22,
+            "end": 448.26,
+            "text": " So let's say it's moderate.  And so you see the probability distribution keeps changing.  And what happened in the original program  is they had an arbitrary threshold that  said when the probability of one of these causes of the disease"
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 448.26,
+            "end": 468.18,
+            "text": " reaches 95%, then we switch to a different mode,  where now we're actually willing to contemplate  doing the expensive tests and doing the expensive treatments.  And we build the decision tree, as we  saw in the case of the gangrenous foot,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 468.18,
+            "end": 489.46,
+            "text": " that figures out which of those is the optimal approach.  So the idea here was because building a decision  tree with 27 potential questions  becomes enormously bushy, we're using a heuristic that  says information maximization or entropy reduction"
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 489.46,
+            "end": 505.1,
+            "text": " is a reasonable way of focusing in on what's  wrong with this patient.  And then once we focused in pretty well,  then we can begin to do more detailed analysis  on the remaining more consequential and more costly"
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 505.1,
+            "end": 527.54,
+            "text": " tests that are available.  Now, this program didn't work terribly well  because the numbers were badly estimated,  and also because the utility model  that they had for the decision analytic part"
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 527.54,
+            "end": 546.08,
+            "text": " was particularly terrible.  It didn't really reflect anything in the real world.  They had an incremental utility model  that said the patient either got better, stayed the same,  or got worse, and obviously in that order of utilities."
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 546.08,
+            "end": 560.72,
+            "text": " But they didn't correspond to how much better he got  or how much worse he got.  And so it wasn't terribly useful.  So nevertheless, in the 1990s, I was  teaching a tutorial at a medical informatics"
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 560.72,
+            "end": 570.44,
+            "text": " conference, and there were a bunch  of doctors in the audience.  And I showed them this program.  And one of the doctors came up afterwards and said, wow,  it thinks just the way I do."
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 573.12,
+            "end": 588.66,
+            "text": " And I said, really?  I don't think so.  But clearly, it was doing something  that corresponded to the way that he  thought about these cases."
+        },
+        {
+            "number": "lec11",
+            "title": "part.003.mp3",
+            "start": 588.66,
+            "end": 599.6999999999999,
+            "text": " So I thought that was a good thing.  All right, well, what happens if we  can't assume that there's just a single disease underlying  the person's problems?"
+        }
+    ],
+    "text": " So this is a way of doing it. And this is typically done. Unfortunately, of course, it's a difficult ascertainment problem. And it's also not stable. So people have done experiments where they get somebody to give them this kind of number as a hypothetical. And then when that person winds up actually faced with such a decision, they no longer will abide with that number. So they've changed their mind when the situation is real. But it's nice because there's two feet, right? So you could have run a six-pounder in a suit. They didn't actually do it. It was hypothetical. Next program I want to tell you about, again, the technique for this was developed as a PhD thesis here at MIT in 1967. So this is hot off the presses. But it's still used, this type of idea. And so this was a program that was published in the American Journal of Medicine, which was a high-impact medical journal. I think this was actually the first sort of computational program that that journal had ever published as a medical journal. And it was addressed at the problem of the diagnosis of acute oliguric renal failure. Oliguric means you're not peeing enough. Renal is your kidney. So this is something's gone wrong with your kidney, and you're not producing enough urine. Now, this is a good problem to address with these techniques because if something happens to you suddenly, it's very likely that there is one cause for it. If you are 85 years old, and you have a little heart disease and a little kidney disease and a little liver disease and a little lung disease, there is no guarantee that there was one thing that went wrong with you that caused all these. But if you were OK yesterday, and then you stopped peeing, it's pretty likely that there is one thing that's gone wrong. So it's a good application of this model. So what they said is there are 14 potential causes, and these are exhaustive and mutually exclusive. There are 27 tests or questions or observations that are relevant to the differential. These are cheap tests, so they didn't involve doing anything either expensive or dangerous to the patient. It was measuring something in the lab or asking questions of the patient. But they didn't want to have to ask all of them because that's pretty tedious. And so they were trying to minimize the amount of information that they needed to gather in order to come up with an appropriate decision. Now, in the real problem, there were three invasive tests that are dangerous and expensive, and then eight different treatments that could be applied. And I'm only going to tell you about the first part of this problem. This 1973 article shows you what the program looked like. It was a computer terminal where it gave you choices, and you would type in an answer. And so that was the state of the art at the time. But what I'm going to do is, God willing, I'm going to demonstrate a reconstruction that I made of this program. So these guys are the potential causes of stopping TP, acute tubular necrosis, functional acute renal failure, urinary tract obstruction, acute glomerulonephritis, et cetera. And these are the prior probabilities. Now, I have to warn you, these numbers were, in fact, estimated by people sticking their finger in the air and figuring out which way the wind was blowing. Because in 1973, there were not great databases that you could turn to. And then these are the questions that were available to be asked. And what you see in the first column, at least if you're sitting close to the screen, is the expected entropy of the probability distribution if you answered this question. So this is basically saying, if I ask this question, how likely is each of the possible answers, given my disease distribution probabilities? And then for each of those answers, I do a Bayesian revision. Then I weight the entropy of that resulting distribution by the probability of getting that answer. And that gets me the expected entropy for asking that question. And the idea is that the lower the expected entropy, the more valuable the question. Makes sense. So if we look, for example, the most valuable question is, what was the blood pressure at the onset of oliguria? And I can click on this and say it was, let's say, moderately elevated. And what this little colorful graph is showing you is that if you look at the initial probability distribution, acute tubular necrosis was about 25% and has gone down to a very small amount, whereas some of these others have grown in importance considerably. So we can answer more questions. We can say, let's see, what is the degree of, is there protein in the urine? And we say, no, there isn't. I think we say, no, there isn't. Zero. And that revises the probability distribution. And then it says, the next most important thing is kidney size. And we say, let's say, the kidney size is normal. So now all of a sudden, functional acute renal failure, which, by the way, is one of these funny medical categories that says it doesn't work well. Doesn't explain to you why it doesn't work well, but it's sort of a generic thing. And sure enough, we can keep answering questions about, are you producing less than 50 cc's of urine, which is a tiny amount, or somewhere between 50 and 400? Remember, this is for people who are not producing enough. So normally, you'd be over 400. So these are the only choices. So let's say it's moderate. And so you see the probability distribution keeps changing. And what happened in the original program is they had an arbitrary threshold that said when the probability of one of these causes of the disease reaches 95%, then we switch to a different mode, where now we're actually willing to contemplate doing the expensive tests and doing the expensive treatments. And we build the decision tree, as we saw in the case of the gangrenous foot, that figures out which of those is the optimal approach. So the idea here was because building a decision tree with 27 potential questions becomes enormously bushy, we're using a heuristic that says information maximization or entropy reduction is a reasonable way of focusing in on what's wrong with this patient. And then once we focused in pretty well, then we can begin to do more detailed analysis on the remaining more consequential and more costly tests that are available. Now, this program didn't work terribly well because the numbers were badly estimated, and also because the utility model that they had for the decision analytic part was particularly terrible. It didn't really reflect anything in the real world. They had an incremental utility model that said the patient either got better, stayed the same, or got worse, and obviously in that order of utilities. But they didn't correspond to how much better he got or how much worse he got. And so it wasn't terribly useful. So nevertheless, in the 1990s, I was teaching a tutorial at a medical informatics conference, and there were a bunch of doctors in the audience. And I showed them this program. And one of the doctors came up afterwards and said, wow, it thinks just the way I do. And I said, really? I don't think so. But clearly, it was doing something that corresponded to the way that he thought about these cases. So I thought that was a good thing. All right, well, what happens if we can't assume that there's just a single disease underlying the person's problems?"
+}

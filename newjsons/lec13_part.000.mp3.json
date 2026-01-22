@@ -1,0 +1,243 @@
+{
+    "chunks": [
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 0.0,
+            "end": 28.8,
+            "text": " Okay, great.  Well, thank you for the great setup.  So for this section, I'm going to talk about some of our work in interpreting mammograms  for cancer, specifically it's going to go into cancer detection and triaging mammograms.  Next, we'll talk about kind of our technical approach to breast cancer risk."
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 29.28,
+            "end": 47.08,
+            "text": " And then finally close up on the many, many different ways to mess up and the way things  can go wrong and how to support clinical implementation.  So let's kind of look more closely at the numbers of the actual breast cancer screening  workflow. So as Connie already said, you might see something like a thousand patients, all  of them take mammograms. Of that thousand, on average, maybe a hundred will be called"
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 47.08,
+            "end": 64.68,
+            "text": " back for additional imaging.  Of that hundred, something like 20 will get biopsied and end up with maybe five or six  diagnoses of breast cancer.  So one very clear thing you see about problems when you look at this funnel is that way  over 99 percent of people that you see in a given day are cancer free."
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 64.72,
+            "end": 77.96000000000001,
+            "text": " So your actual incidence is very low.  And so there's kind of a natural question that can come up.  What can you do in terms of modeling if you have an even okay cancer detection model to  raise the incidence of this population?  But I'm actually reading a portion of the population is healthy."
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 78.44,
+            "end": 93.0,
+            "text": " So everybody just follow that broad idea.  Okay, that's enough head nods.  So the broad idea here is we're going to train a cancer detection model to try to find  cancer as well as we can.  Given that, we're going to try to say what's a threshold on a development set such that"
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 93.0,
+            "end": 109.36,
+            "text": " we can kind of say below the threshold no one has cancer.  And if we use that at test time, simulating clinical application, what would that look  like? And can we actually do better by doing this kind of process?  And the kind of broad plan of how I'm going to talk about this, I'm going to do this for  the next product as well. First, we're going to talk about the kind of data set"
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 109.36,
+            "end": 129.07999999999998,
+            "text": " collection and how we think about what is good data and how do we think about that.  Next, the actual methodology and kind of go into the general challenges when you're  modeling mammograms for any computer vision tasks, specifically in cancer and also  obviously risk. And lastly, how we thought about the analysis and some kind of  objectives there. So to kind of dive right into it, we took consecutive mammograms."
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 129.07999999999998,
+            "end": 148.84,
+            "text": " I'll get back to this later. This is actually quite important.  We took consecutive mammograms from 2009 to 2016.  This started off with about 280,000 cancers.  And once we kind of filtered for at least one year follow up, we ended up with this  final setting where we had 220,000 mammograms for training and about 26,000 for"
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 148.84,
+            "end": 167.48000000000002,
+            "text": " development and testing. And the way we had our outcomes to see is this a positive  mammogram or not? We didn't look at what cancers were caught by the radiologist.  What was cancer that was fine in any means within a year?  And where we looked, we looked through the radiology, HR and the partners of kind of  hospital registry. And they were trying to say if a cancer, if any way we can tell a"
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 167.48000000000002,
+            "end": 185.64000000000001,
+            "text": " cancer occurred, let's mark it as such, regardless of whether it was caught on MRI  or some kind of later stage.  And so the thing we're trying to do here is just mimic the real world of what we're  trying to catch cancer. And finally, an important detail is we always split by  patient so that you're not just your results aren't just memorizing the specific"
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 185.64000000000001,
+            "end": 200.48,
+            "text": " patient didn't have cancer. And so you have some overlap that's in bad bias to  have. OK, that was pretty simple.  Now let's go into the modeling. This is going to kind of follow two chunks.  One chunk is going to be on the kind of general challenges and is kind of shared  between the variety of projects."
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 200.48,
+            "end": 216.0,
+            "text": " And that's going to be kind of more specific analysis for this project.  So a kind of a general question you might be asking, you know, I have some image, I  have some outcome. Obviously, this is image classification.  How is it different from ImageNet?  Well, it's quite similar."
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 216.0,
+            "end": 225.48000000000002,
+            "text": " Most lessons are shared, but there are some key differences.  So I give you two examples.  One of them is a scene in my kitchen.  Can anyone tell me what the object is?  This is not a particular hard question."
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 226.72000000000003,
+            "end": 245.52,
+            "text": " Right. Yeah, it is almost all of those things.  So that is my dog, the best dog.  OK, so can anyone tell me now you had some training with Connie if this mammogram  indicates cancer?  Well, it does, and this is this is unfair for a couple of reasons, but it's kind of"
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 245.52,
+            "end": 257.8,
+            "text": " going to like why this is hard.  It's unfair in part because, you know, you don't have the training, but it's  actually a much harder signal to learn.  So first, let's kind of delve into it in this kind of task.  The image is really huge."
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 258.08,
+            "end": 269.32,
+            "text": " So you have something like a three thousand two hundred by two thousand six  hundred pixel image.  This is a single view of a breast.  And in that, the actual cancer looking for might be 50 by 50 pixels.  So intuitively, your signal to noise ratio is very different."
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 269.64,
+            "end": 287.84000000000003,
+            "text": " Whereas an image in that my dog is like the entire image is huge in real life and  in that photo. And the image itself is much smaller.  So not only do you have much smaller images, but you're kind of like the  relative size. The object in there is much larger to kind of further compound  the difficulty. The pattern that you're looking for inside the mammogram is"
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 287.84000000000003,
+            "end": 305.24,
+            "text": " really context dependent.  So if you saw that pattern somewhere else in the breast, it doesn't indicate the  same thing. And so you really care about where in this kind of global context  this comes out. And if you kind of take the mammogram, it's different times with  different compressions. You have this kind of non rigid morphing of the image"
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 305.24,
+            "end": 324.08,
+            "text": " that's much more difficult to model, whereas that's a more or less context  independent dog. You see that kind of frame kind of anywhere, you know, it's a  dog. And so it's a much easier thing to learn in a traditional computer vision  setting. And so the core challenge here is that both the image is too big and too  small. So if you look at just like the number of cancers we have, it's going to"
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 324.08,
+            "end": 342.08,
+            "text": " be the cancer might be less than one percent of the mammogram and about point  seven percent of your images have cancer.  So even in this data set, which is from 2009 to 2016, MGH, a massive imaging  center in total across all of that, we will still have like less than 2000  cancers. And this is super tiny compared to like regular object classification"
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 342.08,
+            "end": 362.96,
+            "text": " data sets. And this is, you know, looking at over a million images.  You look at all the four views of the exams and at the same time, it's also too  big. So even if I don't simply these images, I can only really fit three of them  for a single GPU. And so this kind of limits the batch size I can work with.  And whereas the kind of comparable, such as just the regular image net size, I"
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 362.96,
+            "end": 379.28,
+            "text": " could fit batch sizes of 128 easily happy days and do all this parallelization  stuff. And it's just much easier to play with. And finally, the actual data set  itself is quite large. And so you have to do some there's nuisances to deal with  in terms of like just setting up your server infrastructure to handle these  massive data sets while still be able to train efficiently."
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 381.64,
+            "end": 400.03999999999996,
+            "text": " So, you know, the core challenge here across all of these kind of tasks is how  do we make this model actually learn? The core problem is that our signal  flow is quite low. So training ends up being quite unstable. And there's a kind  of a couple of simple levers you can play with. The first lever is as often  deep learning initialization. Next, we're going to talk about kind of the"
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 400.03999999999996,
+            "end": 417.15999999999997,
+            "text": " optimization or architecture choice and how this compares to what people often do  in the community, including in a recent paper from yesterday. And then finally,  we're going to talk about stuff more explicit for the triage idea in terms of  how we actually use this model once it's trained.  OK, so before I kind of go into how we made these choices, I'm going to say what"
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 417.15999999999997,
+            "end": 437.47999999999996,
+            "text": " we chose to give you context before I dive in. So we follow some like image  initialization. We use a relatively large batch size of 24. The way we do  this by just taking four GPUs and just stepping a couple of times before doing  an optimizer step. So you do a couple of rounds of backprop first to accumulate  those gradients before doing optimization. And you sample balanced"
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 437.47999999999996,
+            "end": 458.36,
+            "text": " batches at training time. And for backbone architecture, we use ResNet-18.  It's just kind of like fairly standard. OK, but as I said before, one of the  first key decisions is how do you think about initialization? And so this is a  figure of image initialization versus random initialization. It's not any  particular experiment. I've done this across many, many times. It's always like"
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 458.36,
+            "end": 475.48,
+            "text": " this, where if you use image initialization, your loss drops  immediately, both in train loss and development loss, and you actually learn  something. Whereas when you do random initialization, you kind of don't learn  anything, and your loss kind of bounds around the top for a very long time  before it finds some region where it quickly starts learning, and then it'll"
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 475.48,
+            "end": 497.48,
+            "text": " plateau again for a long time before it quickly starts learning. And to kind of  give some context, to give about 15 epochs takes on the order of like 15, 16  hours. And so to wait long enough to even see if random initialization could  perform as well is beyond my level of patience. It just takes too long, and  there's other experiments to be running. So this is more of an empirical"
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 497.48,
+            "end": 514.76,
+            "text": " observation that the image initialization learns immediately, and  there's some kind of questions of, you know, why is this? Our theoretical  understanding of this is not that strong. We have some intuitions of why this  might be happening. We don't think it's anything about, you know, this particular  filter of this dog is really great for breast cancer. That's quite implausible."
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 514.76,
+            "end": 533.0,
+            "text": " But if you look into a lot of the earlier research in terms of the right  kind of random initialization for things like ReLU networks, a lot of focus was on  does the activation pattern not blow up as you go further down the line? One of  the benefits of starting with a pre-trained network is that a lot of  those kind of dynamics are already figured out for a specific task, and so"
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 533.0,
+            "end": 551.7199999999999,
+            "text": " shifting from that to other tasks has seemed to be not that challenging. Another  possible area of explanation is actually in the batch norm statistics. So if you  remember, we can only really fit three images per GPU, and the way the batch  normalization is implemented across every deep learning library that I know  of, it computes it independently per GPU to minimize this kind of inter-GPU"
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 551.7199999999999,
+            "end": 574.76,
+            "text": " communication, and so it's also less stable to kind of guess from scratch.  But if you're starting with the batch norm statistics from ImageNet and just  slowly shifting it over, it might also result in some stability benefits. But in  general, a true deep-earth theoretical understanding of what this is still eludes us, and  isn't something I can give too much conclusions about, unfortunately. Okay, so"
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 574.76,
+            "end": 594.32,
+            "text": " that's initialization, and if you don't get this right, kind of nothing works for  a very long time. So just, if you're gonna start a project in this space, try this.  Next, another important decision that if you don't do kind of breaks, is your  optimization architecture choice. So as I said before, kind of a core problem in  stability here is this idea that our just signal-to-noise ratio is really low. And so"
+        },
+        {
+            "number": "lec13",
+            "title": "part.000.mp3",
+            "start": 594.32,
+            "end": 601.8000000000001,
+            "text": " a very common approach throughout a lot of the prior work and things I actually  have tried myself before, is to say,"
+        }
+    ],
+    "text": " Okay, great. Well, thank you for the great setup. So for this section, I'm going to talk about some of our work in interpreting mammograms for cancer, specifically it's going to go into cancer detection and triaging mammograms. Next, we'll talk about kind of our technical approach to breast cancer risk. And then finally close up on the many, many different ways to mess up and the way things can go wrong and how to support clinical implementation. So let's kind of look more closely at the numbers of the actual breast cancer screening workflow. So as Connie already said, you might see something like a thousand patients, all of them take mammograms. Of that thousand, on average, maybe a hundred will be called back for additional imaging. Of that hundred, something like 20 will get biopsied and end up with maybe five or six diagnoses of breast cancer. So one very clear thing you see about problems when you look at this funnel is that way over 99 percent of people that you see in a given day are cancer free. So your actual incidence is very low. And so there's kind of a natural question that can come up. What can you do in terms of modeling if you have an even okay cancer detection model to raise the incidence of this population? But I'm actually reading a portion of the population is healthy. So everybody just follow that broad idea. Okay, that's enough head nods. So the broad idea here is we're going to train a cancer detection model to try to find cancer as well as we can. Given that, we're going to try to say what's a threshold on a development set such that we can kind of say below the threshold no one has cancer. And if we use that at test time, simulating clinical application, what would that look like? And can we actually do better by doing this kind of process? And the kind of broad plan of how I'm going to talk about this, I'm going to do this for the next product as well. First, we're going to talk about the kind of data set collection and how we think about what is good data and how do we think about that. Next, the actual methodology and kind of go into the general challenges when you're modeling mammograms for any computer vision tasks, specifically in cancer and also obviously risk. And lastly, how we thought about the analysis and some kind of objectives there. So to kind of dive right into it, we took consecutive mammograms. I'll get back to this later. This is actually quite important. We took consecutive mammograms from 2009 to 2016. This started off with about 280,000 cancers. And once we kind of filtered for at least one year follow up, we ended up with this final setting where we had 220,000 mammograms for training and about 26,000 for development and testing. And the way we had our outcomes to see is this a positive mammogram or not? We didn't look at what cancers were caught by the radiologist. What was cancer that was fine in any means within a year? And where we looked, we looked through the radiology, HR and the partners of kind of hospital registry. And they were trying to say if a cancer, if any way we can tell a cancer occurred, let's mark it as such, regardless of whether it was caught on MRI or some kind of later stage. And so the thing we're trying to do here is just mimic the real world of what we're trying to catch cancer. And finally, an important detail is we always split by patient so that you're not just your results aren't just memorizing the specific patient didn't have cancer. And so you have some overlap that's in bad bias to have. OK, that was pretty simple. Now let's go into the modeling. This is going to kind of follow two chunks. One chunk is going to be on the kind of general challenges and is kind of shared between the variety of projects. And that's going to be kind of more specific analysis for this project. So a kind of a general question you might be asking, you know, I have some image, I have some outcome. Obviously, this is image classification. How is it different from ImageNet? Well, it's quite similar. Most lessons are shared, but there are some key differences. So I give you two examples. One of them is a scene in my kitchen. Can anyone tell me what the object is? This is not a particular hard question. Right. Yeah, it is almost all of those things. So that is my dog, the best dog. OK, so can anyone tell me now you had some training with Connie if this mammogram indicates cancer? Well, it does, and this is this is unfair for a couple of reasons, but it's kind of going to like why this is hard. It's unfair in part because, you know, you don't have the training, but it's actually a much harder signal to learn. So first, let's kind of delve into it in this kind of task. The image is really huge. So you have something like a three thousand two hundred by two thousand six hundred pixel image. This is a single view of a breast. And in that, the actual cancer looking for might be 50 by 50 pixels. So intuitively, your signal to noise ratio is very different. Whereas an image in that my dog is like the entire image is huge in real life and in that photo. And the image itself is much smaller. So not only do you have much smaller images, but you're kind of like the relative size. The object in there is much larger to kind of further compound the difficulty. The pattern that you're looking for inside the mammogram is really context dependent. So if you saw that pattern somewhere else in the breast, it doesn't indicate the same thing. And so you really care about where in this kind of global context this comes out. And if you kind of take the mammogram, it's different times with different compressions. You have this kind of non rigid morphing of the image that's much more difficult to model, whereas that's a more or less context independent dog. You see that kind of frame kind of anywhere, you know, it's a dog. And so it's a much easier thing to learn in a traditional computer vision setting. And so the core challenge here is that both the image is too big and too small. So if you look at just like the number of cancers we have, it's going to be the cancer might be less than one percent of the mammogram and about point seven percent of your images have cancer. So even in this data set, which is from 2009 to 2016, MGH, a massive imaging center in total across all of that, we will still have like less than 2000 cancers. And this is super tiny compared to like regular object classification data sets. And this is, you know, looking at over a million images. You look at all the four views of the exams and at the same time, it's also too big. So even if I don't simply these images, I can only really fit three of them for a single GPU. And so this kind of limits the batch size I can work with. And whereas the kind of comparable, such as just the regular image net size, I could fit batch sizes of 128 easily happy days and do all this parallelization stuff. And it's just much easier to play with. And finally, the actual data set itself is quite large. And so you have to do some there's nuisances to deal with in terms of like just setting up your server infrastructure to handle these massive data sets while still be able to train efficiently. So, you know, the core challenge here across all of these kind of tasks is how do we make this model actually learn? The core problem is that our signal flow is quite low. So training ends up being quite unstable. And there's a kind of a couple of simple levers you can play with. The first lever is as often deep learning initialization. Next, we're going to talk about kind of the optimization or architecture choice and how this compares to what people often do in the community, including in a recent paper from yesterday. And then finally, we're going to talk about stuff more explicit for the triage idea in terms of how we actually use this model once it's trained. OK, so before I kind of go into how we made these choices, I'm going to say what we chose to give you context before I dive in. So we follow some like image initialization. We use a relatively large batch size of 24. The way we do this by just taking four GPUs and just stepping a couple of times before doing an optimizer step. So you do a couple of rounds of backprop first to accumulate those gradients before doing optimization. And you sample balanced batches at training time. And for backbone architecture, we use ResNet-18. It's just kind of like fairly standard. OK, but as I said before, one of the first key decisions is how do you think about initialization? And so this is a figure of image initialization versus random initialization. It's not any particular experiment. I've done this across many, many times. It's always like this, where if you use image initialization, your loss drops immediately, both in train loss and development loss, and you actually learn something. Whereas when you do random initialization, you kind of don't learn anything, and your loss kind of bounds around the top for a very long time before it finds some region where it quickly starts learning, and then it'll plateau again for a long time before it quickly starts learning. And to kind of give some context, to give about 15 epochs takes on the order of like 15, 16 hours. And so to wait long enough to even see if random initialization could perform as well is beyond my level of patience. It just takes too long, and there's other experiments to be running. So this is more of an empirical observation that the image initialization learns immediately, and there's some kind of questions of, you know, why is this? Our theoretical understanding of this is not that strong. We have some intuitions of why this might be happening. We don't think it's anything about, you know, this particular filter of this dog is really great for breast cancer. That's quite implausible. But if you look into a lot of the earlier research in terms of the right kind of random initialization for things like ReLU networks, a lot of focus was on does the activation pattern not blow up as you go further down the line? One of the benefits of starting with a pre-trained network is that a lot of those kind of dynamics are already figured out for a specific task, and so shifting from that to other tasks has seemed to be not that challenging. Another possible area of explanation is actually in the batch norm statistics. So if you remember, we can only really fit three images per GPU, and the way the batch normalization is implemented across every deep learning library that I know of, it computes it independently per GPU to minimize this kind of inter-GPU communication, and so it's also less stable to kind of guess from scratch. But if you're starting with the batch norm statistics from ImageNet and just slowly shifting it over, it might also result in some stability benefits. But in general, a true deep-earth theoretical understanding of what this is still eludes us, and isn't something I can give too much conclusions about, unfortunately. Okay, so that's initialization, and if you don't get this right, kind of nothing works for a very long time. So just, if you're gonna start a project in this space, try this. Next, another important decision that if you don't do kind of breaks, is your optimization architecture choice. So as I said before, kind of a core problem in stability here is this idea that our just signal-to-noise ratio is really low. And so a very common approach throughout a lot of the prior work and things I actually have tried myself before, is to say,"
+}

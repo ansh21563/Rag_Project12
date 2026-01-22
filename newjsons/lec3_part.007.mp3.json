@@ -1,0 +1,264 @@
+{
+    "chunks": [
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 0.0,
+            "end": 19.46,
+            "text": " And she says, quality assurance officers.  So the hospital has people responsible for trying  to assess the quality of care they're giving,  and lawyers when there's a lawsuit.  And she was very happy because she had saved the hospital $10"
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 19.46,
+            "end": 35.4,
+            "text": " million by having carefully recorded  that some procedure had been done to a patient who then had  a bad outcome and was suing the hospital for their neglect  and not having done this.  But because it was in the note, that"
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 35.4,
+            "end": 51.040000000000006,
+            "text": " was proof that it actually had been done,  and therefore the hospital wasn't liable.  But there's a lot of information in here.  Now, I'm going to show you many pages of a typical discharge  summary."
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 51.040000000000006,
+            "end": 71.84,
+            "text": " So this is somebody on the surgery service  who came in complaining of leg pain, redness, and swelling  secondary to infection of left femoral popliteal bypass.  So she had surgery.  I think she, yeah, female."
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 71.84,
+            "end": 92.32000000000001,
+            "text": " She had surgery, which didn't heal well.  So major surgical or invasive procedure, incision  and drainage and pulse irrigation of the left groin  and left above knee popliteal site incisions  with exploration of bypass graft and excision"
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 92.32000000000001,
+            "end": 107.16000000000001,
+            "text": " of the entire left common femoral artery  to above knee, blah, blah, blah, blah, blah, blah.  So this is what they did.  History of the present illness, she's  a 45-year-old woman who underwent a left femoral AK"
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 107.16000000000001,
+            "end": 124.32,
+            "text": " doctor, something or other, with PTFE, whatever  that is, over a month ago on a certain date.  By the way, these bracket asterisk things  are where we've taken out identifying information  from the record."
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 124.32,
+            "end": 137.96,
+            "text": " She had been doing well post-operatively  and was seen in the clinic six days prior to presentation.  At this time, she acutely developed  nausea, vomiting, fevers, and progressive redness,  swelling, pain of her left thigh, et cetera."
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 137.96,
+            "end": 145.68,
+            "text": " So that's just page one of many pages.  Yeah?  Just a question.  Is this completely these information fields?  There is no health?"
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 145.68,
+            "end": 159.92000000000002,
+            "text": " There is no autocomplete if you type a patient's name or date?  Not in this system.  There are people.  Henry Chui at Mass General spent 10 years building a system that  had autocomplete and so on."
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 159.92000000000002,
+            "end": 174.29999999999998,
+            "text": " And some doctors liked it and some doctors hated it.  And the MGH threw out all of their old systems  in order to buy Epic.  And so it's gone.  It was like 10 years of work down the drain."
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 174.29999999999998,
+            "end": 189.06,
+            "text": " But it was not a spectacular success.  Because whenever you have autocomplete,  you have to anticipate every possible answer.  And people are very creative, and they always  want to type something that you didn't anticipate."
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 189.06,
+            "end": 201.66,
+            "text": " So it's hard to support it.  What is Epic?  Epic is a big company that has been  winning all the recent contests for installing  electronic medical record systems."
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 201.66,
+            "end": 221.78,
+            "text": " Remember, in my last lecture, I showed  that we're reaching about 100% saturation.  So they've been winning a lot of the installation deals.  And they're getting a lot of the subsidy.  The estimate I heard was that Partners Health Care, which"
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 221.78,
+            "end": 236.34,
+            "text": " is MGH, the Brigham, and a couple of other hospitals  spent somewhere on the order of $2 billion  installing the system.  So that included all the customizations  and all the training and all the administrative stuff"
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 236.34,
+            "end": 252.66,
+            "text": " that went with it.  But that's a huge amount of money.  So we have past medical history.  One pack a day smoker abused cocaine,  but says she stopped six months ago,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 252.66,
+            "end": 275.26,
+            "text": " has asthma, type 2 diabetes.  Social history, family history.  These are the physical exam results.  So it's giving you a lot of information about the person.  Description of the wound down at the bottom."
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 275.26,
+            "end": 282.52,
+            "text": " Pertinent lab results.  So these are copied out of the laboratory tables.  Yeah.  Just to double check with the drug results.  Sorry?"
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 282.52,
+            "end": 293.5,
+            "text": " Just to double check with the drug results,  two slides back.  Yeah.  It said, so it has the fake dates of 2198 up there.  Yeah."
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 293.5,
+            "end": 305.9,
+            "text": " So the fact that there was a positive test in 2187  would mean a year ago.  So that's the medication.  Yeah, the de-identification technology  here maintains the relative dates,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 305.9,
+            "end": 326.86,
+            "text": " but not the absolute dates.  Yeah.  So these are results, again, copied out  of the laboratory database into the discharge summary.  Brief hospital course, and then a review of systems."
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 326.86,
+            "end": 346.66,
+            "text": " So what's going on neurologically,  cardiovascular, pulmonary, GI, GU, et cetera.  Infectious disease, endocrine, hematology, prophylaxis.  And at the time of discharge, the patient was doing well.  No fever and stable vital signs, tolerating a regular diet,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 346.66,
+            "end": 358.65999999999997,
+            "text": " ambulating, avoiding without assistance,  and pain was well-controlled.  Medications on admission.  So this was the medication reconciliation.  Discharge medications."
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 358.65999999999997,
+            "end": 376.14000000000004,
+            "text": " So this is what she's being sent home on.  Discharge disposition is to the home with some follow-up  service.  And she's going home.  And the discharge diagnosis is infected left femoral"
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 376.14000000000004,
+            "end": 389.5,
+            "text": " popliteal bypass graft.  And the condition, and these are the instructions  to the patient that say, here's what you can do.  Here's when you should come back and tell us if something  is going wrong, et cetera."
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 392.34000000000003,
+            "end": 408.06,
+            "text": " And here's what you should report.  If it happens, if you have sudden severe bleeding  or swelling, do this.  Follow up with doctor, somebody or other.  Call his clinic at this number to schedule an appointment."
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 408.06,
+            "end": 433.8,
+            "text": " And then follow up with doctor, somebody else in two weeks.  I think this is the same one.  So just a couple of final words about standards.  So you saw in David's introductory lecture  a reference to ODYSSEY, which is a standard method of encoding"
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 433.8,
+            "end": 453.34,
+            "text": " the kind of data that we were talking about today.  There is a likelihood that the next release of the MIMIC  database will adopt the ODYSSEY formats rather than the, yeah,  David's shaking his head, wondering why.  Me too."
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 453.34,
+            "end": 468.58,
+            "text": " And ODYSSEY hasn't handled clinical notice very well yet.  Well, so what always happens is you  say I'm going to adopt this standard asterisk  with the following extensions.  And that's probably what's going to happen."
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 468.58,
+            "end": 487.86,
+            "text": " But it means that the central tables, the ICD-9 code tables  and the drug tables and things like that,  are likely to wind up adopting the formats of the ODYSSEY  database.  You should also know about this thing called FHIR, F-H-I-R,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 487.86,
+            "end": 507.94,
+            "text": " the Fast Health Interoperability Resources.  So HL7 is the standards organization  that had a tremendous success in the early 1990s  in solving the problem of how to allow laboratories  to report lab data back to the hospitals or the clinics that"
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 507.94,
+            "end": 524.1,
+            "text": " ordered the labs.  And that character string with the up arrows  and the vertical bars and so on that I showed you before  that had LOINC encoded in it is that standard.  That's called HL7 version 2."
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 524.1,
+            "end": 539.4200000000001,
+            "text": " It's still in use very widely.  They then got ambitious and suffered  second system syndrome, which is they  decided to build HL7 version 3, which I used to teach  in a class here 10 years ago."
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 539.42,
+            "end": 558.4599999999999,
+            "text": " But one of my friends who works for a company that  helps hospitals implement that sent me a 38-megabyte PDF file  that describes what you need to know in order  to implement that system.  And as a result, nobody was doing it."
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 558.4599999999999,
+            "end": 573.98,
+            "text": " So FHIR is a gross simplification  of that that starts off and says,  if a doctor refers a new patient to you,  what is the minimum set of data that you  need to know in order to take care of that person?"
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 573.98,
+            "end": 594.7,
+            "text": " And FHIR tries to provide just that subset of all the data.  It has become a standard mainly because after Congress spent  $42 billion or so bribing people into buying these information  systems, they got mad that the information systems they bought  couldn't talk to each other."
+        },
+        {
+            "number": "lec3",
+            "title": "part.007.mp3",
+            "start": 594.7,
+            "end": 601.66,
+            "text": " And so they called in on the carpet  the heads of these IT companies, health IT companies."
+        }
+    ],
+    "text": " And she says, quality assurance officers. So the hospital has people responsible for trying to assess the quality of care they're giving, and lawyers when there's a lawsuit. And she was very happy because she had saved the hospital $10 million by having carefully recorded that some procedure had been done to a patient who then had a bad outcome and was suing the hospital for their neglect and not having done this. But because it was in the note, that was proof that it actually had been done, and therefore the hospital wasn't liable. But there's a lot of information in here. Now, I'm going to show you many pages of a typical discharge summary. So this is somebody on the surgery service who came in complaining of leg pain, redness, and swelling secondary to infection of left femoral popliteal bypass. So she had surgery. I think she, yeah, female. She had surgery, which didn't heal well. So major surgical or invasive procedure, incision and drainage and pulse irrigation of the left groin and left above knee popliteal site incisions with exploration of bypass graft and excision of the entire left common femoral artery to above knee, blah, blah, blah, blah, blah, blah. So this is what they did. History of the present illness, she's a 45-year-old woman who underwent a left femoral AK doctor, something or other, with PTFE, whatever that is, over a month ago on a certain date. By the way, these bracket asterisk things are where we've taken out identifying information from the record. She had been doing well post-operatively and was seen in the clinic six days prior to presentation. At this time, she acutely developed nausea, vomiting, fevers, and progressive redness, swelling, pain of her left thigh, et cetera. So that's just page one of many pages. Yeah? Just a question. Is this completely these information fields? There is no health? There is no autocomplete if you type a patient's name or date? Not in this system. There are people. Henry Chui at Mass General spent 10 years building a system that had autocomplete and so on. And some doctors liked it and some doctors hated it. And the MGH threw out all of their old systems in order to buy Epic. And so it's gone. It was like 10 years of work down the drain. But it was not a spectacular success. Because whenever you have autocomplete, you have to anticipate every possible answer. And people are very creative, and they always want to type something that you didn't anticipate. So it's hard to support it. What is Epic? Epic is a big company that has been winning all the recent contests for installing electronic medical record systems. Remember, in my last lecture, I showed that we're reaching about 100% saturation. So they've been winning a lot of the installation deals. And they're getting a lot of the subsidy. The estimate I heard was that Partners Health Care, which is MGH, the Brigham, and a couple of other hospitals spent somewhere on the order of $2 billion installing the system. So that included all the customizations and all the training and all the administrative stuff that went with it. But that's a huge amount of money. So we have past medical history. One pack a day smoker abused cocaine, but says she stopped six months ago, has asthma, type 2 diabetes. Social history, family history. These are the physical exam results. So it's giving you a lot of information about the person. Description of the wound down at the bottom. Pertinent lab results. So these are copied out of the laboratory tables. Yeah. Just to double check with the drug results. Sorry? Just to double check with the drug results, two slides back. Yeah. It said, so it has the fake dates of 2198 up there. Yeah. So the fact that there was a positive test in 2187 would mean a year ago. So that's the medication. Yeah, the de-identification technology here maintains the relative dates, but not the absolute dates. Yeah. So these are results, again, copied out of the laboratory database into the discharge summary. Brief hospital course, and then a review of systems. So what's going on neurologically, cardiovascular, pulmonary, GI, GU, et cetera. Infectious disease, endocrine, hematology, prophylaxis. And at the time of discharge, the patient was doing well. No fever and stable vital signs, tolerating a regular diet, ambulating, avoiding without assistance, and pain was well-controlled. Medications on admission. So this was the medication reconciliation. Discharge medications. So this is what she's being sent home on. Discharge disposition is to the home with some follow-up service. And she's going home. And the discharge diagnosis is infected left femoral popliteal bypass graft. And the condition, and these are the instructions to the patient that say, here's what you can do. Here's when you should come back and tell us if something is going wrong, et cetera. And here's what you should report. If it happens, if you have sudden severe bleeding or swelling, do this. Follow up with doctor, somebody or other. Call his clinic at this number to schedule an appointment. And then follow up with doctor, somebody else in two weeks. I think this is the same one. So just a couple of final words about standards. So you saw in David's introductory lecture a reference to ODYSSEY, which is a standard method of encoding the kind of data that we were talking about today. There is a likelihood that the next release of the MIMIC database will adopt the ODYSSEY formats rather than the, yeah, David's shaking his head, wondering why. Me too. And ODYSSEY hasn't handled clinical notice very well yet. Well, so what always happens is you say I'm going to adopt this standard asterisk with the following extensions. And that's probably what's going to happen. But it means that the central tables, the ICD-9 code tables and the drug tables and things like that, are likely to wind up adopting the formats of the ODYSSEY database. You should also know about this thing called FHIR, F-H-I-R, the Fast Health Interoperability Resources. So HL7 is the standards organization that had a tremendous success in the early 1990s in solving the problem of how to allow laboratories to report lab data back to the hospitals or the clinics that ordered the labs. And that character string with the up arrows and the vertical bars and so on that I showed you before that had LOINC encoded in it is that standard. That's called HL7 version 2. It's still in use very widely. They then got ambitious and suffered second system syndrome, which is they decided to build HL7 version 3, which I used to teach in a class here 10 years ago. But one of my friends who works for a company that helps hospitals implement that sent me a 38-megabyte PDF file that describes what you need to know in order to implement that system. And as a result, nobody was doing it. So FHIR is a gross simplification of that that starts off and says, if a doctor refers a new patient to you, what is the minimum set of data that you need to know in order to take care of that person? And FHIR tries to provide just that subset of all the data. It has become a standard mainly because after Congress spent $42 billion or so bribing people into buying these information systems, they got mad that the information systems they bought couldn't talk to each other. And so they called in on the carpet the heads of these IT companies, health IT companies."
+}

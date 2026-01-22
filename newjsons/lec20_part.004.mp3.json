@@ -1,0 +1,257 @@
+{
+    "chunks": [
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 0.0,
+            "end": 16.66,
+            "text": " show, and you don't have as much of a calibration  problem about trying to figure out the exact value.  And then you cluster these samples  by nearness and expression space,  and you cluster the genes by expression similarity"
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 16.66,
+            "end": 30.740000000000002,
+            "text": " across samples.  So it used to be called bi-clustering,  and I'll talk in a few minutes about a particular technique  for doing this.  So this is a typical microarray experiment."
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 30.740000000000002,
+            "end": 48.620000000000005,
+            "text": " The RNA is turned into its complementary DNA,  flowed over the microarray chip, and you get out  a bunch of spots that are to various degrees of green  and red.  And then you calculate their ratio,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 48.620000000000005,
+            "end": 62.78,
+            "text": " and then you do this bi-clustering.  And what you get is a hierarchical clustering  of genes and a hierarchical clustering,  in their case, of breast cancer biopsy specimens  that express these genes in different ways."
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 66.10000000000001,
+            "end": 91.1,
+            "text": " So this was pretty revolutionary because the answers made sense.  So when they did this on 19 cell lines and 65 breast tumor  samples and a whole bunch of genes,  they came up with a clustering that said,  hmm, it looks like there are some samples that"
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 91.1,
+            "end": 111.34,
+            "text": " have this endothelial cell cluster.  So it's a particular kind of problem,  and you could correlate it with pathology from the tumor  slides and different subclasses.  And then this is a very typical kind of heat map"
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 111.34,
+            "end": 134.06,
+            "text": " that you see in this type of study.  Another study from 65 breast carcinoma samples  using the gene list that they curated before  looks like it clusters the expression levels  into these five clusters."
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 137.22,
+            "end": 150.14,
+            "text": " It's a little hard to look at.  When I stare at these, it's not obvious to me  why the mathematics came up with exactly those clusters  rather than some others.  But you can see that there is some sense to it."
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 150.14,
+            "end": 163.3,
+            "text": " So here you see a lot of greens at this end of it  and not very much at this end and vice versa.  So there is some difference between these clusters.  Yeah?  How did they come up with the gene list?"
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 163.3,
+            "end": 177.3,
+            "text": " And does anyone ever do this kind of cluster analysis  without coming up with a gene list first?  Yes, so I'm going to talk in a minute  about modern gene-wide association studies  where basically you say, I'm going to look"
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 177.3,
+            "end": 195.82,
+            "text": " at every gene known to man.  So they still have a list, but the list is 20,000 or 25,000.  It's whatever we know about.  And that's another way of doing it.  So what was compelling about this work, this group's work,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 195.82,
+            "end": 213.51999999999998,
+            "text": " is a later analysis showed that these five subtypes actually  had different survival rates.  And at a p equal 0.01 level of statistical significance,  you've seen these survival curves, of course,  before from David's lecture."
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 213.51999999999998,
+            "end": 230.78,
+            "text": " But this is pretty impressive that doing something  that had nothing to do with the clinical condition  of the patient, this is purely based on their gene expression  levels, you're able to find clusters that actually  behave differently clinically."
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 230.78,
+            "end": 252.38,
+            "text": " So some of them do better than others.  So this paper and this approach to work  set off a huge set of additional work.  This was, again, back in the Al-Azadi paper.  They did a similar relationship between 96 samples"
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 252.42,
+            "end": 275.38,
+            "text": " of normal and malignant lymphocytes.  And they got a similar result where the clusters  that they identify here correspond  to well-understood existing types of lymphoma.  So this, again, gives you some confidence"
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 275.38,
+            "end": 293.78000000000003,
+            "text": " that what you're extracting from these genetic correlations  is meaningful in the terms that people who deal with lymphomas  think about the topic.  But of course, it can give you much more detail  because people's intuitions may not"
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 293.78000000000003,
+            "end": 314.94,
+            "text": " be as effective as these large-scale data analyses.  So to get to your question about generalizing this,  I mean, here's one way that I look at this.  If I list all the genes and I list all the phenotypes,  now, we're a little more sure of what the genes are"
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 314.94,
+            "end": 331.72,
+            "text": " than of what the phenotypes are.  So that's an interesting problem.  Then I can do a bunch of analyses.  So what is a phenotype?  Well, it can be a diagnosed disease like breast cancer."
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 331.72,
+            "end": 342.34,
+            "text": " Or it can be the type of lymphoma from the two examples  I've just shown you.  It can also be a qualitative or a quantitative trait.  It could be your weight.  It could be your eye color."
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 342.34,
+            "end": 362.26,
+            "text": " It could be almost anything that is clinically known about you.  And it could even be behavior.  It could be things like what is your daily output of Twitter  posts?  Right?"
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 362.26,
+            "end": 379.1,
+            "text": " That's a perfectly reasonable trait.  I don't know if it's genetically predictable.  But you'll see some surprising things that are.  So then how do you analyze this?  Well, if you start by looking at a particular phenotype"
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 379.1,
+            "end": 392.8,
+            "text": " and say what genes are associated with this,  then you're doing what's called a GWAS, or a gene-wide  association study.  So you look for genetic differences  that correspond to specific phenotypic differences."
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 392.8,
+            "end": 407.68,
+            "text": " And usually, you're looking at things  like single nucleotide polymorphisms.  So this is places where your genome differs  from the reference genome, the most common genome  in the human population, at one particular locus."
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 407.68,
+            "end": 423.84,
+            "text": " So you have a C instead of a G or something,  one place in your genes.  Copy number variations, there are  stretches of DNA that have repeats in them.  And the number of repeats is variable."
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 423.84,
+            "end": 440.12,
+            "text": " So one of the most famous ones of these  is the one associated with Huntington's disease.  It turns out that if you have up to 20-something repeats  of a certain section of DNA, you're perfectly healthy.  But if you're above 30-something,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 440.12,
+            "end": 454.68,
+            "text": " then you're going to die of Huntington's disease.  And again, we don't quite understand these mechanisms.  But these are empirically known.  So copy number variations are important.  Gene expression levels, which I've"
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 454.68,
+            "end": 472.68,
+            "text": " talked about a minute ago.  But the trick here in a GWAS is to look  at a very wide set of genes rather than just  a limited set of samples that you know you're interested in.  Now, the other approach is the opposite,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 472.68,
+            "end": 490.36,
+            "text": " which is to say, let's look at a particular gene  and figure out what's it correlated with.  And so that's called a PheWAS, a Phenome-Wide Association  Study.  And now what you do is you list all the different phenotypes."
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 490.36,
+            "end": 507.76,
+            "text": " And you say, well, we can do the same kind of analysis  to say which of them are disproportionately  present in people who have that genetic variant.  So here's what a typical GWAS looks like.  This is called a Manhattan plot,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 507.76,
+            "end": 525.6,
+            "text": " which I think is pretty funny.  But it does kind of look like the skyline of Manhattan.  So this is all of your genes laid out  in sequence along your chromosomes.  And you take a particular phenotype."
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 525.6,
+            "end": 540.4399999999999,
+            "text": " And you say, what is the difference  in the ratio of expression levels  between people who have this disease  and people who don't have this disease?  And something like this gene, whatever it is,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 540.4399999999999,
+            "end": 553.0999999999999,
+            "text": " clearly there is an enormous difference  in its expression level.  And so you would be surprised if this gene didn't have something  to do with the disease.  And similarly, you can calculate sort"
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 553.0999999999999,
+            "end": 569.62,
+            "text": " of different significance levels.  You have to do something like a Bonferroni correction  because you're testing so many hypotheses simultaneously.  And so typically, the top of these lines  is the Bonferroni corrected threshold."
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 569.62,
+            "end": 586.08,
+            "text": " And then you say, OK, this guy, this guy, this guy, this guy,  and this guy come above that threshold.  So these are good candidate genes  to think that may be associated with this disease.  Now, can you go out and start treating people based on that?"
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 586.08,
+            "end": 598.52,
+            "text": " Well, it's probably not a good idea  because there are many reasons why this analysis might  have failed.  All the lessons that you've heard about confounders  come in very strongly here."
+        },
+        {
+            "number": "lec20",
+            "title": "part.004.mp3",
+            "start": 598.52,
+            "end": 602.22,
+            "text": " And so typically, what by now we have is this."
+        }
+    ],
+    "text": " show, and you don't have as much of a calibration problem about trying to figure out the exact value. And then you cluster these samples by nearness and expression space, and you cluster the genes by expression similarity across samples. So it used to be called bi-clustering, and I'll talk in a few minutes about a particular technique for doing this. So this is a typical microarray experiment. The RNA is turned into its complementary DNA, flowed over the microarray chip, and you get out a bunch of spots that are to various degrees of green and red. And then you calculate their ratio, and then you do this bi-clustering. And what you get is a hierarchical clustering of genes and a hierarchical clustering, in their case, of breast cancer biopsy specimens that express these genes in different ways. So this was pretty revolutionary because the answers made sense. So when they did this on 19 cell lines and 65 breast tumor samples and a whole bunch of genes, they came up with a clustering that said, hmm, it looks like there are some samples that have this endothelial cell cluster. So it's a particular kind of problem, and you could correlate it with pathology from the tumor slides and different subclasses. And then this is a very typical kind of heat map that you see in this type of study. Another study from 65 breast carcinoma samples using the gene list that they curated before looks like it clusters the expression levels into these five clusters. It's a little hard to look at. When I stare at these, it's not obvious to me why the mathematics came up with exactly those clusters rather than some others. But you can see that there is some sense to it. So here you see a lot of greens at this end of it and not very much at this end and vice versa. So there is some difference between these clusters. Yeah? How did they come up with the gene list? And does anyone ever do this kind of cluster analysis without coming up with a gene list first? Yes, so I'm going to talk in a minute about modern gene-wide association studies where basically you say, I'm going to look at every gene known to man. So they still have a list, but the list is 20,000 or 25,000. It's whatever we know about. And that's another way of doing it. So what was compelling about this work, this group's work, is a later analysis showed that these five subtypes actually had different survival rates. And at a p equal 0.01 level of statistical significance, you've seen these survival curves, of course, before from David's lecture. But this is pretty impressive that doing something that had nothing to do with the clinical condition of the patient, this is purely based on their gene expression levels, you're able to find clusters that actually behave differently clinically. So some of them do better than others. So this paper and this approach to work set off a huge set of additional work. This was, again, back in the Al-Azadi paper. They did a similar relationship between 96 samples of normal and malignant lymphocytes. And they got a similar result where the clusters that they identify here correspond to well-understood existing types of lymphoma. So this, again, gives you some confidence that what you're extracting from these genetic correlations is meaningful in the terms that people who deal with lymphomas think about the topic. But of course, it can give you much more detail because people's intuitions may not be as effective as these large-scale data analyses. So to get to your question about generalizing this, I mean, here's one way that I look at this. If I list all the genes and I list all the phenotypes, now, we're a little more sure of what the genes are than of what the phenotypes are. So that's an interesting problem. Then I can do a bunch of analyses. So what is a phenotype? Well, it can be a diagnosed disease like breast cancer. Or it can be the type of lymphoma from the two examples I've just shown you. It can also be a qualitative or a quantitative trait. It could be your weight. It could be your eye color. It could be almost anything that is clinically known about you. And it could even be behavior. It could be things like what is your daily output of Twitter posts? Right? That's a perfectly reasonable trait. I don't know if it's genetically predictable. But you'll see some surprising things that are. So then how do you analyze this? Well, if you start by looking at a particular phenotype and say what genes are associated with this, then you're doing what's called a GWAS, or a gene-wide association study. So you look for genetic differences that correspond to specific phenotypic differences. And usually, you're looking at things like single nucleotide polymorphisms. So this is places where your genome differs from the reference genome, the most common genome in the human population, at one particular locus. So you have a C instead of a G or something, one place in your genes. Copy number variations, there are stretches of DNA that have repeats in them. And the number of repeats is variable. So one of the most famous ones of these is the one associated with Huntington's disease. It turns out that if you have up to 20-something repeats of a certain section of DNA, you're perfectly healthy. But if you're above 30-something, then you're going to die of Huntington's disease. And again, we don't quite understand these mechanisms. But these are empirically known. So copy number variations are important. Gene expression levels, which I've talked about a minute ago. But the trick here in a GWAS is to look at a very wide set of genes rather than just a limited set of samples that you know you're interested in. Now, the other approach is the opposite, which is to say, let's look at a particular gene and figure out what's it correlated with. And so that's called a PheWAS, a Phenome-Wide Association Study. And now what you do is you list all the different phenotypes. And you say, well, we can do the same kind of analysis to say which of them are disproportionately present in people who have that genetic variant. So here's what a typical GWAS looks like. This is called a Manhattan plot, which I think is pretty funny. But it does kind of look like the skyline of Manhattan. So this is all of your genes laid out in sequence along your chromosomes. And you take a particular phenotype. And you say, what is the difference in the ratio of expression levels between people who have this disease and people who don't have this disease? And something like this gene, whatever it is, clearly there is an enormous difference in its expression level. And so you would be surprised if this gene didn't have something to do with the disease. And similarly, you can calculate sort of different significance levels. You have to do something like a Bonferroni correction because you're testing so many hypotheses simultaneously. And so typically, the top of these lines is the Bonferroni corrected threshold. And then you say, OK, this guy, this guy, this guy, this guy, and this guy come above that threshold. So these are good candidate genes to think that may be associated with this disease. Now, can you go out and start treating people based on that? Well, it's probably not a good idea because there are many reasons why this analysis might have failed. All the lessons that you've heard about confounders come in very strongly here. And so typically, what by now we have is this."
+}

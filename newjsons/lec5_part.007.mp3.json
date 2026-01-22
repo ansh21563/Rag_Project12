@@ -1,0 +1,320 @@
+{
+    "chunks": [
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 0.0,
+            "end": 16.48,
+            "text": " All right, so this is what I mean by right-sensored data.  So you might ask, why not just use classification,  like binary classification, in this setting?  So that's exactly what we did earlier.  We thought about formalizing the diabetes risk stratification"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 16.48,
+            "end": 30.72,
+            "text": " problem as looking to see what happens years one to three  after the time of prediction.  That was with a gap of one year.  And there are a couple of reasons why that's perhaps not  what you really wanted to do."
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 30.72,
+            "end": 52.519999999999996,
+            "text": " First, you have less data to use during training,  because you've suddenly excluded patients for whom,  or to say differently, if you have patients for whom they  were censored during that time window,  you're throwing them out."
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 52.519999999999996,
+            "end": 66.2,
+            "text": " So you have fewer data points there.  That was part of our inclusion-exclusion criteria.  Also, when you go to deploy these models,  your model might say, yes, this patient  is going to develop type 2 diabetes between one"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 66.2,
+            "end": 79.52000000000001,
+            "text": " and three years from now.  But in fact, what happened is they  developed type 2 diabetes 3.1 years from now.  So your model would count this as a negative,  or it would be a false positive."
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 79.52000000000001,
+            "end": 88.80000000000001,
+            "text": " The prediction would be a false positive.  But in reality, your model wasn't actually that bad.  We did pretty well.  We didn't quite get the right range,  but they did get diagnosed with diabetes right outside that"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 88.80000000000001,
+            "end": 98.56,
+            "text": " time window.  And so your measures of performance  are going to be pessimistic.  You might be doing better than you thought.  Now, you can try to address these two challenges"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 98.56,
+            "end": 107.22,
+            "text": " in many ways.  You can imagine a multitask learning framework  where you try to predict what's going to happen one  to two years from now, what's going to happen two to three  years from now, three to four, and so on."
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 107.22,
+            "end": 119.36,
+            "text": " Each of those are different binary classification models.  You might try to tie together the parameters  of those models via multitask learning formulation.  And that will get you closer to what you care about.  But what I'll tell you about in the last five minutes"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 119.36,
+            "end": 130.8,
+            "text": " is a much more elegant approach to trying to deal with that.  And it's akin to regression.  So that leads to my second point.  Why not just treat this as a regression problem?  Predict time to event."
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 130.8,
+            "end": 146.2,
+            "text": " You have some continuous valued outcome,  the time until diagnosis of diabetes.  Just try to minimize your squared error  trying to predict that continuous value.  Well, the first challenge to think about"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 146.2,
+            "end": 157.92,
+            "text": " is remember where that mean squared error loss  function came from.  It came from thinking about your data  as coming from a Gaussian distribution.  And if you do maximum likelihood estimation"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 157.92,
+            "end": 169.16,
+            "text": " of this Gaussian distribution, it  turns out to look like minimizing a squared loss.  So it's making a lot of assumptions about the outcome.  For one, it's making an assumption  that the outcome could be negative or positive."
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 169.16,
+            "end": 180.12,
+            "text": " Like, a Gaussian distribution doesn't have to be positive.  But here, we know that t is always non-negative.  In addition, there might be long tails.  Like, we might not know exactly when the patient's going  to develop diabetes, but we know it's not going to be now."
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 180.12,
+            "end": 192.28,
+            "text": " It's going to be at some point in the far along future.  And that may also look very non-Gaussian.  So typical regression approaches aren't quite what you want.  But there's another really important problem,  which is that if you naively remove those censored points,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 192.28,
+            "end": 203.48,
+            "text": " like, what do you do for the individuals where you never  observe the time where they never get diabetes  because they were censored?  Well, if you just remove those from your learning algorithm,  then you're biasing your results."
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 203.48,
+            "end": 216.45999999999998,
+            "text": " So for example, if you think about the average age  of diabetes onset, if you only look  at people who actually were observed to get diabetes,  it's going to be much closer to now,  because obviously, the people who were censored"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 216.45999999999998,
+            "end": 228.56,
+            "text": " are people who got it much later from the centering time.  So that's another serious problem.  So the way that we're trying to formalize this mathematically  is as follows.  Now we should think about having data which has, again, features"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 228.56,
+            "end": 239.08,
+            "text": " X, outcome, what we usually call Y for the outcome  in regression.  But here, I'll call it capital T,  because of the time to the event.  And now we have an additional variable."
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 239.08,
+            "end": 252.52,
+            "text": " So it's no longer a tuple.  Now it's a triple, B. And B is going  to be a binary variable, which is saying,  was the time T denoting the censoring event,  or was it denoting the actual event happening?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 252.52,
+            "end": 270.84000000000003,
+            "text": " So this is distinguishing between the red and the black.  So black is B equals 0.  Red is B equals 1.  So now we can talk about learning a density, P of T,  which I'll also call F of T, which is the probability"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 270.84000000000003,
+            "end": 285.72,
+            "text": " of death at time T. And associated  with any density, of course, is the cumulative density  function, which is the integral from 0  to any point of the density.  Here, we'll actually look at 1 minus the CDF."
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 285.72,
+            "end": 297.36,
+            "text": " What's called the survival function.  So it's looking at the probability  of T, the actual time of the event,  being larger than some quantity, little t.  And that's, of course, just the integral of the density,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 297.36,
+            "end": 307.24,
+            "text": " from little t to infinity.  So this is the survival function.  And it's of a lot of interest.  You want to know, is the patient going  to be diagnosed with diabetes two or more years from now?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 307.24,
+            "end": 318.44,
+            "text": " So pictorially, what you're interested in  is something like this.  You want to estimate these conditional distributions.  So I call it conditional, because you  want to condition on the covariance of the individual x."
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 318.44,
+            "end": 337.16,
+            "text": " So what I'm showing you, this black line,  is your density, little f of t.  And this white area here, the integral from little t  to infinity, meaning all of this white area, is capital S of T.  It's the probability of surviving longer"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 337.16,
+            "end": 352.23999999999995,
+            "text": " than time little t.  OK, so the first thing you might do  is say, we get this data, these tuples,  and we want to try to estimate that function little f,  the probability of death at some time."
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 352.23999999999995,
+            "end": 370.32,
+            "text": " Or equivalently, you might want to estimate the survival time,  capital S of T, which is the CDF version of it.  And these two are related to one another just by some calculus.  So a method called the Kaplan-Meier estimator  is a non-parametric method for estimating that survival"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 370.32,
+            "end": 382.04,
+            "text": " probability, capital S of T. So this  is the probability that the individual lives  more than some time period.  So first, I'll show you, I'll explain to you this plot,  then I'll tell you how to compute it."
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 382.04,
+            "end": 396.96,
+            "text": " So the x-axis of this plot is time.  The y-axis is this survival probability, capital S of T.  It's the probability that the individual lives more  than this amount of time.  I think this x-axis is in days, so 500, 1,000, 1,500, 2,000."
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 396.96,
+            "end": 412.44,
+            "text": " This figure, by the way, was created by one of my students  who's studying a multiple melanoma data set.  So you could then ask, well, under what covariance  do you want to compute the survival?  So here, this method I'll tell you about"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 412.44,
+            "end": 423.16,
+            "text": " is very good for when you don't have any features.  So all you want to do is estimate that density  by itself.  And of course, you can apply such a method  for multiple populations."
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 423.16,
+            "end": 433.66,
+            "text": " And what I'm showing you here is applying it  for two different populations.  Suppose there's just a single binary feature,  and we're going to apply it to the x equals 0 and x equals 1.  And I can do two different curves out."
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 433.66,
+            "end": 448.82,
+            "text": " But here, the estimator is going to work independently  for each of the two populations.  So what you see here in this red line  is for the x equals 0 population,  we see that at time 0, everyone is alive, as you would expect."
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 448.82,
+            "end": 465.73999999999995,
+            "text": " And at time 1,000, roughly 60% of the individuals  are still alive at time 1,000.  And that sort of stays constant.  Now, you see that for the other subgroup,  the x equals 1 subgroup, again, at time step 0,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 465.73999999999995,
+            "end": 476.91999999999996,
+            "text": " as you would expect, everyone is alive.  But they survive much longer.  At time step 1,000, over 75% of them are still alive.  And of course, of interest here is also confidence balance.  I'm not going to tell you how I computed that,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 476.91999999999996,
+            "end": 489.18,
+            "text": " but it's in some of the optional readings.  And by the way, there are more optional readings  given on the bottom of these slides.  And so you see that there is statistically significant  difference between x equals 1 and x equals 0."
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 489.18,
+            "end": 500.86,
+            "text": " These people seem to be surviving longer  than these people, and that you get that immediately  from this curve.  So how do we compute that?  Well, we take those observed times, those capital T's."
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 500.86,
+            "end": 512.6800000000001,
+            "text": " And here, I'm going to call them just y.  I'm going to sort them.  So these are sorted times.  And I'm looking at, I don't care whether they  were censored or not censored."
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 512.6800000000001,
+            "end": 525.78,
+            "text": " So y is just all of the times for all of the patients,  whether they were censored or not.  dk, I want you to think about is 1.  It's the number of events that occurred at that time.  So if everyone had a unique time of censoring or death,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 525.78,
+            "end": 541.1800000000001,
+            "text": " then dk is always 1.  k is indexing one of these things.  N of k is the number of individuals alive and uncensored  by the k-th time point.  Then what this estimator says is that s of t,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 541.1800000000001,
+            "end": 559.46,
+            "text": " so the estimator at any point in time,  is given to you by the product over k,  such that y of k is less than or equal to t.  So it's going over the observed times up to little t of 1  minus the ratio of 1 over, so I'm thinking about dk as 1,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 559.46,
+            "end": 572.26,
+            "text": " 1 over the number of people who are alive and uncensored  by that time.  And that has a very intuitive definition.  And one can prove that this estimator gives you  a consistent estimate of the number of people"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 572.26,
+            "end": 591.02,
+            "text": " who are alive, sorry, the number of the survival  probability at any one point in time for censored data.  And that's critical.  This works for censored data.  So I'm past time today, so I'll finish the last few slides"
+        },
+        {
+            "number": "lec5",
+            "title": "part.007.mp3",
+            "start": 591.02,
+            "end": 594.58,
+            "text": " on Tuesday's lecture.  So that's all for today.  Thanks."
+        }
+    ],
+    "text": " All right, so this is what I mean by right-sensored data. So you might ask, why not just use classification, like binary classification, in this setting? So that's exactly what we did earlier. We thought about formalizing the diabetes risk stratification problem as looking to see what happens years one to three after the time of prediction. That was with a gap of one year. And there are a couple of reasons why that's perhaps not what you really wanted to do. First, you have less data to use during training, because you've suddenly excluded patients for whom, or to say differently, if you have patients for whom they were censored during that time window, you're throwing them out. So you have fewer data points there. That was part of our inclusion-exclusion criteria. Also, when you go to deploy these models, your model might say, yes, this patient is going to develop type 2 diabetes between one and three years from now. But in fact, what happened is they developed type 2 diabetes 3.1 years from now. So your model would count this as a negative, or it would be a false positive. The prediction would be a false positive. But in reality, your model wasn't actually that bad. We did pretty well. We didn't quite get the right range, but they did get diagnosed with diabetes right outside that time window. And so your measures of performance are going to be pessimistic. You might be doing better than you thought. Now, you can try to address these two challenges in many ways. You can imagine a multitask learning framework where you try to predict what's going to happen one to two years from now, what's going to happen two to three years from now, three to four, and so on. Each of those are different binary classification models. You might try to tie together the parameters of those models via multitask learning formulation. And that will get you closer to what you care about. But what I'll tell you about in the last five minutes is a much more elegant approach to trying to deal with that. And it's akin to regression. So that leads to my second point. Why not just treat this as a regression problem? Predict time to event. You have some continuous valued outcome, the time until diagnosis of diabetes. Just try to minimize your squared error trying to predict that continuous value. Well, the first challenge to think about is remember where that mean squared error loss function came from. It came from thinking about your data as coming from a Gaussian distribution. And if you do maximum likelihood estimation of this Gaussian distribution, it turns out to look like minimizing a squared loss. So it's making a lot of assumptions about the outcome. For one, it's making an assumption that the outcome could be negative or positive. Like, a Gaussian distribution doesn't have to be positive. But here, we know that t is always non-negative. In addition, there might be long tails. Like, we might not know exactly when the patient's going to develop diabetes, but we know it's not going to be now. It's going to be at some point in the far along future. And that may also look very non-Gaussian. So typical regression approaches aren't quite what you want. But there's another really important problem, which is that if you naively remove those censored points, like, what do you do for the individuals where you never observe the time where they never get diabetes because they were censored? Well, if you just remove those from your learning algorithm, then you're biasing your results. So for example, if you think about the average age of diabetes onset, if you only look at people who actually were observed to get diabetes, it's going to be much closer to now, because obviously, the people who were censored are people who got it much later from the centering time. So that's another serious problem. So the way that we're trying to formalize this mathematically is as follows. Now we should think about having data which has, again, features X, outcome, what we usually call Y for the outcome in regression. But here, I'll call it capital T, because of the time to the event. And now we have an additional variable. So it's no longer a tuple. Now it's a triple, B. And B is going to be a binary variable, which is saying, was the time T denoting the censoring event, or was it denoting the actual event happening? So this is distinguishing between the red and the black. So black is B equals 0. Red is B equals 1. So now we can talk about learning a density, P of T, which I'll also call F of T, which is the probability of death at time T. And associated with any density, of course, is the cumulative density function, which is the integral from 0 to any point of the density. Here, we'll actually look at 1 minus the CDF. What's called the survival function. So it's looking at the probability of T, the actual time of the event, being larger than some quantity, little t. And that's, of course, just the integral of the density, from little t to infinity. So this is the survival function. And it's of a lot of interest. You want to know, is the patient going to be diagnosed with diabetes two or more years from now? So pictorially, what you're interested in is something like this. You want to estimate these conditional distributions. So I call it conditional, because you want to condition on the covariance of the individual x. So what I'm showing you, this black line, is your density, little f of t. And this white area here, the integral from little t to infinity, meaning all of this white area, is capital S of T. It's the probability of surviving longer than time little t. OK, so the first thing you might do is say, we get this data, these tuples, and we want to try to estimate that function little f, the probability of death at some time. Or equivalently, you might want to estimate the survival time, capital S of T, which is the CDF version of it. And these two are related to one another just by some calculus. So a method called the Kaplan-Meier estimator is a non-parametric method for estimating that survival probability, capital S of T. So this is the probability that the individual lives more than some time period. So first, I'll show you, I'll explain to you this plot, then I'll tell you how to compute it. So the x-axis of this plot is time. The y-axis is this survival probability, capital S of T. It's the probability that the individual lives more than this amount of time. I think this x-axis is in days, so 500, 1,000, 1,500, 2,000. This figure, by the way, was created by one of my students who's studying a multiple melanoma data set. So you could then ask, well, under what covariance do you want to compute the survival? So here, this method I'll tell you about is very good for when you don't have any features. So all you want to do is estimate that density by itself. And of course, you can apply such a method for multiple populations. And what I'm showing you here is applying it for two different populations. Suppose there's just a single binary feature, and we're going to apply it to the x equals 0 and x equals 1. And I can do two different curves out. But here, the estimator is going to work independently for each of the two populations. So what you see here in this red line is for the x equals 0 population, we see that at time 0, everyone is alive, as you would expect. And at time 1,000, roughly 60% of the individuals are still alive at time 1,000. And that sort of stays constant. Now, you see that for the other subgroup, the x equals 1 subgroup, again, at time step 0, as you would expect, everyone is alive. But they survive much longer. At time step 1,000, over 75% of them are still alive. And of course, of interest here is also confidence balance. I'm not going to tell you how I computed that, but it's in some of the optional readings. And by the way, there are more optional readings given on the bottom of these slides. And so you see that there is statistically significant difference between x equals 1 and x equals 0. These people seem to be surviving longer than these people, and that you get that immediately from this curve. So how do we compute that? Well, we take those observed times, those capital T's. And here, I'm going to call them just y. I'm going to sort them. So these are sorted times. And I'm looking at, I don't care whether they were censored or not censored. So y is just all of the times for all of the patients, whether they were censored or not. dk, I want you to think about is 1. It's the number of events that occurred at that time. So if everyone had a unique time of censoring or death, then dk is always 1. k is indexing one of these things. N of k is the number of individuals alive and uncensored by the k-th time point. Then what this estimator says is that s of t, so the estimator at any point in time, is given to you by the product over k, such that y of k is less than or equal to t. So it's going over the observed times up to little t of 1 minus the ratio of 1 over, so I'm thinking about dk as 1, 1 over the number of people who are alive and uncensored by that time. And that has a very intuitive definition. And one can prove that this estimator gives you a consistent estimate of the number of people who are alive, sorry, the number of the survival probability at any one point in time for censored data. And that's critical. This works for censored data. So I'm past time today, so I'll finish the last few slides on Tuesday's lecture. So that's all for today. Thanks."
+}

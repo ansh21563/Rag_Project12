@@ -1,0 +1,166 @@
+{
+    "chunks": [
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 0.0,
+            "end": 37.76,
+            "text": " So we're going to have a three-part lecture today, still continuing on the theme of reinforcement  learning.  Part one, I'm going to be speaking, and I'll be following up on last week's discussion  about causal inference and Tuesday's discussion on reinforcement learning.  And I'll be going into one more subtlety that arises there and where we can develop some"
+        },
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 37.76,
+            "end": 56.879999999999995,
+            "text": " nice mathematical methods to help with.  And then I'm going to turn over the show to Barbara, who I'll formally introduce when  the time comes.  And she's going to both talk about some of her work on developing and evaluating dynamic  treatment regimes."
+        },
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 56.879999999999995,
+            "end": 74.12,
+            "text": " And then she'll lead a discussion on the sepsis paper, which was the required reading from  today's class.  So those are the three parts of today's lecture.  So I want you to return back, put yourself back in the mindset of Tuesday's lecture,  where we talked about reinforcement learning."
+        },
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 74.48,
+            "end": 122.19999999999999,
+            "text": " And remember that the goal of reinforcement learning was to optimize some reward.  Specifically, our goal was to find some policy, which I can denote as pi star, which is the  arg max over all possible policies pi of v of pi, where, just to remind you, v of pi  is the value of the policy pi.  Formally it's defined as the expectation of the sum of the rewards across time."
+        },
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 122.52,
+            "end": 143.96,
+            "text": " The reason why I'm calling this an expectation, it's like the pi, is because there's stochasticity  both in the environment and possibly pi is going to be a stochastic policy.  And this is summing over the time steps, because this is not just a single time step problem,  but we're going to be considering interventions across time of the reward at each point in  time."
+        },
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 143.96,
+            "end": 166.48,
+            "text": " And the reward function could either be at each point in time, or you might imagine that  this is 0 for all time steps except for the last time step.  So the first question I want us to think about is, well, what are the implications of this  as a learning paradigm?  If we look what's going on over here, hidden in my story is also an expectation over x,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 166.48,
+            "end": 189.48,
+            "text": " the patient, for example, or the initial state.  And so this intuitively is saying, let's try to find a policy that has high expected reward,  average nessance over all patients.  And I just wanted you to think about whether that is indeed the right goal.  Can anyone think about a setting where that might not be desirable?"
+        },
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 189.48,
+            "end": 212.4,
+            "text": " Yeah?  What if the reward is the patient living or dying?  You don't want it to have high variance, like saving a few patients and then 0, but then  in expected sense having some.  What happens if this reward is something mission critical, like patient dying?"
+        },
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 212.4,
+            "end": 233.20000000000002,
+            "text": " You really want to try to avoid that from happening as much as possible.  Of course, there are other criteria that we might be interested in as well.  And both in Frederick's lecture on Tuesday and in the readings, we talked about how there  might be other aspects about making sure that a patient is not just alive, but also healthy,  which might play into reward function."
+        },
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 233.2,
+            "end": 249.95999999999998,
+            "text": " So there might be rewards associated with those.  And if you were to just, for example, put a positive or negative infinity for a patient  dying, that's a non-starter.  Because if you did that, unfortunately, in this world, we're not always going to be able  to keep patients alive."
+        },
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 249.95999999999998,
+            "end": 271.65999999999997,
+            "text": " And so you're going to get into an infeasible optimization problem.  So minus infinity is not an option.  We're going to have to put some number to it in this type of approach.  And then you're going to start trading off between patients.  In some cases, you might have a very high reward for it."
+        },
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 271.65999999999997,
+            "end": 288.4,
+            "text": " There are two different solutions that you can imagine.  One solution where the reward is somewhat balanced across patients.  And another situation where you have really small values of reward for some patients and  a few patients with very large values of rewards.  And both would give you the same average, obviously."
+        },
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 289.15999999999997,
+            "end": 308.12,
+            "text": " But both are not necessarily equally useful.  We might want to say that we prefer to avoid that worst case situation.  So one could imagine other ways of formulating this optimization problem.  Maybe you want to control the worst case reward instead of the average case reward.  Or maybe you want to say something about different quartiles."
+        },
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 308.12,
+            "end": 327.08,
+            "text": " And I just wanted to point that out because, really, that's the starting place for a lot  of the work that we're doing here.  So now I want us to think through, OK, returning back to this goal.  We've done our policy iteration.  Or we've done our Q-learning, that is."
+        },
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 327.08,
+            "end": 348.24,
+            "text": " And we get a policy out.  And we might now want to know, well, what is the value of that policy?  So what is our estimate of that quantity?  Well, to get that, one could just try to read it off from the results of Q-learning by just  computing that v pi, what I'm going to call v pi hat, the estimate, is just equal to now"
+        },
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 348.24,
+            "end": 375.47999999999996,
+            "text": " a maximum over actions a of your Q function evaluated at whatever your initial state is  and the optimal choice of action a.  So all I'm saying here is that the last step of the algorithm might be to ask, well, what  is the expected reward of this policy?  And if you remember, the Q-learning algorithm is, in essence, a dynamic programming algorithm"
+        },
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 375.47999999999996,
+            "end": 399.72,
+            "text": " working its way from the large values of time up to the present.  And it is, indeed, actually computing this expected value that you're interested in.  So you could just read it off from the Q values at the very end.  But I want to point out that here there is an implicit policy built in.  So I'm going to compare this in just a second to what happens under the causal inference"
+        },
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 399.72,
+            "end": 428.16,
+            "text": " scenario, so just a single time step in potential outcomes framework that we're used to.  Notice that the value of this policy, the reason why it's a function of pi is because  the value is a function of every subsequent action that you're taking as well.  So now let's just compare that for a second to what happens in the potential outcomes  framework."
+        },
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 428.16,
+            "end": 453.14,
+            "text": " So there, our starting place.  So now I'm going to turn our attention for just one moment from reinforcement learning  now back to just causal inference.  In reinforcement learning, we talked about policies.  How do we find policies to do well in terms of some expected reward of this policy?"
+        },
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 453.14,
+            "end": 488.42,
+            "text": " But yet when we were talking about causal inference, we only used words like average  treatment effect or conditional average treatment effect, where, for example, to estimate the  conditional average treatment effect, what we said is we're going to first learn, if  we use a covariate adjustment approach, we learn some function f of x comma t, which  is intended to be an approximation of the expected value of your outcome y given x comma"
+        },
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 488.42,
+            "end": 522.4200000000001,
+            "text": " I'll say y of t.  There, so that notation.  So the goal of covariate adjustment was to estimate this quantity.  And we could use that then to try to construct a policy.  For example, you could think about the policy pi of x, which simply looks to see is, we'll"
+        },
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 522.4200000000001,
+            "end": 579.3,
+            "text": " say it's 1 if your estimate of kate for x is positive and 0 otherwise.  Just to remind you, the way that we got the estimate of kate for an individual x was just  by looking at f of x comma 1 minus f of x comma 0.  So if we have a policy, so now we're going to start thinking about policies in the context  of causal inference, just like we were doing in reinforcement learning."
+        },
+        {
+            "number": "lec17",
+            "title": "part.000.mp3",
+            "start": 579.3,
+            "end": 601.5,
+            "text": " And I want us to think through, what would the analogous value of the policy be?  How good is that policy?  Or it could be another policy, but right now I'm assuming I'm just going to focus on this  policy that I show up here.  So one approach to try to evaluate how good that policy is."
+        }
+    ],
+    "text": " So we're going to have a three-part lecture today, still continuing on the theme of reinforcement learning. Part one, I'm going to be speaking, and I'll be following up on last week's discussion about causal inference and Tuesday's discussion on reinforcement learning. And I'll be going into one more subtlety that arises there and where we can develop some nice mathematical methods to help with. And then I'm going to turn over the show to Barbara, who I'll formally introduce when the time comes. And she's going to both talk about some of her work on developing and evaluating dynamic treatment regimes. And then she'll lead a discussion on the sepsis paper, which was the required reading from today's class. So those are the three parts of today's lecture. So I want you to return back, put yourself back in the mindset of Tuesday's lecture, where we talked about reinforcement learning. And remember that the goal of reinforcement learning was to optimize some reward. Specifically, our goal was to find some policy, which I can denote as pi star, which is the arg max over all possible policies pi of v of pi, where, just to remind you, v of pi is the value of the policy pi. Formally it's defined as the expectation of the sum of the rewards across time. The reason why I'm calling this an expectation, it's like the pi, is because there's stochasticity both in the environment and possibly pi is going to be a stochastic policy. And this is summing over the time steps, because this is not just a single time step problem, but we're going to be considering interventions across time of the reward at each point in time. And the reward function could either be at each point in time, or you might imagine that this is 0 for all time steps except for the last time step. So the first question I want us to think about is, well, what are the implications of this as a learning paradigm? If we look what's going on over here, hidden in my story is also an expectation over x, the patient, for example, or the initial state. And so this intuitively is saying, let's try to find a policy that has high expected reward, average nessance over all patients. And I just wanted you to think about whether that is indeed the right goal. Can anyone think about a setting where that might not be desirable? Yeah? What if the reward is the patient living or dying? You don't want it to have high variance, like saving a few patients and then 0, but then in expected sense having some. What happens if this reward is something mission critical, like patient dying? You really want to try to avoid that from happening as much as possible. Of course, there are other criteria that we might be interested in as well. And both in Frederick's lecture on Tuesday and in the readings, we talked about how there might be other aspects about making sure that a patient is not just alive, but also healthy, which might play into reward function. So there might be rewards associated with those. And if you were to just, for example, put a positive or negative infinity for a patient dying, that's a non-starter. Because if you did that, unfortunately, in this world, we're not always going to be able to keep patients alive. And so you're going to get into an infeasible optimization problem. So minus infinity is not an option. We're going to have to put some number to it in this type of approach. And then you're going to start trading off between patients. In some cases, you might have a very high reward for it. There are two different solutions that you can imagine. One solution where the reward is somewhat balanced across patients. And another situation where you have really small values of reward for some patients and a few patients with very large values of rewards. And both would give you the same average, obviously. But both are not necessarily equally useful. We might want to say that we prefer to avoid that worst case situation. So one could imagine other ways of formulating this optimization problem. Maybe you want to control the worst case reward instead of the average case reward. Or maybe you want to say something about different quartiles. And I just wanted to point that out because, really, that's the starting place for a lot of the work that we're doing here. So now I want us to think through, OK, returning back to this goal. We've done our policy iteration. Or we've done our Q-learning, that is. And we get a policy out. And we might now want to know, well, what is the value of that policy? So what is our estimate of that quantity? Well, to get that, one could just try to read it off from the results of Q-learning by just computing that v pi, what I'm going to call v pi hat, the estimate, is just equal to now a maximum over actions a of your Q function evaluated at whatever your initial state is and the optimal choice of action a. So all I'm saying here is that the last step of the algorithm might be to ask, well, what is the expected reward of this policy? And if you remember, the Q-learning algorithm is, in essence, a dynamic programming algorithm working its way from the large values of time up to the present. And it is, indeed, actually computing this expected value that you're interested in. So you could just read it off from the Q values at the very end. But I want to point out that here there is an implicit policy built in. So I'm going to compare this in just a second to what happens under the causal inference scenario, so just a single time step in potential outcomes framework that we're used to. Notice that the value of this policy, the reason why it's a function of pi is because the value is a function of every subsequent action that you're taking as well. So now let's just compare that for a second to what happens in the potential outcomes framework. So there, our starting place. So now I'm going to turn our attention for just one moment from reinforcement learning now back to just causal inference. In reinforcement learning, we talked about policies. How do we find policies to do well in terms of some expected reward of this policy? But yet when we were talking about causal inference, we only used words like average treatment effect or conditional average treatment effect, where, for example, to estimate the conditional average treatment effect, what we said is we're going to first learn, if we use a covariate adjustment approach, we learn some function f of x comma t, which is intended to be an approximation of the expected value of your outcome y given x comma I'll say y of t. There, so that notation. So the goal of covariate adjustment was to estimate this quantity. And we could use that then to try to construct a policy. For example, you could think about the policy pi of x, which simply looks to see is, we'll say it's 1 if your estimate of kate for x is positive and 0 otherwise. Just to remind you, the way that we got the estimate of kate for an individual x was just by looking at f of x comma 1 minus f of x comma 0. So if we have a policy, so now we're going to start thinking about policies in the context of causal inference, just like we were doing in reinforcement learning. And I want us to think through, what would the analogous value of the policy be? How good is that policy? Or it could be another policy, but right now I'm assuming I'm just going to focus on this policy that I show up here. So one approach to try to evaluate how good that policy is."
+}

@@ -1,0 +1,264 @@
+{
+    "chunks": [
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 0.0,
+            "end": 16.8,
+            "text": " All right.  So I could sort of see that for hospitalization.  I'm not sure why it's true for the ICU,  because if you don't have anybody at home to take care  of you when you get sick, it seems reasonable"
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 16.8,
+            "end": 28.52,
+            "text": " that you'd be more likely to wind up in the hospital.  But I don't know why you'd wind up in intensive care.  Yeah?  Isn't it possible that those are also like single people  are probably younger than married people?"
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 28.52,
+            "end": 39.32,
+            "text": " And those are probably younger than widowed people.  Yes.  Yeah, that's probably also right.  Yep.  OK."
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 39.32,
+            "end": 52.56,
+            "text": " So here's an interesting question,  a little bit related to something  you'll see on the next problem set.  So could we predict in-hospital mortality  from just these demographic features?"
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 53.56,
+            "end": 76.92,
+            "text": " So I'm using a tool in language called R.  This is a general linear model.  And I've set it up to do basically logistic regression.  And it says I'm predicting whether you  die in the hospital based on these demographic factors."
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 76.92,
+            "end": 92.08,
+            "text": " And it turns out that the only ones that are highly  significant are age.  So that's not surprising that older people are more likely  to die than younger people.  It's generally true."
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 92.08,
+            "end": 109.84,
+            "text": " And if I'm unable to obtain your ethnicity  or I don't know your ethnicity, then you're  more likely to die.  I have no clue why that might be the case.  And other things are not as significant."
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 109.84,
+            "end": 126.04,
+            "text": " So if you speak Spanish or English,  you're slightly less likely to die.  You see a negative contribution here.  And if you speak Russian, you're slightly less likely to die.  But it's significant not at the p equal 0.05 level,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 126.04,
+            "end": 143.0,
+            "text": " but it is at the p equal 0.06 level.  And marriage doesn't seem to make much difference  in predicting whether you're going to die or not.  Now, remember, this is ICU patients.  And we're looking at in-hospital mortality."
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 143.0,
+            "end": 150.6,
+            "text": " Yeah.  AUDIENCE 2 For ethnicity, can they  learn that at any point during this day  or just right at the beginning?  Or do you know?"
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 150.6,
+            "end": 161.16,
+            "text": " Because I don't know.  I don't know.  Because it could be that unable to obtain  means that they died before we could ask them.  No, because there wouldn't be that many of those people,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 161.16,
+            "end": 176.92,
+            "text": " I think.  There are not that many people who  don't live past the intake interview.  And they do ask them.  Unless they've gone into maintenance"
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 176.92,
+            "end": 191.44,
+            "text": " and in bad shape to do it.  Yeah, that would be an example.  But I don't think you'd see enough such people  to show up statistically.  OK."
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 191.44,
+            "end": 205.76,
+            "text": " Well, so I've already mentioned that there's  this problem of having moved from CareVue to MetaVision  just in the MIMIC database.  But of course, this is a much bigger problem  around the country and around the world,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 205.76,
+            "end": 221.64,
+            "text": " because every hospital has its own way of keeping records.  And wouldn't it be nice if we had standards?  And of course, there's this funny phrase,  the wonderful thing about standards  is that there are so many to choose from."
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 221.64,
+            "end": 248.2,
+            "text": " So for example, if you look at prescriptions  in the MIMIC database, here are two particular prescriptions  for subject number 57139 admitted on admission ID 155470.  And so they have the same start date, but different end dates.  One is a prescription for Tylenol acetaminophen."
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 248.2,
+            "end": 267.36,
+            "text": " And the other is for clobetasol propionate 0.05% cream.  That's a skin lotion thing for, I think  it's a steroid skin cream.  So if you look in the BI's database,  they have their own private formulary code"
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 267.36,
+            "end": 293.03999999999996,
+            "text": " where this thing is a set 325, and this thing is clob.05C30.  And if you look, there's also something  called a GSN, which is some commercial coding  system for drugs, maybe having to do with who their drug  supplier is at the hospital."
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 293.03999999999996,
+            "end": 309.68,
+            "text": " And these have different codes.  There's the National Drug Code, which  is an FDA-assigned nine-digit code that  specifies who made the drug, what form it's in,  and what's its strength."
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 309.68,
+            "end": 330.8,
+            "text": " And so you get these.  Then there's a human-readable description  that says Tylenol comes in 325 milligram tablets,  and this clobetasol comes in 30 gram tubes.  And the dose is supposed to be 325 to 650, i.e."
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 330.8,
+            "end": 347.86,
+            "text": " one to two tablets measured in milligrams.  The dose here is one application, whatever that is.  I don't know what the 0.01 means.  And this is a tablet, and that's a tube.  And this is taken orally, and that's"
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 347.86,
+            "end": 363.26,
+            "text": " administered on the skin.  So this is a local database.  AUDIENCE 2 For a doctor, they just get the package,  and then this is all registered?  PETER SZOLOVITSZ At most hospitals, that's true now."
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 363.26,
+            "end": 376.53999999999996,
+            "text": " It wasn't true when the MIMIC database  started being collected.  And the BI was relatively late in moving  to that compared to some of the other hospitals in the Boston  area."
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 376.53999999999996,
+            "end": 396.86,
+            "text": " Each hospital has its own desiderata  for what it thinks is most important,  and I think the BI just didn't prioritize it  as much as some of the other hospitals.  So then I said, well, if you look at prescriptions,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 396.86,
+            "end": 414.1,
+            "text": " how often are they given?  So remember, we have about 60,000 ICU stays,  and so isoasmotic dextrose was given 87,000 times  to various people.  Sodium chloride, 0.9% flush."
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 414.1,
+            "end": 427.18,
+            "text": " Do you know what that is?  Have you ever had an IV?  So periodically, the nurse comes by  and squirts a little bit of stuff in the IV  to make sure that it hasn't clogged up."
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 427.18,
+            "end": 442.34,
+            "text": " That's what that is.  Insulin, SW, I don't know, salt water?  I don't know what SW is.  Magnesium sulfate, dextrose 5 in water.  Furosemide is a diuretic."
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 442.34,
+            "end": 466.14,
+            "text": " Potassium chloride replenishes potassium  that people are often low on.  And then you go, so why is there this D5W and that D5W?  And that's probably some data error in the system.  One of them has an NDC code associated with it,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 466.14,
+            "end": 477.41999999999996,
+            "text": " and the other one doesn't, but probably should.  Yeah?  AUDIENCE 2 I'd actually like to ask,  do zeros mean that they're standard across hospitals,  or just that we don't have the data?"
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 477.42,
+            "end": 493.5,
+            "text": " The NDC code should be standard across the country,  because those are FDA-assigned codes.  But not every hospital uses them.  And for the ones that say zero, I'm  not sure why they're not associated"
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 493.5,
+            "end": 515.46,
+            "text": " with the code in this hospital's database.  OK.  Next most common, you see normal saline, 0.9% sodium chloride.  So that was the same stuff as the flush solution,  but this time not being used for flush."
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 515.46,
+            "end": 531.66,
+            "text": " Metoprolol is a beta blocker.  Here's another insulin, this time with an NDC code, et  cetera.  I love bag and vial.  So these are not exactly medications."
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 531.66,
+            "end": 546.86,
+            "text": " A bag is literally like a baggie that they put something into,  and a vial is literally something  that they put pills in.  And why is that in the database?  Because they get to charge for it."
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 546.86,
+            "end": 560.8199999999999,
+            "text": " And I don't know what the charge is,  but it wouldn't surprise me if you're  paying $5 for a plastic bag to put something in.  OK.  So if we say, well, how many pharmacy orders"
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 560.8199999999999,
+            "end": 578.9799999999999,
+            "text": " are there per admission at this hospital?  And the answer is a lot.  So if you look at, it's a very long-tailed distribution,  goes out to about 2,500.  But you see, if I blow up just the numbers up to about 200,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 578.98,
+            "end": 598.82,
+            "text": " there's a very large number of people  with two prescriptions filled, and then a fairly declining  number with more.  And then it's a very long tail.  So can you imagine 2,500 things prescribed for you"
+        },
+        {
+            "number": "lec3",
+            "title": "part.003.mp3",
+            "start": 598.82,
+            "end": 602.02,
+            "text": " during a pharmacy order?"
+        }
+    ],
+    "text": " All right. So I could sort of see that for hospitalization. I'm not sure why it's true for the ICU, because if you don't have anybody at home to take care of you when you get sick, it seems reasonable that you'd be more likely to wind up in the hospital. But I don't know why you'd wind up in intensive care. Yeah? Isn't it possible that those are also like single people are probably younger than married people? And those are probably younger than widowed people. Yes. Yeah, that's probably also right. Yep. OK. So here's an interesting question, a little bit related to something you'll see on the next problem set. So could we predict in-hospital mortality from just these demographic features? So I'm using a tool in language called R. This is a general linear model. And I've set it up to do basically logistic regression. And it says I'm predicting whether you die in the hospital based on these demographic factors. And it turns out that the only ones that are highly significant are age. So that's not surprising that older people are more likely to die than younger people. It's generally true. And if I'm unable to obtain your ethnicity or I don't know your ethnicity, then you're more likely to die. I have no clue why that might be the case. And other things are not as significant. So if you speak Spanish or English, you're slightly less likely to die. You see a negative contribution here. And if you speak Russian, you're slightly less likely to die. But it's significant not at the p equal 0.05 level, but it is at the p equal 0.06 level. And marriage doesn't seem to make much difference in predicting whether you're going to die or not. Now, remember, this is ICU patients. And we're looking at in-hospital mortality. Yeah. AUDIENCE 2 For ethnicity, can they learn that at any point during this day or just right at the beginning? Or do you know? Because I don't know. I don't know. Because it could be that unable to obtain means that they died before we could ask them. No, because there wouldn't be that many of those people, I think. There are not that many people who don't live past the intake interview. And they do ask them. Unless they've gone into maintenance and in bad shape to do it. Yeah, that would be an example. But I don't think you'd see enough such people to show up statistically. OK. Well, so I've already mentioned that there's this problem of having moved from CareVue to MetaVision just in the MIMIC database. But of course, this is a much bigger problem around the country and around the world, because every hospital has its own way of keeping records. And wouldn't it be nice if we had standards? And of course, there's this funny phrase, the wonderful thing about standards is that there are so many to choose from. So for example, if you look at prescriptions in the MIMIC database, here are two particular prescriptions for subject number 57139 admitted on admission ID 155470. And so they have the same start date, but different end dates. One is a prescription for Tylenol acetaminophen. And the other is for clobetasol propionate 0.05% cream. That's a skin lotion thing for, I think it's a steroid skin cream. So if you look in the BI's database, they have their own private formulary code where this thing is a set 325, and this thing is clob.05C30. And if you look, there's also something called a GSN, which is some commercial coding system for drugs, maybe having to do with who their drug supplier is at the hospital. And these have different codes. There's the National Drug Code, which is an FDA-assigned nine-digit code that specifies who made the drug, what form it's in, and what's its strength. And so you get these. Then there's a human-readable description that says Tylenol comes in 325 milligram tablets, and this clobetasol comes in 30 gram tubes. And the dose is supposed to be 325 to 650, i.e. one to two tablets measured in milligrams. The dose here is one application, whatever that is. I don't know what the 0.01 means. And this is a tablet, and that's a tube. And this is taken orally, and that's administered on the skin. So this is a local database. AUDIENCE 2 For a doctor, they just get the package, and then this is all registered? PETER SZOLOVITSZ At most hospitals, that's true now. It wasn't true when the MIMIC database started being collected. And the BI was relatively late in moving to that compared to some of the other hospitals in the Boston area. Each hospital has its own desiderata for what it thinks is most important, and I think the BI just didn't prioritize it as much as some of the other hospitals. So then I said, well, if you look at prescriptions, how often are they given? So remember, we have about 60,000 ICU stays, and so isoasmotic dextrose was given 87,000 times to various people. Sodium chloride, 0.9% flush. Do you know what that is? Have you ever had an IV? So periodically, the nurse comes by and squirts a little bit of stuff in the IV to make sure that it hasn't clogged up. That's what that is. Insulin, SW, I don't know, salt water? I don't know what SW is. Magnesium sulfate, dextrose 5 in water. Furosemide is a diuretic. Potassium chloride replenishes potassium that people are often low on. And then you go, so why is there this D5W and that D5W? And that's probably some data error in the system. One of them has an NDC code associated with it, and the other one doesn't, but probably should. Yeah? AUDIENCE 2 I'd actually like to ask, do zeros mean that they're standard across hospitals, or just that we don't have the data? The NDC code should be standard across the country, because those are FDA-assigned codes. But not every hospital uses them. And for the ones that say zero, I'm not sure why they're not associated with the code in this hospital's database. OK. Next most common, you see normal saline, 0.9% sodium chloride. So that was the same stuff as the flush solution, but this time not being used for flush. Metoprolol is a beta blocker. Here's another insulin, this time with an NDC code, et cetera. I love bag and vial. So these are not exactly medications. A bag is literally like a baggie that they put something into, and a vial is literally something that they put pills in. And why is that in the database? Because they get to charge for it. And I don't know what the charge is, but it wouldn't surprise me if you're paying $5 for a plastic bag to put something in. OK. So if we say, well, how many pharmacy orders are there per admission at this hospital? And the answer is a lot. So if you look at, it's a very long-tailed distribution, goes out to about 2,500. But you see, if I blow up just the numbers up to about 200, there's a very large number of people with two prescriptions filled, and then a fairly declining number with more. And then it's a very long tail. So can you imagine 2,500 things prescribed for you during a pharmacy order?"
+}

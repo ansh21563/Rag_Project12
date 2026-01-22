@@ -1,0 +1,278 @@
+{
+    "chunks": [
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 0.0,
+            "end": 45.28,
+            "text": " in 1 given s, I'll say s t equals little s,  x t minus 1 equals 0.  I'm supposed that this is larger than or equal to probability  of x t equals 1 given s t equals s prime and x t minus 1  equals 0 for all s prime less than s."
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 45.28,
+            "end": 62.080000000000005,
+            "text": " OK?  So I'm saying as you get further along in the disease stage,  you're more likely to observe one of these complications.  And again, this is an assumption that we're  putting into the learning algorithm,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 62.080000000000005,
+            "end": 79.32,
+            "text": " but we found that these types of assumptions  are really critical in order to learn disease progression  models when you don't have a large amount of data.  And note that this is just a linear inequality  on the parameters of the model."
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 79.32,
+            "end": 97.16,
+            "text": " And so one can use a convex optimization algorithm  during learning, during the maximum likelihood estimation  step of this algorithm, where you just  put a linear inequality into the convex optimization problem  to enforce this constraint."
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 97.16,
+            "end": 114.96000000000001,
+            "text": " There were a couple of questions.  Is there generally a quick way to check  whether a model is unidentifiable?  Or so there are ways to try to check to see  if a model is unidentifiable."
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 114.96000000000001,
+            "end": 132.44,
+            "text": " It's beyond the scope of the class,  but I'll just briefly mention one of the techniques.  So you could ask the identifiability question  by looking at moments of the distribution.  For example, you could talk about it"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 132.44,
+            "end": 144.28,
+            "text": " as a function of all of the observed moments  of distribution that you get from the data.  Now, the observed data here are not s's and x's,  but rather the o's.  So you can look at the joint distribution on the o's."
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 144.28,
+            "end": 155.44,
+            "text": " And then you can ask questions about if I was to perturb.  So suppose I was to choose a random set of parameters  in the model.  Is there any way to do a perturbation  of the parameters of the model which"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 155.44,
+            "end": 173.16,
+            "text": " leave the observed marginal distribution on the o's  identical?  And often, when you're in the setting of non-identifiability,  you can take the gradient of a function  and you can find that there is some wiggle space."
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 173.16,
+            "end": 186.16,
+            "text": " Then you show that, OK, this objective function  is actually unidentifiable.  Now, that type of technique is widely  used when studying what are known as method and moments  algorithms or estimation algorithms in learning"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 186.16,
+            "end": 197.32,
+            "text": " latent variable models.  But it would be much, much harder to apply  this type of setting because, first of all,  these are much more complex models.  And estimating the corresponding moments"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 197.32,
+            "end": 217.67999999999998,
+            "text": " is going to be very hard because they're very high dimensional.  And second, because I'm actually conflating  two different things when I talk about identifiability.  One statement is the infinite data identifiability.  And the second question is your ability"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 217.68,
+            "end": 233.56,
+            "text": " to actually learn a good model from a small amount of data,  which is a sample complexity.  And these constraints that I'm putting in,  even if they don't affect the actual identifiability  of the model, they could be extremely"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 233.56,
+            "end": 253.24,
+            "text": " important for improving the sample complexity of learning  algorithm.  Is there another question?  So we evaluated this using a data set of almost 4,000  patients, where, again, each patient we observed"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 253.24,
+            "end": 268.08,
+            "text": " for only a couple of years, one to three years.  And the observations that we observed  were 264 diagnosis codes.  The presence or absence of each of those diagnosis codes  at any during any three-month interval."
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 268.08,
+            "end": 280.96,
+            "text": " Overall, there were almost 200,000 observations  of diagnosis codes in this data set.  The learning algorithm that we used was expectation  maximization.  Remember, there are a number of hidden variables here."
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 280.96,
+            "end": 291.88,
+            "text": " And so if you want to maximize the likely,  if you want to learn the parameters that maximize  the likelihood of those observations O,  then you have to marginalize over those hidden variables.  And EM is one way to try to find a local optima"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 291.88,
+            "end": 309.64,
+            "text": " of that likelihood function.  With the key caveat that one has to do approximate inference  during the E-step here, because this model is not  tractable, there's no closed form, for example,  dynamic programming algorithm for doing"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 309.64,
+            "end": 323.59999999999997,
+            "text": " posterior inference in this model, given its complexity.  And so what we used was a Gibbs sampler  to do approximate inference within that E-step.  And we did block sampling of the Markov chains,  where we combined a Gibbs sampler"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 323.59999999999997,
+            "end": 338.15999999999997,
+            "text": " with a dynamic programming algorithm, which  improved the mixing rate of the Markov chain,  for those of you who are familiar with those concepts.  And in the M-step of the learning algorithm,  when one has to learn the parameters of the distribution,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 338.15999999999997,
+            "end": 350.8,
+            "text": " the only complex part of this model  is the continuous time Markov process.  And there's actually been previous literature  from the physics community, which  gives you analytic closed form solutions for that M-step"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 350.8,
+            "end": 362.71999999999997,
+            "text": " of that continuous time Markov process.  Now, if I were to do this again today,  I would have done it a little bit differently.  I would still think about modeling this problem  in a very similar way."
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 362.72,
+            "end": 377.48,
+            "text": " But I would do learning using a variational lower  bound of the likelihood with a recognition network  in order to very quickly get you a lower  bound of the likelihood.  And for those of you who are familiar with variational auto"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 377.48,
+            "end": 389.76000000000005,
+            "text": " encoders, that's precisely the idea  that is used there for learning variational auto encoders.  So that's the way I would approach this,  if I was to do it again.  There's just one or two other extensions I want to mention."
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 389.76,
+            "end": 405.84,
+            "text": " The first one is something which we  won more customization we made for COPD,  which is that we enforced monotonic stage progression.  So we said that, so here I talked  about a type of monotonicity in terms"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 405.84,
+            "end": 427.96000000000004,
+            "text": " of the conditional distribution of x given s.  But one could also put an assumption in the,  I already talked about that.  But one could also put an assumption on P of s,  s of t given s of t minus 1, which is implicitly"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 427.96000000000004,
+            "end": 439.28000000000003,
+            "text": " an assumption on q.  And I gave you a hint of how one might do that over here  when I said that you might put 0's to the left-hand side,  meaning you can never go to the left.  And indeed, we did something like that here as well,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 439.28000000000003,
+            "end": 460.20000000000005,
+            "text": " which is another type of constraint.  And finally, we regularized the learning problem  by asking that that graph involving the conditions,  the comorbidities, and the diagnosis codes  be sparse by putting a beta prior on those edge waves."
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 460.20000000000005,
+            "end": 474.34000000000003,
+            "text": " So here's what one learned.  So the first thing I want to do is I'm going to show you the,  we talked about how we specified anchors.  But I told you that the anchors weren't the whole story,  that we were able to infer much more interesting things"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 474.34000000000003,
+            "end": 484.16,
+            "text": " about the hidden variables given all of the observations  we have.  So here I'm showing you several of the phenotypes  that were learned by this unsupervised learning  algorithm."
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 484.16,
+            "end": 498.88,
+            "text": " First, the phenotype for kidney disease.  In red here, I'm showing you the anchor variables  that we chose for kidney disease.  And what you'll notice are a couple of things.  First, the weight, which you should think about"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 498.88,
+            "end": 513.24,
+            "text": " as being proportional in some way  to how often you would see that diagnosis code given  that the patient had kidney disease.  The weights are all far less than 1.  So there is some noise in this process"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 513.24,
+            "end": 535.5,
+            "text": " of when you observe a diagnosis code for a patient.  The second thing you observe is that there  are a number of other diagnosis codes  that are observed to be, which are explained by this kidney  disease comorbidity, such as anemia, urinary tract"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 535.5,
+            "end": 548.24,
+            "text": " infections, and so on.  And that aligns well with what's known in the medical literature  about kidney disease.  You can look at another example for lung cancer.  In red here, I'm showing you the anchors"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 548.24,
+            "end": 564.34,
+            "text": " that we had pre-specified for these, which  mean that these diagnosis codes could only  be explained by the lung cancer comorbidity.  And these are the noise rates that are learned for them.  And that's everything else."
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 564.34,
+            "end": 574.58,
+            "text": " Here's one more example of lung infection,  where there was only a single anchor that  we specified for pneumonia.  And you see all of the other things that  are automatically associated to that"
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 574.58,
+            "end": 583.02,
+            "text": " by the unsupervised learning algorithm.  Yep?  AUDIENCE 2 So how do you compute the weights?  You all know the ground truth of the comorbidity, right?  Right."
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 583.02,
+            "end": 594.66,
+            "text": " So that's what the unsupervised learning algorithm is doing.  So these weights are learned.  And I'm showing you something like a point  estimate of the parameters that are learned  by the learning algorithm."
+        },
+        {
+            "number": "lec19",
+            "title": "part.004.mp3",
+            "start": 594.66,
+            "end": 599.4599999999999,
+            "text": " Just like if you learn a hidden markup model,  you learn some transition and mission distribution.  Same thing here."
+        }
+    ],
+    "text": " in 1 given s, I'll say s t equals little s, x t minus 1 equals 0. I'm supposed that this is larger than or equal to probability of x t equals 1 given s t equals s prime and x t minus 1 equals 0 for all s prime less than s. OK? So I'm saying as you get further along in the disease stage, you're more likely to observe one of these complications. And again, this is an assumption that we're putting into the learning algorithm, but we found that these types of assumptions are really critical in order to learn disease progression models when you don't have a large amount of data. And note that this is just a linear inequality on the parameters of the model. And so one can use a convex optimization algorithm during learning, during the maximum likelihood estimation step of this algorithm, where you just put a linear inequality into the convex optimization problem to enforce this constraint. There were a couple of questions. Is there generally a quick way to check whether a model is unidentifiable? Or so there are ways to try to check to see if a model is unidentifiable. It's beyond the scope of the class, but I'll just briefly mention one of the techniques. So you could ask the identifiability question by looking at moments of the distribution. For example, you could talk about it as a function of all of the observed moments of distribution that you get from the data. Now, the observed data here are not s's and x's, but rather the o's. So you can look at the joint distribution on the o's. And then you can ask questions about if I was to perturb. So suppose I was to choose a random set of parameters in the model. Is there any way to do a perturbation of the parameters of the model which leave the observed marginal distribution on the o's identical? And often, when you're in the setting of non-identifiability, you can take the gradient of a function and you can find that there is some wiggle space. Then you show that, OK, this objective function is actually unidentifiable. Now, that type of technique is widely used when studying what are known as method and moments algorithms or estimation algorithms in learning latent variable models. But it would be much, much harder to apply this type of setting because, first of all, these are much more complex models. And estimating the corresponding moments is going to be very hard because they're very high dimensional. And second, because I'm actually conflating two different things when I talk about identifiability. One statement is the infinite data identifiability. And the second question is your ability to actually learn a good model from a small amount of data, which is a sample complexity. And these constraints that I'm putting in, even if they don't affect the actual identifiability of the model, they could be extremely important for improving the sample complexity of learning algorithm. Is there another question? So we evaluated this using a data set of almost 4,000 patients, where, again, each patient we observed for only a couple of years, one to three years. And the observations that we observed were 264 diagnosis codes. The presence or absence of each of those diagnosis codes at any during any three-month interval. Overall, there were almost 200,000 observations of diagnosis codes in this data set. The learning algorithm that we used was expectation maximization. Remember, there are a number of hidden variables here. And so if you want to maximize the likely, if you want to learn the parameters that maximize the likelihood of those observations O, then you have to marginalize over those hidden variables. And EM is one way to try to find a local optima of that likelihood function. With the key caveat that one has to do approximate inference during the E-step here, because this model is not tractable, there's no closed form, for example, dynamic programming algorithm for doing posterior inference in this model, given its complexity. And so what we used was a Gibbs sampler to do approximate inference within that E-step. And we did block sampling of the Markov chains, where we combined a Gibbs sampler with a dynamic programming algorithm, which improved the mixing rate of the Markov chain, for those of you who are familiar with those concepts. And in the M-step of the learning algorithm, when one has to learn the parameters of the distribution, the only complex part of this model is the continuous time Markov process. And there's actually been previous literature from the physics community, which gives you analytic closed form solutions for that M-step of that continuous time Markov process. Now, if I were to do this again today, I would have done it a little bit differently. I would still think about modeling this problem in a very similar way. But I would do learning using a variational lower bound of the likelihood with a recognition network in order to very quickly get you a lower bound of the likelihood. And for those of you who are familiar with variational auto encoders, that's precisely the idea that is used there for learning variational auto encoders. So that's the way I would approach this, if I was to do it again. There's just one or two other extensions I want to mention. The first one is something which we won more customization we made for COPD, which is that we enforced monotonic stage progression. So we said that, so here I talked about a type of monotonicity in terms of the conditional distribution of x given s. But one could also put an assumption in the, I already talked about that. But one could also put an assumption on P of s, s of t given s of t minus 1, which is implicitly an assumption on q. And I gave you a hint of how one might do that over here when I said that you might put 0's to the left-hand side, meaning you can never go to the left. And indeed, we did something like that here as well, which is another type of constraint. And finally, we regularized the learning problem by asking that that graph involving the conditions, the comorbidities, and the diagnosis codes be sparse by putting a beta prior on those edge waves. So here's what one learned. So the first thing I want to do is I'm going to show you the, we talked about how we specified anchors. But I told you that the anchors weren't the whole story, that we were able to infer much more interesting things about the hidden variables given all of the observations we have. So here I'm showing you several of the phenotypes that were learned by this unsupervised learning algorithm. First, the phenotype for kidney disease. In red here, I'm showing you the anchor variables that we chose for kidney disease. And what you'll notice are a couple of things. First, the weight, which you should think about as being proportional in some way to how often you would see that diagnosis code given that the patient had kidney disease. The weights are all far less than 1. So there is some noise in this process of when you observe a diagnosis code for a patient. The second thing you observe is that there are a number of other diagnosis codes that are observed to be, which are explained by this kidney disease comorbidity, such as anemia, urinary tract infections, and so on. And that aligns well with what's known in the medical literature about kidney disease. You can look at another example for lung cancer. In red here, I'm showing you the anchors that we had pre-specified for these, which mean that these diagnosis codes could only be explained by the lung cancer comorbidity. And these are the noise rates that are learned for them. And that's everything else. Here's one more example of lung infection, where there was only a single anchor that we specified for pneumonia. And you see all of the other things that are automatically associated to that by the unsupervised learning algorithm. Yep? AUDIENCE 2 So how do you compute the weights? You all know the ground truth of the comorbidity, right? Right. So that's what the unsupervised learning algorithm is doing. So these weights are learned. And I'm showing you something like a point estimate of the parameters that are learned by the learning algorithm. Just like if you learn a hidden markup model, you learn some transition and mission distribution. Same thing here."
+}

@@ -1,0 +1,180 @@
+{
+    "chunks": [
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 0.0,
+            "end": 28.36,
+            "text": " increased pain. As the disease goes further on, you'll see things like  dementia and increasing amounts of psychotic symptoms. And information like  this can be extremely valuable for a patient who is newly diagnosed with the  disease. They might want to make life decisions like, should they buy this home?  Should they stake with their current job? Can they have a baby? And all of these"
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 28.36,
+            "end": 48.879999999999995,
+            "text": " questions might really be impacted. The answers to those questions might be  really impacted by what this patient could expect their life to be like over  the next couple of years, over the next 10 years, the next 20 years. And so if one  could characterize really well what the disease trajectory might look like, it  would be incredibly valuable for guiding those life decisions. But the challenge"
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 48.879999999999995,
+            "end": 70.78,
+            "text": " is that, although this is for Parkinson's and Parkinson's is reasonably well  understood, there are a large number of diseases that are much more rare. Where  any one clinician might see a very small number of patients in their clinic  and figuring out really, how do we combine the symptoms that are seen in a  very noisy fashion for a small number of patients, how to bring that together to a"
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 70.78,
+            "end": 90.96,
+            "text": " coherent picture like this is actually very, very challenging. And that's where  some of the techniques we'll be talking about in Tuesday's lecture, which talks  about how do we infer disease stages, how do we automatically align patients  across time, and how do we use very noisy data to do that will be particularly  valuable. I want to emphasize one last point regarding this descriptive"
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 90.96,
+            "end": 119.64,
+            "text": " question. This is not about prediction. This is about understanding, okay?  Whereas the previous slide was about prognosis, which is very much a  prediction-like question. Now a different type of  understanding question is that of disease subtyping. Here again, you might  be interested in identifying for a single patient, are they likely to"
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 119.64,
+            "end": 139.28,
+            "text": " progress quickly through their disease? Are they likely to progress slowly  through their disease? Are they likely to respond to treatment? Are they not likely  to respond to treatment? But we'd like to be able to characterize that heterogeneity  across the whole population and summarize it into a small number of  subtypes. And you might think about this as redefining disease altogether."
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 139.28,
+            "end": 164.32,
+            "text": " Today, we might say patients who have a particular blood abnormality, we will say  are multiple myeloma patients. But as we learn more and more about cancer, we  increasingly understand that in fact every patient's cancer is very unique.  And so over time, we're going to be subdividing diseases and in other cases  combining things that we thought were different diseases into new"
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 164.56,
+            "end": 189.0,
+            "text": " disease categories. And in doing so, it'll allow us to better take care of  patients by first of all coming up with guidelines that are specific to each  of these disease subtypes. And it'll allow us to make better predictions  based on these guidelines. So we could say a patient like this in subtype A is  likely to have the following disease progression. A patient like this in"
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 189.0,
+            "end": 214.56,
+            "text": " subtype B is likely to have a different disease progression or be a responder or  non-responder. So here's an example of such a characterization. This is still  sticking with the Parkinson's example. This is a paper from a  psychiatry journal and it uses a clustering like algorithm, and we'll  see many more examples of that in today's lecture, to characterize patients"
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 214.56,
+            "end": 238.07999999999998,
+            "text": " into to group patients into four different clusters. So let me walk you  through this figure so you see how to interpret it. Parkinson's patients can be  measured in terms of a few different axes. You can look at their motor  progression. So that is shown here in the innermost circle. And you see that  patients in cluster two seem to have intermediate level motor progression."
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 238.07999999999998,
+            "end": 261.40000000000003,
+            "text": " Patients in cluster one have very fast motor progression. It means that their  motor symptoms get increasingly worse very quickly over time. One could also  look at the response of patients to one of the drugs such as levodopa that's  used to treat patients. Patients in cluster one are characterized by having  a very poor response to that drug. Patients in cluster three are"
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 261.40000000000003,
+            "end": 284.03999999999996,
+            "text": " characterized as having intermediate. Patients in cluster two as having good response  to that drug. Similarly one could look at baseline motor symptoms. So at the time  the patient is diagnosed or comes into the clinic for the first time to manage  their disease, you can look at what types of motor like symptoms do they  have. And again you see different heterogeneous aspects to these different"
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 284.03999999999996,
+            "end": 316.0,
+            "text": " clusters. So this is one means this is a very concrete way of what I mean by  trying to subtype patients. So we'll begin our journey through disease  progression modeling by starting out with that first question of prognosis.  And prognosis from my perspective is really a supervised machine learning  problem. So we can think about prognosis from the following perspective."
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 318.56,
+            "end": 350.56,
+            "text": " Patient walks in at time zero and you want to know something about what will  that patient's disease status be like over time. So for example you could ask  at six months what is their disease status. And for this patient it might be  let's say six out of ten. And where these numbers are coming from will become  clear in a few minutes. Twelve months down the line their disease status might"
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 350.56,
+            "end": 382.52000000000004,
+            "text": " be seven out of ten. Eighteen months it might be nine out of ten. And the goal  that we're going to try to tackle for the first half of today's lecture is  this question of how do we take the data what I'll call the x-vector available  for the patient at baseline and predict what will be these values at different  time points. So you could think about that as actually drawing out this curve"
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 382.52000000000004,
+            "end": 403.08000000000004,
+            "text": " that I showed you earlier. So what we want to do is take the initial  information we have about the patient and say oh the patient's disease status  or their disease burden over time is going to look a little bit like this. And  for a different patient based on their initial covariates you might say that  their disease burden might look like that. So we want to be able to"
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 403.08000000000004,
+            "end": 423.84,
+            "text": " predict these curves in this for this presentation they're not going to  actually be sort of discrete time points. We want to go predict that curve  from the baseline information we have available. And that will give us some  idea of how this patient's going to progress through the disease. So in this  case study we're going to look at Alzheimer's disease. Here I'm showing you"
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 423.84,
+            "end": 450.76,
+            "text": " two brains a healthy brain and a diseased brain to really emphasize how  the brain suffers under this Alzheimer's disease. We're  going to characterize the patient's disease status by a score and one  example such a score is shown here it's called the mini mental state examination  summarized by the acronym MMSC. And it's going to look as follows. For each of a"
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 450.76,
+            "end": 478.0,
+            "text": " number of different cognitive questions a test is going to be performed which  for example in the middle what says registration the examiner might name  three objects like Apple, table, penny and then ask the patient to repeat  those three objects. All of us should be able to have to remember a sequence of  three things so that when we finish the sequence you should be able to remember"
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 478.0,
+            "end": 499.52,
+            "text": " what the first thing in the sequence was. Right we shouldn't have a problem with  that but as patients get increasingly worse in their Alzheimer's disease that  task becomes very challenging. And so you might give one point for correct for  each correct and so if a patient gets all three if they repeat all three of  them then they get three points if they can't remember any of them zero points."
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 499.52,
+            "end": 517.28,
+            "text": " And then you might continue so you might ask something else like  subtract seven from a hundred then repeat from results so some sort of  mathematical question. Then you might return back to that original three  objects that you asked about originally. Now it's been if let's say a minute  later and you say what were those three objects I mentioned earlier and this is"
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 517.28,
+            "end": 540.8399999999999,
+            "text": " trying to get at a little bit longer term memory and and so on. And one will  then add up the number of points associated with each of these responses  and get a total score. Here it's out of 30 points if you divide by three you get  the story I give you here. Okay so these are the scores that I'm talking about  for Alzheimer's disease they're often characterized by by scores just"
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 540.8399999999999,
+            "end": 561.8,
+            "text": " questionnaires but of course if you had done something like brain imaging the  disease status might for example be inferred automatically from brain  imaging. If you had a smartphone device which which patients are carrying around  with them and which is looking at mobile activity you might be able to  automatically infer their current disease status from that smartphone. You"
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 561.8,
+            "end": 578.24,
+            "text": " might be able to infer it from their typing patterns you might be able to  infer it from their email or Facebook habits. And so I'm just trying to point  out there are a lot of different ways to try to get this number of how the  patient might be doing at one point at in one point in time. Each of those is an  interesting question for now we're just gonna assume it's known. Okay so"
+        },
+        {
+            "number": "lec18",
+            "title": "part.001.mp3",
+            "start": 578.24,
+            "end": 599.96,
+            "text": " retrospectively you've gathered this data from patient for patients which is  now longitudinal in nature you have some baseline information and you know how  the patient is doing over different six month intervals and we'd then like to be  able to predict those things. Now if this were"
+        }
+    ],
+    "text": " increased pain. As the disease goes further on, you'll see things like dementia and increasing amounts of psychotic symptoms. And information like this can be extremely valuable for a patient who is newly diagnosed with the disease. They might want to make life decisions like, should they buy this home? Should they stake with their current job? Can they have a baby? And all of these questions might really be impacted. The answers to those questions might be really impacted by what this patient could expect their life to be like over the next couple of years, over the next 10 years, the next 20 years. And so if one could characterize really well what the disease trajectory might look like, it would be incredibly valuable for guiding those life decisions. But the challenge is that, although this is for Parkinson's and Parkinson's is reasonably well understood, there are a large number of diseases that are much more rare. Where any one clinician might see a very small number of patients in their clinic and figuring out really, how do we combine the symptoms that are seen in a very noisy fashion for a small number of patients, how to bring that together to a coherent picture like this is actually very, very challenging. And that's where some of the techniques we'll be talking about in Tuesday's lecture, which talks about how do we infer disease stages, how do we automatically align patients across time, and how do we use very noisy data to do that will be particularly valuable. I want to emphasize one last point regarding this descriptive question. This is not about prediction. This is about understanding, okay? Whereas the previous slide was about prognosis, which is very much a prediction-like question. Now a different type of understanding question is that of disease subtyping. Here again, you might be interested in identifying for a single patient, are they likely to progress quickly through their disease? Are they likely to progress slowly through their disease? Are they likely to respond to treatment? Are they not likely to respond to treatment? But we'd like to be able to characterize that heterogeneity across the whole population and summarize it into a small number of subtypes. And you might think about this as redefining disease altogether. Today, we might say patients who have a particular blood abnormality, we will say are multiple myeloma patients. But as we learn more and more about cancer, we increasingly understand that in fact every patient's cancer is very unique. And so over time, we're going to be subdividing diseases and in other cases combining things that we thought were different diseases into new disease categories. And in doing so, it'll allow us to better take care of patients by first of all coming up with guidelines that are specific to each of these disease subtypes. And it'll allow us to make better predictions based on these guidelines. So we could say a patient like this in subtype A is likely to have the following disease progression. A patient like this in subtype B is likely to have a different disease progression or be a responder or non-responder. So here's an example of such a characterization. This is still sticking with the Parkinson's example. This is a paper from a psychiatry journal and it uses a clustering like algorithm, and we'll see many more examples of that in today's lecture, to characterize patients into to group patients into four different clusters. So let me walk you through this figure so you see how to interpret it. Parkinson's patients can be measured in terms of a few different axes. You can look at their motor progression. So that is shown here in the innermost circle. And you see that patients in cluster two seem to have intermediate level motor progression. Patients in cluster one have very fast motor progression. It means that their motor symptoms get increasingly worse very quickly over time. One could also look at the response of patients to one of the drugs such as levodopa that's used to treat patients. Patients in cluster one are characterized by having a very poor response to that drug. Patients in cluster three are characterized as having intermediate. Patients in cluster two as having good response to that drug. Similarly one could look at baseline motor symptoms. So at the time the patient is diagnosed or comes into the clinic for the first time to manage their disease, you can look at what types of motor like symptoms do they have. And again you see different heterogeneous aspects to these different clusters. So this is one means this is a very concrete way of what I mean by trying to subtype patients. So we'll begin our journey through disease progression modeling by starting out with that first question of prognosis. And prognosis from my perspective is really a supervised machine learning problem. So we can think about prognosis from the following perspective. Patient walks in at time zero and you want to know something about what will that patient's disease status be like over time. So for example you could ask at six months what is their disease status. And for this patient it might be let's say six out of ten. And where these numbers are coming from will become clear in a few minutes. Twelve months down the line their disease status might be seven out of ten. Eighteen months it might be nine out of ten. And the goal that we're going to try to tackle for the first half of today's lecture is this question of how do we take the data what I'll call the x-vector available for the patient at baseline and predict what will be these values at different time points. So you could think about that as actually drawing out this curve that I showed you earlier. So what we want to do is take the initial information we have about the patient and say oh the patient's disease status or their disease burden over time is going to look a little bit like this. And for a different patient based on their initial covariates you might say that their disease burden might look like that. So we want to be able to predict these curves in this for this presentation they're not going to actually be sort of discrete time points. We want to go predict that curve from the baseline information we have available. And that will give us some idea of how this patient's going to progress through the disease. So in this case study we're going to look at Alzheimer's disease. Here I'm showing you two brains a healthy brain and a diseased brain to really emphasize how the brain suffers under this Alzheimer's disease. We're going to characterize the patient's disease status by a score and one example such a score is shown here it's called the mini mental state examination summarized by the acronym MMSC. And it's going to look as follows. For each of a number of different cognitive questions a test is going to be performed which for example in the middle what says registration the examiner might name three objects like Apple, table, penny and then ask the patient to repeat those three objects. All of us should be able to have to remember a sequence of three things so that when we finish the sequence you should be able to remember what the first thing in the sequence was. Right we shouldn't have a problem with that but as patients get increasingly worse in their Alzheimer's disease that task becomes very challenging. And so you might give one point for correct for each correct and so if a patient gets all three if they repeat all three of them then they get three points if they can't remember any of them zero points. And then you might continue so you might ask something else like subtract seven from a hundred then repeat from results so some sort of mathematical question. Then you might return back to that original three objects that you asked about originally. Now it's been if let's say a minute later and you say what were those three objects I mentioned earlier and this is trying to get at a little bit longer term memory and and so on. And one will then add up the number of points associated with each of these responses and get a total score. Here it's out of 30 points if you divide by three you get the story I give you here. Okay so these are the scores that I'm talking about for Alzheimer's disease they're often characterized by by scores just questionnaires but of course if you had done something like brain imaging the disease status might for example be inferred automatically from brain imaging. If you had a smartphone device which which patients are carrying around with them and which is looking at mobile activity you might be able to automatically infer their current disease status from that smartphone. You might be able to infer it from their typing patterns you might be able to infer it from their email or Facebook habits. And so I'm just trying to point out there are a lot of different ways to try to get this number of how the patient might be doing at one point at in one point in time. Each of those is an interesting question for now we're just gonna assume it's known. Okay so retrospectively you've gathered this data from patient for patients which is now longitudinal in nature you have some baseline information and you know how the patient is doing over different six month intervals and we'd then like to be able to predict those things. Now if this were"
+}

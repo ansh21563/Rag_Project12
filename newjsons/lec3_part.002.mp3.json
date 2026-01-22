@@ -1,0 +1,257 @@
+{
+    "chunks": [
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 0.0,
+            "end": 15.34,
+            "text": " by hands.  At the top is something very important.  This patient starts off at full code.  That means that if something bad happens to him,  he wants everything to be done to try to save him."
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 15.34,
+            "end": 34.72,
+            "text": " And he winds up in comfort measures only,  which means that if something bad happens to him,  he wants to die, or his family does if he's unconscious.  So what else do we know about this guy?  Well, GCS is the Glasgow Coma Score."
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 34.72,
+            "end": 51.84,
+            "text": " And it's a way of quantifying people's level  of consciousness.  And you see that at the beginning,  this patient is oriented and then gets confused  and finally is only making incomprehensible words"
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 51.84,
+            "end": 67.24,
+            "text": " or sounds.  Motor, he's able to obey commands.  Eventually, he's only able to flex  when you stimulate his muscles.  So he's no longer conscious."
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 67.24,
+            "end": 85.16,
+            "text": " High movements, he's able to follow you spontaneously.  He's able to orient to speech and eventually no orientation  at all.  So this is clearly somebody who's going downhill quickly  and, in fact, dies at the end of this episode."
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 85.16,
+            "end": 100.56,
+            "text": " Now, we then look at labs so we can  see what is their level of platelets at about the time  that they're measured, their creatinine level,  their white blood cell count, the neutrophil percentage,  et cetera."
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 100.56,
+            "end": 115.28,
+            "text": " There's not every possible data point on this slide.  This is just illustrative.  The next section is medications.  So the person is on morphine.  They're on vancomycin, which is an antibiotic."
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 115.28,
+            "end": 122.76,
+            "text": " Piperacillin, I don't know what that is.  Somebody know?  AUDIENCE MEMBER 2. Antibiotic.  PETER SZOLOVITSZ. It's what?  AUDIENCE MEMBER 2. It's antibiotic."
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 122.76,
+            "end": 137.96,
+            "text": " PETER SZOLOVITSZ. OK.  Sodium chloride, 9%, so that's just keeping them hydrated.  Amiodarone and dextrose, so dextrose  is giving him some energy.  And then these are the various measurements."
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 137.96,
+            "end": 158.16,
+            "text": " So you see the heart rate, for example, is up pretty high  and is going up near the end.  The oxygen saturation starts off pretty good,  but here we're down to 60% or 50%  O2 sat, which is supposed to be above about 92 in order"
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 158.16,
+            "end": 174.68,
+            "text": " to be considered reasonable.  So again, this is a very consistent picture  of things going very badly wrong for this particular patient.  So this is all the data in the database.  Now, if you want to try to analyze some of this stuff,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 174.68,
+            "end": 193.52,
+            "text": " you can say, well, let's look at the ages  at the time of the last lab measurement in the database.  So we have the times of all the lab measurements.  So we can see that many of the ICU population  are fairly old."
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 193.52,
+            "end": 211.56,
+            "text": " There's a relatively small number of young people  and then a growing number of older people  in both females and males.  If we look at age at admission by gender,  so this is age at admission, not age"
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 211.56,
+            "end": 235.6,
+            "text": " at the time the last lab measurement was done,  it's pretty similar curve.  So we see that females were 64.21  at time of last lab measurement, 63.5 at the time of admission.  So we can look at demographics, and demographics typically"
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 235.6,
+            "end": 258.24,
+            "text": " includes these kinds of factors, which I mentioned before.  And again, if we're interested in the relationship  between this and, for example, the age distribution,  we see that if you look at the different admission types,  so you can be either admitted for an emergency,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 258.24,
+            "end": 280.03999999999996,
+            "text": " for some urgent care, or electively.  And it doesn't seem to make a whole lot of difference,  at least in the means of the population age distribution.  On the other hand, if you look at insurance type and say,  who's paying the bills, there's a big difference"
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 280.03999999999996,
+            "end": 297.88,
+            "text": " in the age distributions.  Now, why do you think that private insurance drops way  off at about 65?  Isn't insurance always covered for everyone by the state?  It's because of Medicare."
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 297.88,
+            "end": 313.28000000000003,
+            "text": " So Medicare covers people who are 65 years old.  There's a terrible story I have to tell you.  I was talking to somebody at an insurance company.  He's a bit cynical, and he said, suppose  that you see a 63-year-old patient who's"
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 313.28000000000003,
+            "end": 327.6,
+            "text": " developing type 2 diabetes.  What should you do for him?  Well, there are standard things you  should do for somebody developing type 2 diabetes,  like get him to eat better, get him to lose weight,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 327.6,
+            "end": 342.76,
+            "text": " get him to exercise more, et cetera, et cetera.  But his cynical answer was absolutely nothing.  Why?  Well, it's very cheap to do nothing.  Most people who develop type 2 diabetes"
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 342.76,
+            "end": 356.21999999999997,
+            "text": " don't get real sick in the next two years.  And by the time this patient is 65,  he'll be the government's responsibility, not  the insurance company's.  Nice."
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 356.22,
+            "end": 367.86,
+            "text": " Yeah.  OK.  So of course, a lot of the elderly  are insured by Medicare or Medicaid.  Not that surprising."
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 367.86,
+            "end": 385.54,
+            "text": " Self-pay is a pretty small number,  because it's insanely expensive to pay for your own health  care.  What about where you came from?  Were you referred from a clinic, or were you"
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 385.58000000000004,
+            "end": 404.22,
+            "text": " an emergency room admit, or were you  referred from an HMO, or et cetera?  And other than transfer from a skilled nursing facility  or transfer within the facility, within the hospital,  it doesn't make much difference."
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 404.22,
+            "end": 420.62,
+            "text": " The averages there and the distributions  look moderately similar.  If you're coming from a skilled nursing facility,  if you are in a skilled nursing facility,  you're probably old, because younger people don't typically"
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 420.62,
+            "end": 438.74,
+            "text": " need skilled nursing care.  And I'm not sure why transfers within the facility  are significantly younger ages.  But it's true from the MIMIC data.  What about age at admission by language?"
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 438.74,
+            "end": 456.58,
+            "text": " So some people speak English.  Some people speak not available.  Some people speak Spanish, et cetera.  So it turns out the Russians are the oldest.  And that may have to do with immigration patterns,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 456.58,
+            "end": 476.06,
+            "text": " or I don't know exactly why.  But that's what the data show.  If you do it by ethnicity, it turns out  that African-Americans on the whole  are somewhat younger than whites,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 476.06,
+            "end": 500.18,
+            "text": " and Hispanics are somewhat younger yet.  So that means that those subpopulations apparently  need intensive care earlier in life than whites.  So this is a topic that's very hot right now,  discussions about how bias might play into health care."
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 500.18,
+            "end": 509.54,
+            "text": " Yeah?  What does unable to obtain mean?  It just means that somebody refused  to say what their ethnicity was.  They never asked."
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 509.54,
+            "end": 520.94,
+            "text": " Yeah.  I think.  I'm not positive.  So just to confirm, this also represents  Boston's population dynamics, too, right?"
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 520.94,
+            "end": 537.74,
+            "text": " It's the catchment basin of the Beth Israel Deaconess Hospital,  which is Boston, clearly.  But it turns out that a lot of North Shore people  go to Mass General, and so different hospitals  have different catchment basins."
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 537.74,
+            "end": 553.6999999999999,
+            "text": " Does it have anything to do with, is this just the ICU,  or is this everybody who goes to the hospital, the ER?  These are all people who at some point were in the ICU.  So these are the sicker patients.  Yeah?"
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 553.7,
+            "end": 567.98,
+            "text": " So just so I can see, is that there  is a higher proportion of black African-American people  in the population here as well, because the red is  higher than the others?  No, actually, I don't remember if I have that graph."
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 567.98,
+            "end": 593.46,
+            "text": " I think this is cumulative.  So most people are white, for whatever definition of white  we're using.  And I think it's only the increment that you see on top.  All right, how about marital status?"
+        },
+        {
+            "number": "lec3",
+            "title": "part.002.mp3",
+            "start": 593.46,
+            "end": 595.82,
+            "text": " Well, according to this, it's bad to be single."
+        }
+    ],
+    "text": " by hands. At the top is something very important. This patient starts off at full code. That means that if something bad happens to him, he wants everything to be done to try to save him. And he winds up in comfort measures only, which means that if something bad happens to him, he wants to die, or his family does if he's unconscious. So what else do we know about this guy? Well, GCS is the Glasgow Coma Score. And it's a way of quantifying people's level of consciousness. And you see that at the beginning, this patient is oriented and then gets confused and finally is only making incomprehensible words or sounds. Motor, he's able to obey commands. Eventually, he's only able to flex when you stimulate his muscles. So he's no longer conscious. High movements, he's able to follow you spontaneously. He's able to orient to speech and eventually no orientation at all. So this is clearly somebody who's going downhill quickly and, in fact, dies at the end of this episode. Now, we then look at labs so we can see what is their level of platelets at about the time that they're measured, their creatinine level, their white blood cell count, the neutrophil percentage, et cetera. There's not every possible data point on this slide. This is just illustrative. The next section is medications. So the person is on morphine. They're on vancomycin, which is an antibiotic. Piperacillin, I don't know what that is. Somebody know? AUDIENCE MEMBER 2. Antibiotic. PETER SZOLOVITSZ. It's what? AUDIENCE MEMBER 2. It's antibiotic. PETER SZOLOVITSZ. OK. Sodium chloride, 9%, so that's just keeping them hydrated. Amiodarone and dextrose, so dextrose is giving him some energy. And then these are the various measurements. So you see the heart rate, for example, is up pretty high and is going up near the end. The oxygen saturation starts off pretty good, but here we're down to 60% or 50% O2 sat, which is supposed to be above about 92 in order to be considered reasonable. So again, this is a very consistent picture of things going very badly wrong for this particular patient. So this is all the data in the database. Now, if you want to try to analyze some of this stuff, you can say, well, let's look at the ages at the time of the last lab measurement in the database. So we have the times of all the lab measurements. So we can see that many of the ICU population are fairly old. There's a relatively small number of young people and then a growing number of older people in both females and males. If we look at age at admission by gender, so this is age at admission, not age at the time the last lab measurement was done, it's pretty similar curve. So we see that females were 64.21 at time of last lab measurement, 63.5 at the time of admission. So we can look at demographics, and demographics typically includes these kinds of factors, which I mentioned before. And again, if we're interested in the relationship between this and, for example, the age distribution, we see that if you look at the different admission types, so you can be either admitted for an emergency, for some urgent care, or electively. And it doesn't seem to make a whole lot of difference, at least in the means of the population age distribution. On the other hand, if you look at insurance type and say, who's paying the bills, there's a big difference in the age distributions. Now, why do you think that private insurance drops way off at about 65? Isn't insurance always covered for everyone by the state? It's because of Medicare. So Medicare covers people who are 65 years old. There's a terrible story I have to tell you. I was talking to somebody at an insurance company. He's a bit cynical, and he said, suppose that you see a 63-year-old patient who's developing type 2 diabetes. What should you do for him? Well, there are standard things you should do for somebody developing type 2 diabetes, like get him to eat better, get him to lose weight, get him to exercise more, et cetera, et cetera. But his cynical answer was absolutely nothing. Why? Well, it's very cheap to do nothing. Most people who develop type 2 diabetes don't get real sick in the next two years. And by the time this patient is 65, he'll be the government's responsibility, not the insurance company's. Nice. Yeah. OK. So of course, a lot of the elderly are insured by Medicare or Medicaid. Not that surprising. Self-pay is a pretty small number, because it's insanely expensive to pay for your own health care. What about where you came from? Were you referred from a clinic, or were you an emergency room admit, or were you referred from an HMO, or et cetera? And other than transfer from a skilled nursing facility or transfer within the facility, within the hospital, it doesn't make much difference. The averages there and the distributions look moderately similar. If you're coming from a skilled nursing facility, if you are in a skilled nursing facility, you're probably old, because younger people don't typically need skilled nursing care. And I'm not sure why transfers within the facility are significantly younger ages. But it's true from the MIMIC data. What about age at admission by language? So some people speak English. Some people speak not available. Some people speak Spanish, et cetera. So it turns out the Russians are the oldest. And that may have to do with immigration patterns, or I don't know exactly why. But that's what the data show. If you do it by ethnicity, it turns out that African-Americans on the whole are somewhat younger than whites, and Hispanics are somewhat younger yet. So that means that those subpopulations apparently need intensive care earlier in life than whites. So this is a topic that's very hot right now, discussions about how bias might play into health care. Yeah? What does unable to obtain mean? It just means that somebody refused to say what their ethnicity was. They never asked. Yeah. I think. I'm not positive. So just to confirm, this also represents Boston's population dynamics, too, right? It's the catchment basin of the Beth Israel Deaconess Hospital, which is Boston, clearly. But it turns out that a lot of North Shore people go to Mass General, and so different hospitals have different catchment basins. Does it have anything to do with, is this just the ICU, or is this everybody who goes to the hospital, the ER? These are all people who at some point were in the ICU. So these are the sicker patients. Yeah? So just so I can see, is that there is a higher proportion of black African-American people in the population here as well, because the red is higher than the others? No, actually, I don't remember if I have that graph. I think this is cumulative. So most people are white, for whatever definition of white we're using. And I think it's only the increment that you see on top. All right, how about marital status? Well, according to this, it's bad to be single."
+}

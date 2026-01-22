@@ -1,0 +1,320 @@
+{
+    "chunks": [
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 0.0,
+            "end": 12.36,
+            "text": " that are important for a certain condition.  You can imagine if you get five doctors in a room  to try to agree on a list, it takes forever.  And so we tried to get that out of the way.  So one thing we started doing was we took"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 13.44,
+            "end": 27.68,
+            "text": " just common things that are freely available on the web,  Wikipedia, Medline, the Merck Manual,  that have medical information,  and we actually now process those articles,  look for medical terms, pull those out,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 27.68,
+            "end": 39.36,
+            "text": " map them to concepts, and that becomes that term list.  Now, that goes into, so now instead of,  if you think about in the old days,  we came up with a list, we had ICD lists and term lists,  which got mapped to a concept."
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 39.36,
+            "end": 49.239999999999995,
+            "text": " Now we go straight to the article,  we kind of do majority voting with the articles.  You take five articles, if three out of five  mention it more than X amount of time,  we say that could potentially be important."
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 49.239999999999995,
+            "end": 58.56,
+            "text": " So that's the term list.  Get the clinicians out of that step.  And then we, well actually we don't train yet.  So now instead of training right away  in the gold standard labels,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 58.56,
+            "end": 72.56,
+            "text": " we train on a silver standard label.  Mainly, most of the time we use the main ICD code,  but sometimes we use the main NLP, CUI,  because sometimes there is no code  for the phenotype we're interested in."
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 72.56,
+            "end": 87.64,
+            "text": " So that's kind of some of the steps that we've done  to automate things a little bit more  and formalize that pipeline.  So in fact, the pipeline is now part of  the Partners Biobank, which is a Partners Healthcare,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 87.64,
+            "end": 101.4,
+            "text": " as Pete mentioned, is Mass General  in Brigham Women's Hospital.  They are recruiting patients to come in  and get the blood sample, link it with their notes  so people can do research on linked EHR data"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 101.4,
+            "end": 112.36,
+            "text": " and blood samples.  So this is the pipeline they use for phenotyping.  Now I'm over at the Boston VA along with Tianxi,  and this is the pipeline we're laying down  for also the Million Veterans Program,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 112.36,
+            "end": 124.54,
+            "text": " which is even bigger.  It's a million vets, and they have EHR data  going back decades.  So it's pretty exciting.  So what are the kinds of, I mean,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 124.54,
+            "end": 135.4,
+            "text": " this study that we were talking about today  was for rheumatoid arthritis,  but what other diseases are being targeted  by this phenotyping approach?  So all kinds of diseases."
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 135.4,
+            "end": 147.68,
+            "text": " So whoever, so what, there's a lot of things we learned,  though.  The phenotyping approach is best suited,  the pipeline that we, the base pipeline,  is best suited for conditions that have a prevalence"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 147.68,
+            "end": 161.04000000000002,
+            "text": " of 1% or higher.  So rheumatoid arthritis is kind of at that lower bound.  Rheumatoid arthritis is a chronic inflammatory joint disease  affects 1% of the population,  but it is the most common autoimmune joint disease."
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 161.04000000000002,
+            "end": 177.32,
+            "text": " Once you go to rare diseases that are episodic,  that don't happen frequently,  not only is it below 1%, but only happens once in a while,  this type of approach is not as robust.  But most diseases are above 1%."
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 177.32,
+            "end": 193.16,
+            "text": " So at the VA, we've kind of laid down this pipeline  for a phenomics core,  and they're running through acute stroke,  myocardial infarction, all kinds of these diabetes,  just really a lot of all the common diseases"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 193.16,
+            "end": 206.08,
+            "text": " that we want to study.  Now, you were mentioning that when you identify  such a patient, you then try to get a blood sample  so that you can do genotyping on them.  Is that also common across all these diseases,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 206.08,
+            "end": 217.52,
+            "text": " or are there different approaches?  Yeah, so it's interesting, back 10 years ago,  it was very different.  It was very expensive to genotype a patient.  So it was anywhere between $500 to $700 per patient."
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 217.52,
+            "end": 230.4,
+            "text": " And that was just for single nucleotide polymorphisms?  Yes, just for a SNP.  So we had to be very careful about who we selected.  So 10 years ago, what we did is we said,  okay, we have 4 million patients and partners,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 230.4,
+            "end": 242.04,
+            "text": " who has RA with good certainty?  Then we select those patients, and we genotype them  because it costs so much.  You didn't want to genotype someone who didn't have RA.  Not only would it alter the,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 242.04,
+            "end": 256.72,
+            "text": " or reduce the power of our association study,  it would just be like wasted dollars.  The interesting now, the change has happened,  and we completely think of a different way  of approaching things is now you have these biobanks."
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 257.44000000000005,
+            "end": 272.08000000000004,
+            "text": " You have something like the VA MVP or UK Biobank.  They're being systematically recruited.  Blood samples are taken, they're genotyped  with no study in mind, linked with the EHR.  So now I walk into the VA."
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 272.08000000000004,
+            "end": 285.12,
+            "text": " It's a completely different story.  10 years later, I'm at the VA,  and I'm interested in identifying rheumatoid arthritis.  Interesting enough, this algorithm ports well over there too  but now we just, we tested our new method on there."
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 286.0,
+            "end": 301.72,
+            "text": " But now instead of saying I need to identify these patients  and get the genotype, all the genotypes are already there.  So it's a completely different approach to research now.  Yep, interesting.  So the other question I wanted to ask you"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 301.72,
+            "end": 323.6,
+            "text": " before we turn it over to questions from the audience  is so this is all focused on research uses of the data.  Are there clinical uses that people have adopted  that use this kind of approach to trying to read the note?  We had fantasized decades ago that when you get a report"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 326.36,
+            "end": 345.64,
+            "text": " from a pathologist that somehow or other  machine learning algorithm using natural language processing  would grovel over it, identify the important things  that came out, and then either incorporate that  in decision support or in some kind of warning systems"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 346.44,
+            "end": 359.4,
+            "text": " that drew people's attention to the important results  as opposed to the unimportant ones.  Has any of that happened?  I think we're not there yet,  but I feel like we're so much closer than we were before."
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 359.4,
+            "end": 376.16,
+            "text": " But you asked me how you felt a few decades ago.  One of the challenges is, as you know,  EHRs actually weren't really widely adopted  until the HITECH Act in 2010.  So a lot of systems are actually now just getting the EHR."
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 376.16,
+            "end": 383.92,
+            "text": " And the reason that we've had the luxury  of playing around with the data  is because Partners was ahead of the curve  and had developed an EHR.  The VA happened to have an EHR."
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 385.96000000000004,
+            "end": 397.6,
+            "text": " But I think first, because research  and clinical medicine is very different.  Research, if you mess up and you misclassify someone  with a disease, it's okay, right?  You just lose power in your study."
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 397.6,
+            "end": 406.56,
+            "text": " But in the clinical setting, if you mess up,  it's a really big deal.  So I think the bar is much higher.  And so what we're doing,  one of our goals with all this phenotyping"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 406.56,
+            "end": 419.88,
+            "text": " is to get it to that point where we feel pretty confident.  We're not gonna say someone has or hasn't a disease,  but we are, actually Tianqi and I are thinking,  have been planning this grant where  what's outputted from this algorithm"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 419.88,
+            "end": 427.96,
+            "text": " is a probability of disease.  And for some of our phenotype algorithms,  they're pretty good.  And so what we wanna test is  whether what threshold is that probability"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 428.0,
+            "end": 439.53999999999996,
+            "text": " that you would wanna tell a clinician  that hey, if you're not thinking about  rheumatoid arthritis in this patient,  this is particularly helpful in places  where they're in remote locations,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 439.53999999999996,
+            "end": 450.24,
+            "text": " where there aren't rheumatologists available,  you should be thinking about it  and maybe considering referring them  or speaking to a rheumatologist through telehealth,  which is also something."
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 450.24,
+            "end": 465.48,
+            "text": " There's a lot of things that are changing  that are making something like this  fit much more into the workflow.  Yeah.  So you're as optimistic as I was in the 1990s."
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 465.48,
+            "end": 482.6,
+            "text": " I think we're getting, we'll see.  Well, it will surely happen at some point.  Did any of you go to the festivities  around the opening of the Schwarzman College of Computing?  So they've had a lot of discussions"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 482.6,
+            "end": 495.92,
+            "text": " and healthcare does keep coming up  over and over again as one of the great opportunities  and I profoundly believe that.  But on the other hand, I've learned over many decades  not to be quite as optimistic"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 495.92,
+            "end": 511.08000000000004,
+            "text": " as my natural proclivities are.  And I think some of the speakers here  have not yet learned that same lesson.  So things may take a little bit longer.  So let me open up the floor to questions."
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 513.88,
+            "end": 523.0400000000001,
+            "text": " Yes.  So the mapping that you did to concepts,  is that within the partner system  or is that something publicly available  and can you just transfer that to the VA"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 523.0400000000001,
+            "end": 534.32,
+            "text": " or when you do work like that,  how much is proprietary and how much gets expanded out?  Yeah, so you're speaking about  when we were trying to create that term list  and we mapped the terms to the concepts."
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 534.32,
+            "end": 546.94,
+            "text": " And you're using Wikipedia and three other sources.  Yeah, yeah.  So that's all out there.  So as a academic group, we try to publish everything we do.  We put our codes up on GitHub or CRAN"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 546.94,
+            "end": 562.62,
+            "text": " for other people to play out and test and break.  So yeah, the terms are really similar.  In UMLS, I don't know if you had a chance to look through it,  they have a lot of keywords.  So there is a general way to map keywords"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 562.62,
+            "end": 571.02,
+            "text": " to terms to concepts.  So that's the basis of what we do.  There may be a little bit more there,  but there's nothing fancy behind it.  And as you can imagine,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 571.02,
+            "end": 587.78,
+            "text": " because we're trying to go across many phenotypes,  when we think about mapping, it always has to be automated.  Our first round was very manual, incredibly manual.  But now we try to use systems that are available,  such as UMLS and other mapping methods."
+        },
+        {
+            "number": "lec7",
+            "title": "part.005.mp3",
+            "start": 587.78,
+            "end": 598.92,
+            "text": " So what map, presumably you don't use high tech today.  No, yeah.  So which tools do you use?  Interesting, I had a two hour conversation  with Oak Ridge about this."
+        }
+    ],
+    "text": " that are important for a certain condition. You can imagine if you get five doctors in a room to try to agree on a list, it takes forever. And so we tried to get that out of the way. So one thing we started doing was we took just common things that are freely available on the web, Wikipedia, Medline, the Merck Manual, that have medical information, and we actually now process those articles, look for medical terms, pull those out, map them to concepts, and that becomes that term list. Now, that goes into, so now instead of, if you think about in the old days, we came up with a list, we had ICD lists and term lists, which got mapped to a concept. Now we go straight to the article, we kind of do majority voting with the articles. You take five articles, if three out of five mention it more than X amount of time, we say that could potentially be important. So that's the term list. Get the clinicians out of that step. And then we, well actually we don't train yet. So now instead of training right away in the gold standard labels, we train on a silver standard label. Mainly, most of the time we use the main ICD code, but sometimes we use the main NLP, CUI, because sometimes there is no code for the phenotype we're interested in. So that's kind of some of the steps that we've done to automate things a little bit more and formalize that pipeline. So in fact, the pipeline is now part of the Partners Biobank, which is a Partners Healthcare, as Pete mentioned, is Mass General in Brigham Women's Hospital. They are recruiting patients to come in and get the blood sample, link it with their notes so people can do research on linked EHR data and blood samples. So this is the pipeline they use for phenotyping. Now I'm over at the Boston VA along with Tianxi, and this is the pipeline we're laying down for also the Million Veterans Program, which is even bigger. It's a million vets, and they have EHR data going back decades. So it's pretty exciting. So what are the kinds of, I mean, this study that we were talking about today was for rheumatoid arthritis, but what other diseases are being targeted by this phenotyping approach? So all kinds of diseases. So whoever, so what, there's a lot of things we learned, though. The phenotyping approach is best suited, the pipeline that we, the base pipeline, is best suited for conditions that have a prevalence of 1% or higher. So rheumatoid arthritis is kind of at that lower bound. Rheumatoid arthritis is a chronic inflammatory joint disease affects 1% of the population, but it is the most common autoimmune joint disease. Once you go to rare diseases that are episodic, that don't happen frequently, not only is it below 1%, but only happens once in a while, this type of approach is not as robust. But most diseases are above 1%. So at the VA, we've kind of laid down this pipeline for a phenomics core, and they're running through acute stroke, myocardial infarction, all kinds of these diabetes, just really a lot of all the common diseases that we want to study. Now, you were mentioning that when you identify such a patient, you then try to get a blood sample so that you can do genotyping on them. Is that also common across all these diseases, or are there different approaches? Yeah, so it's interesting, back 10 years ago, it was very different. It was very expensive to genotype a patient. So it was anywhere between $500 to $700 per patient. And that was just for single nucleotide polymorphisms? Yes, just for a SNP. So we had to be very careful about who we selected. So 10 years ago, what we did is we said, okay, we have 4 million patients and partners, who has RA with good certainty? Then we select those patients, and we genotype them because it costs so much. You didn't want to genotype someone who didn't have RA. Not only would it alter the, or reduce the power of our association study, it would just be like wasted dollars. The interesting now, the change has happened, and we completely think of a different way of approaching things is now you have these biobanks. You have something like the VA MVP or UK Biobank. They're being systematically recruited. Blood samples are taken, they're genotyped with no study in mind, linked with the EHR. So now I walk into the VA. It's a completely different story. 10 years later, I'm at the VA, and I'm interested in identifying rheumatoid arthritis. Interesting enough, this algorithm ports well over there too but now we just, we tested our new method on there. But now instead of saying I need to identify these patients and get the genotype, all the genotypes are already there. So it's a completely different approach to research now. Yep, interesting. So the other question I wanted to ask you before we turn it over to questions from the audience is so this is all focused on research uses of the data. Are there clinical uses that people have adopted that use this kind of approach to trying to read the note? We had fantasized decades ago that when you get a report from a pathologist that somehow or other machine learning algorithm using natural language processing would grovel over it, identify the important things that came out, and then either incorporate that in decision support or in some kind of warning systems that drew people's attention to the important results as opposed to the unimportant ones. Has any of that happened? I think we're not there yet, but I feel like we're so much closer than we were before. But you asked me how you felt a few decades ago. One of the challenges is, as you know, EHRs actually weren't really widely adopted until the HITECH Act in 2010. So a lot of systems are actually now just getting the EHR. And the reason that we've had the luxury of playing around with the data is because Partners was ahead of the curve and had developed an EHR. The VA happened to have an EHR. But I think first, because research and clinical medicine is very different. Research, if you mess up and you misclassify someone with a disease, it's okay, right? You just lose power in your study. But in the clinical setting, if you mess up, it's a really big deal. So I think the bar is much higher. And so what we're doing, one of our goals with all this phenotyping is to get it to that point where we feel pretty confident. We're not gonna say someone has or hasn't a disease, but we are, actually Tianqi and I are thinking, have been planning this grant where what's outputted from this algorithm is a probability of disease. And for some of our phenotype algorithms, they're pretty good. And so what we wanna test is whether what threshold is that probability that you would wanna tell a clinician that hey, if you're not thinking about rheumatoid arthritis in this patient, this is particularly helpful in places where they're in remote locations, where there aren't rheumatologists available, you should be thinking about it and maybe considering referring them or speaking to a rheumatologist through telehealth, which is also something. There's a lot of things that are changing that are making something like this fit much more into the workflow. Yeah. So you're as optimistic as I was in the 1990s. I think we're getting, we'll see. Well, it will surely happen at some point. Did any of you go to the festivities around the opening of the Schwarzman College of Computing? So they've had a lot of discussions and healthcare does keep coming up over and over again as one of the great opportunities and I profoundly believe that. But on the other hand, I've learned over many decades not to be quite as optimistic as my natural proclivities are. And I think some of the speakers here have not yet learned that same lesson. So things may take a little bit longer. So let me open up the floor to questions. Yes. So the mapping that you did to concepts, is that within the partner system or is that something publicly available and can you just transfer that to the VA or when you do work like that, how much is proprietary and how much gets expanded out? Yeah, so you're speaking about when we were trying to create that term list and we mapped the terms to the concepts. And you're using Wikipedia and three other sources. Yeah, yeah. So that's all out there. So as a academic group, we try to publish everything we do. We put our codes up on GitHub or CRAN for other people to play out and test and break. So yeah, the terms are really similar. In UMLS, I don't know if you had a chance to look through it, they have a lot of keywords. So there is a general way to map keywords to terms to concepts. So that's the basis of what we do. There may be a little bit more there, but there's nothing fancy behind it. And as you can imagine, because we're trying to go across many phenotypes, when we think about mapping, it always has to be automated. Our first round was very manual, incredibly manual. But now we try to use systems that are available, such as UMLS and other mapping methods. So what map, presumably you don't use high tech today. No, yeah. So which tools do you use? Interesting, I had a two hour conversation with Oak Ridge about this."
+}

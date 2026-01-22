@@ -1,0 +1,250 @@
+{
+    "chunks": [
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 0.0,
+            "end": 20.400000000000002,
+            "text": " prediction.  So the AUC for this model was only on the order of 0.7.  So it's not like 0.99.  But nevertheless, it provides useful information.  The same group of psychiatrists that we worked with"
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 20.400000000000002,
+            "end": 39.36,
+            "text": " also did a study with a much larger cohort,  but much less rich data.  So they got all of the discharges  from two medical centers over a period of 12 years.  So they had 845,000 discharges from 458,000 unique"
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 39.36,
+            "end": 52.879999999999995,
+            "text": " individuals.  And they were looking for suicide or other causes  of death in these patients to see  if they could predict whether somebody is likely to try  to harm themselves or whether they're"
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 52.88,
+            "end": 67.8,
+            "text": " likely to die accidentally, which sometimes can't  be distinguished from suicide.  So the censoring problems that David talked about  are very much present in this because you  lose track of people."
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 67.8,
+            "end": 84.36,
+            "text": " It's a highly imbalanced data set  because out of the 845,000 patients,  only 235 committed suicide, which is, of course,  probably a good thing from a societal point of view,  but makes the data analysis hard."
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 84.36,
+            "end": 101.03999999999999,
+            "text": " On the other hand, all-cause mortality  was about 18% during nine years of follow-up.  So that's not so imbalanced.  And then what they did is they curated a list of 3,000 terms  that correspond to what, in the psychiatric literature,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 101.03999999999999,
+            "end": 118.76,
+            "text": " is called positive valence.  So this is concepts like joy and happiness and good stuff,  as opposed to negative valence like depression and sorrow  and all that stuff.  And they said, well, we can use these types of terms"
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 118.76,
+            "end": 139.04000000000002,
+            "text": " in order to help distinguish among these patients.  And what they found is that if you plot the Kaplan-Meier  curve for different quartiles of risk for these patients,  you see that there's a pretty big difference  between the different quartiles."
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 139.04,
+            "end": 156.68,
+            "text": " And you can certainly identify the people  who are more likely to commit suicide  from the people who are less likely to do so.  This curve is for suicide or accidental death.  So this is a much larger data set."
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 156.68,
+            "end": 172.92000000000002,
+            "text": " And therefore, the error bars are smaller.  But you see the same kind of separation here.  So these are all useful techniques.  Now, switch to another approach.  This was work by one of my students, Yuan Luo,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 172.92000000000002,
+            "end": 190.36,
+            "text": " who was working with some lymphoma pathologists  at Mass General.  And so the approach they took was to say, well,  if you read a pathology report about somebody with lymphoma,  can we tell what type of lymphoma"
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 190.36,
+            "end": 208.88,
+            "text": " they had from the pathology report  if we blank out the part of the pathology report that  says, I, the pathologist, think this person has non-Hodgkin's  lymphoma or something?  So from the rest of the context, can we make that prediction?"
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 208.88,
+            "end": 225.14,
+            "text": " Now, Yuan took a kind of interesting, slightly odd  approach to it, which is to treat this  as an unsupervised learning problem  rather than as a supervised learning problem.  So he literally masked the real answer"
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 225.14,
+            "end": 245.22,
+            "text": " and said, if we just treat everything  except what gives away the answer as just data,  can we essentially cluster that data in some interesting way  so that we re-identify the different types of lymphoma?  Now, the reason this turns out to be important"
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 245.22,
+            "end": 259.3,
+            "text": " is because lymphoma pathologists keep arguing  about how to classify lymphomas.  And every few years, they revise the classification  rules.  And so part of his objective was to say,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 259.3,
+            "end": 281.3,
+            "text": " let's try to provide an unbiased data-driven method that  may help identify appropriate characteristics by which  to classify these different lymphomas.  So his approach was a tensor factorization approach.  So this is, you know, you often see"
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 281.3,
+            "end": 294.18,
+            "text": " data sets like this that say, you know,  patient by characteristic.  So in this case, laboratory measurements.  So systolic, diastolic, blood pressure, sodium, potassium,  et cetera."
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 294.18,
+            "end": 309.65999999999997,
+            "text": " That's a very vanilla matrix encoding of data.  And then if you add a third dimension to it,  like this is at the time of admission, 30 minutes later,  60 minutes later, 90 minutes later,  now you have a three-dimensional tensor."
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 309.65999999999997,
+            "end": 331.62,
+            "text": " And so just like you can do matrix factorization,  as in the picture above, where we say, my matrix of data,  I'm going to assume is generated by a product of two matrices  which are smaller in dimension.  And you can train this by saying,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 331.62,
+            "end": 349.02,
+            "text": " I want entries in these two matrices that  minimize the reconstruction error.  So if I multiply these matrices together,  then I get back my original matrix plus error.  And I want to minimize that error, usually"
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 349.02,
+            "end": 378.06,
+            "text": " root mean square or mean square error or something like that.  Well, you can play the same game for a tensor  by having a so-called core tensor, which  identifies the subset of characteristics that subdivide  that dimension of your data."
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 378.06,
+            "end": 397.74,
+            "text": " And then what you do is the same game.  You have matrices corresponding to each of the dimensions.  And if you multiply this core tensor  by each of these matrices, you reconstruct the original tensor.  And you can train it again to minimize the reconstruction"
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 397.74,
+            "end": 412.66,
+            "text": " loss.  So there are, again, a few more tricks,  because this is dealing with language.  And so this is a typical report from one  of these lymphoma pathologists that"
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 412.66,
+            "end": 428.78000000000003,
+            "text": " says immunohistochemical stains show that the follicles,  blah, blah, blah, blah, blah.  So lots and lots of details.  And so he needed a representation  that could be put into this matrix tensor,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 428.78000000000003,
+            "end": 450.09999999999997,
+            "text": " this tensor factorization form.  And what he did is to say, well, let's see.  If we look at a statement like this,  immunostains show that large atypical cells are strongly  positive for CD30, negative for these other surface"
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 450.09999999999997,
+            "end": 463.02,
+            "text": " expressions.  So the sentence tells us relationships  among procedures, types of cells,  and immunologic factors.  And for feature choice, we can use words,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 463.02,
+            "end": 481.78000000000003,
+            "text": " or we can use UMLS concepts, or we can  find various kinds of mappings.  But he decided that in order to retain  the syntactic relationships here, what he would do  is to use a graphical representation that"
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 481.78000000000003,
+            "end": 504.46000000000004,
+            "text": " came out of, again, parsing all of these sentences.  And so what you get is that this creates  one graph that talks about the strongly positive for CD30,  large atypical cells, et cetera.  And then you can factor this into subgraphs."
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 504.46000000000004,
+            "end": 518.22,
+            "text": " And then you also have to identify frequently occurring  subgraphs.  So for example, large atypical cells appears here  and also appears there, and of course,  will appear in many other places."
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 518.22,
+            "end": 525.62,
+            "text": " Yeah?  AUDIENCE 2 Is this parsing domain and language  agnostic?  For example, did they incorporate  some sort of medical information here"
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 525.62,
+            "end": 543.62,
+            "text": " or some sort of linguistic?  So in this particular study, he was using the Stanford parser  with some tricks.  So the Stanford parser doesn't know a lot of the medical words.  And so he basically marked these things as noun phrases."
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 543.62,
+            "end": 564.86,
+            "text": " And then the Stanford parser also  doesn't do well with long lists like the set of immune features.  So he would recognize those as a pattern,  substitute a single made-up word for them.  And that made the parser work much better on it."
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 564.86,
+            "end": 577.9000000000001,
+            "text": " So there were a whole bunch of little tricks  like that in order to adapt it.  But it was not a model trained specifically on this.  I think it's trained on Wall Street Journal, Corpus,  or something like that."
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 577.9000000000001,
+            "end": 590.22,
+            "text": " So it's general English.  Those are things that he did manually as opposed to, say,  algorithmically.  No, he did it algorithmically.  But he didn't learn which algorithms to use."
+        },
+        {
+            "number": "lec8",
+            "title": "part.002.mp3",
+            "start": 590.22,
+            "end": 601.1800000000001,
+            "text": " He made them up by hand.  But then, of course, it's a big corpus.  And he ran these programs over it  that did those transformations.  So he calls it two-phase."
+        }
+    ],
+    "text": " prediction. So the AUC for this model was only on the order of 0.7. So it's not like 0.99. But nevertheless, it provides useful information. The same group of psychiatrists that we worked with also did a study with a much larger cohort, but much less rich data. So they got all of the discharges from two medical centers over a period of 12 years. So they had 845,000 discharges from 458,000 unique individuals. And they were looking for suicide or other causes of death in these patients to see if they could predict whether somebody is likely to try to harm themselves or whether they're likely to die accidentally, which sometimes can't be distinguished from suicide. So the censoring problems that David talked about are very much present in this because you lose track of people. It's a highly imbalanced data set because out of the 845,000 patients, only 235 committed suicide, which is, of course, probably a good thing from a societal point of view, but makes the data analysis hard. On the other hand, all-cause mortality was about 18% during nine years of follow-up. So that's not so imbalanced. And then what they did is they curated a list of 3,000 terms that correspond to what, in the psychiatric literature, is called positive valence. So this is concepts like joy and happiness and good stuff, as opposed to negative valence like depression and sorrow and all that stuff. And they said, well, we can use these types of terms in order to help distinguish among these patients. And what they found is that if you plot the Kaplan-Meier curve for different quartiles of risk for these patients, you see that there's a pretty big difference between the different quartiles. And you can certainly identify the people who are more likely to commit suicide from the people who are less likely to do so. This curve is for suicide or accidental death. So this is a much larger data set. And therefore, the error bars are smaller. But you see the same kind of separation here. So these are all useful techniques. Now, switch to another approach. This was work by one of my students, Yuan Luo, who was working with some lymphoma pathologists at Mass General. And so the approach they took was to say, well, if you read a pathology report about somebody with lymphoma, can we tell what type of lymphoma they had from the pathology report if we blank out the part of the pathology report that says, I, the pathologist, think this person has non-Hodgkin's lymphoma or something? So from the rest of the context, can we make that prediction? Now, Yuan took a kind of interesting, slightly odd approach to it, which is to treat this as an unsupervised learning problem rather than as a supervised learning problem. So he literally masked the real answer and said, if we just treat everything except what gives away the answer as just data, can we essentially cluster that data in some interesting way so that we re-identify the different types of lymphoma? Now, the reason this turns out to be important is because lymphoma pathologists keep arguing about how to classify lymphomas. And every few years, they revise the classification rules. And so part of his objective was to say, let's try to provide an unbiased data-driven method that may help identify appropriate characteristics by which to classify these different lymphomas. So his approach was a tensor factorization approach. So this is, you know, you often see data sets like this that say, you know, patient by characteristic. So in this case, laboratory measurements. So systolic, diastolic, blood pressure, sodium, potassium, et cetera. That's a very vanilla matrix encoding of data. And then if you add a third dimension to it, like this is at the time of admission, 30 minutes later, 60 minutes later, 90 minutes later, now you have a three-dimensional tensor. And so just like you can do matrix factorization, as in the picture above, where we say, my matrix of data, I'm going to assume is generated by a product of two matrices which are smaller in dimension. And you can train this by saying, I want entries in these two matrices that minimize the reconstruction error. So if I multiply these matrices together, then I get back my original matrix plus error. And I want to minimize that error, usually root mean square or mean square error or something like that. Well, you can play the same game for a tensor by having a so-called core tensor, which identifies the subset of characteristics that subdivide that dimension of your data. And then what you do is the same game. You have matrices corresponding to each of the dimensions. And if you multiply this core tensor by each of these matrices, you reconstruct the original tensor. And you can train it again to minimize the reconstruction loss. So there are, again, a few more tricks, because this is dealing with language. And so this is a typical report from one of these lymphoma pathologists that says immunohistochemical stains show that the follicles, blah, blah, blah, blah, blah. So lots and lots of details. And so he needed a representation that could be put into this matrix tensor, this tensor factorization form. And what he did is to say, well, let's see. If we look at a statement like this, immunostains show that large atypical cells are strongly positive for CD30, negative for these other surface expressions. So the sentence tells us relationships among procedures, types of cells, and immunologic factors. And for feature choice, we can use words, or we can use UMLS concepts, or we can find various kinds of mappings. But he decided that in order to retain the syntactic relationships here, what he would do is to use a graphical representation that came out of, again, parsing all of these sentences. And so what you get is that this creates one graph that talks about the strongly positive for CD30, large atypical cells, et cetera. And then you can factor this into subgraphs. And then you also have to identify frequently occurring subgraphs. So for example, large atypical cells appears here and also appears there, and of course, will appear in many other places. Yeah? AUDIENCE 2 Is this parsing domain and language agnostic? For example, did they incorporate some sort of medical information here or some sort of linguistic? So in this particular study, he was using the Stanford parser with some tricks. So the Stanford parser doesn't know a lot of the medical words. And so he basically marked these things as noun phrases. And then the Stanford parser also doesn't do well with long lists like the set of immune features. So he would recognize those as a pattern, substitute a single made-up word for them. And that made the parser work much better on it. So there were a whole bunch of little tricks like that in order to adapt it. But it was not a model trained specifically on this. I think it's trained on Wall Street Journal, Corpus, or something like that. So it's general English. Those are things that he did manually as opposed to, say, algorithmically. No, he did it algorithmically. But he didn't learn which algorithms to use. He made them up by hand. But then, of course, it's a big corpus. And he ran these programs over it that did those transformations. So he calls it two-phase."
+}

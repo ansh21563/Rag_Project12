@@ -1,0 +1,40 @@
+{
+    "chunks": [
+        {
+            "number": "lec13",
+            "title": "part.004.mp3",
+            "start": 0.0,
+            "end": 15.0,
+            "text": " is less standard within the inside of their infrastructure.  And kind of looking up how to actually do these things in C Sharp,  whatever language they have, has been really what's enabled us to unblock these things  and actually plug it in.  And that is it for my part."
+        },
+        {
+            "number": "lec13",
+            "title": "part.004.mp3",
+            "start": 15.0,
+            "end": 31.0,
+            "text": " So I'm going to hand it back over. Oh, yes?  So you're writing stuff in the IT application in C Sharp to do API requests?  So they're writing it. I just meet them to tell them how to write it.  Yes.  So in general, there's libraries."
+        },
+        {
+            "number": "lec13",
+            "title": "part.004.mp3",
+            "start": 31.0,
+            "end": 48.0,
+            "text": " So the entire environment is in Windows.  And Windows has very poor support for lots of things you would expect it to have good support for.  So there was like, if you wanted to send a request with a multi-part form  and just put images in that form,  apparently that has bugs in it and Windows, whatever version they use today."
+        },
+        {
+            "number": "lec13",
+            "title": "part.004.mp3",
+            "start": 48.0,
+            "end": 59.0,
+            "text": " And so that vanilla version just didn't work.  Windows for Docker also has bugs.  And I had set up this kind of locking function  for them to automatically tail the locks inside the container.  And it just doesn't work in Windows for Docker."
+        },
+        {
+            "number": "lec13",
+            "title": "part.004.mp3",
+            "start": 59.0,
+            "end": 67.0,
+            "text": " I guess we're running out of questions. We're running out of time.  Yes. So we can get to this at the end.  I want to hand off the content.  If you have any questions, grab me after."
+        }
+    ],
+    "text": " is less standard within the inside of their infrastructure. And kind of looking up how to actually do these things in C Sharp, whatever language they have, has been really what's enabled us to unblock these things and actually plug it in. And that is it for my part. So I'm going to hand it back over. Oh, yes? So you're writing stuff in the IT application in C Sharp to do API requests? So they're writing it. I just meet them to tell them how to write it. Yes. So in general, there's libraries. So the entire environment is in Windows. And Windows has very poor support for lots of things you would expect it to have good support for. So there was like, if you wanted to send a request with a multi-part form and just put images in that form, apparently that has bugs in it and Windows, whatever version they use today. And so that vanilla version just didn't work. Windows for Docker also has bugs. And I had set up this kind of locking function for them to automatically tail the locks inside the container. And it just doesn't work in Windows for Docker. I guess we're running out of questions. We're running out of time. Yes. So we can get to this at the end. I want to hand off the content. If you have any questions, grab me after."
+}

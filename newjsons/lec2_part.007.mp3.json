@@ -1,0 +1,257 @@
+{
+    "chunks": [
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 0.0,
+            "end": 19.080000000000002,
+            "text": " We're getting a lifespan of somewhere in the high 70s.  So this is 2015 data.  Whereas in Switzerland, they're spending about 6,000,  so about 2 thirds.  And they're getting 83 years or something of life"
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 19.080000000000002,
+            "end": 32.44,
+            "text": " for the same price, and so on for all  these different countries.  By the way, this is all from Gapminder,  which is a wonderful data visualization tool.  And I don't have time to show you,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 32.44,
+            "end": 52.239999999999995,
+            "text": " but you can click on individual lines  there and slide the slider about what era you're talking about.  And the data moves, and it's beautiful,  and it's a wonderful way of understanding it.  So there's an important thing to remember,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 52.239999999999995,
+            "end": 67.36,
+            "text": " which was taught to me by my friend Chris  Deedy at the Harvard Education School.  And that is that it's not even good enough to stand still.  So he suggested the following scenario.  If you look at the growth of productivity"
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 67.36,
+            "end": 89.33999999999999,
+            "text": " over this period of 10 years by industry,  you discover that productivity went up by 7 point something  percent for durable goods and went down by something  like 2% for mining, about 1% for construction.  Information technologies grew by 5 and 1"
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 89.33999999999999,
+            "end": 105.72,
+            "text": " half percent or something.  So if you ask the question, what happens  if the demand for these goods remains  constant over a period of time?  And what you discover is that because the more productive"
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 105.72,
+            "end": 122.24,
+            "text": " things become cheaper, they wind up  occupying a smaller fraction of the total amount of money  that's being spent.  So your computer, your laptop, is a lot cheaper today  than it was 30 years ago."
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 122.24,
+            "end": 142.0,
+            "text": " And so that means that the amount of spending  that people do on things like information technology,  at least per item, is much lower than it used to be.  And if in the aggregate it's also lower than it used to be,  that means that something else must be higher,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 142.0,
+            "end": 160.88,
+            "text": " because it sums to 100%.  And so what this shows is that if you  spend 30 years at the same rates of productivity growth,  mining grows from whatever fraction of the economy  it was to something that's about three times as big a fraction."
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 164.45999999999998,
+            "end": 182.92000000000002,
+            "text": " And if productivity growth is better,  then that sector of the economy shrinks.  So I think something like this is happening in health care,  which is that there is infinite demand,  and health care is not terribly productive."
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 182.92000000000002,
+            "end": 200.12,
+            "text": " We're not getting better as fast as electronics  is getting better, for example.  So people have tried doing various things.  Managed care was the buzzword of the 1980s and 90s.  And they said, well, what we're going to do"
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 200.16,
+            "end": 216.16,
+            "text": " is to prevent people from overusing medical services  by requiring pre-admission review, continued stay review,  second surgical opinion.  We're going to have post-care management, where  if you're released from the hospital"
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 216.16,
+            "end": 229.88,
+            "text": " and you're in that second of the cycles,  people will call you at home and try to help you out and make  sure that you're doing whatever is best to keep you out  of the hospital.  And we're going to try various experiments,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 230.12,
+            "end": 250.28,
+            "text": " like institutional arrangements that say, well,  if I, as a doctor, agree to refer all my patients  to Mass General rather than to the Brigham or the BI,  they'll pay me extra.  And they'll get some kind of efficiencies from aggregation."
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 250.28,
+            "end": 265.8,
+            "text": " And so maybe that's one way of controlling costs.  So leakage is the idea of keeping people in system.  And capitation is an interesting idea,  which says that instead of paying  for what the hospital does for me"
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 265.8,
+            "end": 281.3,
+            "text": " or what the doctor does for me, we simply  pay him a flat fee for the year to take care of me.  And that takes away the incentive  for him to do more and more and more to get paid more.  But of course, it gives him an incentive"
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 281.3,
+            "end": 293.2,
+            "text": " to do less and less and less so that he doesn't  have to spend as much money.  And so it's sort of a knife balance  to figure out how to do this.  But that's an important component."
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 293.2,
+            "end": 311.23999999999995,
+            "text": " So if you look at the evaluation of managed care a long time  ago, what they said was it helped reduce inpatient costs  by increasing outpatient costs.  So what it's done is it's pushed people  from going to the hospital into going to their doctor's office."
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 311.23999999999995,
+            "end": 327.96,
+            "text": " But it's been pretty much a wash in terms of overall spending.  The doctors also hated managed care.  I was sitting with one of my colleagues  at a Boston hospital.  And an insurance company clerk called him"
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 327.96,
+            "end": 341.76,
+            "text": " to dun him for having ordered a certain test on a heart  patient.  And so he was furious.  And he turns to her and says, so which medical school  do you have your diploma from?"
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 341.76,
+            "end": 358.56,
+            "text": " And of course, she doesn't have a medical degree.  She's following some rules on a sheet  about how to harass doctors not to order expensive tests.  And so we have Edward Anis, the past president of the AMA,  who says, well, in the glory days,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 358.56,
+            "end": 368.36,
+            "text": " there was no bureaucratic regimentation, no forms,  no blah, blah, blah.  And all my patients were happy.  And I was happy.  And things were ideal."
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 368.36,
+            "end": 382.16,
+            "text": " If you actually look back at those days,  it wasn't as good as he cracks it up to be.  And some of those issues of disparity  that we were talking about were horrible.  So for his patients who were rich"
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 382.16,
+            "end": 406.44,
+            "text": " and who could afford to see him, life was pretty good,  but not so much for underserved populations.  So you've seen Obamacare come and partly go  and continues to be controversial.  But it's trying to foster better information technology"
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 406.44,
+            "end": 423.4,
+            "text": " as a basis for getting doctors to make better decisions.  It's trying to foster these accountable care  organizations, which is a version of capitation,  to put the pressure on to reduce the amount of health services  that people are asking for."
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 423.4,
+            "end": 444.12,
+            "text": " There is a hospital readmission reduction program  now that says if you are a Medicare patient, for example,  and you're discharged from the hospital  and you're readmitted within 30 days of your discharge,  then they're going to done you and not pay you"
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 444.12,
+            "end": 459.2,
+            "text": " for that readmission or not pay you  for part of that readmission.  But if you look at the statistics, which I just did,  that's the distribution of the payment adjustment factors.  So it turns out the lowest number is 97%."
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 459.2,
+            "end": 473.2,
+            "text": " So a 3% decrease in reimbursement  is something that the CFO of your hospital  would really care about.  But it's not like a 25% reduction in reimbursement.  So this has had a fairly minor effect."
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 476.79999999999995,
+            "end": 498.0,
+            "text": " Let me just finish by saying that money determines much.  From our point of view, one of the problems we face  is that IT traditionally gets about 1% to 2%  of spending in medical centers, whereas it  gets about 6% or 7% in business overall and about 10% to 12%"
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 498.0,
+            "end": 515.38,
+            "text": " for banking.  And a lot of these systems are managed by accountants,  although that is slowly changing.  So in the 1990s, HST with Harvard  started a training program for medical doctors"
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 515.38,
+            "end": 530.34,
+            "text": " to become medical informaticians,  so practicing this sort of witchcraft.  And our first two graduates, one of them  is now CIO at the Beth Israel Deaconess.  The second one is CIO at Children's Hospital."
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 530.34,
+            "end": 545.14,
+            "text": " And so one of my big successes personally  has been to displace some accountants  by doctors who actually understand this technology  to some extent.  OK, I think that's all I'm going to say."
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 545.14,
+            "end": 559.46,
+            "text": " There's a funny last slide here, which  has a pointer that I would want you to remember.  The slides will be up on our website.  You can follow it.  MIT has a program called GEMS."
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 559.46,
+            "end": 576.22,
+            "text": " It's the General Education in Medical Sciences,  intended as a minor program for people in the PhD  program in some other field.  And if you're serious about really concentrating  on health care, developing at least"
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 576.22,
+            "end": 589.5400000000001,
+            "text": " the kind of understanding of the health care process  that I've tried to give you today  and that would allow you to play a doctor on television  is really important.  And there is a program that helps you achieve that,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.007.mp3",
+            "start": 589.5400000000001,
+            "end": 602.02,
+            "text": " which I commend to people.  OK, see you next week.  Thank you."
+        }
+    ],
+    "text": " We're getting a lifespan of somewhere in the high 70s. So this is 2015 data. Whereas in Switzerland, they're spending about 6,000, so about 2 thirds. And they're getting 83 years or something of life for the same price, and so on for all these different countries. By the way, this is all from Gapminder, which is a wonderful data visualization tool. And I don't have time to show you, but you can click on individual lines there and slide the slider about what era you're talking about. And the data moves, and it's beautiful, and it's a wonderful way of understanding it. So there's an important thing to remember, which was taught to me by my friend Chris Deedy at the Harvard Education School. And that is that it's not even good enough to stand still. So he suggested the following scenario. If you look at the growth of productivity over this period of 10 years by industry, you discover that productivity went up by 7 point something percent for durable goods and went down by something like 2% for mining, about 1% for construction. Information technologies grew by 5 and 1 half percent or something. So if you ask the question, what happens if the demand for these goods remains constant over a period of time? And what you discover is that because the more productive things become cheaper, they wind up occupying a smaller fraction of the total amount of money that's being spent. So your computer, your laptop, is a lot cheaper today than it was 30 years ago. And so that means that the amount of spending that people do on things like information technology, at least per item, is much lower than it used to be. And if in the aggregate it's also lower than it used to be, that means that something else must be higher, because it sums to 100%. And so what this shows is that if you spend 30 years at the same rates of productivity growth, mining grows from whatever fraction of the economy it was to something that's about three times as big a fraction. And if productivity growth is better, then that sector of the economy shrinks. So I think something like this is happening in health care, which is that there is infinite demand, and health care is not terribly productive. We're not getting better as fast as electronics is getting better, for example. So people have tried doing various things. Managed care was the buzzword of the 1980s and 90s. And they said, well, what we're going to do is to prevent people from overusing medical services by requiring pre-admission review, continued stay review, second surgical opinion. We're going to have post-care management, where if you're released from the hospital and you're in that second of the cycles, people will call you at home and try to help you out and make sure that you're doing whatever is best to keep you out of the hospital. And we're going to try various experiments, like institutional arrangements that say, well, if I, as a doctor, agree to refer all my patients to Mass General rather than to the Brigham or the BI, they'll pay me extra. And they'll get some kind of efficiencies from aggregation. And so maybe that's one way of controlling costs. So leakage is the idea of keeping people in system. And capitation is an interesting idea, which says that instead of paying for what the hospital does for me or what the doctor does for me, we simply pay him a flat fee for the year to take care of me. And that takes away the incentive for him to do more and more and more to get paid more. But of course, it gives him an incentive to do less and less and less so that he doesn't have to spend as much money. And so it's sort of a knife balance to figure out how to do this. But that's an important component. So if you look at the evaluation of managed care a long time ago, what they said was it helped reduce inpatient costs by increasing outpatient costs. So what it's done is it's pushed people from going to the hospital into going to their doctor's office. But it's been pretty much a wash in terms of overall spending. The doctors also hated managed care. I was sitting with one of my colleagues at a Boston hospital. And an insurance company clerk called him to dun him for having ordered a certain test on a heart patient. And so he was furious. And he turns to her and says, so which medical school do you have your diploma from? And of course, she doesn't have a medical degree. She's following some rules on a sheet about how to harass doctors not to order expensive tests. And so we have Edward Anis, the past president of the AMA, who says, well, in the glory days, there was no bureaucratic regimentation, no forms, no blah, blah, blah. And all my patients were happy. And I was happy. And things were ideal. If you actually look back at those days, it wasn't as good as he cracks it up to be. And some of those issues of disparity that we were talking about were horrible. So for his patients who were rich and who could afford to see him, life was pretty good, but not so much for underserved populations. So you've seen Obamacare come and partly go and continues to be controversial. But it's trying to foster better information technology as a basis for getting doctors to make better decisions. It's trying to foster these accountable care organizations, which is a version of capitation, to put the pressure on to reduce the amount of health services that people are asking for. There is a hospital readmission reduction program now that says if you are a Medicare patient, for example, and you're discharged from the hospital and you're readmitted within 30 days of your discharge, then they're going to done you and not pay you for that readmission or not pay you for part of that readmission. But if you look at the statistics, which I just did, that's the distribution of the payment adjustment factors. So it turns out the lowest number is 97%. So a 3% decrease in reimbursement is something that the CFO of your hospital would really care about. But it's not like a 25% reduction in reimbursement. So this has had a fairly minor effect. Let me just finish by saying that money determines much. From our point of view, one of the problems we face is that IT traditionally gets about 1% to 2% of spending in medical centers, whereas it gets about 6% or 7% in business overall and about 10% to 12% for banking. And a lot of these systems are managed by accountants, although that is slowly changing. So in the 1990s, HST with Harvard started a training program for medical doctors to become medical informaticians, so practicing this sort of witchcraft. And our first two graduates, one of them is now CIO at the Beth Israel Deaconess. The second one is CIO at Children's Hospital. And so one of my big successes personally has been to displace some accountants by doctors who actually understand this technology to some extent. OK, I think that's all I'm going to say. There's a funny last slide here, which has a pointer that I would want you to remember. The slides will be up on our website. You can follow it. MIT has a program called GEMS. It's the General Education in Medical Sciences, intended as a minor program for people in the PhD program in some other field. And if you're serious about really concentrating on health care, developing at least the kind of understanding of the health care process that I've tried to give you today and that would allow you to play a doctor on television is really important. And there is a program that helps you achieve that, which I commend to people. OK, see you next week. Thank you."
+}

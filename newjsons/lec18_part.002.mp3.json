@@ -1,0 +1,292 @@
+{
+    "chunks": [
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 0.0,
+            "end": 20.46,
+            "text": " So we can now go back in time to lecture three  and ask, well, how could we predict  these different things?  So what are some approaches that you might try?  Why don't you talk to your neighbor for a second,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 20.46,
+            "end": 34.7,
+            "text": " and then I'll call in a random person.  OK, that's enough.  My question was sufficiently underdefined  that if you talk longer, who knows  what you'll be talking about."
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 37.38,
+            "end": 49.08,
+            "text": " Over here, the two of you.  The person with the computer, yeah.  How would you tackle this problem?  No, no, no, over here.  Yeah, you."
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 49.08,
+            "end": 77.8,
+            "text": " I would just take, I guess, previous data,  and then, yeah, I guess any previous data  with records of this is correction over that class  data, and then predict on the new data.  Just to understand, would you learn five different models?"
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 77.8,
+            "end": 87.47999999999999,
+            "text": " So our goal is to get these.  Here, I'm showing you three, but it  might be five different numbers at different time points.  Would you learn one model to predict  what it would be at six months, another predict"
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 87.47999999999999,
+            "end": 99.9,
+            "text": " what it would be at 12 months?  Would you learn a single model?  Other ideas?  Somewhere over this part of the room.  Yeah, you."
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 103.8,
+            "end": 121.84,
+            "text": " Yeah, sure.  I know a multitask learning where  you learn five at the same time, and you also  use the four in the model class to guide each.  So use a multitask learning approach"
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 121.84,
+            "end": 137.92000000000002,
+            "text": " where you try to learn all five at a time and use what?  What was the other thing?  So you can learn to predict the status in six months,  and you also use that as your baseline  to test your own security."
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 137.92000000000002,
+            "end": 152.52,
+            "text": " That's a really interesting idea.  So the suggestion was, there are two different suggestions,  actually.  The first suggestion was do a multitask learning approach  where you attempt to learn, instead of five different"
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 152.52,
+            "end": 165.04000000000002,
+            "text": " independent models, try to learn them jointly together.  And in a second, we'll talk about why  it might make sense to do that.  The different thought was, well, is this really  the question you want to solve?"
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 165.04,
+            "end": 179.44,
+            "text": " For example, you might imagine settings  where you have the patient not at time zero,  but actually at six months.  And you might want to know what's going  to happen to them in the future."
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 179.44,
+            "end": 192.68,
+            "text": " And so you shouldn't just use the baseline information.  You should condition on the data you have available over time.  And a different way of thinking through that  is you could imagine learning a Markov model where you learn  something about the joint distribution of the disease"
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 192.68,
+            "end": 203.68,
+            "text": " stage over time.  And then you could, for example, even if you only  had baseline information available,  you could attempt to marginalize over the intermediate values  that are unobserved to infer what the later values might be."
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 206.32,
+            "end": 221.48000000000002,
+            "text": " Now, that Markov model approach, although we  will talk about it extensively in the next week or so,  it's actually not a very good approach for this problem.  And the reason why is because it increases the complexity.  So when you are learned, in essence,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 222.23999999999998,
+            "end": 232.04,
+            "text": " if you wanted to predict what's going on at 18 months,  and if as an intermediate step to predict  on what goes on at 18 months, you  have to predict what's going to go on at 12 months,  and then the likelihood of transitioning"
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 232.04,
+            "end": 244.44,
+            "text": " from 12 months to 18 months, you might incur error  in trying to predict what's going on at 12 months.  And that error is then going to propagate  as you attempt to think about the transition from 12  months to 18 months."
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 244.44,
+            "end": 253.58,
+            "text": " And that propagation of error, particularly when  you don't have much data, is going  to really hurt the programs of your machine learning  algorithm.  So the method I'll be talking about today is, in fact,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 253.58,
+            "end": 264.46,
+            "text": " going to be what I view as the simplest possible approach  to this problem.  And it's going to be a direct prediction approach.  So we're going to directly going to predict  each of the different time points independently."
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 264.46,
+            "end": 277.0,
+            "text": " But we will tie together the parameters of the model,  as I suggested, using a multitask learning approach.  And the reason why we're going to want  to use a multitask learning approach  is because of data sparsity."
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 277.0,
+            "end": 300.52,
+            "text": " So imagine the following situation.  Imagine that we had just binary indicators here.  So let's say patient is OK or they're not OK.  So the data might look like this, 0, 0, 1.  Then the data set you might have might look a little bit"
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 300.52,
+            "end": 314.47999999999996,
+            "text": " like this.  So now I'm going to show you the data.  And one row is one patient.  Different columns are different time points.  So the first patient, as I showed you before, is 0, 0, 1."
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 314.47999999999996,
+            "end": 344.3,
+            "text": " Second patient might be 0, 0, 0, 1, 0.  Third patient might be 1, 1, 1, 1.  Next patient might be 0, 1, 1, 1.  So if you look at the first time point here,  you'll notice that you have a really imbalanced data set."
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 344.3,
+            "end": 356.3,
+            "text": " There's only a single 1 in that first time point.  If you look at the second time point,  it's more of a balanced data set.  And in the third time point, again, you're  sort of back into that imbalanced setting."
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 356.3,
+            "end": 369.15999999999997,
+            "text": " What that means is that if you were  to try to learn from just one of these time points by itself,  particularly in a setting where you don't have that many data  points alone, that data sparsity and the outcome label  is going to really hurt you."
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 369.15999999999997,
+            "end": 382.59999999999997,
+            "text": " It's going to be very hard to learn any interesting signal  just from that time point alone.  The second problem is that the labels are also very noisy.  So not only might you have lots of imbalance,  but there might be noise in the actual characterizations."
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 382.59999999999997,
+            "end": 396.52,
+            "text": " Like for this patient, maybe with some probability,  you would calculate 1, 1, 1, 1.  With some other probability, you would observe 0, 1, 1, 1.  And it might correspond to some threshold in that score  I showed you earlier."
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 396.52,
+            "end": 407.14,
+            "text": " And just by chance, a patient on some day  passes the threshold.  On the next day, they might not pass that threshold.  So there might be a lot of noise in the particular labels  at any one time point."
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 407.14,
+            "end": 417.38,
+            "text": " And you wouldn't want that noise to really dramatically affect  your learning algorithm based on some, let's say,  prior belief that we might have that there  might be some amount of smoothness  in this process across time."
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 420.14,
+            "end": 437.44,
+            "text": " And the final problem is that there might be censoring.  So the actual data might look like this.  So we might not only wait for much later time points.  We might have many fewer observations.  And so if you were to just use those later time"
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 437.44,
+            "end": 446.4,
+            "text": " points to learn your predictive model,  you just might not have enough data.  So those are all different challenges  that we're going to attempt to solve using a multitask  learning approach."
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 446.4,
+            "end": 457.41999999999996,
+            "text": " Now to put some numbers to these things,  we have these four different time points.  We're going to have 648 patients at the six month time  interval.  And at the four year time interval,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 457.41999999999996,
+            "end": 473.58,
+            "text": " there will only be 87 patients due to patients dropping out  of the study.  So the key idea here will be rather than learning  these five independent models, we're  going to try to jointly learn the parameters corresponding"
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 473.58,
+            "end": 484.17999999999995,
+            "text": " to those models.  And the intuitions that we're going  to try to incorporate in doing so  are that there might be some features that  are useful across these five different prediction tasks."
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 484.17999999999995,
+            "end": 497.58,
+            "text": " And so I'm using the example of biomarkers here as a feature.  Think of that like a laboratory test result, for example,  or an answer to a question that's available baseline.  And so one approach to learning is to say, OK,  let's regularize the learning of these different models"
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 497.58,
+            "end": 508.85999999999996,
+            "text": " to encourage them to choose a common set  of predictive features or biomarkers.  But we also want to allow some amount of flexibility.  For example, we might want to say that, well,  at any one time point, there might be a couple"
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 508.96000000000004,
+            "end": 521.8000000000001,
+            "text": " of new biomarkers that are relevant for predicting  that time point.  And there might be some small amounts of changes across time.  So what I'll do right now is I'll  introduce to you the simplest way"
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 521.8000000000001,
+            "end": 535.5600000000001,
+            "text": " to think through multitask learning, which I will focus  specifically on a linear model setting.  And then I'll show you how we can slightly modify  this simple approach to capture those criteria that I  have over there."
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 535.56,
+            "end": 549.5,
+            "text": " So let's talk about a linear model.  And let's talk about regression, because here, in the example  I showed you earlier, we're trying to predict a score.  It's, let's say, a continuous value number.  We want to try to predict it."
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 549.5,
+            "end": 566.12,
+            "text": " And we might care about minimizing some loss function.  So if you were to try to minimize a squared loss,  imagine a scenario where you had two different prediction  problems.  So this might be time point 0, and this"
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 566.12,
+            "end": 588.52,
+            "text": " might be time point 12 for 6 months and 12 months.  You can start by summing over the patients,  looking at your mean squared error  at predicting what I'll say is the 6-month outcome label  by some linear function, which I'm"
+        },
+        {
+            "number": "lec18",
+            "title": "part.002.mp3",
+            "start": 588.54,
+            "end": 600.98,
+            "text": " going to have as a subscript 6 to denote  that this is a linear model for predicting the 6-month time  point value, dot producted with your baseline features."
+        }
+    ],
+    "text": " So we can now go back in time to lecture three and ask, well, how could we predict these different things? So what are some approaches that you might try? Why don't you talk to your neighbor for a second, and then I'll call in a random person. OK, that's enough. My question was sufficiently underdefined that if you talk longer, who knows what you'll be talking about. Over here, the two of you. The person with the computer, yeah. How would you tackle this problem? No, no, no, over here. Yeah, you. I would just take, I guess, previous data, and then, yeah, I guess any previous data with records of this is correction over that class data, and then predict on the new data. Just to understand, would you learn five different models? So our goal is to get these. Here, I'm showing you three, but it might be five different numbers at different time points. Would you learn one model to predict what it would be at six months, another predict what it would be at 12 months? Would you learn a single model? Other ideas? Somewhere over this part of the room. Yeah, you. Yeah, sure. I know a multitask learning where you learn five at the same time, and you also use the four in the model class to guide each. So use a multitask learning approach where you try to learn all five at a time and use what? What was the other thing? So you can learn to predict the status in six months, and you also use that as your baseline to test your own security. That's a really interesting idea. So the suggestion was, there are two different suggestions, actually. The first suggestion was do a multitask learning approach where you attempt to learn, instead of five different independent models, try to learn them jointly together. And in a second, we'll talk about why it might make sense to do that. The different thought was, well, is this really the question you want to solve? For example, you might imagine settings where you have the patient not at time zero, but actually at six months. And you might want to know what's going to happen to them in the future. And so you shouldn't just use the baseline information. You should condition on the data you have available over time. And a different way of thinking through that is you could imagine learning a Markov model where you learn something about the joint distribution of the disease stage over time. And then you could, for example, even if you only had baseline information available, you could attempt to marginalize over the intermediate values that are unobserved to infer what the later values might be. Now, that Markov model approach, although we will talk about it extensively in the next week or so, it's actually not a very good approach for this problem. And the reason why is because it increases the complexity. So when you are learned, in essence, if you wanted to predict what's going on at 18 months, and if as an intermediate step to predict on what goes on at 18 months, you have to predict what's going to go on at 12 months, and then the likelihood of transitioning from 12 months to 18 months, you might incur error in trying to predict what's going on at 12 months. And that error is then going to propagate as you attempt to think about the transition from 12 months to 18 months. And that propagation of error, particularly when you don't have much data, is going to really hurt the programs of your machine learning algorithm. So the method I'll be talking about today is, in fact, going to be what I view as the simplest possible approach to this problem. And it's going to be a direct prediction approach. So we're going to directly going to predict each of the different time points independently. But we will tie together the parameters of the model, as I suggested, using a multitask learning approach. And the reason why we're going to want to use a multitask learning approach is because of data sparsity. So imagine the following situation. Imagine that we had just binary indicators here. So let's say patient is OK or they're not OK. So the data might look like this, 0, 0, 1. Then the data set you might have might look a little bit like this. So now I'm going to show you the data. And one row is one patient. Different columns are different time points. So the first patient, as I showed you before, is 0, 0, 1. Second patient might be 0, 0, 0, 1, 0. Third patient might be 1, 1, 1, 1. Next patient might be 0, 1, 1, 1. So if you look at the first time point here, you'll notice that you have a really imbalanced data set. There's only a single 1 in that first time point. If you look at the second time point, it's more of a balanced data set. And in the third time point, again, you're sort of back into that imbalanced setting. What that means is that if you were to try to learn from just one of these time points by itself, particularly in a setting where you don't have that many data points alone, that data sparsity and the outcome label is going to really hurt you. It's going to be very hard to learn any interesting signal just from that time point alone. The second problem is that the labels are also very noisy. So not only might you have lots of imbalance, but there might be noise in the actual characterizations. Like for this patient, maybe with some probability, you would calculate 1, 1, 1, 1. With some other probability, you would observe 0, 1, 1, 1. And it might correspond to some threshold in that score I showed you earlier. And just by chance, a patient on some day passes the threshold. On the next day, they might not pass that threshold. So there might be a lot of noise in the particular labels at any one time point. And you wouldn't want that noise to really dramatically affect your learning algorithm based on some, let's say, prior belief that we might have that there might be some amount of smoothness in this process across time. And the final problem is that there might be censoring. So the actual data might look like this. So we might not only wait for much later time points. We might have many fewer observations. And so if you were to just use those later time points to learn your predictive model, you just might not have enough data. So those are all different challenges that we're going to attempt to solve using a multitask learning approach. Now to put some numbers to these things, we have these four different time points. We're going to have 648 patients at the six month time interval. And at the four year time interval, there will only be 87 patients due to patients dropping out of the study. So the key idea here will be rather than learning these five independent models, we're going to try to jointly learn the parameters corresponding to those models. And the intuitions that we're going to try to incorporate in doing so are that there might be some features that are useful across these five different prediction tasks. And so I'm using the example of biomarkers here as a feature. Think of that like a laboratory test result, for example, or an answer to a question that's available baseline. And so one approach to learning is to say, OK, let's regularize the learning of these different models to encourage them to choose a common set of predictive features or biomarkers. But we also want to allow some amount of flexibility. For example, we might want to say that, well, at any one time point, there might be a couple of new biomarkers that are relevant for predicting that time point. And there might be some small amounts of changes across time. So what I'll do right now is I'll introduce to you the simplest way to think through multitask learning, which I will focus specifically on a linear model setting. And then I'll show you how we can slightly modify this simple approach to capture those criteria that I have over there. So let's talk about a linear model. And let's talk about regression, because here, in the example I showed you earlier, we're trying to predict a score. It's, let's say, a continuous value number. We want to try to predict it. And we might care about minimizing some loss function. So if you were to try to minimize a squared loss, imagine a scenario where you had two different prediction problems. So this might be time point 0, and this might be time point 12 for 6 months and 12 months. You can start by summing over the patients, looking at your mean squared error at predicting what I'll say is the 6-month outcome label by some linear function, which I'm going to have as a subscript 6 to denote that this is a linear model for predicting the 6-month time point value, dot producted with your baseline features."
+}

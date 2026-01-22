@@ -1,0 +1,152 @@
+{
+    "chunks": [
+        {
+            "number": "lec17",
+            "title": "part.005.mp3",
+            "start": 0.0,
+            "end": 10.76,
+            "text": " identified all of those.  It's possible that maybe a different dependence  on a different time-varying covariant  may have led to a more optimal strategy.  There was a lot that remained unexplored."
+        },
+        {
+            "number": "lec17",
+            "title": "part.005.mp3",
+            "start": 13.46,
+            "end": 29.32,
+            "text": " So we did a lot of sensitivity analyses  as part of this project.  I'd like to focus, though, on the sensitivity analyses  that we did for potential unmeasured confounding  by chronic disease that may be severe enough to affect"
+        },
+        {
+            "number": "lec17",
+            "title": "part.005.mp3",
+            "start": 29.32,
+            "end": 47.64,
+            "text": " both physical activity and survival.  And so the G formula is actually providing a natural way  to at least partly address this by estimating  the risk of these physical activity interventions that  are, at each time point t, only applied"
+        },
+        {
+            "number": "lec17",
+            "title": "part.005.mp3",
+            "start": 47.64,
+            "end": 63.019999999999996,
+            "text": " to men who are healthy enough to maintain the physical activity  level at that time.  And so again, in the main analysis,  we excused men from following the recommended levels  if they developed one of these serious conditions."
+        },
+        {
+            "number": "lec17",
+            "title": "part.005.mp3",
+            "start": 63.019999999999996,
+            "end": 77.02,
+            "text": " So in sensitivity analyses, we then  expanded this list of serious conditions  to also include the conditions that are shown in blue text.  And so this attenuated our estimates  but didn't change our conclusions."
+        },
+        {
+            "number": "lec17",
+            "title": "part.005.mp3",
+            "start": 77.02,
+            "end": 94.13999999999999,
+            "text": " One thing to point out is that the validity of this approach  rests on the assumption that, at each time t,  we had available data needed to identify  which men were healthy at that time enough  to do the physical activity."
+        },
+        {
+            "number": "lec17",
+            "title": "part.005.mp3",
+            "start": 94.13999999999999,
+            "end": 102.47999999999999,
+            "text": " Yeah?  Sorry, just to double check.  Does excuse mean that you removed them?  Great question.  So because the strategy was pre-specified"
+        },
+        {
+            "number": "lec17",
+            "title": "part.005.mp3",
+            "start": 102.47999999999999,
+            "end": 116.32000000000001,
+            "text": " to say that if you develop one of these conditions,  you may essentially do whatever level of physical activity  you're able to do.  So importantly, I'm glad you brought this up,  we did not censor men at that time."
+        },
+        {
+            "number": "lec17",
+            "title": "part.005.mp3",
+            "start": 116.32000000000001,
+            "end": 133.12,
+            "text": " They were still followed because they were still adhering  to the strategy as defined.  Thanks for asking.  And so given that we don't know whether the data contain,  at each time t, the information necessary to know"
+        },
+        {
+            "number": "lec17",
+            "title": "part.005.mp3",
+            "start": 133.12,
+            "end": 145.46,
+            "text": " are these men healthy enough at that time,  we therefore conducted a few alternate analyses  in which we lagged physical activity and covariate data  by two years.  And we also used a negative outcome control"
+        },
+        {
+            "number": "lec17",
+            "title": "part.005.mp3",
+            "start": 145.46,
+            "end": 160.98000000000002,
+            "text": " to explore potential unmeasured confounding by clinical disease  or disease severity.  So what's the rationale behind this?  So in the DAGs below for the original analysis,  we have physical activity A, we have survival Y,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.005.mp3",
+            "start": 160.98000000000002,
+            "end": 176.42000000000002,
+            "text": " and this may be confounded by disease severity U.  So when we see an association between A and Y in our data,  we want to make sure that it's causal, that it's  because of the blue arrow and not  because of this confounding bias, the red arrow."
+        },
+        {
+            "number": "lec17",
+            "title": "part.005.mp3",
+            "start": 176.42000000000002,
+            "end": 193.82000000000002,
+            "text": " So how can we potentially provide evidence  for whether that red pathway is there?  We selected questionnaire non-response  as an alternate outcome instead of survival  that we assumed was not directly affected by physical activity,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.005.mp3",
+            "start": 193.82000000000002,
+            "end": 205.92000000000002,
+            "text": " but that we thought would be similarly confounded  by disease severity.  And so when we repeated the analysis  with a negative outcome control, we  found that physical activity had a nearly null effect"
+        },
+        {
+            "number": "lec17",
+            "title": "part.005.mp3",
+            "start": 205.92000000000002,
+            "end": 221.76000000000002,
+            "text": " on questionnaire non-response as we would expect,  which provides some support that in our original analysis,  the effect of physical activity on death  was not confounded through the pathways explored  through the negative control."
+        },
+        {
+            "number": "lec17",
+            "title": "part.005.mp3",
+            "start": 221.76000000000002,
+            "end": 240.06,
+            "text": " So one thing to highlight here is these sensitivity analyses  were driven by our subject matter knowledge,  and there's nothing in the data that kind of drove this.  And so just to recap this portion,  so g-methods are a useful tool because they let us validly"
+        },
+        {
+            "number": "lec17",
+            "title": "part.005.mp3",
+            "start": 240.06,
+            "end": 256.72,
+            "text": " estimate the effect of pre-specified dynamic  strategies and estimate adjusted absolute risks, which  are clinically meaningful to us, and appropriately adjusted  survival curves, even in the presence of treatment  confounder feedback, which occurs often"
+        },
+        {
+            "number": "lec17",
+            "title": "part.005.mp3",
+            "start": 256.72,
+            "end": 268.96,
+            "text": " in clinical questions.  And of course, this is under our typical identifiability  assumptions.  So this makes it a powerful approach  to estimate the effects of currently recommended"
+        },
+        {
+            "number": "lec17",
+            "title": "part.005.mp3",
+            "start": 268.96,
+            "end": 284.21999999999997,
+            "text": " or proposed strategies that therefore we  can specify and write out precisely as we did here.  However, these pre-specified strategies  may not be the optimal strategies.  So again, when I was doing this analysis,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.005.mp3",
+            "start": 284.21999999999997,
+            "end": 297.97999999999996,
+            "text": " I was thinking there are so many different weekly durations  of physical activity that we're not looking at.  There's so many different time-varying covariates  where we could have different dependencies on those  for these strategies over the time,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.005.mp3",
+            "start": 297.97999999999996,
+            "end": 313.82,
+            "text": " and maybe those would have led to better survival  outcomes among these men.  But all of that was unexplored.  Thank you."
+        }
+    ],
+    "text": " identified all of those. It's possible that maybe a different dependence on a different time-varying covariant may have led to a more optimal strategy. There was a lot that remained unexplored. So we did a lot of sensitivity analyses as part of this project. I'd like to focus, though, on the sensitivity analyses that we did for potential unmeasured confounding by chronic disease that may be severe enough to affect both physical activity and survival. And so the G formula is actually providing a natural way to at least partly address this by estimating the risk of these physical activity interventions that are, at each time point t, only applied to men who are healthy enough to maintain the physical activity level at that time. And so again, in the main analysis, we excused men from following the recommended levels if they developed one of these serious conditions. So in sensitivity analyses, we then expanded this list of serious conditions to also include the conditions that are shown in blue text. And so this attenuated our estimates but didn't change our conclusions. One thing to point out is that the validity of this approach rests on the assumption that, at each time t, we had available data needed to identify which men were healthy at that time enough to do the physical activity. Yeah? Sorry, just to double check. Does excuse mean that you removed them? Great question. So because the strategy was pre-specified to say that if you develop one of these conditions, you may essentially do whatever level of physical activity you're able to do. So importantly, I'm glad you brought this up, we did not censor men at that time. They were still followed because they were still adhering to the strategy as defined. Thanks for asking. And so given that we don't know whether the data contain, at each time t, the information necessary to know are these men healthy enough at that time, we therefore conducted a few alternate analyses in which we lagged physical activity and covariate data by two years. And we also used a negative outcome control to explore potential unmeasured confounding by clinical disease or disease severity. So what's the rationale behind this? So in the DAGs below for the original analysis, we have physical activity A, we have survival Y, and this may be confounded by disease severity U. So when we see an association between A and Y in our data, we want to make sure that it's causal, that it's because of the blue arrow and not because of this confounding bias, the red arrow. So how can we potentially provide evidence for whether that red pathway is there? We selected questionnaire non-response as an alternate outcome instead of survival that we assumed was not directly affected by physical activity, but that we thought would be similarly confounded by disease severity. And so when we repeated the analysis with a negative outcome control, we found that physical activity had a nearly null effect on questionnaire non-response as we would expect, which provides some support that in our original analysis, the effect of physical activity on death was not confounded through the pathways explored through the negative control. So one thing to highlight here is these sensitivity analyses were driven by our subject matter knowledge, and there's nothing in the data that kind of drove this. And so just to recap this portion, so g-methods are a useful tool because they let us validly estimate the effect of pre-specified dynamic strategies and estimate adjusted absolute risks, which are clinically meaningful to us, and appropriately adjusted survival curves, even in the presence of treatment confounder feedback, which occurs often in clinical questions. And of course, this is under our typical identifiability assumptions. So this makes it a powerful approach to estimate the effects of currently recommended or proposed strategies that therefore we can specify and write out precisely as we did here. However, these pre-specified strategies may not be the optimal strategies. So again, when I was doing this analysis, I was thinking there are so many different weekly durations of physical activity that we're not looking at. There's so many different time-varying covariates where we could have different dependencies on those for these strategies over the time, and maybe those would have led to better survival outcomes among these men. But all of that was unexplored. Thank you."
+}

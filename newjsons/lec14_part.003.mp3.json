@@ -1,0 +1,285 @@
+{
+    "chunks": [
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 0.0,
+            "end": 10.24,
+            "text": " link.  But for each of those people, you  might want to know, well, what would  have happened if they had gotten the other treatment?  And that's asking about the counterfactual."
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 10.24,
+            "end": 21.98,
+            "text": " So these dotted circles are the counterfactuals  for each of those observations.  And by the way, you'll notice that those dots are not  on the curves.  And the reason they're not on the curve"
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 21.98,
+            "end": 36.84,
+            "text": " is because I'm trying to point out  that there could be some stochasticity in the outcome.  So the dotted lines are the expected potential outcomes,  and the circles are the realizations of them.  All right, everyone take out a calculator,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 36.84,
+            "end": 51.34,
+            "text": " or your computer, or your phone.  I'll take out mine.  This is not an opportunity to go on Facebook, just to be clear.  All you want is a calculator.  OK."
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 55.32000000000001,
+            "end": 62.64,
+            "text": " My phone doesn't.  OK, it has a calculator.  Good.  All right.  So we're going to do a little exercise."
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 65.52000000000001,
+            "end": 80.2,
+            "text": " Here's a data set on the left-hand side.  Each row is an individual.  We're observing their age, the individual's age, gender,  whether they exercise regularly, which I'll say is a 1 or a 0,  and what treatment they got, which is A or B."
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 80.2,
+            "end": 105.72,
+            "text": " On the far right-hand side are their observed sugar glucose  sugar levels, let's say, at the end of the year.  Now, what we'd like to have, it looks like this.  So we'd like to know what would have happened to this person's  sugar levels had they received medication A"
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 105.72,
+            "end": 120.92,
+            "text": " or had they received medication B.  But if you look at the previous slide,  we observed for each individual that they got either A or B.  And so we're only going to know one of these columns  for each individual."
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 120.92,
+            "end": 139.24,
+            "text": " So the first row, for example, this individual  received treatment A. And so you'll  see that I've taken the observed sugar level for that individual.  And since they received treatment A,  that observed level represents the potential outcome"
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 139.24,
+            "end": 157.04,
+            "text": " YA or Y0.  And that's why I have a 6, which is bolded under Y0.  And we don't know what would have  happened to that individual had they received treatment B.  So in this case, some magical creature came to me"
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 157.04,
+            "end": 165.12,
+            "text": " and told me their sugar levels would have been 5.5.  But we don't actually know that.  That wasn't in the data.  Let's look at the next line just to make  sure we get what I'm saying."
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 165.12,
+            "end": 180.96,
+            "text": " So the second individual actually received treatment B.  Their observed sugar level is 6.5.  OK.  Let's do a little survey.  That 6.5 number, should it be in this column?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 180.96,
+            "end": 191.0,
+            "text": " Raise your hand.  Or should it be in this column?  Raise your hand.  About half of you got that right.  Indeed, it goes to the second column."
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 191.0,
+            "end": 201.95999999999998,
+            "text": " And again, what we would have liked to know  is the counterfactual.  What would have been their sugar levels  had they received medication A, which we don't actually  observe in our data, but I'm going to hypothesize"
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 201.95999999999998,
+            "end": 218.0,
+            "text": " is suppose that someone told me it was 7,  then you would see that value filled in there.  That's the unobserved counterfactual.  All right, first of all, is the setup clear?  All right, now here's where you use your calculators."
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 218.0,
+            "end": 231.22,
+            "text": " So we're going to now demonstrate  the difference between a naive estimator  of your average treatment effect  and the true average treatment effect.  So what I want you to do right now"
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 231.22,
+            "end": 259.7,
+            "text": " is to compute first what is the average sugar  level of the individuals who got medication B.  So for that, we're only going to be using the red ones, OK?  So this is conditioning on receiving medication B.  And so we're only going to know this"
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 259.7,
+            "end": 276.54,
+            "text": " is equivalent to going back to this one  and saying we're only going to take the rows where individuals  receive medication B, and we're going to average  their observed sugar levels.  And everyone should do that."
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 276.54,
+            "end": 311.26,
+            "text": " What's the first number?  6.5 plus.  I'm getting 7.875.  This is for the average sugar given  that they receive medication B. Is"
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 311.26,
+            "end": 328.09999999999997,
+            "text": " that what other people are getting?  What about this for the second number?  Average sugar given A.  I want you to compute it, OK?  And I'm going to ask everyone to say it out"
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 328.09999999999997,
+            "end": 341.76,
+            "text": " loud in literally one minute.  And if you get it wrong, of course, you're  going to be embarrassed.  So I'm going to try myself.  OK."
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 353.82,
+            "end": 365.3,
+            "text": " On the count of three, I want everyone to read out  what that third number is.  1, 2, 3.  7.125.  All right."
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 365.3,
+            "end": 378.58,
+            "text": " Good, we can all do arithmetic.  All right.  Good.  So again, we're just looking at the red numbers here, OK?  Just the red numbers."
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 378.58,
+            "end": 393.14,
+            "text": " So we just computed that difference, which is 0. what?  0.75?  Yeah, that looks about right.  Good.  All right, so that's a positive number."
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 393.14,
+            "end": 413.26,
+            "text": " Now, let's do something different, OK?  Now, let's compute the actual average treatment effect,  which is we're now going to average  every number in this column.  And we're going to average every number in this column, right?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 413.26,
+            "end": 432.38,
+            "text": " So this is the average sugar level  under the potential outcome of had the individual received  treatment B. And this is the average sugar level  under potential outcome that the individual received  treatment A. All right."
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 432.38,
+            "end": 439.26000000000005,
+            "text": " Who's doing it?  0.75.  0.75 is what?  The difference.  How do you know?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 439.26000000000005,
+            "end": 446.62,
+            "text": " Minus 0.75.  Wow, you're fast.  OK, let's see if you're right.  I actually don't know.  OK, the first one is 0.75."
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 446.62,
+            "end": 463.34,
+            "text": " Good, we got that right.  I intentionally didn't post the slides in today's lecture.  All right.  And the second one is minus 0.75.  All right, so now let's put us in the shoes of a policymaker."
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 463.34,
+            "end": 473.65999999999997,
+            "text": " The policymaker has to decide, is it a good idea to,  or let's say it's an insurance company, health insurance  company.  Health insurance company is trying  to decide, should I reimburse for treatment B or not?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 473.65999999999997,
+            "end": 490.53999999999996,
+            "text": " Or should I simply say, no, I'm never  going to reimburse for treatment B because it doesn't work well.  So if they had done the naive estimator that  would have been the first example,  then it would look like medication B is sort of,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 490.53999999999996,
+            "end": 506.9,
+            "text": " we want lower numbers here.  So it would look like medication B is worse than medication A.  And if you properly estimated what  the actual average treatment effect is,  you get the absolute opposite conclusion."
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 506.9,
+            "end": 524.98,
+            "text": " You conclude that medication B is much better than medication  A. And that's just a simple example  to really illustrate the difference between conditioning  and actually computing that counterfactual.  So hopefully now you're starting to get it."
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 524.98,
+            "end": 536.82,
+            "text": " And again, you're going to have many more opportunities  to work through these things in your homework assignment  and so on.  OK, so by now you should be starting to wonder,  how the hell could I do anything"
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 536.82,
+            "end": 548.7,
+            "text": " in this state of the world?  Because you don't actually observe those black numbers.  These are all unobserved.  And clearly there is bias in what  the values should be because of what I've been saying all along."
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 548.7,
+            "end": 560.46,
+            "text": " So what can we do?  Well, the first thing we have to realize  is that typically this is an impossible problem to solve.  So your instincts aren't wrong.  And we're going to have to make a ton of assumptions"
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 560.46,
+            "end": 572.42,
+            "text": " in order to do anything here.  So the first assumption called sattva  I'm not even going to talk about.  You can read about that in your readings.  I'll tell you about the two assumptions that are"
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 572.42,
+            "end": 584.62,
+            "text": " a little bit easier to describe.  The first critical assumption is that there are no  unobserved confounding factors.  Mathematically, what that's saying  is that your potential outcomes, y0 and y1,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 584.62,
+            "end": 598.82,
+            "text": " are conditionally independent of the treatment decision  given what you observe on the individual x.  Now, this can be a bit hard to, and that's  called ignorability.  And that's going to be a bit hard to understand,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.003.mp3",
+            "start": 598.82,
+            "end": 599.9,
+            "text": " so let me draw a picture."
+        }
+    ],
+    "text": " link. But for each of those people, you might want to know, well, what would have happened if they had gotten the other treatment? And that's asking about the counterfactual. So these dotted circles are the counterfactuals for each of those observations. And by the way, you'll notice that those dots are not on the curves. And the reason they're not on the curve is because I'm trying to point out that there could be some stochasticity in the outcome. So the dotted lines are the expected potential outcomes, and the circles are the realizations of them. All right, everyone take out a calculator, or your computer, or your phone. I'll take out mine. This is not an opportunity to go on Facebook, just to be clear. All you want is a calculator. OK. My phone doesn't. OK, it has a calculator. Good. All right. So we're going to do a little exercise. Here's a data set on the left-hand side. Each row is an individual. We're observing their age, the individual's age, gender, whether they exercise regularly, which I'll say is a 1 or a 0, and what treatment they got, which is A or B. On the far right-hand side are their observed sugar glucose sugar levels, let's say, at the end of the year. Now, what we'd like to have, it looks like this. So we'd like to know what would have happened to this person's sugar levels had they received medication A or had they received medication B. But if you look at the previous slide, we observed for each individual that they got either A or B. And so we're only going to know one of these columns for each individual. So the first row, for example, this individual received treatment A. And so you'll see that I've taken the observed sugar level for that individual. And since they received treatment A, that observed level represents the potential outcome YA or Y0. And that's why I have a 6, which is bolded under Y0. And we don't know what would have happened to that individual had they received treatment B. So in this case, some magical creature came to me and told me their sugar levels would have been 5.5. But we don't actually know that. That wasn't in the data. Let's look at the next line just to make sure we get what I'm saying. So the second individual actually received treatment B. Their observed sugar level is 6.5. OK. Let's do a little survey. That 6.5 number, should it be in this column? Raise your hand. Or should it be in this column? Raise your hand. About half of you got that right. Indeed, it goes to the second column. And again, what we would have liked to know is the counterfactual. What would have been their sugar levels had they received medication A, which we don't actually observe in our data, but I'm going to hypothesize is suppose that someone told me it was 7, then you would see that value filled in there. That's the unobserved counterfactual. All right, first of all, is the setup clear? All right, now here's where you use your calculators. So we're going to now demonstrate the difference between a naive estimator of your average treatment effect and the true average treatment effect. So what I want you to do right now is to compute first what is the average sugar level of the individuals who got medication B. So for that, we're only going to be using the red ones, OK? So this is conditioning on receiving medication B. And so we're only going to know this is equivalent to going back to this one and saying we're only going to take the rows where individuals receive medication B, and we're going to average their observed sugar levels. And everyone should do that. What's the first number? 6.5 plus. I'm getting 7.875. This is for the average sugar given that they receive medication B. Is that what other people are getting? What about this for the second number? Average sugar given A. I want you to compute it, OK? And I'm going to ask everyone to say it out loud in literally one minute. And if you get it wrong, of course, you're going to be embarrassed. So I'm going to try myself. OK. On the count of three, I want everyone to read out what that third number is. 1, 2, 3. 7.125. All right. Good, we can all do arithmetic. All right. Good. So again, we're just looking at the red numbers here, OK? Just the red numbers. So we just computed that difference, which is 0. what? 0.75? Yeah, that looks about right. Good. All right, so that's a positive number. Now, let's do something different, OK? Now, let's compute the actual average treatment effect, which is we're now going to average every number in this column. And we're going to average every number in this column, right? So this is the average sugar level under the potential outcome of had the individual received treatment B. And this is the average sugar level under potential outcome that the individual received treatment A. All right. Who's doing it? 0.75. 0.75 is what? The difference. How do you know? Minus 0.75. Wow, you're fast. OK, let's see if you're right. I actually don't know. OK, the first one is 0.75. Good, we got that right. I intentionally didn't post the slides in today's lecture. All right. And the second one is minus 0.75. All right, so now let's put us in the shoes of a policymaker. The policymaker has to decide, is it a good idea to, or let's say it's an insurance company, health insurance company. Health insurance company is trying to decide, should I reimburse for treatment B or not? Or should I simply say, no, I'm never going to reimburse for treatment B because it doesn't work well. So if they had done the naive estimator that would have been the first example, then it would look like medication B is sort of, we want lower numbers here. So it would look like medication B is worse than medication A. And if you properly estimated what the actual average treatment effect is, you get the absolute opposite conclusion. You conclude that medication B is much better than medication A. And that's just a simple example to really illustrate the difference between conditioning and actually computing that counterfactual. So hopefully now you're starting to get it. And again, you're going to have many more opportunities to work through these things in your homework assignment and so on. OK, so by now you should be starting to wonder, how the hell could I do anything in this state of the world? Because you don't actually observe those black numbers. These are all unobserved. And clearly there is bias in what the values should be because of what I've been saying all along. So what can we do? Well, the first thing we have to realize is that typically this is an impossible problem to solve. So your instincts aren't wrong. And we're going to have to make a ton of assumptions in order to do anything here. So the first assumption called sattva I'm not even going to talk about. You can read about that in your readings. I'll tell you about the two assumptions that are a little bit easier to describe. The first critical assumption is that there are no unobserved confounding factors. Mathematically, what that's saying is that your potential outcomes, y0 and y1, are conditionally independent of the treatment decision given what you observe on the individual x. Now, this can be a bit hard to, and that's called ignorability. And that's going to be a bit hard to understand, so let me draw a picture."
+}

@@ -1,0 +1,320 @@
+{
+    "chunks": [
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 0.0,
+            "end": 13.72,
+            "text": " And similarly, your loss function  for predicting this one is going to be the same,  but now you'll be predicting the y12 label.  And we're going to have a different weight vector  for predicting that."
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 16.68,
+            "end": 28.66,
+            "text": " Notice that x is the same, because I'm  assuming in everything I'm telling you here  that we're going to be predicting from baseline data  alone.  Now, a typical approach to try to regularize in this setting"
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 28.66,
+            "end": 54.620000000000005,
+            "text": " might be, let's say, to do L2 regularization.  So you might say, I'm going to add on to this some lambda  times the weight vector 6 squared, maybe,  same thing over here.  So the way that I've set this up for you so far right now"
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 54.620000000000005,
+            "end": 67.38,
+            "text": " is two different independent prediction problems.  The next step is to talk about how we can  try to tie these together.  So any idea for those of you who have not specifically  studied multitask learning in class,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 67.38,
+            "end": 84.18,
+            "text": " so for those of you who did, don't answer.  For everyone else, what are some ways  that you might try to tie these two prediction problems  together?  Yeah?"
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 84.18,
+            "end": 97.66000000000001,
+            "text": " Maybe you could share some weight parameters.  So maybe for the common set of prime vectors.  So maybe we could share some weight parameters.  Well, I mean, the simplest way to tie them together  is just to say, we're going to, all right,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 97.66000000000001,
+            "end": 119.10000000000001,
+            "text": " so you might say, let's first of all,  add these two objective functions together.  And now we're going to minimize, instead of minimizing just,  now we're going to minimize over the two weight vectors jointly.  So now we have a single optimization problem."
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 119.10000000000001,
+            "end": 130.02,
+            "text": " All I've done is I've now, we're optimizing,  we're minimizing this joint objective  where I'm summing this objective with this objective.  We're minimizing it with respect to now two different weight  vectors."
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 130.02,
+            "end": 148.17999999999998,
+            "text": " And the simplest thing to do, what you just described  might be to say, let's let w6 equal to w12.  So you might just add in this equality constraint,  saying that these two weight vectors should be identical.  What would be wrong with that?"
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 148.17999999999998,
+            "end": 153.66,
+            "text": " Someone else.  What would be wrong with, and I know  that wasn't precisely your suggestion, so don't worry.  I have a question.  Yeah, what's your question?"
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 153.66,
+            "end": 176.01999999999998,
+            "text": " Is x, are those also different?  Sorry, yeah, I'm missing some subscripts, right?  So I'll put this in a superscript.  And I'll put subscript i, subscript i.  And it doesn't matter for the purpose of this presentation"
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 176.01999999999998,
+            "end": 189.01999999999998,
+            "text": " whether these are the same individuals  or different individuals across these two problems.  You can imagine they're the same individual.  So you might imagine that there are  n individuals in the data set."
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 189.01999999999998,
+            "end": 197.89999999999998,
+            "text": " And we're summing over the same n people  for both of these sums, just looking at different outcomes  for each of them.  This is the 6-month outcome.  This is the 12-month outcome."
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 197.9,
+            "end": 208.74,
+            "text": " Is that clear?  So the simplest thing to do would be just to now,  now that we have a joint optimization problem,  we could constrain the two weight vectors to be identical.  But of course, this is a bit of an overkill."
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 208.74,
+            "end": 224.06,
+            "text": " This is like saying that you're going to just learn  a single prediction problem where you sort of ignore  the difference between 6 months and 12 months  and just try to predict, put those under there  and just predict them both together."
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 224.06,
+            "end": 232.1,
+            "text": " So you had another suggestion, it sounded like.  Oh, no, you just asked why that was a bad idea.  OK, and I answered that.  Sorry.  What can we do differently?"
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 232.1,
+            "end": 244.33999999999997,
+            "text": " Yeah, you.  You could maybe try to minimize the difference between the two.  So not saying they need to be the same,  but the chances that they're going  to be super, super different isn't really high."
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 244.33999999999997,
+            "end": 254.22,
+            "text": " That's a really interesting idea.  So we don't want them to be the same.  We might want them to be approximately the same, right?  And what's one way to try to measure  how different these two are?"
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 256.26,
+            "end": 270.82,
+            "text": " Subtract them and then do what?  Because these are vectors.  So it's not absolute value of a vector.  What can you do to turn a vector into a single number?  Take a norm of it."
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 270.82,
+            "end": 281.5,
+            "text": " Yeah, I think that's what you meant.  So we might take the norm of it.  What norm should we take?  Maybe L2 norm.  OK, and we might say we want that."
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 281.5,
+            "end": 295.14,
+            "text": " OK, so if we said that this was equal to 0,  then of course that's saying that they have to be the same.  But we could say that this is, let's say,  bounded by some epsilon.  And epsilon now is a parameter we get to choose."
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 295.14,
+            "end": 308.54,
+            "text": " And that would then say, oh, OK, we've now tied together  these two optimization problems.  And we want to encourage that the two weight vectors are not  that far from each other.  Yep?"
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 308.54,
+            "end": 325.34000000000003,
+            "text": " Can you represent each weight vector as like,  have it just be duplicated and force the first weights  to be the same and let the second ones be different?  You're suggesting a slightly different way  to parameterize this by saying that W12 is equal to W6"
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 325.34000000000003,
+            "end": 336.34000000000003,
+            "text": " plus some delta function, some delta difference?  Is that what you're suggesting?  No, that you have your, say, it's n-dimensional,  that each vector is n-dimensional.  But now it's going to be 2n-dimensional."
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 336.34000000000003,
+            "end": 343.62,
+            "text": " And you force the first n dimensions  to be the same of the weight vector.  Ah.  And then the others equal.  That's a really interesting idea."
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 343.62,
+            "end": 353.86,
+            "text": " I'll return to that point in just a second.  Thanks.  Before I return to that point, I just  want to point out this isn't the most convenient thing  to optimize, because this is now a constrained optimization"
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 353.86,
+            "end": 363.34,
+            "text": " problem.  What's our favorite algorithm for convex optimization  in machine learning and non-convex optimization?  Everyone say it out loud.  Convex optimization."
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 363.34,
+            "end": 373.26,
+            "text": " TAs are not supposed to answer.  Just muttering.  Neither are faculty.  But I think I heard enough of you say  stochastic gradient descent."
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 373.26,
+            "end": 383.02,
+            "text": " Yes, good.  That's what I was expecting.  And you could do projected gradient descent,  but it's much easier to just get rid of this.  And so what we're going to do is we're just"
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 383.02,
+            "end": 394.06,
+            "text": " going to put this into the objective function.  And one way to do that, so one motivation  would be to say we're going to take a Lagrangian  of this inequality, and then that'll  bring this into the objective."
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 394.06,
+            "end": 407.14000000000004,
+            "text": " But you know what?  Screw that motivation.  Let's just erase this.  And I'll just say plus something else.  So I'll call that lambda 1, some other hyperparameter,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 407.14000000000004,
+            "end": 427.02000000000004,
+            "text": " times now w12 minus w6 squared.  Now let's look to see what happens.  If we were to push this lambda 2 to infinity,  remember we're minimizing this objective function.  So if lambda 2 is pushed to infinity,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 427.02000000000004,
+            "end": 439.1,
+            "text": " what is the solution of w12 with respect to w6?  Everyone say out loud.  Zero.  I said with respect to.  So there are 1 minus the other is 0."
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 439.1,
+            "end": 448.3,
+            "text": " Yes, good.  So it would be forcing them that they be the same.  And of course, if lambda 2 is smaller, then it's saying,  we're going to allow some flexibility.  They don't have to be the same, but we're"
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 448.3,
+            "end": 460.61999999999995,
+            "text": " going to penalize their difference  by the square difference in their norms.  OK?  So this is good.  And so you raised a really interesting question,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 460.61999999999995,
+            "end": 474.38,
+            "text": " which I'll talk about now, which is, well, maybe you  don't want to enforce all of the dimensions to be the same.  Maybe that's too much.  So one thing one could imagine doing  is saying, we're going to only enforce this constraint."
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 474.38,
+            "end": 488.32,
+            "text": " We're only going to put this penalty in for, let's say,  dimensions.  I'm trying to think of the right notation for this.  I think I'll use this notation.  Let's see if you guys like this."
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 497.86,
+            "end": 515.26,
+            "text": " OK, let's see if this notation makes sense for you.  What I'm saying is, I'm going to take the d's the dimension.  I'm going to take the first half of the dimensions to the end.  I'm going to take that vector, and I'll penalize that.  So it's ignoring the first half of the dimensions."
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 515.26,
+            "end": 524.76,
+            "text": " And so what that's saying is, well, we're  going to share parameters for some of this weight vector,  but we're not going to worry about,  we're going to let them be completely  independent of each other for the rest."
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 524.76,
+            "end": 538.28,
+            "text": " That's an example of what you're suggesting, right?  OK, so this is all great and dandy  for the case of just two time points.  But what do we do when we have five time points?  Yeah?"
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 538.28,
+            "end": 551.78,
+            "text": " AUDIENCE 2 There's some percentage  of shared entries in that vector.  So instead of saying these have to be in common,  you say between all of them.  And then we have to be able to have some sort of similarity"
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 551.78,
+            "end": 560.9399999999999,
+            "text": " vector.  I think you have the right intuition,  but I don't really know how to formalize that,  just from your verbal description.  What would be the simplest thing you might think of?"
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 560.9399999999999,
+            "end": 570.86,
+            "text": " I gave you an example of how to do, in some sense,  pairwise similarity.  Could you just easily extend that  if you have more than two things?  You had an idea?"
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 570.86,
+            "end": 584.54,
+            "text": " No?  Yeah?  AUDIENCE 3 Y1 is similar to Y2, and Y2 is similar to Y3.  So you might say W1 is similar to W2, W2 similar to W3,  W3 similar to W4, and so on."
+        },
+        {
+            "number": "lec18",
+            "title": "part.003.mp3",
+            "start": 584.54,
+            "end": 600.62,
+            "text": " Yeah, I like that idea.  I'm going to generalize that just a little bit, OK?  So I'm going to start thinking now about graphs.  And we're going to now define a very simple abstraction  to talk about multi-text learning."
+        }
+    ],
+    "text": " And similarly, your loss function for predicting this one is going to be the same, but now you'll be predicting the y12 label. And we're going to have a different weight vector for predicting that. Notice that x is the same, because I'm assuming in everything I'm telling you here that we're going to be predicting from baseline data alone. Now, a typical approach to try to regularize in this setting might be, let's say, to do L2 regularization. So you might say, I'm going to add on to this some lambda times the weight vector 6 squared, maybe, same thing over here. So the way that I've set this up for you so far right now is two different independent prediction problems. The next step is to talk about how we can try to tie these together. So any idea for those of you who have not specifically studied multitask learning in class, so for those of you who did, don't answer. For everyone else, what are some ways that you might try to tie these two prediction problems together? Yeah? Maybe you could share some weight parameters. So maybe for the common set of prime vectors. So maybe we could share some weight parameters. Well, I mean, the simplest way to tie them together is just to say, we're going to, all right, so you might say, let's first of all, add these two objective functions together. And now we're going to minimize, instead of minimizing just, now we're going to minimize over the two weight vectors jointly. So now we have a single optimization problem. All I've done is I've now, we're optimizing, we're minimizing this joint objective where I'm summing this objective with this objective. We're minimizing it with respect to now two different weight vectors. And the simplest thing to do, what you just described might be to say, let's let w6 equal to w12. So you might just add in this equality constraint, saying that these two weight vectors should be identical. What would be wrong with that? Someone else. What would be wrong with, and I know that wasn't precisely your suggestion, so don't worry. I have a question. Yeah, what's your question? Is x, are those also different? Sorry, yeah, I'm missing some subscripts, right? So I'll put this in a superscript. And I'll put subscript i, subscript i. And it doesn't matter for the purpose of this presentation whether these are the same individuals or different individuals across these two problems. You can imagine they're the same individual. So you might imagine that there are n individuals in the data set. And we're summing over the same n people for both of these sums, just looking at different outcomes for each of them. This is the 6-month outcome. This is the 12-month outcome. Is that clear? So the simplest thing to do would be just to now, now that we have a joint optimization problem, we could constrain the two weight vectors to be identical. But of course, this is a bit of an overkill. This is like saying that you're going to just learn a single prediction problem where you sort of ignore the difference between 6 months and 12 months and just try to predict, put those under there and just predict them both together. So you had another suggestion, it sounded like. Oh, no, you just asked why that was a bad idea. OK, and I answered that. Sorry. What can we do differently? Yeah, you. You could maybe try to minimize the difference between the two. So not saying they need to be the same, but the chances that they're going to be super, super different isn't really high. That's a really interesting idea. So we don't want them to be the same. We might want them to be approximately the same, right? And what's one way to try to measure how different these two are? Subtract them and then do what? Because these are vectors. So it's not absolute value of a vector. What can you do to turn a vector into a single number? Take a norm of it. Yeah, I think that's what you meant. So we might take the norm of it. What norm should we take? Maybe L2 norm. OK, and we might say we want that. OK, so if we said that this was equal to 0, then of course that's saying that they have to be the same. But we could say that this is, let's say, bounded by some epsilon. And epsilon now is a parameter we get to choose. And that would then say, oh, OK, we've now tied together these two optimization problems. And we want to encourage that the two weight vectors are not that far from each other. Yep? Can you represent each weight vector as like, have it just be duplicated and force the first weights to be the same and let the second ones be different? You're suggesting a slightly different way to parameterize this by saying that W12 is equal to W6 plus some delta function, some delta difference? Is that what you're suggesting? No, that you have your, say, it's n-dimensional, that each vector is n-dimensional. But now it's going to be 2n-dimensional. And you force the first n dimensions to be the same of the weight vector. Ah. And then the others equal. That's a really interesting idea. I'll return to that point in just a second. Thanks. Before I return to that point, I just want to point out this isn't the most convenient thing to optimize, because this is now a constrained optimization problem. What's our favorite algorithm for convex optimization in machine learning and non-convex optimization? Everyone say it out loud. Convex optimization. TAs are not supposed to answer. Just muttering. Neither are faculty. But I think I heard enough of you say stochastic gradient descent. Yes, good. That's what I was expecting. And you could do projected gradient descent, but it's much easier to just get rid of this. And so what we're going to do is we're just going to put this into the objective function. And one way to do that, so one motivation would be to say we're going to take a Lagrangian of this inequality, and then that'll bring this into the objective. But you know what? Screw that motivation. Let's just erase this. And I'll just say plus something else. So I'll call that lambda 1, some other hyperparameter, times now w12 minus w6 squared. Now let's look to see what happens. If we were to push this lambda 2 to infinity, remember we're minimizing this objective function. So if lambda 2 is pushed to infinity, what is the solution of w12 with respect to w6? Everyone say out loud. Zero. I said with respect to. So there are 1 minus the other is 0. Yes, good. So it would be forcing them that they be the same. And of course, if lambda 2 is smaller, then it's saying, we're going to allow some flexibility. They don't have to be the same, but we're going to penalize their difference by the square difference in their norms. OK? So this is good. And so you raised a really interesting question, which I'll talk about now, which is, well, maybe you don't want to enforce all of the dimensions to be the same. Maybe that's too much. So one thing one could imagine doing is saying, we're going to only enforce this constraint. We're only going to put this penalty in for, let's say, dimensions. I'm trying to think of the right notation for this. I think I'll use this notation. Let's see if you guys like this. OK, let's see if this notation makes sense for you. What I'm saying is, I'm going to take the d's the dimension. I'm going to take the first half of the dimensions to the end. I'm going to take that vector, and I'll penalize that. So it's ignoring the first half of the dimensions. And so what that's saying is, well, we're going to share parameters for some of this weight vector, but we're not going to worry about, we're going to let them be completely independent of each other for the rest. That's an example of what you're suggesting, right? OK, so this is all great and dandy for the case of just two time points. But what do we do when we have five time points? Yeah? AUDIENCE 2 There's some percentage of shared entries in that vector. So instead of saying these have to be in common, you say between all of them. And then we have to be able to have some sort of similarity vector. I think you have the right intuition, but I don't really know how to formalize that, just from your verbal description. What would be the simplest thing you might think of? I gave you an example of how to do, in some sense, pairwise similarity. Could you just easily extend that if you have more than two things? You had an idea? No? Yeah? AUDIENCE 3 Y1 is similar to Y2, and Y2 is similar to Y3. So you might say W1 is similar to W2, W2 similar to W3, W3 similar to W4, and so on. Yeah, I like that idea. I'm going to generalize that just a little bit, OK? So I'm going to start thinking now about graphs. And we're going to now define a very simple abstraction to talk about multi-text learning."
+}

@@ -1,0 +1,222 @@
+{
+    "chunks": [
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 0.0,
+            "end": 18.18,
+            "text": " and the Mayo Clinic Diseases and Conditions Medline Plus  Medical Encyclopedia, they used named entity recognition  techniques to find all the concepts that  are related to this phenotype.  So then they said, well, there's a lot"
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 18.18,
+            "end": 32.4,
+            "text": " of randomness in these sources and maybe in our extraction  techniques.  But if we insist that some concept appear  in at least three of these five sources,  then we can be pretty confident that it's a relevant concept."
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 32.4,
+            "end": 44.84,
+            "text": " And so they said, OK, we'll do that.  Then they chose the top k concepts  whose embedding vectors are closest by cosine distance  to the embedding of this phenotype  that they've calculated."
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 44.84,
+            "end": 60.48,
+            "text": " And they say, OK, the phenotype is  going to be a linear combination of all these related concepts.  So again, this is a bit similar to what we saw before.  But here, instead of extracting the data  from electronic medical records,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 60.48,
+            "end": 86.46,
+            "text": " they're extracting it from published literature  and these web sources.  And again, what you see is that the expert-curated features  for these five phenotypes, which are coronary artery disease,  rheumatoid arthritis, Crohn's disease, ulcerative colitis,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 86.46,
+            "end": 112.58,
+            "text": " and pediatric pulmonary arterial hypertension,  they started with 20 to 50 curated features.  So these were the ones that the doctors said, OK,  these are the anchors in David's terminology.  And then they expanded these to a larger set using the technique"
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 112.62,
+            "end": 142.34,
+            "text": " that I just described and then selected down  to the top n that were effective in finding relevant phenotypes.  And this is a terrible graph that summarizes the results.  But what you're seeing is that the orange lines are,  based on the expert-curated features,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 142.84,
+            "end": 164.78,
+            "text": " this is based on an earlier version of trying to do this.  And CEDFA is the technique that I've just described.  And what you see is that the automatic techniques  for many of these phenotypes are just about as good  as the manually curated ones."
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 164.78,
+            "end": 182.3,
+            "text": " And of course, they require much less manual curation  because they're using this automatic learning approach.  Another interesting example to return  to the theme of de-identification  is a couple of my students a few years ago"
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 182.3,
+            "end": 203.29999999999998,
+            "text": " built a new de-identifier that has this rather complicated  architecture.  So it starts with a bi-directional recursive  neural network model that is implemented  over the character sequences of words in the medical text."
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 203.29999999999998,
+            "end": 224.57999999999998,
+            "text": " So why character sequences?  Why might those be important?  Well, consider a misspelled word, for example.  Most of the character sequence is correct.  There will be a bug in it at the misspelling."
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 224.57999999999998,
+            "end": 240.45999999999998,
+            "text": " Or consider that a lot of medical terms  are these compound terms where they're  made up of lots of pieces that correspond  to Greek or Latin roots.  So learning those can actually be very helpful."
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 240.45999999999998,
+            "end": 260.74,
+            "text": " So you start with that model.  You then concatenate the results from both the left-running  and the right-running recursive neural network  and concatenate that with the word-to-vec embedding  of the whole word."
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 260.74,
+            "end": 280.3,
+            "text": " And you feed that into another bi-directional RNN layer.  And then for each word, you take the output of those RNNs,  run them through a feed-forward neural network  in order to estimate the probable.  It's like a softmax."
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 280.3,
+            "end": 292.53999999999996,
+            "text": " And you estimate the probability of this word belonging  to a particular category of personally identifiable health  information.  So is it a name?  Is it an address?"
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 292.53999999999996,
+            "end": 310.18,
+            "text": " Is it a phone number?  Is it a whatever?  And then the top layer is a kind of conditional random field  like layer that imposes a sequential probability  distribution that says, OK, if you've seen a name,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 310.18,
+            "end": 331.41999999999996,
+            "text": " then what's the next most likely thing that you're going to see?  And so you combine that with the probability distributions  for each word in order to identify  the category of PHI or non-PHI for that word.  And this did insanely well."
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 331.41999999999996,
+            "end": 355.38,
+            "text": " So optimized by F1 score, we're up at precision of 99.2%,  recall of 99.3%.  Optimized by recall, we're up at about 98%, 99% for each  of them.  So this is doing quite well."
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 355.38,
+            "end": 375.5,
+            "text": " Now, there is a non-machine learning comment  to make, which is that if you read the HIPAA law, the HIPAA  regulations, they don't say that you must get rid of 99%  of the personally identifying information  in order to be able to share this data for research."
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 375.5,
+            "end": 392.86,
+            "text": " It says you have to get rid of all of it.  So no technique we know is 100% perfect.  And so there's a kind of practical understanding  among people who work on this stuff  that nothing's going to be perfect,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 392.86,
+            "end": 415.82,
+            "text": " and therefore, you can get away with a little bit.  But legally, you're on thin ice.  So I remember many years ago, my wife was in law school.  And I asked her at one point, so what can people sue you for?  And she said, absolutely anything."
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 415.82,
+            "end": 435.02,
+            "text": " They may not win, but they can be a real pain  if you have to go defend yourself in court.  And so this hasn't played out yet.  We don't know if a de-identifier that is 99% sensitive and 99%  specific will pass muster with people"
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 435.02,
+            "end": 454.97999999999996,
+            "text": " who agree to release data sets, because they're worried, too,  about winding up in the newspaper  or winding up getting sued.  OK, last topic for today.  So if you read this interesting blog, which, by the way,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 454.97999999999996,
+            "end": 472.98,
+            "text": " has a very good tutorial on BERT,  he says, the year 2018 has been an inflection point  for machine learning models handling text,  or more accurately, NLP, our conceptual understanding  of how best to represent words and sentences in a way that"
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 472.98,
+            "end": 490.42,
+            "text": " best captures underlying meanings and relationships  is rapidly evolving.  And so there are a whole bunch of new ideas  that have come about in about the last year or two years,  including ELMo, which learns context-specific embeddings,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 490.42,
+            "end": 511.68,
+            "text": " the transformer architecture, this BERT approach.  And then I'll end with just showing you  this gigantic GPT model that was developed by the OpenAI  people, which does remarkably better than the stuff I showed  you before in generating language."
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 511.68,
+            "end": 534.36,
+            "text": " All right, if you look inside Google Translate,  at least as of not long ago, what you find  is a model like this.  So it's essentially an LSTM model that takes input words  and munges them together into some representation,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 534.36,
+            "end": 553.72,
+            "text": " high-dimensional vector representation,  that summarizes everything that the model knows  about that sentence that you've just fed it.  Obviously, it has to be a pretty high-dimensional representation  because your sentence could be about almost anything."
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 553.72,
+            "end": 567.04,
+            "text": " And so it's important to be able to capture all  that in this representation.  But basically, at this point, you  start generating the output.  So if you're translating English to French,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 567.04,
+            "end": 585.8,
+            "text": " these are English words coming in,  and these are French words going out  in sort of the way I showed you where we're generating  Shakespeare or we're generating Wall Street Journal text.  But the critical feature here is that in the initial version"
+        },
+        {
+            "number": "lec8",
+            "title": "part.005.mp3",
+            "start": 585.8,
+            "end": 600.52,
+            "text": " of this, everything that you learned  about this English sentence had to be encoded in this one  vector that got passed from the encoder into the decoder,  or from the source language into the decoder."
+        }
+    ],
+    "text": " and the Mayo Clinic Diseases and Conditions Medline Plus Medical Encyclopedia, they used named entity recognition techniques to find all the concepts that are related to this phenotype. So then they said, well, there's a lot of randomness in these sources and maybe in our extraction techniques. But if we insist that some concept appear in at least three of these five sources, then we can be pretty confident that it's a relevant concept. And so they said, OK, we'll do that. Then they chose the top k concepts whose embedding vectors are closest by cosine distance to the embedding of this phenotype that they've calculated. And they say, OK, the phenotype is going to be a linear combination of all these related concepts. So again, this is a bit similar to what we saw before. But here, instead of extracting the data from electronic medical records, they're extracting it from published literature and these web sources. And again, what you see is that the expert-curated features for these five phenotypes, which are coronary artery disease, rheumatoid arthritis, Crohn's disease, ulcerative colitis, and pediatric pulmonary arterial hypertension, they started with 20 to 50 curated features. So these were the ones that the doctors said, OK, these are the anchors in David's terminology. And then they expanded these to a larger set using the technique that I just described and then selected down to the top n that were effective in finding relevant phenotypes. And this is a terrible graph that summarizes the results. But what you're seeing is that the orange lines are, based on the expert-curated features, this is based on an earlier version of trying to do this. And CEDFA is the technique that I've just described. And what you see is that the automatic techniques for many of these phenotypes are just about as good as the manually curated ones. And of course, they require much less manual curation because they're using this automatic learning approach. Another interesting example to return to the theme of de-identification is a couple of my students a few years ago built a new de-identifier that has this rather complicated architecture. So it starts with a bi-directional recursive neural network model that is implemented over the character sequences of words in the medical text. So why character sequences? Why might those be important? Well, consider a misspelled word, for example. Most of the character sequence is correct. There will be a bug in it at the misspelling. Or consider that a lot of medical terms are these compound terms where they're made up of lots of pieces that correspond to Greek or Latin roots. So learning those can actually be very helpful. So you start with that model. You then concatenate the results from both the left-running and the right-running recursive neural network and concatenate that with the word-to-vec embedding of the whole word. And you feed that into another bi-directional RNN layer. And then for each word, you take the output of those RNNs, run them through a feed-forward neural network in order to estimate the probable. It's like a softmax. And you estimate the probability of this word belonging to a particular category of personally identifiable health information. So is it a name? Is it an address? Is it a phone number? Is it a whatever? And then the top layer is a kind of conditional random field like layer that imposes a sequential probability distribution that says, OK, if you've seen a name, then what's the next most likely thing that you're going to see? And so you combine that with the probability distributions for each word in order to identify the category of PHI or non-PHI for that word. And this did insanely well. So optimized by F1 score, we're up at precision of 99.2%, recall of 99.3%. Optimized by recall, we're up at about 98%, 99% for each of them. So this is doing quite well. Now, there is a non-machine learning comment to make, which is that if you read the HIPAA law, the HIPAA regulations, they don't say that you must get rid of 99% of the personally identifying information in order to be able to share this data for research. It says you have to get rid of all of it. So no technique we know is 100% perfect. And so there's a kind of practical understanding among people who work on this stuff that nothing's going to be perfect, and therefore, you can get away with a little bit. But legally, you're on thin ice. So I remember many years ago, my wife was in law school. And I asked her at one point, so what can people sue you for? And she said, absolutely anything. They may not win, but they can be a real pain if you have to go defend yourself in court. And so this hasn't played out yet. We don't know if a de-identifier that is 99% sensitive and 99% specific will pass muster with people who agree to release data sets, because they're worried, too, about winding up in the newspaper or winding up getting sued. OK, last topic for today. So if you read this interesting blog, which, by the way, has a very good tutorial on BERT, he says, the year 2018 has been an inflection point for machine learning models handling text, or more accurately, NLP, our conceptual understanding of how best to represent words and sentences in a way that best captures underlying meanings and relationships is rapidly evolving. And so there are a whole bunch of new ideas that have come about in about the last year or two years, including ELMo, which learns context-specific embeddings, the transformer architecture, this BERT approach. And then I'll end with just showing you this gigantic GPT model that was developed by the OpenAI people, which does remarkably better than the stuff I showed you before in generating language. All right, if you look inside Google Translate, at least as of not long ago, what you find is a model like this. So it's essentially an LSTM model that takes input words and munges them together into some representation, high-dimensional vector representation, that summarizes everything that the model knows about that sentence that you've just fed it. Obviously, it has to be a pretty high-dimensional representation because your sentence could be about almost anything. And so it's important to be able to capture all that in this representation. But basically, at this point, you start generating the output. So if you're translating English to French, these are English words coming in, and these are French words going out in sort of the way I showed you where we're generating Shakespeare or we're generating Wall Street Journal text. But the critical feature here is that in the initial version of this, everything that you learned about this English sentence had to be encoded in this one vector that got passed from the encoder into the decoder, or from the source language into the decoder."
+}

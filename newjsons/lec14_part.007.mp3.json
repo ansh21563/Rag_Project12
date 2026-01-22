@@ -1,0 +1,264 @@
+{
+    "chunks": [
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 0.0,
+            "end": 12.120000000000001,
+            "text": " And that error might be low, but you  can run into these failure modes where it just completely  ignores t, for example.  So t is special here.  So really, the picture we want to have in mind"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 12.120000000000001,
+            "end": 25.88,
+            "text": " is that t is some parameter of interest.  We want to learn a model f such that if we twiddle t,  we can see how there's a differential effect on y  based on twiddling t.  That's what we truly care about when we're using machine"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 25.88,
+            "end": 37.28,
+            "text": " learning for causal inference.  And so that's really the gap.  That's the gap in our understanding today.  And it's really an active area of research  to figure out how do you change the whole machine learning"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 37.28,
+            "end": 49.0,
+            "text": " paradigm to recognize that when you're using machine learning  for causal inference, you're actually interested in something  a little bit different.  And by the way, that's a major area of my lab's research.  And we just published a series of papers"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 49.0,
+            "end": 64.28,
+            "text": " trying to answer that question.  Beyond the scope of this course, but I'm  happy to send you those papers if anyone's interested.  So that type of question is extremely important.  It doesn't show up quite as much when your x's aren't"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 64.28,
+            "end": 76.0,
+            "text": " very high dimensional and where things like regularization  don't become important.  But once your x becomes high dimensional,  and once you want to start to consider more and more complex  f's during your fitting, like you"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 76.0,
+            "end": 107.0,
+            "text": " want to use deep neural networks, for example,  these differences in goals become extremely important.  So there are other ways in which things can fail.  So I want to give you here an example where, shoot,  I'm answering my question."
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 107.0,
+            "end": 121.2,
+            "text": " OK.  Question.  No one saw that slide.  Question, where did the overlap assumption show up  in our approach for estimating average treatment effect using"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 121.2,
+            "end": 148.60000000000002,
+            "text": " covariate adjustment?  I'm going to go back to the formula.  Formula?  Someone who hasn't spoken today, hopefully.  You can be wrong."
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 148.60000000000002,
+            "end": 163.88000000000002,
+            "text": " It's fine.  Yeah, in the back.  Is it the version with the same age receiving treatment A  and treatment B?  So maybe have an individual with some age who"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 163.88000000000002,
+            "end": 181.4,
+            "text": " we're going to want to be able to look  at the difference between what f predicts for that individual  if they got treatment A versus treatment B, or 1 versus 0.  And let me try to lead this a little bit.  And it might happen in your data set that for that individual,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 181.4,
+            "end": 197.24,
+            "text": " for individuals like them, you only ever observe treatment 1.  And there's no one even remotely like them  who you observe treatment 0.  So what's this function going to output then  when you input 0 for that second argument?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 197.24,
+            "end": 214.68,
+            "text": " Everyone say out loud.  Garbage.  If in your data set, you never observed anyone even remotely  similar to Xi who received treatment 0,  then this function is basically undefined for that individual."
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 214.68,
+            "end": 228.39999999999998,
+            "text": " I mean, yeah, your function will output something  because you fit it.  But it's not going to be the right answer.  And so that's where this assumption starts to show up.  When one talks about the sample complexity"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 228.39999999999998,
+            "end": 244.04,
+            "text": " of learning these functions f to do covariate adjustment,  and when one talks about the consistency of these arguments,  for example, you'd like to be able to make claims that  as the amount of data grows to, let's say, infinity,  that this is the right answer."
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 244.04,
+            "end": 258.04,
+            "text": " It gives you the right estimate.  So that's the type of proof which  is often given in the causal inference literature.  Well, if you have overlap, then as the amount of data  goes to infinity, you will observe someone,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 258.04,
+            "end": 267.44,
+            "text": " like the person who received treatment 1,  you'll observe someone who also received treatment 0.  It might have taken you a huge amount of data  to get there because treatment 0 might have been much less  likely than treatment 1."
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 267.44,
+            "end": 279.64,
+            "text": " But because the probability of treatment 0 is not 0,  eventually, you'll see someone like that.  And so eventually, you'll get enough data  in order to learn a function which can extrapolate correctly  for that individual."
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 279.64,
+            "end": 297.24,
+            "text": " And so that's where overlap comes in  in giving that type of consistency argument.  Of course, in reality, you never have infinite data.  And so these questions about trade-offs  between the amount of data you have and the fact"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 297.24,
+            "end": 308.84,
+            "text": " that you never truly have empirical overlap  with a small amount of data and answering  when can you extrapolate correctly  despite that is the critical question  that one needs to answer."
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 308.84,
+            "end": 320.64,
+            "text": " But it's, by the way, not studied very well  in the literature because people don't usually  think in terms of sample complexity in that field.  That's where computer scientists can start really  to contribute to this literature and bringing things"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 320.64,
+            "end": 333.76,
+            "text": " that we often think about in machine learning  to this new topic.  So I've got a couple of minutes left.  Are there any other questions?  Or should I introduce some new material in one minute?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 333.76,
+            "end": 345.44,
+            "text": " Yeah.  So you said the average treatment effect estimator  here is consistent.  But does it matter if we choose the wrong kind of,  we have to choose some functional form"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 345.44,
+            "end": 353.56,
+            "text": " of the features to the effect?  Great question.  Is it consistent even if we choose  kind of a completely wrong functional form?  No."
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 353.56,
+            "end": 363.64,
+            "text": " No, no.  You're asking all the right questions.  Good job today, everyone.  So no.  So if you walk through that argument I made,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 363.64,
+            "end": 376.12,
+            "text": " I assume two things.  First, that you observe enough data such  that you can have any chance of extrapolating correctly.  But then implicit in that statement  is that you're choosing a function family which"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 376.12,
+            "end": 394.2,
+            "text": " is powerful enough that it can extrapolate correctly.  So if your true function is none, if the true function,  if you think back to this figure I showed you here,  if the true potential outcome functions  are these quadratic functions, and you're fitting them"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 394.2,
+            "end": 406.03999999999996,
+            "text": " with a linear function, then no matter how much data you have,  you're always going to get wrong estimates.  So the type of consistent argument  really requires that you're considering  more and more complex non-linearity"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 406.03999999999996,
+            "end": 417.28,
+            "text": " as your amount of data grows.  So now here's a visual depiction of what can go wrong  if you don't have overlap.  So now I've taken out, previously I  had one or two red points over here"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 417.28,
+            "end": 428.84,
+            "text": " and one or two blue points over here.  But I've taken those out.  So in your data, all you have are these blue points  and those red points.  So one could attempt, so all you have are the points."
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 428.84,
+            "end": 439.32,
+            "text": " And now one can learn as good functions  as you could imagine to try to, let's say,  minimize the mean squared error of predicting  these blue points and minimize the mean squared error  of predicting those red points."
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 439.32,
+            "end": 450.8,
+            "text": " And what you might get out is something,  maybe you'll decide on a linear function  because that's sort of as good as you can do if all you have  are those red points.  And so even if you were willing to consider"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 450.84000000000003,
+            "end": 464.68,
+            "text": " more and more complex hypothesis classes,  here, if you try to consider a more complex hypothesis  class than this line, you'd probably just  be overfitting to the data you have.  And so you decide on that line, which"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 464.68,
+            "end": 477.88,
+            "text": " because you had no data over here,  you don't even know that it's not a good fit to the data.  And then you notice that you're getting  completely wrong estimates.  For example, if you asked about the Kate for a young person,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 477.88,
+            "end": 493.56,
+            "text": " it would have the wrong sign over here  because they flipped the two lines.  So that's an example of how one can start to get errors.  And when we begin on Thursday's lecture,  we're going to pick up right where we left off today."
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 493.56,
+            "end": 507.44000000000005,
+            "text": " And I'll talk about this issue a little bit more detailed.  I'll talk about how, if one were to learn a linear function,  how one could actually, under the assumption  that the true potential outcomes are linear,  how one could actually interpret the coefficients"
+        },
+        {
+            "number": "lec14",
+            "title": "part.007.mp3",
+            "start": 507.44000000000005,
+            "end": 516.02,
+            "text": " of that linear function in a causal way.  Under the very strong assumption  that the true potential outcomes are linear.  So that's what we'll return to on Thursday.  That's all."
+        }
+    ],
+    "text": " And that error might be low, but you can run into these failure modes where it just completely ignores t, for example. So t is special here. So really, the picture we want to have in mind is that t is some parameter of interest. We want to learn a model f such that if we twiddle t, we can see how there's a differential effect on y based on twiddling t. That's what we truly care about when we're using machine learning for causal inference. And so that's really the gap. That's the gap in our understanding today. And it's really an active area of research to figure out how do you change the whole machine learning paradigm to recognize that when you're using machine learning for causal inference, you're actually interested in something a little bit different. And by the way, that's a major area of my lab's research. And we just published a series of papers trying to answer that question. Beyond the scope of this course, but I'm happy to send you those papers if anyone's interested. So that type of question is extremely important. It doesn't show up quite as much when your x's aren't very high dimensional and where things like regularization don't become important. But once your x becomes high dimensional, and once you want to start to consider more and more complex f's during your fitting, like you want to use deep neural networks, for example, these differences in goals become extremely important. So there are other ways in which things can fail. So I want to give you here an example where, shoot, I'm answering my question. OK. Question. No one saw that slide. Question, where did the overlap assumption show up in our approach for estimating average treatment effect using covariate adjustment? I'm going to go back to the formula. Formula? Someone who hasn't spoken today, hopefully. You can be wrong. It's fine. Yeah, in the back. Is it the version with the same age receiving treatment A and treatment B? So maybe have an individual with some age who we're going to want to be able to look at the difference between what f predicts for that individual if they got treatment A versus treatment B, or 1 versus 0. And let me try to lead this a little bit. And it might happen in your data set that for that individual, for individuals like them, you only ever observe treatment 1. And there's no one even remotely like them who you observe treatment 0. So what's this function going to output then when you input 0 for that second argument? Everyone say out loud. Garbage. If in your data set, you never observed anyone even remotely similar to Xi who received treatment 0, then this function is basically undefined for that individual. I mean, yeah, your function will output something because you fit it. But it's not going to be the right answer. And so that's where this assumption starts to show up. When one talks about the sample complexity of learning these functions f to do covariate adjustment, and when one talks about the consistency of these arguments, for example, you'd like to be able to make claims that as the amount of data grows to, let's say, infinity, that this is the right answer. It gives you the right estimate. So that's the type of proof which is often given in the causal inference literature. Well, if you have overlap, then as the amount of data goes to infinity, you will observe someone, like the person who received treatment 1, you'll observe someone who also received treatment 0. It might have taken you a huge amount of data to get there because treatment 0 might have been much less likely than treatment 1. But because the probability of treatment 0 is not 0, eventually, you'll see someone like that. And so eventually, you'll get enough data in order to learn a function which can extrapolate correctly for that individual. And so that's where overlap comes in in giving that type of consistency argument. Of course, in reality, you never have infinite data. And so these questions about trade-offs between the amount of data you have and the fact that you never truly have empirical overlap with a small amount of data and answering when can you extrapolate correctly despite that is the critical question that one needs to answer. But it's, by the way, not studied very well in the literature because people don't usually think in terms of sample complexity in that field. That's where computer scientists can start really to contribute to this literature and bringing things that we often think about in machine learning to this new topic. So I've got a couple of minutes left. Are there any other questions? Or should I introduce some new material in one minute? Yeah. So you said the average treatment effect estimator here is consistent. But does it matter if we choose the wrong kind of, we have to choose some functional form of the features to the effect? Great question. Is it consistent even if we choose kind of a completely wrong functional form? No. No, no. You're asking all the right questions. Good job today, everyone. So no. So if you walk through that argument I made, I assume two things. First, that you observe enough data such that you can have any chance of extrapolating correctly. But then implicit in that statement is that you're choosing a function family which is powerful enough that it can extrapolate correctly. So if your true function is none, if the true function, if you think back to this figure I showed you here, if the true potential outcome functions are these quadratic functions, and you're fitting them with a linear function, then no matter how much data you have, you're always going to get wrong estimates. So the type of consistent argument really requires that you're considering more and more complex non-linearity as your amount of data grows. So now here's a visual depiction of what can go wrong if you don't have overlap. So now I've taken out, previously I had one or two red points over here and one or two blue points over here. But I've taken those out. So in your data, all you have are these blue points and those red points. So one could attempt, so all you have are the points. And now one can learn as good functions as you could imagine to try to, let's say, minimize the mean squared error of predicting these blue points and minimize the mean squared error of predicting those red points. And what you might get out is something, maybe you'll decide on a linear function because that's sort of as good as you can do if all you have are those red points. And so even if you were willing to consider more and more complex hypothesis classes, here, if you try to consider a more complex hypothesis class than this line, you'd probably just be overfitting to the data you have. And so you decide on that line, which because you had no data over here, you don't even know that it's not a good fit to the data. And then you notice that you're getting completely wrong estimates. For example, if you asked about the Kate for a young person, it would have the wrong sign over here because they flipped the two lines. So that's an example of how one can start to get errors. And when we begin on Thursday's lecture, we're going to pick up right where we left off today. And I'll talk about this issue a little bit more detailed. I'll talk about how, if one were to learn a linear function, how one could actually, under the assumption that the true potential outcomes are linear, how one could actually interpret the coefficients of that linear function in a causal way. Under the very strong assumption that the true potential outcomes are linear. So that's what we'll return to on Thursday. That's all."
+}

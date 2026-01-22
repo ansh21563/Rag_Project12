@@ -1,0 +1,250 @@
+{
+    "chunks": [
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 0.0,
+            "end": 37.36,
+            "text": " So welcome everyone.  Today is the first of what will be a series of four guest lectures throughout the semester.  There will be two guest lectures starting the week from today and then there will be  another one towards the end of the semester.  And what Pete and I decided to do is to bring in people who know a lot more than us about"
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 37.36,
+            "end": 61.04,
+            "text": " some area of expertise.  In today's instance it's going to be about cardiovascular medicine, in particular about  how to use imaging and machine learning on images in that context.  And for today's lecture we're very excited to have Professor Rahul Deo to speak.  Rahul's name kept on showing up as I did research over the last couple of years."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 61.04,
+            "end": 83.04,
+            "text": " First my group was starting to get interested in echocardiography and we said oh, here's  an interesting paper to read on it.  We read it and then we read another paper on doing subtyping of ejection fraction as  a type of heart failure and we read it.  I wasn't really paying attention to the names on the papers and then suddenly someone told"
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 83.04,
+            "end": 96.04,
+            "text": " me there's this guy moving to Boston next month who's doing a lot of interesting work  and is interested in machine learning.  You should go meet him.  And of course I meet him and then I tell him about these papers I was reading and he said  oh, I wrote all of those papers."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 98.04,
+            "end": 119.04,
+            "text": " He was the senior author in them.  So Rahul's been around for a while.  He is already somewhat senior in this field.  He started out doing his medical school training at Cornell Medical School in New York City  at the same time as doing his PhD at Rockefeller University."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 119.04,
+            "end": 148.04000000000002,
+            "text": " And then he spent the first large chunk after his postdoctoral training up here in Boston  at Harvard Medical School, he spent a large chunk of his career as faculty at UCSF in  California and just moved back this past year to take a position as the chief data scientist  for the One Brave Idea project which is a very large initiative joint between MIT and  Brigham and Women's Hospital to study cardiovascular medicine."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 148.04000000000002,
+            "end": 167.04,
+            "text": " I'll tell you more maybe.  And Rahul's research has really gone the full spectrum but the type of things you'll hear  about today is actually not what he's been doing most of his career, amazingly so.  Most of his career he's been thinking more about genotype and how to really bridge that  genotype, phenotype branch."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 167.04,
+            "end": 181.04,
+            "text": " But I asked him specifically to talk about imaging.  So that's what he'll be focusing on today.  Without further ado, thank you Rahul for coming here.  Thank you so much, David.  So I'm used to lecturing to clinical audiences so you guys are by far the most technical"
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 181.04,
+            "end": 197.04,
+            "text": " audience so please spare me a little bit.  But I actually want to encourage interruptions, questions.  This is a very opinionated lecture so that if anybody has any questions, reservations,  please bring them up during the lecture.  Don't wait till the end."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 197.04,
+            "end": 215.04,
+            "text": " And in part it's opinionated because I feel passionately that the stuff we're doing needs  to make its way into practice.  It's not by itself purely academically interesting.  Many of the things we're doing are already picking up what everybody else here is already  doing."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 215.04,
+            "end": 231.04,
+            "text": " But at the same time, it's OK from that standpoint but it really has to make its way.  And that means that we have to have some mature understanding of what makes its way into practice,  where the resistance will be.  So the lecture will be peppered throughout with some opinions and comments in that.  And hopefully that will be useful."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 231.04,
+            "end": 250.04,
+            "text": " So just a quick outline.  Just going to introduce cardiac structure and function, which is probably not part of  the regular undergraduate and graduate training here at MIT.  Talk a little bit about what the major cardiac diagnostics are and how they're used.  And all of this is really to help guide the thought and the decision making about how"
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 250.04,
+            "end": 267.04,
+            "text": " we would ever automate and bring machine learning, artificial intelligence, to actual clinical  practice.  Because you need to give enough background so you realize what the challenges are.  And then the question probably everybody has is, where's the data?  How would one get access to some of this stuff to be able to potentially do work in this"
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 267.04,
+            "end": 285.04,
+            "text": " area?  And then I'm going to venture a little bit into computer vision and just talk about some  of the topics that at least I've been thinking about that are relevant to what we're doing.  And then talk about some of this work around an automated pipeline for echocardiogram.  Not as by any means a gold standard, but really just as an initial foray into trying to make"
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 285.04,
+            "end": 303.04,
+            "text": " a dent into this.  And then thinking a little bit about what lessons David mentioned that you talked about  in the echocardiograms last week or last class.  And so a little bit of some of the ideas from there and how they would lend themselves to  insights about future types of approaches with automated interpretation."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 303.04,
+            "end": 313.04,
+            "text": " And then my background is actually more in biology.  So I'm going to come back and say, OK, enough with all this imaging stuff.  What about the biology?  How can we make some insights there?  OK."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 313.04,
+            "end": 334.04,
+            "text": " So every time people try to get funding for coronary heart disease, they try to talk up  just how important it is.  So this is still, we have some battles with the oncology people, but this is still the  leading cause of death in the world.  And then people are like, oh, you're just emphasizing the developed world."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 334.04,
+            "end": 359.04,
+            "text": " There's lots of communicable diseases that matter much more.  So even if you look at those and you look at the bottom here, this still, if this is  all causes of death age adjusted, cardiovascular disease is still number one amongst that.  So certainly it remains important and increasingly so in some of the developing world also.  So it's important to think a little bit about what the heart does because this is going"
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 359.04,
+            "end": 374.04,
+            "text": " to guide at least the way that diseases have been classified.  So the main thing the heart does is it's a pump and it delivers oxygenated blood throughout  the circulatory system to all the tissues that need it, the brain, the kidneys, the  muscles.  And oxygen, of course, is required for ATP production."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 374.04,
+            "end": 396.04,
+            "text": " So it's a pretty impressive organ, pumps about five liters of blood a minute.  And with exercise, that can go up five to seven fold or so with sort of conditioned  athletes, not me, but other people can kind of ramp that up substantially.  And we have this sort of need to keep a very, very regular beat.  So if you pause for about three seconds, you are likely to get lightheaded or pass out."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 396.04,
+            "end": 414.04,
+            "text": " So you have to maintain a sort of this rhythmic beating your heart and you can kind of compute  what that would be in somewhere around two billion beats in a typical lifetime.  So I'm going to show a lot of pictures and videos throughout this.  So it's probably worthwhile just to take a pause a little bit and talk about what the  anatomy of the heart is."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 414.04,
+            "end": 430.04,
+            "text": " So the heart sort of sits like this.  So the pointy part is kind of sitting up to the side like that.  And so I'm going to just sort of describe the flow of blood.  So the blood comes in something called the inferior vena cava or the superior vena cava.  This is draining from the brain."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 430.04,
+            "end": 443.04,
+            "text": " This is draining from the lower body.  And then enters into a chamber called the right atrium.  It moves through something called the tricuspid valve into what's called the right ventricle.  The right ventricle has got some muscle to it.  It pumps into the lungs."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 443.04,
+            "end": 457.04,
+            "text": " There the blood picks up oxygen.  So that's why it's sort of shown as being red here.  The oxygenated blood comes from the left atrium and then into the left ventricle through  something called the mitral valve.  We'll show you some pictures of the mitral valve later on."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 457.04,
+            "end": 473.04,
+            "text": " And then the left ventricle, which is the big sort of workhorse of the heart, pumps  blood through the rest of the body through a structure called the aorta.  So in through the right heart, through the lungs, through the left heart, through the  rest of the body.  And then shown here in yellow is the conduction system."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 473.04,
+            "end": 490.04,
+            "text": " So you guys got a little bit of a conversation last class on the electrical system.  So the sinoatrial node is up here in the right atrium.  And then conduction sort of goes through.  So the P wave on an EKG represents the conduction through there.  You get through the savy node where there's a delay, which is the PR interval."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 490.04,
+            "end": 509.04,
+            "text": " And then you get spreading through the ventricles, which is the QRS complex.  And then repolarization is the T wave.  So that's sort of the electrical system.  And of course, these things have to kind of work intimately together.  Every single basic kind of cardiac physiology will show this diagram called the Wiggers"
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 509.04,
+            "end": 525.04,
+            "text": " diagram, which really just shows the sort of interconnectedness of the electrical system.  So there's the EKG up there.  These are the heart sounds that a provider would listen to with a stethoscope.  And this is capturing the flow of sort of the changes in pressure in the heart and in  the aorta."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 525.04,
+            "end": 534.04,
+            "text": " So heart fills during a period of time called diastole.  The mitral valve closes.  The ventricle contracts.  The pressure increases.  This is a period of time called systole."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 534.04,
+            "end": 544.04,
+            "text": " Eventually, something called the aortic valve pops open.  Blood goes through the rest of the body.  Heart finally starts to relax.  Atrial ventricular valve closes.  Then you fill again."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 544.04,
+            "end": 557.04,
+            "text": " So this happens again and again and again in a cyclical way.  And you have this kind of combination of electrical and mechanical properties.  So I have some pictures here.  These are all MRIs.  I'm going to talk about echocardiography, which is sort of these very ugly, grainy things"
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 557.04,
+            "end": 568.04,
+            "text": " that I unfortunately have to work with.  MRIs are beautiful, but very expensive.  So there's a reason for that.  So this is something called the long axis view of the heart.  So this is the thick walled left ventricle there."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 568.04,
+            "end": 578.04,
+            "text": " This is the left atrium there.  And you can see sort of this beautiful turbulent flow of blood in there.  And it's flowing from the atrium to the ventricle.  This is another patient.  It's called the short axis view."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 578.04,
+            "end": 588.04,
+            "text": " There's the left ventricle and the right ventricle there.  So we're kind of looking at it somewhat obliquely.  And then this is another view called the, it's a little bit dull there.  I'm sorry.  I can brighten it a little bit."
+        },
+        {
+            "number": "lec10",
+            "title": "part.000.mp3",
+            "start": 588.04,
+            "end": 599.04,
+            "text": " This is sort of what's called the four chamber view.  So you can see the left ventricle and right ventricle here.  So the reason for these different views is ultimately that people have."
+        }
+    ],
+    "text": " So welcome everyone. Today is the first of what will be a series of four guest lectures throughout the semester. There will be two guest lectures starting the week from today and then there will be another one towards the end of the semester. And what Pete and I decided to do is to bring in people who know a lot more than us about some area of expertise. In today's instance it's going to be about cardiovascular medicine, in particular about how to use imaging and machine learning on images in that context. And for today's lecture we're very excited to have Professor Rahul Deo to speak. Rahul's name kept on showing up as I did research over the last couple of years. First my group was starting to get interested in echocardiography and we said oh, here's an interesting paper to read on it. We read it and then we read another paper on doing subtyping of ejection fraction as a type of heart failure and we read it. I wasn't really paying attention to the names on the papers and then suddenly someone told me there's this guy moving to Boston next month who's doing a lot of interesting work and is interested in machine learning. You should go meet him. And of course I meet him and then I tell him about these papers I was reading and he said oh, I wrote all of those papers. He was the senior author in them. So Rahul's been around for a while. He is already somewhat senior in this field. He started out doing his medical school training at Cornell Medical School in New York City at the same time as doing his PhD at Rockefeller University. And then he spent the first large chunk after his postdoctoral training up here in Boston at Harvard Medical School, he spent a large chunk of his career as faculty at UCSF in California and just moved back this past year to take a position as the chief data scientist for the One Brave Idea project which is a very large initiative joint between MIT and Brigham and Women's Hospital to study cardiovascular medicine. I'll tell you more maybe. And Rahul's research has really gone the full spectrum but the type of things you'll hear about today is actually not what he's been doing most of his career, amazingly so. Most of his career he's been thinking more about genotype and how to really bridge that genotype, phenotype branch. But I asked him specifically to talk about imaging. So that's what he'll be focusing on today. Without further ado, thank you Rahul for coming here. Thank you so much, David. So I'm used to lecturing to clinical audiences so you guys are by far the most technical audience so please spare me a little bit. But I actually want to encourage interruptions, questions. This is a very opinionated lecture so that if anybody has any questions, reservations, please bring them up during the lecture. Don't wait till the end. And in part it's opinionated because I feel passionately that the stuff we're doing needs to make its way into practice. It's not by itself purely academically interesting. Many of the things we're doing are already picking up what everybody else here is already doing. But at the same time, it's OK from that standpoint but it really has to make its way. And that means that we have to have some mature understanding of what makes its way into practice, where the resistance will be. So the lecture will be peppered throughout with some opinions and comments in that. And hopefully that will be useful. So just a quick outline. Just going to introduce cardiac structure and function, which is probably not part of the regular undergraduate and graduate training here at MIT. Talk a little bit about what the major cardiac diagnostics are and how they're used. And all of this is really to help guide the thought and the decision making about how we would ever automate and bring machine learning, artificial intelligence, to actual clinical practice. Because you need to give enough background so you realize what the challenges are. And then the question probably everybody has is, where's the data? How would one get access to some of this stuff to be able to potentially do work in this area? And then I'm going to venture a little bit into computer vision and just talk about some of the topics that at least I've been thinking about that are relevant to what we're doing. And then talk about some of this work around an automated pipeline for echocardiogram. Not as by any means a gold standard, but really just as an initial foray into trying to make a dent into this. And then thinking a little bit about what lessons David mentioned that you talked about in the echocardiograms last week or last class. And so a little bit of some of the ideas from there and how they would lend themselves to insights about future types of approaches with automated interpretation. And then my background is actually more in biology. So I'm going to come back and say, OK, enough with all this imaging stuff. What about the biology? How can we make some insights there? OK. So every time people try to get funding for coronary heart disease, they try to talk up just how important it is. So this is still, we have some battles with the oncology people, but this is still the leading cause of death in the world. And then people are like, oh, you're just emphasizing the developed world. There's lots of communicable diseases that matter much more. So even if you look at those and you look at the bottom here, this still, if this is all causes of death age adjusted, cardiovascular disease is still number one amongst that. So certainly it remains important and increasingly so in some of the developing world also. So it's important to think a little bit about what the heart does because this is going to guide at least the way that diseases have been classified. So the main thing the heart does is it's a pump and it delivers oxygenated blood throughout the circulatory system to all the tissues that need it, the brain, the kidneys, the muscles. And oxygen, of course, is required for ATP production. So it's a pretty impressive organ, pumps about five liters of blood a minute. And with exercise, that can go up five to seven fold or so with sort of conditioned athletes, not me, but other people can kind of ramp that up substantially. And we have this sort of need to keep a very, very regular beat. So if you pause for about three seconds, you are likely to get lightheaded or pass out. So you have to maintain a sort of this rhythmic beating your heart and you can kind of compute what that would be in somewhere around two billion beats in a typical lifetime. So I'm going to show a lot of pictures and videos throughout this. So it's probably worthwhile just to take a pause a little bit and talk about what the anatomy of the heart is. So the heart sort of sits like this. So the pointy part is kind of sitting up to the side like that. And so I'm going to just sort of describe the flow of blood. So the blood comes in something called the inferior vena cava or the superior vena cava. This is draining from the brain. This is draining from the lower body. And then enters into a chamber called the right atrium. It moves through something called the tricuspid valve into what's called the right ventricle. The right ventricle has got some muscle to it. It pumps into the lungs. There the blood picks up oxygen. So that's why it's sort of shown as being red here. The oxygenated blood comes from the left atrium and then into the left ventricle through something called the mitral valve. We'll show you some pictures of the mitral valve later on. And then the left ventricle, which is the big sort of workhorse of the heart, pumps blood through the rest of the body through a structure called the aorta. So in through the right heart, through the lungs, through the left heart, through the rest of the body. And then shown here in yellow is the conduction system. So you guys got a little bit of a conversation last class on the electrical system. So the sinoatrial node is up here in the right atrium. And then conduction sort of goes through. So the P wave on an EKG represents the conduction through there. You get through the savy node where there's a delay, which is the PR interval. And then you get spreading through the ventricles, which is the QRS complex. And then repolarization is the T wave. So that's sort of the electrical system. And of course, these things have to kind of work intimately together. Every single basic kind of cardiac physiology will show this diagram called the Wiggers diagram, which really just shows the sort of interconnectedness of the electrical system. So there's the EKG up there. These are the heart sounds that a provider would listen to with a stethoscope. And this is capturing the flow of sort of the changes in pressure in the heart and in the aorta. So heart fills during a period of time called diastole. The mitral valve closes. The ventricle contracts. The pressure increases. This is a period of time called systole. Eventually, something called the aortic valve pops open. Blood goes through the rest of the body. Heart finally starts to relax. Atrial ventricular valve closes. Then you fill again. So this happens again and again and again in a cyclical way. And you have this kind of combination of electrical and mechanical properties. So I have some pictures here. These are all MRIs. I'm going to talk about echocardiography, which is sort of these very ugly, grainy things that I unfortunately have to work with. MRIs are beautiful, but very expensive. So there's a reason for that. So this is something called the long axis view of the heart. So this is the thick walled left ventricle there. This is the left atrium there. And you can see sort of this beautiful turbulent flow of blood in there. And it's flowing from the atrium to the ventricle. This is another patient. It's called the short axis view. There's the left ventricle and the right ventricle there. So we're kind of looking at it somewhat obliquely. And then this is another view called the, it's a little bit dull there. I'm sorry. I can brighten it a little bit. This is sort of what's called the four chamber view. So you can see the left ventricle and right ventricle here. So the reason for these different views is ultimately that people have."
+}

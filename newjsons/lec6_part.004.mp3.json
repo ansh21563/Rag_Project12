@@ -1,0 +1,278 @@
+{
+    "chunks": [
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 0.0,
+            "end": 15.040000000000001,
+            "text": " The fact that this is shaded in simply denotes that at test  time, when we use these models, typically these y variables  are observed, whereas our goal is usually  to infer the x variables.  Those are typically unobserved, meaning"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 15.040000000000001,
+            "end": 36.32,
+            "text": " that our typical task is one of doing posterior inference  to infer the x's given the y's.  Now, associated with this graph, I already  told you the nodes correspond to random variables.  The graph tells us how is this joint distribution factorized."
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 36.32,
+            "end": 51.0,
+            "text": " In particular, it's going to be factorized in the following  way.  As the product over random variables  of the probability of the i-th random variable,  I'm going to use z to just note a random variable."
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 51.0,
+            "end": 73.68,
+            "text": " So think of z as the union of x and y.  z i conditioned on the parents, the values of the parents of z  i.  So I'm going to assume this factorization.  And in particular, for this graphical model,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 73.68,
+            "end": 88.32,
+            "text": " which goes by the name of a Markov model,  it has a very specific factorization.  And we're just going to read it off from this definition.  So we're going to go in order.  First, x1, then y1, then x2, then y2, and so on,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 88.32,
+            "end": 112.0,
+            "text": " which is going based on a root to children  transversal of this graph.  So the first random variable is x1.  Second random variable is y2.  And what are the parents of y1?"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 112.0,
+            "end": 123.96000000000001,
+            "text": " Everyone can say out loud.  x1, OK.  So y1 in this factorization is only going to depend on x1.  Next, we have x2.  What are the parents of x2?"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 123.96000000000001,
+            "end": 134.12,
+            "text": " Everyone say out loud.  x1, OK.  Then we have y2.  What are the parents of y2?  Everyone say out loud."
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 134.12,
+            "end": 147.94,
+            "text": " x2, and so on, OK.  So this joint distribution is going  to have a particularly simple form, which  is given to you by this factorization shown here.  And this factorization corresponds one"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 147.94,
+            "end": 161.26,
+            "text": " to one with the particular graph in the way  that I just told you.  And in this way, we can define a very complex probability  distribution by a number of much simpler conditional probability  distributions."
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 161.26,
+            "end": 175.3,
+            "text": " For example, if each of the random variables were binary,  then to describe probability of y1 given x1,  we only need two numbers.  For each value of x1, either 0 or 1,  we give the probability of y1 equals 1."
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 175.3,
+            "end": 190.70000000000002,
+            "text": " And then, of course, probability of y1 equals 0  is just 1 minus that.  So we can describe that very complicated joint distribution  by a number of much smaller distributions.  Now, the reason why I'm drawing it in this way"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 190.70000000000002,
+            "end": 214.42000000000002,
+            "text": " is because we're making some really strong assumptions  about the temporal dynamics in this problem.  In particular, the fact that x3 only has an arrow from x2  and not from x1 implies that x3 is conditionally  independent of x1 if you knew x2's value."
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 214.42000000000002,
+            "end": 228.1,
+            "text": " So in some sense, think about this as cutting.  If you were to take x2 out of the model  and remove all edges incident on it,  then x1 and x3 are now separated from one another.  They're independent."
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 228.1,
+            "end": 239.74,
+            "text": " Now, for those of you who do know graphical models,  you'll recognize that that type of independent statement  that I made is only true for Markov models.  And the semantics for Bayesian networks  are a little bit different."
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 239.74,
+            "end": 259.48,
+            "text": " But actually, for this model, they're one in the same.  So we're going to make the following assumptions  for the conditional distributions shown here.  First, we're going to suppose that xt  is given to you by a Gaussian distribution."
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 259.48,
+            "end": 274.84000000000003,
+            "text": " Remember, xt, for example, t is denoting a time step,  let's say 3, only depends in this picture,  the conditional distribution only  depends on the previous time step's value, x2 or xt minus 1.  So you'll notice how I'm going to say here"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 274.84000000000003,
+            "end": 289.48,
+            "text": " xt is going to be distributed as something,  but the only random variables in the something  can be xt minus 1, according to these assumptions.  In particular, we're going to assume that it's some Gaussian  distribution whose mean is some linear transformation of xt"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 289.48,
+            "end": 311.64000000000004,
+            "text": " minus 1, which has a fixed covariance matrix Q.  So at each step of this process, the next random variable  is some random walk from the previous random variable,  where you're moving according to some Gaussian distribution.  In a very similar way, we're going to assume that yt"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 311.64,
+            "end": 329.71999999999997,
+            "text": " is drawn also as a Gaussian distribution,  but now depending on xt.  So I want you to think about xt as the true state  of the patient.  It's a vector that's summarizing their blood pressure,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 329.71999999999997,
+            "end": 344.0,
+            "text": " their oxygen saturation, a whole bunch of other parameters,  or maybe even just one of those.  And y1 are the observations that you do observe.  So let's say x1 is the patient's true blood pressure.  y1 is the observed blood pressure,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 344.0,
+            "end": 359.56,
+            "text": " what comes from your monitor.  So then a reasonable assumption would be that, well,  if all of us were equal, if it was a true observation,  then y1 should be very close to x1.  So you might assume that this covariance matrix is,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 359.56,
+            "end": 379.79999999999995,
+            "text": " the variance is very, very small.  y1 should be very close to x1 if it's a good observation.  And of course, if it's a noisy observation, like for example,  if the probe was disconnected from the baby,  then y1 should have no relationship to x1."
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 379.79999999999995,
+            "end": 396.23999999999995,
+            "text": " And that dependence on the actual state of the world,  I'm denoting here by these superscripts s of t.  I'm ignoring that right now, and I'll bring that in  in the next slide.  Similarly, the relationship between x2 and x1"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 396.24,
+            "end": 412.16,
+            "text": " should be one which captures some of the dynamics  that I showed in the previous slides,  where I showed over here, this is the patient's true heart  rate evolving across time, let's say.  Notice how if you look very locally,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 412.16,
+            "end": 431.64000000000004,
+            "text": " it looks like there are some very big local dynamics,  whereas if you look more globally,  again, there's some smoothness, but there's some, again,  looks like some random changes across time.  So that drift has to somehow be summarized in this model"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 431.64000000000004,
+            "end": 447.16,
+            "text": " by that A random variable.  I'll get into more detail about that in just a moment.  So what I just showed you was an example  of a linear dynamical system, but it  was assuming that there were none of these events happening,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 447.16,
+            "end": 456.68,
+            "text": " none of these artifacts happening.  The actual model that we were going  to want to be able to use then is going  to also incorporate the fact that there might be artifacts.  And to model that, we need to introduce"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 456.68,
+            "end": 468.0,
+            "text": " additional random variables corresponding  to whether those artifacts occurred or not.  And so that's now this model.  So I'm going to let these S's, these  are other random variables which are"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 468.0,
+            "end": 478.72,
+            "text": " denoting artifactual events.  They are also evolving with time.  For example, if there's an artifactual event  at three seconds, maybe there's also an artifactual event  at four seconds."
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 478.72,
+            "end": 495.24,
+            "text": " And we'd like to model the relationship between those.  That's why you have these arrows.  And then the way that we interpret the observations  that we do get depends on both the true value of what's  going on with the patient and whether there"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 495.24,
+            "end": 507.68,
+            "text": " was an artifactual event or not.  And you'll notice that there's also  an edge going from the artifactual events  to the true values to note the fact  that those interventions might actually"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 507.68,
+            "end": 520.86,
+            "text": " be affecting the patient.  For example, if you give them a medication  to change their blood pressure, then that procedure  is going to affect the next time step's value  of the patient's blood pressure."
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 524.4,
+            "end": 540.82,
+            "text": " So when one wants to learn this model,  you have to ask yourself, what types of data  do you have available?  Unfortunately, it's very hard to get data  on both the ground truth, what's going on"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 541.1,
+            "end": 553.38,
+            "text": " with the patient, and whether these artifacts truly  occurred or not.  Instead, what we actually have are just these observations.  Like, we get these very noisy blood pressure  draws across time."
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 553.38,
+            "end": 566.1,
+            "text": " So what this paper does is it uses a maximum likelihood  estimation approach where it recognizes  that we're going to be learning from missing data.  We're going to explicitly think of these x's and the s's  as latent variables."
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 566.1,
+            "end": 580.4399999999999,
+            "text": " And we're going to maximize the likelihood of the whole entire  model, marginalizing over x and s.  So just maximizing the marginal likelihood over the y's.  Now, for those of you who've studied  unsupervised learning before, you"
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 580.4399999999999,
+            "end": 597.28,
+            "text": " might recognize that as a very hard learning problem.  In fact, that likelihood is non-convex.  And one can imagine all sorts of different heuristics  for learning, such as gradient descent,  or as this paper uses, expectation maximization."
+        },
+        {
+            "number": "lec6",
+            "title": "part.004.mp3",
+            "start": 597.28,
+            "end": 602.68,
+            "text": " And because of that non-convexity,  each of these algorithms is going  to be able to do this."
+        }
+    ],
+    "text": " The fact that this is shaded in simply denotes that at test time, when we use these models, typically these y variables are observed, whereas our goal is usually to infer the x variables. Those are typically unobserved, meaning that our typical task is one of doing posterior inference to infer the x's given the y's. Now, associated with this graph, I already told you the nodes correspond to random variables. The graph tells us how is this joint distribution factorized. In particular, it's going to be factorized in the following way. As the product over random variables of the probability of the i-th random variable, I'm going to use z to just note a random variable. So think of z as the union of x and y. z i conditioned on the parents, the values of the parents of z i. So I'm going to assume this factorization. And in particular, for this graphical model, which goes by the name of a Markov model, it has a very specific factorization. And we're just going to read it off from this definition. So we're going to go in order. First, x1, then y1, then x2, then y2, and so on, which is going based on a root to children transversal of this graph. So the first random variable is x1. Second random variable is y2. And what are the parents of y1? Everyone can say out loud. x1, OK. So y1 in this factorization is only going to depend on x1. Next, we have x2. What are the parents of x2? Everyone say out loud. x1, OK. Then we have y2. What are the parents of y2? Everyone say out loud. x2, and so on, OK. So this joint distribution is going to have a particularly simple form, which is given to you by this factorization shown here. And this factorization corresponds one to one with the particular graph in the way that I just told you. And in this way, we can define a very complex probability distribution by a number of much simpler conditional probability distributions. For example, if each of the random variables were binary, then to describe probability of y1 given x1, we only need two numbers. For each value of x1, either 0 or 1, we give the probability of y1 equals 1. And then, of course, probability of y1 equals 0 is just 1 minus that. So we can describe that very complicated joint distribution by a number of much smaller distributions. Now, the reason why I'm drawing it in this way is because we're making some really strong assumptions about the temporal dynamics in this problem. In particular, the fact that x3 only has an arrow from x2 and not from x1 implies that x3 is conditionally independent of x1 if you knew x2's value. So in some sense, think about this as cutting. If you were to take x2 out of the model and remove all edges incident on it, then x1 and x3 are now separated from one another. They're independent. Now, for those of you who do know graphical models, you'll recognize that that type of independent statement that I made is only true for Markov models. And the semantics for Bayesian networks are a little bit different. But actually, for this model, they're one in the same. So we're going to make the following assumptions for the conditional distributions shown here. First, we're going to suppose that xt is given to you by a Gaussian distribution. Remember, xt, for example, t is denoting a time step, let's say 3, only depends in this picture, the conditional distribution only depends on the previous time step's value, x2 or xt minus 1. So you'll notice how I'm going to say here xt is going to be distributed as something, but the only random variables in the something can be xt minus 1, according to these assumptions. In particular, we're going to assume that it's some Gaussian distribution whose mean is some linear transformation of xt minus 1, which has a fixed covariance matrix Q. So at each step of this process, the next random variable is some random walk from the previous random variable, where you're moving according to some Gaussian distribution. In a very similar way, we're going to assume that yt is drawn also as a Gaussian distribution, but now depending on xt. So I want you to think about xt as the true state of the patient. It's a vector that's summarizing their blood pressure, their oxygen saturation, a whole bunch of other parameters, or maybe even just one of those. And y1 are the observations that you do observe. So let's say x1 is the patient's true blood pressure. y1 is the observed blood pressure, what comes from your monitor. So then a reasonable assumption would be that, well, if all of us were equal, if it was a true observation, then y1 should be very close to x1. So you might assume that this covariance matrix is, the variance is very, very small. y1 should be very close to x1 if it's a good observation. And of course, if it's a noisy observation, like for example, if the probe was disconnected from the baby, then y1 should have no relationship to x1. And that dependence on the actual state of the world, I'm denoting here by these superscripts s of t. I'm ignoring that right now, and I'll bring that in in the next slide. Similarly, the relationship between x2 and x1 should be one which captures some of the dynamics that I showed in the previous slides, where I showed over here, this is the patient's true heart rate evolving across time, let's say. Notice how if you look very locally, it looks like there are some very big local dynamics, whereas if you look more globally, again, there's some smoothness, but there's some, again, looks like some random changes across time. So that drift has to somehow be summarized in this model by that A random variable. I'll get into more detail about that in just a moment. So what I just showed you was an example of a linear dynamical system, but it was assuming that there were none of these events happening, none of these artifacts happening. The actual model that we were going to want to be able to use then is going to also incorporate the fact that there might be artifacts. And to model that, we need to introduce additional random variables corresponding to whether those artifacts occurred or not. And so that's now this model. So I'm going to let these S's, these are other random variables which are denoting artifactual events. They are also evolving with time. For example, if there's an artifactual event at three seconds, maybe there's also an artifactual event at four seconds. And we'd like to model the relationship between those. That's why you have these arrows. And then the way that we interpret the observations that we do get depends on both the true value of what's going on with the patient and whether there was an artifactual event or not. And you'll notice that there's also an edge going from the artifactual events to the true values to note the fact that those interventions might actually be affecting the patient. For example, if you give them a medication to change their blood pressure, then that procedure is going to affect the next time step's value of the patient's blood pressure. So when one wants to learn this model, you have to ask yourself, what types of data do you have available? Unfortunately, it's very hard to get data on both the ground truth, what's going on with the patient, and whether these artifacts truly occurred or not. Instead, what we actually have are just these observations. Like, we get these very noisy blood pressure draws across time. So what this paper does is it uses a maximum likelihood estimation approach where it recognizes that we're going to be learning from missing data. We're going to explicitly think of these x's and the s's as latent variables. And we're going to maximize the likelihood of the whole entire model, marginalizing over x and s. So just maximizing the marginal likelihood over the y's. Now, for those of you who've studied unsupervised learning before, you might recognize that as a very hard learning problem. In fact, that likelihood is non-convex. And one can imagine all sorts of different heuristics for learning, such as gradient descent, or as this paper uses, expectation maximization. And because of that non-convexity, each of these algorithms is going to be able to do this."
+}

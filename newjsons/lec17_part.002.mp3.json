@@ -1,0 +1,264 @@
+{
+    "chunks": [
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 0.0,
+            "end": 12.84,
+            "text": " over the number of negative or zero data points.  And I expanded the derivation that I gave in class.  I posted new slides online after class.  So if you're curious about that, go to those slides  and look at the derivation."
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 15.44,
+            "end": 30.560000000000002,
+            "text": " So in a very analogous way now, I'm  going to give you a new estimator for this same quantity  that I had over here, the expected reward of a policy.  Notice that this estimator here, it  made sense for any policy."
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 30.560000000000002,
+            "end": 43.92,
+            "text": " Didn't have to be the policy which looked at,  is k just greater than zero or not?  This held for any policy, and the simplification I gave  was only in this particular setting.  I'm going to give you now another estimator"
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 43.92,
+            "end": 60.08,
+            "text": " for the average value of a policy, which  doesn't go through estimating potential outcomes at all.  And analogous to this, it's just going  to make use of the propensity scores.  And I'll call that the R hat."
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 60.08,
+            "end": 75.6,
+            "text": " Now I'm going to put a superscript, IPW,  for inverse propensity weighted.  And it's a function of pi.  And it's given to you by the following formula, 1 over n,  sum over the data points of an indicator function"
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 75.6,
+            "end": 92.32000000000001,
+            "text": " for if the treatment, which was actually  given to the i-th patient, is equal to what the policy would  have done for the i-th patient.  And by the way, here I'm assuming  that pi is a deterministic function."
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 92.32000000000001,
+            "end": 106.2,
+            "text": " So the policy says, for this patient,  you should do this treatment.  So we're going to look at just the data points for which  the observed treatment is consistent with what  the policy would have done for that patient."
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 106.2,
+            "end": 132.35999999999999,
+            "text": " And this indicator function is 0 otherwise.  And we're going to divide it by the probability of Ti given Xi.  So the way I'm writing this, by the way, is very general.  So this formula will hold for non-binary treatments as well.  And that's one of the really nice things"
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 132.35999999999999,
+            "end": 148.16,
+            "text": " about thinking about policies, which  whereas when talking about average treatment effect,  average treatment effect sort of makes sense  in the comparative sense, comparing one to another.  But when we talk about how good is a policy,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 148.16,
+            "end": 157.44,
+            "text": " it's not a comparative statement at all.  The policy does something for everyone.  You could ask, well, what is the average value of the outcomes  that you get for those actions that were  taken for those individuals?"
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 157.44,
+            "end": 168.51999999999998,
+            "text": " So that's why I'm writing in a slightly more general fashion  already here.  Times Yi, obviously.  So this is now a new estimator.  I'm not going to derive it for you in class,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 168.51999999999998,
+            "end": 181.0,
+            "text": " but the derivation is very similar to what  we did last week when we tried to drive the average treatment  effect.  And the critical point is we're dividing by that propensity  score, just like we did over there."
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 184.39999999999998,
+            "end": 204.92000000000002,
+            "text": " So this, if all of the assumptions made sense,  you had infinite data, should give you  exactly the same estimate as this.  But here, you're not estimating potential outcomes at all.  So you never have to try to impute the counterfactuals."
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 204.92000000000002,
+            "end": 220.28,
+            "text": " Here, all it relies on knowing is  that you have the propensity scores for each of the data  points in your training set, or in a data set.  So for example, this opens the door  to tons of new exciting directions."
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 220.28,
+            "end": 239.08,
+            "text": " Imagine that you had a very large observational data set,  and you learned a policy from it.  For example, you might have done covariate adjustment,  and then said, OK, based on covariate adjustment,  this is my new policy."
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 239.08,
+            "end": 255.32,
+            "text": " So you might have gotten it via that approach.  And now you want to know, how good is that?  Well, suppose that you then run a randomized control trial.  And in your randomized control trial,  you have 100 people, maybe 200 people, so not that many."
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 255.32,
+            "end": 265.88,
+            "text": " So not nearly enough people to have actually  estimated your policy alone.  You might have needed thousands or millions of individuals  to estimate your policy.  Now you're only going to have a couple hundred individuals"
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 265.88,
+            "end": 277.8,
+            "text": " that you could actually afford to do a randomized control  trial on.  For those people, because you're flipping  a coin for which treatment they're going to get,  suppose that we're in a binary setting"
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 277.8,
+            "end": 294.12,
+            "text": " with only two treatments, then this value  is always 1 half, 1 half.  And what I'm giving you here is going  to be an unbiased estimate of how good that policy is,  which one can now estimate using that randomized control trial."
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 297.36,
+            "end": 317.91999999999996,
+            "text": " Now, this also might lead you to think  through the question of, well, rather than estimating  a policy through, rather than obtaining a policy  through the lens of optimizing CATE,  of figuring how to estimate CATE,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 317.91999999999996,
+            "end": 332.47999999999996,
+            "text": " maybe we could have skipped that altogether.  For example, suppose that we had that randomized control trial  data.  Now imagine that rather than 100 individuals,  you had a really large randomized control trial"
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 332.47999999999996,
+            "end": 350.0,
+            "text": " with 10,000 individuals in it.  This now opens the door to thinking about directly  maximizing or minimizing, depending  on whether you want this to be large or small,  pi with respect to this quantity, which completely"
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 350.0,
+            "end": 364.44,
+            "text": " bypasses the goal of estimating the conditional average  treatment effect.  And you'll notice how this looks exactly like a classification  problem.  This quantity here looks exactly like a 0, 1 loss."
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 364.44,
+            "end": 381.28,
+            "text": " And the only difference is that you're  weighting each of the data points  by this inverse propensity.  So one can reduce the problem of actually finding  an optimal policy here to that of a weighted classification"
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 381.28,
+            "end": 405.96000000000004,
+            "text": " problem in the case of a discrete set of treatments.  There are two big caveats to that line of thinking.  The first major caveat is that you have  to know these propensity scores.  And so if you have data coming from a randomized control"
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 405.96000000000004,
+            "end": 421.76000000000005,
+            "text": " trial, you will know those propensity scores.  Or if you have, for example, some control over the data  generation process.  For example, if you are a ad company  and you get a choose which adds to show to your customers,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 421.76000000000005,
+            "end": 434.52000000000004,
+            "text": " then you look to see who clicks on what,  you might know what that policy was that was showing things.  In that case, you might exactly know the propensity scores.  In health care, other than in randomized control trials,  we typically don't know this value."
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 434.52000000000004,
+            "end": 451.0,
+            "text": " So we either have to have a large enough randomized control  trial that we won't overfit by trying  to directly minimize this.  Or we have to work within an observational data setting,  but we have to estimate the propensity scores directly."
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 451.0,
+            "end": 463.15999999999997,
+            "text": " So you would then have a two-step procedure  where first you estimate these propensity scores,  for example, by doing logistic regression.  And then you attempt to maximize or minimize  this quantity in order to find the optimal policy."
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 465.91999999999996,
+            "end": 482.0,
+            "text": " And that has a lot of challenges,  because this quantity shown in the very bottom  here could be really small or really large  in an observational data set due to these issues of having  very small overlap between your treatments."
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 482.0,
+            "end": 499.88,
+            "text": " And this being very small implies, then,  that the variance of this estimator is very, very large.  And so when one wants to use an approach like this,  similar to when one wants to use an average treatment effect  estimator, and when you're estimating these propensities,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 499.88,
+            "end": 513.8,
+            "text": " often you might need to do things  like clipping of the propensity scores  in order to prevent the variance from being too large.  That, then, however, leads to a biased estimator, typically.  I wanted to give you a couple of references here."
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 513.8,
+            "end": 543.4799999999999,
+            "text": " So one is Swaminathan and Jogams, J-O-A-C-H-I-M-S.  ICML 2015.  In that paper, they tackle this question.  They focus on the setting where the propensity scores are known,  such as you would have from a randomized control trial."
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 543.4799999999999,
+            "end": 555.12,
+            "text": " And they recognize that you might  decide that you prefer something like a biased estimator  because of the fact that these propensity scores could  be really small.  And so they use some generalization results"
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 555.12,
+            "end": 570.5,
+            "text": " from the machine learning theory community  in order to try to control the variance of the estimator  as a function of these propensity scores.  And they then learn, directly minimize the policy,  which is what they call counterfactual regret"
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 570.5,
+            "end": 584.46,
+            "text": " minimization, in order to allow one to generalize as best  as possible from the small amount of data  you might have available.  A second reference that I want to give,  just to point you into this literature if you're interested,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.002.mp3",
+            "start": 584.46,
+            "end": 600.7800000000001,
+            "text": " is by Nathan Callis and his student, I believe,  Angela Zhu from NURiPS 2018.  And that was a paper which was one  of the optional readings for last Thursday's class."
+        }
+    ],
+    "text": " over the number of negative or zero data points. And I expanded the derivation that I gave in class. I posted new slides online after class. So if you're curious about that, go to those slides and look at the derivation. So in a very analogous way now, I'm going to give you a new estimator for this same quantity that I had over here, the expected reward of a policy. Notice that this estimator here, it made sense for any policy. Didn't have to be the policy which looked at, is k just greater than zero or not? This held for any policy, and the simplification I gave was only in this particular setting. I'm going to give you now another estimator for the average value of a policy, which doesn't go through estimating potential outcomes at all. And analogous to this, it's just going to make use of the propensity scores. And I'll call that the R hat. Now I'm going to put a superscript, IPW, for inverse propensity weighted. And it's a function of pi. And it's given to you by the following formula, 1 over n, sum over the data points of an indicator function for if the treatment, which was actually given to the i-th patient, is equal to what the policy would have done for the i-th patient. And by the way, here I'm assuming that pi is a deterministic function. So the policy says, for this patient, you should do this treatment. So we're going to look at just the data points for which the observed treatment is consistent with what the policy would have done for that patient. And this indicator function is 0 otherwise. And we're going to divide it by the probability of Ti given Xi. So the way I'm writing this, by the way, is very general. So this formula will hold for non-binary treatments as well. And that's one of the really nice things about thinking about policies, which whereas when talking about average treatment effect, average treatment effect sort of makes sense in the comparative sense, comparing one to another. But when we talk about how good is a policy, it's not a comparative statement at all. The policy does something for everyone. You could ask, well, what is the average value of the outcomes that you get for those actions that were taken for those individuals? So that's why I'm writing in a slightly more general fashion already here. Times Yi, obviously. So this is now a new estimator. I'm not going to derive it for you in class, but the derivation is very similar to what we did last week when we tried to drive the average treatment effect. And the critical point is we're dividing by that propensity score, just like we did over there. So this, if all of the assumptions made sense, you had infinite data, should give you exactly the same estimate as this. But here, you're not estimating potential outcomes at all. So you never have to try to impute the counterfactuals. Here, all it relies on knowing is that you have the propensity scores for each of the data points in your training set, or in a data set. So for example, this opens the door to tons of new exciting directions. Imagine that you had a very large observational data set, and you learned a policy from it. For example, you might have done covariate adjustment, and then said, OK, based on covariate adjustment, this is my new policy. So you might have gotten it via that approach. And now you want to know, how good is that? Well, suppose that you then run a randomized control trial. And in your randomized control trial, you have 100 people, maybe 200 people, so not that many. So not nearly enough people to have actually estimated your policy alone. You might have needed thousands or millions of individuals to estimate your policy. Now you're only going to have a couple hundred individuals that you could actually afford to do a randomized control trial on. For those people, because you're flipping a coin for which treatment they're going to get, suppose that we're in a binary setting with only two treatments, then this value is always 1 half, 1 half. And what I'm giving you here is going to be an unbiased estimate of how good that policy is, which one can now estimate using that randomized control trial. Now, this also might lead you to think through the question of, well, rather than estimating a policy through, rather than obtaining a policy through the lens of optimizing CATE, of figuring how to estimate CATE, maybe we could have skipped that altogether. For example, suppose that we had that randomized control trial data. Now imagine that rather than 100 individuals, you had a really large randomized control trial with 10,000 individuals in it. This now opens the door to thinking about directly maximizing or minimizing, depending on whether you want this to be large or small, pi with respect to this quantity, which completely bypasses the goal of estimating the conditional average treatment effect. And you'll notice how this looks exactly like a classification problem. This quantity here looks exactly like a 0, 1 loss. And the only difference is that you're weighting each of the data points by this inverse propensity. So one can reduce the problem of actually finding an optimal policy here to that of a weighted classification problem in the case of a discrete set of treatments. There are two big caveats to that line of thinking. The first major caveat is that you have to know these propensity scores. And so if you have data coming from a randomized control trial, you will know those propensity scores. Or if you have, for example, some control over the data generation process. For example, if you are a ad company and you get a choose which adds to show to your customers, then you look to see who clicks on what, you might know what that policy was that was showing things. In that case, you might exactly know the propensity scores. In health care, other than in randomized control trials, we typically don't know this value. So we either have to have a large enough randomized control trial that we won't overfit by trying to directly minimize this. Or we have to work within an observational data setting, but we have to estimate the propensity scores directly. So you would then have a two-step procedure where first you estimate these propensity scores, for example, by doing logistic regression. And then you attempt to maximize or minimize this quantity in order to find the optimal policy. And that has a lot of challenges, because this quantity shown in the very bottom here could be really small or really large in an observational data set due to these issues of having very small overlap between your treatments. And this being very small implies, then, that the variance of this estimator is very, very large. And so when one wants to use an approach like this, similar to when one wants to use an average treatment effect estimator, and when you're estimating these propensities, often you might need to do things like clipping of the propensity scores in order to prevent the variance from being too large. That, then, however, leads to a biased estimator, typically. I wanted to give you a couple of references here. So one is Swaminathan and Jogams, J-O-A-C-H-I-M-S. ICML 2015. In that paper, they tackle this question. They focus on the setting where the propensity scores are known, such as you would have from a randomized control trial. And they recognize that you might decide that you prefer something like a biased estimator because of the fact that these propensity scores could be really small. And so they use some generalization results from the machine learning theory community in order to try to control the variance of the estimator as a function of these propensity scores. And they then learn, directly minimize the policy, which is what they call counterfactual regret minimization, in order to allow one to generalize as best as possible from the small amount of data you might have available. A second reference that I want to give, just to point you into this literature if you're interested, is by Nathan Callis and his student, I believe, Angela Zhu from NURiPS 2018. And that was a paper which was one of the optional readings for last Thursday's class."
+}

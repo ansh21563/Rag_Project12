@@ -1,0 +1,243 @@
+{
+    "chunks": [
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 0.0,
+            "end": 17.72,
+            "text": " the target language generator.  So then someone came along and said, hmm.  Someone, namely these guys, came along and said,  wouldn't it be nice if we could provide  some auxiliary information to the generator that said, hey,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 17.72,
+            "end": 35.18,
+            "text": " which part of the input sentence should you pay attention to?  And of course, there's no fixed answer to that.  I mean, if I'm translating an arbitrary English sentence  into an arbitrary French sentence,  I can't say, in general, look at the third word"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 35.18,
+            "end": 46.54,
+            "text": " in the English sentence when you're  generating the third word in the French sentence,  because that may or may not be true depending  on the particular sentence.  But on the other hand, the intuition"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 46.54,
+            "end": 64.2,
+            "text": " is that there is such a positional dependence  and a dependence on what the particular English sentence  was, English word was, that is an important component  of generating the French word.  And so they created this idea that in addition"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 64.2,
+            "end": 87.32,
+            "text": " to passing along this vector that  encodes the meaning of the entire input  and the previous word that you had generated in the output,  in addition, we pass along this other information that  says, which of the input words should we pay attention to"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 87.32,
+            "end": 104.02,
+            "text": " and how much attention should we pay to them?  And of course, in the style of these embeddings,  these are all represented by high dimensional vectors,  high dimensional real number vectors  that get combined with the other vectors"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 104.02,
+            "end": 125.64,
+            "text": " in order to produce the output.  Now, a classical linguist would look at this and retch,  because this looks nothing like classical linguistics.  It's just numerology that gets trained  by stochastic gradient descent methods"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 125.64,
+            "end": 147.94,
+            "text": " in order to optimize the output.  But from an engineering point of view, it works quite well.  So then for a while, that was the state of the art.  And then last year, these guys, Vasvani et al,  came along and said, you know, we now"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 147.94,
+            "end": 163.85999999999999,
+            "text": " have this complicated architecture where  we are doing the old style translation where we summarize  everything into one vector and then use that to generate  a sequence of outputs.  And we have this attention mechanism"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 163.85999999999999,
+            "end": 180.57999999999998,
+            "text": " that tells us how much of various inputs  to use in generating each element of the output.  Is the first of those actually necessary?  And so they published this lovely paper  saying attention is all you need that says, hey,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 180.57999999999998,
+            "end": 200.5,
+            "text": " you know, that thing that you guys added to this translation  model, not only is it a useful addition,  but in fact, it can take the place of the original model.  And so the transformer is an architecture  that is the hottest thing since sliced bread at the moment"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 200.5,
+            "end": 216.88,
+            "text": " that says, OK, here's what we do.  We take the inputs.  We calculate some embedding for them.  We then want to retain the position because, of course,  the sequence in which the words appear matters."
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 216.88,
+            "end": 232.38,
+            "text": " And the positional encoding is this weird thing  where it encodes using sine waves  so that it's an orthogonal basis.  And so it has nice characteristics.  And then we run it into an attention model"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 232.38,
+            "end": 251.26,
+            "text": " that is essentially computing self-attention.  So it's saying what it's like Word2Vec,  except in a more sophisticated way.  So it's looking at all the words in the sentence  and saying, which words is this word most related to?"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 253.9,
+            "end": 267.24,
+            "text": " And then, in order to complicate it some more,  they say, well, we don't want just a single notion  of attention.  We want multiple notions of attention.  So what does that sound like?"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 267.24,
+            "end": 285.56,
+            "text": " Well, to me, it sounds a bit like what  you see in convolutional neural networks, where often when  you're processing an image with a CNN,  you're not only applying one filter to the image,  but you're applying a whole bunch of different filters."
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 285.56,
+            "end": 305.06,
+            "text": " And because you initialize them randomly,  you hope that they will converge to things that actually detect  different interesting properties of the image.  So the same idea here, that what they're doing  is they're starting with a bunch of these attention matrices"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 305.06,
+            "end": 322.32,
+            "text": " and saying, we initialize them randomly.  They will evolve into something that  is most useful for helping us deal with the overall problem.  So then they run this through a series of,  I think in Vaswani's paper, something like six layers that"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 322.32,
+            "end": 340.55999999999995,
+            "text": " are just replicated.  And there are additional things like feeding forward  the input signal in order to add it  to the output signal of the stage, and then normalizing,  and then rerunning it, and then running it"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 340.55999999999995,
+            "end": 357.26,
+            "text": " through a feed-forward network that also has a bypass that  combines the input with the output of the feed-forward  network.  And then you do this six times or n times.  And that then feeds into the generator."
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 357.26,
+            "end": 374.65999999999997,
+            "text": " And the generator then uses a very similar architecture  to calculate output probabilities.  And then it samples from those in order to generate the text.  So this is sort of the contemporary way  that one can do translation."
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 374.66,
+            "end": 387.72,
+            "text": " We're using this approach.  Obviously, I don't have time to go  into all the details of how all this is done.  And I'd probably do it wrong anyway.  But you can look at the paper, which gives a good explanation."
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 387.72,
+            "end": 403.6,
+            "text": " And that blog that I pointed to also  has a pointer to another blog post  by the same guy that does a pretty good job of explaining  the transformer architecture.  It's complicated."
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 403.6,
+            "end": 425.3,
+            "text": " So what you get out of the multi-head attention mechanism  is that here is one attention machine.  And for example, the colors here indicate the degree  to which the encoding of the word  it depends on the other words in the sentence."
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 425.3,
+            "end": 446.22,
+            "text": " And you see that it's focused on the animal, which makes sense  because it, in fact, is referring  to the animal in this sentence.  Here, they introduce another encoding.  And this one focuses on was too tired, which is also good"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 446.22,
+            "end": 465.96,
+            "text": " because it, again, refers to the thing that was too tired.  And of course, by multi-headed, they  mean that it's doing this many times.  And so you're identifying all kinds  of different relationships in the input sentence."
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 465.96,
+            "end": 486.2,
+            "text": " Well, along the same lines is this encoding called Elmo.  People seem to like Sesame Street characters.  So Elmo is based on a bidirectional LSTM.  So it's an older technology.  But what it does is, unlike Word2Vec,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 486.2,
+            "end": 506.53999999999996,
+            "text": " which built an encoding, an embedding for each type.  So every time the word junk appears,  it gets the same embedding.  Here, what they're saying is, hey, take context seriously.  And we're going to calculate a different embedding"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 506.53999999999996,
+            "end": 523.6,
+            "text": " for each occurrence in context of a token.  And this turns out to be very good  because it goes part of the way to solving the word sense  disambiguation problem.  So this is just an example."
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 523.6,
+            "end": 541.48,
+            "text": " If you look at the word play in GloVe, which  is a slightly more sophisticated variant of the Word2Vec  approach, you get playing game, games, played, players, plays,  player, play football, multiplayer.  This all seems to be about games because probably"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 541.48,
+            "end": 559.1800000000001,
+            "text": " from the literature that they got this from,  that's the most common usage of the word play.  Whereas using this bidirectional language model,  they can separate out something like Kiefer,  the only junior in the group, was"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 559.1800000000001,
+            "end": 573.1,
+            "text": " commended for his ability to hit in the clutch,  as well as his all-around excellent play.  So this is presumably the baseball player.  And here is they were actors who had been handed fat roles  in a successful play."
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 573.1,
+            "end": 590.64,
+            "text": " So this is a different meaning of the word play.  And so this embedding also has made really important  contributions to improving the quality of natural language  processing by being able to deal with the fact  that single words have multiple meanings, not only in English,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.006.mp3",
+            "start": 590.64,
+            "end": 600.1600000000001,
+            "text": " but in other languages.  So after Elmo comes Bert, which is this bidirectional encoder"
+        }
+    ],
+    "text": " the target language generator. So then someone came along and said, hmm. Someone, namely these guys, came along and said, wouldn't it be nice if we could provide some auxiliary information to the generator that said, hey, which part of the input sentence should you pay attention to? And of course, there's no fixed answer to that. I mean, if I'm translating an arbitrary English sentence into an arbitrary French sentence, I can't say, in general, look at the third word in the English sentence when you're generating the third word in the French sentence, because that may or may not be true depending on the particular sentence. But on the other hand, the intuition is that there is such a positional dependence and a dependence on what the particular English sentence was, English word was, that is an important component of generating the French word. And so they created this idea that in addition to passing along this vector that encodes the meaning of the entire input and the previous word that you had generated in the output, in addition, we pass along this other information that says, which of the input words should we pay attention to and how much attention should we pay to them? And of course, in the style of these embeddings, these are all represented by high dimensional vectors, high dimensional real number vectors that get combined with the other vectors in order to produce the output. Now, a classical linguist would look at this and retch, because this looks nothing like classical linguistics. It's just numerology that gets trained by stochastic gradient descent methods in order to optimize the output. But from an engineering point of view, it works quite well. So then for a while, that was the state of the art. And then last year, these guys, Vasvani et al, came along and said, you know, we now have this complicated architecture where we are doing the old style translation where we summarize everything into one vector and then use that to generate a sequence of outputs. And we have this attention mechanism that tells us how much of various inputs to use in generating each element of the output. Is the first of those actually necessary? And so they published this lovely paper saying attention is all you need that says, hey, you know, that thing that you guys added to this translation model, not only is it a useful addition, but in fact, it can take the place of the original model. And so the transformer is an architecture that is the hottest thing since sliced bread at the moment that says, OK, here's what we do. We take the inputs. We calculate some embedding for them. We then want to retain the position because, of course, the sequence in which the words appear matters. And the positional encoding is this weird thing where it encodes using sine waves so that it's an orthogonal basis. And so it has nice characteristics. And then we run it into an attention model that is essentially computing self-attention. So it's saying what it's like Word2Vec, except in a more sophisticated way. So it's looking at all the words in the sentence and saying, which words is this word most related to? And then, in order to complicate it some more, they say, well, we don't want just a single notion of attention. We want multiple notions of attention. So what does that sound like? Well, to me, it sounds a bit like what you see in convolutional neural networks, where often when you're processing an image with a CNN, you're not only applying one filter to the image, but you're applying a whole bunch of different filters. And because you initialize them randomly, you hope that they will converge to things that actually detect different interesting properties of the image. So the same idea here, that what they're doing is they're starting with a bunch of these attention matrices and saying, we initialize them randomly. They will evolve into something that is most useful for helping us deal with the overall problem. So then they run this through a series of, I think in Vaswani's paper, something like six layers that are just replicated. And there are additional things like feeding forward the input signal in order to add it to the output signal of the stage, and then normalizing, and then rerunning it, and then running it through a feed-forward network that also has a bypass that combines the input with the output of the feed-forward network. And then you do this six times or n times. And that then feeds into the generator. And the generator then uses a very similar architecture to calculate output probabilities. And then it samples from those in order to generate the text. So this is sort of the contemporary way that one can do translation. We're using this approach. Obviously, I don't have time to go into all the details of how all this is done. And I'd probably do it wrong anyway. But you can look at the paper, which gives a good explanation. And that blog that I pointed to also has a pointer to another blog post by the same guy that does a pretty good job of explaining the transformer architecture. It's complicated. So what you get out of the multi-head attention mechanism is that here is one attention machine. And for example, the colors here indicate the degree to which the encoding of the word it depends on the other words in the sentence. And you see that it's focused on the animal, which makes sense because it, in fact, is referring to the animal in this sentence. Here, they introduce another encoding. And this one focuses on was too tired, which is also good because it, again, refers to the thing that was too tired. And of course, by multi-headed, they mean that it's doing this many times. And so you're identifying all kinds of different relationships in the input sentence. Well, along the same lines is this encoding called Elmo. People seem to like Sesame Street characters. So Elmo is based on a bidirectional LSTM. So it's an older technology. But what it does is, unlike Word2Vec, which built an encoding, an embedding for each type. So every time the word junk appears, it gets the same embedding. Here, what they're saying is, hey, take context seriously. And we're going to calculate a different embedding for each occurrence in context of a token. And this turns out to be very good because it goes part of the way to solving the word sense disambiguation problem. So this is just an example. If you look at the word play in GloVe, which is a slightly more sophisticated variant of the Word2Vec approach, you get playing game, games, played, players, plays, player, play football, multiplayer. This all seems to be about games because probably from the literature that they got this from, that's the most common usage of the word play. Whereas using this bidirectional language model, they can separate out something like Kiefer, the only junior in the group, was commended for his ability to hit in the clutch, as well as his all-around excellent play. So this is presumably the baseball player. And here is they were actors who had been handed fat roles in a successful play. So this is a different meaning of the word play. And so this embedding also has made really important contributions to improving the quality of natural language processing by being able to deal with the fact that single words have multiple meanings, not only in English, but in other languages. So after Elmo comes Bert, which is this bidirectional encoder"
+}

@@ -1,0 +1,285 @@
+{
+    "chunks": [
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 0.0,
+            "end": 12.3,
+            "text": " OK, there might only be a single trajectory,  because we're only assuming there's a single disease  subtype.  But do we expect a particular topology?  Now, everything that we've been talking about up until now"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 12.3,
+            "end": 23.12,
+            "text": " has been a linear topology, meaning  there's a linear projection.  There's such a notion of early and late to stage.  But in fact, the linear trajectory  may not be realistic."
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 23.12,
+            "end": 37.04,
+            "text": " Maybe the trajectory looks a little bit more  like this bifurcation.  Maybe patients look the same very early in the disease  stage, but then suddenly something  might happen, which causes some patients to go this way"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 37.04,
+            "end": 50.4,
+            "text": " and some patients to go that way.  Any idea what that might be in a clinical setting?  Treatment.  Treatment, that's great.  So maybe these patients got t equals 0,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 50.4,
+            "end": 61.66,
+            "text": " and maybe these patients got t equals 1.  And maybe for whatever reason, we don't even  have good data on what treatments patients got,  so we don't actually observe the treatment.  Then you might want to be able to discover that bifurcation"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 61.66,
+            "end": 71.8,
+            "text": " directly from the data.  Then that might suggest, going back  to the original source of the data,  to ask what differentiated these patients at this point in time.  And you might discover, oh, there"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 71.8,
+            "end": 85.66,
+            "text": " was something in the data that we didn't  record, such as treatment.  So there are a variety of methods  to try to infer these pseudotimes under a variety  of different assumptions."
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 85.66,
+            "end": 102.53999999999999,
+            "text": " What I'll do in the next few minutes  is just give you an inkling of how two of the methods work.  And I chose these to be representative examples.  The first example is an approach based on building  a minimum spanning tree."
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 102.53999999999999,
+            "end": 117.98,
+            "text": " And this algorithm I'm going to describe  goes by the name of Monocle.  It was published in 2014 in this paper by Tropnol et al.  But it builds very heavily on an earlier published paper  from 2003 that I'm also citing here."
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 117.98,
+            "end": 130.48,
+            "text": " So the way that this algorithm works is as follows.  It starts with, as we've been assuming all along,  cross-sectional data, which lives  in some high dimensional space.  I'm drawing that in the top left here."
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 130.48,
+            "end": 142.9,
+            "text": " Each data point corresponds to some patient or some cell.  The first step of the algorithm is  to do dimensionality reduction.  And there are many ways to do dimensionality reduction.  You could do principal components analysis."
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 142.9,
+            "end": 151.16,
+            "text": " Or for example, you could do independent components  analysis.  This paper uses independent components analysis.  What ICA is going to do is going to attempt  to find a number of different components"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 151.16,
+            "end": 164.38,
+            "text": " that seem to be as independent from one another as possible.  Then you're going to represent the data now  in this lower dimensional space.  And in many of these papers, it's  quite astonishing to me, they actually use dimension two."
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 164.38,
+            "end": 181.16,
+            "text": " So they'll go all the way down in two dimensional space  where you can actually plot all of the data.  It's not at all obvious to me why you would want to do that.  Clinical data, I think that might be a very poor choice.  Then what they do is they build a minimum spanning tree"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 181.16,
+            "end": 197.62,
+            "text": " on all of the patients or cells.  So the way that one does that is you create a graph  by drawing an edge between every pair of nodes  where the weight of the edge is the Euclidean distance  between those two points."
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 198.5,
+            "end": 212.82,
+            "text": " And then, so for example, there is this edge from here to here.  There's an edge from here to here and so on.  And then given that weighted graph,  we're going to find the minimum spanning tree of that graph.  And what I'm showing you here is the minimum spanning"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 212.82,
+            "end": 230.54000000000002,
+            "text": " tree of the corresponding graph.  Next, what one will do is you'll look for the longest path  in that tree.  Remember, finding the longest path in a graph,  in an arbitrary graph, has a name."
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 230.54000000000002,
+            "end": 241.14000000000001,
+            "text": " It's called the traveling salesman problem,  and it's an NP-hard problem.  How has that gotten around here?  Well, this is not an arbitrary graph.  This is actually a tree."
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 241.14000000000001,
+            "end": 262.82,
+            "text": " So here's a bad algorithm for finding the longest path.  I won't talk about that.  So one finds the longest path in the tree.  And then what one does is one says, OK, one side of the path  corresponds to, let's say, early disease stage,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 262.82,
+            "end": 270.5,
+            "text": " and the other side of the path corresponds to late disease  stage.  And it allows for the fact that there  might be some bifurcations.  So for example, you see here that there"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 270.5,
+            "end": 280.86,
+            "text": " is a bifurcation over here.  And as we discussed earlier, you have  to have some way of differentiating  what the beginning is and what the end should be.  And that's where some side information"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 280.86,
+            "end": 294.22,
+            "text": " might become useful.  So here's an illustration of applying that method  to some real data.  So every point here is a cell after doing  dimensionality reduction."
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 294.22,
+            "end": 307.94000000000005,
+            "text": " The edges between those points correspond  to the edges of the minimum spanning tree.  And now what the authors have done  is they've actually used some side information that they had  in order to color each of the nodes based"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 307.94,
+            "end": 325.18,
+            "text": " on what part of the cell differentiation process  that cell is believed to be in.  And what one discovers is that, in fact, this  is very sensible, that all of these points  are in a much earlier disease stage,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 325.18,
+            "end": 338.58,
+            "text": " the analogous thing of that, than these points.  And this is a sensible bifurcation.  Next, I want to talk about a slightly different approach  to this.  This is the whole story, by the way."
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 338.58,
+            "end": 357.73999999999995,
+            "text": " It's conceptually a very, very simple approach.  Next, I want to talk about a different approach, which now  tries to return back to the probabilistic approaches  that we had earlier in the lecture.  This new approach is going to be based on Gaussian processes."
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 357.73999999999995,
+            "end": 374.14,
+            "text": " So Gaussian processes have come up a couple of times in lecture,  but I've never actually formally defined them for you.  So in order for what I'm going to say next to make sense,  I'm going to formally define for you what a Gaussian process is.  A Gaussian process mu for a collection of time points,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 374.14,
+            "end": 390.90000000000003,
+            "text": " t1 through t capital N, is defined  by a joint distribution mu of those time points, which  is a Gaussian distribution.  So we're going to say that the function  value for these t different time points"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 390.90000000000003,
+            "end": 406.09999999999997,
+            "text": " is just a Gaussian, which for the purpose of today's lecture,  I'm going to assume is 0 mean, and where the covariance  function is given to you by this capital K.  It's a covariance function of the time points,  of the input points."
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 406.09999999999997,
+            "end": 424.62,
+            "text": " And so if you look, this has to be a matrix of dimension  capital N by capital N. And if you look at the i1 and i2 entry,  if you look at any entry of that matrix,  we're defining it to be given to you  by the following kernel function."
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 424.62,
+            "end": 441.82,
+            "text": " It looks at the exponential of the negative Euclidean distance  squared between those two time points.  Intuitively, what this is saying is  that if you have two time points that  are very close to one another, then this kernel function"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 441.82,
+            "end": 454.21999999999997,
+            "text": " is going to be very large.  If you have two time points that are very far from one another,  then this is very large.  It's a very large negative number.  And so this is going to be very small."
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 454.21999999999997,
+            "end": 462.91999999999996,
+            "text": " So the kernel function for two inputs  that are very far from one another are very small.  The kernel function for inputs that  are very close to each other is large.  And thus, what we're saying here is"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 462.91999999999996,
+            "end": 475.84,
+            "text": " that there's going to be some correlation between nearby data  points.  And that's the way which we're going to specify  a distribution of functions.  If one were to sample from this Gaussian"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 475.84,
+            "end": 495.73999999999995,
+            "text": " with the covariance function specified in the way I did,  what one gets out is something that looks like this.  So I'm assuming here that these curves look really dense.  And that's because I'm assuming that n is extremely large here.  If n was small, let's say 3, there would only"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 495.73999999999995,
+            "end": 517.3000000000001,
+            "text": " be three time points here.  And so you can make this distribution of functions  be arbitrarily complex by playing with this little l.  So for example, if you made little l be very small,  then what you get are these really spiky functions"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 517.3000000000001,
+            "end": 530.8000000000001,
+            "text": " that I'm showing you in a very light color.  If you make little l be very large,  you get these very smooth functions.  So this is a way to get a function.  This is a way to get a distribution over functions"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 530.8000000000001,
+            "end": 553.7,
+            "text": " just by sampling from this Gaussian process.  What this paper does from Campbell and Yowin,  published two years ago in Plus Computational Biology,  is they assume that the observations that you have  are drawn from a Gaussian distribution whose mean is"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 553.7,
+            "end": 582.58,
+            "text": " given to you by the Gaussian process.  So if you think back to the story that we drew earlier,  suppose that the data lived in just one dimension.  And suppose we actually knew the sorting of patients.  So we actually knew which patients are very early in time,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.006.mp3",
+            "start": 582.58,
+            "end": 601.76,
+            "text": " which patients are very late in time.  You might imagine that that single biomarker, biomarker A,  you might imagine that the function which tells you  what the biomarker's value is as a function of time  might be something like this."
+        }
+    ],
+    "text": " OK, there might only be a single trajectory, because we're only assuming there's a single disease subtype. But do we expect a particular topology? Now, everything that we've been talking about up until now has been a linear topology, meaning there's a linear projection. There's such a notion of early and late to stage. But in fact, the linear trajectory may not be realistic. Maybe the trajectory looks a little bit more like this bifurcation. Maybe patients look the same very early in the disease stage, but then suddenly something might happen, which causes some patients to go this way and some patients to go that way. Any idea what that might be in a clinical setting? Treatment. Treatment, that's great. So maybe these patients got t equals 0, and maybe these patients got t equals 1. And maybe for whatever reason, we don't even have good data on what treatments patients got, so we don't actually observe the treatment. Then you might want to be able to discover that bifurcation directly from the data. Then that might suggest, going back to the original source of the data, to ask what differentiated these patients at this point in time. And you might discover, oh, there was something in the data that we didn't record, such as treatment. So there are a variety of methods to try to infer these pseudotimes under a variety of different assumptions. What I'll do in the next few minutes is just give you an inkling of how two of the methods work. And I chose these to be representative examples. The first example is an approach based on building a minimum spanning tree. And this algorithm I'm going to describe goes by the name of Monocle. It was published in 2014 in this paper by Tropnol et al. But it builds very heavily on an earlier published paper from 2003 that I'm also citing here. So the way that this algorithm works is as follows. It starts with, as we've been assuming all along, cross-sectional data, which lives in some high dimensional space. I'm drawing that in the top left here. Each data point corresponds to some patient or some cell. The first step of the algorithm is to do dimensionality reduction. And there are many ways to do dimensionality reduction. You could do principal components analysis. Or for example, you could do independent components analysis. This paper uses independent components analysis. What ICA is going to do is going to attempt to find a number of different components that seem to be as independent from one another as possible. Then you're going to represent the data now in this lower dimensional space. And in many of these papers, it's quite astonishing to me, they actually use dimension two. So they'll go all the way down in two dimensional space where you can actually plot all of the data. It's not at all obvious to me why you would want to do that. Clinical data, I think that might be a very poor choice. Then what they do is they build a minimum spanning tree on all of the patients or cells. So the way that one does that is you create a graph by drawing an edge between every pair of nodes where the weight of the edge is the Euclidean distance between those two points. And then, so for example, there is this edge from here to here. There's an edge from here to here and so on. And then given that weighted graph, we're going to find the minimum spanning tree of that graph. And what I'm showing you here is the minimum spanning tree of the corresponding graph. Next, what one will do is you'll look for the longest path in that tree. Remember, finding the longest path in a graph, in an arbitrary graph, has a name. It's called the traveling salesman problem, and it's an NP-hard problem. How has that gotten around here? Well, this is not an arbitrary graph. This is actually a tree. So here's a bad algorithm for finding the longest path. I won't talk about that. So one finds the longest path in the tree. And then what one does is one says, OK, one side of the path corresponds to, let's say, early disease stage, and the other side of the path corresponds to late disease stage. And it allows for the fact that there might be some bifurcations. So for example, you see here that there is a bifurcation over here. And as we discussed earlier, you have to have some way of differentiating what the beginning is and what the end should be. And that's where some side information might become useful. So here's an illustration of applying that method to some real data. So every point here is a cell after doing dimensionality reduction. The edges between those points correspond to the edges of the minimum spanning tree. And now what the authors have done is they've actually used some side information that they had in order to color each of the nodes based on what part of the cell differentiation process that cell is believed to be in. And what one discovers is that, in fact, this is very sensible, that all of these points are in a much earlier disease stage, the analogous thing of that, than these points. And this is a sensible bifurcation. Next, I want to talk about a slightly different approach to this. This is the whole story, by the way. It's conceptually a very, very simple approach. Next, I want to talk about a different approach, which now tries to return back to the probabilistic approaches that we had earlier in the lecture. This new approach is going to be based on Gaussian processes. So Gaussian processes have come up a couple of times in lecture, but I've never actually formally defined them for you. So in order for what I'm going to say next to make sense, I'm going to formally define for you what a Gaussian process is. A Gaussian process mu for a collection of time points, t1 through t capital N, is defined by a joint distribution mu of those time points, which is a Gaussian distribution. So we're going to say that the function value for these t different time points is just a Gaussian, which for the purpose of today's lecture, I'm going to assume is 0 mean, and where the covariance function is given to you by this capital K. It's a covariance function of the time points, of the input points. And so if you look, this has to be a matrix of dimension capital N by capital N. And if you look at the i1 and i2 entry, if you look at any entry of that matrix, we're defining it to be given to you by the following kernel function. It looks at the exponential of the negative Euclidean distance squared between those two time points. Intuitively, what this is saying is that if you have two time points that are very close to one another, then this kernel function is going to be very large. If you have two time points that are very far from one another, then this is very large. It's a very large negative number. And so this is going to be very small. So the kernel function for two inputs that are very far from one another are very small. The kernel function for inputs that are very close to each other is large. And thus, what we're saying here is that there's going to be some correlation between nearby data points. And that's the way which we're going to specify a distribution of functions. If one were to sample from this Gaussian with the covariance function specified in the way I did, what one gets out is something that looks like this. So I'm assuming here that these curves look really dense. And that's because I'm assuming that n is extremely large here. If n was small, let's say 3, there would only be three time points here. And so you can make this distribution of functions be arbitrarily complex by playing with this little l. So for example, if you made little l be very small, then what you get are these really spiky functions that I'm showing you in a very light color. If you make little l be very large, you get these very smooth functions. So this is a way to get a function. This is a way to get a distribution over functions just by sampling from this Gaussian process. What this paper does from Campbell and Yowin, published two years ago in Plus Computational Biology, is they assume that the observations that you have are drawn from a Gaussian distribution whose mean is given to you by the Gaussian process. So if you think back to the story that we drew earlier, suppose that the data lived in just one dimension. And suppose we actually knew the sorting of patients. So we actually knew which patients are very early in time, which patients are very late in time. You might imagine that that single biomarker, biomarker A, you might imagine that the function which tells you what the biomarker's value is as a function of time might be something like this."
+}

@@ -1,0 +1,47 @@
+{
+    "chunks": [
+        {
+            "number": "lec10",
+            "title": "part.008.mp3",
+            "start": 0.0,
+            "end": 11.52,
+            "text": " to be able to get some decent events in that time.  I need to build a document classification  model for 3 and 1 half million records  to decide whether they have coronary heart disease.  But it sounds like that's doable."
+        },
+        {
+            "number": "lec10",
+            "title": "part.008.mp3",
+            "start": 11.52,
+            "end": 22.44,
+            "text": " We're sort of fearless in this space.  And then they also have 13 million images,  so hundreds of thousands of people with words of slides.  So we can at the very least get decent weights for transfer  learning from some of this data."
+        },
+        {
+            "number": "lec10",
+            "title": "part.008.mp3",
+            "start": 22.44,
+            "end": 37.96,
+            "text": " And we're doing this for acute heart attack patients.  So yeah, so this is kind of what I'm doing ultimately.  And so it's this sort of bridge between existing imaging,  existing conventional kind of medical data,  and this kind of low cost, expressive, serial type"
+        },
+        {
+            "number": "lec10",
+            "title": "part.008.mp3",
+            "start": 37.96,
+            "end": 47.32,
+            "text": " of stuff that ultimately hoping to expand phenotypic space  and keep the cost down.  I think all my sort of lessons from working  with expensive image data sort of motivated me to build  something around this space."
+        },
+        {
+            "number": "lec10",
+            "title": "part.008.mp3",
+            "start": 47.32,
+            "end": 59.04,
+            "text": " So this is my baby right now.  And so lots of things for people to be involved in if they  want to.  And these are some of the funding sources.  All right, thank you."
+        },
+        {
+            "number": "lec10",
+            "title": "part.008.mp3",
+            "start": 59.04,
+            "end": 60.92,
+            "text": " Thank you."
+        }
+    ],
+    "text": " to be able to get some decent events in that time. I need to build a document classification model for 3 and 1 half million records to decide whether they have coronary heart disease. But it sounds like that's doable. We're sort of fearless in this space. And then they also have 13 million images, so hundreds of thousands of people with words of slides. So we can at the very least get decent weights for transfer learning from some of this data. And we're doing this for acute heart attack patients. So yeah, so this is kind of what I'm doing ultimately. And so it's this sort of bridge between existing imaging, existing conventional kind of medical data, and this kind of low cost, expressive, serial type of stuff that ultimately hoping to expand phenotypic space and keep the cost down. I think all my sort of lessons from working with expensive image data sort of motivated me to build something around this space. So this is my baby right now. And so lots of things for people to be involved in if they want to. And these are some of the funding sources. All right, thank you. Thank you."
+}

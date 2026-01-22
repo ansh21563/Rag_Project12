@@ -1,0 +1,236 @@
+{
+    "chunks": [
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 0.0,
+            "end": 17.84,
+            "text": " These numbers have gone way up.  Now, where have they gone up the most?  Well, it used to be that childhood mortality  was enormous.  And so if you look at 1851, by age 10, about 30% of children"
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 17.84,
+            "end": 37.72,
+            "text": " had died.  And so we've gotten a lot better at stopping that from happening.  People also look at curves like this.  So this is a distribution of death rates by age.  This happens to be for Japan a few years ago."
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 37.72,
+            "end": 55.32,
+            "text": " And again, females do better than males.  The gold curve in the middle is the average of the two.  And this is very typical of almost any country  that you look at.  The shape of this curve is pretty universal."
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 55.32,
+            "end": 73.48,
+            "text": " So what does this say?  It says that when you're born, there's a relatively high risk  that you're going to die.  So these are kids who have congenital abnormalities,  have prenatal problems, have all kinds of difficulties,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 73.48,
+            "end": 98.88,
+            "text": " and they don't make it.  So there's a fairly high death rate at birth.  But once you make it to about, I think, about two years old,  the death rate is down to about 1 in 10,000 per year.  And then it stays quite low until you become a teenager."
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 98.88,
+            "end": 114.52,
+            "text": " Now, why might the death rate go up when you become a teenager?  Suicide?  Well, suicide is the extreme example of that.  But teenagers tend to be risk-seeking rather than  risk-averse."
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 114.52,
+            "end": 127.92,
+            "text": " They start driving cars.  They go skiing, skydiving, whatever  it is that they're doing.  And they start dying.  But then if you make it to about 20,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 127.92,
+            "end": 148.24,
+            "text": " then there's a relatively flat region, where by then you've  developed enough sense to know what risks are worth taking  and which ones aren't.  And so it's relatively flat until about age 35 or 40,  at which point it starts inexorably rising."
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 148.24,
+            "end": 161.28,
+            "text": " And of course, as you get older and older,  the probability that you're going  to die in the next year becomes higher and higher.  This is uncomfortable for somebody  with my amount of gray hair."
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 161.28,
+            "end": 178.0,
+            "text": " Now, there is a peculiarity in Japan  which people puzzled over for a while,  and that is that weird dip up at age 106.  So first of all, that's a very small number of people  that that represents."
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 178.0,
+            "end": 193.48,
+            "text": " And it turned out that it was fraud.  So there were families who failed  to report the death of their ancient grandmother  or great-grandmother because they  wanted to continue collecting Social Security"
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 193.48,
+            "end": 214.44,
+            "text": " payments from the government.  So that's an artifact.  Now, this is a serious problem which  we're going to return to in a more technical way  later in the semester, which is this problem of disparities."
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 214.44,
+            "end": 233.20000000000002,
+            "text": " So if you look at, for example, the difference  between white and black female life expectancy in the United  States, you see that everybody's life expectancy,  as we've shown, is going up gradually, in this case,  from 1975 to 2015."
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 233.20000000000002,
+            "end": 256.56,
+            "text": " But there continues to be a gap between black and white females  and between black and white males,  where black patients are more likely to die or less  likely to survive longer, given the disparities that exist  socioeconomically, maybe medically."
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 256.56,
+            "end": 270.0,
+            "text": " We don't know exactly.  And then if you look at Hispanics,  however, they do pretty well.  So in 2015, you're actually a little bit better  off to be Hispanic, either male or female,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 270.0,
+            "end": 288.2,
+            "text": " than you are to be either white or black.  But it's still worse to be black than to be white or Hispanic.  So these are the kinds of facts that  drive some of the issues in what we do in medical care.  Now, what do people die of?"
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 288.2,
+            "end": 304.96,
+            "text": " Well, about a quarter of them die of heart disease,  and a little over a fifth of them die of cancer.  This is USA data from 2014, so it's not completely up to date,  but hasn't changed that much.  And then there's a decreasing number"
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 305.0,
+            "end": 322.12,
+            "text": " of deaths from various other causes.  So heart disease, cancer, chronic lower respiratory  disease, so this is like COPD that's caused by smoking,  stuff like that.  Accidents account for about 5% of deaths."
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 322.12,
+            "end": 342.28,
+            "text": " Stroke, cerebrovascular events, Alzheimer's disease, diabetes,  influenza, and pneumonia, kidney disease, suicide,  and then everything else is about another quarter.  Now, take a look at those.  What kind of diseases are these, the biggies?"
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 347.71999999999997,
+            "end": 361.68,
+            "text": " Well, they're chronic.  Most of them are chronic.  They're also not infectious.  Except for influenza and pneumonia,  nothing else there is infectious as far as we know."
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 365.84000000000003,
+            "end": 382.88,
+            "text": " That asterisk you should put after every statement  about current medicine.  So that's interesting, because if you wrote the same table  back in 1850, you would find that a lot of people  were dying of infections."
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 382.88,
+            "end": 402.12,
+            "text": " And they weren't typically living long enough  to develop these lovely chronic diseases of the aging.  So there have been big changes there.  Now, the other thing that's worth looking at  is in addition to the reasons that people die,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 402.12,
+            "end": 422.96,
+            "text": " they start getting sicker.  And they are getting sort of less value out of life,  because they're developing all these other conditions.  So if you look at people over 65, about half of them  have arthritis, some form of arthritis."
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 422.96,
+            "end": 444.32,
+            "text": " And about 40% have hypertension.  By the way, if you have trouble with any of the medicalese  words, just interrupt.  Hypertension is high blood pressure.  Hearing impairment, me, I'm wearing a hearing aid"
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 444.32,
+            "end": 458.6,
+            "text": " on one side, because my ears are going bad.  Heart disease, about a quarter.  Orthostatic impairment, that means people  who wobble because their sense of balance is not so good,  16%."
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 458.6,
+            "end": 478.88,
+            "text": " Cataracts, chronic sinusitis, visual impairment,  genitourinary problems, diabetes, et cetera.  So these are all growing.  Here's the list of the next 10.  And varicose veins, hernia, hemorrhoids, psoriasis,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 478.88,
+            "end": 496.24,
+            "text": " hardening of the arteries, tinnitus,  corns, calluses, constipation, hay fever,  and cerebrovascular problems.  So people develop these by the time they're over 65.  So one question we might ask is, well,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 496.24,
+            "end": 514.76,
+            "text": " what is the quality of life?  So for example, a lot of the doctors  that I started working with in the 1970s  were great advocates of the application of decision  analysis, decision theory, to making medical decisions."
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 514.76,
+            "end": 533.4000000000001,
+            "text": " And so the problem is, how do you evaluate an outcome?  And they said, well, the way we evaluate an outcome  is we look at your longevity.  Obviously, the longer you live, the better, typically.  But we also look at your quality of life during that time."
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 533.4000000000001,
+            "end": 550.6800000000001,
+            "text": " And we say that if you're confined to a wheelchair,  let's say, your quality of life might not  be as good as if you were able to run around.  Or if you're suffering from chronic pain,  your quality of life might not be as good"
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 550.6800000000001,
+            "end": 570.52,
+            "text": " as if you were pain-free.  And so we came up with this model that says, well,  the value of your life is essentially  an integral from time 0 to however long  you're going to live of a function q that"
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 570.52,
+            "end": 585.8,
+            "text": " says this is a measure of how good your quality of life  is at that particular point in time,  and then some discount factor.  So what's the role of the discount factor?  Well, it's just like in economics."
+        },
+        {
+            "number": "lec2",
+            "title": "part.001.mp3",
+            "start": 585.8,
+            "end": 599.76,
+            "text": " If I offer you some horribly painful thing today  versus 10 years from now, which are you going to choose?  Most of us will say later."
+        }
+    ],
+    "text": " These numbers have gone way up. Now, where have they gone up the most? Well, it used to be that childhood mortality was enormous. And so if you look at 1851, by age 10, about 30% of children had died. And so we've gotten a lot better at stopping that from happening. People also look at curves like this. So this is a distribution of death rates by age. This happens to be for Japan a few years ago. And again, females do better than males. The gold curve in the middle is the average of the two. And this is very typical of almost any country that you look at. The shape of this curve is pretty universal. So what does this say? It says that when you're born, there's a relatively high risk that you're going to die. So these are kids who have congenital abnormalities, have prenatal problems, have all kinds of difficulties, and they don't make it. So there's a fairly high death rate at birth. But once you make it to about, I think, about two years old, the death rate is down to about 1 in 10,000 per year. And then it stays quite low until you become a teenager. Now, why might the death rate go up when you become a teenager? Suicide? Well, suicide is the extreme example of that. But teenagers tend to be risk-seeking rather than risk-averse. They start driving cars. They go skiing, skydiving, whatever it is that they're doing. And they start dying. But then if you make it to about 20, then there's a relatively flat region, where by then you've developed enough sense to know what risks are worth taking and which ones aren't. And so it's relatively flat until about age 35 or 40, at which point it starts inexorably rising. And of course, as you get older and older, the probability that you're going to die in the next year becomes higher and higher. This is uncomfortable for somebody with my amount of gray hair. Now, there is a peculiarity in Japan which people puzzled over for a while, and that is that weird dip up at age 106. So first of all, that's a very small number of people that that represents. And it turned out that it was fraud. So there were families who failed to report the death of their ancient grandmother or great-grandmother because they wanted to continue collecting Social Security payments from the government. So that's an artifact. Now, this is a serious problem which we're going to return to in a more technical way later in the semester, which is this problem of disparities. So if you look at, for example, the difference between white and black female life expectancy in the United States, you see that everybody's life expectancy, as we've shown, is going up gradually, in this case, from 1975 to 2015. But there continues to be a gap between black and white females and between black and white males, where black patients are more likely to die or less likely to survive longer, given the disparities that exist socioeconomically, maybe medically. We don't know exactly. And then if you look at Hispanics, however, they do pretty well. So in 2015, you're actually a little bit better off to be Hispanic, either male or female, than you are to be either white or black. But it's still worse to be black than to be white or Hispanic. So these are the kinds of facts that drive some of the issues in what we do in medical care. Now, what do people die of? Well, about a quarter of them die of heart disease, and a little over a fifth of them die of cancer. This is USA data from 2014, so it's not completely up to date, but hasn't changed that much. And then there's a decreasing number of deaths from various other causes. So heart disease, cancer, chronic lower respiratory disease, so this is like COPD that's caused by smoking, stuff like that. Accidents account for about 5% of deaths. Stroke, cerebrovascular events, Alzheimer's disease, diabetes, influenza, and pneumonia, kidney disease, suicide, and then everything else is about another quarter. Now, take a look at those. What kind of diseases are these, the biggies? Well, they're chronic. Most of them are chronic. They're also not infectious. Except for influenza and pneumonia, nothing else there is infectious as far as we know. That asterisk you should put after every statement about current medicine. So that's interesting, because if you wrote the same table back in 1850, you would find that a lot of people were dying of infections. And they weren't typically living long enough to develop these lovely chronic diseases of the aging. So there have been big changes there. Now, the other thing that's worth looking at is in addition to the reasons that people die, they start getting sicker. And they are getting sort of less value out of life, because they're developing all these other conditions. So if you look at people over 65, about half of them have arthritis, some form of arthritis. And about 40% have hypertension. By the way, if you have trouble with any of the medicalese words, just interrupt. Hypertension is high blood pressure. Hearing impairment, me, I'm wearing a hearing aid on one side, because my ears are going bad. Heart disease, about a quarter. Orthostatic impairment, that means people who wobble because their sense of balance is not so good, 16%. Cataracts, chronic sinusitis, visual impairment, genitourinary problems, diabetes, et cetera. So these are all growing. Here's the list of the next 10. And varicose veins, hernia, hemorrhoids, psoriasis, hardening of the arteries, tinnitus, corns, calluses, constipation, hay fever, and cerebrovascular problems. So people develop these by the time they're over 65. So one question we might ask is, well, what is the quality of life? So for example, a lot of the doctors that I started working with in the 1970s were great advocates of the application of decision analysis, decision theory, to making medical decisions. And so the problem is, how do you evaluate an outcome? And they said, well, the way we evaluate an outcome is we look at your longevity. Obviously, the longer you live, the better, typically. But we also look at your quality of life during that time. And we say that if you're confined to a wheelchair, let's say, your quality of life might not be as good as if you were able to run around. Or if you're suffering from chronic pain, your quality of life might not be as good as if you were pain-free. And so we came up with this model that says, well, the value of your life is essentially an integral from time 0 to however long you're going to live of a function q that says this is a measure of how good your quality of life is at that particular point in time, and then some discount factor. So what's the role of the discount factor? Well, it's just like in economics. If I offer you some horribly painful thing today versus 10 years from now, which are you going to choose? Most of us will say later."
+}

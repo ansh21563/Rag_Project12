@@ -1,0 +1,236 @@
+{
+    "chunks": [
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 0.0,
+            "end": 21.12,
+            "text": " of a viral infection.  Prions we also don't understand very well.  This is like mad cow disease, where  these proteins are able to cause changes in other proteins  without going through the RNA, DNA-mediated mechanisms."
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 21.12,
+            "end": 45.68000000000001,
+            "text": " There are DNA-modifying proteins,  the most important of which is the stuff involved  in CRISPR-Cas9, which is this relatively new discovery  about how bacteria are able to use a mechanism that they stole  from viruses to edit the genetic complement of themselves"
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 45.68000000000001,
+            "end": 61.06,
+            "text": " and, more importantly, of other viruses that attack them.  So it's an antiviral defense mechanism.  And we're now figuring out how to use it  to do gene editing.  You may have read about this Chinese guy who actually"
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 61.06,
+            "end": 79.58,
+            "text": " went out and edited the genome of a couple of girls  who were born in China, incorporating some, I think,  resistance against HIV infections in their genome.  And of course, this is probably way too early  to do experiments on human beings"
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 79.58,
+            "end": 95.03999999999999,
+            "text": " because they haven't demonstrated that this is safe.  But maybe that'll become accepted.  George Church at Harvard has been going around.  He likes to rattle people's chains.  And he's been going around saying, well, the guy,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 95.03999999999999,
+            "end": 114.18,
+            "text": " he was unethical and was a slob.  But what he's doing is a really great idea.  So we'll see where that goes.  And then there are these retrotransposons  where pieces of DNA in eukarya just pop out of somewhere"
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 114.18,
+            "end": 133.34,
+            "text": " wherever they are and insert themselves  in some other place in the genome.  And in plants, this happens a lot.  So for example, wheat seems to have a huge number of copies  of DNA segments that maybe it had only one of."
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 133.34,
+            "end": 152.68,
+            "text": " But it's replicated through this mechanism.  OK, last bit of complexity.  So we have various kinds of RNA.  There's long non-coding RNA, which seems to participate  in gene regulation."
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 152.68,
+            "end": 173.54,
+            "text": " There's RNA interference that there  are these small RNA pieces that will actually  latch on to the RNA produced by the standard genetic mechanism  and prevent it from being translated into protein.  This was another Nobel Prize a few years ago."
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 173.54,
+            "end": 188.14,
+            "text": " Almost everything in this field, if you're first,  you get a Nobel Prize for it.  Once the proteins are made, they're  degraded differentially.  So there are different mechanisms"
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 188.14,
+            "end": 204.64000000000001,
+            "text": " in the cell that destroy certain kinds of proteins  much faster than others.  And so the production rate doesn't tell you  how much is going to be there at any particular time.  And then there's this secondary and tertiary structure"
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 204.64000000000001,
+            "end": 224.60000000000002,
+            "text": " where there's actually, what is it?  It's like a mile of DNA in each of your cells.  So it wouldn't fit.  And so it gets wrapped up on these acetylated histones  to produce something called chromatin."
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 224.62,
+            "end": 241.85999999999999,
+            "text": " And again, we don't quite understand how this all works,  because you'd think that if you wrap stuff up like this,  it would become inaccessible to transcription.  And therefore, it's not clear how it gets expressed.  But somehow or other, the cell is able to do that."
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 241.85999999999999,
+            "end": 257.62,
+            "text": " So there's a lot yet to learn in this area.  OK.  Now, the reason we're interested in all this  is because if you plot Moore's law for how quickly computers  are becoming cheaper per performance,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 257.62,
+            "end": 275.84,
+            "text": " and you plot the cost of gene sequencing,  it keeps going down.  And it goes down much faster even than Moore's law.  So this is pretty remarkable.  And it means that, as I said, that $3 billion first genome"
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 275.84,
+            "end": 298.5,
+            "text": " now costs just a few hundred dollars.  In fact, if you're just interested in the whole exome,  so only the 2%, roughly, of the DNA that  produces genetic coding, you can now  go to this company, which I have nothing to do with."
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 298.5,
+            "end": 319.76,
+            "text": " I just pulled this off the web.  But for $299, they will give you 50 times coverage  on about six gigabases.  And if you pay them an extra $100,  they'll do it at 100x coverage."
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 319.76,
+            "end": 336.86,
+            "text": " So these techniques are very noisy.  And so it's important to get lots of replicates in order  to reassemble what you think is going on.  A slightly more recent phenomenon  is people say, well, not only can we sequence your DNA,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 336.86,
+            "end": 358.64,
+            "text": " but we can sequence the RNA that  got transcribed from the DNA.  And in fact, you can buy a kit for $360 that will take  the RNA from individual cells.  So these are like picoliter amounts of stuff."
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 358.64,
+            "end": 374.41999999999996,
+            "text": " And it will give you the RNA sequence for $360  for up to 100 cells.  So $3, $3 and 1 1\u20442 per cell.  So people are very excited.  And there are now also companies that will sell you"
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 374.41999999999996,
+            "end": 392.78,
+            "text": " advanced analysis.  So they will correlate the data that you're  getting with different databases and figure out  whether this represents a dominant or a recessive  or an X-linked model if you have familial data"
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 392.78,
+            "end": 414.55999999999995,
+            "text": " and functional annotation of candidate genes, et cetera.  And so for example, starting about three years ago,  if you walk into the Dana-Farber with a newly diagnosed cancer,  a solid tumor cancer, they will take a sample of that cancer,  send it off to companies like this or their own labs,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 414.55999999999995,
+            "end": 433.7,
+            "text": " and do sequencing and do analysis  and try to figure out exactly which damaged genes that you  have may be causing the cancer.  And maybe more importantly, since it's still  a pretty empirical field, which unusual variants of your genes"
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 433.7,
+            "end": 453.56,
+            "text": " suggest that certain drugs are likely to be  more effective in treating your cancer than other drugs.  So this has become completely routine in cancer care  and in a few other domains.  OK, so now I'm going to switch to a more technical set"
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 453.56,
+            "end": 466.96,
+            "text": " of material.  So if you want to characterize disease subtypes using  gene expression arrays, microarrays,  here's one way to do it.  And this is a famous paper by Alizadeh."
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 466.96,
+            "end": 481.91999999999996,
+            "text": " It was essentially the first of this class of papers  back in 2001, I think.  Yeah, 2001.  And since then, there have been probably  tens or hundreds of thousands of other papers"
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 481.91999999999996,
+            "end": 504.41999999999996,
+            "text": " published doing similar kinds of analyses on other data sets.  So what they did is they said, OK, we're  going to extract the coding RNA.  We're going to create complementary DNA from it.  We're going to use a technique to amplify that,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 504.44,
+            "end": 526.0,
+            "text": " because we're starting with teeny tiny quantities.  And then we're going to take a microarray, which  is either like a glass slide with tens or hundreds  of thousands of spotted bits of DNA on it,  or it's a silicon chip with wells"
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 526.0,
+            "end": 542.82,
+            "text": " that, again, have tens or hundreds of thousands  of bits of DNA in it.  Now, where does that DNA come from?  Initially, it was just a random collection of pieces of genes  from the genome."
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 542.82,
+            "end": 560.62,
+            "text": " Since then, they've gotten somewhat more sophisticated.  But the idea is that I'm going to take the amplified cDNA.  I'm going to mark it with one of these jellyfish proteins that  glows under light.  And then I'm going to flow it over this slide"
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 561.6,
+            "end": 583.44,
+            "text": " or this set of wells.  And the complementary parts of the complementary DNA  will stick to the samples of DNA that are in this well.  Stands to reason.  An alternative is that you take normal tissue as well as, say,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 583.44,
+            "end": 598.58,
+            "text": " the cancerous tissue.  You mark the normal tissue with green fluorescent jellyfish  stuff, and you mark the cancer with red.  And then you flow both of them in equal amounts  over the array."
+        },
+        {
+            "number": "lec20",
+            "title": "part.003.mp3",
+            "start": 598.58,
+            "end": 601.3000000000001,
+            "text": " That lets you measure a ratio."
+        }
+    ],
+    "text": " of a viral infection. Prions we also don't understand very well. This is like mad cow disease, where these proteins are able to cause changes in other proteins without going through the RNA, DNA-mediated mechanisms. There are DNA-modifying proteins, the most important of which is the stuff involved in CRISPR-Cas9, which is this relatively new discovery about how bacteria are able to use a mechanism that they stole from viruses to edit the genetic complement of themselves and, more importantly, of other viruses that attack them. So it's an antiviral defense mechanism. And we're now figuring out how to use it to do gene editing. You may have read about this Chinese guy who actually went out and edited the genome of a couple of girls who were born in China, incorporating some, I think, resistance against HIV infections in their genome. And of course, this is probably way too early to do experiments on human beings because they haven't demonstrated that this is safe. But maybe that'll become accepted. George Church at Harvard has been going around. He likes to rattle people's chains. And he's been going around saying, well, the guy, he was unethical and was a slob. But what he's doing is a really great idea. So we'll see where that goes. And then there are these retrotransposons where pieces of DNA in eukarya just pop out of somewhere wherever they are and insert themselves in some other place in the genome. And in plants, this happens a lot. So for example, wheat seems to have a huge number of copies of DNA segments that maybe it had only one of. But it's replicated through this mechanism. OK, last bit of complexity. So we have various kinds of RNA. There's long non-coding RNA, which seems to participate in gene regulation. There's RNA interference that there are these small RNA pieces that will actually latch on to the RNA produced by the standard genetic mechanism and prevent it from being translated into protein. This was another Nobel Prize a few years ago. Almost everything in this field, if you're first, you get a Nobel Prize for it. Once the proteins are made, they're degraded differentially. So there are different mechanisms in the cell that destroy certain kinds of proteins much faster than others. And so the production rate doesn't tell you how much is going to be there at any particular time. And then there's this secondary and tertiary structure where there's actually, what is it? It's like a mile of DNA in each of your cells. So it wouldn't fit. And so it gets wrapped up on these acetylated histones to produce something called chromatin. And again, we don't quite understand how this all works, because you'd think that if you wrap stuff up like this, it would become inaccessible to transcription. And therefore, it's not clear how it gets expressed. But somehow or other, the cell is able to do that. So there's a lot yet to learn in this area. OK. Now, the reason we're interested in all this is because if you plot Moore's law for how quickly computers are becoming cheaper per performance, and you plot the cost of gene sequencing, it keeps going down. And it goes down much faster even than Moore's law. So this is pretty remarkable. And it means that, as I said, that $3 billion first genome now costs just a few hundred dollars. In fact, if you're just interested in the whole exome, so only the 2%, roughly, of the DNA that produces genetic coding, you can now go to this company, which I have nothing to do with. I just pulled this off the web. But for $299, they will give you 50 times coverage on about six gigabases. And if you pay them an extra $100, they'll do it at 100x coverage. So these techniques are very noisy. And so it's important to get lots of replicates in order to reassemble what you think is going on. A slightly more recent phenomenon is people say, well, not only can we sequence your DNA, but we can sequence the RNA that got transcribed from the DNA. And in fact, you can buy a kit for $360 that will take the RNA from individual cells. So these are like picoliter amounts of stuff. And it will give you the RNA sequence for $360 for up to 100 cells. So $3, $3 and 1 1\u20442 per cell. So people are very excited. And there are now also companies that will sell you advanced analysis. So they will correlate the data that you're getting with different databases and figure out whether this represents a dominant or a recessive or an X-linked model if you have familial data and functional annotation of candidate genes, et cetera. And so for example, starting about three years ago, if you walk into the Dana-Farber with a newly diagnosed cancer, a solid tumor cancer, they will take a sample of that cancer, send it off to companies like this or their own labs, and do sequencing and do analysis and try to figure out exactly which damaged genes that you have may be causing the cancer. And maybe more importantly, since it's still a pretty empirical field, which unusual variants of your genes suggest that certain drugs are likely to be more effective in treating your cancer than other drugs. So this has become completely routine in cancer care and in a few other domains. OK, so now I'm going to switch to a more technical set of material. So if you want to characterize disease subtypes using gene expression arrays, microarrays, here's one way to do it. And this is a famous paper by Alizadeh. It was essentially the first of this class of papers back in 2001, I think. Yeah, 2001. And since then, there have been probably tens or hundreds of thousands of other papers published doing similar kinds of analyses on other data sets. So what they did is they said, OK, we're going to extract the coding RNA. We're going to create complementary DNA from it. We're going to use a technique to amplify that, because we're starting with teeny tiny quantities. And then we're going to take a microarray, which is either like a glass slide with tens or hundreds of thousands of spotted bits of DNA on it, or it's a silicon chip with wells that, again, have tens or hundreds of thousands of bits of DNA in it. Now, where does that DNA come from? Initially, it was just a random collection of pieces of genes from the genome. Since then, they've gotten somewhat more sophisticated. But the idea is that I'm going to take the amplified cDNA. I'm going to mark it with one of these jellyfish proteins that glows under light. And then I'm going to flow it over this slide or this set of wells. And the complementary parts of the complementary DNA will stick to the samples of DNA that are in this well. Stands to reason. An alternative is that you take normal tissue as well as, say, the cancerous tissue. You mark the normal tissue with green fluorescent jellyfish stuff, and you mark the cancer with red. And then you flow both of them in equal amounts over the array. That lets you measure a ratio."
+}

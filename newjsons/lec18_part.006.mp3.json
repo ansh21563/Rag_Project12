@@ -1,0 +1,341 @@
+{
+    "chunks": [
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 0.0,
+            "end": 11.96,
+            "text": " We conjecture that patients in this subtype  are likely to respond best to treatment.  So we're only going to run the clinical trial  for patients in this subtype, not in the other one.  It might be useful also to try to better understand"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 11.96,
+            "end": 26.68,
+            "text": " the disease mechanism.  So if you find that there are some people who  seem to progress very quickly through their disease  and other people who seem to progress very slowly,  you might then go back and do new biological assays on them"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 26.68,
+            "end": 34.02,
+            "text": " to try to understand what differentiates those two  clusters.  So the two clusters are differentiated  in terms of their phenotype.  You want to go back and ask, well,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 34.02,
+            "end": 45.480000000000004,
+            "text": " what is different about their genotype that  differentiates them?  And it might also be useful to have a very concise description  of what differentiates patients in order  to actually have policies that you can implement."
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 45.480000000000004,
+            "end": 61.96,
+            "text": " So rather than having what might be a very complicated linear  model, or even non-linear model, for predicting future disease  progression, it would be much easier  if you could just say, OK, for patients  who have this biomarker abnormal,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 61.96,
+            "end": 75.16,
+            "text": " they're likely to have very fast disease progression.  Patients who likely have this other biomarker abnormal,  they're likely to have a slow disease progression.  And so we'd like to be able to do that.  That's what I mean by discovering disease subtypes."
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 75.16,
+            "end": 88.48,
+            "text": " But there's actually a second goal as well, which remember,  think back to that original motivation  I mentioned earlier of having very little data.  If you have very little data, which is unfortunately  the setting that we're almost always in when"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 88.48,
+            "end": 101.64,
+            "text": " doing machine learning in health care,  then you can overfit really easily to your data  when just using it strictly within a discriminative  learning framework.  And so if one were to now change your optimization problem"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 101.64,
+            "end": 120.03999999999999,
+            "text": " altogether to start to bring in an unsupervised loss function,  then one can hope to get much more out of the limited data  you have and save the labels, which you might overfit on very  easily for the very last step of your learning algorithm.  And that's exactly what we'll do in this segment of the lecture."
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 120.03999999999999,
+            "end": 131.2,
+            "text": " So for today, we're going to think  about the simplest possible unsupervised learning  algorithm.  And because the official prerequisite for this course  was 6.036, and because clustering was not discussed"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 131.2,
+            "end": 146.01999999999998,
+            "text": " in 6.036, I'll spend just two minutes  talking about clustering using the simplest  algorithm called k-means, which I hope almost all of you know.  But this will just be a simple reminder.  How many clusters are there in this figure"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 146.01999999999998,
+            "end": 158.29999999999998,
+            "text": " that I'm showing over here?  Let's raise some hands.  One cluster, two clusters, three clusters, four clusters,  five clusters.  OK."
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 158.29999999999998,
+            "end": 168.42,
+            "text": " And are these red points more or less showing  where those five clusters are?  No.  So rather, there's a cluster here, there's a cluster here,  there, there, right?"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 168.42,
+            "end": 180.26,
+            "text": " So you were able to do this really well as humans,  looking at two-dimensional data.  The goal of algorithms like k-means  is to show how one could do that automatically  for high-dimensional data."
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 180.26,
+            "end": 189.06,
+            "text": " And the k-means algorithm is very simple.  It works as follows.  You hypothesize a number of clusters.  So here, we've hypothesized five clusters.  You're going to randomly initialize those cluster"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 189.06,
+            "end": 201.8,
+            "text": " centers, which I'm denoting by those red points shown here.  Then in the first stage of the k-means algorithm,  you're going to assign every data point to the closest  cluster center.  And that's going to induce a Voronoi diagram,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 201.8,
+            "end": 216.9,
+            "text": " where every point within this Voronoi cell  is closer to this red point than to any other red point.  And so every data point in this Voronoi cell  will then be assigned to this data point.  Every data point in this Voronoi cell"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 216.9,
+            "end": 227.54000000000002,
+            "text": " will be assigned to that data point, and so on.  So we're going to now assign all data points  to their closest cluster center.  And then we're just going to average all the data  points assigned to some cluster center"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 227.54000000000002,
+            "end": 236.07999999999998,
+            "text": " to get the new cluster center.  And you repeat.  And you're going to stop this procedure when  no points assignments change.  So let's look at a simple example."
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 236.07999999999998,
+            "end": 246.48,
+            "text": " Here, we're using k equals 2.  We've just decided there are only two clusters.  We've initialized the two clusters shown here  as the two cluster centers as this red cluster center  and this blue cluster center."
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 246.48,
+            "end": 254.96,
+            "text": " Notice that they're nowhere near the data.  We just randomly chose them.  They're nowhere near the data.  It's actually a pretty bad initialization.  The first step is going to assign data points"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 254.96,
+            "end": 269.92,
+            "text": " to their closest cluster center.  So I want everyone to say out loud either red or green  to which cluster center it's going to point to,  what it is going to be assigned to in this step.  AUDIENCE MEMBERS REPEAT"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 269.92,
+            "end": 273.44,
+            "text": " Red.  Blue.  Blue.  Blue.  Blue."
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 273.44,
+            "end": 283.36,
+            "text": " All right, good.  We get it.  All right.  So that's the first assignment.  Now we're going to average the data points that are assigned"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 283.36,
+            "end": 296.72,
+            "text": " to that red cluster center.  So we're going to average all the red points.  And the new red cluster center will be over here, right?  Over there?  Over here?"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 296.72,
+            "end": 306.72,
+            "text": " OK, good.  And the blue cluster center will be somewhere over here, right?  OK, good.  So that's the next step.  And then you repeat."
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 306.72,
+            "end": 315.04,
+            "text": " So now, again, you assign every data point  to its closest cluster center.  By the way, the reason why you're  seeing what looks like a linear hyperplane  here is because there are exactly two cluster centers."
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 316.04,
+            "end": 330.24,
+            "text": " And then you repeat, blah, blah, blah, and you're done.  So in fact, I think I've just shown you  the convergence point.  So that's the k-means algorithm.  It's an extremely simple algorithm."
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 330.24,
+            "end": 343.44,
+            "text": " And what I'm going to show you for the next 10 minutes  of lecture is how one could use this very simple clustering  algorithm to better understand asthma.  So asthma is something that really affects  a large number of individuals."
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 344.44,
+            "end": 359.76,
+            "text": " It's characterized by having difficulties breathing.  It's often managed by inhalers.  Although, as asthma gets more and more severe,  you need more and more complex management schemes.  And it's been found that 5% to 10%"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 359.76,
+            "end": 377.56,
+            "text": " of people who have severe asthma remain poorly  controlled despite using the largest  tolerable inhaled therapy.  And so a really big question that the pharmaceutical  community is extremely interested in"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 377.56,
+            "end": 388.02,
+            "text": " is, how do we come up with better therapies for asthma?  There's a lot of money in that problem.  I first learned about this problem when a pharmaceutical  company came to me when I was professor at NYU and asked me,  could they work with me on this problem?"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 388.02,
+            "end": 396.24,
+            "text": " I said no at the time, but I still found it very interesting.  I'm sorry.  I'm sorry.  I'm sorry.  And at that time, the company pointed me"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 396.24,
+            "end": 411.35999999999996,
+            "text": " to this paper, which I'll tell you about in a second.  But before I get there, I want to point out  what are some of the big picture questions  that everyone's interested in when it comes to asthma.  The first one is to really understand,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 411.35999999999996,
+            "end": 420.64,
+            "text": " what is it about either genetic or environmental factors  that underlie different subtypes of asthma?  It's observed that people respond differently  to therapies.  It's observed that some people aren't even"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 420.64,
+            "end": 433.08000000000004,
+            "text": " controlled with therapy.  Why is that?  Third, what are biomarkers?  What are ways to predict who's going to respond or not  respond to anyone in therapy?"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 433.08000000000004,
+            "end": 448.76,
+            "text": " And can we get better mechanistic understanding  of these different subtypes?  And so this was a longstanding question.  And in this paper from the American Journal  of Respiratory Critical Care Medicine, which, by the way,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 448.76,
+            "end": 460.15999999999997,
+            "text": " has a huge number of citations now.  It's sort of a prototypical example of subtyping.  That's why I'm going through it.  They started to answer that question using  a data-driven approach for asthma."
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 460.15999999999997,
+            "end": 478.58,
+            "text": " And what I'm showing you here is the punch line.  This is the main result, the main figure of the paper.  They've characterized asthma in terms  of five different subtypes, really three type.  One type, which I'll show over here,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 478.58,
+            "end": 491.08,
+            "text": " is inflammation predominant.  One type over there, which is called early symptom  predominant.  And another here, which is concordant disease.  And what I'll do over the next few minutes"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 491.08,
+            "end": 505.38,
+            "text": " is walk you through how they came up  with these different clusters.  So they used three different data sets.  These data sets consisted of patients  who had asthma and already had at least one"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 505.38,
+            "end": 520.18,
+            "text": " recent therapy for asthma.  They're all non-smokers, but they were managed in three.  There are three disjoint set of patients  coming from three different populations.  The first group of patients were recruited from primary care"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 520.18,
+            "end": 533.6,
+            "text": " practices in the United Kingdom.  So if you're a patient with asthma  and your asthma is being managed by your primary care doctor,  then it's probably not too bad.  But if your asthma, on the other hand,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 533.6,
+            "end": 547.16,
+            "text": " is being managed at a refractory asthma clinic, which  is designed specifically for helping patients manage asthma,  then your asthma is probably a bit more severe.  And that second group of patients, 187 patients,  were from that second cohort of patients"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 547.16,
+            "end": 566.1,
+            "text": " managed out of asthma clinic.  The third data set is much smaller, only 68 patients.  But it's very unique because it is  coming from a 12-month study where it was a clinical trial  and there were two different types of treatments"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 566.1,
+            "end": 578.46,
+            "text": " given to these patients.  And it was a randomized controlled trial,  so the patients were randomized into each of the two  arms of the study.  I'll describe to you what the features are"
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 578.46,
+            "end": 590.94,
+            "text": " on just the next slide.  But first, I want to tell you about how  they're pre-processed to use within the K-means algorithm.  Continuous valued features were z-scored in order  to normalize their ranges."
+        },
+        {
+            "number": "lec18",
+            "title": "part.006.mp3",
+            "start": 591.5,
+            "end": 601.58,
+            "text": " Categorical variables were represented just  by a one-hot encoding.  Some of the continuous variables were further modified."
+        }
+    ],
+    "text": " We conjecture that patients in this subtype are likely to respond best to treatment. So we're only going to run the clinical trial for patients in this subtype, not in the other one. It might be useful also to try to better understand the disease mechanism. So if you find that there are some people who seem to progress very quickly through their disease and other people who seem to progress very slowly, you might then go back and do new biological assays on them to try to understand what differentiates those two clusters. So the two clusters are differentiated in terms of their phenotype. You want to go back and ask, well, what is different about their genotype that differentiates them? And it might also be useful to have a very concise description of what differentiates patients in order to actually have policies that you can implement. So rather than having what might be a very complicated linear model, or even non-linear model, for predicting future disease progression, it would be much easier if you could just say, OK, for patients who have this biomarker abnormal, they're likely to have very fast disease progression. Patients who likely have this other biomarker abnormal, they're likely to have a slow disease progression. And so we'd like to be able to do that. That's what I mean by discovering disease subtypes. But there's actually a second goal as well, which remember, think back to that original motivation I mentioned earlier of having very little data. If you have very little data, which is unfortunately the setting that we're almost always in when doing machine learning in health care, then you can overfit really easily to your data when just using it strictly within a discriminative learning framework. And so if one were to now change your optimization problem altogether to start to bring in an unsupervised loss function, then one can hope to get much more out of the limited data you have and save the labels, which you might overfit on very easily for the very last step of your learning algorithm. And that's exactly what we'll do in this segment of the lecture. So for today, we're going to think about the simplest possible unsupervised learning algorithm. And because the official prerequisite for this course was 6.036, and because clustering was not discussed in 6.036, I'll spend just two minutes talking about clustering using the simplest algorithm called k-means, which I hope almost all of you know. But this will just be a simple reminder. How many clusters are there in this figure that I'm showing over here? Let's raise some hands. One cluster, two clusters, three clusters, four clusters, five clusters. OK. And are these red points more or less showing where those five clusters are? No. So rather, there's a cluster here, there's a cluster here, there, there, right? So you were able to do this really well as humans, looking at two-dimensional data. The goal of algorithms like k-means is to show how one could do that automatically for high-dimensional data. And the k-means algorithm is very simple. It works as follows. You hypothesize a number of clusters. So here, we've hypothesized five clusters. You're going to randomly initialize those cluster centers, which I'm denoting by those red points shown here. Then in the first stage of the k-means algorithm, you're going to assign every data point to the closest cluster center. And that's going to induce a Voronoi diagram, where every point within this Voronoi cell is closer to this red point than to any other red point. And so every data point in this Voronoi cell will then be assigned to this data point. Every data point in this Voronoi cell will be assigned to that data point, and so on. So we're going to now assign all data points to their closest cluster center. And then we're just going to average all the data points assigned to some cluster center to get the new cluster center. And you repeat. And you're going to stop this procedure when no points assignments change. So let's look at a simple example. Here, we're using k equals 2. We've just decided there are only two clusters. We've initialized the two clusters shown here as the two cluster centers as this red cluster center and this blue cluster center. Notice that they're nowhere near the data. We just randomly chose them. They're nowhere near the data. It's actually a pretty bad initialization. The first step is going to assign data points to their closest cluster center. So I want everyone to say out loud either red or green to which cluster center it's going to point to, what it is going to be assigned to in this step. AUDIENCE MEMBERS REPEAT Red. Blue. Blue. Blue. Blue. All right, good. We get it. All right. So that's the first assignment. Now we're going to average the data points that are assigned to that red cluster center. So we're going to average all the red points. And the new red cluster center will be over here, right? Over there? Over here? OK, good. And the blue cluster center will be somewhere over here, right? OK, good. So that's the next step. And then you repeat. So now, again, you assign every data point to its closest cluster center. By the way, the reason why you're seeing what looks like a linear hyperplane here is because there are exactly two cluster centers. And then you repeat, blah, blah, blah, and you're done. So in fact, I think I've just shown you the convergence point. So that's the k-means algorithm. It's an extremely simple algorithm. And what I'm going to show you for the next 10 minutes of lecture is how one could use this very simple clustering algorithm to better understand asthma. So asthma is something that really affects a large number of individuals. It's characterized by having difficulties breathing. It's often managed by inhalers. Although, as asthma gets more and more severe, you need more and more complex management schemes. And it's been found that 5% to 10% of people who have severe asthma remain poorly controlled despite using the largest tolerable inhaled therapy. And so a really big question that the pharmaceutical community is extremely interested in is, how do we come up with better therapies for asthma? There's a lot of money in that problem. I first learned about this problem when a pharmaceutical company came to me when I was professor at NYU and asked me, could they work with me on this problem? I said no at the time, but I still found it very interesting. I'm sorry. I'm sorry. I'm sorry. And at that time, the company pointed me to this paper, which I'll tell you about in a second. But before I get there, I want to point out what are some of the big picture questions that everyone's interested in when it comes to asthma. The first one is to really understand, what is it about either genetic or environmental factors that underlie different subtypes of asthma? It's observed that people respond differently to therapies. It's observed that some people aren't even controlled with therapy. Why is that? Third, what are biomarkers? What are ways to predict who's going to respond or not respond to anyone in therapy? And can we get better mechanistic understanding of these different subtypes? And so this was a longstanding question. And in this paper from the American Journal of Respiratory Critical Care Medicine, which, by the way, has a huge number of citations now. It's sort of a prototypical example of subtyping. That's why I'm going through it. They started to answer that question using a data-driven approach for asthma. And what I'm showing you here is the punch line. This is the main result, the main figure of the paper. They've characterized asthma in terms of five different subtypes, really three type. One type, which I'll show over here, is inflammation predominant. One type over there, which is called early symptom predominant. And another here, which is concordant disease. And what I'll do over the next few minutes is walk you through how they came up with these different clusters. So they used three different data sets. These data sets consisted of patients who had asthma and already had at least one recent therapy for asthma. They're all non-smokers, but they were managed in three. There are three disjoint set of patients coming from three different populations. The first group of patients were recruited from primary care practices in the United Kingdom. So if you're a patient with asthma and your asthma is being managed by your primary care doctor, then it's probably not too bad. But if your asthma, on the other hand, is being managed at a refractory asthma clinic, which is designed specifically for helping patients manage asthma, then your asthma is probably a bit more severe. And that second group of patients, 187 patients, were from that second cohort of patients managed out of asthma clinic. The third data set is much smaller, only 68 patients. But it's very unique because it is coming from a 12-month study where it was a clinical trial and there were two different types of treatments given to these patients. And it was a randomized controlled trial, so the patients were randomized into each of the two arms of the study. I'll describe to you what the features are on just the next slide. But first, I want to tell you about how they're pre-processed to use within the K-means algorithm. Continuous valued features were z-scored in order to normalize their ranges. Categorical variables were represented just by a one-hot encoding. Some of the continuous variables were further modified."
+}

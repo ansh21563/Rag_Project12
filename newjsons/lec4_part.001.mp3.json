@@ -1,0 +1,313 @@
+{
+    "chunks": [
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 0.0,
+            "end": 14.200000000000001,
+            "text": " So at a high level, there's the old versus the new.  And this is going to be really a discussion  throughout the rest of today's lecture.  What's changed since that 1984 article, which  you read for today's readings?"
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 14.200000000000001,
+            "end": 24.560000000000002,
+            "text": " Well, the traditional approaches to risk stratification  are based on scoring systems.  So I mentioned to you a few minutes ago the APGAR scoring  system.  It's shown here."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 24.560000000000002,
+            "end": 39.36,
+            "text": " You're going to say for each of these different criteria,  activity, pulse, chromis, appearance, respiration,  you look at the baby and you say, well, activity is absent,  or maybe they're active movement.  Appearance might be pale or blue,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 39.36,
+            "end": 46.32,
+            "text": " which would get zero points, or completely pink,  which gets two points.  And for each one of these answers,  you add up the corresponding points.  You get a total number of points."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 46.32,
+            "end": 61.239999999999995,
+            "text": " And you look over here and you say, OK, well,  if you have zero to three points,  the baby is at risk, at severe risk.  If they have seven to 10 points,  then the baby is low risk."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 61.239999999999995,
+            "end": 79.8,
+            "text": " And there are hundreds of such scoring rules,  which have been very carefully derived through studies not  dissimilar to the one that you read for today's readings,  and which are actually widely used in the health care system  today."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 79.8,
+            "end": 97.64,
+            "text": " But the times have been changing quite rapidly  in the last 5, 10 years.  And now what most of the industry is moving towards  are machine learning-based methods  that can work with a much higher dimensional set of features"
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 97.64,
+            "end": 114.44,
+            "text": " and solve a number of key challenges  of these early approaches.  First, and this is perhaps the most important aspect,  they can fit more easily into clinical workflows.  So the scores I showed you earlier are often done manually."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 114.44,
+            "end": 130.12,
+            "text": " So one has to think to do the score.  One has to figure out what the corresponding inputs are.  And as a result of that, often they're  not used as frequently as they should be.  Second, the new machine learning approaches"
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 130.12,
+            "end": 146.74,
+            "text": " can get higher accuracy, potentially,  due to their ability to use many more features  than the traditional approaches.  And finally, they can be much quicker to derive.  So all of the traditional scoring systems"
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 146.74,
+            "end": 157.38,
+            "text": " had a very long research and development process  that led to their adoption.  First, you gather the data.  Then you build the models.  Then you send and check the models."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 157.38,
+            "end": 174.06,
+            "text": " Then you do an evaluation in one hospital.  Then you do a prospective evaluation in many hospitals.  And each one of those steps takes a lot of time.  Now, with these machine learning-based approaches,  it raises the possibility of a research assistant sitting"
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 174.06,
+            "end": 188.86,
+            "text": " in a hospital or in a computer science department saying,  oh, I think it would be really useful to derive  a score for this problem.  You take data that's available.  You apply your machine learning algorithm."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 188.86,
+            "end": 204.22,
+            "text": " And even if it's a condition or an outcome which  occurs very infrequently, if you have access  to a large enough data set, you'll  be able to get enough samples in order to actually predict  that somewhat very narrow outcome."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 204.22,
+            "end": 217.1,
+            "text": " And so as a result, it really opens the door  to rethinking about the way that risk stratification can be used.  But as a result, there are also new dangers  that are introduced.  And we'll talk about some of those in today's lecture."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 217.1,
+            "end": 230.38,
+            "text": " And we'll continue to talk about those in next Thursday's  lecture.  So these models are being widely commercialized.  Here is just an example from one  of many companies that are building risk stratification"
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 230.38,
+            "end": 241.33999999999997,
+            "text": " tools.  This is from Optum.  And what I'm showing you here is the output  from one of their models, which is predicting  COPD-related hospitalizations."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 241.33999999999997,
+            "end": 258.65999999999997,
+            "text": " And so you'll see that this is a population-level view.  So for all of the patients who are of interest  to that hospital, they will score the patient using either  one of the scores I showed you earlier, the manual ones,  or maybe a machine-learning-based model."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 258.65999999999997,
+            "end": 274.26,
+            "text": " And they'll be put into one of these different categories,  depending on the risk level.  And then one can dig in deeper.  So for example, you could click on one of those buckets  and try to see, well, who are the patients that"
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 274.26,
+            "end": 287.44,
+            "text": " are highest at risk?  And what are some potentially impactable aspects  of those patients' health?  Here I'm showing you for a slightly different problem that  is predicting high-risk diabetes patients."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 287.44,
+            "end": 302.68,
+            "text": " And you see that for each patient,  we're listing the number of A1C tests,  the value of the last A1C test, the data was performed.  And in this way, you can notice, oh, hmm,  this patient is at high risk of having diabetes."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 302.68,
+            "end": 314.56,
+            "text": " But look, they haven't been tracking their A1C.  Maybe they have uncontrolled diabetes.  Maybe we need to get them into the clinic,  get their blood tested, see whether maybe they  need a change in medication, and so on."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 314.56,
+            "end": 328.56,
+            "text": " So in this way, we can stratify the patient population  and think about interventions that can be  done for that subset of them.  So I'll move now into a case study of early detection  of type 2 diabetes."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 328.56,
+            "end": 340.68,
+            "text": " The reason why this problem is of importance  is because it's estimated that there  are 25% of patients with undiagnosed type 2  diabetes in the United States.  And that number is equally large as you"
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 340.68,
+            "end": 355.96000000000004,
+            "text": " go to many other countries internationally.  So if we can find patients who currently have diabetes  or are likely to develop diabetes in the future,  then we could attempt to impact them.  So for example, we could develop new interventions"
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 355.96000000000004,
+            "end": 370.44,
+            "text": " that can prevent those patients from worsening  in their diabetes progression.  For example, weight loss programs  or getting patients on first line diabetic treatments  like metformin."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 371.2,
+            "end": 384.42,
+            "text": " The key problem, which I'll be talking about today,  is really how do you find that at-risk population?  So the traditional approach to doing that  is very similar to the Apgar score based on a score here.  This is a scoring system used in Finland,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 384.42,
+            "end": 393.9,
+            "text": " which asks a series of questions and has points  associated with each answer.  So what's the age of the patient?  What's their body mass index?  Do they eat vegetables, fruit?"
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 393.9,
+            "end": 406.68,
+            "text": " Have they ever taken an antihypertensive medication,  and so on?  And you get a final score out.  Lower than 7 would be 1 in 100 risk  of developing type 2 diabetes."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 406.68,
+            "end": 419.36,
+            "text": " Higher than 20 is very high risk.  1 in 2 people will develop type 2 diabetes  in the next 10 years.  But as I mentioned, these scores haven't  had the impact that we had hoped that they might have."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 419.36,
+            "end": 431.90000000000003,
+            "text": " And the reason really is because they haven't been actually used  nearly as much as they should be.  So what we will be thinking through  is can we change the way in which risk stratification is  done?"
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 431.90000000000003,
+            "end": 447.04,
+            "text": " Rather than it having to be something which is manually  done when you think to do it, we can make it now population wide.  We could, for example, take data that's already  available from a health insurance company,  use machine learning."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 447.04,
+            "end": 456.66,
+            "text": " Maybe we don't have access to all of those features  I showed you earlier.  Maybe we don't know the patient's weight.  But we'll use machine learning on the data  that we do have to try to find other surrogates of those"
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 456.66,
+            "end": 471.46000000000004,
+            "text": " things we don't have, which might predict diabetes risk.  And then we can apply it automatically behind the scenes  for millions of different patients  and find the high risk population  and perform interventions for those patients."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 471.46000000000004,
+            "end": 482.62,
+            "text": " By the way, the work I'm telling you about today  is work that really came out of my lab's research  in the last few years.  So this is an example going back to the set of stakeholders  which we talked about in the first lecture."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 482.62,
+            "end": 498.78000000000003,
+            "text": " This is an example of a risk stratification  done at the payer level.  So the data which is going to be used for this problem  is administrative data, data that you typically find  in health insurance companies."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 498.78000000000003,
+            "end": 512.26,
+            "text": " So I'm showing you here a single patient's timeline  and the type of data that you would expect to be available  for that patient across time.  In red, it's showing their eligibility records.  You know when have they been enrolled in that health"
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 512.26,
+            "end": 521.26,
+            "text": " insurance.  And that's really important because if they're not  enrolled in the health insurance on some month,  then the lack of data for that patient  isn't because nothing happened."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 521.26,
+            "end": 535.26,
+            "text": " It's because we just don't have visibility into it.  It's missing.  In green, I'm showing medical claims  which are associated with diagnosis codes  that Pete talked about last week, procedure codes, CPT"
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 535.26,
+            "end": 546.3,
+            "text": " codes.  We know what the specialist was that the patient went to see,  like a cardiologist, primary care physician, and so on.  We know where the service was performed.  We know when it was performed."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 546.3,
+            "end": 563.42,
+            "text": " And then from pharmacy, we have access to medication records,  shown in the top left here, the top right there.  We know what medication was prescribed.  And we have it coded to the NDC code, National Drug Code,  which Pete talked about again last Tuesday."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 563.42,
+            "end": 577.6800000000001,
+            "text": " We know the number of days supply of the medication,  the number of refills that are available still, and so on.  And finally, we have access to laboratory tests.  Now, traditionally, health insurance companies only  know what tests were performed because they"
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 577.6800000000001,
+            "end": 592.28,
+            "text": " have to pay for that test to be performed.  But more and more, health insurance companies  are forming partnerships with companies like Quest and Lab  Core to actually get access also to the results of those lab  tests."
+        },
+        {
+            "number": "lec4",
+            "title": "part.001.mp3",
+            "start": 592.28,
+            "end": 601.0,
+            "text": " And in the data set that I'll tell you about today,  we actually do have those lab test results as well.  So what are these elements?"
+        }
+    ],
+    "text": " So at a high level, there's the old versus the new. And this is going to be really a discussion throughout the rest of today's lecture. What's changed since that 1984 article, which you read for today's readings? Well, the traditional approaches to risk stratification are based on scoring systems. So I mentioned to you a few minutes ago the APGAR scoring system. It's shown here. You're going to say for each of these different criteria, activity, pulse, chromis, appearance, respiration, you look at the baby and you say, well, activity is absent, or maybe they're active movement. Appearance might be pale or blue, which would get zero points, or completely pink, which gets two points. And for each one of these answers, you add up the corresponding points. You get a total number of points. And you look over here and you say, OK, well, if you have zero to three points, the baby is at risk, at severe risk. If they have seven to 10 points, then the baby is low risk. And there are hundreds of such scoring rules, which have been very carefully derived through studies not dissimilar to the one that you read for today's readings, and which are actually widely used in the health care system today. But the times have been changing quite rapidly in the last 5, 10 years. And now what most of the industry is moving towards are machine learning-based methods that can work with a much higher dimensional set of features and solve a number of key challenges of these early approaches. First, and this is perhaps the most important aspect, they can fit more easily into clinical workflows. So the scores I showed you earlier are often done manually. So one has to think to do the score. One has to figure out what the corresponding inputs are. And as a result of that, often they're not used as frequently as they should be. Second, the new machine learning approaches can get higher accuracy, potentially, due to their ability to use many more features than the traditional approaches. And finally, they can be much quicker to derive. So all of the traditional scoring systems had a very long research and development process that led to their adoption. First, you gather the data. Then you build the models. Then you send and check the models. Then you do an evaluation in one hospital. Then you do a prospective evaluation in many hospitals. And each one of those steps takes a lot of time. Now, with these machine learning-based approaches, it raises the possibility of a research assistant sitting in a hospital or in a computer science department saying, oh, I think it would be really useful to derive a score for this problem. You take data that's available. You apply your machine learning algorithm. And even if it's a condition or an outcome which occurs very infrequently, if you have access to a large enough data set, you'll be able to get enough samples in order to actually predict that somewhat very narrow outcome. And so as a result, it really opens the door to rethinking about the way that risk stratification can be used. But as a result, there are also new dangers that are introduced. And we'll talk about some of those in today's lecture. And we'll continue to talk about those in next Thursday's lecture. So these models are being widely commercialized. Here is just an example from one of many companies that are building risk stratification tools. This is from Optum. And what I'm showing you here is the output from one of their models, which is predicting COPD-related hospitalizations. And so you'll see that this is a population-level view. So for all of the patients who are of interest to that hospital, they will score the patient using either one of the scores I showed you earlier, the manual ones, or maybe a machine-learning-based model. And they'll be put into one of these different categories, depending on the risk level. And then one can dig in deeper. So for example, you could click on one of those buckets and try to see, well, who are the patients that are highest at risk? And what are some potentially impactable aspects of those patients' health? Here I'm showing you for a slightly different problem that is predicting high-risk diabetes patients. And you see that for each patient, we're listing the number of A1C tests, the value of the last A1C test, the data was performed. And in this way, you can notice, oh, hmm, this patient is at high risk of having diabetes. But look, they haven't been tracking their A1C. Maybe they have uncontrolled diabetes. Maybe we need to get them into the clinic, get their blood tested, see whether maybe they need a change in medication, and so on. So in this way, we can stratify the patient population and think about interventions that can be done for that subset of them. So I'll move now into a case study of early detection of type 2 diabetes. The reason why this problem is of importance is because it's estimated that there are 25% of patients with undiagnosed type 2 diabetes in the United States. And that number is equally large as you go to many other countries internationally. So if we can find patients who currently have diabetes or are likely to develop diabetes in the future, then we could attempt to impact them. So for example, we could develop new interventions that can prevent those patients from worsening in their diabetes progression. For example, weight loss programs or getting patients on first line diabetic treatments like metformin. The key problem, which I'll be talking about today, is really how do you find that at-risk population? So the traditional approach to doing that is very similar to the Apgar score based on a score here. This is a scoring system used in Finland, which asks a series of questions and has points associated with each answer. So what's the age of the patient? What's their body mass index? Do they eat vegetables, fruit? Have they ever taken an antihypertensive medication, and so on? And you get a final score out. Lower than 7 would be 1 in 100 risk of developing type 2 diabetes. Higher than 20 is very high risk. 1 in 2 people will develop type 2 diabetes in the next 10 years. But as I mentioned, these scores haven't had the impact that we had hoped that they might have. And the reason really is because they haven't been actually used nearly as much as they should be. So what we will be thinking through is can we change the way in which risk stratification is done? Rather than it having to be something which is manually done when you think to do it, we can make it now population wide. We could, for example, take data that's already available from a health insurance company, use machine learning. Maybe we don't have access to all of those features I showed you earlier. Maybe we don't know the patient's weight. But we'll use machine learning on the data that we do have to try to find other surrogates of those things we don't have, which might predict diabetes risk. And then we can apply it automatically behind the scenes for millions of different patients and find the high risk population and perform interventions for those patients. By the way, the work I'm telling you about today is work that really came out of my lab's research in the last few years. So this is an example going back to the set of stakeholders which we talked about in the first lecture. This is an example of a risk stratification done at the payer level. So the data which is going to be used for this problem is administrative data, data that you typically find in health insurance companies. So I'm showing you here a single patient's timeline and the type of data that you would expect to be available for that patient across time. In red, it's showing their eligibility records. You know when have they been enrolled in that health insurance. And that's really important because if they're not enrolled in the health insurance on some month, then the lack of data for that patient isn't because nothing happened. It's because we just don't have visibility into it. It's missing. In green, I'm showing medical claims which are associated with diagnosis codes that Pete talked about last week, procedure codes, CPT codes. We know what the specialist was that the patient went to see, like a cardiologist, primary care physician, and so on. We know where the service was performed. We know when it was performed. And then from pharmacy, we have access to medication records, shown in the top left here, the top right there. We know what medication was prescribed. And we have it coded to the NDC code, National Drug Code, which Pete talked about again last Tuesday. We know the number of days supply of the medication, the number of refills that are available still, and so on. And finally, we have access to laboratory tests. Now, traditionally, health insurance companies only know what tests were performed because they have to pay for that test to be performed. But more and more, health insurance companies are forming partnerships with companies like Quest and Lab Core to actually get access also to the results of those lab tests. And in the data set that I'll tell you about today, we actually do have those lab test results as well. So what are these elements?"
+}

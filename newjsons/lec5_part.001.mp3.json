@@ -1,0 +1,369 @@
+{
+    "chunks": [
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 0.0,
+            "end": 13.88,
+            "text": " So you actually have a research assistant standing in the room  when a patient walks into a provider,  and they talk to the patient, and they take down  really very clear notes what this patient has,  what they don't have."
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 13.88,
+            "end": 26.740000000000002,
+            "text": " But that's usually too expensive to do prospectively.  So usually what we do is do this retrospectively.  Now, if you're working with health insurance claims data,  you usually don't have the luxury of looking at notes.  And so what in my group we typically do"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 26.740000000000002,
+            "end": 38.88,
+            "text": " is we build actually a visualization tool.  And by the way, I'm a machine learning person.  I don't know anything about visualization.  Neither do I claim to be good at it.  But you can't do the machine learning work"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 38.88,
+            "end": 48.480000000000004,
+            "text": " unless you really understand your data.  So we had to build this tool in order  to look at the data in order to try  to do that first step of understanding,  did we even characterize diabetes correctly?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 48.480000000000004,
+            "end": 61.440000000000005,
+            "text": " So I'm not going to go deep into it, by the way.  You can download this.  It's an open source tool.  But ballpark, what I'm showing you here is one patient's data.  I'm showing you this x-axis time going from April to December."
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 61.440000000000005,
+            "end": 73.04,
+            "text": " And on the y-axis, I'm showing events as they occurred.  So in orange are diagnosis codes that  were recorded for the patient.  In green are procedure codes.  In blue are laboratory tests."
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 73.04,
+            "end": 85.8,
+            "text": " And if you see on a given line multiple dots  along that same line, it means that lab test,  that same lab test was performed multiple times.  And you could click on it to see what the results were.  And in this way, you could start to tell a coherent story"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 85.8,
+            "end": 99.84,
+            "text": " going with the patient.  So tools like this is what you're  going to need to build to do that first step from something  like health insurance claims data.  Now, traditionally, that first step, which then leads you"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 99.84,
+            "end": 110.92,
+            "text": " to label some data, and then from there,  you go and come up with these rules  or do a machine learning algorithm to get the label,  usually that's a paper in itself.  Of course, not of interest to the computer science community,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 110.92,
+            "end": 122.42,
+            "text": " but of extreme interest to the health care community.  So usually, there's a first paper,  academic paper, which evaluates this process  for deriving the label.  And then there are much later papers"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 122.42,
+            "end": 135.76,
+            "text": " which talk about what you could do with that label,  such as the machine learning problem we originally  set out to solve.  So let's look at an example of one of those rules.  Here is a rule to derive from health insurance claims"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 135.76,
+            "end": 154.76,
+            "text": " data whether a patient has type 2 diabetes.  Now, this isn't quite the same one  that we used in that paper, but it gets the idea across.  First, you look to see, does the patient have a diagnosis  code for type 1 diabetes?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 154.76,
+            "end": 170.12,
+            "text": " If the answer is no, you continue.  If the answer is yes, you sort of rule it out.  So you say, OK, this patient's abnormal blood test results  are because they have type 1 diabetes, not type 2 diabetes.  Type 1 diabetes usually is what you"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 170.12,
+            "end": 179.4,
+            "text": " could think of as juvenile diabetes.  It's diagnosed much earlier.  And there's a different mechanism behind it.  Then you look at other things.  Is there a diagnosis code for type 2 diabetes"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 179.4,
+            "end": 190.64,
+            "text": " somewhere in the patient's data?  If so, you go to the right, and you  look to see, is there a medication, an RX,  for type 1 diabetes in the data?  If the answer is no, you continue down this way."
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 190.64,
+            "end": 200.8,
+            "text": " If the answer is yes, you go to this way.  A yes of a type 1 diabetes medication  doesn't alone rule out the patient,  because maybe the same medications are  used for type 1 as for type 2."
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 200.8,
+            "end": 213.36,
+            "text": " So there's some other things you need to do there.  You can see that this starts to really quickly become  complicated.  And these manual-based approaches  end up having pretty bad positive."
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 213.36,
+            "end": 222.76000000000002,
+            "text": " So they're designed usually to have  pretty high positive predictive value,  but they end up having pretty bad recall,  and then they don't end up finding all of the patients.  And that's really why the machine learning-based"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 222.76000000000002,
+            "end": 233.72,
+            "text": " approaches end up being very important for this type  of problem.  Now, this is just one example of what I call a phenotype.  I call this a phenotype.  That's just what the literature calls it."
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 233.72,
+            "end": 242.27999999999997,
+            "text": " It's a phenotype for type 2 diabetes.  And the word phenotype in this context  is exactly the same thing as the label.  Yep?  AUDIENCE MEMBER 2 What is abnormal?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 242.27999999999997,
+            "end": 255.48,
+            "text": " For example, if the HA1C result is 6.5 or higher,  you might say the patient has diabetes.  OK, so this is a lab result, not a medical result.  Correct, yeah.  Thanks."
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 255.48,
+            "end": 259.68,
+            "text": " Other questions?  AUDIENCE MEMBER 3 The phenotype, which part exactly  is the phenotype?  Like, the whole thing?  The whole thing, yeah."
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 259.68,
+            "end": 270.94,
+            "text": " So the construction, where you say,  you follow this decision tree, and you  get to a conclusion, which is case, which means, yes,  they're type 2 diabetic.  And if you don't reach this point, then the answer is no,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 270.94,
+            "end": 279.48,
+            "text": " they're not type 2 diabetic.  That's what I mean by it.  So that labeling is what we're calling the phenotype  of type 2 diabetes.  Now, you'll find later in the semester,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 279.48,
+            "end": 293.36,
+            "text": " people use the word phenotype to mean something else.  It's an overloaded term.  But this is what it's called in this context as well.  Now, here's an example of a website.  It's from the PheKB project, where"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 293.36,
+            "end": 308.64000000000004,
+            "text": " you will find tens to close to 100 of these phenotypes that  have been arduously created for a whole range  of different conditions.  So if you go to this website, and you  click on any one of these conditions, like appendicitis,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 308.64000000000004,
+            "end": 320.4,
+            "text": " autism, cataracts, you'll see a different diagram  of the sort I just showed you.  So this is a real thing.  This is something that the medical community really  needs to do in order to try to derive the label that we can"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 320.4,
+            "end": 330.44,
+            "text": " then use in our machine learning task.  All right?  I'm just curious.  Is the lab value not the ground truth?  Like, if somebody has diabetes, then you"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 330.44,
+            "end": 343.52000000000004,
+            "text": " must have a lab value.  And if they have been diagnosed, then they must have.  Well, so for example, you might have an abnormal glucose value  for a variety of reasons.  One reason is because you might have"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 343.52000000000004,
+            "end": 354.20000000000005,
+            "text": " what's called gestational diabetes, which  is diabetes that's induced due to pregnancy.  But those patients typically, although it's  a predictive factor, they don't always  have long-term type 2 diabetes."
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 354.20000000000005,
+            "end": 368.04,
+            "text": " So even the laboratory test alone  is not, it doesn't tell the whole story.  You could be diagnosed without having abnormal lab value?  That's much less common here.  And the story will change in the future,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 368.04,
+            "end": 381.5,
+            "text": " because there will be a whole range of new diagnosis  techniques that might use new modalities,  like gene expression, for example.  But typically, today, the answer is yes to that.  Yeah?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 381.5,
+            "end": 391.71999999999997,
+            "text": " AUDIENCE MEMBER 2 So if these are made by doctors,  does that mean for every single disease,  there's one definitive phenotype?  ADAM MARTIN JR. These are usually  made by health outcomes researchers, which usually"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 391.71999999999997,
+            "end": 403.96,
+            "text": " have clinicians on their team.  But the type of people who often work in these  often come from the field of epidemiology, for example.  And so what was your question again?  AUDIENCE MEMBER 2 Is there just one phenotype"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 403.96,
+            "end": 410.96,
+            "text": " for every single disease?  ADAM MARTIN JR. Is there one phenotype  for every different disease?  In the ideal world, you'd have at least one  phenotype for every single disease"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 410.96,
+            "end": 418.56,
+            "text": " that could possibly exist.  Now, of course, you might be interested in different aspects  of it.  Like, you might be interested in not knowing just,  does the patient have autism, but where they"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 418.56,
+            "end": 429.16,
+            "text": " are in their autism spectrum.  You might not be interested in knowing just,  do they have it now?  But you also might want to know, when did they get it?  So there's a lot of subtleties that could go into this."
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 429.16,
+            "end": 440.88,
+            "text": " But building these up is really slow.  And validating them to make sure that they're  going to work across multiple data sets is really challenging  and usually is a negative result.  And so it's been a very slow process"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 440.88,
+            "end": 452.56,
+            "text": " to do this manually, which has led me and many others  to start thinking about the machine learning approaches  for how to do it automatically.  AUDIENCE MEMBER 3 Just as a follow up,  is there any case where there's like five autism"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 452.56,
+            "end": 464.28,
+            "text": " phenotypes, for example, or multiple competing ones?  DAVID SONTAG Yes, so there are often  many different such rule-based systems that  give you conflicting results.  Yes, that happens all the time."
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 464.28,
+            "end": 475.4,
+            "text": " AUDIENCE MEMBER 3 Can these rule-based systems  provide an estimate of when the condition was onset?  DAVID SONTAG Right, so that's getting  at one of the subtleties I just mentioned.  Can these tell you when the onset happened?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 475.4,
+            "end": 488.71999999999997,
+            "text": " They're not typically designed to do that,  but one can come up with one to do it.  And so one way to try to do that is you change those rules  to have a time period associated to it.  And then you can imagine applying those rules"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 488.71999999999997,
+            "end": 500.12,
+            "text": " in a sliding window to the patient data  to see when is the first time that it triggers.  And that would be one way to try to get a sense of when onset  was.  But there's a lot of subtleties to that, too."
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 500.12,
+            "end": 513.92,
+            "text": " So I'm going to move on now.  I just want to give you some sense of what  that deriving the labels ends up looking like.  Let's now turn to evaluation.  So a very commonly used approach in this field"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 513.92,
+            "end": 526.92,
+            "text": " is to compute what's known as the receiver operator  curve, or ROC curve.  And what this looks at is the following.  First of all, this is well-defined  for a binary classification problem."
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 526.92,
+            "end": 538.66,
+            "text": " For a binary classification problem,  when you're using a model that outputs, let's say,  a probability or some continuous value,  then you could use that continuous value prediction.  If you wanted to make a prediction, usually"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 538.66,
+            "end": 547.94,
+            "text": " threshold it.  So you say if it's greater than 0.5,  say a prediction of 1.  If it's less than 0.5, prediction of 0.  But here, we might be interested in not just what minimizes,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 547.94,
+            "end": 560.86,
+            "text": " let's say, 0, 1 loss, but you might also  be interested in trading off, let's say,  false positives for false negatives.  And so you might choose different thresholds.  And you might want to quantify how do those trade-offs look"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 560.86,
+            "end": 570.48,
+            "text": " for different choices of those thresholds  of this continuous value prediction.  And that's what the ROC curve will show you.  So as you move along the threshold,  you can compute for every single threshold,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 570.48,
+            "end": 578.48,
+            "text": " what is the true positive rate and what  is the false positive rate.  And that gives you a number.  And you try all possible thresholds.  That gives you a curve."
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 578.48,
+            "end": 591.44,
+            "text": " And then you could compare curves  from different machine learning algorithms.  For example, here, I'm showing you in the green line  the predictive model obtained by using  what we're calling the traditional risk factors."
+        },
+        {
+            "number": "lec5",
+            "title": "part.001.mp3",
+            "start": 591.44,
+            "end": 601.08,
+            "text": " So something like 8 or 10 different risk factors  for type 2 diabetes that are very commonly used  in the literature versus in blue."
+        }
+    ],
+    "text": " So you actually have a research assistant standing in the room when a patient walks into a provider, and they talk to the patient, and they take down really very clear notes what this patient has, what they don't have. But that's usually too expensive to do prospectively. So usually what we do is do this retrospectively. Now, if you're working with health insurance claims data, you usually don't have the luxury of looking at notes. And so what in my group we typically do is we build actually a visualization tool. And by the way, I'm a machine learning person. I don't know anything about visualization. Neither do I claim to be good at it. But you can't do the machine learning work unless you really understand your data. So we had to build this tool in order to look at the data in order to try to do that first step of understanding, did we even characterize diabetes correctly? So I'm not going to go deep into it, by the way. You can download this. It's an open source tool. But ballpark, what I'm showing you here is one patient's data. I'm showing you this x-axis time going from April to December. And on the y-axis, I'm showing events as they occurred. So in orange are diagnosis codes that were recorded for the patient. In green are procedure codes. In blue are laboratory tests. And if you see on a given line multiple dots along that same line, it means that lab test, that same lab test was performed multiple times. And you could click on it to see what the results were. And in this way, you could start to tell a coherent story going with the patient. So tools like this is what you're going to need to build to do that first step from something like health insurance claims data. Now, traditionally, that first step, which then leads you to label some data, and then from there, you go and come up with these rules or do a machine learning algorithm to get the label, usually that's a paper in itself. Of course, not of interest to the computer science community, but of extreme interest to the health care community. So usually, there's a first paper, academic paper, which evaluates this process for deriving the label. And then there are much later papers which talk about what you could do with that label, such as the machine learning problem we originally set out to solve. So let's look at an example of one of those rules. Here is a rule to derive from health insurance claims data whether a patient has type 2 diabetes. Now, this isn't quite the same one that we used in that paper, but it gets the idea across. First, you look to see, does the patient have a diagnosis code for type 1 diabetes? If the answer is no, you continue. If the answer is yes, you sort of rule it out. So you say, OK, this patient's abnormal blood test results are because they have type 1 diabetes, not type 2 diabetes. Type 1 diabetes usually is what you could think of as juvenile diabetes. It's diagnosed much earlier. And there's a different mechanism behind it. Then you look at other things. Is there a diagnosis code for type 2 diabetes somewhere in the patient's data? If so, you go to the right, and you look to see, is there a medication, an RX, for type 1 diabetes in the data? If the answer is no, you continue down this way. If the answer is yes, you go to this way. A yes of a type 1 diabetes medication doesn't alone rule out the patient, because maybe the same medications are used for type 1 as for type 2. So there's some other things you need to do there. You can see that this starts to really quickly become complicated. And these manual-based approaches end up having pretty bad positive. So they're designed usually to have pretty high positive predictive value, but they end up having pretty bad recall, and then they don't end up finding all of the patients. And that's really why the machine learning-based approaches end up being very important for this type of problem. Now, this is just one example of what I call a phenotype. I call this a phenotype. That's just what the literature calls it. It's a phenotype for type 2 diabetes. And the word phenotype in this context is exactly the same thing as the label. Yep? AUDIENCE MEMBER 2 What is abnormal? For example, if the HA1C result is 6.5 or higher, you might say the patient has diabetes. OK, so this is a lab result, not a medical result. Correct, yeah. Thanks. Other questions? AUDIENCE MEMBER 3 The phenotype, which part exactly is the phenotype? Like, the whole thing? The whole thing, yeah. So the construction, where you say, you follow this decision tree, and you get to a conclusion, which is case, which means, yes, they're type 2 diabetic. And if you don't reach this point, then the answer is no, they're not type 2 diabetic. That's what I mean by it. So that labeling is what we're calling the phenotype of type 2 diabetes. Now, you'll find later in the semester, people use the word phenotype to mean something else. It's an overloaded term. But this is what it's called in this context as well. Now, here's an example of a website. It's from the PheKB project, where you will find tens to close to 100 of these phenotypes that have been arduously created for a whole range of different conditions. So if you go to this website, and you click on any one of these conditions, like appendicitis, autism, cataracts, you'll see a different diagram of the sort I just showed you. So this is a real thing. This is something that the medical community really needs to do in order to try to derive the label that we can then use in our machine learning task. All right? I'm just curious. Is the lab value not the ground truth? Like, if somebody has diabetes, then you must have a lab value. And if they have been diagnosed, then they must have. Well, so for example, you might have an abnormal glucose value for a variety of reasons. One reason is because you might have what's called gestational diabetes, which is diabetes that's induced due to pregnancy. But those patients typically, although it's a predictive factor, they don't always have long-term type 2 diabetes. So even the laboratory test alone is not, it doesn't tell the whole story. You could be diagnosed without having abnormal lab value? That's much less common here. And the story will change in the future, because there will be a whole range of new diagnosis techniques that might use new modalities, like gene expression, for example. But typically, today, the answer is yes to that. Yeah? AUDIENCE MEMBER 2 So if these are made by doctors, does that mean for every single disease, there's one definitive phenotype? ADAM MARTIN JR. These are usually made by health outcomes researchers, which usually have clinicians on their team. But the type of people who often work in these often come from the field of epidemiology, for example. And so what was your question again? AUDIENCE MEMBER 2 Is there just one phenotype for every single disease? ADAM MARTIN JR. Is there one phenotype for every different disease? In the ideal world, you'd have at least one phenotype for every single disease that could possibly exist. Now, of course, you might be interested in different aspects of it. Like, you might be interested in not knowing just, does the patient have autism, but where they are in their autism spectrum. You might not be interested in knowing just, do they have it now? But you also might want to know, when did they get it? So there's a lot of subtleties that could go into this. But building these up is really slow. And validating them to make sure that they're going to work across multiple data sets is really challenging and usually is a negative result. And so it's been a very slow process to do this manually, which has led me and many others to start thinking about the machine learning approaches for how to do it automatically. AUDIENCE MEMBER 3 Just as a follow up, is there any case where there's like five autism phenotypes, for example, or multiple competing ones? DAVID SONTAG Yes, so there are often many different such rule-based systems that give you conflicting results. Yes, that happens all the time. AUDIENCE MEMBER 3 Can these rule-based systems provide an estimate of when the condition was onset? DAVID SONTAG Right, so that's getting at one of the subtleties I just mentioned. Can these tell you when the onset happened? They're not typically designed to do that, but one can come up with one to do it. And so one way to try to do that is you change those rules to have a time period associated to it. And then you can imagine applying those rules in a sliding window to the patient data to see when is the first time that it triggers. And that would be one way to try to get a sense of when onset was. But there's a lot of subtleties to that, too. So I'm going to move on now. I just want to give you some sense of what that deriving the labels ends up looking like. Let's now turn to evaluation. So a very commonly used approach in this field is to compute what's known as the receiver operator curve, or ROC curve. And what this looks at is the following. First of all, this is well-defined for a binary classification problem. For a binary classification problem, when you're using a model that outputs, let's say, a probability or some continuous value, then you could use that continuous value prediction. If you wanted to make a prediction, usually threshold it. So you say if it's greater than 0.5, say a prediction of 1. If it's less than 0.5, prediction of 0. But here, we might be interested in not just what minimizes, let's say, 0, 1 loss, but you might also be interested in trading off, let's say, false positives for false negatives. And so you might choose different thresholds. And you might want to quantify how do those trade-offs look for different choices of those thresholds of this continuous value prediction. And that's what the ROC curve will show you. So as you move along the threshold, you can compute for every single threshold, what is the true positive rate and what is the false positive rate. And that gives you a number. And you try all possible thresholds. That gives you a curve. And then you could compare curves from different machine learning algorithms. For example, here, I'm showing you in the green line the predictive model obtained by using what we're calling the traditional risk factors. So something like 8 or 10 different risk factors for type 2 diabetes that are very commonly used in the literature versus in blue."
+}

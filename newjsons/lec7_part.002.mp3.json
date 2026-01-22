@@ -1,0 +1,236 @@
+{
+    "chunks": [
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 0.0,
+            "end": 17.240000000000002,
+            "text": " So the model performance, even taking into account  that the way the data was extracted out  of the notes and clinical systems was different,  was fairly similar.  Now, one thing that is worrisome is"
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 17.240000000000002,
+            "end": 40.88,
+            "text": " that the PPV of our algorithm on our data,  the way we calculated PPV, they calculated PPV in this study,  came in lower than the way we had done it when we found it.  And so there is a technical reason for it,  but it's still disturbing that we're"
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 40.88,
+            "end": 58.52,
+            "text": " getting a different result. The technical reason  is described here, that here the PPV is estimated  from a five-fold cross-validation of the data,  whereas in our study, we had a held-out data  set from which we were calculating"
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 58.52,
+            "end": 72.24000000000001,
+            "text": " a positive predictive value.  So it's a different analysis.  It's not that we made some arithmetic mistake.  But this is interesting.  And what you see is that if you plot the areas under the,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 72.24000000000001,
+            "end": 92.56,
+            "text": " or if you plot the ROC curves, what you see  is that training on Northwestern data  and testing on either Partners or Vanderbilt data  was not so good.  But training on either Partners or Vanderbilt data"
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 92.56,
+            "end": 118.92,
+            "text": " and testing on any of the others turned out to be quite decent.  So there is some generality to the algorithm.  All right, I'm going to switch gears for a minute.  So this was from an old paper by Barrows from 19 years ago.  And he was reading nursing notes"
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 118.92,
+            "end": 138.84,
+            "text": " in an electronic medical record system.  And he came up with a note which has exactly  that text on the left-hand side in the nursing note,  except it wasn't nicely separated into separate lines.  It was all run together."
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 138.84,
+            "end": 158.96,
+            "text": " So what does that mean?  Anybody have a clue?  I didn't when I was looking at it.  So here's the interpretation.  So that's a date."
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 158.96,
+            "end": 177.24,
+            "text": " IPN stands for Intern Progress Note.  SOB does not mean what you think it means.  It's shortness of breath.  And DOE is dyspnea on exertion.  So this is difficulty breathing when you're exerting yourself."
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 177.24,
+            "end": 201.12,
+            "text": " But that has decreased, presumably  from some previous assessment.  And the patient's vital signs are stable, so VSS.  And the patient is afebrile, AF, et cetera.  So this is harder than reading the Wall Street Journal"
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 201.12,
+            "end": 216.76,
+            "text": " because the Wall Street Journal is  meant to be readable by anybody who speaks English.  And this is probably not meant to be  readable by anybody except the person who wrote it,  or maybe their immediate friends and colleagues."
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 216.76,
+            "end": 237.24,
+            "text": " So this is a real issue and one that we don't have  a very good solution for yet.  Now, what do you use NLP for?  Well, I had mentioned that one of the things we want to do  is to codify things that appear in a note."
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 237.24,
+            "end": 251.18,
+            "text": " So if it says rheumatoid arthritis,  we want to say, well, that's equivalent  to a particular ICD-9 code.  We might want to use natural language processing  for de-identification of data."
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 251.18,
+            "end": 267.88,
+            "text": " I mentioned that before.  MIMIC, the only way that Roger Marks' group got permission  to release that data and make it available for people like you  to use, is by persuading the IRB that we  had done a good enough job of getting rid"
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 267.88,
+            "end": 284.24,
+            "text": " of all the identifying information in all  of those records so that it's probably not technically  impossible, but it's very difficult to figure out  who the patients actually were in that cohort,  in that database."
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 284.24,
+            "end": 300.6,
+            "text": " And the reason we ask you to sign a data use agreement  is to deal with that residual difficult,  but not necessarily impossible, because of correlations  with other data.  And then you have little problems"
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 300.6,
+            "end": 314.72,
+            "text": " like Mr. Huntington suffers from Huntington's disease,  in which the first Huntington is protected health information  because it's a patient's name.  The second Huntington is actually  an important medical fact."
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 314.72,
+            "end": 332.32,
+            "text": " And so you wouldn't want to get rid of that one.  You want to determine aspects of each entity, its time,  its location, its degree of certainty.  You want to look for relationships  between different entities that are identified in the text."
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 332.32,
+            "end": 344.24,
+            "text": " For example, does one precede another?  Does it cause it?  Does it treat it, prevent it, indicate it, et cetera?  So there are a whole bunch of relationships  like that that we're interested in."
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 344.24,
+            "end": 364.76,
+            "text": " And then you also, for certain kinds of applications, what  you'd really like to do is to identify  what part of a textual record addresses a certain question.  So even if you can't tell what the answer is,  you should be able to point to a piece of the record"
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 364.76,
+            "end": 382.84000000000003,
+            "text": " and say, oh, this tells me about, in this case,  the patient's exercise regimen.  And then summarization is a very real challenge as well,  especially because of the cut and paste that  has come about as a result of these electronic medical record"
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 382.84000000000003,
+            "end": 399.68,
+            "text": " systems, where when a nurse is writing a new note,  it's tempting and supported by the system for him or her  to just take the old note, copy it over to a new note,  and then maybe make a few changes.  But that means that it's very repetitive."
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 399.68,
+            "end": 414.12,
+            "text": " The same stuff is recorded over and over again.  And sometimes that's not even appropriate,  because they may not have changed everything  that needed to be changed.  The other thing to keep in mind is that there"
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 414.12,
+            "end": 431.34000000000003,
+            "text": " are two very different tasks.  So for example, if I'm doing de-identification,  essentially I have to look at every word in a narrative  in order to see whether it's protected health information.  But there are often aggregate judgments"
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 431.34000000000003,
+            "end": 448.62,
+            "text": " that I need to make where many of the words  don't make any difference.  And so for example, one of the first challenges  that we ran back in 2006 was where  we gave people medical records, narrative text records,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 448.62,
+            "end": 470.14,
+            "text": " from a bunch of patients and said,  is this person a smoker?  Well, you can imagine that there are certain words that  are very helpful, like smoker or tobacco user  or something like that."
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 470.14,
+            "end": 489.34,
+            "text": " But even those are sometimes misleading.  So for example, we saw somebody who  happened to be a researcher working on tobacco mosaic  virus who was not a smoker.  And then you have interesting cases,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 489.34,
+            "end": 509.28,
+            "text": " like the patient quit smoking two days ago.  Really?  Are they a smoker or not?  And also, aggregate judgment is things like cohort selection,  where it's not every single thing"
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 509.28,
+            "end": 528.56,
+            "text": " that you need to know about this patient.  You just need to know if they fit a certain pattern.  So let me give you a little historical note.  So this happened to be work that was done by my PhD thesis  advisor, the gentleman whose picture is on the slide there."
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 528.56,
+            "end": 546.4,
+            "text": " And he published this paper in 1966  called English for the Computer in the proceedings  of the Fall Joint Computer Conference.  This was the big computer conference of the 1960s.  And his idea was that the way to do English,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 546.4,
+            "end": 561.72,
+            "text": " the way to process English, is to assume  that there is a grammar.  And any English text that you run across,  you parse according to this grammar.  And that each parsing rule corresponds"
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 561.72,
+            "end": 580.0799999999999,
+            "text": " to some semantic function.  So the picture that emerges is one like this,  where if you have two phrases and they  have some syntactic relationship between them,  then you can map each phrase to its meaning."
+        },
+        {
+            "number": "lec7",
+            "title": "part.002.mp3",
+            "start": 580.0799999999999,
+            "end": 601.74,
+            "text": " And the semantic relationship between those two meanings  is determined by the syntactic relationship in the language.  So this seems like a fairly obvious idea,  but apparently nobody had tried this on a computer before.  And so Fred built this."
+        }
+    ],
+    "text": " So the model performance, even taking into account that the way the data was extracted out of the notes and clinical systems was different, was fairly similar. Now, one thing that is worrisome is that the PPV of our algorithm on our data, the way we calculated PPV, they calculated PPV in this study, came in lower than the way we had done it when we found it. And so there is a technical reason for it, but it's still disturbing that we're getting a different result. The technical reason is described here, that here the PPV is estimated from a five-fold cross-validation of the data, whereas in our study, we had a held-out data set from which we were calculating a positive predictive value. So it's a different analysis. It's not that we made some arithmetic mistake. But this is interesting. And what you see is that if you plot the areas under the, or if you plot the ROC curves, what you see is that training on Northwestern data and testing on either Partners or Vanderbilt data was not so good. But training on either Partners or Vanderbilt data and testing on any of the others turned out to be quite decent. So there is some generality to the algorithm. All right, I'm going to switch gears for a minute. So this was from an old paper by Barrows from 19 years ago. And he was reading nursing notes in an electronic medical record system. And he came up with a note which has exactly that text on the left-hand side in the nursing note, except it wasn't nicely separated into separate lines. It was all run together. So what does that mean? Anybody have a clue? I didn't when I was looking at it. So here's the interpretation. So that's a date. IPN stands for Intern Progress Note. SOB does not mean what you think it means. It's shortness of breath. And DOE is dyspnea on exertion. So this is difficulty breathing when you're exerting yourself. But that has decreased, presumably from some previous assessment. And the patient's vital signs are stable, so VSS. And the patient is afebrile, AF, et cetera. So this is harder than reading the Wall Street Journal because the Wall Street Journal is meant to be readable by anybody who speaks English. And this is probably not meant to be readable by anybody except the person who wrote it, or maybe their immediate friends and colleagues. So this is a real issue and one that we don't have a very good solution for yet. Now, what do you use NLP for? Well, I had mentioned that one of the things we want to do is to codify things that appear in a note. So if it says rheumatoid arthritis, we want to say, well, that's equivalent to a particular ICD-9 code. We might want to use natural language processing for de-identification of data. I mentioned that before. MIMIC, the only way that Roger Marks' group got permission to release that data and make it available for people like you to use, is by persuading the IRB that we had done a good enough job of getting rid of all the identifying information in all of those records so that it's probably not technically impossible, but it's very difficult to figure out who the patients actually were in that cohort, in that database. And the reason we ask you to sign a data use agreement is to deal with that residual difficult, but not necessarily impossible, because of correlations with other data. And then you have little problems like Mr. Huntington suffers from Huntington's disease, in which the first Huntington is protected health information because it's a patient's name. The second Huntington is actually an important medical fact. And so you wouldn't want to get rid of that one. You want to determine aspects of each entity, its time, its location, its degree of certainty. You want to look for relationships between different entities that are identified in the text. For example, does one precede another? Does it cause it? Does it treat it, prevent it, indicate it, et cetera? So there are a whole bunch of relationships like that that we're interested in. And then you also, for certain kinds of applications, what you'd really like to do is to identify what part of a textual record addresses a certain question. So even if you can't tell what the answer is, you should be able to point to a piece of the record and say, oh, this tells me about, in this case, the patient's exercise regimen. And then summarization is a very real challenge as well, especially because of the cut and paste that has come about as a result of these electronic medical record systems, where when a nurse is writing a new note, it's tempting and supported by the system for him or her to just take the old note, copy it over to a new note, and then maybe make a few changes. But that means that it's very repetitive. The same stuff is recorded over and over again. And sometimes that's not even appropriate, because they may not have changed everything that needed to be changed. The other thing to keep in mind is that there are two very different tasks. So for example, if I'm doing de-identification, essentially I have to look at every word in a narrative in order to see whether it's protected health information. But there are often aggregate judgments that I need to make where many of the words don't make any difference. And so for example, one of the first challenges that we ran back in 2006 was where we gave people medical records, narrative text records, from a bunch of patients and said, is this person a smoker? Well, you can imagine that there are certain words that are very helpful, like smoker or tobacco user or something like that. But even those are sometimes misleading. So for example, we saw somebody who happened to be a researcher working on tobacco mosaic virus who was not a smoker. And then you have interesting cases, like the patient quit smoking two days ago. Really? Are they a smoker or not? And also, aggregate judgment is things like cohort selection, where it's not every single thing that you need to know about this patient. You just need to know if they fit a certain pattern. So let me give you a little historical note. So this happened to be work that was done by my PhD thesis advisor, the gentleman whose picture is on the slide there. And he published this paper in 1966 called English for the Computer in the proceedings of the Fall Joint Computer Conference. This was the big computer conference of the 1960s. And his idea was that the way to do English, the way to process English, is to assume that there is a grammar. And any English text that you run across, you parse according to this grammar. And that each parsing rule corresponds to some semantic function. So the picture that emerges is one like this, where if you have two phrases and they have some syntactic relationship between them, then you can map each phrase to its meaning. And the semantic relationship between those two meanings is determined by the syntactic relationship in the language. So this seems like a fairly obvious idea, but apparently nobody had tried this on a computer before. And so Fred built this."
+}

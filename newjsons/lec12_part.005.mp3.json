@@ -1,0 +1,187 @@
+{
+    "chunks": [
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 0.0,
+            "end": 12.0,
+            "text": " And even today, it's really central to a lot of research  efforts.  And I just want to end on a quote from 1987,  where in the future, AI can be expected  to become staples of pathology practice."
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 12.0,
+            "end": 26.04,
+            "text": " And I think we're much, much closer than 30 years ago.  And I want to thank everyone at PathAI, as well as Hunter,  who really helped put together a lot of these slides.  And we do have lots of opportunities  for machine learning engineers, software engineers, et"
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 26.04,
+            "end": 34.1,
+            "text": " cetera, at PathAI.  So certainly reach out if you're interested in learning more.  And I'm happy to take any questions if we have time.  So thank you.  Yeah."
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 34.1,
+            "end": 57.8,
+            "text": " So I think generally very aggressive with events.  I was wondering how close is this to clinical practice?  Is there FDA or what is?  So I mean, actually, clinical practice probably 2020,  like early, mid 2020."
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 57.8,
+            "end": 69.72,
+            "text": " But I mean, today, it's very active in clinical research.  So like clinical trials, et cetera,  that do involve patients.  But it's in a much more well-defined setting.  But the first clinical use cases,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 69.72,
+            "end": 78.96,
+            "text": " at least of the types of stuff we're building,  will be, I think, about a year from now.  And I think it'll start small and then  get progressively bigger.  So I don't think it's going to be everything all at once"
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 78.96,
+            "end": 87.4,
+            "text": " transforms in the clinic.  But I do think we'll start seeing the first applications  out.  And some of them will go through the FDA.  And there will be some laboratory-developed tests."
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 87.4,
+            "end": 111.80000000000001,
+            "text": " Ours will go through the FDA.  But labs themselves can actually validate tools themselves.  And that's another path.  Sure.  Have you been using observational data sets?"
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 111.80000000000001,
+            "end": 125.52,
+            "text": " You gave one example where you tried to use data  from a randomized control trial,  or will try to use data from a randomized control trial.  Different efficacies of treatment.  One of the next major segments of this course,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 125.52,
+            "end": 137.35999999999999,
+            "text": " starting in about two weeks, will  be about causal inference observational data.  I'm wondering if that is something  that AI has gotten into yet.  And if so, what is your finding so far?"
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 137.35999999999999,
+            "end": 153.4,
+            "text": " So we have focused a lot on randomized control trial data  and have developed methods around that, which  simplifies the problem and allows  us to do, I think, pretty clever things around how  to generate those types of graphs I was showing,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 153.4,
+            "end": 166.48000000000002,
+            "text": " where you truly can infer the treatment is having an effect.  And we've done far less.  I'm super interested in that.  I'd say the advantages of RCTs are people are already  investing hugely in building these very well-curated data"
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 166.48000000000002,
+            "end": 177.07999999999998,
+            "text": " sets that include images, molecular data when available,  treatment, and outcome.  And it's just like that's there, because they've invested  in the clinical trial.  They've invested in generating that data set."
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 177.07999999999998,
+            "end": 191.64,
+            "text": " To me, the big challenge in observational stuff,  there's a few that I'd be interested in what you guys  are doing and learn about it, is getting the data is not easy.  Like the outcome data is not linking the pathology images  with the outcome data."
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 191.64,
+            "end": 201.2,
+            "text": " Even it is actually, in my opinion,  harder in an observational way than in RCT,  because they're actually doing it and paying for it  and collecting it on RCTs.  No one's really done a very good job of,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 201.2,
+            "end": 215.28,
+            "text": " TCGA would be a good place to play around with,  because that is observational data.  And we also generally want to focus on actionable decisions.  And an RCT is sort of perfectly set up for that.  Like, do I give drug X or not?"
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 215.28,
+            "end": 225.33999999999997,
+            "text": " So I think if you put together the right data set  and somehow make the results actionable,  it could be really, really useful,  because there is a lot of data.  But I think just collecting the outcomes"
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 225.33999999999997,
+            "end": 235.44,
+            "text": " and linking them with images is actually quite hard.  And ironically, I think it's harder for observational  than for randomized clinical trials  where they're collecting it.  I guess one example would be the Nurses' Health Study"
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 235.44,
+            "end": 245.84,
+            "text": " or these big epidemiology cohorts.  Potentially, they are collecting that data and organizing it.  But what were you thinking about?  Do you have anything with pathology in mind  for causal inference from observational data?"
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 245.84,
+            "end": 258.88,
+            "text": " Well, I think the example that you gave,  like Nurses' Health Study or the Framingham study,  where you're tracking patients across time.  They're getting different interventions across time.  And because of the way the study was designed,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 258.88,
+            "end": 271.40000000000003,
+            "text": " in fact, there are even good outcome variations  across time.  So that problem that you mentioned doesn't happen there.  But then suppose you were to take data from a file bank  and do pathology to get the samples."
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 271.40000000000003,
+            "end": 283.12,
+            "text": " Then you could ask about, well, what  is the effect of different interventions or treatment  plans on outcome?  The challenge, of course, drawing inferences there  is that there is bias in doing 2.1 treatments."
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 283.12,
+            "end": 294.32,
+            "text": " That's where the techniques that we talked about in class  would become very ridiculous.  But I appreciate the challenges that you mentioned.  I think it's incredibly powerful.  I think the other issue I just think about"
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 294.32,
+            "end": 305.52,
+            "text": " is that treatments change so quickly over time.  So you don't want to be overfitting the past.  But I think there are certain cases where  the therapeutic decisions today are  similar to what they were in the past."
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 305.52,
+            "end": 314.36,
+            "text": " There are other areas, like immuno-oncology,  where there's just no history to learn from.  So I think it depends on the area.  All right.  And with that, let's thank Andy again."
+        },
+        {
+            "number": "lec12",
+            "title": "part.005.mp3",
+            "start": 314.36,
+            "end": 317.28000000000003,
+            "text": " Thank you.  Thank you.  Thank you."
+        }
+    ],
+    "text": " And even today, it's really central to a lot of research efforts. And I just want to end on a quote from 1987, where in the future, AI can be expected to become staples of pathology practice. And I think we're much, much closer than 30 years ago. And I want to thank everyone at PathAI, as well as Hunter, who really helped put together a lot of these slides. And we do have lots of opportunities for machine learning engineers, software engineers, et cetera, at PathAI. So certainly reach out if you're interested in learning more. And I'm happy to take any questions if we have time. So thank you. Yeah. So I think generally very aggressive with events. I was wondering how close is this to clinical practice? Is there FDA or what is? So I mean, actually, clinical practice probably 2020, like early, mid 2020. But I mean, today, it's very active in clinical research. So like clinical trials, et cetera, that do involve patients. But it's in a much more well-defined setting. But the first clinical use cases, at least of the types of stuff we're building, will be, I think, about a year from now. And I think it'll start small and then get progressively bigger. So I don't think it's going to be everything all at once transforms in the clinic. But I do think we'll start seeing the first applications out. And some of them will go through the FDA. And there will be some laboratory-developed tests. Ours will go through the FDA. But labs themselves can actually validate tools themselves. And that's another path. Sure. Have you been using observational data sets? You gave one example where you tried to use data from a randomized control trial, or will try to use data from a randomized control trial. Different efficacies of treatment. One of the next major segments of this course, starting in about two weeks, will be about causal inference observational data. I'm wondering if that is something that AI has gotten into yet. And if so, what is your finding so far? So we have focused a lot on randomized control trial data and have developed methods around that, which simplifies the problem and allows us to do, I think, pretty clever things around how to generate those types of graphs I was showing, where you truly can infer the treatment is having an effect. And we've done far less. I'm super interested in that. I'd say the advantages of RCTs are people are already investing hugely in building these very well-curated data sets that include images, molecular data when available, treatment, and outcome. And it's just like that's there, because they've invested in the clinical trial. They've invested in generating that data set. To me, the big challenge in observational stuff, there's a few that I'd be interested in what you guys are doing and learn about it, is getting the data is not easy. Like the outcome data is not linking the pathology images with the outcome data. Even it is actually, in my opinion, harder in an observational way than in RCT, because they're actually doing it and paying for it and collecting it on RCTs. No one's really done a very good job of, TCGA would be a good place to play around with, because that is observational data. And we also generally want to focus on actionable decisions. And an RCT is sort of perfectly set up for that. Like, do I give drug X or not? So I think if you put together the right data set and somehow make the results actionable, it could be really, really useful, because there is a lot of data. But I think just collecting the outcomes and linking them with images is actually quite hard. And ironically, I think it's harder for observational than for randomized clinical trials where they're collecting it. I guess one example would be the Nurses' Health Study or these big epidemiology cohorts. Potentially, they are collecting that data and organizing it. But what were you thinking about? Do you have anything with pathology in mind for causal inference from observational data? Well, I think the example that you gave, like Nurses' Health Study or the Framingham study, where you're tracking patients across time. They're getting different interventions across time. And because of the way the study was designed, in fact, there are even good outcome variations across time. So that problem that you mentioned doesn't happen there. But then suppose you were to take data from a file bank and do pathology to get the samples. Then you could ask about, well, what is the effect of different interventions or treatment plans on outcome? The challenge, of course, drawing inferences there is that there is bias in doing 2.1 treatments. That's where the techniques that we talked about in class would become very ridiculous. But I appreciate the challenges that you mentioned. I think it's incredibly powerful. I think the other issue I just think about is that treatments change so quickly over time. So you don't want to be overfitting the past. But I think there are certain cases where the therapeutic decisions today are similar to what they were in the past. There are other areas, like immuno-oncology, where there's just no history to learn from. So I think it depends on the area. All right. And with that, let's thank Andy again. Thank you. Thank you. Thank you."
+}

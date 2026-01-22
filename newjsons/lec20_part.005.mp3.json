@@ -1,0 +1,243 @@
+{
+    "chunks": [
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 0.0,
+            "end": 19.76,
+            "text": " biologists do is they do this kind of analysis.  They then create a strain of knockout mice  who have some analog of whatever disease  it is that you're studying.  And they see whether, in fact, knocking out a certain gene,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 19.76,
+            "end": 42.04,
+            "text": " like this guy, cures or creates the disease  that you're interested in in this mouse model.  And then you have a more mechanistic explanation  for what the relationship might be.  So basically, you're looking at the ratio"
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 42.04,
+            "end": 57.28,
+            "text": " of the odds of having the disease if you have a SNP  or if you have a genetic variant to having the disease if you  don't have the genetic variant.  Yeah.  Just curious, on the last slide, it"
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 57.28,
+            "end": 70.68,
+            "text": " seems like the Bonferroni correction would be very  limiting here, potentially conservative.  And I'm curious if there are specific computational  techniques adapted to this scenario that  allow you to mine a bit more effectively than those."
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 70.68,
+            "end": 88.76,
+            "text": " Yeah, so if you talk to the statisticians who  are more expert at this than the computer scientists typically,  they will tell you that Bonferroni  is a very conservative kind of correction.  And if you can impose some sort of structure"
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 88.76,
+            "end": 106.0,
+            "text": " on the set of genes that you're testing, then you can cheat.  And you can say, well, these 75 genes actually  are all part of the same mechanism.  And we're really testing the mechanism and not  the individual gene."
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 106.0,
+            "end": 126.04,
+            "text": " And therefore, instead of making a Bonferroni correction  for 75 of these guys, we only have to do it for one.  And so you can reduce the Bonferroni correction that way.  But people get nervous when you do that,  because your incentive as a researcher"
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 126.04,
+            "end": 144.08,
+            "text": " is to show statistically significant results.  But that whole question of p-values  keeps coming under discussion.  So the head of the American Statistical Association  about 15 years ago was a Stanford professor."
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 144.08,
+            "end": 162.96,
+            "text": " And he published what became a very notorious article,  saying we got it all wrong.  Statistical significance is not significance  in the standard English sense of the word.  And so he called for various other ways"
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 162.96,
+            "end": 175.96,
+            "text": " and was more sympathetic to Bayesian kinds of reasoning  and things like that.  So there may be some gradual movement to that.  But this is a huge can of worms to which we don't have  a very good mechanistic answer."
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 179.88,
+            "end": 201.28,
+            "text": " So if you do these GWASes, and this  is the real problem with them, is that most of what you see  is down here.  So you have things with common variants.  But they have very small effect sizes"
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 201.28,
+            "end": 218.92,
+            "text": " when you look at what their effect is  on a particular disease.  And so that same Zach Kohane that I mentioned earlier  has always been challenging people  doing this kind of work, saying, look, for example,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 218.92,
+            "end": 237.32,
+            "text": " we did a GWAS with Kat Liao, who was a guest interviewee here  when I was lecturing earlier in the semester.  She's a rheumatologist.  And we did a gene-wide association study.  We found a bunch of genes that had odds ratios of 1.1 to 1,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 237.32,
+            "end": 252.48000000000002,
+            "text": " 1.2 to 1.  And they're statistically significant  because if you collect enough data,  everything is statistically significant.  But are they significant in the other sense of significance?"
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 252.48,
+            "end": 276.32,
+            "text": " Well, so Zach's argument was that if you  look at something like the odds ratio of lung cancer  for people who do and don't smoke, the odds ratio is 8.  So when you compare 1.1 to 8, you should be ashamed.  You're not doing very well in terms of elucidating"
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 276.32,
+            "end": 292.84000000000003,
+            "text": " what the effects really are.  And so Zach actually has argued very strongly  that rather than focusing all our attention  on these genetic factors that have very weak relationships,  we should instead focus more on clinical things that often have"
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 292.84000000000003,
+            "end": 310.64,
+            "text": " stronger predictive relationships.  And some combination, of course, is best.  Now, it is true that we know a whole bunch of highly  penetrant Mendelian mutations.  So these are ones where one change in your genome,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 310.64,
+            "end": 326.88,
+            "text": " and all of a sudden, you have some terrible disease.  And I think when the genome project started in the 1990s,  there was an expectation that we would  find a whole bunch more things like that  from knowing the genome."
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 326.88,
+            "end": 346.35999999999996,
+            "text": " And that expectation was dashed because what we discovered  is that our predecessors were actually  pretty good at recognizing those kinds of diseases  from Mendel on with the wrinkled peas.  If you see a family in which there's a segregation pattern"
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 346.35999999999996,
+            "end": 364.76,
+            "text": " where you can see who has the disease and who doesn't  and what their relationships are,  you can get a pretty good idea of what genes  or what genetic variants are associated with that disease.  And it turns out we had found almost all of them."
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 364.76,
+            "end": 380.64,
+            "text": " And so there weren't a whole lot more  that are highly penetrant Mendelian mutations.  And so what we had is mostly these common variants  with small effects.  What's really interesting and worth working on"
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 380.64,
+            "end": 404.12,
+            "text": " is these rare variants with small effects.  So the mystery kid, like the kid whose case I showed you,  probably has some interesting genetics that is quite uncommon.  And obviously, for a long time, had a small effect.  But then all of a sudden, something happened."
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 404.12,
+            "end": 423.94,
+            "text": " And there is this whole field called unknown disease  diagnosis that says, what do you do when some weirdo walks in  off the street and you have no idea what's going on?  And there are now companies.  So I was a judge in a challenge about four or five years ago"
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 423.94,
+            "end": 435.74,
+            "text": " where we took eight kids like this.  And we genotyped them.  And we genotyped their parents and their grandparents  and their siblings.  And we took all their clinical data."
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 435.74,
+            "end": 450.96,
+            "text": " This was with the consent of their parents, of course.  And we made it available as a contest.  And we had 20-something participants  from around the world who tried to figure out  something useful to say about these kids."
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 450.96,
+            "end": 464.14000000000004,
+            "text": " And you go through a pipeline.  And we did this in two rounds.  The first round, the pipelines all looked very different.  And the second round, a couple of years later,  the pipelines had pretty much converged."
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 464.14000000000004,
+            "end": 481.98,
+            "text": " And I see now that there is a company that  did well in one of these challenges that now sells this  as a service, like I showed you before, different company.  And so you send them the genetic makeup  of some kid with a weird condition."
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 481.98,
+            "end": 504.70000000000005,
+            "text": " And the genetic makeup of their family.  And it tries to guess which genes  might be involved in causing the problem that this child has.  That's not the answer, of course,  because that's just a sort of suspicion of a problem."
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 504.70000000000005,
+            "end": 522.7,
+            "text": " And then you have to go out and do real biological work  to try to reproduce that scenario  and see what the effects really are.  But at least in a couple of cases out of those eight,  those hints have, in fact, led to a much better understanding"
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 522.7,
+            "end": 536.82,
+            "text": " of what caused the problems in these children.  That was fun, by the way.  I got my name as an author on one  of these things that looks like a high energy physics  experiment."
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 536.82,
+            "end": 554.6199999999999,
+            "text": " The first two pages of the paper is just the list of authors.  So that's kind of interesting.  OK.  Now, here is a more recent study,  which is a gene-wide association of type 2 diabetes."
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 554.6199999999999,
+            "end": 572.9,
+            "text": " It's not quite gene-wide because they didn't study every locus,  but they studied 100 loci that have  been associated with type 2 diabetes in previous studies.  So of course, if you're not the first person doing  this kind of work, you can rely on the literature"
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 572.9,
+            "end": 586.34,
+            "text": " where other people have already come up  with some interesting ideas.  So they wound up selecting 94 type 2 diabetes-associated  variants.  So these are glycemic traits, fasting insulin, fasting"
+        },
+        {
+            "number": "lec20",
+            "title": "part.005.mp3",
+            "start": 586.34,
+            "end": 601.3,
+            "text": " glucose, et cetera, things about your body,  your body mass index, height, weight, circumference, et  cetera, lipid levels of various sorts,  associations with different diseases."
+        }
+    ],
+    "text": " biologists do is they do this kind of analysis. They then create a strain of knockout mice who have some analog of whatever disease it is that you're studying. And they see whether, in fact, knocking out a certain gene, like this guy, cures or creates the disease that you're interested in in this mouse model. And then you have a more mechanistic explanation for what the relationship might be. So basically, you're looking at the ratio of the odds of having the disease if you have a SNP or if you have a genetic variant to having the disease if you don't have the genetic variant. Yeah. Just curious, on the last slide, it seems like the Bonferroni correction would be very limiting here, potentially conservative. And I'm curious if there are specific computational techniques adapted to this scenario that allow you to mine a bit more effectively than those. Yeah, so if you talk to the statisticians who are more expert at this than the computer scientists typically, they will tell you that Bonferroni is a very conservative kind of correction. And if you can impose some sort of structure on the set of genes that you're testing, then you can cheat. And you can say, well, these 75 genes actually are all part of the same mechanism. And we're really testing the mechanism and not the individual gene. And therefore, instead of making a Bonferroni correction for 75 of these guys, we only have to do it for one. And so you can reduce the Bonferroni correction that way. But people get nervous when you do that, because your incentive as a researcher is to show statistically significant results. But that whole question of p-values keeps coming under discussion. So the head of the American Statistical Association about 15 years ago was a Stanford professor. And he published what became a very notorious article, saying we got it all wrong. Statistical significance is not significance in the standard English sense of the word. And so he called for various other ways and was more sympathetic to Bayesian kinds of reasoning and things like that. So there may be some gradual movement to that. But this is a huge can of worms to which we don't have a very good mechanistic answer. So if you do these GWASes, and this is the real problem with them, is that most of what you see is down here. So you have things with common variants. But they have very small effect sizes when you look at what their effect is on a particular disease. And so that same Zach Kohane that I mentioned earlier has always been challenging people doing this kind of work, saying, look, for example, we did a GWAS with Kat Liao, who was a guest interviewee here when I was lecturing earlier in the semester. She's a rheumatologist. And we did a gene-wide association study. We found a bunch of genes that had odds ratios of 1.1 to 1, 1.2 to 1. And they're statistically significant because if you collect enough data, everything is statistically significant. But are they significant in the other sense of significance? Well, so Zach's argument was that if you look at something like the odds ratio of lung cancer for people who do and don't smoke, the odds ratio is 8. So when you compare 1.1 to 8, you should be ashamed. You're not doing very well in terms of elucidating what the effects really are. And so Zach actually has argued very strongly that rather than focusing all our attention on these genetic factors that have very weak relationships, we should instead focus more on clinical things that often have stronger predictive relationships. And some combination, of course, is best. Now, it is true that we know a whole bunch of highly penetrant Mendelian mutations. So these are ones where one change in your genome, and all of a sudden, you have some terrible disease. And I think when the genome project started in the 1990s, there was an expectation that we would find a whole bunch more things like that from knowing the genome. And that expectation was dashed because what we discovered is that our predecessors were actually pretty good at recognizing those kinds of diseases from Mendel on with the wrinkled peas. If you see a family in which there's a segregation pattern where you can see who has the disease and who doesn't and what their relationships are, you can get a pretty good idea of what genes or what genetic variants are associated with that disease. And it turns out we had found almost all of them. And so there weren't a whole lot more that are highly penetrant Mendelian mutations. And so what we had is mostly these common variants with small effects. What's really interesting and worth working on is these rare variants with small effects. So the mystery kid, like the kid whose case I showed you, probably has some interesting genetics that is quite uncommon. And obviously, for a long time, had a small effect. But then all of a sudden, something happened. And there is this whole field called unknown disease diagnosis that says, what do you do when some weirdo walks in off the street and you have no idea what's going on? And there are now companies. So I was a judge in a challenge about four or five years ago where we took eight kids like this. And we genotyped them. And we genotyped their parents and their grandparents and their siblings. And we took all their clinical data. This was with the consent of their parents, of course. And we made it available as a contest. And we had 20-something participants from around the world who tried to figure out something useful to say about these kids. And you go through a pipeline. And we did this in two rounds. The first round, the pipelines all looked very different. And the second round, a couple of years later, the pipelines had pretty much converged. And I see now that there is a company that did well in one of these challenges that now sells this as a service, like I showed you before, different company. And so you send them the genetic makeup of some kid with a weird condition. And the genetic makeup of their family. And it tries to guess which genes might be involved in causing the problem that this child has. That's not the answer, of course, because that's just a sort of suspicion of a problem. And then you have to go out and do real biological work to try to reproduce that scenario and see what the effects really are. But at least in a couple of cases out of those eight, those hints have, in fact, led to a much better understanding of what caused the problems in these children. That was fun, by the way. I got my name as an author on one of these things that looks like a high energy physics experiment. The first two pages of the paper is just the list of authors. So that's kind of interesting. OK. Now, here is a more recent study, which is a gene-wide association of type 2 diabetes. It's not quite gene-wide because they didn't study every locus, but they studied 100 loci that have been associated with type 2 diabetes in previous studies. So of course, if you're not the first person doing this kind of work, you can rely on the literature where other people have already come up with some interesting ideas. So they wound up selecting 94 type 2 diabetes-associated variants. So these are glycemic traits, fasting insulin, fasting glucose, et cetera, things about your body, your body mass index, height, weight, circumference, et cetera, lipid levels of various sorts, associations with different diseases."
+}

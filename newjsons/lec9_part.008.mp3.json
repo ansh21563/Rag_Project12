@@ -1,0 +1,96 @@
+{
+    "chunks": [
+        {
+            "number": "lec9",
+            "title": "part.008.mp3",
+            "start": 0.0,
+            "end": 25.0,
+            "text": " I was one curious, how long before this obsession?  Two, once it's been determined that actually significant  variation has occurred, what are some of the decisions  that you made regarding tradeoffs with using an  aggregate model?"
+        },
+        {
+            "number": "lec9",
+            "title": "part.008.mp3",
+            "start": 25.0,
+            "end": 34.0,
+            "text": " That means a bygone signal versus the cost of  retraining?  Yeah, absolutely.  So the question is, the set and forget.  We build the model, the model may become stale,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.008.mp3",
+            "start": 34.0,
+            "end": 44.0,
+            "text": " should we update the model and how do we decide to  do that?  I mean, we're using, it depends what you define as  a model, we're using tables and rules that we've  developed since the 1970s."
+        },
+        {
+            "number": "lec9",
+            "title": "part.008.mp3",
+            "start": 44.0,
+            "end": 56.0,
+            "text": " I think we have a pretty high desire to sort of  periodically revisit those.  There's a problem in the field of mathematics called  knowledge management or knowledge engineering, right?  How do we sort of remember which of our knowledge"
+        },
+        {
+            "number": "lec9",
+            "title": "part.008.mp3",
+            "start": 56.0,
+            "end": 70.0,
+            "text": " base needs to be sort of checked again or updated?  And we'll often, you know, just as a standard,  retrain a model or reevaluate a knowledge base  every six months or every year because it's both  harmful to patients if this stuff's out of date and"
+        },
+        {
+            "number": "lec9",
+            "title": "part.008.mp3",
+            "start": 70.0,
+            "end": 81.0,
+            "text": " it also makes us look stupid, right?  So if, you know, there's a new paper that comes out  and says beta blockers are terrible poison and we  keep suggesting them, then people no longer believe  the suggestions we make."
+        },
+        {
+            "number": "lec9",
+            "title": "part.008.mp3",
+            "start": 81.0,
+            "end": 91.0,
+            "text": " That said, we still make mistakes, right?  I mean, things happen all the time.  A lot of my work has focused on malfunctions in  these systems.  So as an example, you know, if periodically the"
+        },
+        {
+            "number": "lec9",
+            "title": "part.008.mp3",
+            "start": 91.0,
+            "end": 103.0,
+            "text": " pharmacy might change the code or ID number for a  medicine or a new medicine might come on the market  and we have to make sure to continually update the  knowledge base so that we're not suggesting an old  medicine or overlooking the fact that the patient's"
+        },
+        {
+            "number": "lec9",
+            "title": "part.008.mp3",
+            "start": 103.0,
+            "end": 112.0,
+            "text": " already been prescribed a new medicine.  And so we try to do that prospectively or  proactively, but then we also try to listen to  feedback from users and fix things as we go.  Cool."
+        },
+        {
+            "number": "lec9",
+            "title": "part.008.mp3",
+            "start": 113.0,
+            "end": 130.0,
+            "text": " And just one more comment on that.  So some things are done in real time.  There was a system many years ago at Intermountain  Health in Salt Lake City where they were looking at  what bugs were growing out of microbiology samples in"
+        },
+        {
+            "number": "lec9",
+            "title": "part.008.mp3",
+            "start": 130.0,
+            "end": 143.0,
+            "text": " the laboratory.  And of course, that can change on an hour-by-hour  or day-to-day basis.  And so they were updating those systems that warned  you about the possibility of that kind of infection in"
+        },
+        {
+            "number": "lec9",
+            "title": "part.008.mp3",
+            "start": 143.0,
+            "end": 151.0,
+            "text": " real time by taking feeds directly from the laboratory.  All right.  Thank you very much.  Well, thank you, guys.  Thank you."
+        },
+        {
+            "number": "lec9",
+            "title": "part.008.mp3",
+            "start": 151.0,
+            "end": 152.0,
+            "text": " Thank you."
+        }
+    ],
+    "text": " I was one curious, how long before this obsession? Two, once it's been determined that actually significant variation has occurred, what are some of the decisions that you made regarding tradeoffs with using an aggregate model? That means a bygone signal versus the cost of retraining? Yeah, absolutely. So the question is, the set and forget. We build the model, the model may become stale, should we update the model and how do we decide to do that? I mean, we're using, it depends what you define as a model, we're using tables and rules that we've developed since the 1970s. I think we have a pretty high desire to sort of periodically revisit those. There's a problem in the field of mathematics called knowledge management or knowledge engineering, right? How do we sort of remember which of our knowledge base needs to be sort of checked again or updated? And we'll often, you know, just as a standard, retrain a model or reevaluate a knowledge base every six months or every year because it's both harmful to patients if this stuff's out of date and it also makes us look stupid, right? So if, you know, there's a new paper that comes out and says beta blockers are terrible poison and we keep suggesting them, then people no longer believe the suggestions we make. That said, we still make mistakes, right? I mean, things happen all the time. A lot of my work has focused on malfunctions in these systems. So as an example, you know, if periodically the pharmacy might change the code or ID number for a medicine or a new medicine might come on the market and we have to make sure to continually update the knowledge base so that we're not suggesting an old medicine or overlooking the fact that the patient's already been prescribed a new medicine. And so we try to do that prospectively or proactively, but then we also try to listen to feedback from users and fix things as we go. Cool. And just one more comment on that. So some things are done in real time. There was a system many years ago at Intermountain Health in Salt Lake City where they were looking at what bugs were growing out of microbiology samples in the laboratory. And of course, that can change on an hour-by-hour or day-to-day basis. And so they were updating those systems that warned you about the possibility of that kind of infection in real time by taking feeds directly from the laboratory. All right. Thank you very much. Well, thank you, guys. Thank you. Thank you."
+}

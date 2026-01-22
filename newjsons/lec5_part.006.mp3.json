@@ -1,0 +1,341 @@
+{
+    "chunks": [
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 0.0,
+            "end": 16.12,
+            "text": " What would have happened to them had they not been treated?  So we don't observe the outcome death given no treatment.  And so we're going to treat it as an unknown outcome.  And for patients who were not treated,  but ended up dying due to sepsis,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 16.12,
+            "end": 27.2,
+            "text": " then they're not censored.  And what I'll show you in the later part of the class  is how to learn from censored data.  So this is another formalization which  tries to address this problem that we pointed out."
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 27.2,
+            "end": 39.2,
+            "text": " Now, I call these hacks because, really, I  think what we should be doing is formalizing it  using the language of causality.  Once you do this introspection and you realize  that there is treatment, in fact,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 39.2,
+            "end": 50.44,
+            "text": " you should be rethinking about the problem as one of now  having three quantities of interest.  There is the patient, everything you know about them at triage.  That's the x variable I showed you before.  There's the outcome, let's say y."
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 50.44,
+            "end": 60.879999999999995,
+            "text": " And then there's everything that happened  in between, in particular, the interventions  that were happened in between.  We'll call that t for treatment.  And the question that one would like"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 60.879999999999995,
+            "end": 75.56,
+            "text": " to ask in order to figure out how to optimally care  for the patient is one of, will admission  to the ICU, which is the intervention that we're  considering here, will that lower the likelihood of death  for the patient?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 75.56,
+            "end": 88.72,
+            "text": " And now, when I say lower, I don't mean correlation.  I mean causation.  Will it actually lower the patient's risk of dying?  I think we need to hit these questions on the head  with actually thinking about causality"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 88.72,
+            "end": 100.88,
+            "text": " to try to formalize this properly.  And if you do that, this will be a solution  which will generalize to the high dimensional settings  that we care about in machine learning.  And this will be a topic that we'll talk in really in-depth"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 100.88,
+            "end": 115.6,
+            "text": " after spring break.  But I wanted to give you this as one motivation for why  it's so important, and there are many other reasons,  to really think about it from a causal perspective.  OK, so subtlety number three."
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 115.6,
+            "end": 127.39999999999999,
+            "text": " There's been a ton of hype in the media about deep learning  in health care.  A lot of it is very well warranted.  For example, the advances we're seeing  in areas ranging from radiology and pathology"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 127.39999999999999,
+            "end": 142.68,
+            "text": " to interpretation of EKGs are all really being transformed  by deep learning algorithms.  But the problems I've been telling you  about for the last couple of weeks  of doing risk stratification on electronic health record"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 142.68,
+            "end": 159.44,
+            "text": " data, such as text notes, such as lab test results  and vital signs, diagnosis codes,  that's a different story.  In fact, if you look closely at all of the papers,  all of the papers that have been published in the last few years"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 159.44,
+            "end": 172.52,
+            "text": " that have been trying to apply the gauntlet of deep learning  algorithms at those problems, in fact, the gains are very small.  And so what I'm showing you here is just one example  of such a paper.  This is a paper that received a lot of media attention."
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 172.52,
+            "end": 182.72,
+            "text": " It's a Google paper called Scalable and Accurate Deep  Learning with Electronic Health Records.  And if you go across the United States,  if you go internationally and you  talk to chief medical information officers,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 182.72,
+            "end": 189.54000000000002,
+            "text": " they're all going to be telling you about this paper.  They've all read it.  They've all heard about it.  And they all want to use it.  But what is this actually doing?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 189.54000000000002,
+            "end": 202.20000000000002,
+            "text": " What's going on behind the scenes?  Well, this paper uses the same sorts  of data we've been talking about.  It takes vitals, notes, orders, medications,  thinks of it as a timeline, summarizes it,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 202.2,
+            "end": 214.6,
+            "text": " then uses a recurrent neural network.  It also uses attentional architectures.  And there's some pretty smart people on this paper.  Greg Corrado, Jeff Dean are all co-authors of this paper.  They know what they're doing."
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 214.6,
+            "end": 229.12,
+            "text": " So they use these algorithms to predict  a number of downstream problems, readmission risk,  for example, 30-day readmission like you  read about in your readings for this week.  And they see they get pretty good predictions."
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 229.12,
+            "end": 242.76,
+            "text": " But if you go to the supplementary material, which  is a bit hard to find, but here's the link for all of you.  And I'll post it to my slides.  And if you look at the very last figure  in that supplementary material, you'll"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 242.76,
+            "end": 253.24,
+            "text": " see something interesting.  So here are those three different tasks  that they study, inpatient mortality prediction,  30-day readmission, length of stay prediction.  The first line in each of these buckets"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 253.24,
+            "end": 264.88,
+            "text": " is what your deep learning algorithm does.  Over here, they have two different hospitals.  I think it might have been University of Chicago  and Stanford.  And they're showing the area under the ROC curve, which"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 264.88,
+            "end": 276.64,
+            "text": " we've talked about, performance for each of these tasks  for their best models.  And in parentheses, they give confidence intervals,  let's say, something like 95% confidence intervals  for area under the ROC curve."
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 276.64,
+            "end": 290.48,
+            "text": " Now, the second line that you see  is called full feature enhanced baseline.  It's using the same data, but it's  using something very close to the feature  representation that you saw in the paper by Narges Rzavian,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 290.48,
+            "end": 304.24,
+            "text": " so that paper on diabetes prediction  that I told you about and we've been criticizing.  So it's using that L1 regularized logistic regression  with a smart set of features.  And what you see across all three settings"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 304.24,
+            "end": 318.40000000000003,
+            "text": " is that the results are not statistically significantly  different.  So let's look at the first one, hospital A, deep learning,  0.95 AUC.  This L1 regularized logistic regression, 0.93."
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 318.40000000000003,
+            "end": 337.72,
+            "text": " 30-day readmission, 0.77, 0.75, 0.86, 0.85.  And the confidence intervals are all overlapping.  So what's going on?  So I think what you're seeing here, first of all, is  a recognition by the machine learning community that,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 337.72,
+            "end": 351.28,
+            "text": " in this case, a late recognition that simpler approaches tend  to work well with this type of data.  I don't think this was the first thing that they tried.  They tried probably the deep learning algorithms first.  Second, we're all grasping at this."
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 351.28,
+            "end": 364.3,
+            "text": " We all want to come up with these better algorithms.  But so far, we're not doing that well.  And I'll tell you more about that in just a second.  But before I finish with this slide,  I want to give you a punchline I think is really important."
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 364.3,
+            "end": 374.86,
+            "text": " You might come home from this and say, you know what?  It's not that much better, but it's a little bit better.  0.95 to 0.93, suppose it was tight confidence intervals.  There might be a few patients whose lives  you can save with that."
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 374.86,
+            "end": 388.58000000000004,
+            "text": " But because of all the issues I've  told you about up until now of non-stationarity,  for example, those gains disappear.  In many cases, they even reverse when you actually  go to deploy these models because of that data set"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 388.58000000000004,
+            "end": 401.3,
+            "text": " shift or non-stationarity.  It so happens that the simpler models  tend to generalize better when your data changes on you.  And this is nicely explored in this paper  from Kenneth Jung and Nigam Shah in Journal"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 401.3,
+            "end": 414.94,
+            "text": " of Biomedical Informatics, 2015.  So this is something that I want you to think about.  Now, let's try to answer why.  Well, the areas where we've been seeing recurrent neural networks  doing really well in, for example, speech recognition,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 414.94,
+            "end": 428.3,
+            "text": " natural language processing, are areas where often,  for example, if you're predicting what  is the next word in a sequence of words,  the previous few words are pretty predictive.  Like, what is the next that I'm going to say?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 428.3,
+            "end": 437.1,
+            "text": " What is it?  Word, right?  And you knew that.  Because it's pretty obvious to predict that.  And so the models that are good at predicting"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 437.1,
+            "end": 443.86,
+            "text": " for that type of data, it doesn't  mean that they should be good for predicting  for a different type of sequential data.  It's sequential data, which, by the way,  lives on many different time scales."
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 443.86,
+            "end": 453.98,
+            "text": " Patients who are hospitalized, you  get tons of data for them at a time.  And then you might go months without any data in them.  Data with lots of missing data, data  with multivariate observations at each point in time,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 453.98,
+            "end": 464.9,
+            "text": " not just a single word at that point in time.  So it's a different setting.  And we shouldn't expect that the same architectures that  have been developed for other problems  will generalize immediately to these problems."
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 464.9,
+            "end": 478.41999999999996,
+            "text": " Now, I do conjecture that there are  lots of nonlinear attractions where deep neural networks could  be very powerful at predicting for.  But I think they're subtle.  And I don't think that we have enough data currently"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 478.41999999999996,
+            "end": 490.38,
+            "text": " to deal with the fact that the data is messy  and that the nonlinear interactions are subtle.  We just can't find them right now.  But this shouldn't mean that we're not  going to find them a few years from now."
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 490.38,
+            "end": 500.78,
+            "text": " I think this deservedly is a very interesting research  direction to work on.  And the final reason to point out  is that the features that are going  into these types of models are actually really cleverly"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 500.78,
+            "end": 514.14,
+            "text": " chosen features.  A laboratory test result, like looking at your A1c,  what is A1c?  So it's something that had been developed over decades  and decades of research where you recognize"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 514.14,
+            "end": 524.6600000000001,
+            "text": " that looking at a particular protein  is actually informative to something  about the patient's health.  So the features that we're using that go into these models  were designed, first, they were designed for humans to look at."
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 524.6600000000001,
+            "end": 533.2,
+            "text": " And second, they were designed to really help you  with decision making.  They were largely independent features  from other information that you have about the patient.  And all of those are reasons, really,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 533.2,
+            "end": 543.7,
+            "text": " I think why we're observing these subtleties.  So for the last 10 minutes of class,  I'm going to have to hold questions because I  want to get through all the material.  But please, post them to Piazza."
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 543.7,
+            "end": 561.3,
+            "text": " For the last 10 minutes of class,  I want to change gears a little bit  and talk about survival modeling.  So often, we want to talk about predicting time to some event.  So this red dot here, sorry, this black line here"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 561.3,
+            "end": 579.3399999999999,
+            "text": " is what I mean by an event.  That event might be, for example, a patient dying.  It might mean a married couple getting divorced.  It might mean the day at which you graduate from MIT.  And the red dots here denote censored events."
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 579.3399999999999,
+            "end": 595.74,
+            "text": " So for whatever reason, we don't have data on this patient,  patient S3, after time step 4.  They were censored.  So we do know that the event didn't occur prior to time step  4, but we don't know if and when it's"
+        },
+        {
+            "number": "lec5",
+            "title": "part.006.mp3",
+            "start": 595.74,
+            "end": 600.9,
+            "text": " going to occur after time step 4 because we  have missing data there."
+        }
+    ],
+    "text": " What would have happened to them had they not been treated? So we don't observe the outcome death given no treatment. And so we're going to treat it as an unknown outcome. And for patients who were not treated, but ended up dying due to sepsis, then they're not censored. And what I'll show you in the later part of the class is how to learn from censored data. So this is another formalization which tries to address this problem that we pointed out. Now, I call these hacks because, really, I think what we should be doing is formalizing it using the language of causality. Once you do this introspection and you realize that there is treatment, in fact, you should be rethinking about the problem as one of now having three quantities of interest. There is the patient, everything you know about them at triage. That's the x variable I showed you before. There's the outcome, let's say y. And then there's everything that happened in between, in particular, the interventions that were happened in between. We'll call that t for treatment. And the question that one would like to ask in order to figure out how to optimally care for the patient is one of, will admission to the ICU, which is the intervention that we're considering here, will that lower the likelihood of death for the patient? And now, when I say lower, I don't mean correlation. I mean causation. Will it actually lower the patient's risk of dying? I think we need to hit these questions on the head with actually thinking about causality to try to formalize this properly. And if you do that, this will be a solution which will generalize to the high dimensional settings that we care about in machine learning. And this will be a topic that we'll talk in really in-depth after spring break. But I wanted to give you this as one motivation for why it's so important, and there are many other reasons, to really think about it from a causal perspective. OK, so subtlety number three. There's been a ton of hype in the media about deep learning in health care. A lot of it is very well warranted. For example, the advances we're seeing in areas ranging from radiology and pathology to interpretation of EKGs are all really being transformed by deep learning algorithms. But the problems I've been telling you about for the last couple of weeks of doing risk stratification on electronic health record data, such as text notes, such as lab test results and vital signs, diagnosis codes, that's a different story. In fact, if you look closely at all of the papers, all of the papers that have been published in the last few years that have been trying to apply the gauntlet of deep learning algorithms at those problems, in fact, the gains are very small. And so what I'm showing you here is just one example of such a paper. This is a paper that received a lot of media attention. It's a Google paper called Scalable and Accurate Deep Learning with Electronic Health Records. And if you go across the United States, if you go internationally and you talk to chief medical information officers, they're all going to be telling you about this paper. They've all read it. They've all heard about it. And they all want to use it. But what is this actually doing? What's going on behind the scenes? Well, this paper uses the same sorts of data we've been talking about. It takes vitals, notes, orders, medications, thinks of it as a timeline, summarizes it, then uses a recurrent neural network. It also uses attentional architectures. And there's some pretty smart people on this paper. Greg Corrado, Jeff Dean are all co-authors of this paper. They know what they're doing. So they use these algorithms to predict a number of downstream problems, readmission risk, for example, 30-day readmission like you read about in your readings for this week. And they see they get pretty good predictions. But if you go to the supplementary material, which is a bit hard to find, but here's the link for all of you. And I'll post it to my slides. And if you look at the very last figure in that supplementary material, you'll see something interesting. So here are those three different tasks that they study, inpatient mortality prediction, 30-day readmission, length of stay prediction. The first line in each of these buckets is what your deep learning algorithm does. Over here, they have two different hospitals. I think it might have been University of Chicago and Stanford. And they're showing the area under the ROC curve, which we've talked about, performance for each of these tasks for their best models. And in parentheses, they give confidence intervals, let's say, something like 95% confidence intervals for area under the ROC curve. Now, the second line that you see is called full feature enhanced baseline. It's using the same data, but it's using something very close to the feature representation that you saw in the paper by Narges Rzavian, so that paper on diabetes prediction that I told you about and we've been criticizing. So it's using that L1 regularized logistic regression with a smart set of features. And what you see across all three settings is that the results are not statistically significantly different. So let's look at the first one, hospital A, deep learning, 0.95 AUC. This L1 regularized logistic regression, 0.93. 30-day readmission, 0.77, 0.75, 0.86, 0.85. And the confidence intervals are all overlapping. So what's going on? So I think what you're seeing here, first of all, is a recognition by the machine learning community that, in this case, a late recognition that simpler approaches tend to work well with this type of data. I don't think this was the first thing that they tried. They tried probably the deep learning algorithms first. Second, we're all grasping at this. We all want to come up with these better algorithms. But so far, we're not doing that well. And I'll tell you more about that in just a second. But before I finish with this slide, I want to give you a punchline I think is really important. You might come home from this and say, you know what? It's not that much better, but it's a little bit better. 0.95 to 0.93, suppose it was tight confidence intervals. There might be a few patients whose lives you can save with that. But because of all the issues I've told you about up until now of non-stationarity, for example, those gains disappear. In many cases, they even reverse when you actually go to deploy these models because of that data set shift or non-stationarity. It so happens that the simpler models tend to generalize better when your data changes on you. And this is nicely explored in this paper from Kenneth Jung and Nigam Shah in Journal of Biomedical Informatics, 2015. So this is something that I want you to think about. Now, let's try to answer why. Well, the areas where we've been seeing recurrent neural networks doing really well in, for example, speech recognition, natural language processing, are areas where often, for example, if you're predicting what is the next word in a sequence of words, the previous few words are pretty predictive. Like, what is the next that I'm going to say? What is it? Word, right? And you knew that. Because it's pretty obvious to predict that. And so the models that are good at predicting for that type of data, it doesn't mean that they should be good for predicting for a different type of sequential data. It's sequential data, which, by the way, lives on many different time scales. Patients who are hospitalized, you get tons of data for them at a time. And then you might go months without any data in them. Data with lots of missing data, data with multivariate observations at each point in time, not just a single word at that point in time. So it's a different setting. And we shouldn't expect that the same architectures that have been developed for other problems will generalize immediately to these problems. Now, I do conjecture that there are lots of nonlinear attractions where deep neural networks could be very powerful at predicting for. But I think they're subtle. And I don't think that we have enough data currently to deal with the fact that the data is messy and that the nonlinear interactions are subtle. We just can't find them right now. But this shouldn't mean that we're not going to find them a few years from now. I think this deservedly is a very interesting research direction to work on. And the final reason to point out is that the features that are going into these types of models are actually really cleverly chosen features. A laboratory test result, like looking at your A1c, what is A1c? So it's something that had been developed over decades and decades of research where you recognize that looking at a particular protein is actually informative to something about the patient's health. So the features that we're using that go into these models were designed, first, they were designed for humans to look at. And second, they were designed to really help you with decision making. They were largely independent features from other information that you have about the patient. And all of those are reasons, really, I think why we're observing these subtleties. So for the last 10 minutes of class, I'm going to have to hold questions because I want to get through all the material. But please, post them to Piazza. For the last 10 minutes of class, I want to change gears a little bit and talk about survival modeling. So often, we want to talk about predicting time to some event. So this red dot here, sorry, this black line here is what I mean by an event. That event might be, for example, a patient dying. It might mean a married couple getting divorced. It might mean the day at which you graduate from MIT. And the red dots here denote censored events. So for whatever reason, we don't have data on this patient, patient S3, after time step 4. They were censored. So we do know that the event didn't occur prior to time step 4, but we don't know if and when it's going to occur after time step 4 because we have missing data there."
+}

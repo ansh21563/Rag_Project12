@@ -1,0 +1,243 @@
+{
+    "chunks": [
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 0.0,
+            "end": 29.2,
+            "text": " OK.  Today's topic is differential diagnosis.  And so I'm just quoting Wikipedia here.  Diagnosis is the identification of the nature and cause  of a certain phenomenon."
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 29.2,
+            "end": 46.08,
+            "text": " And differential diagnosis is the distinguishing  of a particular disease or condition  from others that present similar clinical features.  So doctors typically talk about differential diagnosis  when they're faced with a patient"
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 46.08,
+            "end": 59.800000000000004,
+            "text": " and they make a list of what are the things that  might be wrong with this patient.  And then they go through the process  of trying to figure out which one it actually is.  So that's what we're going to focus on today."
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 59.800000000000004,
+            "end": 83.48,
+            "text": " Now, just to scare you, here's a lovely model  of human circulatory physiology.  So this is from Guyton's textbook of cardiology.  And I'm not going to hold you responsible for all  of the details of this model."
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 83.48,
+            "end": 104.2,
+            "text": " But it's interesting because this is, at least as of maybe  20 years ago, the state of the art of how people understood  what happens in the circulatory system.  And it has various control inputs  that determine things like how your hormone levels change"
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 104.2,
+            "end": 126.08000000000001,
+            "text": " various aspects of the cardiovascular system  and how the interactions between different components  of the cardiovascular system affect each other.  And so in principle, if I could tune this model to me,  then I could make all kinds of pretty good predictions"
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 126.08000000000001,
+            "end": 144.32,
+            "text": " that say, if I increase my systemic vascular resistance,  then here's what's going to happen as the rest of the system  adjusts.  And if I get a blockage in a coronary artery,  then here's what's going to happen to my cardiac output"
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 144.32,
+            "end": 159.56,
+            "text": " and various other things.  So this would be terrific.  And if we had this kind of model for not just  the cardiovascular system but the entire body,  then we'd say, OK, we've solved medicine."
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 159.56,
+            "end": 177.24,
+            "text": " Well, we don't have this kind of model for most systems.  And also, there's this minor problem  that if I give you this model and say,  how does this relate to a particular patient,  how would you figure that out?"
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 177.24,
+            "end": 192.86,
+            "text": " This has hundreds of differential equations  that are being represented by this diagram.  And they have many hundreds of parameters.  And so we were joking when we started  working with this model that you'd really"
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 192.86,
+            "end": 210.72000000000003,
+            "text": " have to kill the patient in order  to do enough measurements to be able to tune this model  to their particular physiology.  And of course, that's probably not a good practical approach.  We're getting a little better by developing"
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 210.72000000000003,
+            "end": 230.42,
+            "text": " more non-invasive ways of measuring these things.  But that's moving along very slowly.  And I don't expect that I or maybe even any of you  will live long enough that this approach  to doing medical reasoning and medical diagnosis"
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 230.42,
+            "end": 251.32,
+            "text": " is actually going to happen.  So what we're going to look at today  is what simpler models are there for diagnostic reasoning?  And I'm going to take the liberty of inflicting  a bit of history on you, because I"
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 251.32,
+            "end": 273.65999999999997,
+            "text": " think it's interesting where a lot of these ideas came from.  So the first idea was to build flow charts.  Oh, and by the way, signs and symptoms,  I've forgotten if we've talked about that in the class.  So a sign is something that a doctor sees."
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 273.65999999999997,
+            "end": 289.06,
+            "text": " And a symptom is something that the patient experiences.  So a sign is objective.  It's something that can be told outside your body.  A symptom is something that you feel.  So if you're feeling dizzy, then that's"
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 289.06,
+            "end": 309.58,
+            "text": " a symptom, because it's not obvious to somebody outside you  that you're dizzy or that you have a pain or such things.  Normally, we talk about manifestations or findings,  which is sort of a super category of all the things  that are determinable about a patient."
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 309.58,
+            "end": 323.94,
+            "text": " So we'll talk about flow charts, models  based on associations between diseases  and these manifestations.  Then there are some issues about whether you're  trying to diagnose a single disease"
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 323.94,
+            "end": 342.18,
+            "text": " or a multiplicity of diseases, which makes the models much  more complicated, whether you're trying  to do probabilistic diagnosis or definitive or categorical.  And then we'll talk about some utility theoretic methods.  And I'll just mention some rule-based and pattern"
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 342.18,
+            "end": 359.42,
+            "text": " matching kinds of approaches.  So this is kind of cute.  This is from 1973.  And if you were a woman and walked into the MIT Health  Center and complained of potentially a urinary tract"
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 359.5,
+            "end": 375.94,
+            "text": " infection, they would take out this sheet  of paper, which was nicely color-coded,  and they would check a bunch of boxes.  And if you hit a red box, that represented a conclusion.  And otherwise, it gave you suggestions"
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 375.94,
+            "end": 390.54,
+            "text": " about what further tests to do.  And this was essentially a triage instrument.  It said, does this woman have a problem that  requires immediate attention?  So we should either call an ambulance"
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 390.54,
+            "end": 406.18,
+            "text": " and take them to a hospital, or is it something  where we can just tell them to come back the next day  and see a doctor?  Or is it, in fact, some self-limited thing  where we say, take two aspirin, and it'll go away?"
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 406.18,
+            "end": 422.41999999999996,
+            "text": " So that was the attempt here.  Now, interestingly, if you look at the history  of this project between the Beth Israel Hospital and Lincoln  Laboratories, it started off as a computer aid.  So they were building a computer system"
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 422.41999999999996,
+            "end": 439.09999999999997,
+            "text": " that was supposed to do this.  But you can imagine, in the late 1960s, early 1970s,  computers were pretty clunky.  PCs hadn't been invented yet, so this  was like mainframe kinds of operations."
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 439.09999999999997,
+            "end": 458.96,
+            "text": " It was very hard to use.  And so they said, well, this is a small enough program  that we can reduce it to about 20 sheets like this, which  they proceeded to print up.  And I was amused, because around 1980,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 458.96,
+            "end": 474.46,
+            "text": " I was working in my office one night,  and I got this splitting headache.  And I went over to MIT Medical, and sure enough,  the nurse pulled out one of these sheets for headaches  and went through it with me and decided that a couple of Tylenol"
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 474.46,
+            "end": 486.82,
+            "text": " should fix me.  But it was interesting.  So this was really in use for a while.  Now, the difficulty with approaches  like this, of which there have been many, many, many"
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 486.82,
+            "end": 503.62,
+            "text": " in the medical world, is that they're very fragile.  They're very specific.  They don't take account of unusual cases.  And there's a lot of effort in coming to consensus  to build these things."
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 503.62,
+            "end": 521.9,
+            "text": " And then they're not necessarily useful for a long time.  So MIT actually stopped using them shortly  after my headache experience.  But if you go over to a hospital and you  look on the bookshelf of a junior doctor,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 521.9,
+            "end": 539.98,
+            "text": " you will still find manuals that look kind of like this,  that say, how do we deal with tropical diseases?  So you ask a bunch of questions, and then  depending on the branching logic of the flowchart,  it'll tell you whether this is serious or not."
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 539.98,
+            "end": 554.74,
+            "text": " And the reason is because if you do your medical training  in Boston, you're not going to see very many tropical diseases.  And so you don't have a base of experience  on the basis of which you can learn and become  an expert at doing it."
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 554.74,
+            "end": 577.1800000000001,
+            "text": " So they use this as a kind of cheat sheet.  I mentioned that the association between diseases and symptoms  is another important way of doing diagnosis.  And I swear to you, there was a paper in the 1960s,  I think, that actually proposed this."
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 577.1800000000001,
+            "end": 597.26,
+            "text": " So if any of you have hung around ancient libraries,  libraries used to have card catalogs  that were physical pieces of paper, of cardboard.  And one of the things they did with these  was each card would be a book."
+        },
+        {
+            "number": "lec11",
+            "title": "part.000.mp3",
+            "start": 597.26,
+            "end": 601.78,
+            "text": " And then around the edges were a bunch of photographs."
+        }
+    ],
+    "text": " OK. Today's topic is differential diagnosis. And so I'm just quoting Wikipedia here. Diagnosis is the identification of the nature and cause of a certain phenomenon. And differential diagnosis is the distinguishing of a particular disease or condition from others that present similar clinical features. So doctors typically talk about differential diagnosis when they're faced with a patient and they make a list of what are the things that might be wrong with this patient. And then they go through the process of trying to figure out which one it actually is. So that's what we're going to focus on today. Now, just to scare you, here's a lovely model of human circulatory physiology. So this is from Guyton's textbook of cardiology. And I'm not going to hold you responsible for all of the details of this model. But it's interesting because this is, at least as of maybe 20 years ago, the state of the art of how people understood what happens in the circulatory system. And it has various control inputs that determine things like how your hormone levels change various aspects of the cardiovascular system and how the interactions between different components of the cardiovascular system affect each other. And so in principle, if I could tune this model to me, then I could make all kinds of pretty good predictions that say, if I increase my systemic vascular resistance, then here's what's going to happen as the rest of the system adjusts. And if I get a blockage in a coronary artery, then here's what's going to happen to my cardiac output and various other things. So this would be terrific. And if we had this kind of model for not just the cardiovascular system but the entire body, then we'd say, OK, we've solved medicine. Well, we don't have this kind of model for most systems. And also, there's this minor problem that if I give you this model and say, how does this relate to a particular patient, how would you figure that out? This has hundreds of differential equations that are being represented by this diagram. And they have many hundreds of parameters. And so we were joking when we started working with this model that you'd really have to kill the patient in order to do enough measurements to be able to tune this model to their particular physiology. And of course, that's probably not a good practical approach. We're getting a little better by developing more non-invasive ways of measuring these things. But that's moving along very slowly. And I don't expect that I or maybe even any of you will live long enough that this approach to doing medical reasoning and medical diagnosis is actually going to happen. So what we're going to look at today is what simpler models are there for diagnostic reasoning? And I'm going to take the liberty of inflicting a bit of history on you, because I think it's interesting where a lot of these ideas came from. So the first idea was to build flow charts. Oh, and by the way, signs and symptoms, I've forgotten if we've talked about that in the class. So a sign is something that a doctor sees. And a symptom is something that the patient experiences. So a sign is objective. It's something that can be told outside your body. A symptom is something that you feel. So if you're feeling dizzy, then that's a symptom, because it's not obvious to somebody outside you that you're dizzy or that you have a pain or such things. Normally, we talk about manifestations or findings, which is sort of a super category of all the things that are determinable about a patient. So we'll talk about flow charts, models based on associations between diseases and these manifestations. Then there are some issues about whether you're trying to diagnose a single disease or a multiplicity of diseases, which makes the models much more complicated, whether you're trying to do probabilistic diagnosis or definitive or categorical. And then we'll talk about some utility theoretic methods. And I'll just mention some rule-based and pattern matching kinds of approaches. So this is kind of cute. This is from 1973. And if you were a woman and walked into the MIT Health Center and complained of potentially a urinary tract infection, they would take out this sheet of paper, which was nicely color-coded, and they would check a bunch of boxes. And if you hit a red box, that represented a conclusion. And otherwise, it gave you suggestions about what further tests to do. And this was essentially a triage instrument. It said, does this woman have a problem that requires immediate attention? So we should either call an ambulance and take them to a hospital, or is it something where we can just tell them to come back the next day and see a doctor? Or is it, in fact, some self-limited thing where we say, take two aspirin, and it'll go away? So that was the attempt here. Now, interestingly, if you look at the history of this project between the Beth Israel Hospital and Lincoln Laboratories, it started off as a computer aid. So they were building a computer system that was supposed to do this. But you can imagine, in the late 1960s, early 1970s, computers were pretty clunky. PCs hadn't been invented yet, so this was like mainframe kinds of operations. It was very hard to use. And so they said, well, this is a small enough program that we can reduce it to about 20 sheets like this, which they proceeded to print up. And I was amused, because around 1980, I was working in my office one night, and I got this splitting headache. And I went over to MIT Medical, and sure enough, the nurse pulled out one of these sheets for headaches and went through it with me and decided that a couple of Tylenol should fix me. But it was interesting. So this was really in use for a while. Now, the difficulty with approaches like this, of which there have been many, many, many in the medical world, is that they're very fragile. They're very specific. They don't take account of unusual cases. And there's a lot of effort in coming to consensus to build these things. And then they're not necessarily useful for a long time. So MIT actually stopped using them shortly after my headache experience. But if you go over to a hospital and you look on the bookshelf of a junior doctor, you will still find manuals that look kind of like this, that say, how do we deal with tropical diseases? So you ask a bunch of questions, and then depending on the branching logic of the flowchart, it'll tell you whether this is serious or not. And the reason is because if you do your medical training in Boston, you're not going to see very many tropical diseases. And so you don't have a base of experience on the basis of which you can learn and become an expert at doing it. So they use this as a kind of cheat sheet. I mentioned that the association between diseases and symptoms is another important way of doing diagnosis. And I swear to you, there was a paper in the 1960s, I think, that actually proposed this. So if any of you have hung around ancient libraries, libraries used to have card catalogs that were physical pieces of paper, of cardboard. And one of the things they did with these was each card would be a book. And then around the edges were a bunch of photographs."
+}

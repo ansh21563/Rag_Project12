@@ -1,0 +1,236 @@
+{
+    "chunks": [
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 0.0,
+            "end": 18.72,
+            "text": " likely in some of the less likely hypotheses  so that I can rule them out if that thing is not present.  So different strategies.  And I'll come back to that in a few minutes.  So their test, of course, based on their own evaluation,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 18.72,
+            "end": 30.36,
+            "text": " was terrific.  It did wonderfully well.  The paper got published in the New England  Journal of Medicine, which was an unbelievable breakthrough  to have an AI program that the editors of the New England"
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 30.36,
+            "end": 53.12,
+            "text": " Journal considered interesting.  Now, unfortunately, it didn't hold up very well.  And so there was this paper by Etta Berner and her colleagues  in 1994 where they evaluated QMR and three other programs.  D-explain is very similar in structure to QMR."
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 53.12,
+            "end": 74.32,
+            "text": " Iliad and Metatel are Bayesian network,  almost naive Bayesian types of models  developed by other groups.  And they looked for results, which is coverage.  So what fraction of the real diagnoses in these 105 cases"
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 74.32,
+            "end": 90.16,
+            "text": " that they chose to test on could any of these programs  actually diagnose?  So if the program didn't know about a certain disease,  then obviously it wasn't going to get it right.  And then they said, OK, of the program's diagnoses,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 90.16,
+            "end": 109.0,
+            "text": " what fraction were considered correct by the experts?  What was the rank order of that correct diagnosis  among the list of diagnoses that the program gave?  The experts were asked to list all the plausible diagnoses  from these cases."
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 109.0,
+            "end": 128.24,
+            "text": " What fraction of those showed up in the program's top 20?  And then did the program have any value  added by coming up with things that the experts had not  thought about, but that they agreed when they saw them  were reasonable explanations for this case?"
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 128.24,
+            "end": 152.14000000000001,
+            "text": " So here are the results.  And what you see is that the diagnoses in these 105 test  cases, 91% of them appeared in the DEXPLAIN program,  but for example, only 73% of them in the QMR program.  So that means that right off the bat,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 152.14000000000001,
+            "end": 172.1,
+            "text": " it's missing about a quarter of the possible cases.  And then if you look at correct diagnosis,  you're seeing numbers like 0.69, 0.61, 0.71, et cetera.  So these are, you know, it's like the dog  who sings, but badly."
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 172.1,
+            "end": 195.66000000000003,
+            "text": " It's remarkable that it can sing at all,  but it's not something you want to listen to.  And then rank of the correct diagnosis in the program  is at like 12, or 10, or 13, or so on.  So it is in the top 20, but it's not at the top of the top 20."
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 195.66000000000003,
+            "end": 217.1,
+            "text": " So the results were a bit disappointing.  And depending on where you put the cutoff,  you get the proportion of cases where a correct diagnosis  is within the top n.  And you see that at 20, you're up at a little over 0.5"
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 217.1,
+            "end": 231.66,
+            "text": " for most of these programs.  And it gets better if you extend the list to longer and longer.  Of course, if you extended the list to hundreds,  then you'd reach 100%, but it wouldn't  be practically very useful."
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 231.66,
+            "end": 246.06,
+            "text": " What why did they somehow compare it  to the human decision?  Well, so first of all, they assumed  that their experts were perfect.  So they were the gold standard."
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 246.06,
+            "end": 269.66,
+            "text": " So they were comparing it to a human in a way.  So the bottom line is that although the sensitivity  and specificity were not impressive,  the programs were potentially useful  because they had interactive displays of signs and symptoms"
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 269.70000000000005,
+            "end": 284.04,
+            "text": " associated with diseases.  They could give you the relative likelihood  of various diagnoses.  And they concluded that they needed  to study the effects of whether a program like this actually"
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 284.04,
+            "end": 300.42,
+            "text": " helped a doctor perform medicine better.  So just here's an example.  I did a reconstruction of this program.  This is the kind of exploration you could say.  So if you click on Angina pectoris,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 300.42,
+            "end": 320.1,
+            "text": " here are the findings that are associated with it.  So you can browse through its database.  You can type in an example case or select an example case.  So this is one of those clinical pathological conference cases.  And then the manifestations that are present and absent."
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 320.1,
+            "end": 341.02,
+            "text": " And then you can get an interpretation that says,  this is our differential.  And these are the complementary hypotheses.  And therefore, these are the manifestations  that we set aside, whereas these are the ones explained"
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 341.02,
+            "end": 361.34,
+            "text": " by that set of diseases.  And so you can watch how the program does its reasoning.  Well, then a group at Stanford came along  when belief networks or Bayesian networks were created and said,  hey, why don't we treat this database"
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 361.34,
+            "end": 379.46,
+            "text": " as if it were a Bayesian network and see if we  can evaluate things that way.  So they had to fill in a lot of details.  They wound up using the QMR database  with a binary interpretation."
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 379.46,
+            "end": 397.5,
+            "text": " So disease was present or absent.  A manifestation was present or absent.  They used causal independence or a leaky, noisy or,  which I think you've seen in other contexts.  So this just says, if there are multiple independent causes"
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 397.5,
+            "end": 414.82,
+            "text": " of something, how likely is it to happen depending on which  of those is present or not?  And there's a simplified way of doing  that calculation, which corresponds  to causal independence and is computationally reasonably"
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 414.82,
+            "end": 434.1,
+            "text": " fast to do.  And then they also estimated priors  on the various diagnoses from national health statistics  because the original data did not have priors.  They wound up not using the evoking strengths"
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 434.1,
+            "end": 451.54,
+            "text": " because they were doing a pretty straight Bayesian model  where all you need is the priors and the conditionals.  They took the frequency as a kind of scaled conditional  and then built a system based on that.  And I'll just show you the results."
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 451.54,
+            "end": 473.94,
+            "text": " So they took a bunch of scientific American medicine  cases and said, what are the ranks assigned  to the reference diagnoses of these 23 cases?  And you see that, like, in case number one,  QMR ranked the correct solution as number six."
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 473.94,
+            "end": 493.58,
+            "text": " But their two methods, TB and iterative TB,  ranked it as number one.  And then these are attempts to do a kind of ablation analysis  to see how well the program works if you take away  various of its clever features."
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 493.58,
+            "end": 512.3,
+            "text": " But what you see is that it works reasonably well  except for a few cases.  So case number 23, all variants of the program did badly.  And then they excused themselves and say, well, there's  actually a generalization of the disease that"
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 512.3,
+            "end": 527.74,
+            "text": " was in the scientific American medicine conclusion, which  the programs did find.  And so that would have been number one across the board.  So they can sort of make a kind of hand-wavy argument  that it really got that one right."
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 527.74,
+            "end": 551.1,
+            "text": " And so these were pretty good.  And so this validated the idea of using  this model in that way.  Now, today, you can go out and go to your favorite Google App  Store or Apple's App Store or anybody's App Store"
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 551.1,
+            "end": 569.7,
+            "text": " and download tons and tons of symptom checkers.  So I wanted to give you a demo of one of these if it works.  OK.  So I was playing earlier with having  abdominal pain and headache."
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 569.7,
+            "end": 587.06,
+            "text": " So let's start a new one.  So type in how you're feeling today.  Should we have a cough or runny nose, abdominal pain, fever,  sore throat, headache, back pain, fatigue, diarrhea,  or phlegm?"
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 587.06,
+            "end": 597.7199999999999,
+            "text": " Phlegm?  Phlegm is the winner?  Phlegm is like coughing up crap in your throat.  AUDIENCE MEMBER 2 Luckily, they visualize it.  AUDIENCE MEMBER 3 hopefully they're"
+        },
+        {
+            "number": "lec11",
+            "title": "part.005.mp3",
+            "start": 597.7199999999999,
+            "end": 600.5799999999999,
+            "text": " talking about their job.  AUDIENCE MEMBER 2 Right."
+        }
+    ],
+    "text": " likely in some of the less likely hypotheses so that I can rule them out if that thing is not present. So different strategies. And I'll come back to that in a few minutes. So their test, of course, based on their own evaluation, was terrific. It did wonderfully well. The paper got published in the New England Journal of Medicine, which was an unbelievable breakthrough to have an AI program that the editors of the New England Journal considered interesting. Now, unfortunately, it didn't hold up very well. And so there was this paper by Etta Berner and her colleagues in 1994 where they evaluated QMR and three other programs. D-explain is very similar in structure to QMR. Iliad and Metatel are Bayesian network, almost naive Bayesian types of models developed by other groups. And they looked for results, which is coverage. So what fraction of the real diagnoses in these 105 cases that they chose to test on could any of these programs actually diagnose? So if the program didn't know about a certain disease, then obviously it wasn't going to get it right. And then they said, OK, of the program's diagnoses, what fraction were considered correct by the experts? What was the rank order of that correct diagnosis among the list of diagnoses that the program gave? The experts were asked to list all the plausible diagnoses from these cases. What fraction of those showed up in the program's top 20? And then did the program have any value added by coming up with things that the experts had not thought about, but that they agreed when they saw them were reasonable explanations for this case? So here are the results. And what you see is that the diagnoses in these 105 test cases, 91% of them appeared in the DEXPLAIN program, but for example, only 73% of them in the QMR program. So that means that right off the bat, it's missing about a quarter of the possible cases. And then if you look at correct diagnosis, you're seeing numbers like 0.69, 0.61, 0.71, et cetera. So these are, you know, it's like the dog who sings, but badly. It's remarkable that it can sing at all, but it's not something you want to listen to. And then rank of the correct diagnosis in the program is at like 12, or 10, or 13, or so on. So it is in the top 20, but it's not at the top of the top 20. So the results were a bit disappointing. And depending on where you put the cutoff, you get the proportion of cases where a correct diagnosis is within the top n. And you see that at 20, you're up at a little over 0.5 for most of these programs. And it gets better if you extend the list to longer and longer. Of course, if you extended the list to hundreds, then you'd reach 100%, but it wouldn't be practically very useful. What why did they somehow compare it to the human decision? Well, so first of all, they assumed that their experts were perfect. So they were the gold standard. So they were comparing it to a human in a way. So the bottom line is that although the sensitivity and specificity were not impressive, the programs were potentially useful because they had interactive displays of signs and symptoms associated with diseases. They could give you the relative likelihood of various diagnoses. And they concluded that they needed to study the effects of whether a program like this actually helped a doctor perform medicine better. So just here's an example. I did a reconstruction of this program. This is the kind of exploration you could say. So if you click on Angina pectoris, here are the findings that are associated with it. So you can browse through its database. You can type in an example case or select an example case. So this is one of those clinical pathological conference cases. And then the manifestations that are present and absent. And then you can get an interpretation that says, this is our differential. And these are the complementary hypotheses. And therefore, these are the manifestations that we set aside, whereas these are the ones explained by that set of diseases. And so you can watch how the program does its reasoning. Well, then a group at Stanford came along when belief networks or Bayesian networks were created and said, hey, why don't we treat this database as if it were a Bayesian network and see if we can evaluate things that way. So they had to fill in a lot of details. They wound up using the QMR database with a binary interpretation. So disease was present or absent. A manifestation was present or absent. They used causal independence or a leaky, noisy or, which I think you've seen in other contexts. So this just says, if there are multiple independent causes of something, how likely is it to happen depending on which of those is present or not? And there's a simplified way of doing that calculation, which corresponds to causal independence and is computationally reasonably fast to do. And then they also estimated priors on the various diagnoses from national health statistics because the original data did not have priors. They wound up not using the evoking strengths because they were doing a pretty straight Bayesian model where all you need is the priors and the conditionals. They took the frequency as a kind of scaled conditional and then built a system based on that. And I'll just show you the results. So they took a bunch of scientific American medicine cases and said, what are the ranks assigned to the reference diagnoses of these 23 cases? And you see that, like, in case number one, QMR ranked the correct solution as number six. But their two methods, TB and iterative TB, ranked it as number one. And then these are attempts to do a kind of ablation analysis to see how well the program works if you take away various of its clever features. But what you see is that it works reasonably well except for a few cases. So case number 23, all variants of the program did badly. And then they excused themselves and say, well, there's actually a generalization of the disease that was in the scientific American medicine conclusion, which the programs did find. And so that would have been number one across the board. So they can sort of make a kind of hand-wavy argument that it really got that one right. And so these were pretty good. And so this validated the idea of using this model in that way. Now, today, you can go out and go to your favorite Google App Store or Apple's App Store or anybody's App Store and download tons and tons of symptom checkers. So I wanted to give you a demo of one of these if it works. OK. So I was playing earlier with having abdominal pain and headache. So let's start a new one. So type in how you're feeling today. Should we have a cough or runny nose, abdominal pain, fever, sore throat, headache, back pain, fatigue, diarrhea, or phlegm? Phlegm? Phlegm is the winner? Phlegm is like coughing up crap in your throat. AUDIENCE MEMBER 2 Luckily, they visualize it. AUDIENCE MEMBER 3 hopefully they're talking about their job. AUDIENCE MEMBER 2 Right."
+}

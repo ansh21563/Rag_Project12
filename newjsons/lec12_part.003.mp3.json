@@ -1,0 +1,355 @@
+{
+    "chunks": [
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 0.0,
+            "end": 11.64,
+            "text": " And also, they took the same set of slides  and sent them out to pathologists operating  in clinical practice, where they had really significantly higher  error rates, mainly due to the fact  they were more constrained by time limitations"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 11.64,
+            "end": 24.48,
+            "text": " in clinical practice than in the competition.  And mostly, errors they're making are false negatives.  Simply, they don't have the time to focus  on small regions of metastasis amid these humongous  gigapixel-size slides."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 24.48,
+            "end": 36.800000000000004,
+            "text": " In the paper, you say you combine the machinery  and outputs with the pathologists.  But you don't really say how.  You say that they look at the heat maps,  or you say that you just sort of combine."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 36.800000000000004,
+            "end": 48.64,
+            "text": " Yeah, I know it's a great question.  So today, we do it that way.  And that's the way in clinical practice we're building it,  that the pathologists will look at both  and then make a diagnosis based on incorporating both."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 48.64,
+            "end": 57.64,
+            "text": " For the competition, it was very simple.  And the organizers actually did it.  They interpreted them independently.  So the pathologists just looked at all the slides.  The system made a prediction."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 57.64,
+            "end": 70.84,
+            "text": " And it was literally like the average of the probability  that that slide contained cancer that became the final score.  And then the AUC went to like 99% from whatever it was,  92%, by combining these two scores.  And it's they make uncorrelated errors."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 70.84,
+            "end": 82.12,
+            "text": " Exactly, or pretty much uncorrelated,  particularly because the pathologists tend to have  almost all false negatives.  And the deep learning system tends  to be fooled by a few things like artifact."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 82.12,
+            "end": 95.3,
+            "text": " And they do make uncorrelated errors.  And that's why there's a huge bump in performance.  Yeah.  So I kind of made a reference to this.  But any of these competition data sets"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 95.3,
+            "end": 106.7,
+            "text": " are relatively easy to get really good at.  People have shown that you can actually  build models that just predict a data set,  like using deep learning.  Deep learning is almost too good at finding certain patterns"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 106.7,
+            "end": 119.12,
+            "text": " and can find artifact.  So it's just a caveat to keep in mind.  We're doing experiments on lots of real world testing  of methods like this across many labs  with many different staining procedures and tissue"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 119.12,
+            "end": 132.28,
+            "text": " preparation procedures, et cetera,  to evaluate the robustness.  But that's why competition results, even ImageNet,  always need to be taken with a grain of salt.  And then we sort of think the value out of this"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 132.28,
+            "end": 139.44,
+            "text": " is going to be huge.  I mean, it's hard to tell because it's such a big image.  But this is what a pathologist today  is looking under a microscope.  And it's very hard to see anything."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 139.44,
+            "end": 150.56,
+            "text": " With a very simple visualization,  just of the output of the AI system  is red where cancer looks like it is.  It's clearly sort of a great map of the areas  they need to be sure to focus on."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 150.56,
+            "end": 163.24,
+            "text": " And this is real data from this example  where this bright red area, in fact,  contains this tiny little rim of metastatic breast cancer cells  that would be very easy to miss without that assistant sort  of just pointing you in the right place to look at."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 163.24,
+            "end": 173.4,
+            "text": " Because it's a tiny set of 20 cells  amid a big sea of all these normal lymphocytes.  And here's another one that, again, now you  can see from low power.  It's like a satellite image or something"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 173.4,
+            "end": 190.0,
+            "text": " where you can focus immediately on this little red area that,  again, is a tiny pocket of like 10 cancer  cells amid hundreds of thousands of normal cells  that are now visible from low power.  So this is one application we're working on"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 190.0,
+            "end": 202.2,
+            "text": " where the clinical use case will be today people are just  sort of looking at images without the assistance  of any machine learning.  And they just have to kind of pick a number of patches  to focus on with no guidance."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 202.2,
+            "end": 211.0,
+            "text": " So sometimes they focus on the right patches,  sometimes they don't.  But clearly, they don't have time  to look at all of this at high magnification  because that would take like an entire day"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 211.0,
+            "end": 220.0,
+            "text": " if you were trying to look at 40x magnification  of the whole image.  So they sort of use their intuition to focus.  And for that reason, they end up, as we've seen,  making a significant number of mistakes."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 220.0,
+            "end": 227.84,
+            "text": " It's not reproducible because people  focus on different aspects of the image.  And it's pretty slow.  And they're faced with this empty report.  So they have to actually summarize everything"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 227.84,
+            "end": 236.6,
+            "text": " they've looked at in a report.  Like, what's the diagnosis?  What's the size?  So let's say there's cancer here and cancer here.  They have to manually add the distances of the cancer"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 236.6,
+            "end": 247.72,
+            "text": " in those two regions.  And then they have to put this into a staging system that  incorporates how many areas of metastasis there are  and how big are they.  And all of these things are pretty much automatable."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 247.72,
+            "end": 257.08,
+            "text": " And this is the kind of thing we're  building where the system will highlight where it sees cancer,  tell the pathologist to focus there.  And then based on the input of the AI system  and the input of the pathologist,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 257.08,
+            "end": 269.72,
+            "text": " can summarize all of that data, quantitative as well  as diagnostic, as well as summary staging,  sort of that the pathologist then  takes this as their first version of the report.  They can edit it, confirm it, sign it out."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 269.72,
+            "end": 283.08,
+            "text": " That data goes back into the system,  which can be used for more training  data in the future when the case is signed out.  So it's much faster, much more accurate and standardized  once this thing is fully developed, which it isn't yet."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 283.08,
+            "end": 296.28000000000003,
+            "text": " So this is a great application for AI  because you actually do have a ton of data.  So you need to do an exhaustive analysis that  has a lot of value.  It's a task where the local image data"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 296.28000000000003,
+            "end": 307.32,
+            "text": " in a patch, which is really what the current generation  of deep CNNs are really good at, is enough.  So we're looking at things at the cellular level.  Radiology actually could be harder  because you often want to summarize over larger areas."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 307.32,
+            "end": 322.08,
+            "text": " Here you really often have the salient information  in patches that really are scalable in current ML systems.  And then we can interpret the outputs of the model.  Even though the model itself is a black box,  we can visualize the output on top"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 322.08,
+            "end": 332.23999999999995,
+            "text": " of the image, which gives us incredible advantage in terms  of interpretability of what the models are doing well,  what they're doing poorly on.  And it's a specialty of pathology  where 80% is not good enough."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 332.23999999999995,
+            "end": 347.42,
+            "text": " We want to get as close to 100% as possible.  And that's one diagnostic application.  The last, or one of the last examples I'm going to give  has to do with precision immunotherapy, where we're not  trying to identify what the diagnosis is,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 347.42,
+            "end": 362.22,
+            "text": " but to actually subtype patients to predict the right treatment.  And as I mentioned earlier, immunotherapies  are really important and exciting, relatively new area  of cancer therapy, which was another one of the big advances  in 2012, around the same time that deep learning came out."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 362.22,
+            "end": 375.78000000000003,
+            "text": " The first studies came out showing  that targeting a protein mostly on tumor cells,  but also on immune cells, the PD-1 or the PD-L1 protein,  which the protein's job when it's on  is to inhibit immune response."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 375.78000000000003,
+            "end": 388.26,
+            "text": " But in the study of cancer, the inhibition of immune response  is actually bad for the patient, because the immune system's job  is to really try to fight off the cancer.  So they realized a very simple therapeutic strategy  of just having an antibody that binds"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 388.26,
+            "end": 403.06,
+            "text": " to this inhibitory signal can unleash the patient's  own immune system to really end up  curing really serious advanced cancers.  And that image on the top right speaks to that,  where this patient had a very large melanoma."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 403.06,
+            "end": 414.58,
+            "text": " And then they just got this antibody  to target to reinvigorate their immune system.  And then the tumor really shrunk.  And one of the big biomarkers for assessing  which patients will benefit from these therapies"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 414.58,
+            "end": 427.94,
+            "text": " is the tumor cell or the immune cell  expressing this drug target, PD-1 or PD-L1.  And the one they test for is PD-L1,  which is the ligand for the PD-1 receptor.  So this is often the key piece of data"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 427.94,
+            "end": 437.78,
+            "text": " used to decide who gets these therapies.  And it turns out pathologists are  pretty bad at scoring this, not surprisingly,  because it's very difficult.  And there's millions of cells, potentially, per case."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 437.78,
+            "end": 451.04,
+            "text": " And they show an inter-observer agreement  of only 0.86 for scoring on tumor cells, which isn't bad,  but 0.2 for scoring it on immune cells, which is super important.  So this is a drug target.  We're trying to measure to see which patients might get"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 451.04,
+            "end": 463.82,
+            "text": " this life-saving therapy.  But the diagnostic we have is super hard to interpret.  And some studies for this reason have  shown mixed results about how valuable it is.  In some cases, it appears valuable."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 463.82,
+            "end": 477.62,
+            "text": " In other cases, it appears it's not.  So we want to see, would this be a good example of where  we can use machine learning?  And for this type of application, this is really hard.  And we want to be able to apply it across not just one cancer,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 477.62,
+            "end": 489.58000000000004,
+            "text": " but 20 different cancers.  So we built a system at Path.ai for generating lots  of training data at scale.  And that's something that a competition just won't get you.  That competition example had like 300 slides."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 489.58000000000004,
+            "end": 497.94,
+            "text": " Once a year, they do it.  But we want to be able to build these models  every week or something.  So now we have something like 500 pathologists  signed into our system that we can"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 497.94,
+            "end": 508.1,
+            "text": " use to label lots of pathology data for us  and to really build these models quickly and really high  quality.  So now we have something like over 2 and 1  half million annotations in the system."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 508.1,
+            "end": 521.38,
+            "text": " And that allows us to build tissue region models.  And this is immunohistochemistry in a cancer  where we trained a model to identify all of the cancer  cells, the epithelium in red, the cancer stroma in green.  So now we know where the protein is being expressed"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 521.38,
+            "end": 533.4200000000001,
+            "text": " in the epithelium or in the stroma.  And then we've also trained cellular classification.  So now for every single cell, we classify it as a cell type.  Is it a cancer cell or a fibroblast  or a macrophage or a lymphocyte?"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 533.4200000000001,
+            "end": 545.1,
+            "text": " And is it expressing the protein based on how brown it is?  So while pathologists will try to make some estimate  across the whole slide, we can actually compute for every cell  and then compute exact statistics  about which cells are expressing this protein"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 545.1,
+            "end": 566.4200000000001,
+            "text": " and which patients might be the best candidates for therapy.  And then the question is, can we identify additional things  beyond just PD-L1 protein expression that's  predictive of response to immunotherapy?  And we've developed some machine learning approaches"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 566.4200000000001,
+            "end": 578.98,
+            "text": " for doing that.  And part of it's doing things like quantitating  different cells and regions on H and E images, which currently  aren't used at all in patient subtyping.  But we can do analyses to extract new features here"
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 578.98,
+            "end": 595.3000000000001,
+            "text": " and ask, even though nothing's known about these images  in immunotherapy response, can we discover new features here?  And this would be an example routinely  of the types of features we can quantify now using  deep learning to extract these features on any case."
+        },
+        {
+            "number": "lec12",
+            "title": "part.003.mp3",
+            "start": 595.3000000000001,
+            "end": 600.58,
+            "text": " And this is sort of like every sort of pathologic  characteristic you can sort of imagine.  And then we quantify."
+        }
+    ],
+    "text": " And also, they took the same set of slides and sent them out to pathologists operating in clinical practice, where they had really significantly higher error rates, mainly due to the fact they were more constrained by time limitations in clinical practice than in the competition. And mostly, errors they're making are false negatives. Simply, they don't have the time to focus on small regions of metastasis amid these humongous gigapixel-size slides. In the paper, you say you combine the machinery and outputs with the pathologists. But you don't really say how. You say that they look at the heat maps, or you say that you just sort of combine. Yeah, I know it's a great question. So today, we do it that way. And that's the way in clinical practice we're building it, that the pathologists will look at both and then make a diagnosis based on incorporating both. For the competition, it was very simple. And the organizers actually did it. They interpreted them independently. So the pathologists just looked at all the slides. The system made a prediction. And it was literally like the average of the probability that that slide contained cancer that became the final score. And then the AUC went to like 99% from whatever it was, 92%, by combining these two scores. And it's they make uncorrelated errors. Exactly, or pretty much uncorrelated, particularly because the pathologists tend to have almost all false negatives. And the deep learning system tends to be fooled by a few things like artifact. And they do make uncorrelated errors. And that's why there's a huge bump in performance. Yeah. So I kind of made a reference to this. But any of these competition data sets are relatively easy to get really good at. People have shown that you can actually build models that just predict a data set, like using deep learning. Deep learning is almost too good at finding certain patterns and can find artifact. So it's just a caveat to keep in mind. We're doing experiments on lots of real world testing of methods like this across many labs with many different staining procedures and tissue preparation procedures, et cetera, to evaluate the robustness. But that's why competition results, even ImageNet, always need to be taken with a grain of salt. And then we sort of think the value out of this is going to be huge. I mean, it's hard to tell because it's such a big image. But this is what a pathologist today is looking under a microscope. And it's very hard to see anything. With a very simple visualization, just of the output of the AI system is red where cancer looks like it is. It's clearly sort of a great map of the areas they need to be sure to focus on. And this is real data from this example where this bright red area, in fact, contains this tiny little rim of metastatic breast cancer cells that would be very easy to miss without that assistant sort of just pointing you in the right place to look at. Because it's a tiny set of 20 cells amid a big sea of all these normal lymphocytes. And here's another one that, again, now you can see from low power. It's like a satellite image or something where you can focus immediately on this little red area that, again, is a tiny pocket of like 10 cancer cells amid hundreds of thousands of normal cells that are now visible from low power. So this is one application we're working on where the clinical use case will be today people are just sort of looking at images without the assistance of any machine learning. And they just have to kind of pick a number of patches to focus on with no guidance. So sometimes they focus on the right patches, sometimes they don't. But clearly, they don't have time to look at all of this at high magnification because that would take like an entire day if you were trying to look at 40x magnification of the whole image. So they sort of use their intuition to focus. And for that reason, they end up, as we've seen, making a significant number of mistakes. It's not reproducible because people focus on different aspects of the image. And it's pretty slow. And they're faced with this empty report. So they have to actually summarize everything they've looked at in a report. Like, what's the diagnosis? What's the size? So let's say there's cancer here and cancer here. They have to manually add the distances of the cancer in those two regions. And then they have to put this into a staging system that incorporates how many areas of metastasis there are and how big are they. And all of these things are pretty much automatable. And this is the kind of thing we're building where the system will highlight where it sees cancer, tell the pathologist to focus there. And then based on the input of the AI system and the input of the pathologist, can summarize all of that data, quantitative as well as diagnostic, as well as summary staging, sort of that the pathologist then takes this as their first version of the report. They can edit it, confirm it, sign it out. That data goes back into the system, which can be used for more training data in the future when the case is signed out. So it's much faster, much more accurate and standardized once this thing is fully developed, which it isn't yet. So this is a great application for AI because you actually do have a ton of data. So you need to do an exhaustive analysis that has a lot of value. It's a task where the local image data in a patch, which is really what the current generation of deep CNNs are really good at, is enough. So we're looking at things at the cellular level. Radiology actually could be harder because you often want to summarize over larger areas. Here you really often have the salient information in patches that really are scalable in current ML systems. And then we can interpret the outputs of the model. Even though the model itself is a black box, we can visualize the output on top of the image, which gives us incredible advantage in terms of interpretability of what the models are doing well, what they're doing poorly on. And it's a specialty of pathology where 80% is not good enough. We want to get as close to 100% as possible. And that's one diagnostic application. The last, or one of the last examples I'm going to give has to do with precision immunotherapy, where we're not trying to identify what the diagnosis is, but to actually subtype patients to predict the right treatment. And as I mentioned earlier, immunotherapies are really important and exciting, relatively new area of cancer therapy, which was another one of the big advances in 2012, around the same time that deep learning came out. The first studies came out showing that targeting a protein mostly on tumor cells, but also on immune cells, the PD-1 or the PD-L1 protein, which the protein's job when it's on is to inhibit immune response. But in the study of cancer, the inhibition of immune response is actually bad for the patient, because the immune system's job is to really try to fight off the cancer. So they realized a very simple therapeutic strategy of just having an antibody that binds to this inhibitory signal can unleash the patient's own immune system to really end up curing really serious advanced cancers. And that image on the top right speaks to that, where this patient had a very large melanoma. And then they just got this antibody to target to reinvigorate their immune system. And then the tumor really shrunk. And one of the big biomarkers for assessing which patients will benefit from these therapies is the tumor cell or the immune cell expressing this drug target, PD-1 or PD-L1. And the one they test for is PD-L1, which is the ligand for the PD-1 receptor. So this is often the key piece of data used to decide who gets these therapies. And it turns out pathologists are pretty bad at scoring this, not surprisingly, because it's very difficult. And there's millions of cells, potentially, per case. And they show an inter-observer agreement of only 0.86 for scoring on tumor cells, which isn't bad, but 0.2 for scoring it on immune cells, which is super important. So this is a drug target. We're trying to measure to see which patients might get this life-saving therapy. But the diagnostic we have is super hard to interpret. And some studies for this reason have shown mixed results about how valuable it is. In some cases, it appears valuable. In other cases, it appears it's not. So we want to see, would this be a good example of where we can use machine learning? And for this type of application, this is really hard. And we want to be able to apply it across not just one cancer, but 20 different cancers. So we built a system at Path.ai for generating lots of training data at scale. And that's something that a competition just won't get you. That competition example had like 300 slides. Once a year, they do it. But we want to be able to build these models every week or something. So now we have something like 500 pathologists signed into our system that we can use to label lots of pathology data for us and to really build these models quickly and really high quality. So now we have something like over 2 and 1 half million annotations in the system. And that allows us to build tissue region models. And this is immunohistochemistry in a cancer where we trained a model to identify all of the cancer cells, the epithelium in red, the cancer stroma in green. So now we know where the protein is being expressed in the epithelium or in the stroma. And then we've also trained cellular classification. So now for every single cell, we classify it as a cell type. Is it a cancer cell or a fibroblast or a macrophage or a lymphocyte? And is it expressing the protein based on how brown it is? So while pathologists will try to make some estimate across the whole slide, we can actually compute for every cell and then compute exact statistics about which cells are expressing this protein and which patients might be the best candidates for therapy. And then the question is, can we identify additional things beyond just PD-L1 protein expression that's predictive of response to immunotherapy? And we've developed some machine learning approaches for doing that. And part of it's doing things like quantitating different cells and regions on H and E images, which currently aren't used at all in patient subtyping. But we can do analyses to extract new features here and ask, even though nothing's known about these images in immunotherapy response, can we discover new features here? And this would be an example routinely of the types of features we can quantify now using deep learning to extract these features on any case. And this is sort of like every sort of pathologic characteristic you can sort of imagine. And then we quantify."
+}

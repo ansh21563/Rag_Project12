@@ -1,0 +1,348 @@
+{
+    "chunks": [
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 0.0,
+            "end": 17.02,
+            "text": " this, and so it's not a big moneymaker.  And so their offer was, well, you pay us  an extra $3 million, and within three years,  we will develop the appropriate software for you.  So that's just crazy, right?"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 17.02,
+            "end": 33.22,
+            "text": " I mean, that's a totally untenable way  of going about things.  And now that there are systematic ways for you  either to embed your own code into one of these systems,  or at least to have a well-documented, reasonable way"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 33.22,
+            "end": 50.06,
+            "text": " of feeding data out and then feeding results back  into the system, that makes it possible to do  special purpose applications like this,  or experimental applications, or all kinds of novel things.  So that's great."
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 50.06,
+            "end": 59.06,
+            "text": " That's what we're optimistic about.  I think it's worth adding that there's sort of two barriers  you have to get through, right?  One is Epicast has sort of let you  into their app work shirt, which"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 59.06,
+            "end": 70.53999999999999,
+            "text": " is sort of the barrier that is increasingly lower.  And then you need to find a hospital or a health care  provider that wants to use your app, right?  So you kind of have to clear both of those.  But I think it's increasingly possible."
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 70.53999999999999,
+            "end": 83.9,
+            "text": " You've got smart people here at MIT or at the hospitals  we have in Boston always sort of wanting to build these apps.  And I would say five years ago, we  would have told people, sorry, it's not possible.  And today, we're able usually to tell people"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 83.9,
+            "end": 92.03999999999999,
+            "text": " that if there's clinical interest,  the technical part will fall into place.  So that's exciting for us.  Yeah.  Yeah."
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 92.03999999999999,
+            "end": 102.86,
+            "text": " Question about that.  So some of the applications that you guys developed,  do you also put those on the Epic work shirt,  or do you just sort of implement it one time  within your own system?"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 102.86,
+            "end": 110.7,
+            "text": " Yeah.  There's a lot of different ways that we sort of share  these applications, right?  So a lot of us are researchers.  So we will release an open source version"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 110.7,
+            "end": 120.97999999999999,
+            "text": " of the application, or write a paper  and say this is available, and we'll sort of share it  with you.  The app work shirt is particularly  focused on applications that you want to sell."
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 120.97999999999999,
+            "end": 130.66,
+            "text": " So our hospital hasn't decided that we  wanted to sell any applications.  We've given a lot of applications away.  Epic also has something called the community library, which  is like the app work shirt, but it's free instead"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 130.66,
+            "end": 141.74,
+            "text": " of costing money.  And so we released a ton of stuff  through the community library.  To the point that I was sort of poking at before,  one of the challenges is that if we build a smart on fire app,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 141.74,
+            "end": 157.22,
+            "text": " we're able to sort of share that publicly.  We can post that on the web, we can put it on GitHub,  and anybody can use it.  Epic has a position that their APIs are proprietary,  and they represent Epic's valuable intellectual property"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 157.22,
+            "end": 167.82,
+            "text": " or trade secrets.  And so we're only allowed to share those apps  through the Epic ecosystem.  And so we often now, when we get a grant,  most of my work is through grants,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 167.82,
+            "end": 177.82000000000002,
+            "text": " we'll have an Epic site, and we'll  share that through the community library.  And we'll have a Cerner site, and we'll share it  through Cerner's equivalent.  But I think until the capability of the open APIs,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 177.82000000000002,
+            "end": 188.54000000000002,
+            "text": " like smart on fire, reaches the same level  as the proprietary APIs, we're still  somewhat locked into having to build different versions  and distribute through each EHR under separate channels.  Really, really good question."
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 188.54000000000002,
+            "end": 204.61999999999998,
+            "text": " And so what's lacking in things like smart on fire  that you get from the native interfaces?  So I mean, it's very situational, right?  So for example, in some EHR implementations,  smart on fire will give you a list"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 204.61999999999998,
+            "end": 216.85999999999999,
+            "text": " of the patient's current medications,  but may not give you historical medications,  or will tell you that the medicine is ordered,  but it won't tell you whether it's been administered.  So one half of the battle is less complete data."
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 216.85999999999999,
+            "end": 230.51999999999998,
+            "text": " The other one is that most EHRs are not  implementing, at this point, the sort of write back  capabilities or the actionable capabilities  that smart on fire is sort of working on  and has released some standards for."
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 230.51999999999998,
+            "end": 242.78,
+            "text": " So if we want to build an application that  shows how a patient fits on a growth curve, that's fine.  If we want to build an application that  suggests ordering medicines, that can be really challenging.  Whereas the internal APIs that the vendors provide"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 242.78,
+            "end": 257.1,
+            "text": " typically have both read and write capabilities.  So that's the other challenge.  And do the vendors worry about, I guess, two related things.  One is sort of cognitive overload.  Because if you build 1,000 smart on fire apps,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 257.1,
+            "end": 270.26,
+            "text": " and they all start firing for these inpatients,  you're going to be back in the same situation  of over-alerting.  And the other question is, are they worried about liability?  Since if you're using their system"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 270.26,
+            "end": 282.26,
+            "text": " to display recommendations, and those recommendations turn out  to be wrong and harm some patient,  then somebody will reach out to them legally  because they have a lot of money.  Absolutely."
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 282.26,
+            "end": 292.14,
+            "text": " They're worried about both of those.  Related particularly to the second one,  they're also worried about just sort of corruption  or integrity of the data.  So somehow if I can write a medication order directly"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 293.09999999999997,
+            "end": 307.65999999999997,
+            "text": " to the database, and it may bypass certain checks that  would be done normally, and I could potentially  enter a wrong or dangerous order.  The other thing that we're increasingly hearing  is sort of concerns about kind of protection of data,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 307.65999999999997,
+            "end": 323.34000000000003,
+            "text": " sort of Cambridge Analytica style worries.  So if I, as an Epic patient, authorize the Words  with Friends app to see my medical record,  and then they post that on the web  or sort of monetize it in some sort of tricky way,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 323.34000000000003,
+            "end": 340.54,
+            "text": " what liability, if any, does my health care provider  organization or the EHR vendor have for that?  And the new regulations are extremely strict.  They say that if a patient asks you to and authorizes  an app to access their record, you may not block that access,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 340.54,
+            "end": 353.32,
+            "text": " even if you consider that app to be a bad actor.  And so that's, I think, an area of liability  that is just beginning to be sorted out.  And it is, I think, some cause for concern.  But at the same time, you could imagine a universe where,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 353.32,
+            "end": 370.78,
+            "text": " I think, there are conservative health care organizations that  would choose to never authorize any application to avoid risk.  So how you balance that is not yet solved.  Well, and to avoid leakage.  So I remember years ago, there was a lot of reluctance,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 370.78,
+            "end": 387.78,
+            "text": " even among Boston area hospitals,  to share data because they were worried that another hospital  could cherry pick their most lucrative patients by figuring  out something about them.  So I'm sure that that hasn't gone away as a concern."
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 387.78,
+            "end": 396.34,
+            "text": " OK.  We're going to try to remember to repeat  the questions you're asking because of the recording.  Happy to.  Yeah."
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 396.34,
+            "end": 409.3,
+            "text": " So how does a third party vendor deploy a machine learning  model on your system?  So is that done through an app?  Obviously, there's a network or a third kind of thing.  But is there ways to go around that and go directly"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 409.3,
+            "end": 416.26,
+            "text": " to partners and whatnot?  And how does that work?  Yeah.  So the question is, how does a third party vendor  deploy an application or a machine learning model"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 416.26,
+            "end": 429.54,
+            "text": " or something like that?  And so with Epic, there's always a relationship  between the vendor of the application  and the health care provider organization.  And so we could work together directly."
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 429.54,
+            "end": 444.21999999999997,
+            "text": " So if you had an app that the Brigger wanted to use,  you could share that app with us in a number of ways.  So Epic supports this thing called predictive modeling  markup language, or PMML.  So if you train a model, you can export a PMML model."
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 444.21999999999997,
+            "end": 456.62,
+            "text": " I can import it into Epic and run it natively.  Or you can produce a web service that I call out to  and it gives me an answer.  We could work together directly.  However, there are some limitations"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 456.62,
+            "end": 469.7,
+            "text": " in what I'm allowed to tell you or share with you  about Epic's data model and what Epic  perceives to be their intellectual property.  And so it is facilitated by you joining this program.  Because if you join this program,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 469.7,
+            "end": 479.7,
+            "text": " you get access to documentation that you would otherwise  not have access to.  You may get access to a test harness or a test system  that lets you validate your work.  However, people who join the program often"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 479.7,
+            "end": 489.65999999999997,
+            "text": " think that means that I can then just  run my app at every customer.  But with Epic in particular, you have  to then make a deal with me to use it at the Brigger  and make a deal with my colleague"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 489.65999999999997,
+            "end": 501.21999999999997,
+            "text": " to use it at Stanford.  Other EHR vendors have developed a more centralized model  where you can actually release it and sell it.  And I can pay for it directly through the app store  and integrate it."
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 501.21999999999997,
+            "end": 510.18,
+            "text": " I think that last mile piece hasn't really  been standardized yet.  I guess one of my questions there  is what happens in the case that I don't  want to talk to Epic at all."
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 510.18,
+            "end": 518.0600000000001,
+            "text": " And just like I looked at your data  and just like Brigger and Wim and stuff.  And I built a really good model.  You saw how it works.  And we just want to deploy it."
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 518.0600000000001,
+            "end": 530.9000000000001,
+            "text": " Epic would not stop us from doing that.  The only real restriction is that Epic  would limit my ability to tell you stuff about Epic's guts.  And so you would need a relatively sophisticated  health care provider organization"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 530.9000000000001,
+            "end": 544.5,
+            "text": " who could map between some sort of platonic data,  clinical data model, and Epic's internal data model.  But if you had that, you could.  And at Brigham, we have this iHub innovation program.  And we're probably working with 50 to 100 startups"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 544.5,
+            "end": 552.74,
+            "text": " of doing work like that.  Some of whom are members of the Epic App Orchard  and some whom choose not to be members of the Epic App  Orchard.  It's worth saying that joining the App Orchard"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 552.74,
+            "end": 562.5,
+            "text": " or these programs entails revenue sharing with Epic  and some complexity.  That may go way down with these new regulations.  But right now, some organizations  have chosen not to partner with the vendors"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 562.5,
+            "end": 575.3,
+            "text": " and work directly with the health care provider  organizations.  So on the quality side of that question,  if you do develop an application and field it at the Brigham,  will Stanford be interested in taking it?"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 575.3399999999999,
+            "end": 588.8599999999999,
+            "text": " Or are they going to be concerned about the fact  that somehow you fit it to the patient population in Boston  and it won't be appropriate to their data?  Yeah, I think that's a fundamental question,  is to what extent do these models generalize?"
+        },
+        {
+            "number": "lec9",
+            "title": "part.006.mp3",
+            "start": 588.8599999999999,
+            "end": 600.3399999999999,
+            "text": " Can you train a model at one place  and transfer it to another place?  We've generally seen that many of them transfer pretty well.  So if they really have more to do  with core human physiology, they're"
+        }
+    ],
+    "text": " this, and so it's not a big moneymaker. And so their offer was, well, you pay us an extra $3 million, and within three years, we will develop the appropriate software for you. So that's just crazy, right? I mean, that's a totally untenable way of going about things. And now that there are systematic ways for you either to embed your own code into one of these systems, or at least to have a well-documented, reasonable way of feeding data out and then feeding results back into the system, that makes it possible to do special purpose applications like this, or experimental applications, or all kinds of novel things. So that's great. That's what we're optimistic about. I think it's worth adding that there's sort of two barriers you have to get through, right? One is Epicast has sort of let you into their app work shirt, which is sort of the barrier that is increasingly lower. And then you need to find a hospital or a health care provider that wants to use your app, right? So you kind of have to clear both of those. But I think it's increasingly possible. You've got smart people here at MIT or at the hospitals we have in Boston always sort of wanting to build these apps. And I would say five years ago, we would have told people, sorry, it's not possible. And today, we're able usually to tell people that if there's clinical interest, the technical part will fall into place. So that's exciting for us. Yeah. Yeah. Question about that. So some of the applications that you guys developed, do you also put those on the Epic work shirt, or do you just sort of implement it one time within your own system? Yeah. There's a lot of different ways that we sort of share these applications, right? So a lot of us are researchers. So we will release an open source version of the application, or write a paper and say this is available, and we'll sort of share it with you. The app work shirt is particularly focused on applications that you want to sell. So our hospital hasn't decided that we wanted to sell any applications. We've given a lot of applications away. Epic also has something called the community library, which is like the app work shirt, but it's free instead of costing money. And so we released a ton of stuff through the community library. To the point that I was sort of poking at before, one of the challenges is that if we build a smart on fire app, we're able to sort of share that publicly. We can post that on the web, we can put it on GitHub, and anybody can use it. Epic has a position that their APIs are proprietary, and they represent Epic's valuable intellectual property or trade secrets. And so we're only allowed to share those apps through the Epic ecosystem. And so we often now, when we get a grant, most of my work is through grants, we'll have an Epic site, and we'll share that through the community library. And we'll have a Cerner site, and we'll share it through Cerner's equivalent. But I think until the capability of the open APIs, like smart on fire, reaches the same level as the proprietary APIs, we're still somewhat locked into having to build different versions and distribute through each EHR under separate channels. Really, really good question. And so what's lacking in things like smart on fire that you get from the native interfaces? So I mean, it's very situational, right? So for example, in some EHR implementations, smart on fire will give you a list of the patient's current medications, but may not give you historical medications, or will tell you that the medicine is ordered, but it won't tell you whether it's been administered. So one half of the battle is less complete data. The other one is that most EHRs are not implementing, at this point, the sort of write back capabilities or the actionable capabilities that smart on fire is sort of working on and has released some standards for. So if we want to build an application that shows how a patient fits on a growth curve, that's fine. If we want to build an application that suggests ordering medicines, that can be really challenging. Whereas the internal APIs that the vendors provide typically have both read and write capabilities. So that's the other challenge. And do the vendors worry about, I guess, two related things. One is sort of cognitive overload. Because if you build 1,000 smart on fire apps, and they all start firing for these inpatients, you're going to be back in the same situation of over-alerting. And the other question is, are they worried about liability? Since if you're using their system to display recommendations, and those recommendations turn out to be wrong and harm some patient, then somebody will reach out to them legally because they have a lot of money. Absolutely. They're worried about both of those. Related particularly to the second one, they're also worried about just sort of corruption or integrity of the data. So somehow if I can write a medication order directly to the database, and it may bypass certain checks that would be done normally, and I could potentially enter a wrong or dangerous order. The other thing that we're increasingly hearing is sort of concerns about kind of protection of data, sort of Cambridge Analytica style worries. So if I, as an Epic patient, authorize the Words with Friends app to see my medical record, and then they post that on the web or sort of monetize it in some sort of tricky way, what liability, if any, does my health care provider organization or the EHR vendor have for that? And the new regulations are extremely strict. They say that if a patient asks you to and authorizes an app to access their record, you may not block that access, even if you consider that app to be a bad actor. And so that's, I think, an area of liability that is just beginning to be sorted out. And it is, I think, some cause for concern. But at the same time, you could imagine a universe where, I think, there are conservative health care organizations that would choose to never authorize any application to avoid risk. So how you balance that is not yet solved. Well, and to avoid leakage. So I remember years ago, there was a lot of reluctance, even among Boston area hospitals, to share data because they were worried that another hospital could cherry pick their most lucrative patients by figuring out something about them. So I'm sure that that hasn't gone away as a concern. OK. We're going to try to remember to repeat the questions you're asking because of the recording. Happy to. Yeah. So how does a third party vendor deploy a machine learning model on your system? So is that done through an app? Obviously, there's a network or a third kind of thing. But is there ways to go around that and go directly to partners and whatnot? And how does that work? Yeah. So the question is, how does a third party vendor deploy an application or a machine learning model or something like that? And so with Epic, there's always a relationship between the vendor of the application and the health care provider organization. And so we could work together directly. So if you had an app that the Brigger wanted to use, you could share that app with us in a number of ways. So Epic supports this thing called predictive modeling markup language, or PMML. So if you train a model, you can export a PMML model. I can import it into Epic and run it natively. Or you can produce a web service that I call out to and it gives me an answer. We could work together directly. However, there are some limitations in what I'm allowed to tell you or share with you about Epic's data model and what Epic perceives to be their intellectual property. And so it is facilitated by you joining this program. Because if you join this program, you get access to documentation that you would otherwise not have access to. You may get access to a test harness or a test system that lets you validate your work. However, people who join the program often think that means that I can then just run my app at every customer. But with Epic in particular, you have to then make a deal with me to use it at the Brigger and make a deal with my colleague to use it at Stanford. Other EHR vendors have developed a more centralized model where you can actually release it and sell it. And I can pay for it directly through the app store and integrate it. I think that last mile piece hasn't really been standardized yet. I guess one of my questions there is what happens in the case that I don't want to talk to Epic at all. And just like I looked at your data and just like Brigger and Wim and stuff. And I built a really good model. You saw how it works. And we just want to deploy it. Epic would not stop us from doing that. The only real restriction is that Epic would limit my ability to tell you stuff about Epic's guts. And so you would need a relatively sophisticated health care provider organization who could map between some sort of platonic data, clinical data model, and Epic's internal data model. But if you had that, you could. And at Brigham, we have this iHub innovation program. And we're probably working with 50 to 100 startups of doing work like that. Some of whom are members of the Epic App Orchard and some whom choose not to be members of the Epic App Orchard. It's worth saying that joining the App Orchard or these programs entails revenue sharing with Epic and some complexity. That may go way down with these new regulations. But right now, some organizations have chosen not to partner with the vendors and work directly with the health care provider organizations. So on the quality side of that question, if you do develop an application and field it at the Brigham, will Stanford be interested in taking it? Or are they going to be concerned about the fact that somehow you fit it to the patient population in Boston and it won't be appropriate to their data? Yeah, I think that's a fundamental question, is to what extent do these models generalize? Can you train a model at one place and transfer it to another place? We've generally seen that many of them transfer pretty well. So if they really have more to do with core human physiology, they're"
+}

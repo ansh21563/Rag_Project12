@@ -1,0 +1,355 @@
+{
+    "chunks": [
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 0.0,
+            "end": 13.4,
+            "text": " health records have, like these are tough investments  for the electronic health record vendor to make.  They're being forced by the federal government.  And they saw the writing on the wall, so they're moving ahead.  And there's great examples coming out"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 13.4,
+            "end": 25.64,
+            "text": " of Children's and Ken Mandel and the like,  where some progress has been made.  But I live in, like right now, I have  to get this done inside of the health care of today.  And very few of the organizations"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 25.64,
+            "end": 38.019999999999996,
+            "text": " that we not just work with, but we even talk to,  are in a position to fire ready.  I think that's going to, in five years, I think I'll be telling  you, hopefully something different.  Yeah."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 38.019999999999996,
+            "end": 53.379999999999995,
+            "text": " So can you briefly answer that first question about the  culture, about what do you have to give around a prediction  in order for it to be acted upon effectively?  Yes.  So the very first thing you have to do is get,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 53.379999999999995,
+            "end": 65.89999999999999,
+            "text": " so we invite the clinical team to be part of the project  from the very beginning.  It's just really important.  If you show up with a prediction, you've lost.  They don't just, they're part of the team."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 65.89999999999999,
+            "end": 74.25999999999999,
+            "text": " Remember I say we're triangulating  what they can and can't do, and what might matter  and what might not.  They're literally part of the team.  And as we're moving through, how would one"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 74.25999999999999,
+            "end": 85.82,
+            "text": " evaluate whether or not this works, we show them,  these are some of the people we found.  Oh, yeah, that makes sense.  I know Mr. Smith.  And so it's a real show and tell process from the start."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 85.86,
+            "end": 101.3,
+            "text": " So once you get closer to the after development phase  has been done, then what?  After the development phase, if you've done a great job,  you get away from the show me what variable mattered  on a per patient basis."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 101.3,
+            "end": 111.61999999999999,
+            "text": " So you can show folks what, like the odds ratios on a model  is easy enough to produce.  You can show people these are the features that  matter at the model level.  Where this gets tougher is all of health care"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 111.61999999999999,
+            "end": 124.1,
+            "text": " is used to APGAR scores, which are based on five things.  We all know what they are.  And the machine learning results,  the models that we have been talking about behavioral health  and I think the model that we're using now"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 124.1,
+            "end": 137.14,
+            "text": " is over 3,700 variables with at least a little bit  of a contribution.  So how do you square up the culture of five to seven  variables?  And in fact, I gave you the variables"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 137.14,
+            "end": 149.94,
+            "text": " and you ran the hypothesis testing algorithm  versus more of an inductive approach  where thousands of variables are actually  contributing incrementally.  And it's a double edged sword because you could never"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 149.94,
+            "end": 161.42000000000002,
+            "text": " show somebody 3,700 variables.  But if you show them three or four,  and then the answer is, well, that's obvious.  I knew that.  Like the impaired fasting glucose one."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 161.42000000000002,
+            "end": 174.82000000000002,
+            "text": " Yes, exactly.  So really, I just paid you to tell me  that somebody who has been admitted is likely to readmit.  That's the challenge.  So striking that balance between really it's"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 174.82000000000002,
+            "end": 188.54000000000002,
+            "text": " education more than anything.  Because I don't think that an algorithm created  that uses 3,700 variables, I don't  think it can then be turned into decision support  where it can present you two or three"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 188.54000000000002,
+            "end": 201.9,
+            "text": " that you could rely upon and then make informed decisions.  And part of the education process  is we also say, forget about the number.  If I were to give you this person, what would you do next?  And the answer is always, well, I would look at their chart."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 201.9,
+            "end": 216.02,
+            "text": " So if you're going to look at the chart anyway,  then the analogy we use that we find is helpful  is this is GPS.  GPS isn't going to give you like a magic underground highway  that we didn't know about."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 216.02,
+            "end": 229.34,
+            "text": " It's going to suggest the roads that you're familiar with.  The advantage it has is that unlike you  in the car as you're driving, it's  just aware of more than you are.  And it can do the math a little bit faster than you can."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 229.34,
+            "end": 243.9,
+            "text": " And so it's going to give you a suggestion.  And it's going to tell you more often than not  in your situation, I'm going to save you a few minutes.  Now, you're still the driver.  You could still decide to take 93 South and so be it."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 243.9,
+            "end": 260.18,
+            "text": " It could be that the GPS is not aware of the fact  that you really like the view on Memorial Drive versus Sturrow,  and so you're going to do that.  And so we try to help people understand  that it just has access to a little bit more than you do,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 260.18,
+            "end": 268.78000000000003,
+            "text": " and it's going to get you there a little bit faster.  All right, I'm going to stop you here,  because I want to leave some time for some questions  from the audience.  So I'm going to ask you to make the following request."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 268.78000000000003,
+            "end": 277.98,
+            "text": " Try to keep to quick responses so we can get you  as many questions as we can.  No.  It was all right.  Yeah."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 277.98,
+            "end": 292.21999999999997,
+            "text": " How much is there a worry that certain demographic groups  are underdiagnosed and have less access to care  and then would have a lower risk stratification  and then potentially be deprioritized in the list?  And how do you think about addressing that?"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 292.21999999999997,
+            "end": 302.0,
+            "text": " Yeah, so it's a great question.  I'll try to answer this very fast.  If there's something.  And could you repeat the question as quickly as possible  as well?"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 302.0,
+            "end": 312.26,
+            "text": " Do you worry about what?  Yeah, do you worry about, I mean,  models can be biased by experience.  And do you worry about smaller sized populations  being overlooked, safe to say?"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 312.26,
+            "end": 318.85999999999996,
+            "text": " Is that fair?  And the question was also about, really,  because of the training data that you used.  Well, that's what I implied.  OK."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 318.85999999999996,
+            "end": 329.21999999999997,
+            "text": " So all right.  This work we're doing in behavioral health,  and we've done this in a few other environments.  If there is a different demographic for which you  would do something different and they may be lost in the shuffle,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 329.21999999999997,
+            "end": 337.53999999999996,
+            "text": " we do bring that to their attention.  Next question.  There was something in the back I remember.  You went too fast.  OK, over here."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 337.54,
+            "end": 349.22,
+            "text": " How much do you value interpretability  to model performances?  Would you be willing to sacrifice a bit of AUC  to really improve the interpretability?  I'm going to repeat the question."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 349.22,
+            "end": 363.82000000000005,
+            "text": " You talked about how it's really like reading tea leaves  to just show a couple of the top features  anyway from a linear model.  So why not just get rid of all that interpretability  altogether?"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 363.82000000000005,
+            "end": 373.02000000000004,
+            "text": " Does that open the door to that possibility for you?  You're saying get rid of all the interpretability.  I think the question was, are you  willing to trade performance for interpretability?  Yes."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 373.02000000000004,
+            "end": 386.42,
+            "text": " And that could be an answer to it.  Just throw it out.  So if I can get our partners to the point  where they truly understand what we're doing here  and they have been part of evaluating the model,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 386.42,
+            "end": 396.92,
+            "text": " success is when they don't need to,  on a per patient who needs my help basis,  see the 3,000 variables.  But that does mean that as you're building the model,  you will show them the patients."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 396.96000000000004,
+            "end": 405.32,
+            "text": " You will show them the variables.  So that's what I try to walk them to.  So it's about building up trust as you go.  Absolutely.  That being said, in some situations,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 405.32,
+            "end": 415.76,
+            "text": " depending on whether it's clinically appropriate,  I mean, if I'm in the 100th percentile here  and I'm like, but interpretability  can get me pretty far, I'm willing to make that trade.  And that's the difference between don't"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 415.76,
+            "end": 425.48,
+            "text": " fall in love with the hammer.  Fall in love with building the home,  and then you're easy enough to just swap it out.  Next question.  Oh, right there."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 425.48,
+            "end": 439.56,
+            "text": " Yeah, how much time do you spend engaging  with patients and physicians before starting  to build your model?  They are, so actually, first we spend time  with the CEO and the CFO and the CMO,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 439.56,
+            "end": 453.6,
+            "text": " the chief medical, chief executive, chief financial.  Because if there isn't at least a five to one financial return  for solving this problem, you will never  make it all the way down the chain to doing something  that matters."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 453.6,
+            "end": 467.40000000000003,
+            "text": " And so what I have learned is math is fantastic.  We can model all sorts of fun things.  But if I can't figure out how it makes them or saves them,  we have a $5 million mark.  For the size of our company, if I can't help you make $5 million,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 467.40000000000003,
+            "end": 478.76000000000005,
+            "text": " I know you won't pay me.  So we start there.  As soon as we have figured out that there is money  to be made or saved in getting these folks the right care  at the right time, then yes, the clinicians are on the team."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 478.76,
+            "end": 491.96,
+            "text": " We have what's called a working group, project manager,  clinical lead, someone who's a liaison to the data.  We have a team and a communication structure  that embeds the clinician.  And we have clinicians on the team."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 491.96,
+            "end": 507.52,
+            "text": " I think you'll find in many different settings  that that's what it really takes to get  machine learning implemented.  You have to have working groups of administration, clinicians,  users, and engineers, and others."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 507.52,
+            "end": 519.1999999999999,
+            "text": " Over here, there's a question.  Actually, it's a question for both of you.  It's about the data collection.  So I know by default, we try to collect all kinds of data  to train a machine learning model."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 519.1999999999999,
+            "end": 534.92,
+            "text": " But when you have some preliminary model,  can you have some insights to guide you  to target certain data so that you  can know that this new information could  be very informative for a prediction task"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 534.92,
+            "end": 547.76,
+            "text": " or even design better experiments?  Repeat the question.  Sometimes we don't already have the data we want.  Could we use data-driven approaches  to find what data we should get?"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 547.76,
+            "end": 559.88,
+            "text": " So we're doing this right now.  So there's a popular thing in the medical industry.  Everyone's really fired up about social determinants of health.  And so that has been branded and marketed and sold.  And so now customers are saying to us, well, hey,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 559.88,
+            "end": 572.76,
+            "text": " do you have social determinant of health data?  And that's interesting to me because they've never  looked at anything but claims.  And now they're suggesting go buy a third-party data  set, which may not add more value than simply"
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 572.76,
+            "end": 580.66,
+            "text": " having the zip code.  And we say, yeah, of course we can bring in new data.  We bring in weather pattern.  We bring in all kinds of funny data  when the problem calls for it."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 580.66,
+            "end": 592.04,
+            "text": " That's the easy part.  The real challenge is, will it add value?  Should we invest our time and energy in doing this?  So if you've got all kinds of fantastic data, run with it,  and then see where you fall short."
+        },
+        {
+            "number": "lec4",
+            "title": "part.006.mp3",
+            "start": 592.04,
+            "end": 601.76,
+            "text": " There's a lot more than the data just  doesn't tell you.  Now go out and get a different type of data.  If the performance is low, and clinically,  and based on our experience."
+        }
+    ],
+    "text": " health records have, like these are tough investments for the electronic health record vendor to make. They're being forced by the federal government. And they saw the writing on the wall, so they're moving ahead. And there's great examples coming out of Children's and Ken Mandel and the like, where some progress has been made. But I live in, like right now, I have to get this done inside of the health care of today. And very few of the organizations that we not just work with, but we even talk to, are in a position to fire ready. I think that's going to, in five years, I think I'll be telling you, hopefully something different. Yeah. So can you briefly answer that first question about the culture, about what do you have to give around a prediction in order for it to be acted upon effectively? Yes. So the very first thing you have to do is get, so we invite the clinical team to be part of the project from the very beginning. It's just really important. If you show up with a prediction, you've lost. They don't just, they're part of the team. Remember I say we're triangulating what they can and can't do, and what might matter and what might not. They're literally part of the team. And as we're moving through, how would one evaluate whether or not this works, we show them, these are some of the people we found. Oh, yeah, that makes sense. I know Mr. Smith. And so it's a real show and tell process from the start. So once you get closer to the after development phase has been done, then what? After the development phase, if you've done a great job, you get away from the show me what variable mattered on a per patient basis. So you can show folks what, like the odds ratios on a model is easy enough to produce. You can show people these are the features that matter at the model level. Where this gets tougher is all of health care is used to APGAR scores, which are based on five things. We all know what they are. And the machine learning results, the models that we have been talking about behavioral health and I think the model that we're using now is over 3,700 variables with at least a little bit of a contribution. So how do you square up the culture of five to seven variables? And in fact, I gave you the variables and you ran the hypothesis testing algorithm versus more of an inductive approach where thousands of variables are actually contributing incrementally. And it's a double edged sword because you could never show somebody 3,700 variables. But if you show them three or four, and then the answer is, well, that's obvious. I knew that. Like the impaired fasting glucose one. Yes, exactly. So really, I just paid you to tell me that somebody who has been admitted is likely to readmit. That's the challenge. So striking that balance between really it's education more than anything. Because I don't think that an algorithm created that uses 3,700 variables, I don't think it can then be turned into decision support where it can present you two or three that you could rely upon and then make informed decisions. And part of the education process is we also say, forget about the number. If I were to give you this person, what would you do next? And the answer is always, well, I would look at their chart. So if you're going to look at the chart anyway, then the analogy we use that we find is helpful is this is GPS. GPS isn't going to give you like a magic underground highway that we didn't know about. It's going to suggest the roads that you're familiar with. The advantage it has is that unlike you in the car as you're driving, it's just aware of more than you are. And it can do the math a little bit faster than you can. And so it's going to give you a suggestion. And it's going to tell you more often than not in your situation, I'm going to save you a few minutes. Now, you're still the driver. You could still decide to take 93 South and so be it. It could be that the GPS is not aware of the fact that you really like the view on Memorial Drive versus Sturrow, and so you're going to do that. And so we try to help people understand that it just has access to a little bit more than you do, and it's going to get you there a little bit faster. All right, I'm going to stop you here, because I want to leave some time for some questions from the audience. So I'm going to ask you to make the following request. Try to keep to quick responses so we can get you as many questions as we can. No. It was all right. Yeah. How much is there a worry that certain demographic groups are underdiagnosed and have less access to care and then would have a lower risk stratification and then potentially be deprioritized in the list? And how do you think about addressing that? Yeah, so it's a great question. I'll try to answer this very fast. If there's something. And could you repeat the question as quickly as possible as well? Do you worry about what? Yeah, do you worry about, I mean, models can be biased by experience. And do you worry about smaller sized populations being overlooked, safe to say? Is that fair? And the question was also about, really, because of the training data that you used. Well, that's what I implied. OK. So all right. This work we're doing in behavioral health, and we've done this in a few other environments. If there is a different demographic for which you would do something different and they may be lost in the shuffle, we do bring that to their attention. Next question. There was something in the back I remember. You went too fast. OK, over here. How much do you value interpretability to model performances? Would you be willing to sacrifice a bit of AUC to really improve the interpretability? I'm going to repeat the question. You talked about how it's really like reading tea leaves to just show a couple of the top features anyway from a linear model. So why not just get rid of all that interpretability altogether? Does that open the door to that possibility for you? You're saying get rid of all the interpretability. I think the question was, are you willing to trade performance for interpretability? Yes. And that could be an answer to it. Just throw it out. So if I can get our partners to the point where they truly understand what we're doing here and they have been part of evaluating the model, success is when they don't need to, on a per patient who needs my help basis, see the 3,000 variables. But that does mean that as you're building the model, you will show them the patients. You will show them the variables. So that's what I try to walk them to. So it's about building up trust as you go. Absolutely. That being said, in some situations, depending on whether it's clinically appropriate, I mean, if I'm in the 100th percentile here and I'm like, but interpretability can get me pretty far, I'm willing to make that trade. And that's the difference between don't fall in love with the hammer. Fall in love with building the home, and then you're easy enough to just swap it out. Next question. Oh, right there. Yeah, how much time do you spend engaging with patients and physicians before starting to build your model? They are, so actually, first we spend time with the CEO and the CFO and the CMO, the chief medical, chief executive, chief financial. Because if there isn't at least a five to one financial return for solving this problem, you will never make it all the way down the chain to doing something that matters. And so what I have learned is math is fantastic. We can model all sorts of fun things. But if I can't figure out how it makes them or saves them, we have a $5 million mark. For the size of our company, if I can't help you make $5 million, I know you won't pay me. So we start there. As soon as we have figured out that there is money to be made or saved in getting these folks the right care at the right time, then yes, the clinicians are on the team. We have what's called a working group, project manager, clinical lead, someone who's a liaison to the data. We have a team and a communication structure that embeds the clinician. And we have clinicians on the team. I think you'll find in many different settings that that's what it really takes to get machine learning implemented. You have to have working groups of administration, clinicians, users, and engineers, and others. Over here, there's a question. Actually, it's a question for both of you. It's about the data collection. So I know by default, we try to collect all kinds of data to train a machine learning model. But when you have some preliminary model, can you have some insights to guide you to target certain data so that you can know that this new information could be very informative for a prediction task or even design better experiments? Repeat the question. Sometimes we don't already have the data we want. Could we use data-driven approaches to find what data we should get? So we're doing this right now. So there's a popular thing in the medical industry. Everyone's really fired up about social determinants of health. And so that has been branded and marketed and sold. And so now customers are saying to us, well, hey, do you have social determinant of health data? And that's interesting to me because they've never looked at anything but claims. And now they're suggesting go buy a third-party data set, which may not add more value than simply having the zip code. And we say, yeah, of course we can bring in new data. We bring in weather pattern. We bring in all kinds of funny data when the problem calls for it. That's the easy part. The real challenge is, will it add value? Should we invest our time and energy in doing this? So if you've got all kinds of fantastic data, run with it, and then see where you fall short. There's a lot more than the data just doesn't tell you. Now go out and get a different type of data. If the performance is low, and clinically, and based on our experience."
+}

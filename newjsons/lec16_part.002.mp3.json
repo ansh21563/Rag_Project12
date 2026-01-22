@@ -1,0 +1,299 @@
+{
+    "chunks": [
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 0.0,
+            "end": 10.76,
+            "text": " This doctor did not look at anything  that happened earlier in time or any other information  than what is in the state variable  that we observe at that time.  That is the assumption that we make."
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 10.76,
+            "end": 25.52,
+            "text": " Yeah?  Is that an assumption you can make for a health care?  Because in the end, you don't have access to the real state,  but only about what's measured about the state in health care.  It's a very good question."
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 25.52,
+            "end": 39.36,
+            "text": " So the nice thing in terms of inferring causal quantities  is that we only need the things that  were used to make the decision in the first place.  So the doctor can only act on such information, too,  unless we don't record everything"
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 39.36,
+            "end": 58.800000000000004,
+            "text": " that the doctor knows, which is also the case.  So it's something that we have to worry about, for sure.  Another way to lose information, as I mentioned,  that is relevant for this is if we look to, what's  the opposite of far?"
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 58.800000000000004,
+            "end": 74.84,
+            "text": " To New York back in time, essentially.  So we don't look at the entire history of the patient.  And when I say ST here, it doesn't  have to be the instantaneous snapshot of a patient.  We can also include history there."
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 74.84,
+            "end": 90.56,
+            "text": " Again, we'll come back to that a little later.  OK.  So the Markov assumption essentially looks like this.  Or this is how I will illustrate it anyway.  We have a sequence of states here that evolve over time."
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 90.56,
+            "end": 102.44,
+            "text": " I'm allowing myself to put some dots here,  because I don't want to draw forever.  But essentially, you could think of this pattern repeating,  where the previous state goes into the next state,  the action goes into the next state,"
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 102.44,
+            "end": 118.16,
+            "text": " and the action and state goes into the reward.  This is the world that we will live in for this lecture.  Something that's not allowed under the Markov assumption  is an edge like this, which says that an action in an early time  influences an action at a later time."
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 118.16,
+            "end": 133.2,
+            "text": " And specifically, it can't do so without passing  through a state, for example.  It very well can have an influence on AT  by this trajectory here, but not directly.  That's the Markov assumption in this case."
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 138.16,
+            "end": 155.07999999999998,
+            "text": " So you can see that if I were to draw  the graph of all the different measurements that we  see during a stay, essentially, there  are a lot of errors that I could have had in this picture  that I don't have."
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 155.07999999999998,
+            "end": 165.51999999999998,
+            "text": " So it may seem that the Markov assumption is a very, very  strong one.  But one way to ensure that the Markov assumption is  more likely is to include more things in your state,  including summaries of the history,"
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 165.52,
+            "end": 181.96,
+            "text": " et cetera, that I mentioned before.  An even stronger restriction of decision processes  is to assume that the states over time  are themselves independent.  So this goes by different names, sometimes"
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 181.96,
+            "end": 194.04000000000002,
+            "text": " under the name contextual bandits.  But the bandits part of that itself is not so relevant here.  So let's not go into that name too much.  But essentially, what we can say is here  that the state at a later time point"
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 194.04,
+            "end": 205.72,
+            "text": " is not influenced directly by the state  at the previous time point, nor the action  at the previous time point.  So if you remember what we did last week,  this looks like basically T repetitions"
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 205.72,
+            "end": 219.73999999999998,
+            "text": " of the very simple graph that we had for estimating  potential outcomes.  And that is indeed mathematically equivalent.  If we assume that this S here represents  the state of a patient, and all patients"
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 219.73999999999998,
+            "end": 240.04000000000002,
+            "text": " are drawn from some process, essentially,  so that S0, 1, et cetera, up to St,  are all IID draws of the same distribution,  then we have essentially a model for T different patients  without a single time step or single action,"
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 240.04000000000002,
+            "end": 255.08,
+            "text": " instead of them being dependent in some way.  So we can see that by going backwards through my slides,  this is essentially what we had last week.  And we just have to add more arrows  to get to whatever we have this week, which"
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 255.08,
+            "end": 267.12,
+            "text": " indicates that last week was a special case of this,  just as David said before.  It also hints at the reinforcement learning  problem being more complicated than the potential outcomes  problem."
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 267.12,
+            "end": 283.71999999999997,
+            "text": " And we'll see more examples of that later.  But like with causal effect estimation  that we did last week, we're interested  in the influences of just a few variables, essentially.  So last time, we studied the effect of a single treatment"
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 283.71999999999997,
+            "end": 294.56,
+            "text": " choice.  And in this case, we will study the influence  of these various actions that we take along the way.  That will be the goal.  And it could be either through an immediate effect"
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 294.56,
+            "end": 315.86,
+            "text": " on the immediate reward, or it can be through the impact  that an action has on the state trajectory itself.  So I told you about the world now that we live in.  We have these S&As and Rs. And I haven't told you so much  about the goal that we're trying to solve,"
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 315.86,
+            "end": 332.3,
+            "text": " or the problem that we're trying to solve.  Most RL, or reinforcement learning,  is aimed at optimizing the value of a policy,  or finding a policy that has a good return,  a good sum of rewards."
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 332.3,
+            "end": 350.34000000000003,
+            "text": " There are many names for this.  But essentially, a policy that does well.  The notion of well that we will be using in this lecture  is that of a return.  So the return at a time step t, following the policy pi"
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 350.34000000000003,
+            "end": 365.46000000000004,
+            "text": " that I had before, is the sum of the future rewards  that we see if we were to act according to that policy.  So essentially, I stop now.  I ask, OK, if I keep on doing the same as I've  done through my whole life, maybe that was a good policy?"
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 365.46000000000004,
+            "end": 375.7,
+            "text": " I don't know.  And keep going until the end of time.  How well will I do?  What is the sum of those rewards that I get, essentially?  That's the return."
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 375.7,
+            "end": 388.42,
+            "text": " The value is the expectation of such things.  So if I'm not the only person, but there  is a whole population of us, the expectation  over that population is the value of the policy.  So if we take patience as a better analogy than my life,"
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 388.42,
+            "end": 405.18,
+            "text": " maybe the expectation is over patience.  If we act on every patient in our population the same way,  according to the same policy that is,  what is the expected return over those patients?  So as an example, I drew a few trajectories again"
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 405.18,
+            "end": 417.34000000000003,
+            "text": " because I like drawing.  And we can think about three different patients here.  They start in different states.  And they will have different action trajectories as a result.  So we're treating them with the same policy."
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 417.34000000000003,
+            "end": 426.1,
+            "text": " Let's call it pi.  But because they're in different states,  they will have different actions at the same times.  So here, we take a 0 action.  We go down."
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 426.1,
+            "end": 433.18,
+            "text": " Here, we take a 0 action.  We go down.  That's what that means here.  The specifics of this is not so important.  But what I want you to pay attention to"
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 433.18,
+            "end": 450.06,
+            "text": " is that after each action, we get a reward.  And at the end, we can sum those up.  And that's our return.  So each patient has one value for their own trajectory.  And the value of the policy is then the average value"
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 450.06,
+            "end": 463.46000000000004,
+            "text": " of such trajectories.  OK?  So that is what we're trying to optimize.  We have now a notion of good.  And we want to find a pi such that that v pi up there is"
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 463.46000000000004,
+            "end": 476.42,
+            "text": " good.  That's the goal.  All right.  So I think it's time for a bit of an example here.  I want you to play along in a second."
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 476.42,
+            "end": 486.74,
+            "text": " You're going to solve this problem.  It's not a hard one.  So I think you'll manage.  I think you'll be fine.  But this is now yet another example of a world to be in."
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 486.74,
+            "end": 497.62,
+            "text": " This is the robot in a room.  And I've stolen this slide from David,  who stole it from Peter Bodik.  And yeah.  So credits to him."
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 497.62,
+            "end": 514.34,
+            "text": " Anyway, the rules of this world says the following.  If you tell the robot, who is traversing the set of tiles  here, if you tell the robot to go up,  there's a chance he doesn't go up, but goes somewhere else.  So we have stochastic transitions, essentially."
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 514.34,
+            "end": 528.98,
+            "text": " If I say up, he goes up with 0.8 probability  and somewhere else with uniform probability, say.  So 0.8 up and then 0.2.  That's the only possible direction  to go in if you start here."
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 528.98,
+            "end": 538.9200000000001,
+            "text": " So 0.2 in that way.  There's a chance you move in the wrong direction,  is what I'm trying to illustrate here.  There's no chance that they're going  in the opposite direction, say."
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 538.9200000000001,
+            "end": 555.46,
+            "text": " So if I say right here, it can't go that way.  The rewards in this game is plus 1 in the green box up there  and minus 1 in the box here.  And these are also terminal states.  So I haven't told you what that is,"
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 555.46,
+            "end": 570.9200000000001,
+            "text": " but it's essentially a state in which the game ends.  So once you get to either plus 1 or minus 1, the game is over.  For each step that the robot takes,  it incurs 0.04 negative reward.  So that says, essentially, that if you"
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 570.9200000000001,
+            "end": 584.3000000000001,
+            "text": " keep going for a long time, your reward will be bad.  The value of the policy will be bad.  So you want to be efficient.  So basically, you can figure out you  want to get to the green thing."
+        },
+        {
+            "number": "lec16",
+            "title": "art.002.mp3",
+            "start": 584.3000000000001,
+            "end": 600.36,
+            "text": " That's one part of it.  But you also want to do it quickly.  So what I want you to do now is to essentially figure out  what is the best policy in terms of in which way should  the arrows point in each of these different boxes."
+        }
+    ],
+    "text": " This doctor did not look at anything that happened earlier in time or any other information than what is in the state variable that we observe at that time. That is the assumption that we make. Yeah? Is that an assumption you can make for a health care? Because in the end, you don't have access to the real state, but only about what's measured about the state in health care. It's a very good question. So the nice thing in terms of inferring causal quantities is that we only need the things that were used to make the decision in the first place. So the doctor can only act on such information, too, unless we don't record everything that the doctor knows, which is also the case. So it's something that we have to worry about, for sure. Another way to lose information, as I mentioned, that is relevant for this is if we look to, what's the opposite of far? To New York back in time, essentially. So we don't look at the entire history of the patient. And when I say ST here, it doesn't have to be the instantaneous snapshot of a patient. We can also include history there. Again, we'll come back to that a little later. OK. So the Markov assumption essentially looks like this. Or this is how I will illustrate it anyway. We have a sequence of states here that evolve over time. I'm allowing myself to put some dots here, because I don't want to draw forever. But essentially, you could think of this pattern repeating, where the previous state goes into the next state, the action goes into the next state, and the action and state goes into the reward. This is the world that we will live in for this lecture. Something that's not allowed under the Markov assumption is an edge like this, which says that an action in an early time influences an action at a later time. And specifically, it can't do so without passing through a state, for example. It very well can have an influence on AT by this trajectory here, but not directly. That's the Markov assumption in this case. So you can see that if I were to draw the graph of all the different measurements that we see during a stay, essentially, there are a lot of errors that I could have had in this picture that I don't have. So it may seem that the Markov assumption is a very, very strong one. But one way to ensure that the Markov assumption is more likely is to include more things in your state, including summaries of the history, et cetera, that I mentioned before. An even stronger restriction of decision processes is to assume that the states over time are themselves independent. So this goes by different names, sometimes under the name contextual bandits. But the bandits part of that itself is not so relevant here. So let's not go into that name too much. But essentially, what we can say is here that the state at a later time point is not influenced directly by the state at the previous time point, nor the action at the previous time point. So if you remember what we did last week, this looks like basically T repetitions of the very simple graph that we had for estimating potential outcomes. And that is indeed mathematically equivalent. If we assume that this S here represents the state of a patient, and all patients are drawn from some process, essentially, so that S0, 1, et cetera, up to St, are all IID draws of the same distribution, then we have essentially a model for T different patients without a single time step or single action, instead of them being dependent in some way. So we can see that by going backwards through my slides, this is essentially what we had last week. And we just have to add more arrows to get to whatever we have this week, which indicates that last week was a special case of this, just as David said before. It also hints at the reinforcement learning problem being more complicated than the potential outcomes problem. And we'll see more examples of that later. But like with causal effect estimation that we did last week, we're interested in the influences of just a few variables, essentially. So last time, we studied the effect of a single treatment choice. And in this case, we will study the influence of these various actions that we take along the way. That will be the goal. And it could be either through an immediate effect on the immediate reward, or it can be through the impact that an action has on the state trajectory itself. So I told you about the world now that we live in. We have these S&As and Rs. And I haven't told you so much about the goal that we're trying to solve, or the problem that we're trying to solve. Most RL, or reinforcement learning, is aimed at optimizing the value of a policy, or finding a policy that has a good return, a good sum of rewards. There are many names for this. But essentially, a policy that does well. The notion of well that we will be using in this lecture is that of a return. So the return at a time step t, following the policy pi that I had before, is the sum of the future rewards that we see if we were to act according to that policy. So essentially, I stop now. I ask, OK, if I keep on doing the same as I've done through my whole life, maybe that was a good policy? I don't know. And keep going until the end of time. How well will I do? What is the sum of those rewards that I get, essentially? That's the return. The value is the expectation of such things. So if I'm not the only person, but there is a whole population of us, the expectation over that population is the value of the policy. So if we take patience as a better analogy than my life, maybe the expectation is over patience. If we act on every patient in our population the same way, according to the same policy that is, what is the expected return over those patients? So as an example, I drew a few trajectories again because I like drawing. And we can think about three different patients here. They start in different states. And they will have different action trajectories as a result. So we're treating them with the same policy. Let's call it pi. But because they're in different states, they will have different actions at the same times. So here, we take a 0 action. We go down. Here, we take a 0 action. We go down. That's what that means here. The specifics of this is not so important. But what I want you to pay attention to is that after each action, we get a reward. And at the end, we can sum those up. And that's our return. So each patient has one value for their own trajectory. And the value of the policy is then the average value of such trajectories. OK? So that is what we're trying to optimize. We have now a notion of good. And we want to find a pi such that that v pi up there is good. That's the goal. All right. So I think it's time for a bit of an example here. I want you to play along in a second. You're going to solve this problem. It's not a hard one. So I think you'll manage. I think you'll be fine. But this is now yet another example of a world to be in. This is the robot in a room. And I've stolen this slide from David, who stole it from Peter Bodik. And yeah. So credits to him. Anyway, the rules of this world says the following. If you tell the robot, who is traversing the set of tiles here, if you tell the robot to go up, there's a chance he doesn't go up, but goes somewhere else. So we have stochastic transitions, essentially. If I say up, he goes up with 0.8 probability and somewhere else with uniform probability, say. So 0.8 up and then 0.2. That's the only possible direction to go in if you start here. So 0.2 in that way. There's a chance you move in the wrong direction, is what I'm trying to illustrate here. There's no chance that they're going in the opposite direction, say. So if I say right here, it can't go that way. The rewards in this game is plus 1 in the green box up there and minus 1 in the box here. And these are also terminal states. So I haven't told you what that is, but it's essentially a state in which the game ends. So once you get to either plus 1 or minus 1, the game is over. For each step that the robot takes, it incurs 0.04 negative reward. So that says, essentially, that if you keep going for a long time, your reward will be bad. The value of the policy will be bad. So you want to be efficient. So basically, you can figure out you want to get to the green thing. That's one part of it. But you also want to do it quickly. So what I want you to do now is to essentially figure out what is the best policy in terms of in which way should the arrows point in each of these different boxes."
+}

@@ -1,0 +1,320 @@
+{
+    "chunks": [
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 0.0,
+            "end": 15.96,
+            "text": " So one can try to propagate best practices  by surfacing clinical decision support, automatically  triggering this clinical decision support for patients  that you think it might be irrelevant for.  And here's one example where it says,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 15.96,
+            "end": 32.36,
+            "text": " the ED dashboard, the emergency department dashboard,  decision support algorithms have determined  this patient may be eligible for the atrius cellulitis pathway.  Cellulitis is often caused by infections.  Please choose from one of the options, enroll in the pathway,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 32.36,
+            "end": 45.24,
+            "text": " decline.  And if you decline, you must include a comment  for the reviewers.  Now, if you clicked on enroll in the pathway, at that moment,  machine learning disappears."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 45.24,
+            "end": 60.96,
+            "text": " Rather, there is a standardized process.  It's an algorithm, but it's a deterministic algorithm  for how patients with cellulitis should be properly managed,  diagnosed, and treated.  That algorithm comes from best practices,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 60.96,
+            "end": 76.56,
+            "text": " comes from clinicians coming together, analyzing past data,  understanding what would be good ways  to treat patients of this type, and then  formalizing that in a document.  The challenge is that there might be hundreds or even"
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 76.56,
+            "end": 90.16,
+            "text": " thousands of these best practices.  And in an academic medical center,  where you have patients coming, where  you have medical students or residents who  are very quickly rotating through the system,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 90.16,
+            "end": 105.16,
+            "text": " and thus may not be familiar with what  are the most appropriate clinical guidelines to use  for any one patient in this institution,  or if you go to a rural site where  this academic nature of thinking through what"
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 105.16,
+            "end": 116.47999999999999,
+            "text": " the right clinical guidelines are is a little bit less  of the mainstream everyday activity,  the question of which one to use when is very challenging.  And so that's where the machine learning algorithms  can come in."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 116.48,
+            "end": 125.2,
+            "text": " By reasoning about what's going on with the patient,  you might have a good guess of what  might be appropriate for this patient.  And you use that to automatically surface  the right clinical decisions for a trigger."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 125.2,
+            "end": 139.04,
+            "text": " Another example is by just trying  to anticipate clinician needs.  So for example, if you think that this patient might  be coming in for a psychiatric condition,  or maybe you recognize that the patient came in"
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 139.04,
+            "end": 150.83999999999997,
+            "text": " and that triage was complaining of chest pain,  then there might be a psych order set,  which includes laboratory test results that are  relevant for psychiatric patients,  or a chest pain order set, which includes"
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 150.83999999999997,
+            "end": 165.07999999999998,
+            "text": " both laboratory tests and interventions, like aspirin,  that might be suggested.  Now, these are also examples where these order sets are not  created by machine learning algorithms,  although that's something we could discuss later"
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 165.07999999999998,
+            "end": 174.32000000000002,
+            "text": " in the semester.  Rather, they're standardized, but the goal  of the machine learning algorithm  is just to figure out which ones to show when directly  to the clinicians."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 174.32000000000002,
+            "end": 187.92000000000002,
+            "text": " I'm showing you these examples to try to point out  that diagnosis isn't the whole story.  Thinking through what are the more subtle interventions we  can do with machine learning and AI in health care  is going to be really important to having the impact"
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 187.92000000000002,
+            "end": 201.56,
+            "text": " that it could have.  So other examples, now a bit more in the diagnosis style,  are reducing the need for specialist consults.  So you might have a patient come in,  and it might be really quick to get the patient in front"
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 201.56,
+            "end": 216.8,
+            "text": " of an x-ray to do a chest x-ray.  But then finding the radiologist to review that x-ray  could take a lot of time.  And in some places, radiologist consults  could take days, depending on the urgency of the condition."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 216.8,
+            "end": 230.18,
+            "text": " So this is an area where data is quite standardized.  In fact, MIT just released last week  a data set of 300,000 chest x-rays  with associated labels on them.  And one could try to ask the question of,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 230.18,
+            "end": 241.18,
+            "text": " could we build machine learning algorithms  using the convolutional neural network type techniques  that we've seen play a big role in object recognition  to try to understand what's going on with this patient?  For example, in this case, the prediction"
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 241.18,
+            "end": 255.5,
+            "text": " is the patient has pneumonia from this chest x-ray.  And using those systems, it could help both reduce  the load of radiology consults, and it  could allow us to really translate these algorithms  to settings which might be much more resource-poor,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 255.5,
+            "end": 270.22,
+            "text": " for example, in developing nations.  Now, the same sorts of techniques  can be used for other data modalities.  So this is an example of data that  could be obtained from an EKG."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 270.22,
+            "end": 283.3,
+            "text": " And from looking at this EKG, one  can try to predict, does the patient have a heart  condition, such as an arrhythmia?  Now, these types of data used to just be obtained when  you go to a doctor's office."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 283.3,
+            "end": 296.66,
+            "text": " But today, they're available to all of us.  For example, in Apple's most recent watch  that was released, it has a single lead EKG  built into it, which can attempt to predict if a patient has  arrhythmia or not."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 296.66,
+            "end": 308.06,
+            "text": " And there are a lot of subtleties, of course,  around what it took to get regulatory approval for that,  which we'll be discussing later in the semester,  and how one safely deploys such algorithms directly  to consumers."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 308.06,
+            "end": 322.22,
+            "text": " And there, there are a variety of techniques that could be used.  In a few lectures, I'll talk to you  about techniques from the 80s and 90s, which  were based on signal processing, trying  to detect where are the peaks of the signal,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 322.22,
+            "end": 332.46000000000004,
+            "text": " look at the distance between peaks.  And more recently, because of the large wealth of data  that's available, we've been using  convolutional neural network-based approaches  to try to understand this data and predict from it."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 335.34000000000003,
+            "end": 351.74,
+            "text": " Yet another example from the ER really  has to do with not how do we care for the patient today,  but how do we get better data, which will then  result in taking better care of the patient tomorrow.  And so one example of that, which my group deployed"
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 351.74,
+            "end": 366.94000000000005,
+            "text": " at Bethesda Odecon, and it's still running there  in the emergency department, has to do with getting higher  quality chief complaints.  The chief complaint is the, it's usually a very short two  or three word quantity, like left knee pain, rectal pain,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 366.94000000000005,
+            "end": 383.42,
+            "text": " right upper quadrant, RUQ, abdominal pain.  And it's just a very quick summary  of why did the patient come into the ER today.  And despite the fact that it's so few words,  it plays a huge role in the care of a patient."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 383.42,
+            "end": 395.78000000000003,
+            "text": " If you look at the big screens in the ER, which summarize  who are the patients at what beds,  they have the chief complaint next to it.  Chief complaints are used as criteria  for enrolling patients in clinical trials."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 395.78000000000003,
+            "end": 407.78000000000003,
+            "text": " It's used as criteria for doing retrospective quality research  to see how do we care for patients of a particular type.  So it plays a very big role.  But unfortunately, the data that we've been getting  has been crap."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 407.78000000000003,
+            "end": 419.16,
+            "text": " And that's because it was free text,  and it was sufficiently high dimensional  that just attempting to standardize it  with a big dropdown list, like you see over here,  would have killed the clinical workflow."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 419.16,
+            "end": 430.74,
+            "text": " It would have taken way too much time for clinicians  to try to find the relevant one.  And so it just wouldn't have been used.  And that's where some very simple machine learning  algorithms turn out to be really valuable."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 430.74,
+            "end": 443.94,
+            "text": " So for example, we changed the workflow altogether.  Rather than the chief complaint being the first thing  that the triage nurse assigns when the patient comes in,  it's the last thing.  First, the nurse takes the vital signs, patient's temperature,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 443.94,
+            "end": 453.0,
+            "text": " heart rate, blood pressure, respiratory rate,  and oxygen saturation.  They talk to the patient.  They write up a 10-word or 30-word note  about what's going on with the patient."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 453.0,
+            "end": 466.74,
+            "text": " Here, it says, 69-year-old male patient  with severe intermittent right upper quadrant pain  began soon after eating.  Also is a heavy drinker.  So quite a bit of information in that."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 466.74,
+            "end": 476.42,
+            "text": " We take that.  We use a machine learning algorithm,  a supervised machine learning algorithm in this case,  to predict a set of chief complaints now drawn  from a standardized ontology."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 476.42,
+            "end": 490.34,
+            "text": " We show the five most likely ones.  And the clinician, in this case, the nurse,  could just click one of them, and it  would enter it into there.  We also allow the nurse to type in part of a chief complaint."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 490.34,
+            "end": 503.92,
+            "text": " But rather than just doing a text matching  to find words that match what's being typed in,  we do a contextual autocomplete.  So we use our predictions to prioritize  what's the most likely chief complaint that contains"
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 503.92,
+            "end": 514.04,
+            "text": " that sequence of characters.  And that way, it's way faster to enter  in the relevant information.  And what we found is that over time,  we got much higher quality data out."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 514.04,
+            "end": 527.7,
+            "text": " And again, this is something we'll  be talking about in one of our lectures in this course.  So I just gave you a few examples  of how machine learning and artificial intelligence  will transform the provider space."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 527.7,
+            "end": 540.9,
+            "text": " But now I want to jump up a level  and think through not how do we treat a patient today,  but how do we think about the progression  of a patient's chronic disease over a period of years.  It could be 10 years, 20 years."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 540.9,
+            "end": 555.62,
+            "text": " And this question of how do we manage chronic disease  is something which affects all aspects of the health care  ecosystem.  It'll be used by providers, payers, and also  by patients themselves."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 555.62,
+            "end": 571.6999999999999,
+            "text": " So consider a patient with chronic kidney disease.  Chronic kidney disease, it typically only gets worse.  So you might start with a patient being healthy  and then have some increased risk.  Eventually, they have some kidney damage."
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 571.6999999999999,
+            "end": 588.98,
+            "text": " Over time, they reach kidney failure.  And once they reach kidney failure,  typically they need dialysis or a kidney transplant.  But understanding when each of these things  are going to happen for patients is actually"
+        },
+        {
+            "number": "lec1",
+            "title": "part.004.mp3",
+            "start": 588.98,
+            "end": 602.3000000000001,
+            "text": " really, really challenging.  Right now, we have one way of trying to stage patients.  A standard approach is known as the EGFR.  It's derived predominantly from the patient's creatinine,  which is the level of creatinine."
+        }
+    ],
+    "text": " So one can try to propagate best practices by surfacing clinical decision support, automatically triggering this clinical decision support for patients that you think it might be irrelevant for. And here's one example where it says, the ED dashboard, the emergency department dashboard, decision support algorithms have determined this patient may be eligible for the atrius cellulitis pathway. Cellulitis is often caused by infections. Please choose from one of the options, enroll in the pathway, decline. And if you decline, you must include a comment for the reviewers. Now, if you clicked on enroll in the pathway, at that moment, machine learning disappears. Rather, there is a standardized process. It's an algorithm, but it's a deterministic algorithm for how patients with cellulitis should be properly managed, diagnosed, and treated. That algorithm comes from best practices, comes from clinicians coming together, analyzing past data, understanding what would be good ways to treat patients of this type, and then formalizing that in a document. The challenge is that there might be hundreds or even thousands of these best practices. And in an academic medical center, where you have patients coming, where you have medical students or residents who are very quickly rotating through the system, and thus may not be familiar with what are the most appropriate clinical guidelines to use for any one patient in this institution, or if you go to a rural site where this academic nature of thinking through what the right clinical guidelines are is a little bit less of the mainstream everyday activity, the question of which one to use when is very challenging. And so that's where the machine learning algorithms can come in. By reasoning about what's going on with the patient, you might have a good guess of what might be appropriate for this patient. And you use that to automatically surface the right clinical decisions for a trigger. Another example is by just trying to anticipate clinician needs. So for example, if you think that this patient might be coming in for a psychiatric condition, or maybe you recognize that the patient came in and that triage was complaining of chest pain, then there might be a psych order set, which includes laboratory test results that are relevant for psychiatric patients, or a chest pain order set, which includes both laboratory tests and interventions, like aspirin, that might be suggested. Now, these are also examples where these order sets are not created by machine learning algorithms, although that's something we could discuss later in the semester. Rather, they're standardized, but the goal of the machine learning algorithm is just to figure out which ones to show when directly to the clinicians. I'm showing you these examples to try to point out that diagnosis isn't the whole story. Thinking through what are the more subtle interventions we can do with machine learning and AI in health care is going to be really important to having the impact that it could have. So other examples, now a bit more in the diagnosis style, are reducing the need for specialist consults. So you might have a patient come in, and it might be really quick to get the patient in front of an x-ray to do a chest x-ray. But then finding the radiologist to review that x-ray could take a lot of time. And in some places, radiologist consults could take days, depending on the urgency of the condition. So this is an area where data is quite standardized. In fact, MIT just released last week a data set of 300,000 chest x-rays with associated labels on them. And one could try to ask the question of, could we build machine learning algorithms using the convolutional neural network type techniques that we've seen play a big role in object recognition to try to understand what's going on with this patient? For example, in this case, the prediction is the patient has pneumonia from this chest x-ray. And using those systems, it could help both reduce the load of radiology consults, and it could allow us to really translate these algorithms to settings which might be much more resource-poor, for example, in developing nations. Now, the same sorts of techniques can be used for other data modalities. So this is an example of data that could be obtained from an EKG. And from looking at this EKG, one can try to predict, does the patient have a heart condition, such as an arrhythmia? Now, these types of data used to just be obtained when you go to a doctor's office. But today, they're available to all of us. For example, in Apple's most recent watch that was released, it has a single lead EKG built into it, which can attempt to predict if a patient has arrhythmia or not. And there are a lot of subtleties, of course, around what it took to get regulatory approval for that, which we'll be discussing later in the semester, and how one safely deploys such algorithms directly to consumers. And there, there are a variety of techniques that could be used. In a few lectures, I'll talk to you about techniques from the 80s and 90s, which were based on signal processing, trying to detect where are the peaks of the signal, look at the distance between peaks. And more recently, because of the large wealth of data that's available, we've been using convolutional neural network-based approaches to try to understand this data and predict from it. Yet another example from the ER really has to do with not how do we care for the patient today, but how do we get better data, which will then result in taking better care of the patient tomorrow. And so one example of that, which my group deployed at Bethesda Odecon, and it's still running there in the emergency department, has to do with getting higher quality chief complaints. The chief complaint is the, it's usually a very short two or three word quantity, like left knee pain, rectal pain, right upper quadrant, RUQ, abdominal pain. And it's just a very quick summary of why did the patient come into the ER today. And despite the fact that it's so few words, it plays a huge role in the care of a patient. If you look at the big screens in the ER, which summarize who are the patients at what beds, they have the chief complaint next to it. Chief complaints are used as criteria for enrolling patients in clinical trials. It's used as criteria for doing retrospective quality research to see how do we care for patients of a particular type. So it plays a very big role. But unfortunately, the data that we've been getting has been crap. And that's because it was free text, and it was sufficiently high dimensional that just attempting to standardize it with a big dropdown list, like you see over here, would have killed the clinical workflow. It would have taken way too much time for clinicians to try to find the relevant one. And so it just wouldn't have been used. And that's where some very simple machine learning algorithms turn out to be really valuable. So for example, we changed the workflow altogether. Rather than the chief complaint being the first thing that the triage nurse assigns when the patient comes in, it's the last thing. First, the nurse takes the vital signs, patient's temperature, heart rate, blood pressure, respiratory rate, and oxygen saturation. They talk to the patient. They write up a 10-word or 30-word note about what's going on with the patient. Here, it says, 69-year-old male patient with severe intermittent right upper quadrant pain began soon after eating. Also is a heavy drinker. So quite a bit of information in that. We take that. We use a machine learning algorithm, a supervised machine learning algorithm in this case, to predict a set of chief complaints now drawn from a standardized ontology. We show the five most likely ones. And the clinician, in this case, the nurse, could just click one of them, and it would enter it into there. We also allow the nurse to type in part of a chief complaint. But rather than just doing a text matching to find words that match what's being typed in, we do a contextual autocomplete. So we use our predictions to prioritize what's the most likely chief complaint that contains that sequence of characters. And that way, it's way faster to enter in the relevant information. And what we found is that over time, we got much higher quality data out. And again, this is something we'll be talking about in one of our lectures in this course. So I just gave you a few examples of how machine learning and artificial intelligence will transform the provider space. But now I want to jump up a level and think through not how do we treat a patient today, but how do we think about the progression of a patient's chronic disease over a period of years. It could be 10 years, 20 years. And this question of how do we manage chronic disease is something which affects all aspects of the health care ecosystem. It'll be used by providers, payers, and also by patients themselves. So consider a patient with chronic kidney disease. Chronic kidney disease, it typically only gets worse. So you might start with a patient being healthy and then have some increased risk. Eventually, they have some kidney damage. Over time, they reach kidney failure. And once they reach kidney failure, typically they need dialysis or a kidney transplant. But understanding when each of these things are going to happen for patients is actually really, really challenging. Right now, we have one way of trying to stage patients. A standard approach is known as the EGFR. It's derived predominantly from the patient's creatinine, which is the level of creatinine."
+}

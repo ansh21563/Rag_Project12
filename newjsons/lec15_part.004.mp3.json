@@ -1,0 +1,299 @@
+{
+    "chunks": [
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 0.0,
+            "end": 16.82,
+            "text": " Bayesian additive regression tree,  we're going to assume that that function takes  the form of a nearest neighbor classifier.  In particular, we'll say that y hat of 1,  that the function for predicting the potential outcome y hat 1"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 16.82,
+            "end": 43.16,
+            "text": " is given to you by finding the nearest neighbor of the data  point x according to the data set of individuals  that received treatment 1, and same thing for y hat 0.  And so that then allows us to actually prove  some properties of matching."
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 43.16,
+            "end": 65.84,
+            "text": " So for example, if you remember from, I think,  I mentioned in Tuesday's lecture that this covariate adjustment  approach, under the assumptions of overlap  and under the assumptions of no hidden confounding,  and that your function family for potential outcome"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 65.84,
+            "end": 86.32,
+            "text": " is sufficiently rich that you can actually  fit the underlying model, then you're  going to get correct estimates of your conditional average  treatment effect.  Now, one can show that a nearest neighbor algorithm is not"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 86.32,
+            "end": 98.88,
+            "text": " in generally a consistent algorithm.  And what that means is that if you  have a small number of samples, you're  going to be getting biased estimate.  Your function f might in general be a biased estimate."
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 98.88,
+            "end": 110.8,
+            "text": " Now, we can conclude from that that if we  were to use one nearest neighbor matching for inferring  average treatment effect, that in general it  could give us a biased estimate of the average treatment  effect."
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 110.8,
+            "end": 126.52000000000001,
+            "text": " However, in the limit of infinite data,  one nearest neighbor algorithms are  guaranteed to be able to fit the underlying function family.  That is to say that bias goes to 0  in the limit of a large amount of data."
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 126.52000000000001,
+            "end": 140.92,
+            "text": " And thus, we can immediately draw from that literature  in causal inference, sorry, from that literature  in machine learning to obtain theoretical results  for matching for causal inference.  And so that's all I want to say about matching"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 140.92,
+            "end": 157.01999999999998,
+            "text": " and its connection to covariate adjustment.  And really, the punchline is think about matching just  as another type of covariate adjustment, one which  uses a nearest neighbor function family  and thus should be compared to other approaches"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 157.02,
+            "end": 176.94,
+            "text": " to covariate adjustment, such as, for example,  using machine learning algorithms that are  designed to be interpretable.  So the last part of this lecture is  going to be introducing a second approach for inferring"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 176.94,
+            "end": 188.62,
+            "text": " average treatment effect.  That is known as the propensity score method.  And this is going to be a real shift.  It's going to be a different estimator  from the covariate adjustment."
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 188.62,
+            "end": 197.94,
+            "text": " So as I mentioned, it's going to be  used for estimating average treatment effect.  In problem set 4, you're going to see  how you can use the same sorts of techniques  I'll tell you about now for also estimating"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 197.94,
+            "end": 211.06,
+            "text": " conditional average treatment effect.  But that won't be obvious just from today's lecture.  So the key intuition for propensity score method  is to think back to what would have happened if you  had a randomized control trial."
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 211.06,
+            "end": 223.98,
+            "text": " In a randomized control trial, again, you  get choice over what treatment to give each individual.  So you might imagine flipping a coin.  If it's heads, giving them treatment 1.  If it's tails, giving them treatment 0."
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 223.98,
+            "end": 239.02,
+            "text": " So given data from a randomized control trial,  then there's a really simple estimator shown here  for the average treatment effect.  You just sum up the values of y for the individuals  that receive treatment 1 divided by n1,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 239.02,
+            "end": 247.88,
+            "text": " which is the number of individuals that  receive treatment 1.  So this is the average outcome for all people  who got treatment 1.  And you just subtract from that the average outcome"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 247.88,
+            "end": 262.1,
+            "text": " for all individuals who receive treatment 0.  And that can be easily shown to be an unbiased estimator  of the average treatment effect had your data come  from a randomized control trial.  So the key idea of a propensity score method"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 262.1,
+            "end": 277.7,
+            "text": " is to turn an observational study into something  that looks like a randomized control trial  via re-weighting of the data points.  So here's the picture I want you to have in mind.  Again, here I am not showing you outcomes."
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 277.7,
+            "end": 289.74,
+            "text": " I'm just showing you the features, x.  That's what the data points are.  And the treatments that were given to them, the t's.  And the t's in this case are being denoted  by the color of the dots."
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 289.74,
+            "end": 303.53999999999996,
+            "text": " So red is t equals 1.  Blue is t equals 0.  And my apologies in advance for anyone who's colorblind.  So the key challenge when working  with an observational study is that there"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 303.53999999999996,
+            "end": 316.41999999999996,
+            "text": " might be a bias in terms of who received treatment 0  versus who receives treatment 1.  If this was a randomized control trial,  then you would expect to see the reds and the blues all  intermixed equally with one another."
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 316.41999999999996,
+            "end": 329.90000000000003,
+            "text": " But as you can see here in this data set,  there are very many more people who received,  very more young people who received treatment 0  than received treatment 1.  Said differently, if you look at the distribution over x"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 329.90000000000003,
+            "end": 343.82000000000005,
+            "text": " conditioned on t equals 0 in the data,  it's different from the distribution over x  conditioned on the people who received treatment 1.  So what the propensity score method is going to do  is it's going to recognize that there"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 343.82000000000005,
+            "end": 356.53999999999996,
+            "text": " is a difference between these two distributions.  And it's going to reweight data points  so that an aggregate it looks like in any one region.  So for example, if you imagine looking at this region,  that there's roughly the same number"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 356.53999999999996,
+            "end": 368.14,
+            "text": " of red and blue data points.  Where if you think about blowing up this red data point,  here I've made it very big.  You can think about it being many, many red data points  of the corresponding weight."
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 368.14,
+            "end": 382.14,
+            "text": " We look over here, see again, there's  roughly the same number of red and blue,  same amount of red and blue mass as well.  So if we can find some way to increase or decrease  the weight associated with each data point,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 382.14,
+            "end": 394.7,
+            "text": " such that now it looks like the two distributions, those  who received treatment 1 and those who received treatment 0,  look like they came from the look  like now they have the same distribution, weighted  distribution, then we're going to be in business."
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 394.7,
+            "end": 407.74,
+            "text": " So we're going to search for those weights, w,  that have that property.  So to do that, we need to introduce  one new concept, which is known as the propensity score.  The propensity score is given to you by the probability"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 407.74,
+            "end": 423.22,
+            "text": " that t equals 1 given x.  Here again, we're going to use machine learning.  Whereas in covariate adjustment, we  use machine learning to predict y conditioned on x, t.  That's what covariate adjustment did."
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 423.22,
+            "end": 436.26,
+            "text": " Here, we're going to be ignoring y altogether.  We're just going to take x's input,  and we're going to be predicting t.  So you can imagine using logistic regression,  giving you covariates to predict which treatment any given data"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 436.26,
+            "end": 446.02,
+            "text": " point came from.  Here, you're using the full data set, of course,  to make that prediction.  So we're looking at both data points where t is 1 and t  equals 0."
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 446.02,
+            "end": 458.21999999999997,
+            "text": " t is your label for this.  Then what we're going to do is, given that learned propensity  score, so we take your data set.  You first learn the propensity score.  Then we're going to re-weight the data points according"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 458.21999999999997,
+            "end": 471.98,
+            "text": " to the inverse of the propensity score.  And you might ask, this looks familiar, right?  This whole notion of re-weighting data points,  this whole notion of trying to figure out  which quote, unquote, data set a data point came from,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 471.98,
+            "end": 483.26,
+            "text": " the data set of individuals who achieved treatment 1,  or the data set of individuals who received treatment 0,  that sounds really familiar.  And it's because it's exactly what you saw in lecture 10  when we talked about data set shift."
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 483.26,
+            "end": 503.54,
+            "text": " And in fact, this whole entire method,  as you'll develop in problem set 4,  is a special case of learning under data set shift.  So here now is the propensity score algorithm.  We take our data set, which have samples of x, t, and y,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 503.54,
+            "end": 518.86,
+            "text": " where y, of course, tells you the potential outcome  corresponding to the treatment t.  We're going to use any machine learning method  in order to estimate this model that can give you  probability of treatment given x."
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 518.86,
+            "end": 530.7,
+            "text": " Now, critically, we need a probability for this.  We're not trying to do classification.  We need an actual probability.  And so if you remember back to previous lectures  where we spoke about calibration,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 530.7,
+            "end": 546.1,
+            "text": " about the ability to accurately predict probabilities,  that is going to be really important here.  And so for example, if we were to use a deep neural network  in order to estimate the propensity scores,  deep neural networks are well known to not be well calibrated."
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 546.1,
+            "end": 557.7,
+            "text": " And so one would have to use one of a number of new methods  that have been recently developed  to make the output of deep learning calibrated  in order to use this type of technique.  So after finishing step one, now that you"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 557.7,
+            "end": 574.82,
+            "text": " have a model that can allow you to estimate the propensity  score for every data point x, we now can take those,  take and estimate your average treatment effect  with the following formula.  It's 1 over n of the sum over the data points, where"
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 574.82,
+            "end": 588.9,
+            "text": " the data points corresponding to the treatment 1 of yi,  that part is identical to before.  But what you see now is that we're  going to divide it by the propensity score.  And so this denominator, that's the new piece here."
+        },
+        {
+            "number": "lec15",
+            "title": "part.004.mp3",
+            "start": 588.9,
+            "end": 599.5,
+            "text": " The inverse of the propensity score  is precisely the weighting that we were referring to earlier.  And the same thing happens over here for ti equals 0.  Now, let's try to get some intuition about."
+        }
+    ],
+    "text": " Bayesian additive regression tree, we're going to assume that that function takes the form of a nearest neighbor classifier. In particular, we'll say that y hat of 1, that the function for predicting the potential outcome y hat 1 is given to you by finding the nearest neighbor of the data point x according to the data set of individuals that received treatment 1, and same thing for y hat 0. And so that then allows us to actually prove some properties of matching. So for example, if you remember from, I think, I mentioned in Tuesday's lecture that this covariate adjustment approach, under the assumptions of overlap and under the assumptions of no hidden confounding, and that your function family for potential outcome is sufficiently rich that you can actually fit the underlying model, then you're going to get correct estimates of your conditional average treatment effect. Now, one can show that a nearest neighbor algorithm is not in generally a consistent algorithm. And what that means is that if you have a small number of samples, you're going to be getting biased estimate. Your function f might in general be a biased estimate. Now, we can conclude from that that if we were to use one nearest neighbor matching for inferring average treatment effect, that in general it could give us a biased estimate of the average treatment effect. However, in the limit of infinite data, one nearest neighbor algorithms are guaranteed to be able to fit the underlying function family. That is to say that bias goes to 0 in the limit of a large amount of data. And thus, we can immediately draw from that literature in causal inference, sorry, from that literature in machine learning to obtain theoretical results for matching for causal inference. And so that's all I want to say about matching and its connection to covariate adjustment. And really, the punchline is think about matching just as another type of covariate adjustment, one which uses a nearest neighbor function family and thus should be compared to other approaches to covariate adjustment, such as, for example, using machine learning algorithms that are designed to be interpretable. So the last part of this lecture is going to be introducing a second approach for inferring average treatment effect. That is known as the propensity score method. And this is going to be a real shift. It's going to be a different estimator from the covariate adjustment. So as I mentioned, it's going to be used for estimating average treatment effect. In problem set 4, you're going to see how you can use the same sorts of techniques I'll tell you about now for also estimating conditional average treatment effect. But that won't be obvious just from today's lecture. So the key intuition for propensity score method is to think back to what would have happened if you had a randomized control trial. In a randomized control trial, again, you get choice over what treatment to give each individual. So you might imagine flipping a coin. If it's heads, giving them treatment 1. If it's tails, giving them treatment 0. So given data from a randomized control trial, then there's a really simple estimator shown here for the average treatment effect. You just sum up the values of y for the individuals that receive treatment 1 divided by n1, which is the number of individuals that receive treatment 1. So this is the average outcome for all people who got treatment 1. And you just subtract from that the average outcome for all individuals who receive treatment 0. And that can be easily shown to be an unbiased estimator of the average treatment effect had your data come from a randomized control trial. So the key idea of a propensity score method is to turn an observational study into something that looks like a randomized control trial via re-weighting of the data points. So here's the picture I want you to have in mind. Again, here I am not showing you outcomes. I'm just showing you the features, x. That's what the data points are. And the treatments that were given to them, the t's. And the t's in this case are being denoted by the color of the dots. So red is t equals 1. Blue is t equals 0. And my apologies in advance for anyone who's colorblind. So the key challenge when working with an observational study is that there might be a bias in terms of who received treatment 0 versus who receives treatment 1. If this was a randomized control trial, then you would expect to see the reds and the blues all intermixed equally with one another. But as you can see here in this data set, there are very many more people who received, very more young people who received treatment 0 than received treatment 1. Said differently, if you look at the distribution over x conditioned on t equals 0 in the data, it's different from the distribution over x conditioned on the people who received treatment 1. So what the propensity score method is going to do is it's going to recognize that there is a difference between these two distributions. And it's going to reweight data points so that an aggregate it looks like in any one region. So for example, if you imagine looking at this region, that there's roughly the same number of red and blue data points. Where if you think about blowing up this red data point, here I've made it very big. You can think about it being many, many red data points of the corresponding weight. We look over here, see again, there's roughly the same number of red and blue, same amount of red and blue mass as well. So if we can find some way to increase or decrease the weight associated with each data point, such that now it looks like the two distributions, those who received treatment 1 and those who received treatment 0, look like they came from the look like now they have the same distribution, weighted distribution, then we're going to be in business. So we're going to search for those weights, w, that have that property. So to do that, we need to introduce one new concept, which is known as the propensity score. The propensity score is given to you by the probability that t equals 1 given x. Here again, we're going to use machine learning. Whereas in covariate adjustment, we use machine learning to predict y conditioned on x, t. That's what covariate adjustment did. Here, we're going to be ignoring y altogether. We're just going to take x's input, and we're going to be predicting t. So you can imagine using logistic regression, giving you covariates to predict which treatment any given data point came from. Here, you're using the full data set, of course, to make that prediction. So we're looking at both data points where t is 1 and t equals 0. t is your label for this. Then what we're going to do is, given that learned propensity score, so we take your data set. You first learn the propensity score. Then we're going to re-weight the data points according to the inverse of the propensity score. And you might ask, this looks familiar, right? This whole notion of re-weighting data points, this whole notion of trying to figure out which quote, unquote, data set a data point came from, the data set of individuals who achieved treatment 1, or the data set of individuals who received treatment 0, that sounds really familiar. And it's because it's exactly what you saw in lecture 10 when we talked about data set shift. And in fact, this whole entire method, as you'll develop in problem set 4, is a special case of learning under data set shift. So here now is the propensity score algorithm. We take our data set, which have samples of x, t, and y, where y, of course, tells you the potential outcome corresponding to the treatment t. We're going to use any machine learning method in order to estimate this model that can give you probability of treatment given x. Now, critically, we need a probability for this. We're not trying to do classification. We need an actual probability. And so if you remember back to previous lectures where we spoke about calibration, about the ability to accurately predict probabilities, that is going to be really important here. And so for example, if we were to use a deep neural network in order to estimate the propensity scores, deep neural networks are well known to not be well calibrated. And so one would have to use one of a number of new methods that have been recently developed to make the output of deep learning calibrated in order to use this type of technique. So after finishing step one, now that you have a model that can allow you to estimate the propensity score for every data point x, we now can take those, take and estimate your average treatment effect with the following formula. It's 1 over n of the sum over the data points, where the data points corresponding to the treatment 1 of yi, that part is identical to before. But what you see now is that we're going to divide it by the propensity score. And so this denominator, that's the new piece here. The inverse of the propensity score is precisely the weighting that we were referring to earlier. And the same thing happens over here for ti equals 0. Now, let's try to get some intuition about."
+}

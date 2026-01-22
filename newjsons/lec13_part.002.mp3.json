@@ -1,0 +1,362 @@
+{
+    "chunks": [
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 0.0,
+            "end": 10.68,
+            "text": " Not that tricky if you just do it carefully and tune.  Now let's talk about how to use this model to actually deliver  on this triage idea.  So to summarize my choices again,  image line initialization is going"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 10.68,
+            "end": 20.04,
+            "text": " to make your life a happier time.  Use bigger batch sizes.  And the architecture choice doesn't really  matter if it's convolutional.  And the overall setup that we do through this work"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 20.04,
+            "end": 29.42,
+            "text": " and across many other projects, we're  training independently per image.  Now this is a harder task because you don't actually  have the full, you're not taking any other view.  You're not taking prior mammograms."
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 29.42,
+            "end": 41.74,
+            "text": " So there are more harder reasons than not.  We're going to get the prediction for the whole exam  by just taking the maximum across the different images.  So if I say this breast has cancer, the exam has cancer.  So you should get it checked up."
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 41.74,
+            "end": 54.1,
+            "text": " And at each development epoch, we're  going to evaluate the ability of the model to do triage task.  Which I'll step into a second.  And we're going to take the best model that can do triage.  So you're always kind of like your true end metric"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 54.1,
+            "end": 66.58,
+            "text": " is what you're measuring during training.  And you're going to do model selection  and kind of hyper-patterning based on that.  And the way we're going to do triage, and our goal here  is to mark as many of the people as healthy"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 66.58,
+            "end": 77.14,
+            "text": " without missing a single cancer that we also would have caught.  So intuitively, you can do it by just taking  all the cancers that the radiologists would have caught.  What's the probability of cancer across these images?  And just take the minimum of those"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 77.14,
+            "end": 89.14,
+            "text": " and call that the threshold.  That's exactly what we do.  And another detail that's quite relevant often  is if you want these models to output a reasonable probability,  like this is the probability of cancer,"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 89.14,
+            "end": 101.86,
+            "text": " and you train on a 50-50 sampled batches, by default,  your model thinks that the average incidence is 50%.  So it's crazy confidence all the time.  So to calibrate that, one really simple trick  is you do something called Platt's method, where you"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 101.86,
+            "end": 112.47999999999999,
+            "text": " basically just fit a two parameter sigmoid, which  is a scale and a shift, on the development sets  to make it actually fit the distribution.  That way, the average probability,  you would expect to actually fit the incidence,"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 112.48,
+            "end": 124.80000000000001,
+            "text": " and you don't get these crazy off-kilter probabilities.  OK, so analysis.  The objectives of what we're going to try to do here  is similar across all the projects.  One, does this thing work?"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 124.80000000000001,
+            "end": 133.84,
+            "text": " Two, does this thing work across all the people  it's supposed to work for?  So we did a subgroup analysis.  First, we looked at the AUC of this model,  so the ability to discriminate cancer or not."
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 133.84,
+            "end": 146.56,
+            "text": " We did it across races.  We have across MGH, age groups, and density categories.  And finally, how does this relate to radiologist assessments?  If we actually use this at test time on the test set,  what would have happened?"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 146.56,
+            "end": 161.12,
+            "text": " Kind of a simulation before full clinical implementation.  So our overall AUC here was 82, with some confidence interval  of 85.  And when we did our analysis by age,  we found that the performance was pretty similar"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 161.12,
+            "end": 172.79999999999998,
+            "text": " across every age group.  What's not shown here is the confidence intervals.  So for example, the kind of core takeaway  here is that there was no noticeable gap in terms  of by age group."
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 172.79999999999998,
+            "end": 185.95999999999998,
+            "text": " We repeated this analysis by race,  and we saw the same trend again.  The performance kind of ranged generally around 82.  And in places where the gap was bigger,  the just confidence interval was bigger accordingly"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 185.95999999999998,
+            "end": 199.68,
+            "text": " due to smaller sample sizes, because MGH is 80% white.  We saw the exact same trend by density.  The outlier here is very dense breasts,  but there's only like 100 of those on test set.  So like this confidence level actually goes from like 60 to 90."
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 199.68,
+            "end": 215.64000000000001,
+            "text": " So as far as we know for the other three categories,  it is a much tighter confidence interval,  and very similar once again around 82.  So we have a decent idea that this model seems at least  within population MGH, actually serve"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 215.64000000000001,
+            "end": 230.24,
+            "text": " the relevant populations that exist as far as we know so far.  The next question is, how does a model assessment relate  to the radiology assessment?  So to look at that, we looked at on the test set,  true positives, false positives, true negatives,"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 230.24,
+            "end": 238.56,
+            "text": " false negatives.  Where do they fall within the model distribution  of percentile risk?  And if there's below the threshold,  we're going to color it in this kind of cyan color."
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 238.56,
+            "end": 251.0,
+            "text": " And if it's above the threshold, we're  going to color it in this purple color.  So this is kind of triaged, not triaged.  The first thing to notice, this is the true positives,  is that there is like a pretty kind of steep drop off."
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 251.0,
+            "end": 263.36,
+            "text": " And so there is only one true positive  fell below the threshold in a test set of 26,000 exams.  So in the end of this difference wasn't statistically  significant.  And the vast majority of them are kind of this top 10%."
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 263.36,
+            "end": 276.2,
+            "text": " But you kind of see like there's a clear trend here,  that they kind of get piled up towards the higher percentages.  Whereas if you look at the false positive assessments,  this trend is much weaker.  So you still see that there is like some correlation"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 276.2,
+            "end": 287.4,
+            "text": " that there is going to more false positives, the higher  amounts, but much less stark.  And this actually means that a lot of radiology's  false positives we actually place below the threshold.  And so because these assessments are completely concordant,"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 287.4,
+            "end": 301.71999999999997,
+            "text": " and we're not just modeling what the results would have said,  we get this anticipated benefit of actually reducing  the false positives significantly because  of the way to disagree.  And finally, kind of aiding in that further,"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 301.71999999999997,
+            "end": 315.35999999999996,
+            "text": " if you look at the true negative assessments,  there is not that much trending between where  it falls within this.  So it shows that they're kind of picking up on different things  and where they disagree gives us both areas to improve"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 315.35999999999996,
+            "end": 326.76,
+            "text": " and some ancillary benefits because now we  can reduce false positives.  This directly leads into simulating the impact.  So one of the things we did was said, OK,  if people retrospectively on the test set as a simulation"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 326.76,
+            "end": 338.16,
+            "text": " before we truly plug it in, if people didn't  rebuild the triage threshold, so we can't catch any more cancer  this way, but we can reduce false positives,  what would have happened?  So at the top, we have the original performance."
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 338.16,
+            "end": 351.48,
+            "text": " So this is looking 100% of mammogram sensitivity was 90.6  with specificity of 93.  And in the simulation, the sensitivity  dropped not significantly to 90.1,  but significantly improved to 93.7"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 351.48,
+            "end": 365.08,
+            "text": " while looking at 80% or 81% of the mammograms.  So this is promising preliminary data.  But to revalidate this and go forward, our next step,  see if it's, oh, I'm going to get to that in a second.  Our next step is really do clinical implementation"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 365.08,
+            "end": 377.84,
+            "text": " to really figure out, because there's  a core assumption here is that people read it the same way.  But if you have this higher incidence, what does that mean?  Can you focus more on the people that are more suspicious?  And is the right way to do this just a single threshold"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 377.84,
+            "end": 385.82,
+            "text": " to not read?  Or have a double-ended with the same,  these are much more likely to have cancer.  And so there is quite a bit of exploration here to say,  given we have these tools that give us"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 385.82,
+            "end": 396.64000000000004,
+            "text": " some probability of cancer, that's not perfect,  but gives us something.  How can we do that to improve care today?  So as a quiz, can you tell which of these would be triaged?  So this is no cherry picking."
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 396.64000000000004,
+            "end": 411.16,
+            "text": " I randomly picked four mammograms that were  below and above the threshold.  Can anyone guess which side, left or right, was triaged?  This is not a graded quiz, so you know.  You should ask which one."
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 411.16,
+            "end": 422.84000000000003,
+            "text": " Raise your hand for left.  Oh, yeah, raise your hand for left.  OK, raise your hand for right.  Here we go.  Well done, well done."
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 422.84000000000003,
+            "end": 436.20000000000005,
+            "text": " OK, so and the next step, as I said before,  is we need to kind of push the clinical computation,  because that's where the rubber hits the road.  We identify, is there any biases we didn't detect?  And we can really say, can we deliver this value?"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 436.20000000000005,
+            "end": 451.12,
+            "text": " So the next project is on assessing breast cancer risk.  So this is the same mammogram I showed you earlier.  It was diagnosed with breast cancer in 2014.  It's actually my advisor, Regina's.  And you can see that in 2013, you"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 451.12,
+            "end": 463.20000000000005,
+            "text": " see it's there, and 2012, it looks much less prominent.  And five years ago, we were really  looking at breast cancer risk.  So if you can tell by an image that is going to be healthy  for a long time, you're really trying"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 463.20000000000005,
+            "end": 474.96000000000004,
+            "text": " to model what's the likelihood of this breast developing  cancer in the future.  Now, modeling breast cancer risk, as Connie already said,  is not a new problem.  It's been a quite researched one in the community."
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 474.96,
+            "end": 485.0,
+            "text": " And the more classical approach is  we're going to look at other global health factors,  the person's age, their family history,  whether or not they've had menopause,  and any other of these factors we can say"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 485.0,
+            "end": 491.64,
+            "text": " are markers of their health to try  to predict whether or not this person is at risk  of developing breast cancer.  People have thought that the image contained something  before."
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 491.64,
+            "end": 503.79999999999995,
+            "text": " The way they've thought about this  is through this subjective breast density marker.  And the improvements seen across this  are marginal from 61 to 63.  And as before, the sketch we're going to go through"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 503.8,
+            "end": 519.52,
+            "text": " is data set collection, modeling, and analysis.  In data set collection, we follow a very similar template.  We started with consecutive mammograms from 2009 to 2012.  We took outcomes from the EHR, once again,  and the Partners Registry."
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 519.52,
+            "end": 529.24,
+            "text": " We didn't do exclusions based on race or anything  of that sort or implants.  But we did exclude negatives for follow-up.  So if someone didn't have cancer in three years  but it disappeared from the system,"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 529.24,
+            "end": 544.02,
+            "text": " we didn't count them as negative that we have some certainty  in the modeling and the analysis.  And as always, we split by patient to train that test.  The modeling is very similar.  It's the same kind of template and lessons as from triage,"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 544.02,
+            "end": 555.3,
+            "text": " except we experimented with a model that's only the image.  And for the sake of analysis, a model  that's the image model I described to you before,  concatenated with those traditional risk factors  at the last layer and trained jointly."
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 555.3,
+            "end": 564.94,
+            "text": " That make sense for everyone?  So we're going to call that image only and image  plus RF or hybrid.  OK, cool.  Our goals for the analysis, as before, we"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 564.94,
+            "end": 576.1,
+            "text": " want to see, does this model actually  serve the whole population?  Is it going to be discriminative across race, menopause status,  and family history?  And how does this relate to classical approaches of risk?"
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 576.1,
+            "end": 585.22,
+            "text": " And are we actually doing any better?  And so just diving directly into that,  assuming there's no questions.  Good.  Just to remind you, this is the setting."
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 585.22,
+            "end": 597.5400000000001,
+            "text": " One thing I forgot to mention, that's  why I had the slide here to remind me,  we excluded cancers from the first year from the test set.  So there's truly a negative screening population.  So the way we disentangle cancer detection from cancer risk."
+        },
+        {
+            "number": "lec13",
+            "title": "part.002.mp3",
+            "start": 597.5400000000001,
+            "end": 600.9,
+            "text": " OK, cool.  So."
+        }
+    ],
+    "text": " Not that tricky if you just do it carefully and tune. Now let's talk about how to use this model to actually deliver on this triage idea. So to summarize my choices again, image line initialization is going to make your life a happier time. Use bigger batch sizes. And the architecture choice doesn't really matter if it's convolutional. And the overall setup that we do through this work and across many other projects, we're training independently per image. Now this is a harder task because you don't actually have the full, you're not taking any other view. You're not taking prior mammograms. So there are more harder reasons than not. We're going to get the prediction for the whole exam by just taking the maximum across the different images. So if I say this breast has cancer, the exam has cancer. So you should get it checked up. And at each development epoch, we're going to evaluate the ability of the model to do triage task. Which I'll step into a second. And we're going to take the best model that can do triage. So you're always kind of like your true end metric is what you're measuring during training. And you're going to do model selection and kind of hyper-patterning based on that. And the way we're going to do triage, and our goal here is to mark as many of the people as healthy without missing a single cancer that we also would have caught. So intuitively, you can do it by just taking all the cancers that the radiologists would have caught. What's the probability of cancer across these images? And just take the minimum of those and call that the threshold. That's exactly what we do. And another detail that's quite relevant often is if you want these models to output a reasonable probability, like this is the probability of cancer, and you train on a 50-50 sampled batches, by default, your model thinks that the average incidence is 50%. So it's crazy confidence all the time. So to calibrate that, one really simple trick is you do something called Platt's method, where you basically just fit a two parameter sigmoid, which is a scale and a shift, on the development sets to make it actually fit the distribution. That way, the average probability, you would expect to actually fit the incidence, and you don't get these crazy off-kilter probabilities. OK, so analysis. The objectives of what we're going to try to do here is similar across all the projects. One, does this thing work? Two, does this thing work across all the people it's supposed to work for? So we did a subgroup analysis. First, we looked at the AUC of this model, so the ability to discriminate cancer or not. We did it across races. We have across MGH, age groups, and density categories. And finally, how does this relate to radiologist assessments? If we actually use this at test time on the test set, what would have happened? Kind of a simulation before full clinical implementation. So our overall AUC here was 82, with some confidence interval of 85. And when we did our analysis by age, we found that the performance was pretty similar across every age group. What's not shown here is the confidence intervals. So for example, the kind of core takeaway here is that there was no noticeable gap in terms of by age group. We repeated this analysis by race, and we saw the same trend again. The performance kind of ranged generally around 82. And in places where the gap was bigger, the just confidence interval was bigger accordingly due to smaller sample sizes, because MGH is 80% white. We saw the exact same trend by density. The outlier here is very dense breasts, but there's only like 100 of those on test set. So like this confidence level actually goes from like 60 to 90. So as far as we know for the other three categories, it is a much tighter confidence interval, and very similar once again around 82. So we have a decent idea that this model seems at least within population MGH, actually serve the relevant populations that exist as far as we know so far. The next question is, how does a model assessment relate to the radiology assessment? So to look at that, we looked at on the test set, true positives, false positives, true negatives, false negatives. Where do they fall within the model distribution of percentile risk? And if there's below the threshold, we're going to color it in this kind of cyan color. And if it's above the threshold, we're going to color it in this purple color. So this is kind of triaged, not triaged. The first thing to notice, this is the true positives, is that there is like a pretty kind of steep drop off. And so there is only one true positive fell below the threshold in a test set of 26,000 exams. So in the end of this difference wasn't statistically significant. And the vast majority of them are kind of this top 10%. But you kind of see like there's a clear trend here, that they kind of get piled up towards the higher percentages. Whereas if you look at the false positive assessments, this trend is much weaker. So you still see that there is like some correlation that there is going to more false positives, the higher amounts, but much less stark. And this actually means that a lot of radiology's false positives we actually place below the threshold. And so because these assessments are completely concordant, and we're not just modeling what the results would have said, we get this anticipated benefit of actually reducing the false positives significantly because of the way to disagree. And finally, kind of aiding in that further, if you look at the true negative assessments, there is not that much trending between where it falls within this. So it shows that they're kind of picking up on different things and where they disagree gives us both areas to improve and some ancillary benefits because now we can reduce false positives. This directly leads into simulating the impact. So one of the things we did was said, OK, if people retrospectively on the test set as a simulation before we truly plug it in, if people didn't rebuild the triage threshold, so we can't catch any more cancer this way, but we can reduce false positives, what would have happened? So at the top, we have the original performance. So this is looking 100% of mammogram sensitivity was 90.6 with specificity of 93. And in the simulation, the sensitivity dropped not significantly to 90.1, but significantly improved to 93.7 while looking at 80% or 81% of the mammograms. So this is promising preliminary data. But to revalidate this and go forward, our next step, see if it's, oh, I'm going to get to that in a second. Our next step is really do clinical implementation to really figure out, because there's a core assumption here is that people read it the same way. But if you have this higher incidence, what does that mean? Can you focus more on the people that are more suspicious? And is the right way to do this just a single threshold to not read? Or have a double-ended with the same, these are much more likely to have cancer. And so there is quite a bit of exploration here to say, given we have these tools that give us some probability of cancer, that's not perfect, but gives us something. How can we do that to improve care today? So as a quiz, can you tell which of these would be triaged? So this is no cherry picking. I randomly picked four mammograms that were below and above the threshold. Can anyone guess which side, left or right, was triaged? This is not a graded quiz, so you know. You should ask which one. Raise your hand for left. Oh, yeah, raise your hand for left. OK, raise your hand for right. Here we go. Well done, well done. OK, so and the next step, as I said before, is we need to kind of push the clinical computation, because that's where the rubber hits the road. We identify, is there any biases we didn't detect? And we can really say, can we deliver this value? So the next project is on assessing breast cancer risk. So this is the same mammogram I showed you earlier. It was diagnosed with breast cancer in 2014. It's actually my advisor, Regina's. And you can see that in 2013, you see it's there, and 2012, it looks much less prominent. And five years ago, we were really looking at breast cancer risk. So if you can tell by an image that is going to be healthy for a long time, you're really trying to model what's the likelihood of this breast developing cancer in the future. Now, modeling breast cancer risk, as Connie already said, is not a new problem. It's been a quite researched one in the community. And the more classical approach is we're going to look at other global health factors, the person's age, their family history, whether or not they've had menopause, and any other of these factors we can say are markers of their health to try to predict whether or not this person is at risk of developing breast cancer. People have thought that the image contained something before. The way they've thought about this is through this subjective breast density marker. And the improvements seen across this are marginal from 61 to 63. And as before, the sketch we're going to go through is data set collection, modeling, and analysis. In data set collection, we follow a very similar template. We started with consecutive mammograms from 2009 to 2012. We took outcomes from the EHR, once again, and the Partners Registry. We didn't do exclusions based on race or anything of that sort or implants. But we did exclude negatives for follow-up. So if someone didn't have cancer in three years but it disappeared from the system, we didn't count them as negative that we have some certainty in the modeling and the analysis. And as always, we split by patient to train that test. The modeling is very similar. It's the same kind of template and lessons as from triage, except we experimented with a model that's only the image. And for the sake of analysis, a model that's the image model I described to you before, concatenated with those traditional risk factors at the last layer and trained jointly. That make sense for everyone? So we're going to call that image only and image plus RF or hybrid. OK, cool. Our goals for the analysis, as before, we want to see, does this model actually serve the whole population? Is it going to be discriminative across race, menopause status, and family history? And how does this relate to classical approaches of risk? And are we actually doing any better? And so just diving directly into that, assuming there's no questions. Good. Just to remind you, this is the setting. One thing I forgot to mention, that's why I had the slide here to remind me, we excluded cancers from the first year from the test set. So there's truly a negative screening population. So the way we disentangle cancer detection from cancer risk. OK, cool. So."
+}

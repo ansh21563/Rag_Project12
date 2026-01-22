@@ -1,0 +1,264 @@
+{
+    "chunks": [
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 0.0,
+            "end": 21.080000000000002,
+            "text": " holes, and depending on categorizations of the book  along various dimensions, like its Dewey decimal number  or the top digits of its Library of Congress number  or something, they would punch out holes in the borders.  And this allowed you to do a kind"
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 21.080000000000002,
+            "end": 35.22,
+            "text": " of easy sorting of these books.  So if you got a bunch of cards together  when people were returning their books  and you pulled a bunch of cards and you wanted  to find all the math books, so what you would do"
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 35.22,
+            "end": 52.019999999999996,
+            "text": " is you'd stick a needle through the hole that  represented math books, and then you'd shake the pile,  and all the math books would fall out  because they had been punched.  So somebody seriously proposed this as a diagnostic algorithm"
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 52.019999999999996,
+            "end": 71.22,
+            "text": " and, in fact, implemented it and was trying  to even make money on it.  I think this was an attempt at a commercial venture  where they were going to provide doctors with these library  cards that represented diseases, and the holes now represented"
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 71.22,
+            "end": 85.54,
+            "text": " not mathematics versus literature,  but they represented shortness of breath  versus pain in the left ankle versus whatever.  And again, as people came in and complained  about some condition, you'd stick a needle"
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 85.54,
+            "end": 101.86,
+            "text": " through that condition, and you'd shake,  and out would come the cards that  had that condition in common.  So one of the obvious problems with this approach  is that if you had two things wrong with you,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 101.86,
+            "end": 121.14,
+            "text": " then you would wind up with no cards very quickly  because nothing would fall out of the pile.  So this didn't go anywhere.  But interestingly, even in the late 1980s,  I remember being asked by the board of directors"
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 121.14,
+            "end": 137.66,
+            "text": " of the New England Journal of Medicine  to come to a meeting where they had gotten a pitch from somebody  who was proposing essentially exactly this diagnostic model,  except implemented in a computer now and not in these library  cards."
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 137.66,
+            "end": 149.94000000000003,
+            "text": " And they wanted to know whether this was something  that they ought to get behind and invest in.  And I and a bunch of my colleagues  assured them that this was probably not a great idea,  and they should stay away from it, which they did."
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 152.94,
+            "end": 170.86,
+            "text": " Well, a more sophisticated model is something  like a naive Bayes model that says, if you have a disease,  where's my cursor?  If you have a disease and you have  a bunch of manifestations that can be caused by the disease,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 170.86,
+            "end": 190.85999999999999,
+            "text": " we can make some simplifying assumptions  that say that you will only ever have one disease at a time,  which means that the values of that node D  form an exhaustive and mutually exclusive set of values.  And we can assume that the manifestations are"
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 190.85999999999999,
+            "end": 207.98,
+            "text": " conditionally independent observables that depend only  on the disease that you have, but not on each other  or not on any other factors.  And if you make that assumption, then  you can apply good old Thomas Bayes' rule."
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 207.98,
+            "end": 229.38,
+            "text": " This, by the way, is the Reverend Bayes.  Do you guys know his history?  So he was a nonconformist minister in England.  And he was not a mathematician, except he  was an amateur mathematician."
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 229.38,
+            "end": 242.26,
+            "text": " But he decided that he wanted to prove to people  that God existed.  And so he developed Bayesian reasoning  in order to make this proof.  And so his argument was, well, suppose"
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 242.26,
+            "end": 257.9,
+            "text": " you're completely in doubt.  So you have 50-50 odds that God exists.  And then you say, let's look at miracles.  And let's ask, what's the likelihood  of this miracle having occurred if God exists"
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 257.9,
+            "end": 271.78000000000003,
+            "text": " versus if God doesn't exist?  And so by racking up a bunch of miracles,  you can convince people more and more  that God must exist, because otherwise all these miracles  couldn't have happened."
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 271.78000000000003,
+            "end": 286.94000000000005,
+            "text": " So he never published this in his lifetime.  But after his death, one of his colleagues  actually presented this as a paper  at the Royal Society in the UK.  And so Bayes became famous as the originator"
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 286.94,
+            "end": 304.26,
+            "text": " of this notion of how to do probabilistic reasoning  about at least fairly simple situations,  like in his case, the existence or nonexistence of God,  or in our case, the cause of some disease,  the nature of some disease."
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 304.26,
+            "end": 318.5,
+            "text": " And so you can draw these trees.  And Bayes' rule is very simple.  I'm sure you've all seen it.  One thing that, again, makes contact with medicine  is that a lot of times, you're not just"
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 318.5,
+            "end": 334.7,
+            "text": " interested in the impact of one observable on your probability  distribution, but you're interested in the impact  of a sequence of observations.  And so one thing you can do is you can say, well,  here is my general population."
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 334.7,
+            "end": 351.0,
+            "text": " So let's say disease 2 has 37% prevalence,  and disease 1 has 12%, et cetera.  And now I make some observation.  I apply Bayes' rule, and I revise my probability  distribution."
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 351.0,
+            "end": 366.64,
+            "text": " So this is the equivalent of finding a smaller  population of patients who have all had whatever  answer I got for symptom 1.  And then I just keep doing that.  And so this is the sequential application of Bayes' rule."
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 366.64,
+            "end": 383.52000000000004,
+            "text": " And of course, it does depend on the conditional independence  of all these symptoms.  But in medicine, people don't like to do math, even  arithmetic, much.  And they prefer doing addition rather than multiplication,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 383.52000000000004,
+            "end": 399.92,
+            "text": " because it's easier.  And so what they've done is they said, well,  instead of representing all this data  in a probabilistic framework, let's represent it as odds.  And if you represent it as odds,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 399.92,
+            "end": 420.68,
+            "text": " then the odds of some disease given a bunch of symptoms,  given the independence assumption,  is just the prior odds of the disease  times the conditional odds, the likelihood ratio,  of each of the symptoms that you've observed."
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 420.68,
+            "end": 438.12,
+            "text": " So you just get to multiply these together.  And then because they like adding more than multiplying,  they said, let's take the log of both sides.  And then you can just add them.  And so if you remember when I was talking about medical data,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 438.12,
+            "end": 454.52,
+            "text": " there are things like the Glasgow Coma score,  or the Apache score, or various measures of how badly or well  a patient is doing that often involve adding up  numbers corresponding to different conditions  that they have."
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 454.52,
+            "end": 471.03999999999996,
+            "text": " And what they're doing is exactly this.  They're applying sequentially Bayes' rule  with these independence assumptions  in the form of logs rather than multiplications, log odds.  And that's how they're doing it."
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 471.03999999999996,
+            "end": 485.92,
+            "text": " OK.  Very quickly, somebody in a previous lecture  was wondering about receiver operator characteristic curves.  And I just wanted to give you a little bit of insight  on those."
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 485.92,
+            "end": 500.76,
+            "text": " So if you do a test on two populations of patients,  the red ones are sick patients.  The blue ones are not sick patients.  You do some test.  What you expect is that the result of that test"
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 500.76,
+            "end": 511.56,
+            "text": " will be some continuous number.  And it'll be distributed something  like the blue distribution for the well patients  and something like the red distribution  for the ill patients."
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 511.56,
+            "end": 530.84,
+            "text": " And typically, we choose some threshold.  And we say, well, if you choose this  to be the threshold between a prediction of sick or well,  then what you're going to get is that the part  of the blue distribution that lies to the right"
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 530.84,
+            "end": 546.12,
+            "text": " is the false positives.  And the part of the red distribution  that lies to the left is the false negatives.  And often, people will choose the lowest point  at which these two curves intersect as the threshold."
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 546.12,
+            "end": 561.88,
+            "text": " But that, of course, isn't necessarily the case.  Now, if I give you a better test, one like this,  that's terrific because there's essentially  no overlap, very small false negative and false positive  rates."
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 561.88,
+            "end": 578.0,
+            "text": " And as I said, you can choose to put the threshold  in different places depending on how  you want to trade off sensitivity and specificity.  And we measure this by this receiver operator  characteristics curve, which has the general form"
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 578.0,
+            "end": 596.32,
+            "text": " that if you get a curve like this,  that means that there's an exact trade-off for sensitivity  and specificity, which is the case if you're flipping coins.  So it's random.  And of course, if you manage to hit the top corner up there,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.001.mp3",
+            "start": 596.32,
+            "end": 602.08,
+            "text": " that means that there would be no overlap whatsoever  between the two distributions."
+        }
+    ],
+    "text": " holes, and depending on categorizations of the book along various dimensions, like its Dewey decimal number or the top digits of its Library of Congress number or something, they would punch out holes in the borders. And this allowed you to do a kind of easy sorting of these books. So if you got a bunch of cards together when people were returning their books and you pulled a bunch of cards and you wanted to find all the math books, so what you would do is you'd stick a needle through the hole that represented math books, and then you'd shake the pile, and all the math books would fall out because they had been punched. So somebody seriously proposed this as a diagnostic algorithm and, in fact, implemented it and was trying to even make money on it. I think this was an attempt at a commercial venture where they were going to provide doctors with these library cards that represented diseases, and the holes now represented not mathematics versus literature, but they represented shortness of breath versus pain in the left ankle versus whatever. And again, as people came in and complained about some condition, you'd stick a needle through that condition, and you'd shake, and out would come the cards that had that condition in common. So one of the obvious problems with this approach is that if you had two things wrong with you, then you would wind up with no cards very quickly because nothing would fall out of the pile. So this didn't go anywhere. But interestingly, even in the late 1980s, I remember being asked by the board of directors of the New England Journal of Medicine to come to a meeting where they had gotten a pitch from somebody who was proposing essentially exactly this diagnostic model, except implemented in a computer now and not in these library cards. And they wanted to know whether this was something that they ought to get behind and invest in. And I and a bunch of my colleagues assured them that this was probably not a great idea, and they should stay away from it, which they did. Well, a more sophisticated model is something like a naive Bayes model that says, if you have a disease, where's my cursor? If you have a disease and you have a bunch of manifestations that can be caused by the disease, we can make some simplifying assumptions that say that you will only ever have one disease at a time, which means that the values of that node D form an exhaustive and mutually exclusive set of values. And we can assume that the manifestations are conditionally independent observables that depend only on the disease that you have, but not on each other or not on any other factors. And if you make that assumption, then you can apply good old Thomas Bayes' rule. This, by the way, is the Reverend Bayes. Do you guys know his history? So he was a nonconformist minister in England. And he was not a mathematician, except he was an amateur mathematician. But he decided that he wanted to prove to people that God existed. And so he developed Bayesian reasoning in order to make this proof. And so his argument was, well, suppose you're completely in doubt. So you have 50-50 odds that God exists. And then you say, let's look at miracles. And let's ask, what's the likelihood of this miracle having occurred if God exists versus if God doesn't exist? And so by racking up a bunch of miracles, you can convince people more and more that God must exist, because otherwise all these miracles couldn't have happened. So he never published this in his lifetime. But after his death, one of his colleagues actually presented this as a paper at the Royal Society in the UK. And so Bayes became famous as the originator of this notion of how to do probabilistic reasoning about at least fairly simple situations, like in his case, the existence or nonexistence of God, or in our case, the cause of some disease, the nature of some disease. And so you can draw these trees. And Bayes' rule is very simple. I'm sure you've all seen it. One thing that, again, makes contact with medicine is that a lot of times, you're not just interested in the impact of one observable on your probability distribution, but you're interested in the impact of a sequence of observations. And so one thing you can do is you can say, well, here is my general population. So let's say disease 2 has 37% prevalence, and disease 1 has 12%, et cetera. And now I make some observation. I apply Bayes' rule, and I revise my probability distribution. So this is the equivalent of finding a smaller population of patients who have all had whatever answer I got for symptom 1. And then I just keep doing that. And so this is the sequential application of Bayes' rule. And of course, it does depend on the conditional independence of all these symptoms. But in medicine, people don't like to do math, even arithmetic, much. And they prefer doing addition rather than multiplication, because it's easier. And so what they've done is they said, well, instead of representing all this data in a probabilistic framework, let's represent it as odds. And if you represent it as odds, then the odds of some disease given a bunch of symptoms, given the independence assumption, is just the prior odds of the disease times the conditional odds, the likelihood ratio, of each of the symptoms that you've observed. So you just get to multiply these together. And then because they like adding more than multiplying, they said, let's take the log of both sides. And then you can just add them. And so if you remember when I was talking about medical data, there are things like the Glasgow Coma score, or the Apache score, or various measures of how badly or well a patient is doing that often involve adding up numbers corresponding to different conditions that they have. And what they're doing is exactly this. They're applying sequentially Bayes' rule with these independence assumptions in the form of logs rather than multiplications, log odds. And that's how they're doing it. OK. Very quickly, somebody in a previous lecture was wondering about receiver operator characteristic curves. And I just wanted to give you a little bit of insight on those. So if you do a test on two populations of patients, the red ones are sick patients. The blue ones are not sick patients. You do some test. What you expect is that the result of that test will be some continuous number. And it'll be distributed something like the blue distribution for the well patients and something like the red distribution for the ill patients. And typically, we choose some threshold. And we say, well, if you choose this to be the threshold between a prediction of sick or well, then what you're going to get is that the part of the blue distribution that lies to the right is the false positives. And the part of the red distribution that lies to the left is the false negatives. And often, people will choose the lowest point at which these two curves intersect as the threshold. But that, of course, isn't necessarily the case. Now, if I give you a better test, one like this, that's terrific because there's essentially no overlap, very small false negative and false positive rates. And as I said, you can choose to put the threshold in different places depending on how you want to trade off sensitivity and specificity. And we measure this by this receiver operator characteristics curve, which has the general form that if you get a curve like this, that means that there's an exact trade-off for sensitivity and specificity, which is the case if you're flipping coins. So it's random. And of course, if you manage to hit the top corner up there, that means that there would be no overlap whatsoever between the two distributions."
+}

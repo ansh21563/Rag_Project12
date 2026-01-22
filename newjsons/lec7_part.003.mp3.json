@@ -1,0 +1,229 @@
+{
+    "chunks": [
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 0.0,
+            "end": 20.8,
+            "text": " over the next 20 years, computer systems, some of which  I worked on, that tried to follow this method.  And he was, in fact, able to build systems  that were used by researchers in areas like anthropology,  where you don't have nice coded data"
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 20.8,
+            "end": 46.14,
+            "text": " and where a lot of stuff is in narrative text.  And yet, he was able to help one anthropologist that I worked  at Caltech to analyze a database of about 80,000 interviews  that he had done with members of the Gwembitanga tribe, who  lived in the valley that is now flooded by the Zambezi River"
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 46.14,
+            "end": 68.06,
+            "text": " Reservoir on the border of Zambia and Zimbabwe.  That was fascinating.  And he became very well known for some of that research.  In the 1980s, I was amused to see that SRI, which doesn't  stand for anything but used to stand for Stanford Research"
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 68.06,
+            "end": 90.9,
+            "text": " Institute, built a system called Diamond Diagram, which  was intended to help people interact with the computer  system when they didn't know a command  language for the computer.  So they could express what they wanted to do in English,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 90.9,
+            "end": 109.14000000000001,
+            "text": " and the English would be translated  into some semantic representation.  And from that, the right thing was triggered in the computer.  So these guys, Walker and Hobbes,  said, well, why don't we apply this idea"
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 109.14000000000001,
+            "end": 130.14,
+            "text": " to natural language access to medical text?  And so they built a system that didn't work very well,  but it tried to do this by essentially translating  the English that it was reading into some formal predicate  calculus representation of what they saw,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 130.14,
+            "end": 152.29999999999998,
+            "text": " and then process that system.  The original Diamond Diagram system  that was built for people who were naive computer users  and didn't know command languages  actually had a very rigid syntax."
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 152.29999999999998,
+            "end": 176.3,
+            "text": " And so what they discovered is that people  are more adaptable than computers,  and that they could adapt to this rigid syntax.  How many of you have Google Home or Amazon Echo or Apple  something or other that you deal with?"
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 176.3,
+            "end": 191.82,
+            "text": " Well, so it's training you, right?  Because it's not very good at letting you train it,  but you're more adaptable.  And so you quickly learn that if you phrase things one way,  it understands you."
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 191.82,
+            "end": 205.94,
+            "text": " And if you'd phrase things a different way,  it doesn't understand you.  And you learn how to phrase it.  So that's what these guys are relying on,  is that they can get people to adopt the conventions"
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 205.94,
+            "end": 225.34,
+            "text": " that the computer is able to understand.  The most radical version of this was a guy  named de Holm, who I met in 1983 in Paris.  He was a doctor at La Piti\u00e9-Sault-Petriere,  which is one of these medieval hospitals in Paris."
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 225.34,
+            "end": 244.45999999999998,
+            "text": " And it's a wonderful place, although when they built it,  it was just a place to die because they really  couldn't do much for you.  So de Holm convinced the chief of cardiology at that hospital  that he would develop an artificial language"
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 244.45999999999998,
+            "end": 265.62,
+            "text": " for taking notes about cardiac patients.  He would teach this to all of the fellows and junior doctors  in the cardiology department at the hospital.  And they would be required by the chief, who  was very powerful in France, to use this artificial language"
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 265.62,
+            "end": 284.86,
+            "text": " to write notes instead of using French to write notes.  And they actually did this for a month.  And when I met de Holm, he was in the middle  of analyzing the data that he had collected.  And what he found was that the language was not"
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 284.86,
+            "end": 297.28,
+            "text": " expressive enough.  There were things that people wanted  to say that they couldn't say in this artificial language he  had created.  And so he went back to create version two."
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 297.28,
+            "end": 314.22,
+            "text": " And then he went back to the cardiologists and said,  well, let's do this again.  And then they threatened to kill him.  So the experiment was not repeated.  So back to term spotting."
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 318.5,
+            "end": 332.22,
+            "text": " Traditionally, if you were trying to do this,  what you would do is you would sit down  with a bunch of medical experts.  And you would say, all right, tell me all the words  that you think might appear in a note that"
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 332.22,
+            "end": 346.58000000000004,
+            "text": " are indicative of some condition that I'm interested in.  And they would give you a long list.  And then you'd do GREP.  You'd search through the notes for those terms.  And if you want it to be really sophisticated,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 346.58000000000004,
+            "end": 367.65999999999997,
+            "text": " you would use an algorithm like NEGEX,  which is a negation expression detector that  helps get rid of things that are not true.  And then as people did this, they said,  well, there must be more sophisticated ways"
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 367.65999999999997,
+            "end": 386.53999999999996,
+            "text": " of doing this.  And so a whole industry developed of people  saying that not only should we use the terms that we got  originally from the doctors who were interested in doing  these queries, but we can define a machine learning problem,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 386.54,
+            "end": 407.70000000000005,
+            "text": " which is how do we learn the set of terms  that we should actually use that will give us  better results than just the terms we started with?  And so I'm going to talk about a little bit of that approach.  First of all, for negation, Wendy Chapman, now at Utah,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 407.70000000000005,
+            "end": 424.46000000000004,
+            "text": " but at the time at Pittsburgh, published this paper in 2001  called A Simple Algorithm for Identifying Negated Findings  and Diseases in Discharge Summaries.  And it is indeed a very simple algorithm.  And here's how it works."
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 424.46000000000004,
+            "end": 439.98,
+            "text": " You find all the UMLS terms in each sentence  of a discharge summary.  So I'll talk a little bit about that.  But basically, it's a dictionary lookup.  You look up in this very large database of medical terms"
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 439.98,
+            "end": 459.92,
+            "text": " and translate them into some kind of expression  that represents what that term means.  And then you find two kinds of patterns.  One pattern is a negation phrase followed within five words  by one of these UMLS terms."
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 459.92,
+            "end": 478.58,
+            "text": " And the other is a UMLS term followed within five words  by a negation phrase, different set of negation phrases.  So if you see no sign of something,  that means it's not present.  Or if you see ruled out unlikely something,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 478.58,
+            "end": 492.14,
+            "text": " then it's not present.  Absence of, not demonstrated, denies, et cetera.  And post modifiers, if you say something declined  or something unlikely, that also indicates  that it's not present."
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 493.14,
+            "end": 515.22,
+            "text": " And then they hacked up a bunch of exceptions,  where, for example, if you say gram negative,  that doesn't mean that it's negative for whatever  follows it or whatever precedes it, et cetera.  So there are a bunch of exceptions."
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 515.22,
+            "end": 533.34,
+            "text": " And what they found is that this actually,  considering how incredibly simple it is,  does reasonably well.  So if you look at sentences that do not  contain a negation phrase and looked at 500 of them,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 533.34,
+            "end": 551.3,
+            "text": " you find that you get a sensitivity and specificity  of 88% and 52%.  For those that don't contain one of these phrases,  of course, the sensitivity is 0% and the specificity is 100%  on the baseline."
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 551.3,
+            "end": 571.42,
+            "text": " And if you use negx, what you find  is that you can significantly improve the specificity  over the baseline.  And you wind up with a better result,  although not in all schemes."
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 571.42,
+            "end": 587.22,
+            "text": " So what this means is that very simplistic techniques can  actually work reasonably well at times.  Well, so how do we do this generalization?  One way is to take advantage of related terms  like hypo or hypernyms, things that"
+        },
+        {
+            "number": "lec7",
+            "title": "part.003.mp3",
+            "start": 587.22,
+            "end": 600.34,
+            "text": " are subcategories or supercategories of a word.  You might look for those other associated terms.  For example, if you're looking to see  whether a patient has a certain disease,  you might look for hypernyms."
+        }
+    ],
+    "text": " over the next 20 years, computer systems, some of which I worked on, that tried to follow this method. And he was, in fact, able to build systems that were used by researchers in areas like anthropology, where you don't have nice coded data and where a lot of stuff is in narrative text. And yet, he was able to help one anthropologist that I worked at Caltech to analyze a database of about 80,000 interviews that he had done with members of the Gwembitanga tribe, who lived in the valley that is now flooded by the Zambezi River Reservoir on the border of Zambia and Zimbabwe. That was fascinating. And he became very well known for some of that research. In the 1980s, I was amused to see that SRI, which doesn't stand for anything but used to stand for Stanford Research Institute, built a system called Diamond Diagram, which was intended to help people interact with the computer system when they didn't know a command language for the computer. So they could express what they wanted to do in English, and the English would be translated into some semantic representation. And from that, the right thing was triggered in the computer. So these guys, Walker and Hobbes, said, well, why don't we apply this idea to natural language access to medical text? And so they built a system that didn't work very well, but it tried to do this by essentially translating the English that it was reading into some formal predicate calculus representation of what they saw, and then process that system. The original Diamond Diagram system that was built for people who were naive computer users and didn't know command languages actually had a very rigid syntax. And so what they discovered is that people are more adaptable than computers, and that they could adapt to this rigid syntax. How many of you have Google Home or Amazon Echo or Apple something or other that you deal with? Well, so it's training you, right? Because it's not very good at letting you train it, but you're more adaptable. And so you quickly learn that if you phrase things one way, it understands you. And if you'd phrase things a different way, it doesn't understand you. And you learn how to phrase it. So that's what these guys are relying on, is that they can get people to adopt the conventions that the computer is able to understand. The most radical version of this was a guy named de Holm, who I met in 1983 in Paris. He was a doctor at La Piti\u00e9-Sault-Petriere, which is one of these medieval hospitals in Paris. And it's a wonderful place, although when they built it, it was just a place to die because they really couldn't do much for you. So de Holm convinced the chief of cardiology at that hospital that he would develop an artificial language for taking notes about cardiac patients. He would teach this to all of the fellows and junior doctors in the cardiology department at the hospital. And they would be required by the chief, who was very powerful in France, to use this artificial language to write notes instead of using French to write notes. And they actually did this for a month. And when I met de Holm, he was in the middle of analyzing the data that he had collected. And what he found was that the language was not expressive enough. There were things that people wanted to say that they couldn't say in this artificial language he had created. And so he went back to create version two. And then he went back to the cardiologists and said, well, let's do this again. And then they threatened to kill him. So the experiment was not repeated. So back to term spotting. Traditionally, if you were trying to do this, what you would do is you would sit down with a bunch of medical experts. And you would say, all right, tell me all the words that you think might appear in a note that are indicative of some condition that I'm interested in. And they would give you a long list. And then you'd do GREP. You'd search through the notes for those terms. And if you want it to be really sophisticated, you would use an algorithm like NEGEX, which is a negation expression detector that helps get rid of things that are not true. And then as people did this, they said, well, there must be more sophisticated ways of doing this. And so a whole industry developed of people saying that not only should we use the terms that we got originally from the doctors who were interested in doing these queries, but we can define a machine learning problem, which is how do we learn the set of terms that we should actually use that will give us better results than just the terms we started with? And so I'm going to talk about a little bit of that approach. First of all, for negation, Wendy Chapman, now at Utah, but at the time at Pittsburgh, published this paper in 2001 called A Simple Algorithm for Identifying Negated Findings and Diseases in Discharge Summaries. And it is indeed a very simple algorithm. And here's how it works. You find all the UMLS terms in each sentence of a discharge summary. So I'll talk a little bit about that. But basically, it's a dictionary lookup. You look up in this very large database of medical terms and translate them into some kind of expression that represents what that term means. And then you find two kinds of patterns. One pattern is a negation phrase followed within five words by one of these UMLS terms. And the other is a UMLS term followed within five words by a negation phrase, different set of negation phrases. So if you see no sign of something, that means it's not present. Or if you see ruled out unlikely something, then it's not present. Absence of, not demonstrated, denies, et cetera. And post modifiers, if you say something declined or something unlikely, that also indicates that it's not present. And then they hacked up a bunch of exceptions, where, for example, if you say gram negative, that doesn't mean that it's negative for whatever follows it or whatever precedes it, et cetera. So there are a bunch of exceptions. And what they found is that this actually, considering how incredibly simple it is, does reasonably well. So if you look at sentences that do not contain a negation phrase and looked at 500 of them, you find that you get a sensitivity and specificity of 88% and 52%. For those that don't contain one of these phrases, of course, the sensitivity is 0% and the specificity is 100% on the baseline. And if you use negx, what you find is that you can significantly improve the specificity over the baseline. And you wind up with a better result, although not in all schemes. So what this means is that very simplistic techniques can actually work reasonably well at times. Well, so how do we do this generalization? One way is to take advantage of related terms like hypo or hypernyms, things that are subcategories or supercategories of a word. You might look for those other associated terms. For example, if you're looking to see whether a patient has a certain disease, you might look for hypernyms."
+}

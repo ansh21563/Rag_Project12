@@ -1,0 +1,285 @@
+{
+    "chunks": [
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 0.0,
+            "end": 9.88,
+            "text": " Sometimes you make your problem look a bit simpler.  And simpler algorithms might succeed,  where otherwise they would fail because not  having enough data.  And that's something that you saw in that last week's"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 9.88,
+            "end": 23.32,
+            "text": " reading.  So I'm done with risk stratification.  I'll take a one-minute breather for everyone in the room.  And then we'll start with the main topic  of this lecture, which is physiological time series"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 23.32,
+            "end": 44.2,
+            "text": " modeling.  OK.  Let's get started.  So here's a baby that's not doing very well.  This baby is in the intensive care unit."
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 48.04,
+            "end": 64.2,
+            "text": " Maybe it was a premature infant.  Maybe it's a baby who has some chronic disease.  And of course, parents are very worried.  This baby is getting very close monitoring.  And it's connected to lots of different probes."
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 67.28,
+            "end": 85.32,
+            "text": " In number one here, it's illustrating a three-probe,  three-lead ECG, which we'll be talking about much more,  which is measuring how the baby's heart's doing.  Over here, this number three is something  attached to the baby's foot, which is measuring its pulse"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 85.32,
+            "end": 100.24,
+            "text": " peak, which is measuring the baby's oxygen saturation,  the amount of oxygen in the blood.  There, number four, is a probe, which  is measuring the baby's temperature and so on.  And so we're really taking really close measurements"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 100.24,
+            "end": 112.63999999999999,
+            "text": " of this baby because we want to understand  how is this baby doing.  We recognize that there might be really sudden changes  in the baby's state of health that we  want to be able to recognize as early as possible."
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 113.28,
+            "end": 126.24,
+            "text": " So behind the scenes, next to this baby,  you'll, of course, have a huge number of monitors,  each of the monitors showing the readouts from each  of these different signals.  And this type of data is really prevalent"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 126.24,
+            "end": 140.6,
+            "text": " in intensive care units.  But you'll also see in today's lecture  how some aspects of this data are now  starting to make its way to the home as well.  So for example, EKGs are now available on Apple and Samsung"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 140.6,
+            "end": 156.2,
+            "text": " watches to help with diagnosis of arrhythmias,  even for people at home.  And so from this type of data, there  are a number of really important use cases to think about.  The first one is to recognize that often we're"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 156.2,
+            "end": 170.56,
+            "text": " getting really noisy data.  And we want to try to infer the true signal.  So imagine, for example, that temperature probe,  the baby's true temperature might be 98.5.  But for whatever reason, we'll see a few reasons here today,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 170.56,
+            "end": 184.44,
+            "text": " maybe you're getting an observation of 93.  And you didn't know, is that actually the true baby  temperature, in which case it would be in a lot of trouble?  Or is that an anomalous reading?  So we like to distinguish between those two things."
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 184.44,
+            "end": 199.84,
+            "text": " And in other cases, we are interested in not necessarily  fully understanding what's going on with the baby  along each of those axes.  But we just want to use that data for predictive purposes,  for risk stratification, for example."
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 199.92000000000002,
+            "end": 210.48000000000002,
+            "text": " And so the type of machine learning approach  that we'll take here will depend on the following three  factors.  First, do we have labeled data available?  For example, do we know the ground truth"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 210.48000000000002,
+            "end": 227.82,
+            "text": " of what the baby's true temperature was,  at least for a few of the babies in the training set?  Second, do we have a good mechanistic or statistical  model of how this data might evolve across time?  We know a lot about hearts, for example."
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 227.82,
+            "end": 241.26,
+            "text": " Cardiology is one of those fields of medicine  where it's really well-studied.  There are good simulators of hearts  and how they beat across time and how  that affects the electrical stimulation across the body."
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 241.26,
+            "end": 253.85999999999999,
+            "text": " And if we have these good mechanistic or statistical  models, that can often allow one to trade off  not having much labeled data or just not having much data,  period.  And it's really these three points"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 253.85999999999999,
+            "end": 265.56,
+            "text": " which I want to illustrate the extremes of in today's lecture.  What you do when you don't have much data  and what you can do when you have a ton of data.  I think it's going to be really informative for us  as we go out into the world and we'll"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 265.56,
+            "end": 283.32,
+            "text": " have to tackle each of those two settings.  So here's an example of two different babies  with very different trajectories.  One in the x-axis here is time in seconds.  The y-axis here are, I think, seconds, maybe minutes."
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 283.32,
+            "end": 294.64,
+            "text": " The y-axis here is beats per minute of the baby's heart  rate.  And you see in some cases, it's really  fluctuating a lot up and down.  In some cases, it's going in a similar in one direction."
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 294.64,
+            "end": 313.64,
+            "text": " And in all cases, the short-term observations  are very different from the long-range trajectories.  So the first problem that I want us to think about  is one of trying to understand how  do we deconvolve between the truth of what's"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 313.64,
+            "end": 327.84,
+            "text": " going on with, for example, the patient's blood pressure  versus interventions that are happening to them.  So on the bottom here, I'm showing examples  of interventions.  Here, in this oxygen uptake, we notice"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 327.84,
+            "end": 345.12,
+            "text": " how between roughly 1,000 and 2,000 seconds,  suddenly there's no signal whatsoever.  That's an example of what's called dropout.  Over here, we see the effect of a different intervention,  which is due to a probe recalibration."
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 345.12,
+            "end": 358.16,
+            "text": " And at that time, there was a dropout followed  by a sudden change in the values.  And that's really happening due to a recalibration step.  And in both of these cases, what's  going on with the individual might be relatively"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 358.16,
+            "end": 368.92,
+            "text": " constant across time.  But what's being observed is dramatically affected  by those interventions.  So we want to ask the question, can we  identify those artifactual processes?"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 368.92,
+            "end": 387.20000000000005,
+            "text": " Can we identify that these interventions were happening  at those points in time?  And then, if we could identify them,  then we could potentially subtract their effect out.  So we could impute the data, which we now"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 387.20000000000005,
+            "end": 400.68,
+            "text": " know to be missing, and then have this much higher quality  signal used for some downstream predictive purpose,  for example.  And the second reason why this could be really important  is to tackle this problem called alarm fatigue."
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 403.36,
+            "end": 421.0,
+            "text": " Alarm fatigue is one of the most important challenges  facing medicine today.  As we get better and better in doing risk stratification,  as we come up with more and more diagnostic tools and tests,  that means these red flags are being"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 421.0,
+            "end": 437.40000000000003,
+            "text": " raised more and more often.  And each one of these has some associated false positive rate  for it.  And so the more tests you have, suppose the false positive rate  is kept constant, the more tests you have,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 437.40000000000003,
+            "end": 451.64,
+            "text": " the more likely it is that the union of all of those  is going to be some error.  And so when you're in an intensive care unit,  there are alarms going off all the time.  And something that happens is that nurses end up"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 451.64,
+            "end": 468.44,
+            "text": " starting to ignore those alarms, because so often, those alarms  are false positives, or due to, for example, artifacts  like what I'm showing you here.  And so if we had techniques, such as the ones we'll talk  about right now, which could recognize when, for example,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 468.44,
+            "end": 483.2,
+            "text": " the sudden drop in a patient's heart rate  is due to an artifact and not due to the patient's true heart  rate dropping, if we had enough confidence  in distinguishing those two things,  then we might not decide to raise that red flag."
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 483.2,
+            "end": 504.20000000000005,
+            "text": " And that might reduce the amount of false alarms.  And that, then, might reduce the amount of alarm fatigue.  And that could have a very big impact on health care.  So the technique which we'll talk about today  goes by the name of switching linear dynamical systems."
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 504.20000000000005,
+            "end": 516.64,
+            "text": " Who here has seen a picture like this picture  on the bottom before?  About half of the room.  So for the other half of the room,  I'm going to give a bit of a recap"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 516.64,
+            "end": 533.86,
+            "text": " into probabilistic modeling.  All of you are now familiar with general probability.  So you're used to thinking about, for example,  univariate Galois distributions.  We talked about how one could model survival,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 533.86,
+            "end": 545.9,
+            "text": " which was an example of such a distribution.  But for today's lecture, we're going  to be thinking now about multivariate probability  distributions.  In particular, we'll be thinking about how a patient's state,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 545.9,
+            "end": 558.68,
+            "text": " let's say their true blood pressure,  evolves across time.  And so now we're interested in not just the random variable  at one point in time, but that same random variable  at the second point in time, third point in time,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 558.68,
+            "end": 571.48,
+            "text": " fourth point in time, fifth point in time, and so on.  So what I'm showing you here is known as a graphical model,  also known as a Bayesian network.  And it's one way of illustrating a multivariate probability  distribution that has particular conditional independence"
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 571.48,
+            "end": 595.16,
+            "text": " properties.  Specifically, in this model, one node  corresponds to one random variable.  So this is describing a joint distribution  on x1 through x6, comma, y1 through y6."
+        },
+        {
+            "number": "lec6",
+            "title": "part.003.mp3",
+            "start": 595.16,
+            "end": 598.4399999999999,
+            "text": " So it's this multivariate distribution  on 12 random variables."
+        }
+    ],
+    "text": " Sometimes you make your problem look a bit simpler. And simpler algorithms might succeed, where otherwise they would fail because not having enough data. And that's something that you saw in that last week's reading. So I'm done with risk stratification. I'll take a one-minute breather for everyone in the room. And then we'll start with the main topic of this lecture, which is physiological time series modeling. OK. Let's get started. So here's a baby that's not doing very well. This baby is in the intensive care unit. Maybe it was a premature infant. Maybe it's a baby who has some chronic disease. And of course, parents are very worried. This baby is getting very close monitoring. And it's connected to lots of different probes. In number one here, it's illustrating a three-probe, three-lead ECG, which we'll be talking about much more, which is measuring how the baby's heart's doing. Over here, this number three is something attached to the baby's foot, which is measuring its pulse peak, which is measuring the baby's oxygen saturation, the amount of oxygen in the blood. There, number four, is a probe, which is measuring the baby's temperature and so on. And so we're really taking really close measurements of this baby because we want to understand how is this baby doing. We recognize that there might be really sudden changes in the baby's state of health that we want to be able to recognize as early as possible. So behind the scenes, next to this baby, you'll, of course, have a huge number of monitors, each of the monitors showing the readouts from each of these different signals. And this type of data is really prevalent in intensive care units. But you'll also see in today's lecture how some aspects of this data are now starting to make its way to the home as well. So for example, EKGs are now available on Apple and Samsung watches to help with diagnosis of arrhythmias, even for people at home. And so from this type of data, there are a number of really important use cases to think about. The first one is to recognize that often we're getting really noisy data. And we want to try to infer the true signal. So imagine, for example, that temperature probe, the baby's true temperature might be 98.5. But for whatever reason, we'll see a few reasons here today, maybe you're getting an observation of 93. And you didn't know, is that actually the true baby temperature, in which case it would be in a lot of trouble? Or is that an anomalous reading? So we like to distinguish between those two things. And in other cases, we are interested in not necessarily fully understanding what's going on with the baby along each of those axes. But we just want to use that data for predictive purposes, for risk stratification, for example. And so the type of machine learning approach that we'll take here will depend on the following three factors. First, do we have labeled data available? For example, do we know the ground truth of what the baby's true temperature was, at least for a few of the babies in the training set? Second, do we have a good mechanistic or statistical model of how this data might evolve across time? We know a lot about hearts, for example. Cardiology is one of those fields of medicine where it's really well-studied. There are good simulators of hearts and how they beat across time and how that affects the electrical stimulation across the body. And if we have these good mechanistic or statistical models, that can often allow one to trade off not having much labeled data or just not having much data, period. And it's really these three points which I want to illustrate the extremes of in today's lecture. What you do when you don't have much data and what you can do when you have a ton of data. I think it's going to be really informative for us as we go out into the world and we'll have to tackle each of those two settings. So here's an example of two different babies with very different trajectories. One in the x-axis here is time in seconds. The y-axis here are, I think, seconds, maybe minutes. The y-axis here is beats per minute of the baby's heart rate. And you see in some cases, it's really fluctuating a lot up and down. In some cases, it's going in a similar in one direction. And in all cases, the short-term observations are very different from the long-range trajectories. So the first problem that I want us to think about is one of trying to understand how do we deconvolve between the truth of what's going on with, for example, the patient's blood pressure versus interventions that are happening to them. So on the bottom here, I'm showing examples of interventions. Here, in this oxygen uptake, we notice how between roughly 1,000 and 2,000 seconds, suddenly there's no signal whatsoever. That's an example of what's called dropout. Over here, we see the effect of a different intervention, which is due to a probe recalibration. And at that time, there was a dropout followed by a sudden change in the values. And that's really happening due to a recalibration step. And in both of these cases, what's going on with the individual might be relatively constant across time. But what's being observed is dramatically affected by those interventions. So we want to ask the question, can we identify those artifactual processes? Can we identify that these interventions were happening at those points in time? And then, if we could identify them, then we could potentially subtract their effect out. So we could impute the data, which we now know to be missing, and then have this much higher quality signal used for some downstream predictive purpose, for example. And the second reason why this could be really important is to tackle this problem called alarm fatigue. Alarm fatigue is one of the most important challenges facing medicine today. As we get better and better in doing risk stratification, as we come up with more and more diagnostic tools and tests, that means these red flags are being raised more and more often. And each one of these has some associated false positive rate for it. And so the more tests you have, suppose the false positive rate is kept constant, the more tests you have, the more likely it is that the union of all of those is going to be some error. And so when you're in an intensive care unit, there are alarms going off all the time. And something that happens is that nurses end up starting to ignore those alarms, because so often, those alarms are false positives, or due to, for example, artifacts like what I'm showing you here. And so if we had techniques, such as the ones we'll talk about right now, which could recognize when, for example, the sudden drop in a patient's heart rate is due to an artifact and not due to the patient's true heart rate dropping, if we had enough confidence in distinguishing those two things, then we might not decide to raise that red flag. And that might reduce the amount of false alarms. And that, then, might reduce the amount of alarm fatigue. And that could have a very big impact on health care. So the technique which we'll talk about today goes by the name of switching linear dynamical systems. Who here has seen a picture like this picture on the bottom before? About half of the room. So for the other half of the room, I'm going to give a bit of a recap into probabilistic modeling. All of you are now familiar with general probability. So you're used to thinking about, for example, univariate Galois distributions. We talked about how one could model survival, which was an example of such a distribution. But for today's lecture, we're going to be thinking now about multivariate probability distributions. In particular, we'll be thinking about how a patient's state, let's say their true blood pressure, evolves across time. And so now we're interested in not just the random variable at one point in time, but that same random variable at the second point in time, third point in time, fourth point in time, fifth point in time, and so on. So what I'm showing you here is known as a graphical model, also known as a Bayesian network. And it's one way of illustrating a multivariate probability distribution that has particular conditional independence properties. Specifically, in this model, one node corresponds to one random variable. So this is describing a joint distribution on x1 through x6, comma, y1 through y6. So it's this multivariate distribution on 12 random variables."
+}

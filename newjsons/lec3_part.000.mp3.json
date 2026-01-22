@@ -1,0 +1,271 @@
+{
+    "chunks": [
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 0.0,
+            "end": 34.08,
+            "text": " So last time, we talked about what medicine does.  And today, I want to take a deep dive into medical data.  And I'm going to use as examples a lot of stuff  from the MIMIC database, which is one of the databases  that we're going to be using in this class."
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 34.08,
+            "end": 49.76,
+            "text": " Some of you are probably familiar with it,  and some of you are not.  And there are, I hope, some takeaway lessons  from this discussion.  So for example, a few years ago, when MIMIC 3"
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 49.76,
+            "end": 70.4,
+            "text": " was about to be released, I was playing with the data.  And I looked at the distribution of heart rates in the CareView  part of the database.  So MIMIC, for those of you who don't know,  has intensive care data from about 60-something thousand"
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 70.4,
+            "end": 85.44,
+            "text": " admissions to intensive care units  at the Beth Israel Deaconess Medical Center  over a period of about 12 years.  And one of the technical difficulties  that we encountered is that in the middle of that time period,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 85.44,
+            "end": 97.44,
+            "text": " the hospital shifted from one information system  that they used in their intensive care unit to another.  CareView is the old one.  MetaVision is the new one.  And of course, they're not exactly compatible."
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 97.44,
+            "end": 113.24,
+            "text": " So we'll see some examples of that.  So this is the old data.  So this is from CareView.  And you look at that and say, well, heart rates  range from 40 to 200, roughly, which is OK."
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 113.24,
+            "end": 130.28,
+            "text": " But then there's this funny thing.  There are two peaks.  So where, if ever, do you see two peaks  in physiological data?  Not typical."
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 130.28,
+            "end": 149.64000000000001,
+            "text": " And so my initial reaction was, um.  So then I looked a little closer.  And I said, hmm, what do the heart rates look  like from these two systems?  And if you look in CareView, you see the picture"
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 149.64000000000001,
+            "end": 160.96,
+            "text": " that I just showed you.  And if you look in MetaVision, you  see this other picture, which looks more like what  you would normally expect.  And so I'm sitting there scratching my head, going,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 160.96,
+            "end": 178.56,
+            "text": " OK, there must be some difference between these.  It's not that simultaneous with the switchover of the hospital  from one information system to another,  physiology of people changed.  And all of a sudden, some subset of people"
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 178.56,
+            "end": 189.6,
+            "text": " started having faster heart rates.  But if you think about that, what subset of people  have faster heart rates?  Athletes?  Hm?"
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 189.6,
+            "end": 203.56,
+            "text": " Babies?  If you're an estranged person.  And the children?  Yeah, kids.  So I said, hmm, interesting."
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 203.56,
+            "end": 223.48,
+            "text": " So anyway, if you look at the statistics,  you see that the mean heart rate in CareView is 108.  And the mean heart rate in MetaVision is 87.  But of course, means are not that meaningful  when you look at these bimodal distributions."
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 223.48,
+            "end": 240.07999999999998,
+            "text": " So then I said, well, what if we just look at adults?  So we look at people from age greater than 1 up to age 90.  And I'll say a word about that in a minute.  And I look at those two distributions.  They look pretty close."
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 240.07999999999998,
+            "end": 257.28000000000003,
+            "text": " They look pretty similar.  So that means that the number of patients  of different ages in the adult group  is similar in the two data sets.  But if I don't exclude the very young or the very old,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 257.28000000000003,
+            "end": 271.08,
+            "text": " then I see this funny distribution  where I have suppressed ages greater than 90,  but not the young.  And what you see is that in CareView,  there's this giant spike at age 0."
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 271.08,
+            "end": 286.76,
+            "text": " All right?  So what happened at the hospital is that under the old system,  it was also being used in the NICU, the Neonatal Intensive  Care Unit.  The new system was not being used in the NICU."
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 286.76,
+            "end": 307.12,
+            "text": " And therefore, they didn't capture data about babies.  And in fact, if you look at age versus heart  rate of the entire population, you  see two very peculiar things.  So here are the adults that we've been talking about."
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 307.12,
+            "end": 321.2,
+            "text": " And here are the babies.  And sure enough, they have higher heart rates.  And then here are these 300-year-old people.  You go, wow, I don't think I'm going to have a heart  rate when I'm 300 years old."
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 321.2,
+            "end": 331.56,
+            "text": " So who are those people?  Anybody have a clue?  Yeah?  Entry errors?  Sorry?"
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 331.56,
+            "end": 342.24,
+            "text": " Entry errors?  There are too many of them.  Yeah, entry errors is always a possibility.  But there's quite a few data points there.  Yeah?"
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 342.24,
+            "end": 356.64000000000004,
+            "text": " Meet missing data by those 300?  Close.  It's not quite missing data.  So HIPAA, the Health Insurance Portability and Accountability  Act, defines a set of criteria about protecting"
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 356.64000000000004,
+            "end": 371.15999999999997,
+            "text": " personal health information.  And one of the things you are not allowed to do  is to specify the age of somebody  who is 90 years old or older.  And the reason is because the number of 97-year-olds"
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 371.15999999999997,
+            "end": 384.64,
+            "text": " is pretty small.  And so if I tell you that Willie is 97 years old,  then you're going to be able to pick him out  of a population relatively easily.  And so it's prohibited to say that."
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 384.64,
+            "end": 405.36,
+            "text": " So as a result, everybody who's 90 or older  gets labeled as being 300 years old in the database.  It's an artifact.  It's like back in my youth, I worked as a computer programmer  at a health sciences computing facility at UCLA."
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 405.36,
+            "end": 423.56,
+            "text": " And we used to have a convention that missing data  was represented by 99999.  And of course, if you average that into a real data set,  you get garbage, which people did regularly.  So there are problems with this."
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 423.56,
+            "end": 439.28,
+            "text": " And we're running into one of those.  If you look at just the adults, the two systems  actually look very similar.  So the blue and red dots are the two systems.  And I've drawn the trend lines between them."
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 439.28,
+            "end": 450.52,
+            "text": " And you can see that they're very similar.  So it looks like as you get older,  your heart rate declines very slightly.  But it does so equally in the two data sets.  Yeah?"
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 450.52,
+            "end": 464.34,
+            "text": " AUDIENCE 3 On the previous slide, beyond 300,  it looks like there are people who are older than 300.  PETER SZOLOVITSZ Well, that's because the ages there  are computed at the time that the heart rate is measured.  And so if you are 300 years old when you're"
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 464.34,
+            "end": 481.26,
+            "text": " admitted to the hospital, if you stay  in the hospital for six months, then you're  300 and 1 1\u20442 years old by the time of that measurement.  So that's why there are data points to the right of 300.  Yeah, good catch."
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 481.26,
+            "end": 498.42,
+            "text": " OK, and then this is what the babies look like.  And of course, they do have higher heart rates.  And here are the oldsters.  So actually, there are people out to 310 years old  because maybe they were discharged from the hospital."
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 498.42,
+            "end": 509.65999999999997,
+            "text": " And then at age 100, they came back.  Maybe they were 90 years old at the time  they were initially admitted.  10 years later, they came back.  And we recorded more data about them."
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 509.65999999999997,
+            "end": 525.22,
+            "text": " And so this is all relative to that 300.  OK, so that's just one example.  And the lesson there is be careful when you look at data  because it can really easily fool you  because there are all kinds of funny things"
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 525.22,
+            "end": 543.42,
+            "text": " about the way it's collected, about these artifactual things  like 300-year-old patients and so on.  OK, so here's a catalog of the types of data  that are available to us.  So we have typical kind of electronic health record data"
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 543.42,
+            "end": 558.18,
+            "text": " from hospitals, demographics, age, sex,  socioeconomic status, insurance type, language, religion,  living situation, family structure, location, work,  et cetera.  We have vital signs, your weight, your height,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 558.26,
+            "end": 573.14,
+            "text": " your pulse, respiration rate, body temperature, et cetera.  So these are typically the things  that if you ever go to a doctor's office  or you go into a hospital, a nurse  will take you aside and weigh you and measure your height"
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 573.14,
+            "end": 587.9,
+            "text": " and check your blood pressure and take your temperature  and stuff like that.  These are standard vital signs.  And so we have lots of those recorded.  Medications, prescription medications,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.000.mp3",
+            "start": 587.9,
+            "end": 602.1,
+            "text": " over-the-counter drugs, illegal drugs  if you're willing not to lie to your health care provider,  alcohol.  Again, one of my earliest days, I  was hanging out with a couple of my friends."
+        }
+    ],
+    "text": " So last time, we talked about what medicine does. And today, I want to take a deep dive into medical data. And I'm going to use as examples a lot of stuff from the MIMIC database, which is one of the databases that we're going to be using in this class. Some of you are probably familiar with it, and some of you are not. And there are, I hope, some takeaway lessons from this discussion. So for example, a few years ago, when MIMIC 3 was about to be released, I was playing with the data. And I looked at the distribution of heart rates in the CareView part of the database. So MIMIC, for those of you who don't know, has intensive care data from about 60-something thousand admissions to intensive care units at the Beth Israel Deaconess Medical Center over a period of about 12 years. And one of the technical difficulties that we encountered is that in the middle of that time period, the hospital shifted from one information system that they used in their intensive care unit to another. CareView is the old one. MetaVision is the new one. And of course, they're not exactly compatible. So we'll see some examples of that. So this is the old data. So this is from CareView. And you look at that and say, well, heart rates range from 40 to 200, roughly, which is OK. But then there's this funny thing. There are two peaks. So where, if ever, do you see two peaks in physiological data? Not typical. And so my initial reaction was, um. So then I looked a little closer. And I said, hmm, what do the heart rates look like from these two systems? And if you look in CareView, you see the picture that I just showed you. And if you look in MetaVision, you see this other picture, which looks more like what you would normally expect. And so I'm sitting there scratching my head, going, OK, there must be some difference between these. It's not that simultaneous with the switchover of the hospital from one information system to another, physiology of people changed. And all of a sudden, some subset of people started having faster heart rates. But if you think about that, what subset of people have faster heart rates? Athletes? Hm? Babies? If you're an estranged person. And the children? Yeah, kids. So I said, hmm, interesting. So anyway, if you look at the statistics, you see that the mean heart rate in CareView is 108. And the mean heart rate in MetaVision is 87. But of course, means are not that meaningful when you look at these bimodal distributions. So then I said, well, what if we just look at adults? So we look at people from age greater than 1 up to age 90. And I'll say a word about that in a minute. And I look at those two distributions. They look pretty close. They look pretty similar. So that means that the number of patients of different ages in the adult group is similar in the two data sets. But if I don't exclude the very young or the very old, then I see this funny distribution where I have suppressed ages greater than 90, but not the young. And what you see is that in CareView, there's this giant spike at age 0. All right? So what happened at the hospital is that under the old system, it was also being used in the NICU, the Neonatal Intensive Care Unit. The new system was not being used in the NICU. And therefore, they didn't capture data about babies. And in fact, if you look at age versus heart rate of the entire population, you see two very peculiar things. So here are the adults that we've been talking about. And here are the babies. And sure enough, they have higher heart rates. And then here are these 300-year-old people. You go, wow, I don't think I'm going to have a heart rate when I'm 300 years old. So who are those people? Anybody have a clue? Yeah? Entry errors? Sorry? Entry errors? There are too many of them. Yeah, entry errors is always a possibility. But there's quite a few data points there. Yeah? Meet missing data by those 300? Close. It's not quite missing data. So HIPAA, the Health Insurance Portability and Accountability Act, defines a set of criteria about protecting personal health information. And one of the things you are not allowed to do is to specify the age of somebody who is 90 years old or older. And the reason is because the number of 97-year-olds is pretty small. And so if I tell you that Willie is 97 years old, then you're going to be able to pick him out of a population relatively easily. And so it's prohibited to say that. So as a result, everybody who's 90 or older gets labeled as being 300 years old in the database. It's an artifact. It's like back in my youth, I worked as a computer programmer at a health sciences computing facility at UCLA. And we used to have a convention that missing data was represented by 99999. And of course, if you average that into a real data set, you get garbage, which people did regularly. So there are problems with this. And we're running into one of those. If you look at just the adults, the two systems actually look very similar. So the blue and red dots are the two systems. And I've drawn the trend lines between them. And you can see that they're very similar. So it looks like as you get older, your heart rate declines very slightly. But it does so equally in the two data sets. Yeah? AUDIENCE 3 On the previous slide, beyond 300, it looks like there are people who are older than 300. PETER SZOLOVITSZ Well, that's because the ages there are computed at the time that the heart rate is measured. And so if you are 300 years old when you're admitted to the hospital, if you stay in the hospital for six months, then you're 300 and 1 1\u20442 years old by the time of that measurement. So that's why there are data points to the right of 300. Yeah, good catch. OK, and then this is what the babies look like. And of course, they do have higher heart rates. And here are the oldsters. So actually, there are people out to 310 years old because maybe they were discharged from the hospital. And then at age 100, they came back. Maybe they were 90 years old at the time they were initially admitted. 10 years later, they came back. And we recorded more data about them. And so this is all relative to that 300. OK, so that's just one example. And the lesson there is be careful when you look at data because it can really easily fool you because there are all kinds of funny things about the way it's collected, about these artifactual things like 300-year-old patients and so on. OK, so here's a catalog of the types of data that are available to us. So we have typical kind of electronic health record data from hospitals, demographics, age, sex, socioeconomic status, insurance type, language, religion, living situation, family structure, location, work, et cetera. We have vital signs, your weight, your height, your pulse, respiration rate, body temperature, et cetera. So these are typically the things that if you ever go to a doctor's office or you go into a hospital, a nurse will take you aside and weigh you and measure your height and check your blood pressure and take your temperature and stuff like that. These are standard vital signs. And so we have lots of those recorded. Medications, prescription medications, over-the-counter drugs, illegal drugs if you're willing not to lie to your health care provider, alcohol. Again, one of my earliest days, I was hanging out with a couple of my friends."
+}

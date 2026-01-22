@@ -1,0 +1,75 @@
+{
+    "chunks": [
+        {
+            "number": "lec19",
+            "title": "part.007.mp3",
+            "start": 0.0,
+            "end": 17.28,
+            "text": " like this, or maybe it's something like that.  So it might be a function that's increasing,  a function that's decreasing.  And this function is precisely what this mu,  this Gaussian process, is meant to model."
+        },
+        {
+            "number": "lec19",
+            "title": "part.007.mp3",
+            "start": 17.28,
+            "end": 30.080000000000002,
+            "text": " The only difference is that now, one  can model the Gaussian process.  Instead of just being a single dimension,  one can imagine having several different dimensions.  This p denotes the number of dimensions,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.007.mp3",
+            "start": 30.080000000000002,
+            "end": 47.2,
+            "text": " which corresponds to some sense to the number  of synthetic biomarkers that you might conjecture exist.  Now here, we truly don't know the sorting of patients  into early versus late stage.  And so the time points, t, are themselves"
+        },
+        {
+            "number": "lec19",
+            "title": "part.007.mp3",
+            "start": 47.2,
+            "end": 58.92,
+            "text": " assumed to be latent variables that  are drawn from a truncated normal distribution that  looks like this.  So you might make some assumption  that the time intervals for when a patient comes in"
+        },
+        {
+            "number": "lec19",
+            "title": "part.007.mp3",
+            "start": 58.92,
+            "end": 70.68,
+            "text": " might be maybe patients come in really typically  very in the middle of the disease stage,  or maybe you're assuming this is something flat,  and so patients come in sort of throughout the disease stage.  But the time point itself is latent."
+        },
+        {
+            "number": "lec19",
+            "title": "part.007.mp3",
+            "start": 70.68,
+            "end": 83.18,
+            "text": " So now the generative process for the data as follows.  You first sample a time point from this truncated  normal distribution.  Then you look to see for the, oh,  and you sample from the very beginning,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.007.mp3",
+            "start": 83.18,
+            "end": 94.98,
+            "text": " you sample this curve, mu.  And then you look to see, what is  the value of mu for the sample time point?  And that gives you the expected value  you should expect to see for that patient."
+        },
+        {
+            "number": "lec19",
+            "title": "part.007.mp3",
+            "start": 99.02000000000001,
+            "end": 118.14,
+            "text": " And the one then jointly optimizes  this to try to find the most, the curve, the curve mu,  which has highest posterior probability.  And that is how you read out from the model  both what the latent progression looks like."
+        },
+        {
+            "number": "lec19",
+            "title": "part.007.mp3",
+            "start": 118.14,
+            "end": 129.18,
+            "text": " And if you look at the posterior distribution over the t's that  are inferred for each individual,  you get the inferred location along the trajectory  for each individual.  And I'll stop there."
+        },
+        {
+            "number": "lec19",
+            "title": "part.007.mp3",
+            "start": 129.18,
+            "end": 143.98,
+            "text": " I'll post the slides online for this last piece,  but I'll let you read the paper on your own.  Thank you."
+        }
+    ],
+    "text": " like this, or maybe it's something like that. So it might be a function that's increasing, a function that's decreasing. And this function is precisely what this mu, this Gaussian process, is meant to model. The only difference is that now, one can model the Gaussian process. Instead of just being a single dimension, one can imagine having several different dimensions. This p denotes the number of dimensions, which corresponds to some sense to the number of synthetic biomarkers that you might conjecture exist. Now here, we truly don't know the sorting of patients into early versus late stage. And so the time points, t, are themselves assumed to be latent variables that are drawn from a truncated normal distribution that looks like this. So you might make some assumption that the time intervals for when a patient comes in might be maybe patients come in really typically very in the middle of the disease stage, or maybe you're assuming this is something flat, and so patients come in sort of throughout the disease stage. But the time point itself is latent. So now the generative process for the data as follows. You first sample a time point from this truncated normal distribution. Then you look to see for the, oh, and you sample from the very beginning, you sample this curve, mu. And then you look to see, what is the value of mu for the sample time point? And that gives you the expected value you should expect to see for that patient. And the one then jointly optimizes this to try to find the most, the curve, the curve mu, which has highest posterior probability. And that is how you read out from the model both what the latent progression looks like. And if you look at the posterior distribution over the t's that are inferred for each individual, you get the inferred location along the trajectory for each individual. And I'll stop there. I'll post the slides online for this last piece, but I'll let you read the paper on your own. Thank you."
+}

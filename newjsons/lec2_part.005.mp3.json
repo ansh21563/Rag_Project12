@@ -1,0 +1,257 @@
+{
+    "chunks": [
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 0.0,
+            "end": 17.400000000000002,
+            "text": " They want the trial to be as short as possible.  And they want it to be as small a sample  as they need to get that 0.05 statistical significance.  So these are all problematic.  And they lead to real problems."
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 17.400000000000002,
+            "end": 32.92,
+            "text": " So I didn't bring any examples, but there  are plenty of stories where the FDA has approved  some drug on this basis.  And then later, they discovered that although the drug works  well in the short term, it has horrible side"
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 32.92,
+            "end": 48.92,
+            "text": " effects in the long term.  Or that it has interactions with other diseases  where it doesn't work effectively for people,  except for these pure cases that it was tested on.  So the other idea, the competing idea,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 48.92,
+            "end": 65.8,
+            "text": " is to say, let's build this learning health care  system in which progress in science, informatics,  whatever, generates new knowledge  as an ongoing natural byproduct of the care experience.  And we seamlessly refine and deliver"
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 65.8,
+            "end": 79.76,
+            "text": " best practices for continuous improvement  in health and health care.  Wonderful words from the Institute of Medicine,  now called the National Academy of Medicine.  But it's hard to do this."
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 79.76,
+            "end": 99.14,
+            "text": " And the reason it's hard to do this  is mainly for a very profound underlying reason, which  is that people are not treated by experimental protocols.  So it's very important in that sketch  that I gave you of the drug A versus drug B"
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 99.14,
+            "end": 118.02,
+            "text": " that there is a randomization step where  I flip a coin to decide which drug any particular individual  is going to get.  If I allow that decision to be biased by my expectations  or by something else I know about the patient,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 118.02,
+            "end": 131.78,
+            "text": " then I'm no longer doing a fair trial.  And of course, when I collect data  about how actual patients are being treated,  they're being treated according to what their doctors think  is best for them."
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 131.78,
+            "end": 147.38,
+            "text": " And so there is no randomization.  If I went to Mass General and said,  could you guys please treat everybody randomly so  that we collect really good data,  they would throw me out properly."
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 147.38,
+            "end": 160.94,
+            "text": " OK.  So we also need a whole lot of technical infrastructure.  We need to capture all kinds of novel data sources, which  we'll talk about in the next lecture.  And then we need a technical infrastructure"
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 160.94,
+            "end": 174.98,
+            "text": " for truly big data.  So just for example, the Dana-Farber  started about five years ago.  It's a cancer hospital.  And so for every solid tumor, they"
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 174.98,
+            "end": 196.26,
+            "text": " would take samples of the tumor and genotype it,  multiple samples because tumors are not uniform.  So just storing that stuff is a technical challenge  and being able to come up with it.  You've got three gigabases, so about over a gigabyte of data"
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 196.26,
+            "end": 210.85999999999999,
+            "text": " from each sample from each tumor times all the people who  come in and have this test.  So you buy some big disk drives or you farm it out  to Google or something.  But then you need to organize it in some way"
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 210.85999999999999,
+            "end": 230.22,
+            "text": " so that it's usefully easy to find that data.  So today's technique, today's prejudice  is what I call the meat grinder story, which  is you take medical records, genetic data,  environmental data, data from wearables."
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 231.06,
+            "end": 241.57999999999998,
+            "text": " You put them into an old-fashioned meat grinder  and outcome bits, which you store on a disk.  And then you have all the data from which  you can build models.  And that's what we do."
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 241.57999999999998,
+            "end": 260.82000000000005,
+            "text": " And you're going to see a lot of that in this course.  The other thing that medicine tries to do  is not to cure people but to keep them healthy.  And this has been pretty much the domain of the public health  infrastructure."
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 260.82000000000005,
+            "end": 275.5,
+            "text": " So if you go across the river to the Harvard Medical Area,  there are a couple of big buildings,  which is the Harvard School of Public Health.  And this is what they're all about.  So they do things like tracking disease prevalence"
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 275.5,
+            "end": 287.90000000000003,
+            "text": " and tracking infections and worrying  about quarantining people.  They also do a lot of the kind of work  we're going to talk about in this class, which  is modeling in order to try to understand what's"
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 287.9,
+            "end": 302.82,
+            "text": " going on in individuals' health,  in the health of a population, in the operations of a health  care system.  So they're very much into this.  Now, historically, I look back, and it"
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 302.82,
+            "end": 320.1,
+            "text": " turns out there's something called the London  Bills of Mortality in the 17th century,  started by a gentleman named John Grant.  And he was interested just in figuring out  how long do people live?"
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 320.1,
+            "end": 338.24,
+            "text": " And so he came up with these bills of mortality,  where he went around to different parts of London,  talked to undertakers and hospitals  and whatever health care providers existed at the time,  and collected data on what people died"
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 338.24,
+            "end": 360.1,
+            "text": " and how many people were living in that area.  And so, for example, he estimated  that the mortality before age 6 in the 17th century,  a long time ago, 1600s, was about 36%.  So if you were a kid, your chances of making it to age 6"
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 360.1,
+            "end": 377.78,
+            "text": " were only about 64%, so less than 2 thirds.  That's kind of shocking.  In the 18th century, people you've never heard of,  and Linnaeus, who you probably have heard of,  because he was one of the early taxonomists"
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 377.78,
+            "end": 396.26,
+            "text": " for biological and animal species and so on,  made the first attempts at systemic classification.  In the mid-1850s, mid-1800s, there  was a Congress of the First International Statistical  Congress."
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 396.26,
+            "end": 414.5,
+            "text": " And a gentleman named William Farr  came up with an interesting categorization that said,  well, if we're going to taxonomize diseases,  we should separate epidemic diseases  from constitutional diseases, from local diseases,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 414.5,
+            "end": 432.22,
+            "text": " whereby local, he means affecting  a particular part of the body, from developmental diseases.  So this is things like being stunted growth  or failure of mental development or speech  development, and then diseases that are"
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 432.22,
+            "end": 448.82000000000005,
+            "text": " the direct result of violence.  So this is things like broken bones and bar fight results  and stuff like that.  So that was the first classification  of disease in about 1853."
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 448.82000000000005,
+            "end": 465.02,
+            "text": " Note, by the way, that this is before Louis Pasteur  and his theory of the germ cause of disease.  And so this was a pretty early attempt  and obviously could have benefited from what  Pasteur later discovered."
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 465.02,
+            "end": 484.41999999999996,
+            "text": " So by the 1890s, which is post-Pasteur,  they came up with a classification that  was a hierarchic classification, 44 top-level hierarchies  broken up into 99 lower-level categories  and 161 particular titles."
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 484.41999999999996,
+            "end": 506.58,
+            "text": " And they adopted this as a way of getting typically mortality  data of what was it that people were dying of.  And by 1920s, you've heard of ICD, ICD-9, ICD-10.  So this is currently used as a way of classifying diseases  and disorders."
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 506.58,
+            "end": 526.66,
+            "text": " The International List of the Causes of Death  was the first ICD back in, I think, the 1920s.  And then it kept developing through multiple versions.  In 1975, ICD-9 was adopted.  In 2015, ICD-10."
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 526.66,
+            "end": 544.18,
+            "text": " And these are under the control of the World Health  Organization, which is now a UN agency,  although I think it predates the UN, actually.  And then we have ICD-9-CM and ICD-10-CM,  our US clinical modifications, that"
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 544.18,
+            "end": 564.3,
+            "text": " are an extension of the ICD-9 and 10 coding.  And they are primarily used for billing.  But they're also used for epidemiological research.  And if you look at the Centers for Disease Control, CDC,  they collect death certificates like this"
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 564.3,
+            "end": 578.54,
+            "text": " from all over the country.  And so this is a person who died of a cerebral hemorrhage,  which was due to nephritis, which was  due to cirrhosis of the liver.  And so you can use this kind of data to say, well,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 578.54,
+            "end": 592.8199999999999,
+            "text": " here's the immediate cause of death.  Here's sort of the proximate cause of death.  And here's the underlying cause of death.  And so this is the sort of statistical data  that we now have available."
+        },
+        {
+            "number": "lec2",
+            "title": "part.005.mp3",
+            "start": 592.82,
+            "end": 601.1800000000001,
+            "text": " Now, do any of you watch the PBS show Victoria?  Nobody?"
+        }
+    ],
+    "text": " They want the trial to be as short as possible. And they want it to be as small a sample as they need to get that 0.05 statistical significance. So these are all problematic. And they lead to real problems. So I didn't bring any examples, but there are plenty of stories where the FDA has approved some drug on this basis. And then later, they discovered that although the drug works well in the short term, it has horrible side effects in the long term. Or that it has interactions with other diseases where it doesn't work effectively for people, except for these pure cases that it was tested on. So the other idea, the competing idea, is to say, let's build this learning health care system in which progress in science, informatics, whatever, generates new knowledge as an ongoing natural byproduct of the care experience. And we seamlessly refine and deliver best practices for continuous improvement in health and health care. Wonderful words from the Institute of Medicine, now called the National Academy of Medicine. But it's hard to do this. And the reason it's hard to do this is mainly for a very profound underlying reason, which is that people are not treated by experimental protocols. So it's very important in that sketch that I gave you of the drug A versus drug B that there is a randomization step where I flip a coin to decide which drug any particular individual is going to get. If I allow that decision to be biased by my expectations or by something else I know about the patient, then I'm no longer doing a fair trial. And of course, when I collect data about how actual patients are being treated, they're being treated according to what their doctors think is best for them. And so there is no randomization. If I went to Mass General and said, could you guys please treat everybody randomly so that we collect really good data, they would throw me out properly. OK. So we also need a whole lot of technical infrastructure. We need to capture all kinds of novel data sources, which we'll talk about in the next lecture. And then we need a technical infrastructure for truly big data. So just for example, the Dana-Farber started about five years ago. It's a cancer hospital. And so for every solid tumor, they would take samples of the tumor and genotype it, multiple samples because tumors are not uniform. So just storing that stuff is a technical challenge and being able to come up with it. You've got three gigabases, so about over a gigabyte of data from each sample from each tumor times all the people who come in and have this test. So you buy some big disk drives or you farm it out to Google or something. But then you need to organize it in some way so that it's usefully easy to find that data. So today's technique, today's prejudice is what I call the meat grinder story, which is you take medical records, genetic data, environmental data, data from wearables. You put them into an old-fashioned meat grinder and outcome bits, which you store on a disk. And then you have all the data from which you can build models. And that's what we do. And you're going to see a lot of that in this course. The other thing that medicine tries to do is not to cure people but to keep them healthy. And this has been pretty much the domain of the public health infrastructure. So if you go across the river to the Harvard Medical Area, there are a couple of big buildings, which is the Harvard School of Public Health. And this is what they're all about. So they do things like tracking disease prevalence and tracking infections and worrying about quarantining people. They also do a lot of the kind of work we're going to talk about in this class, which is modeling in order to try to understand what's going on in individuals' health, in the health of a population, in the operations of a health care system. So they're very much into this. Now, historically, I look back, and it turns out there's something called the London Bills of Mortality in the 17th century, started by a gentleman named John Grant. And he was interested just in figuring out how long do people live? And so he came up with these bills of mortality, where he went around to different parts of London, talked to undertakers and hospitals and whatever health care providers existed at the time, and collected data on what people died and how many people were living in that area. And so, for example, he estimated that the mortality before age 6 in the 17th century, a long time ago, 1600s, was about 36%. So if you were a kid, your chances of making it to age 6 were only about 64%, so less than 2 thirds. That's kind of shocking. In the 18th century, people you've never heard of, and Linnaeus, who you probably have heard of, because he was one of the early taxonomists for biological and animal species and so on, made the first attempts at systemic classification. In the mid-1850s, mid-1800s, there was a Congress of the First International Statistical Congress. And a gentleman named William Farr came up with an interesting categorization that said, well, if we're going to taxonomize diseases, we should separate epidemic diseases from constitutional diseases, from local diseases, whereby local, he means affecting a particular part of the body, from developmental diseases. So this is things like being stunted growth or failure of mental development or speech development, and then diseases that are the direct result of violence. So this is things like broken bones and bar fight results and stuff like that. So that was the first classification of disease in about 1853. Note, by the way, that this is before Louis Pasteur and his theory of the germ cause of disease. And so this was a pretty early attempt and obviously could have benefited from what Pasteur later discovered. So by the 1890s, which is post-Pasteur, they came up with a classification that was a hierarchic classification, 44 top-level hierarchies broken up into 99 lower-level categories and 161 particular titles. And they adopted this as a way of getting typically mortality data of what was it that people were dying of. And by 1920s, you've heard of ICD, ICD-9, ICD-10. So this is currently used as a way of classifying diseases and disorders. The International List of the Causes of Death was the first ICD back in, I think, the 1920s. And then it kept developing through multiple versions. In 1975, ICD-9 was adopted. In 2015, ICD-10. And these are under the control of the World Health Organization, which is now a UN agency, although I think it predates the UN, actually. And then we have ICD-9-CM and ICD-10-CM, our US clinical modifications, that are an extension of the ICD-9 and 10 coding. And they are primarily used for billing. But they're also used for epidemiological research. And if you look at the Centers for Disease Control, CDC, they collect death certificates like this from all over the country. And so this is a person who died of a cerebral hemorrhage, which was due to nephritis, which was due to cirrhosis of the liver. And so you can use this kind of data to say, well, here's the immediate cause of death. Here's sort of the proximate cause of death. And here's the underlying cause of death. And so this is the sort of statistical data that we now have available. Now, do any of you watch the PBS show Victoria? Nobody?"
+}

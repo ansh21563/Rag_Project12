@@ -1,0 +1,334 @@
+{
+    "chunks": [
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 0.0,
+            "end": 17.48,
+            "text": " Another reason why you might see something like this,  or maybe even a gap like this.  Notice in the middle, there's this huge gap in the middle.  What might have explained that?  The change in population."
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 17.48,
+            "end": 29.0,
+            "text": " Hold on, hold on.  Yep, over here.  Maybe your patient population is mostly  of a certain age, and coverage for something  changes once your age crosses the threshold."
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 29.0,
+            "end": 43.0,
+            "text": " Yeah, so one explanation, I think  it's not plausible on this data set,  but it is possible for some data sets,  is that maybe your patients at time zero  were all of exactly the same age."
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 43.0,
+            "end": 57.44,
+            "text": " So maybe there's some amount of alignment.  And suddenly, at this point in time,  let's say women only get, let's say,  their annual mammography once they turn a certain age.  So that might be one reason why you would see nothing"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 57.44,
+            "end": 68.64,
+            "text": " until one point in time.  And maybe that would change across time as well.  Maybe they'll stop getting it at some point after menopause.  That's not true, but let's say.  So that's one explanation."
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 68.64,
+            "end": 79.28,
+            "text": " In this case, it doesn't make sense  because the patient population is very mixed.  So you could think of it as being roughly at steady state.  So you'll have patients of all ages here.  What's another reason?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 79.28,
+            "end": 87.64,
+            "text": " Someone raise their hand over here.  Yeah.  Yeah, I was just going to say, you  could maybe the EMR shut down for a while,  and so they were only doing stuff in paper,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 87.64,
+            "end": 100.08000000000001,
+            "text": " and they only were able to record for a short time.  Ding, ding, ding, ding, ding.  Yes, that's right.  So maybe the EMR shut down.  Or in this case, we had data issues."
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 100.08000000000001,
+            "end": 114.52000000000001,
+            "text": " So this data was acquired somehow.  For example, maybe it was required  through a contract with something  like Quest or LabCorp.  And maybe during that four-month interval,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 114.52,
+            "end": 125.56,
+            "text": " there was contract negotiation.  And so suddenly, we couldn't get the data for that time period.  Or maybe our database has crashed,  and we suddenly lost all the data for that time period.  This happens, and this happens all the time"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 125.56,
+            "end": 138.44,
+            "text": " in not just the health care industry,  but other industries as well.  And as a result of those systemic type changes,  your data is also going to be non-stationary across time.  So now we've seen three or four different explanations"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 138.44,
+            "end": 150.68,
+            "text": " for why this happens, and the reality is really  a mixture of all of these.  And just as in the previous example,  notice how what really changed here  is that the derived labels might change meaning across time."
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 150.68,
+            "end": 164.07999999999998,
+            "text": " Now, the significance of the features  used in the machine learning models  would really change across time.  And that's one of the consequences of this,  particularly if you're deriving features from lab tests values."
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 164.07999999999998,
+            "end": 183.07999999999998,
+            "text": " Here's one last example.  Again, on the x-axis here, I have time.  On the y-axis here, I'm showing the number of times  that you observed some diagnosis code of some kind.  This cyan line is ICD-9 codes, and this red line"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 183.07999999999998,
+            "end": 192.83999999999997,
+            "text": " are ICD-10 codes.  You might remember that Pete mentioned in an earlier lecture  that there was a big shift from ICD-9 coding to ICD-10 coding  at some point.  When was that time?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 192.83999999999997,
+            "end": 206.22,
+            "text": " It was precisely this time.  And so if you think about the feature vector  that you would derive for your machine learning problem,  you would have one feature for all ICD-9 codes  and one set of features for all ICD-10 codes."
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 206.22,
+            "end": 217.9,
+            "text": " And those ICD-9-based features are going to be used quite a bit  in this time period.  And then suddenly, they're going to be completely  sparse in this time period.  And the ICD-10 features start to become used."
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 217.9,
+            "end": 231.78,
+            "text": " And you can imagine that if you did machine learning using just  ICD-9 data, and then you try to apply your model  at this point in time, it's going to do horribly  because it's expecting features that it no longer has access  to."
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 231.78,
+            "end": 241.02,
+            "text": " And this happens all the time.  And in fact, what I'm describing here  is actually a major problem for the whole health care industry.  For the next five years, everyone  is going to grapple with this problem"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 241.02,
+            "end": 256.7,
+            "text": " because they want to use their historical data for machine  learning, but their historical data  is very different from their recent data.  So now, in the face of all of this non-stationarity  that I just described, did we do anything wrong"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 256.7,
+            "end": 266.58,
+            "text": " in the diabetes risk-tripping problem  that I told you about earlier?  Thoughts?  Did I make?  That was my paper, by the way."
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 266.58,
+            "end": 287.86,
+            "text": " Did I make an error?  Thoughts?  Don't be afraid.  I am often wrong.  I'm just asking you specifically about the way"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 287.90000000000003,
+            "end": 300.94,
+            "text": " I evaluated the models.  Yeah?  It's not an error, but one thing,  like if I were the doctor, that I would like to see  is the sensitivity to the inclusion criteria."
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 300.94,
+            "end": 315.26,
+            "text": " If I remove the APA1C, for instance,  that most people may have compared  to having either Rx or the EIs, then  like kind of evaluating the proposal.  So understanding the robustness to changing the data a bit"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 315.26,
+            "end": 323.18,
+            "text": " is something that would be of a lot of interest.  I agree.  But that's not immediately suggested  by the non-stationarity results.  I want something that's suggested"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 323.18,
+            "end": 330.94,
+            "text": " by non-stationarity results.  Our TA in the front row has an idea.  Yeah, let's hear it.  The train and test distributions were drawn from the same  distribution."
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 330.94,
+            "end": 344.74,
+            "text": " The train and test sets were drawn  from the same distribution.  So in the way that we did our evaluation there, we said,  OK, we're going to set it up such that on January 1, 2009,  we're predicting what's going to happen"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 344.74,
+            "end": 362.22,
+            "text": " in the following three years.  And we segmented our patient population  into train, validate, and test, but at all times  using that same setup, January 1, 2009, as the prediction time.  Now, we learned this model."
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 362.22,
+            "end": 373.78000000000003,
+            "text": " And it's now 2018.  And we want to apply this model today.  And I computed an area under the ROC curve.  I computed positive predictive values  using that retrospective data."
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 373.78,
+            "end": 388.53999999999996,
+            "text": " And I handed those off to my partners.  And they might hope that those numbers  are reflective of what their models would do today.  But because of these issues I just told you about,  for example, that the number of people who have type"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 388.53999999999996,
+            "end": 397.26,
+            "text": " diabetes, even the definition of it has changed,  because of the fact that the laboratory  ignore this part over here.  That's just a fluke.  But because of the laboratory tests"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 397.26,
+            "end": 412.4,
+            "text": " that were available during training  might be different from the ones that are available now.  And because of the fact that we have only ICD-10 data now  and not ICD-9, for all of those reasons,  our predictive performance is going to be really horrible now,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 412.4,
+            "end": 427.84,
+            "text": " particularly because of this last issue of not having ICD-9.  Our predictive model is going to work horribly now  if it was trained on data from 2008 or 2009.  And so we would have never, ever even recognized  that if we used the valuation setup that we had done there."
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 427.84,
+            "end": 444.67999999999995,
+            "text": " So I wrote that paper when I was young and naive.  I'm a little bit more gray-haired now.  And so in our more recent work, for example,  this is a paper which we're working on right now,  done by a master student of mine, Helen Zhou,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 444.67999999999995,
+            "end": 458.98,
+            "text": " and is looking at predicting antibiotic resistance.  Now we're a little bit smarter about our evaluation setup,  and we decided to set it up a little bit differently.  So what I'm showing you now is the way  we chose train, validate, and test for our population."
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 458.98,
+            "end": 479.06,
+            "text": " So we segmented our data.  So the x-axis here is time, and the y-axis here are people.  So you can think of each person as being a different row.  And you can imagine that we randomly sorted the rows.  What we did is we segmented our data into these four quadrants."
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 479.06,
+            "end": 496.0,
+            "text": " The first two quadrants we used for train and validate.  Notice, by the way, that we have different people  in the training set as we do in the validate set.  And that's important for another quantity  which I'll talk about in a minute."
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 496.0,
+            "end": 509.21999999999997,
+            "text": " So we used this data for train and validate.  And that's, again, very similar to the way  we did it in the diabetes paper.  But now for testing, we use this future data.  So we used data from 2014, 2016."
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 509.21999999999997,
+            "end": 524.76,
+            "text": " And one can imagine two different quadrants.  You might be interested in knowing,  for the same patients for whom you made predictions  on during training, how would your predictions  do for those same people at test time in the future data?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 524.76,
+            "end": 535.4,
+            "text": " And that's assuming that what we're predicting  is something that's much more myopic in nature.  In this case, it was predicting, are they  going to be resistant to some antibiotic?  But you can also look at it for a completely different set"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 535.4,
+            "end": 546.12,
+            "text": " of patients.  For patients who are not used during training at all,  and suppose that this two bucket isn't used at all,  for those patients, how do we do?  Again, using the future data for that."
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 546.12,
+            "end": 559.4799999999999,
+            "text": " And the advantage of this setup is  that it can really help you assess non-stationarity.  So if your model really took advantage of features  that were available in 2007, 2008, 2009,  but weren't available in 2014, you"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 559.4799999999999,
+            "end": 571.68,
+            "text": " would see a big drop in your performance.  Looking at the drop in performance  from your validate set in this time period to your test set,  from that time period, that drop in performance  will be uniquely attributed to the non-stationarity."
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 571.68,
+            "end": 578.8,
+            "text": " So it's a good way to diagnose it.  Yep?  AUDIENCE 2 Just some clarification  on non-stationarity.  Is it the fact that certain data is just lost altogether,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 578.8,
+            "end": 589.68,
+            "text": " or is it the fact that it's just encoded differently,  and so then it's difficult to get that mapping correct?  AARON HANLON-LEMONNEY Both.  Both of these happen.  So I have a big research program now, which is asking not just"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 589.68,
+            "end": 597.64,
+            "text": " how it's so this is how you can evaluate and recognize  the problem.  But of course, there's a really interesting research  question, which is, how can you make  use of the non-stationarity?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.004.mp3",
+            "start": 597.64,
+            "end": 601.28,
+            "text": " So for example, you had IC9, IC8."
+        }
+    ],
+    "text": " Another reason why you might see something like this, or maybe even a gap like this. Notice in the middle, there's this huge gap in the middle. What might have explained that? The change in population. Hold on, hold on. Yep, over here. Maybe your patient population is mostly of a certain age, and coverage for something changes once your age crosses the threshold. Yeah, so one explanation, I think it's not plausible on this data set, but it is possible for some data sets, is that maybe your patients at time zero were all of exactly the same age. So maybe there's some amount of alignment. And suddenly, at this point in time, let's say women only get, let's say, their annual mammography once they turn a certain age. So that might be one reason why you would see nothing until one point in time. And maybe that would change across time as well. Maybe they'll stop getting it at some point after menopause. That's not true, but let's say. So that's one explanation. In this case, it doesn't make sense because the patient population is very mixed. So you could think of it as being roughly at steady state. So you'll have patients of all ages here. What's another reason? Someone raise their hand over here. Yeah. Yeah, I was just going to say, you could maybe the EMR shut down for a while, and so they were only doing stuff in paper, and they only were able to record for a short time. Ding, ding, ding, ding, ding. Yes, that's right. So maybe the EMR shut down. Or in this case, we had data issues. So this data was acquired somehow. For example, maybe it was required through a contract with something like Quest or LabCorp. And maybe during that four-month interval, there was contract negotiation. And so suddenly, we couldn't get the data for that time period. Or maybe our database has crashed, and we suddenly lost all the data for that time period. This happens, and this happens all the time in not just the health care industry, but other industries as well. And as a result of those systemic type changes, your data is also going to be non-stationary across time. So now we've seen three or four different explanations for why this happens, and the reality is really a mixture of all of these. And just as in the previous example, notice how what really changed here is that the derived labels might change meaning across time. Now, the significance of the features used in the machine learning models would really change across time. And that's one of the consequences of this, particularly if you're deriving features from lab tests values. Here's one last example. Again, on the x-axis here, I have time. On the y-axis here, I'm showing the number of times that you observed some diagnosis code of some kind. This cyan line is ICD-9 codes, and this red line are ICD-10 codes. You might remember that Pete mentioned in an earlier lecture that there was a big shift from ICD-9 coding to ICD-10 coding at some point. When was that time? It was precisely this time. And so if you think about the feature vector that you would derive for your machine learning problem, you would have one feature for all ICD-9 codes and one set of features for all ICD-10 codes. And those ICD-9-based features are going to be used quite a bit in this time period. And then suddenly, they're going to be completely sparse in this time period. And the ICD-10 features start to become used. And you can imagine that if you did machine learning using just ICD-9 data, and then you try to apply your model at this point in time, it's going to do horribly because it's expecting features that it no longer has access to. And this happens all the time. And in fact, what I'm describing here is actually a major problem for the whole health care industry. For the next five years, everyone is going to grapple with this problem because they want to use their historical data for machine learning, but their historical data is very different from their recent data. So now, in the face of all of this non-stationarity that I just described, did we do anything wrong in the diabetes risk-tripping problem that I told you about earlier? Thoughts? Did I make? That was my paper, by the way. Did I make an error? Thoughts? Don't be afraid. I am often wrong. I'm just asking you specifically about the way I evaluated the models. Yeah? It's not an error, but one thing, like if I were the doctor, that I would like to see is the sensitivity to the inclusion criteria. If I remove the APA1C, for instance, that most people may have compared to having either Rx or the EIs, then like kind of evaluating the proposal. So understanding the robustness to changing the data a bit is something that would be of a lot of interest. I agree. But that's not immediately suggested by the non-stationarity results. I want something that's suggested by non-stationarity results. Our TA in the front row has an idea. Yeah, let's hear it. The train and test distributions were drawn from the same distribution. The train and test sets were drawn from the same distribution. So in the way that we did our evaluation there, we said, OK, we're going to set it up such that on January 1, 2009, we're predicting what's going to happen in the following three years. And we segmented our patient population into train, validate, and test, but at all times using that same setup, January 1, 2009, as the prediction time. Now, we learned this model. And it's now 2018. And we want to apply this model today. And I computed an area under the ROC curve. I computed positive predictive values using that retrospective data. And I handed those off to my partners. And they might hope that those numbers are reflective of what their models would do today. But because of these issues I just told you about, for example, that the number of people who have type diabetes, even the definition of it has changed, because of the fact that the laboratory ignore this part over here. That's just a fluke. But because of the laboratory tests that were available during training might be different from the ones that are available now. And because of the fact that we have only ICD-10 data now and not ICD-9, for all of those reasons, our predictive performance is going to be really horrible now, particularly because of this last issue of not having ICD-9. Our predictive model is going to work horribly now if it was trained on data from 2008 or 2009. And so we would have never, ever even recognized that if we used the valuation setup that we had done there. So I wrote that paper when I was young and naive. I'm a little bit more gray-haired now. And so in our more recent work, for example, this is a paper which we're working on right now, done by a master student of mine, Helen Zhou, and is looking at predicting antibiotic resistance. Now we're a little bit smarter about our evaluation setup, and we decided to set it up a little bit differently. So what I'm showing you now is the way we chose train, validate, and test for our population. So we segmented our data. So the x-axis here is time, and the y-axis here are people. So you can think of each person as being a different row. And you can imagine that we randomly sorted the rows. What we did is we segmented our data into these four quadrants. The first two quadrants we used for train and validate. Notice, by the way, that we have different people in the training set as we do in the validate set. And that's important for another quantity which I'll talk about in a minute. So we used this data for train and validate. And that's, again, very similar to the way we did it in the diabetes paper. But now for testing, we use this future data. So we used data from 2014, 2016. And one can imagine two different quadrants. You might be interested in knowing, for the same patients for whom you made predictions on during training, how would your predictions do for those same people at test time in the future data? And that's assuming that what we're predicting is something that's much more myopic in nature. In this case, it was predicting, are they going to be resistant to some antibiotic? But you can also look at it for a completely different set of patients. For patients who are not used during training at all, and suppose that this two bucket isn't used at all, for those patients, how do we do? Again, using the future data for that. And the advantage of this setup is that it can really help you assess non-stationarity. So if your model really took advantage of features that were available in 2007, 2008, 2009, but weren't available in 2014, you would see a big drop in your performance. Looking at the drop in performance from your validate set in this time period to your test set, from that time period, that drop in performance will be uniquely attributed to the non-stationarity. So it's a good way to diagnose it. Yep? AUDIENCE 2 Just some clarification on non-stationarity. Is it the fact that certain data is just lost altogether, or is it the fact that it's just encoded differently, and so then it's difficult to get that mapping correct? AARON HANLON-LEMONNEY Both. Both of these happen. So I have a big research program now, which is asking not just how it's so this is how you can evaluate and recognize the problem. But of course, there's a really interesting research question, which is, how can you make use of the non-stationarity? So for example, you had IC9, IC8."
+}

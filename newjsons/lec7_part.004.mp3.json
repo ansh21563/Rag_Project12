@@ -1,0 +1,257 @@
+{
+    "chunks": [
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 0.0,
+            "end": 15.98,
+            "text": " disease, then you can do a little bit  of diagnostic reasoning and say, if I  see a lot of symptoms of that disease mentioned,  then maybe the disease is present as well.  And so the recursive machine learning problem"
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 15.98,
+            "end": 35.58,
+            "text": " is how best to identify the things associated  with the term.  And this is generally known as phenotyping.  Now, how many of you have used the UMLS?  Just a few."
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 35.58,
+            "end": 54.36,
+            "text": " So in 1985 or 84, the newly appointed director  of the National Library of Medicine,  which is one of the NIH institutes,  decided to make a big investment in creating  this unified medical language system, which"
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 54.36,
+            "end": 72.56,
+            "text": " was an attempt to take all of the terminologies  that various medical professional societies had  developed and unify them into a single what  they called a metathesaurus.  So it's not really a thesaurus, because it's not completely"
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 72.56,
+            "end": 85.96,
+            "text": " well-integrated, but it does include  all of this terminology.  And then they spent a lot of both human and machine  resources in order to identify cases  in which two different expressions"
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 85.96,
+            "end": 106.24,
+            "text": " from different terminologies really meant the same thing.  So for example, myocardial infarction and heart attack  really mean exactly the same thing.  And in some terminologies, it's called  acute myocardial infarction or acute infarct or acute whatever."
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 106.24,
+            "end": 125.67999999999999,
+            "text": " And they paid people and they paid machines  to scour those entire databases and come up  with a mapping that said, OK, we're  going to have some concept, C398752.  I just made that up, which corresponds"
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 125.67999999999999,
+            "end": 140.51999999999998,
+            "text": " to that particular concept.  And then they mapped all those together.  So that's an enormous help in two ways.  It helps you normalize databases  that come from different places and that"
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 140.51999999999998,
+            "end": 154.04,
+            "text": " are described differently.  It also tells you, for natural language processing,  how it is.  It gives you a treasure trove of ways  of expressing the same conceptual idea."
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 154.04,
+            "end": 174.8,
+            "text": " And then you can use those in order  to expand the kinds of phrases that you're looking for.  So there are, as of the current moment,  there are about 3.7 million distinct concepts  in this concept base."
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 174.8,
+            "end": 189.52,
+            "text": " There are also hierarchies and relationships  that are imported from all these different sources  of terminology.  But those are a pretty jumbled mess.  And then over the whole thing, they"
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 189.52,
+            "end": 208.60000000000002,
+            "text": " created a semantic network that says  there are 54 relations and 127 types.  And every concept unique identifier  is assigned at least one semantic type.  So this is very useful for looking through this stuff."
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 208.60000000000002,
+            "end": 228.51999999999998,
+            "text": " Here are the UMLS semantic concepts of various,  or the semantic types.  So you see that the most common semantic type  is this T061, which stands for therapeutic or preventive  procedure."
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 228.51999999999998,
+            "end": 254.08,
+            "text": " And there are 260,000 of those concepts in the metathesaurus.  There are 233,000 findings, 172,000 drugs,  organic chemicals, pharmacologic substances,  amino acid peptide or protein, invertebrate.  So the data does not come only from human medicine,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 254.08,
+            "end": 274.96,
+            "text": " but also from veterinary medicine and bioinformatics  research and all over the place.  But you see that these are a useful listing  of appropriate semantic types that you can then  look for in such a database."
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 274.96,
+            "end": 293.0,
+            "text": " And the types are hierarchically organized.  So for example, the relations are organized.  So there's an effects relation, which  has subrelations, manages, treats, disrupts, complicates,  interacts with, or prevents."
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 293.0,
+            "end": 310.48,
+            "text": " Something like biological function  can be a physiologic function or a pathologic function.  And again, each of these has subcategories.  So the idea is that each concept, each unique concept,  is labeled with at least one of these semantic types."
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 310.48,
+            "end": 328.44,
+            "text": " And that helps to identify things when you're  looking through the data.  There are also some tools that deal  with the typical linguistic problems  that if I want to say bleeds or bleed or bleeding,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 328.44,
+            "end": 344.12,
+            "text": " those are really all the same concept.  And so there's these lexical variant generator  that helps us normalize that.  And then there's the normalization function  that takes some statement, like Mr. Huntington was admitted,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 344.12,
+            "end": 367.48,
+            "text": " blah, blah, blah, and normalizes it  into lowercase alphabetized versions of the text  where things are translated into other potential meanings,  linguistic meanings of that text.  So for example, notice this one says was,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 367.48,
+            "end": 385.11999999999995,
+            "text": " but one of its translations is be,  because was is just a form of be.  This can also get you in trouble.  I ran into a problem where I was finding beryllium  in everybody's medical records, because it also"
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 385.11999999999995,
+            "end": 402.26,
+            "text": " knows that be is an abbreviation for beryllium.  And so you have to be a little careful about how  you use this stuff.  There's an online tool where you can type in something,  and it says weakness of the upper extremities."
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 402.26,
+            "end": 419.70000000000005,
+            "text": " And it says, oh, you mean the concept proximal weakness  upper extremities.  And then it has a relationship to various contexts,  and it has siblings, and it has all kinds of other things  that one can look up."
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 419.70000000000005,
+            "end": 437.42,
+            "text": " I built a tool a few years ago where  if you populate it with one of these Discharge summaries,  it tries to color code the types of things  that it found in that summary.  And so this is using a tool called Metamap, which, again,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 437.5,
+            "end": 457.70000000000005,
+            "text": " comes from the National Library of Medicine,  and a locally built UMLS lookup tool  that, in this particular case, finds exactly the same mappings  from the text.  And so you can look through the text and say, ah, OK,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 457.70000000000005,
+            "end": 480.46000000000004,
+            "text": " so no indicates negation, and urine output  is a kind of one of these concepts.  If you moused over it, it would show you.  I think what I'm going to do is stop there today  so that I can invite Kat to join us and talk about, A,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 480.46000000000004,
+            "end": 492.02000000000004,
+            "text": " what's happened since 2010, and B,  how is this stuff actually used by clinicians and clinician  researchers?  Kat?  OK."
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 492.02000000000004,
+            "end": 503.02,
+            "text": " Well, welcome, Kat.  Nice to see you again.  Yes.  So are the techniques that were represented  in that paper from nine years ago"
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 503.02,
+            "end": 514.86,
+            "text": " still being used today in research settings?  Yeah.  So I'd say, yes, the bare bones platform,  I would say that pipeline is being used.  But now I'd say we're in version 5."
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 514.86,
+            "end": 528.26,
+            "text": " We're actually, actually, you're on that revision list.  But we've done a lot of improvements  since then to actually automate things a little more.  The rate limiting factor in phenotyping  is always the clinician, always getting that label,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 528.26,
+            "end": 539.38,
+            "text": " doing the chart review, coming up with that term list.  So I don't know if you want me to go into some of the details  on what we've been doing.  But I've kind of plugged it in.  So if you recall that diagram, there"
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 539.38,
+            "end": 553.5400000000001,
+            "text": " are several steps where you started with the EMR.  There was that filter with the ICD codes.  Then you get this data mart.  And then you start training.  You have to select random 500, which is a lot."
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 553.5400000000001,
+            "end": 564.22,
+            "text": " It's a lot of chart review to do.  It is a lot.  So our goal was to reduce that amount of chart review.  And part of the way to reduce that  is reducing the feature space."
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 564.22,
+            "end": 576.6600000000001,
+            "text": " So one of the things that we didn't know when we first  started out was, how many gold standard labels did we need?  And how many features did we need?  And which of those features would be important?  So by features, I mean ICD codes, the diagnosis code,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 576.66,
+            "end": 590.6999999999999,
+            "text": " medications, and all that list of NLP terms that might  be related to the condition.  And so now we have ways to try to whittle down  that list before we even use those gold standard labels.  And so let me think about it."
+        },
+        {
+            "number": "lec7",
+            "title": "part.004.mp3",
+            "start": 590.6999999999999,
+            "end": 599.78,
+            "text": " So this is NLP.  The focus here is on NLP.  So there are a couple of ways we're doing this.  So one rate limiting step was getting the clinicians  to come up with a list of terms."
+        }
+    ],
+    "text": " disease, then you can do a little bit of diagnostic reasoning and say, if I see a lot of symptoms of that disease mentioned, then maybe the disease is present as well. And so the recursive machine learning problem is how best to identify the things associated with the term. And this is generally known as phenotyping. Now, how many of you have used the UMLS? Just a few. So in 1985 or 84, the newly appointed director of the National Library of Medicine, which is one of the NIH institutes, decided to make a big investment in creating this unified medical language system, which was an attempt to take all of the terminologies that various medical professional societies had developed and unify them into a single what they called a metathesaurus. So it's not really a thesaurus, because it's not completely well-integrated, but it does include all of this terminology. And then they spent a lot of both human and machine resources in order to identify cases in which two different expressions from different terminologies really meant the same thing. So for example, myocardial infarction and heart attack really mean exactly the same thing. And in some terminologies, it's called acute myocardial infarction or acute infarct or acute whatever. And they paid people and they paid machines to scour those entire databases and come up with a mapping that said, OK, we're going to have some concept, C398752. I just made that up, which corresponds to that particular concept. And then they mapped all those together. So that's an enormous help in two ways. It helps you normalize databases that come from different places and that are described differently. It also tells you, for natural language processing, how it is. It gives you a treasure trove of ways of expressing the same conceptual idea. And then you can use those in order to expand the kinds of phrases that you're looking for. So there are, as of the current moment, there are about 3.7 million distinct concepts in this concept base. There are also hierarchies and relationships that are imported from all these different sources of terminology. But those are a pretty jumbled mess. And then over the whole thing, they created a semantic network that says there are 54 relations and 127 types. And every concept unique identifier is assigned at least one semantic type. So this is very useful for looking through this stuff. Here are the UMLS semantic concepts of various, or the semantic types. So you see that the most common semantic type is this T061, which stands for therapeutic or preventive procedure. And there are 260,000 of those concepts in the metathesaurus. There are 233,000 findings, 172,000 drugs, organic chemicals, pharmacologic substances, amino acid peptide or protein, invertebrate. So the data does not come only from human medicine, but also from veterinary medicine and bioinformatics research and all over the place. But you see that these are a useful listing of appropriate semantic types that you can then look for in such a database. And the types are hierarchically organized. So for example, the relations are organized. So there's an effects relation, which has subrelations, manages, treats, disrupts, complicates, interacts with, or prevents. Something like biological function can be a physiologic function or a pathologic function. And again, each of these has subcategories. So the idea is that each concept, each unique concept, is labeled with at least one of these semantic types. And that helps to identify things when you're looking through the data. There are also some tools that deal with the typical linguistic problems that if I want to say bleeds or bleed or bleeding, those are really all the same concept. And so there's these lexical variant generator that helps us normalize that. And then there's the normalization function that takes some statement, like Mr. Huntington was admitted, blah, blah, blah, and normalizes it into lowercase alphabetized versions of the text where things are translated into other potential meanings, linguistic meanings of that text. So for example, notice this one says was, but one of its translations is be, because was is just a form of be. This can also get you in trouble. I ran into a problem where I was finding beryllium in everybody's medical records, because it also knows that be is an abbreviation for beryllium. And so you have to be a little careful about how you use this stuff. There's an online tool where you can type in something, and it says weakness of the upper extremities. And it says, oh, you mean the concept proximal weakness upper extremities. And then it has a relationship to various contexts, and it has siblings, and it has all kinds of other things that one can look up. I built a tool a few years ago where if you populate it with one of these Discharge summaries, it tries to color code the types of things that it found in that summary. And so this is using a tool called Metamap, which, again, comes from the National Library of Medicine, and a locally built UMLS lookup tool that, in this particular case, finds exactly the same mappings from the text. And so you can look through the text and say, ah, OK, so no indicates negation, and urine output is a kind of one of these concepts. If you moused over it, it would show you. I think what I'm going to do is stop there today so that I can invite Kat to join us and talk about, A, what's happened since 2010, and B, how is this stuff actually used by clinicians and clinician researchers? Kat? OK. Well, welcome, Kat. Nice to see you again. Yes. So are the techniques that were represented in that paper from nine years ago still being used today in research settings? Yeah. So I'd say, yes, the bare bones platform, I would say that pipeline is being used. But now I'd say we're in version 5. We're actually, actually, you're on that revision list. But we've done a lot of improvements since then to actually automate things a little more. The rate limiting factor in phenotyping is always the clinician, always getting that label, doing the chart review, coming up with that term list. So I don't know if you want me to go into some of the details on what we've been doing. But I've kind of plugged it in. So if you recall that diagram, there are several steps where you started with the EMR. There was that filter with the ICD codes. Then you get this data mart. And then you start training. You have to select random 500, which is a lot. It's a lot of chart review to do. It is a lot. So our goal was to reduce that amount of chart review. And part of the way to reduce that is reducing the feature space. So one of the things that we didn't know when we first started out was, how many gold standard labels did we need? And how many features did we need? And which of those features would be important? So by features, I mean ICD codes, the diagnosis code, medications, and all that list of NLP terms that might be related to the condition. And so now we have ways to try to whittle down that list before we even use those gold standard labels. And so let me think about it. So this is NLP. The focus here is on NLP. So there are a couple of ways we're doing this. So one rate limiting step was getting the clinicians to come up with a list of terms."
+}

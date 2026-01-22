@@ -1,0 +1,243 @@
+{
+    "chunks": [
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 0.0,
+            "end": 18.6,
+            "text": " for representations from transformers.  So rather than using the LSTM kind of model that Elmo used,  these guys say, well, let's hop on the bandwagon  and use the transformer-based architecture.  And then they introduce some interesting tricks."
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 18.6,
+            "end": 33.96,
+            "text": " So one of the problems with transformers  is if you stack them on top of each other,  there are many paths from any of the inputs  to any of the intermediate nodes and the outputs.  And so if you're doing self-attention,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 33.96,
+            "end": 50.72,
+            "text": " you're trying to figure out where the output should  pay attention to the input.  The answer, of course, is like if you're  trying to reconstruct the input, if the input is  present in your model, what you will learn"
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 50.72,
+            "end": 66.52,
+            "text": " is that the corresponding word is  the right word for your output.  So they have to prevent that from happening.  And so the way they do it is by masking off  at each level some fraction of the words"
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 66.52,
+            "end": 83.12,
+            "text": " or of the inputs at that level.  So what this is doing is it's a little bit  like the skip-gram model in Word2Vec,  where it's trying to predict the likelihood of some word,  except it doesn't know what a significant fraction"
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 83.12,
+            "end": 97.46,
+            "text": " of the words are.  And so it can't overfit in the way that I was just suggesting.  So this turned out to be a good idea.  It's more complicated.  Again, for the details, you have to read the paper."
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 97.46,
+            "end": 110.22,
+            "text": " I gave both the transformer paper and the BERT paper  as optional readings for today.  I meant to give them as required readings,  but I didn't do it in time.  So they're optional."
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 110.22,
+            "end": 131.14,
+            "text": " But there are a whole bunch of other tricks.  So instead of using words, they actually use word pieces.  So think about syllables.  And don't becomes do, and apostrophe T, and so on.  And then they discovered that about 15% of the tokens"
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 131.14,
+            "end": 152.78,
+            "text": " to be masked seems to work better than other percentages.  So those are the hidden tokens that prevent overfitting.  And then they do some other weird stuff.  Like, instead of masking a token,  they will inject random other words from the vocabulary"
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 152.78,
+            "end": 168.74,
+            "text": " into its place, again, to prevent overfitting.  And then they look at different tasks,  like can I predict the next sentence in a corpus?  So I read a sentence, and the translation  is not into another language, but it's"
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 168.74,
+            "end": 187.66000000000003,
+            "text": " predicting what the next sentence is going to be.  So they trained it on 800 million words  from something called the Books Corpus,  and about 2 and 1 half million word Wikipedia Corpus.  And what they found was that there"
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 187.66000000000003,
+            "end": 212.3,
+            "text": " is an enormous improvement on a lot of classical tasks.  So this is a listing of some of the standard tasks  for natural language processing,  mostly not in the medical world, but in the general NLP domain.  And you see that you get things like an improvement from 80%,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 212.3,
+            "end": 230.14,
+            "text": " or even the GPT model that I'll talk about in a minute  does at 82%.  They're up to about 86%.  So a 4% improvement in this domain is really huge.  I mean, very often, people publish papers"
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 230.14,
+            "end": 242.06,
+            "text": " showing a 1% improvement.  And if their corpus is big enough,  then it's statistically significant, and therefore  publishable.  But it's not significant in the ordinary meaning"
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 242.06,
+            "end": 266.44,
+            "text": " of the term significant if you're doing 1% better.  But doing 4% better is pretty good.  Here, we're going from like 66% to 72%  from the earlier state of the art, 82% to 91%,  93% to 94%, 35% to 60% in the COLA task corpus"
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 266.44,
+            "end": 282.7,
+            "text": " of linguistic acceptability.  So this is asking, I think, mechanical Turk people  for generated sentences.  Is this sentence a valid sentence of English?  And so it's an interesting benchmark."
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 282.7,
+            "end": 297.5,
+            "text": " So it's producing really significant improvements  all over the place.  They trained two models of it.  The base model is a smaller one.  The large model is just trained on larger data sets."
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 297.5,
+            "end": 311.78000000000003,
+            "text": " Enormous amount of computation in doing this training.  So I've forgotten.  It took them like a month on some gigantic cluster  of GPU machines.  And so it's daunting, because you can't just"
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 311.78000000000003,
+            "end": 330.32,
+            "text": " crank this up on your laptop and expect it  to finish in your lifetime.  The last thing I want to tell you about is this GPT-2.  So this is from the Open AI Institute,  which is one of these philanthropically funded,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 330.32,
+            "end": 349.52,
+            "text": " I think, this one by Elon Musk, Research Institute  to Advance AI.  And what they said is, well, this is all cool,  but so they were not using BERT.  They were using the transformer architecture,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 349.52,
+            "end": 368.12,
+            "text": " but without the same training style as BERT.  And they said, the secret is going  to be that we're going to apply this not only to one problem,  but to a whole bunch of problems.  So it's a multitask learning approach"
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 368.12,
+            "end": 386.92,
+            "text": " that says we're going to build a better model by trying  to solve a bunch of different tasks simultaneously.  And so they built enormous models.  By the way, the task itself is given as a sequence of tokens.  So for example, they might have a task"
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 386.92,
+            "end": 408.0,
+            "text": " that says translate to French, English text, French text,  or answer the question, document, question, answer.  And so the system not only learns  how to do whatever it's supposed to do,  but it even learns something about the tasks"
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 408.0,
+            "end": 429.56,
+            "text": " that it's being asked to work on by encoding these and using  them as part of its model.  So they built four different models.  Take a look at the bottom one, 1.5 billion parameters.  This is a large model."
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 429.56,
+            "end": 445.02,
+            "text": " This is a very large model.  And so it's a byte level model.  So they just said, forget words, because we're  trying to do this multilingually.  And so for Chinese, you want characters."
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 445.02,
+            "end": 464.58,
+            "text": " And for English, you might as well take characters also.  And the system will, in its 1.5 billion parameters,  learn all about the sequences of characters that make up words.  And it'll be cool.  And so then they look at a whole bunch of different challenges."
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 464.58,
+            "end": 486.5,
+            "text": " And what you see is that the state of the art  before they did this on, for example, the Lombarda data set  was that the perplexity of its predictions was about 100.  And with this large model, the perplexity of its predictions  is about 9."
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 486.5,
+            "end": 507.74,
+            "text": " So that means that it's reduced the uncertainty  of what to predict next ridiculously much,  I mean, by more than an order of magnitude.  And you get similar gains, accuracy going from 59% to 63%,  accuracy on a, this is the children's something"
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 507.74,
+            "end": 531.66,
+            "text": " or other challenge, from 85% to 93%.  So dramatic improvements almost across the board  except for this particular data set where they did not do well.  And what really blew me away is here's  an application of this 1.5 billion word model"
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 531.66,
+            "end": 550.98,
+            "text": " that they built. So they said, OK, I give you  a prompt like the opening paragraph of a Wall Street  Journal article or a Wikipedia article.  And you complete the article by using that generator idea  that I showed you before that just uses the language model"
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 550.98,
+            "end": 566.1,
+            "text": " and picks the most likely word to come next  and emits that as the next word.  So here's a prompt that says a train carriage containing  controlled nuclear materials was stolen in Cincinnati today.  Its whereabouts are unknown."
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 566.1,
+            "end": 580.26,
+            "text": " By the way, this is made up.  I mean, this is not a real news article.  And the system comes back with a completion  that says the incident occurred on the downtown train  line, which runs from Covington and Ashland stations."
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 580.26,
+            "end": 593.8199999999999,
+            "text": " In an email to Ohio news outlets,  the US Department of Energy said it's  working with the Federal Railroad Administration  to find the thief, et cetera.  This looks astoundingly good."
+        },
+        {
+            "number": "lec8",
+            "title": "part.007.mp3",
+            "start": 593.8199999999999,
+            "end": 601.62,
+            "text": " Now, the paper from which this comes,  this is actually from a blog, but they've also  published a paper on it."
+        }
+    ],
+    "text": " for representations from transformers. So rather than using the LSTM kind of model that Elmo used, these guys say, well, let's hop on the bandwagon and use the transformer-based architecture. And then they introduce some interesting tricks. So one of the problems with transformers is if you stack them on top of each other, there are many paths from any of the inputs to any of the intermediate nodes and the outputs. And so if you're doing self-attention, you're trying to figure out where the output should pay attention to the input. The answer, of course, is like if you're trying to reconstruct the input, if the input is present in your model, what you will learn is that the corresponding word is the right word for your output. So they have to prevent that from happening. And so the way they do it is by masking off at each level some fraction of the words or of the inputs at that level. So what this is doing is it's a little bit like the skip-gram model in Word2Vec, where it's trying to predict the likelihood of some word, except it doesn't know what a significant fraction of the words are. And so it can't overfit in the way that I was just suggesting. So this turned out to be a good idea. It's more complicated. Again, for the details, you have to read the paper. I gave both the transformer paper and the BERT paper as optional readings for today. I meant to give them as required readings, but I didn't do it in time. So they're optional. But there are a whole bunch of other tricks. So instead of using words, they actually use word pieces. So think about syllables. And don't becomes do, and apostrophe T, and so on. And then they discovered that about 15% of the tokens to be masked seems to work better than other percentages. So those are the hidden tokens that prevent overfitting. And then they do some other weird stuff. Like, instead of masking a token, they will inject random other words from the vocabulary into its place, again, to prevent overfitting. And then they look at different tasks, like can I predict the next sentence in a corpus? So I read a sentence, and the translation is not into another language, but it's predicting what the next sentence is going to be. So they trained it on 800 million words from something called the Books Corpus, and about 2 and 1 half million word Wikipedia Corpus. And what they found was that there is an enormous improvement on a lot of classical tasks. So this is a listing of some of the standard tasks for natural language processing, mostly not in the medical world, but in the general NLP domain. And you see that you get things like an improvement from 80%, or even the GPT model that I'll talk about in a minute does at 82%. They're up to about 86%. So a 4% improvement in this domain is really huge. I mean, very often, people publish papers showing a 1% improvement. And if their corpus is big enough, then it's statistically significant, and therefore publishable. But it's not significant in the ordinary meaning of the term significant if you're doing 1% better. But doing 4% better is pretty good. Here, we're going from like 66% to 72% from the earlier state of the art, 82% to 91%, 93% to 94%, 35% to 60% in the COLA task corpus of linguistic acceptability. So this is asking, I think, mechanical Turk people for generated sentences. Is this sentence a valid sentence of English? And so it's an interesting benchmark. So it's producing really significant improvements all over the place. They trained two models of it. The base model is a smaller one. The large model is just trained on larger data sets. Enormous amount of computation in doing this training. So I've forgotten. It took them like a month on some gigantic cluster of GPU machines. And so it's daunting, because you can't just crank this up on your laptop and expect it to finish in your lifetime. The last thing I want to tell you about is this GPT-2. So this is from the Open AI Institute, which is one of these philanthropically funded, I think, this one by Elon Musk, Research Institute to Advance AI. And what they said is, well, this is all cool, but so they were not using BERT. They were using the transformer architecture, but without the same training style as BERT. And they said, the secret is going to be that we're going to apply this not only to one problem, but to a whole bunch of problems. So it's a multitask learning approach that says we're going to build a better model by trying to solve a bunch of different tasks simultaneously. And so they built enormous models. By the way, the task itself is given as a sequence of tokens. So for example, they might have a task that says translate to French, English text, French text, or answer the question, document, question, answer. And so the system not only learns how to do whatever it's supposed to do, but it even learns something about the tasks that it's being asked to work on by encoding these and using them as part of its model. So they built four different models. Take a look at the bottom one, 1.5 billion parameters. This is a large model. This is a very large model. And so it's a byte level model. So they just said, forget words, because we're trying to do this multilingually. And so for Chinese, you want characters. And for English, you might as well take characters also. And the system will, in its 1.5 billion parameters, learn all about the sequences of characters that make up words. And it'll be cool. And so then they look at a whole bunch of different challenges. And what you see is that the state of the art before they did this on, for example, the Lombarda data set was that the perplexity of its predictions was about 100. And with this large model, the perplexity of its predictions is about 9. So that means that it's reduced the uncertainty of what to predict next ridiculously much, I mean, by more than an order of magnitude. And you get similar gains, accuracy going from 59% to 63%, accuracy on a, this is the children's something or other challenge, from 85% to 93%. So dramatic improvements almost across the board except for this particular data set where they did not do well. And what really blew me away is here's an application of this 1.5 billion word model that they built. So they said, OK, I give you a prompt like the opening paragraph of a Wall Street Journal article or a Wikipedia article. And you complete the article by using that generator idea that I showed you before that just uses the language model and picks the most likely word to come next and emits that as the next word. So here's a prompt that says a train carriage containing controlled nuclear materials was stolen in Cincinnati today. Its whereabouts are unknown. By the way, this is made up. I mean, this is not a real news article. And the system comes back with a completion that says the incident occurred on the downtown train line, which runs from Covington and Ashland stations. In an email to Ohio news outlets, the US Department of Energy said it's working with the Federal Railroad Administration to find the thief, et cetera. This looks astoundingly good. Now, the paper from which this comes, this is actually from a blog, but they've also published a paper on it."
+}

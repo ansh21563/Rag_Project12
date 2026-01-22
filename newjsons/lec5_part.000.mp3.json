@@ -1,0 +1,341 @@
+{
+    "chunks": [
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 0.0,
+            "end": 29.560000000000002,
+            "text": " So today, we'll be continuing along the theme of risk  stratification.  I'll spend the first half to 2 thirds of today's lecture  continuing where we left off last week before the discussion.  I'll talk about how does one drive the labels"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 29.56,
+            "end": 38.44,
+            "text": " that one uses within a supervised machine learning  approach.  I'll continue talking about how one evaluates risk stratification  models.  And then I'll talk about some of the subtleties that"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 38.44,
+            "end": 47.64,
+            "text": " arise when you want to use machine learning for health  care, specifically for risk stratification.  And I think that's going to be one of the most interesting  parts of today's lecture.  In the last third of today's lecture,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 47.64,
+            "end": 63.32,
+            "text": " I'll be talking about how one can rethink the supervised  machine learning problem not to be a classification problem,  but be something closer to a regression problem.  And when one now thinks about not will someone, for example,  develop diabetes within one to three years from now,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 63.32,
+            "end": 77.0,
+            "text": " but when precisely will they develop diabetes,  so the time to event, then one has  to start to really think very carefully  about the censoring issues that I alluded to last week.  And so I'll formalize those notions in the language"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 77.0,
+            "end": 86.76,
+            "text": " of survival modeling.  And I'll talk about how one can do maximum likelihood  estimation in that setting and how one should do  a validation in that setting.  OK."
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 86.76,
+            "end": 98.0,
+            "text": " So in our lecture last week, I gave you  this example of risk stratification  for type 2 diabetes.  The goal, just to remind you, was as follows.  25% of people in the United States"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 98.0,
+            "end": 114.84,
+            "text": " have undiagnosed type 2 diabetes.  If we could take health insurance claims data that's  available for everyone who has health insurance  and use that to predict who in the near term, next one  to three years, is likely to be newly diagnosed"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 114.84,
+            "end": 126.28,
+            "text": " with type 2 diabetes, then we could  use that to risk stratify patient population.  We could use that then to figure out who's most at risk,  do interventions for those patients  to try to get them diagnosed and get them started"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 126.28,
+            "end": 136.52,
+            "text": " on treatment if relevant.  OK.  But what I didn't talk much about  was where did those labels come from?  How do we know that someone had a diabetes"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 136.52,
+            "end": 153.76000000000002,
+            "text": " onset in that window that I show up there on the top?  So what are the answers?  All of you should have read the paper by Rozavian et al.  So you should hopefully have some ideas, thoughts.  Hint, it was in supplementary material."
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 157.64000000000001,
+            "end": 171.24,
+            "text": " How did we define a positive case in that paper?  Yep?  The drugs they were on?  Drugs they were on.  OK, yeah."
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 171.32000000000002,
+            "end": 190.44,
+            "text": " So for example, metformin, glucose, sorry, insulin.  I think insulin includes metformin.  Metformin is a tricky case, because metformin is often  used for alternative indications.  But there are many medications, such as insulin,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 190.44,
+            "end": 205.6,
+            "text": " which are used pretty exclusively  for treating diabetes.  And so you can look to see, does a patient  have a record of taking one of these diabetic medications  in that window that we're using to define the outcome?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 205.6,
+            "end": 217.48,
+            "text": " If you see a record of a medication,  you might conjecture this patient probably has diabetes.  But what about if they don't have any medication listed  in that time window?  What could you conclude then?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 217.48,
+            "end": 229.95999999999998,
+            "text": " Any ideas?  Yeah?  If you look at the HbA1c value, and you  know the normal range, and if you  see that frequently, it's about like 75 or 70."
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 229.96,
+            "end": 242.08,
+            "text": " So you're giving me an alternative approach,  not looking at medications, but looking at laboratory test  results.  Look at their HbA1c results, which  measures approximately an average of three month glucose"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 242.08,
+            "end": 252.48000000000002,
+            "text": " values.  And if that's out of range, then they're diabetic.  And that's, in fact, usually used as a definition  of diabetes.  But that didn't answer my original question."
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 252.48000000000002,
+            "end": 265.52,
+            "text": " Why is just looking at diabetic medications not enough?  Yeah?  Some of the diabetic medications can be used to treat other  conditions.  Sometimes there's ambiguity in diabetic medications."
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 265.52,
+            "end": 277.12,
+            "text": " But we sort of dealt with that already  by trying to choose an unambiguous set.  What are other reasons?  Just starting with your medicine and the onset of diabetes  could be kind of very extended, like if not diabetes."
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 277.12,
+            "end": 289.28000000000003,
+            "text": " Oh, that's a really interesting point.  Not the one I was thinking about, but I like it.  Which is that a patient might have been diagnosed  with type 2 diabetes, but they, for whatever reason,  in that communication between provider and patient,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 289.28000000000003,
+            "end": 302.8,
+            "text": " they decided we're not going to start treatment yet.  So they might not yet be on treatment for diabetes,  yet the whole health care system might be very well aware  that the patient is diabetic, in which case  doing any of these interventions for that patient"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 302.8,
+            "end": 310.28,
+            "text": " might be irrelevant.  Yep, another reason.  So a lot of people are just not diagnosed with diabetes,  so they have it.  So one label means that they have diabetes,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 310.28,
+            "end": 320.12,
+            "text": " and the other label is a combination of people  who have and who don't have diabetes.  So the point was, often you just might not  be diagnosed for diabetes.  That, unfortunately, is not something that we're"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 320.12,
+            "end": 329.94,
+            "text": " going to be able to solve here.  It is an issue, but we have no solution for it.  No, rather, there's a different point  that I want to get at, which is that this data has biases  in it."
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 329.94,
+            "end": 344.24,
+            "text": " So even if a patient is on a diabetes medication,  for whatever reason, maybe they are paying cash  for those medications.  They're paying cash for those medications,  then there's not going to be any record for the patient"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 344.24,
+            "end": 356.8,
+            "text": " taking those medications in the health insurance claims,  because the health insurer didn't have to pay for it.  But the reason that you gave is also a very interesting reason,  and both of them are valid.  So for all of these reasons, just"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 356.8,
+            "end": 371.64,
+            "text": " looking at the medications alone is going to be insufficient.  And as was just suggested a moment ago,  looking at other indicators, like, for example,  does the patient have an abnormal blood glucose  value or HA1C value, would also provide information."
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 371.84,
+            "end": 382.64,
+            "text": " So it's non-trivial, right?  And part of what you're going to be doing in your next problem  set, problem set two, is going to be thinking through,  how does one actually do this cohort construction?  Not just what is your inclusion exclusion criteria,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 382.64,
+            "end": 395.68,
+            "text": " but also how do you really derive those labels  from that data set?  Now, traditionally, the traditional answer to this  has two steps to it.  Step one is to actually manually label some patients."
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 395.68,
+            "end": 407.26000000000005,
+            "text": " So you take a few hundred patients,  and you go through their data.  You actually look at their data and decide,  is this patient diabetic, or are they not diabetic?  And the reason why you have to do that"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 407.26000000000005,
+            "end": 419.20000000000005,
+            "text": " is because often what you might think of as obvious,  like, oh, if they're on diabetes medication, they're diabetic,  has flaws to it.  And until you really dig down and look at the data,  you might not recognize that that criteria has a flaw in it."
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 419.20000000000005,
+            "end": 431.92,
+            "text": " So that chart review is really an essential part  of this process.  Then the second step is, how do you generalize  to get that label now for everyone in your population?  And again, there are usually two different types"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 431.92,
+            "end": 445.16,
+            "text": " of approaches.  The first approach is to come up with some simple rule  to try to then extrapolate to everyone.  For example, if they have a diabetes medication  or an abnormal lab test result, that"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 445.16,
+            "end": 461.44,
+            "text": " would be an example of a rule.  And then you could then apply that to everyone.  But even those rules can be really tricky to derive.  I'll show you some examples of that in just a moment.  And as we know, machine learning"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 461.44,
+            "end": 472.14,
+            "text": " is sometimes good as an alternative  for coming up with a rule.  So there's often now a second approach  that's being more and more commonly used  in the literature, which is to actually use machine learning"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 472.14,
+            "end": 483.76,
+            "text": " itself to derive the labels.  And this is a bit subtle, because it's  machine learning for machine learning.  So I want to break that down for one second.  When you're trying to derive the labels, what you want to know"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 483.76,
+            "end": 495.68,
+            "text": " is not at time t, what's going to happen at time t  plus w and onwards.  That's the original machine learning task  that we set out to solve.  But rather, given everything you know about the patient,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 495.68,
+            "end": 510.3,
+            "text": " including the future data, is this patient newly diagnosed  with diabetes in that window that I show in black there  between t plus w and onward?  So for example, this machine learning problem,  this new machine learning problem,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 510.3,
+            "end": 524.3,
+            "text": " could take as input lab test results and medications  and a whole bunch of other data.  And you then use the few examples  you labeled in step one to try to predict,  is this patient currently diabetic or not?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 524.3,
+            "end": 532.18,
+            "text": " You then use that model to extrapolate  to the whole population.  And now you have your outcome label.  It might be a little bit imperfect,  but hopefully it's much better than what"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 532.18,
+            "end": 543.3399999999999,
+            "text": " you could have gotten with a rule.  And then now using those outcome labels,  you solve your original machine learning problem.  Is that clear?  Any questions?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 543.3399999999999,
+            "end": 552.86,
+            "text": " Yeah.  How do you evaluate yourself then  if you have these labels that were produced with machine  learning which are probabilistic?  So that's where this first step is really important."
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 552.86,
+            "end": 565.8,
+            "text": " You've got to get ground truth somehow.  And of course, once you get that ground truth,  you create a train and validate set of that ground truth.  You run your machine learning algorithm and train one.  You look at its performance metrics"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 565.8,
+            "end": 578.66,
+            "text": " on that validate set for the label prediction problem.  And that's how you get confidence in it.  But let's try to break this down a little bit.  First of all, what does this chart review step look like?  Well, if it's an electronic health record system, what"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 578.66,
+            "end": 588.98,
+            "text": " you often do is you will pull up Epic or Cerner  or whatever the commercial EHR system is.  And you'll actually start looking at the patient data.  You'll read notes written by previous doctors  about this patient."
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 588.98,
+            "end": 598.94,
+            "text": " You'll look at their blood test results  across time, medications that they're on.  And from that, you can usually tell a pretty coherent story  of what's going on with the patient.  Of course, even better, the best way to get data"
+        },
+        {
+            "number": "lec5",
+            "title": "part.000.mp3",
+            "start": 598.94,
+            "end": 600.14,
+            "text": " is to do a perspective study."
+        }
+    ],
+    "text": " So today, we'll be continuing along the theme of risk stratification. I'll spend the first half to 2 thirds of today's lecture continuing where we left off last week before the discussion. I'll talk about how does one drive the labels that one uses within a supervised machine learning approach. I'll continue talking about how one evaluates risk stratification models. And then I'll talk about some of the subtleties that arise when you want to use machine learning for health care, specifically for risk stratification. And I think that's going to be one of the most interesting parts of today's lecture. In the last third of today's lecture, I'll be talking about how one can rethink the supervised machine learning problem not to be a classification problem, but be something closer to a regression problem. And when one now thinks about not will someone, for example, develop diabetes within one to three years from now, but when precisely will they develop diabetes, so the time to event, then one has to start to really think very carefully about the censoring issues that I alluded to last week. And so I'll formalize those notions in the language of survival modeling. And I'll talk about how one can do maximum likelihood estimation in that setting and how one should do a validation in that setting. OK. So in our lecture last week, I gave you this example of risk stratification for type 2 diabetes. The goal, just to remind you, was as follows. 25% of people in the United States have undiagnosed type 2 diabetes. If we could take health insurance claims data that's available for everyone who has health insurance and use that to predict who in the near term, next one to three years, is likely to be newly diagnosed with type 2 diabetes, then we could use that to risk stratify patient population. We could use that then to figure out who's most at risk, do interventions for those patients to try to get them diagnosed and get them started on treatment if relevant. OK. But what I didn't talk much about was where did those labels come from? How do we know that someone had a diabetes onset in that window that I show up there on the top? So what are the answers? All of you should have read the paper by Rozavian et al. So you should hopefully have some ideas, thoughts. Hint, it was in supplementary material. How did we define a positive case in that paper? Yep? The drugs they were on? Drugs they were on. OK, yeah. So for example, metformin, glucose, sorry, insulin. I think insulin includes metformin. Metformin is a tricky case, because metformin is often used for alternative indications. But there are many medications, such as insulin, which are used pretty exclusively for treating diabetes. And so you can look to see, does a patient have a record of taking one of these diabetic medications in that window that we're using to define the outcome? If you see a record of a medication, you might conjecture this patient probably has diabetes. But what about if they don't have any medication listed in that time window? What could you conclude then? Any ideas? Yeah? If you look at the HbA1c value, and you know the normal range, and if you see that frequently, it's about like 75 or 70. So you're giving me an alternative approach, not looking at medications, but looking at laboratory test results. Look at their HbA1c results, which measures approximately an average of three month glucose values. And if that's out of range, then they're diabetic. And that's, in fact, usually used as a definition of diabetes. But that didn't answer my original question. Why is just looking at diabetic medications not enough? Yeah? Some of the diabetic medications can be used to treat other conditions. Sometimes there's ambiguity in diabetic medications. But we sort of dealt with that already by trying to choose an unambiguous set. What are other reasons? Just starting with your medicine and the onset of diabetes could be kind of very extended, like if not diabetes. Oh, that's a really interesting point. Not the one I was thinking about, but I like it. Which is that a patient might have been diagnosed with type 2 diabetes, but they, for whatever reason, in that communication between provider and patient, they decided we're not going to start treatment yet. So they might not yet be on treatment for diabetes, yet the whole health care system might be very well aware that the patient is diabetic, in which case doing any of these interventions for that patient might be irrelevant. Yep, another reason. So a lot of people are just not diagnosed with diabetes, so they have it. So one label means that they have diabetes, and the other label is a combination of people who have and who don't have diabetes. So the point was, often you just might not be diagnosed for diabetes. That, unfortunately, is not something that we're going to be able to solve here. It is an issue, but we have no solution for it. No, rather, there's a different point that I want to get at, which is that this data has biases in it. So even if a patient is on a diabetes medication, for whatever reason, maybe they are paying cash for those medications. They're paying cash for those medications, then there's not going to be any record for the patient taking those medications in the health insurance claims, because the health insurer didn't have to pay for it. But the reason that you gave is also a very interesting reason, and both of them are valid. So for all of these reasons, just looking at the medications alone is going to be insufficient. And as was just suggested a moment ago, looking at other indicators, like, for example, does the patient have an abnormal blood glucose value or HA1C value, would also provide information. So it's non-trivial, right? And part of what you're going to be doing in your next problem set, problem set two, is going to be thinking through, how does one actually do this cohort construction? Not just what is your inclusion exclusion criteria, but also how do you really derive those labels from that data set? Now, traditionally, the traditional answer to this has two steps to it. Step one is to actually manually label some patients. So you take a few hundred patients, and you go through their data. You actually look at their data and decide, is this patient diabetic, or are they not diabetic? And the reason why you have to do that is because often what you might think of as obvious, like, oh, if they're on diabetes medication, they're diabetic, has flaws to it. And until you really dig down and look at the data, you might not recognize that that criteria has a flaw in it. So that chart review is really an essential part of this process. Then the second step is, how do you generalize to get that label now for everyone in your population? And again, there are usually two different types of approaches. The first approach is to come up with some simple rule to try to then extrapolate to everyone. For example, if they have a diabetes medication or an abnormal lab test result, that would be an example of a rule. And then you could then apply that to everyone. But even those rules can be really tricky to derive. I'll show you some examples of that in just a moment. And as we know, machine learning is sometimes good as an alternative for coming up with a rule. So there's often now a second approach that's being more and more commonly used in the literature, which is to actually use machine learning itself to derive the labels. And this is a bit subtle, because it's machine learning for machine learning. So I want to break that down for one second. When you're trying to derive the labels, what you want to know is not at time t, what's going to happen at time t plus w and onwards. That's the original machine learning task that we set out to solve. But rather, given everything you know about the patient, including the future data, is this patient newly diagnosed with diabetes in that window that I show in black there between t plus w and onward? So for example, this machine learning problem, this new machine learning problem, could take as input lab test results and medications and a whole bunch of other data. And you then use the few examples you labeled in step one to try to predict, is this patient currently diabetic or not? You then use that model to extrapolate to the whole population. And now you have your outcome label. It might be a little bit imperfect, but hopefully it's much better than what you could have gotten with a rule. And then now using those outcome labels, you solve your original machine learning problem. Is that clear? Any questions? Yeah. How do you evaluate yourself then if you have these labels that were produced with machine learning which are probabilistic? So that's where this first step is really important. You've got to get ground truth somehow. And of course, once you get that ground truth, you create a train and validate set of that ground truth. You run your machine learning algorithm and train one. You look at its performance metrics on that validate set for the label prediction problem. And that's how you get confidence in it. But let's try to break this down a little bit. First of all, what does this chart review step look like? Well, if it's an electronic health record system, what you often do is you will pull up Epic or Cerner or whatever the commercial EHR system is. And you'll actually start looking at the patient data. You'll read notes written by previous doctors about this patient. You'll look at their blood test results across time, medications that they're on. And from that, you can usually tell a pretty coherent story of what's going on with the patient. Of course, even better, the best way to get data is to do a perspective study."
+}

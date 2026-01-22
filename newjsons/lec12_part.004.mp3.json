@@ -1,0 +1,355 @@
+{
+    "chunks": [
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 0.0,
+            "end": 10.76,
+            "text": " correlate these with drug response,  and can use this as a discovery tool  for identifying new aspects of pathology  predictive of which patients will respond best.  And then we can combine these features into models."
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 10.76,
+            "end": 21.28,
+            "text": " This is sort of a ridiculous example  because they're so different.  But this would be one example where  the output of the model, and this is totally fake data,  but I think it's just to get to the point,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 21.28,
+            "end": 36.480000000000004,
+            "text": " is here the color indicates the treatment, where green would  be the immunotherapy, red would be the traditional therapy,  and the goal is to build a model to predict which patients  actually benefit from the therapy.  So this may be an easy question, but what do you"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 36.480000000000004,
+            "end": 45.04,
+            "text": " think, if the model's working, what  would the title of the graph on the right  be versus the graph on the left?  These are the ways of classifying patients  with our model."
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 45.04,
+            "end": 59.64,
+            "text": " And the classifications are going  to be responder class or non-responder class.  And the color indicates the drug.  So the drug works, or does it work?  That's right."
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 59.64,
+            "end": 67.92,
+            "text": " But what's the output of the model?  But you're right.  The interpretation of these graphs  is drug works, drug doesn't work.  It's kind of a tricky question, right?"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 67.92,
+            "end": 77.56,
+            "text": " But what is our model trying to predict?  What?  AUDIENCE 2 Like whether the person's going to die or not,  or it looks like the likelihood of death  is just not as high on the right."
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 77.56,
+            "end": 87.96000000000001,
+            "text": " I think the overall likelihood is the same on the two graphs,  right versus left.  You don't know how many patients are in each arm,  but I think the one piece on it, so green  is experimental treatment, red is conventional treatment."
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 87.96000000000001,
+            "end": 100.42,
+            "text": " Maybe I already said that.  And it's sort of like a read my mind type question.  Here the output of the model would be responder  to the drug would be the right class of patients.  And the left class of patients would be non-responder"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 100.42,
+            "end": 112.0,
+            "text": " to the drug.  So you're not actually saying anything about prognosis,  but you're saying that I'm predicting  that if you're in the right population of patients,  you will benefit from the blue drug."
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 112.0,
+            "end": 122.58,
+            "text": " And then you actually see that on this right population  of patients, the blue drug does really well.  And then the red drug are patients  who we thought we predicted would benefit from the drug,  but because it's an experiment, we"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 122.58,
+            "end": 130.42000000000002,
+            "text": " didn't give them the right drug.  And in fact, they did a whole lot worse.  Whereas the one on the left, we're  saying you don't benefit from the drug,  and they truly don't benefit from the drug."
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 130.42000000000002,
+            "end": 141.74,
+            "text": " So this is the way of using an output of a model  to predict drug response, and then visualizing  whether it actually works.  And it's kind of like the example I talked about before,  but here's a real version of it."
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 141.74,
+            "end": 158.66,
+            "text": " And you can learn this directly using machine learning  to try to say, I want to find patients who actually benefit  the most from a drug.  And then in terms of how do we validate  our models are correct, I mean, we have two different ways."
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 158.66,
+            "end": 170.68,
+            "text": " One is do stuff like that.  So we build a model that says, respond to drug,  don't respond to a drug.  And then we plot the Kappemeier curves.  If it's image analysis stuff, we ask pathologists"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 170.68,
+            "end": 188.22,
+            "text": " to hand label many cells.  And we take the consensus of pathologists  as our ground truth and go from there.  The way you're presenting it, it makes  it sound like all the data comes from pathology images."
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 188.22,
+            "end": 204.29999999999998,
+            "text": " But in reality, people look at single nucleotide polymorphisms  or gene sequences or all kinds of clinical data as well.  So how do you get those?  Yeah.  I mean, the beauty of the pathology data"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 205.06,
+            "end": 219.82000000000002,
+            "text": " is it's always available.  So that's why a lot of the stuff we do is focused on that.  Because every clinical trial patient  has treatment data, outcome data, and pathology images.  So it's like, we can really do this at scale pretty fast."
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 219.82000000000002,
+            "end": 230.14000000000001,
+            "text": " A lot of the other stuff is things like gene expression.  Many people are collecting them.  And it's important to compare these to baselines  or to integrate them.  I mean, two things."
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 230.14000000000001,
+            "end": 244.14000000000001,
+            "text": " One is compare it to it as a baseline.  What can we predict in terms of responder, non-responder,  using just the pathology images versus using just gene  expression data versus combining them?  And that would just be increasing the input feature"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 244.14000000000001,
+            "end": 252.18,
+            "text": " space.  Part of the input feature space comes from the images.  Part of it comes from gene expression data.  Then you use machine learning to focus  on the most important characteristics"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 252.18,
+            "end": 263.47999999999996,
+            "text": " and predict outcome.  And the other is if you want to sort of prioritize,  like use pathology as a baseline because it's  available on everyone.  But then like an adjuvant test that costs another $1,000"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 263.47999999999996,
+            "end": 273.26,
+            "text": " and might take another two weeks,  how much does that add to the prediction?  And that would be another way.  So I think it is important.  But a lot of our technology development, our platform,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 273.26,
+            "end": 284.58,
+            "text": " is focused around how do we most effectively use pathology  and can certainly add in gene expression data.  I'm actually going to talk about that next, one way of doing it.  Because it's a very natural synergy  because they tell you very different things."
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 287.26,
+            "end": 298.82,
+            "text": " So here's one example of integrating just kind  of relevant to that question, gene expression data  with image data, where the cancer genome analysis,  and this is all public.  So they have pathology images, RNA data, clinical outcomes."
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 298.82,
+            "end": 309.46,
+            "text": " They don't have the greatest treatment data.  But it's a great place for method development  for sort of ML in cancer and including pathology type  analyses.  So this is a case of melanoma."
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 309.46,
+            "end": 321.97999999999996,
+            "text": " We've trained a model to identify cancer and stroma  and all the different cells.  And then we extract, as you saw, sort of hundreds of features.  And then we can rank the features here  by their correlation with survival."
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 321.97999999999996,
+            "end": 332.29999999999995,
+            "text": " So now we're mapping from pathology images  to outcome data.  And we find, just in a totally data-driven way,  that there's like some small set of 15 features or so  highly associated with survival."
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 332.29999999999995,
+            "end": 342.62,
+            "text": " The rest aren't.  And the top ranking one is an immune cell feature,  increased area of stromal plasma cells  that are associated with increased survival.  And this was an analysis that was really just linking"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 342.62,
+            "end": 353.58,
+            "text": " the images with outcome.  And then we can ask, well, what are the genes  underlying this pathology?  So pathology is telling you about cells and tissues.  RNAs are telling you about the actual transcriptional"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 353.58,
+            "end": 365.42,
+            "text": " landscape of what's going on underneath.  And then we can rank all the genes in the genome  just by their correlation with this quantitative phenotype  we're measuring on the pathology images.  And here are all the genes ranked from 0 to 20,000."
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 365.42,
+            "end": 378.18,
+            "text": " And again, we see a small set that we're  thresholding at a correlation of 0.4,  strongly associated with the pathologic phenotype  we're measuring.  And then we discover these sets of genes"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 378.18,
+            "end": 392.42,
+            "text": " that are known to be highly enriched in immune cell  genes, which is some form of validation  that we're measuring what we think we're measuring.  But also, this sets of genes are potentially new drug targets,  new diagnostics, et cetera, that was uncovered"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 392.42,
+            "end": 405.29999999999995,
+            "text": " by going from clinical outcomes to pathology data  to the underlying RNA signature.  And then the beauty of the approach we're working on  is it's super scalable.  And in theory, you could apply it"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 405.29999999999995,
+            "end": 422.7,
+            "text": " to all of TCGA or other data sets  and apply it across cancer types and do things  like automatically find artifacts  in all of the slides and do this in a broad way.  And then the most interesting part, potentially,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 422.7,
+            "end": 435.3,
+            "text": " is analyzing the outputs of the models  and how they correlate with things like drug response  or underlying molecular profiles.  And this is really the process we're working on  is how do we go from images to new ways of measuring disease"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 435.3,
+            "end": 448.38,
+            "text": " pathology.  And in summary, a lot of the technology development  that I think is most important today for getting ML  to work really well in the real world for applications  in medicine is a lot about being super thoughtful about building"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 448.38,
+            "end": 456.42,
+            "text": " the right training data set and how  to do that in a scalable way and even in a way that  incorporates machine learning, which  is what I was talking about before, intelligently  picking patches."
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 456.42,
+            "end": 468.40000000000003,
+            "text": " But that sort of concept applies everywhere.  So I think there's almost more room for innovation  on the defining the training data set side  than on the predictive modeling side.  And then putting the two together"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 468.40000000000003,
+            "end": 479.2,
+            "text": " is incredibly important.  And for the kind of work we're doing,  there's already such great advances in image processing.  A lot of it's about engineering and scalability  as well as rigorous validation."
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 479.2,
+            "end": 491.88,
+            "text": " And then how do we connect it with underlying molecular data  as well as clinical outcome data versus trying  to solve a lot of the core vision tasks, which there's  already just been incredible progress over the past couple  years."
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 491.88,
+            "end": 501.2,
+            "text": " And in terms of in our world, things  we think a lot about, not just the technology  and putting together the right data sets,  but also how do we work with regulators?  How do we make strong business cases for partners"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 501.2,
+            "end": 514.56,
+            "text": " working with to actually change what they're doing  to incorporate some of these new approaches that will really  bring benefits to patients around quality and accuracy  in their diagnosis?  So in summary, and I know you have to go in four minutes,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 514.56,
+            "end": 526.62,
+            "text": " this has been a longstanding problem.  There's nothing new about trying to apply AI to diagnostics  or to vision tasks.  But there are some really big differences  in the past five years that even in my short career,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 526.62,
+            "end": 536.88,
+            "text": " I've seen a sea change in this field.  One is availability of digital data.  It's now much cheaper to generate  lots of images at scale.  But even more important, I think,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 536.88,
+            "end": 549.98,
+            "text": " are the last two, which is access  to large-scale computing resources  is a game changer for anyone with access  to cloud computing or large computing resources.  Just we all have access to sort of arbitrary compute today"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 550.0600000000001,
+            "end": 561.7,
+            "text": " and 10 years ago.  That was a huge limitation in this field,  as well as these really major algorithmic advances,  particularly in deep CNNs for vision.  And in general, AI works extremely well"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 561.7,
+            "end": 574.9,
+            "text": " when problems can be defined to get  the right type of training data, access large-scale computing,  as well as implement things like deep CNNs that work really well.  And it sort of fails everywhere else, which  is probably 98% of things."
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 574.9,
+            "end": 589.06,
+            "text": " But if you can create a problem where the algorithms actually  work, you can have lots of data to train on,  they can succeed really well.  And this sort of vision-based AI-powered pathology  is broadly applicable across really all image-based tasks"
+        },
+        {
+            "number": "lec12",
+            "title": "part.004.mp3",
+            "start": 589.06,
+            "end": 601.78,
+            "text": " in pathology.  It does enable integration with things like omics data,  genomics, transcriptomics, SNP data, et cetera.  And in the near future, we think this  will be incorporated into clinical practice."
+        }
+    ],
+    "text": " correlate these with drug response, and can use this as a discovery tool for identifying new aspects of pathology predictive of which patients will respond best. And then we can combine these features into models. This is sort of a ridiculous example because they're so different. But this would be one example where the output of the model, and this is totally fake data, but I think it's just to get to the point, is here the color indicates the treatment, where green would be the immunotherapy, red would be the traditional therapy, and the goal is to build a model to predict which patients actually benefit from the therapy. So this may be an easy question, but what do you think, if the model's working, what would the title of the graph on the right be versus the graph on the left? These are the ways of classifying patients with our model. And the classifications are going to be responder class or non-responder class. And the color indicates the drug. So the drug works, or does it work? That's right. But what's the output of the model? But you're right. The interpretation of these graphs is drug works, drug doesn't work. It's kind of a tricky question, right? But what is our model trying to predict? What? AUDIENCE 2 Like whether the person's going to die or not, or it looks like the likelihood of death is just not as high on the right. I think the overall likelihood is the same on the two graphs, right versus left. You don't know how many patients are in each arm, but I think the one piece on it, so green is experimental treatment, red is conventional treatment. Maybe I already said that. And it's sort of like a read my mind type question. Here the output of the model would be responder to the drug would be the right class of patients. And the left class of patients would be non-responder to the drug. So you're not actually saying anything about prognosis, but you're saying that I'm predicting that if you're in the right population of patients, you will benefit from the blue drug. And then you actually see that on this right population of patients, the blue drug does really well. And then the red drug are patients who we thought we predicted would benefit from the drug, but because it's an experiment, we didn't give them the right drug. And in fact, they did a whole lot worse. Whereas the one on the left, we're saying you don't benefit from the drug, and they truly don't benefit from the drug. So this is the way of using an output of a model to predict drug response, and then visualizing whether it actually works. And it's kind of like the example I talked about before, but here's a real version of it. And you can learn this directly using machine learning to try to say, I want to find patients who actually benefit the most from a drug. And then in terms of how do we validate our models are correct, I mean, we have two different ways. One is do stuff like that. So we build a model that says, respond to drug, don't respond to a drug. And then we plot the Kappemeier curves. If it's image analysis stuff, we ask pathologists to hand label many cells. And we take the consensus of pathologists as our ground truth and go from there. The way you're presenting it, it makes it sound like all the data comes from pathology images. But in reality, people look at single nucleotide polymorphisms or gene sequences or all kinds of clinical data as well. So how do you get those? Yeah. I mean, the beauty of the pathology data is it's always available. So that's why a lot of the stuff we do is focused on that. Because every clinical trial patient has treatment data, outcome data, and pathology images. So it's like, we can really do this at scale pretty fast. A lot of the other stuff is things like gene expression. Many people are collecting them. And it's important to compare these to baselines or to integrate them. I mean, two things. One is compare it to it as a baseline. What can we predict in terms of responder, non-responder, using just the pathology images versus using just gene expression data versus combining them? And that would just be increasing the input feature space. Part of the input feature space comes from the images. Part of it comes from gene expression data. Then you use machine learning to focus on the most important characteristics and predict outcome. And the other is if you want to sort of prioritize, like use pathology as a baseline because it's available on everyone. But then like an adjuvant test that costs another $1,000 and might take another two weeks, how much does that add to the prediction? And that would be another way. So I think it is important. But a lot of our technology development, our platform, is focused around how do we most effectively use pathology and can certainly add in gene expression data. I'm actually going to talk about that next, one way of doing it. Because it's a very natural synergy because they tell you very different things. So here's one example of integrating just kind of relevant to that question, gene expression data with image data, where the cancer genome analysis, and this is all public. So they have pathology images, RNA data, clinical outcomes. They don't have the greatest treatment data. But it's a great place for method development for sort of ML in cancer and including pathology type analyses. So this is a case of melanoma. We've trained a model to identify cancer and stroma and all the different cells. And then we extract, as you saw, sort of hundreds of features. And then we can rank the features here by their correlation with survival. So now we're mapping from pathology images to outcome data. And we find, just in a totally data-driven way, that there's like some small set of 15 features or so highly associated with survival. The rest aren't. And the top ranking one is an immune cell feature, increased area of stromal plasma cells that are associated with increased survival. And this was an analysis that was really just linking the images with outcome. And then we can ask, well, what are the genes underlying this pathology? So pathology is telling you about cells and tissues. RNAs are telling you about the actual transcriptional landscape of what's going on underneath. And then we can rank all the genes in the genome just by their correlation with this quantitative phenotype we're measuring on the pathology images. And here are all the genes ranked from 0 to 20,000. And again, we see a small set that we're thresholding at a correlation of 0.4, strongly associated with the pathologic phenotype we're measuring. And then we discover these sets of genes that are known to be highly enriched in immune cell genes, which is some form of validation that we're measuring what we think we're measuring. But also, this sets of genes are potentially new drug targets, new diagnostics, et cetera, that was uncovered by going from clinical outcomes to pathology data to the underlying RNA signature. And then the beauty of the approach we're working on is it's super scalable. And in theory, you could apply it to all of TCGA or other data sets and apply it across cancer types and do things like automatically find artifacts in all of the slides and do this in a broad way. And then the most interesting part, potentially, is analyzing the outputs of the models and how they correlate with things like drug response or underlying molecular profiles. And this is really the process we're working on is how do we go from images to new ways of measuring disease pathology. And in summary, a lot of the technology development that I think is most important today for getting ML to work really well in the real world for applications in medicine is a lot about being super thoughtful about building the right training data set and how to do that in a scalable way and even in a way that incorporates machine learning, which is what I was talking about before, intelligently picking patches. But that sort of concept applies everywhere. So I think there's almost more room for innovation on the defining the training data set side than on the predictive modeling side. And then putting the two together is incredibly important. And for the kind of work we're doing, there's already such great advances in image processing. A lot of it's about engineering and scalability as well as rigorous validation. And then how do we connect it with underlying molecular data as well as clinical outcome data versus trying to solve a lot of the core vision tasks, which there's already just been incredible progress over the past couple years. And in terms of in our world, things we think a lot about, not just the technology and putting together the right data sets, but also how do we work with regulators? How do we make strong business cases for partners working with to actually change what they're doing to incorporate some of these new approaches that will really bring benefits to patients around quality and accuracy in their diagnosis? So in summary, and I know you have to go in four minutes, this has been a longstanding problem. There's nothing new about trying to apply AI to diagnostics or to vision tasks. But there are some really big differences in the past five years that even in my short career, I've seen a sea change in this field. One is availability of digital data. It's now much cheaper to generate lots of images at scale. But even more important, I think, are the last two, which is access to large-scale computing resources is a game changer for anyone with access to cloud computing or large computing resources. Just we all have access to sort of arbitrary compute today and 10 years ago. That was a huge limitation in this field, as well as these really major algorithmic advances, particularly in deep CNNs for vision. And in general, AI works extremely well when problems can be defined to get the right type of training data, access large-scale computing, as well as implement things like deep CNNs that work really well. And it sort of fails everywhere else, which is probably 98% of things. But if you can create a problem where the algorithms actually work, you can have lots of data to train on, they can succeed really well. And this sort of vision-based AI-powered pathology is broadly applicable across really all image-based tasks in pathology. It does enable integration with things like omics data, genomics, transcriptomics, SNP data, et cetera. And in the near future, we think this will be incorporated into clinical practice."
+}

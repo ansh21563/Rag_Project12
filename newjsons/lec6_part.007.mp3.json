@@ -1,0 +1,327 @@
+{
+    "chunks": [
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 0.0,
+            "end": 14.32,
+            "text": " and time series.  So the x-axis is for that single patient,  their heart beats across time.  The y-axis is just showing the RR  interval between the previous beat and the current beat."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 14.32,
+            "end": 30.52,
+            "text": " And down here in the bottom is the ground truth  of whether the patient is assessed  to have to be in to have a normal rhythm  or atrial fibrillation, which is noted  as this higher value here."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 30.52,
+            "end": 41.519999999999996,
+            "text": " So these are AF rhythms.  This is normal.  This is AF again.  And what you can see is that the RR interval actually  gets you pretty far."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 41.519999999999996,
+            "end": 51.879999999999995,
+            "text": " You notice how it's pretty high up here.  Suddenly, it drops.  The RR interval drops for a while.  And that's when the patient has AF.  Then it goes up again."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 51.879999999999995,
+            "end": 62.120000000000005,
+            "text": " Then it drops again, and so on.  And so it's not deterministic, the relationship.  There's definitely a lot of signal just from that.  So you might say, OK, well, what's  the next thing we could do to try to clean up"
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 62.120000000000005,
+            "end": 81.36,
+            "text": " the signal a little bit more?  So flash backwards from 2001 to 1970 here at MIT, studied by,  actually, this is not MIT.  This is somewhere else, sorry.  But still 1970, where they used a Markov model,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 81.36,
+            "end": 97.4,
+            "text": " very similar to the Markov models we were just  talking about in the previous example,  to model what a sequence of normal RR intervals  looks like versus what a sequence of abnormal,  for example, AF RR intervals looks like."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 97.4,
+            "end": 110.52,
+            "text": " And in that way, one can recognize  that for any one observation of an RR interval,  it might not by itself be perfectly predictive.  But if you look at a sequence of them  for a patient with atrial fibrillation,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 110.52,
+            "end": 121.11999999999999,
+            "text": " there is some common pattern to it.  And one can detect it by just looking  at the likelihood of that sequence  under each of these two different models, normal  and abnormal."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 121.11999999999999,
+            "end": 138.35999999999999,
+            "text": " And that did pretty well, even better  than the previous approaches for predicting atrial fibrillation.  OK, this is the paper I wanted to say from MIT, now 1991.  This is also from Roger Mark's group.  Now this is a neural network-based approach,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 138.35999999999999,
+            "end": 147.0,
+            "text": " where it says, OK, we're going to take  a bunch of these things.  We're going to derive a bunch of these intervals.  And then we're going to throw that  through a black box supervised machine learning"
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 147.0,
+            "end": 164.04000000000002,
+            "text": " algorithm to predict whether the patient has AF or not.  So these are very, first of all, there's  some simple approaches here that work reasonably well.  Using neural networks in this domain is not a new thing.  But where are we as a field?"
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 164.04000000000002,
+            "end": 173.92000000000002,
+            "text": " So as I mentioned, there was this competition last year.  And what I'm showing you here, the citation  is from one of the winning approaches.  This winning approach really brings the two paradigms  together."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 173.92000000000002,
+            "end": 191.52,
+            "text": " It extracts a large number of expert-derived features,  so shown here.  And these are exactly the types of things  you might think, like proportion, median RR  interval of regular rhythms, max RR irregularity measure,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 191.52,
+            "end": 205.12,
+            "text": " and just a whole range of different things  that you can imagine manually deriving from the data.  And you throw all of these features  into a machine learning algorithm, maybe  random forest, maybe neural network, doesn't matter."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 205.12,
+            "end": 217.0,
+            "text": " And what you get out is a slightly better algorithm  than what if you had just come up  with a simple rule on your own.  So that was the winning algorithm then.  And in the summary paper, they conjecture that, well, maybe"
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 217.0,
+            "end": 228.64,
+            "text": " it's the case that they'd expected  that convolutional neural networks would win.  And they were surprised that none of the winning solutions  involved convolutional neural networks.  And they conjecture that maybe the reason why"
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 228.64,
+            "end": 245.76,
+            "text": " is because maybe with these 8,000 patients that they had,  it just wasn't enough to give the more complex models  advantage.  So flip forward now to this year and the article  that you read in your readings in Nature Medicine,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 245.76,
+            "end": 260.2,
+            "text": " where the Stanford group now showed  how a convolutional neural network approach, which  is in many ways extremely naive, all it does  is it takes the sequence data in,  makes no attempt at trying to understand"
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 260.2,
+            "end": 271.36,
+            "text": " the underlying physiology, and just predicts from that,  can do really, really well.  And so there are a couple of differences  that I want to emphasize to the previous work.  First, the sensor is different."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 271.36,
+            "end": 285.6,
+            "text": " Whereas the previous work used this live core sensor,  in this paper from Stanford, they're  using a different sensor called the zeal patch, which  is attached to the human body.  And conceivably, much less noisy."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 285.6,
+            "end": 294.8,
+            "text": " So that's one big difference.  The second big difference is that there's dramatically more  data.  Instead of 8,000 patients to train from,  now they have over 90,000 records"
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 294.8,
+            "end": 308.16,
+            "text": " from 50,000 different patients to train from.  The third major difference is that now,  rather than just trying to classify  into four categories, normal, abnormal, other, or noisy,  now we're going to try to classify"
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 308.16,
+            "end": 320.15999999999997,
+            "text": " into 14 different categories.  We're, in essence, breaking apart that other class  into much finer-grained detail of different types  of abnormal rhythms.  And so here are some of those other abnormal rhythms,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 320.15999999999997,
+            "end": 338.36,
+            "text": " things like complete heart block and a bunch of other names  I can't pronounce.  And from each one of these, they gathered a lot of data.  And that actually did so.  It's not described in the paper, but I've talked to the authors."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 338.36,
+            "end": 348.28000000000003,
+            "text": " And they gathered this data in a very interesting way.  So they did their training iteratively.  They looked to see where their errors were.  And then they went and gathered more data from patients  with that subcategory."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 348.28000000000003,
+            "end": 362.48,
+            "text": " So many of these other categories  might be underrepresented in the general population,  but they actually gather a lot of patients  of that type in their data set for training purposes.  And so I think those three things"
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 362.48,
+            "end": 373.38,
+            "text": " ended up making a very big difference.  So what is their convolutional network?  Well, first of all, it's a 1D signal.  So it's a little bit different from the conv nets  you typically see in computer vision."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 373.38,
+            "end": 383.02,
+            "text": " And I'll show you an illustration  of that in the next slide.  It's a very deep model.  So it's 34 layers.  So the input comes in at the very top in this picture."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 383.02,
+            "end": 399.82,
+            "text": " It's passed through a number of layers.  Each layer consists of convolution followed  by rectified linear units.  And there is subsampling at every other layer  so that you go from a very wide signal, so a very long,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 399.82,
+            "end": 415.62,
+            "text": " I can't remember how long, one-second long signal,  summarized down into many smaller number of dimensions,  which you then have a sort of fully connected layer  at the bottom to do for your predictions.  And then they also have these shortcut connections,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 415.62,
+            "end": 426.86,
+            "text": " which allow you to pass information from earlier layers  down to the very end of the network,  or even into intermediate layers.  And for those of you who are familiar with residual networks  it's the same idea."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 426.86,
+            "end": 438.5,
+            "text": " So what is a 1D convolution?  Well, it looks a little bit like this.  So this is the signal.  I'm going to just approximate it by a bunch of 1's and 0's.  I'll say this is a 1, this is a 0, this is a 1, 1, and so on."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 441.62,
+            "end": 455.26,
+            "text": " A convolutional network has a filter associated with it.  That filter is then applied in a 1D model.  It's applied in a linear fashion.  It's just taking a dot product of the filter's values  with the values of the signal at each point in time."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 455.26,
+            "end": 467.14,
+            "text": " So it looks a little bit like this.  And this is what you get out.  So this is the convolution of a single filter  with the whole signal.  And the computation I did there, so for example,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 467.14,
+            "end": 483.21999999999997,
+            "text": " this first number came from taking  the dot product of the first three numbers, 1, 0, 1,  with the filter.  So it's 1 times 2 plus 3 times 0 plus 1 times 1, which is 3.  And so each of the subsequent numbers"
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 483.21999999999997,
+            "end": 496.7,
+            "text": " was computed in the same way.  And I usually have you figure out what this last one is,  but I'll leave that for you to do at home.  That's what a 1D convolution is.  And so they do this for lots of different filters."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 496.7,
+            "end": 508.32,
+            "text": " Each of those filters might be a varying lens.  And each of those will detect different types  of signal patterns.  And in this way, after having many layers of these,  one can, in an automatic fashion,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 508.32,
+            "end": 517.14,
+            "text": " extract many of the same types of signals  used in that earlier work, but also be much more flexible  to detect some new ones as well.  So I'm going to hold your question  because I need to wrap up."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 517.14,
+            "end": 527.62,
+            "text": " So in the paper that you read, they  talked about how they evaluated this.  And so I'm not going to go into much depth in it now.  I just want to point out two different metrics  that they used."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 527.62,
+            "end": 545.8199999999999,
+            "text": " The first metric they used was what they called  a sequential error metric.  What that looked at is you have this very long sequence  for each patient, and they labeled different one-second  intervals of that sequence into abnormal, normal, and so on."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 545.8199999999999,
+            "end": 554.5,
+            "text": " So you could ask, how good are we  at labeling each of the different points  along the sequence?  And that's a sequence metric.  The second metric is the set metric."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 554.5,
+            "end": 565.5,
+            "text": " And that looks at, if the patient has something  that's abnormal anywhere, did you detect it?  So that's, in essence, taking an OR  of each of those one-second intervals  and then looking across patients."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 565.5,
+            "end": 575.62,
+            "text": " And from a clinical diagnostic perspective,  the set metric might be most useful.  But then when you want to introspect and understand,  where is that happening?  Then the sequential metric is important."
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 575.62,
+            "end": 592.78,
+            "text": " And the key take-home message from their paper  is that if you compare the model's predictions,  this is, I think, using an F1 metric,  to what you would get from a panel of cardiologists,  these models are doing as well, if not better,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.007.mp3",
+            "start": 592.78,
+            "end": 601.7,
+            "text": " than these panels of cardiologists.  So this is extremely exciting.  Or variants of this is technology  that you're going to see."
+        }
+    ],
+    "text": " and time series. So the x-axis is for that single patient, their heart beats across time. The y-axis is just showing the RR interval between the previous beat and the current beat. And down here in the bottom is the ground truth of whether the patient is assessed to have to be in to have a normal rhythm or atrial fibrillation, which is noted as this higher value here. So these are AF rhythms. This is normal. This is AF again. And what you can see is that the RR interval actually gets you pretty far. You notice how it's pretty high up here. Suddenly, it drops. The RR interval drops for a while. And that's when the patient has AF. Then it goes up again. Then it drops again, and so on. And so it's not deterministic, the relationship. There's definitely a lot of signal just from that. So you might say, OK, well, what's the next thing we could do to try to clean up the signal a little bit more? So flash backwards from 2001 to 1970 here at MIT, studied by, actually, this is not MIT. This is somewhere else, sorry. But still 1970, where they used a Markov model, very similar to the Markov models we were just talking about in the previous example, to model what a sequence of normal RR intervals looks like versus what a sequence of abnormal, for example, AF RR intervals looks like. And in that way, one can recognize that for any one observation of an RR interval, it might not by itself be perfectly predictive. But if you look at a sequence of them for a patient with atrial fibrillation, there is some common pattern to it. And one can detect it by just looking at the likelihood of that sequence under each of these two different models, normal and abnormal. And that did pretty well, even better than the previous approaches for predicting atrial fibrillation. OK, this is the paper I wanted to say from MIT, now 1991. This is also from Roger Mark's group. Now this is a neural network-based approach, where it says, OK, we're going to take a bunch of these things. We're going to derive a bunch of these intervals. And then we're going to throw that through a black box supervised machine learning algorithm to predict whether the patient has AF or not. So these are very, first of all, there's some simple approaches here that work reasonably well. Using neural networks in this domain is not a new thing. But where are we as a field? So as I mentioned, there was this competition last year. And what I'm showing you here, the citation is from one of the winning approaches. This winning approach really brings the two paradigms together. It extracts a large number of expert-derived features, so shown here. And these are exactly the types of things you might think, like proportion, median RR interval of regular rhythms, max RR irregularity measure, and just a whole range of different things that you can imagine manually deriving from the data. And you throw all of these features into a machine learning algorithm, maybe random forest, maybe neural network, doesn't matter. And what you get out is a slightly better algorithm than what if you had just come up with a simple rule on your own. So that was the winning algorithm then. And in the summary paper, they conjecture that, well, maybe it's the case that they'd expected that convolutional neural networks would win. And they were surprised that none of the winning solutions involved convolutional neural networks. And they conjecture that maybe the reason why is because maybe with these 8,000 patients that they had, it just wasn't enough to give the more complex models advantage. So flip forward now to this year and the article that you read in your readings in Nature Medicine, where the Stanford group now showed how a convolutional neural network approach, which is in many ways extremely naive, all it does is it takes the sequence data in, makes no attempt at trying to understand the underlying physiology, and just predicts from that, can do really, really well. And so there are a couple of differences that I want to emphasize to the previous work. First, the sensor is different. Whereas the previous work used this live core sensor, in this paper from Stanford, they're using a different sensor called the zeal patch, which is attached to the human body. And conceivably, much less noisy. So that's one big difference. The second big difference is that there's dramatically more data. Instead of 8,000 patients to train from, now they have over 90,000 records from 50,000 different patients to train from. The third major difference is that now, rather than just trying to classify into four categories, normal, abnormal, other, or noisy, now we're going to try to classify into 14 different categories. We're, in essence, breaking apart that other class into much finer-grained detail of different types of abnormal rhythms. And so here are some of those other abnormal rhythms, things like complete heart block and a bunch of other names I can't pronounce. And from each one of these, they gathered a lot of data. And that actually did so. It's not described in the paper, but I've talked to the authors. And they gathered this data in a very interesting way. So they did their training iteratively. They looked to see where their errors were. And then they went and gathered more data from patients with that subcategory. So many of these other categories might be underrepresented in the general population, but they actually gather a lot of patients of that type in their data set for training purposes. And so I think those three things ended up making a very big difference. So what is their convolutional network? Well, first of all, it's a 1D signal. So it's a little bit different from the conv nets you typically see in computer vision. And I'll show you an illustration of that in the next slide. It's a very deep model. So it's 34 layers. So the input comes in at the very top in this picture. It's passed through a number of layers. Each layer consists of convolution followed by rectified linear units. And there is subsampling at every other layer so that you go from a very wide signal, so a very long, I can't remember how long, one-second long signal, summarized down into many smaller number of dimensions, which you then have a sort of fully connected layer at the bottom to do for your predictions. And then they also have these shortcut connections, which allow you to pass information from earlier layers down to the very end of the network, or even into intermediate layers. And for those of you who are familiar with residual networks it's the same idea. So what is a 1D convolution? Well, it looks a little bit like this. So this is the signal. I'm going to just approximate it by a bunch of 1's and 0's. I'll say this is a 1, this is a 0, this is a 1, 1, and so on. A convolutional network has a filter associated with it. That filter is then applied in a 1D model. It's applied in a linear fashion. It's just taking a dot product of the filter's values with the values of the signal at each point in time. So it looks a little bit like this. And this is what you get out. So this is the convolution of a single filter with the whole signal. And the computation I did there, so for example, this first number came from taking the dot product of the first three numbers, 1, 0, 1, with the filter. So it's 1 times 2 plus 3 times 0 plus 1 times 1, which is 3. And so each of the subsequent numbers was computed in the same way. And I usually have you figure out what this last one is, but I'll leave that for you to do at home. That's what a 1D convolution is. And so they do this for lots of different filters. Each of those filters might be a varying lens. And each of those will detect different types of signal patterns. And in this way, after having many layers of these, one can, in an automatic fashion, extract many of the same types of signals used in that earlier work, but also be much more flexible to detect some new ones as well. So I'm going to hold your question because I need to wrap up. So in the paper that you read, they talked about how they evaluated this. And so I'm not going to go into much depth in it now. I just want to point out two different metrics that they used. The first metric they used was what they called a sequential error metric. What that looked at is you have this very long sequence for each patient, and they labeled different one-second intervals of that sequence into abnormal, normal, and so on. So you could ask, how good are we at labeling each of the different points along the sequence? And that's a sequence metric. The second metric is the set metric. And that looks at, if the patient has something that's abnormal anywhere, did you detect it? So that's, in essence, taking an OR of each of those one-second intervals and then looking across patients. And from a clinical diagnostic perspective, the set metric might be most useful. But then when you want to introspect and understand, where is that happening? Then the sequential metric is important. And the key take-home message from their paper is that if you compare the model's predictions, this is, I think, using an F1 metric, to what you would get from a panel of cardiologists, these models are doing as well, if not better, than these panels of cardiologists. So this is extremely exciting. Or variants of this is technology that you're going to see."
+}

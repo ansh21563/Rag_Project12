@@ -1,0 +1,292 @@
+{
+    "chunks": [
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 0.0,
+            "end": 14.780000000000001,
+            "text": " to first of all, make sure you're setting up the problem  correctly, and that's always going to be important,  but then to think through what are  all of the factors that could influence the treatment  decisions, called the confounding factors."
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 14.780000000000001,
+            "end": 27.5,
+            "text": " And the traditional approach is one  would write down 10, 20 different things  and make sure that you do some of the analyses,  including the analyses I'll show you about in today  and Thursday's lecture, using those 10 or 20 variables."
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 27.5,
+            "end": 38.56,
+            "text": " But where this field is going is one of now  having high dimensional data.  So I talked about how you might have imaging data for x.  You might have the whole entire patient's electronic health  record data for x."
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 38.56,
+            "end": 50.760000000000005,
+            "text": " And the traditional approaches that the statistics community  used to work on no longer work in this high dimensional  setting.  And so in fact, it's actually a really interesting area  for research, one that my lab is starting"
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 50.760000000000005,
+            "end": 64.9,
+            "text": " to work on and many other labs, where we could ask,  how can we bring machine learning algorithms that  are designed to work with high dimensional data  to answer these types of causal inference questions?  And in today's lecture, you'll see one example of a reduction"
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 64.9,
+            "end": 83.14,
+            "text": " from causal inference to machine learning,  where we'll be able to use machine learning to answer  one of those causal inference questions.  So the first thing we need is some language in order  to formalize these notions."
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 83.14,
+            "end": 97.92,
+            "text": " So I will work within what's known as the Rubin-Diamond  causal model, where we talk about what  are called potential outcomes.  What would have happened under this world or that world?  We'll call y 0."
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 97.92,
+            "end": 125.34,
+            "text": " And often, it'll be denoted as y underscore 0.  Sometimes it'll be noted as y parentheses 0.  And sometimes it'll be denoted as y given x comma do y  equals 0.  And all three of these notations are equivalent."
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 125.34,
+            "end": 139.24,
+            "text": " So y 0 corresponds to what would have  happened to this individual if you gave them treatment to 0.  And y 1 is the potential outcome of what  would have happened to this individual  had you give them treatment 1."
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 139.24,
+            "end": 158.88,
+            "text": " So you can think about y 1 as being giving the blue pill  and y 0 as being given the red pill.  Now, once you can talk about these states of the world,  then one can start to ask questions of what's better,  the red pill or the blue pill?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 158.88,
+            "end": 171.22,
+            "text": " And one can formalize that notion mathematically  in terms of what's called the conditional average treatment  effect.  And this also goes by the name of individual treatment effect.  So it's going to take as input x i, which"
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 171.22,
+            "end": 186.16,
+            "text": " I'm going to denote as the data that you had  at baseline for the individual.  It's the covariates, the features for the individual.  And one wants to know, well, for this individual,  with what we know about them, what's"
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 186.16,
+            "end": 200.32,
+            "text": " the difference between giving them treatment 1  or giving them treatment 0?  So mathematically, that corresponds  to difference in expectations.  It's the difference in expectation of y 1 from y 0."
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 200.32,
+            "end": 216.84,
+            "text": " Now, the reason why I'm calling this an expectation  is because I'm not going to assume that y 1 and y 0  are deterministic.  Because maybe there's some bad luck component.  Like, maybe a medication usually works for this type of person."
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 216.84,
+            "end": 231.92000000000002,
+            "text": " But with a flip of a coin, sometimes it doesn't work.  And so that's the randomness that I'm referring to when  I talk about probability over y 1 given x i.  And so the CATE looks at the difference in those two  expectations."
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 231.92000000000002,
+            "end": 250.44,
+            "text": " And then one can now talk about what the average treatment  effect is, which is the difference between those two.  So the average treatment effect is now the expectation of,  I'll say, expectation of the CATE  over the distribution of people, p of x."
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 254.72,
+            "end": 265.32,
+            "text": " Now, we're going to go through this four different ways  in the next 10 minutes.  And then you're going to go over it five more ways  during your homework assignment.  And you'll go over it two more ways on Friday in recitation."
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 265.32,
+            "end": 281.74,
+            "text": " So if you don't get it just yet, stay with me.  You'll get it by the end of this week.  Now, in the data that you observe,  all you see is, for an individual,  all you see is what happened under one of the interventions."
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 281.74,
+            "end": 298.88,
+            "text": " So for example, if the i-th individual in your data set  received treatment t i equals 1, then what you observe,  y i is the potential outcome y 1.  On the other hand, if the individual in your data set  received treatment t i equals 0, then"
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 298.88,
+            "end": 314.15999999999997,
+            "text": " what you observe for that individual  is the potential outcome y 0.  So that's the observed factual outcome.  But one could also talk about the counterfactual  of what would have happened to this person"
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 314.15999999999997,
+            "end": 329.47999999999996,
+            "text": " had the opposite treatment been done for them.  And notice that I just swapped each t i for 1 minus t i  and so on.  Now, the key challenge in this field is that in your data set,  you only observe the factual outcomes."
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 329.47999999999996,
+            "end": 342.14,
+            "text": " And when you want to reason about the counterfactual,  that's where you have to impute this unobserved  counterfactual outcome.  And that is known as the fundamental problem  of causal inference, that we only"
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 342.14,
+            "end": 354.42,
+            "text": " observe one of the two outcomes for any individual  in the data set.  So let's look at a very simple example.  Here, individuals are characterized  by just one feature, their age."
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 354.42,
+            "end": 366.58000000000004,
+            "text": " And these two curves that I'm showing you  are the potential outcomes of what  would happen to this individual's blood pressure  if you gave them treatment 0, which  is the blue curve, versus treatment 1,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 366.58000000000004,
+            "end": 386.52000000000004,
+            "text": " which is the red curve.  So let's dig in a little bit deeper.  For the blue curve, we see people  who received the control, what I'm calling treatment 0,  their blood pressure was pretty low"
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 386.52000000000004,
+            "end": 402.21999999999997,
+            "text": " for the individuals who are low and for individuals  whose age is high.  But for middle-aged individuals, their blood pressure  on receiving treatment 0 is sort of in the higher range.  On the other hand, for individuals"
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 402.21999999999997,
+            "end": 417.85999999999996,
+            "text": " who receive treatment 1, it's the red curve.  So young people have much higher, let's say,  blood pressure under treatment 1,  and similarly, much older people.  So then one could ask, well, what about the difference"
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 417.85999999999996,
+            "end": 431.34,
+            "text": " between these two potential outcomes?  Let's say the CATE, the Conditional Average Treatment  Effect, is simply looking at the distance  between the blue curve and the red curve for that individual.  So for someone with a specific age,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 431.34,
+            "end": 443.06,
+            "text": " let's say a young person or a very old person,  there's a very big difference between giving treatment 0  or giving treatment 1.  Whereas for a middle-aged person,  there's very little difference."
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 443.08,
+            "end": 459.64,
+            "text": " So for example, if treatment 1 was significantly  cheaper than treatment 0, then you  might say we'll give treatment 1.  Even though it's not quite as good as treatment 0,  but it's so much cheaper, and the difference between them"
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 459.64,
+            "end": 469.12,
+            "text": " is so small, we'll give the other one.  But in order to make that type of policy decision,  one, of course, has to understand  that Conditional Average Treatment  Effect for that individual."
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 469.14,
+            "end": 481.24,
+            "text": " And that's something that we're going  to want to predict using data.  Now, we don't always get the luxury  of having personalized treatment recommendations.  Sometimes we have to give a policy."
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 481.24,
+            "end": 495.94,
+            "text": " Like for example, I took this example out of my slides,  but I'll give it to you anyway.  The federal government might come out with a guideline  saying that all men over the age of 50,  I'm making it that number, need to get annual prostate"
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 496.71999999999997,
+            "end": 515.4,
+            "text": " cancer screening.  That's an example of a very broad policy decision.  You might ask, well, what is the effect of that policy now  applied over the full population on, let's say,  decreasing deaths due to prostate cancer?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 515.4,
+            "end": 525.48,
+            "text": " And that would be an example of asking about the Average  Treatment Effect.  So if you were to average the red line  or to average the blue line, you get those two dotted lines  I show there."
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 525.5,
+            "end": 536.82,
+            "text": " And if you look at the difference between them,  that is the Average Treatment Effect  between giving the red intervention  or giving the blue intervention.  And if the Average Treatment Effect is very positive,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 536.82,
+            "end": 551.46,
+            "text": " you might say that on average, this intervention  is a good intervention.  If it's very negative, you might say the opposite.  Now, the challenge about doing causal inference  from observational data is that, of course,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 551.46,
+            "end": 566.5600000000001,
+            "text": " we don't observe those red and those blue curves.  Rather, what we observe are data points  that might be distributed all over the place.  Like, for example, in this example,  the blue treatment happens to be given in the data"
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 566.5600000000001,
+            "end": 577.04,
+            "text": " more to young people.  And the red treatment happens to be given in the data  more to older people.  And that can happen for a variety of reasons.  It could happen due to access to medication."
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 577.04,
+            "end": 592.0,
+            "text": " It could happen for socioeconomic reasons.  It could happen because existing treatment guidelines  say that old people should receive treatment 1  and young people should receive treatment 0.  These are all reasons why in your data,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.002.mp3",
+            "start": 592.0,
+            "end": 601.3199999999999,
+            "text": " who receives what treatment could be biased in some way.  And that's exactly what this edge from x to t is modeling."
+        }
+    ],
+    "text": " to first of all, make sure you're setting up the problem correctly, and that's always going to be important, but then to think through what are all of the factors that could influence the treatment decisions, called the confounding factors. And the traditional approach is one would write down 10, 20 different things and make sure that you do some of the analyses, including the analyses I'll show you about in today and Thursday's lecture, using those 10 or 20 variables. But where this field is going is one of now having high dimensional data. So I talked about how you might have imaging data for x. You might have the whole entire patient's electronic health record data for x. And the traditional approaches that the statistics community used to work on no longer work in this high dimensional setting. And so in fact, it's actually a really interesting area for research, one that my lab is starting to work on and many other labs, where we could ask, how can we bring machine learning algorithms that are designed to work with high dimensional data to answer these types of causal inference questions? And in today's lecture, you'll see one example of a reduction from causal inference to machine learning, where we'll be able to use machine learning to answer one of those causal inference questions. So the first thing we need is some language in order to formalize these notions. So I will work within what's known as the Rubin-Diamond causal model, where we talk about what are called potential outcomes. What would have happened under this world or that world? We'll call y 0. And often, it'll be denoted as y underscore 0. Sometimes it'll be noted as y parentheses 0. And sometimes it'll be denoted as y given x comma do y equals 0. And all three of these notations are equivalent. So y 0 corresponds to what would have happened to this individual if you gave them treatment to 0. And y 1 is the potential outcome of what would have happened to this individual had you give them treatment 1. So you can think about y 1 as being giving the blue pill and y 0 as being given the red pill. Now, once you can talk about these states of the world, then one can start to ask questions of what's better, the red pill or the blue pill? And one can formalize that notion mathematically in terms of what's called the conditional average treatment effect. And this also goes by the name of individual treatment effect. So it's going to take as input x i, which I'm going to denote as the data that you had at baseline for the individual. It's the covariates, the features for the individual. And one wants to know, well, for this individual, with what we know about them, what's the difference between giving them treatment 1 or giving them treatment 0? So mathematically, that corresponds to difference in expectations. It's the difference in expectation of y 1 from y 0. Now, the reason why I'm calling this an expectation is because I'm not going to assume that y 1 and y 0 are deterministic. Because maybe there's some bad luck component. Like, maybe a medication usually works for this type of person. But with a flip of a coin, sometimes it doesn't work. And so that's the randomness that I'm referring to when I talk about probability over y 1 given x i. And so the CATE looks at the difference in those two expectations. And then one can now talk about what the average treatment effect is, which is the difference between those two. So the average treatment effect is now the expectation of, I'll say, expectation of the CATE over the distribution of people, p of x. Now, we're going to go through this four different ways in the next 10 minutes. And then you're going to go over it five more ways during your homework assignment. And you'll go over it two more ways on Friday in recitation. So if you don't get it just yet, stay with me. You'll get it by the end of this week. Now, in the data that you observe, all you see is, for an individual, all you see is what happened under one of the interventions. So for example, if the i-th individual in your data set received treatment t i equals 1, then what you observe, y i is the potential outcome y 1. On the other hand, if the individual in your data set received treatment t i equals 0, then what you observe for that individual is the potential outcome y 0. So that's the observed factual outcome. But one could also talk about the counterfactual of what would have happened to this person had the opposite treatment been done for them. And notice that I just swapped each t i for 1 minus t i and so on. Now, the key challenge in this field is that in your data set, you only observe the factual outcomes. And when you want to reason about the counterfactual, that's where you have to impute this unobserved counterfactual outcome. And that is known as the fundamental problem of causal inference, that we only observe one of the two outcomes for any individual in the data set. So let's look at a very simple example. Here, individuals are characterized by just one feature, their age. And these two curves that I'm showing you are the potential outcomes of what would happen to this individual's blood pressure if you gave them treatment 0, which is the blue curve, versus treatment 1, which is the red curve. So let's dig in a little bit deeper. For the blue curve, we see people who received the control, what I'm calling treatment 0, their blood pressure was pretty low for the individuals who are low and for individuals whose age is high. But for middle-aged individuals, their blood pressure on receiving treatment 0 is sort of in the higher range. On the other hand, for individuals who receive treatment 1, it's the red curve. So young people have much higher, let's say, blood pressure under treatment 1, and similarly, much older people. So then one could ask, well, what about the difference between these two potential outcomes? Let's say the CATE, the Conditional Average Treatment Effect, is simply looking at the distance between the blue curve and the red curve for that individual. So for someone with a specific age, let's say a young person or a very old person, there's a very big difference between giving treatment 0 or giving treatment 1. Whereas for a middle-aged person, there's very little difference. So for example, if treatment 1 was significantly cheaper than treatment 0, then you might say we'll give treatment 1. Even though it's not quite as good as treatment 0, but it's so much cheaper, and the difference between them is so small, we'll give the other one. But in order to make that type of policy decision, one, of course, has to understand that Conditional Average Treatment Effect for that individual. And that's something that we're going to want to predict using data. Now, we don't always get the luxury of having personalized treatment recommendations. Sometimes we have to give a policy. Like for example, I took this example out of my slides, but I'll give it to you anyway. The federal government might come out with a guideline saying that all men over the age of 50, I'm making it that number, need to get annual prostate cancer screening. That's an example of a very broad policy decision. You might ask, well, what is the effect of that policy now applied over the full population on, let's say, decreasing deaths due to prostate cancer? And that would be an example of asking about the Average Treatment Effect. So if you were to average the red line or to average the blue line, you get those two dotted lines I show there. And if you look at the difference between them, that is the Average Treatment Effect between giving the red intervention or giving the blue intervention. And if the Average Treatment Effect is very positive, you might say that on average, this intervention is a good intervention. If it's very negative, you might say the opposite. Now, the challenge about doing causal inference from observational data is that, of course, we don't observe those red and those blue curves. Rather, what we observe are data points that might be distributed all over the place. Like, for example, in this example, the blue treatment happens to be given in the data more to young people. And the red treatment happens to be given in the data more to older people. And that can happen for a variety of reasons. It could happen due to access to medication. It could happen for socioeconomic reasons. It could happen because existing treatment guidelines say that old people should receive treatment 1 and young people should receive treatment 0. These are all reasons why in your data, who receives what treatment could be biased in some way. And that's exactly what this edge from x to t is modeling."
+}

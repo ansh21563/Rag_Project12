@@ -1,0 +1,257 @@
+{
+    "chunks": [
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 0.0,
+            "end": 15.88,
+            "text": " appeared as a disease from the taxonomy.  And if you talk to pulmonary people,  they suspect that asthma, which is still  a disease in our current lexicon,  may be very much like dropsy."
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 15.88,
+            "end": 32.14,
+            "text": " It's not a disease.  It's a symptom of a whole bunch of underlying causes.  And the idea is that we need to get good enough and precise  enough at being able to figure out what these are.  So I talked to my friend, Zach Kohane,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 32.14,
+            "end": 49.22,
+            "text": " at Harvard a few weeks ago when I  started preparing this lecture.  And he has the following idea.  And the example I'm going to show you is from him.  So he says, well, look, we should have this precision"
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 49.22,
+            "end": 71.74,
+            "text": " medicine modality space, which is this high dimensional space  that contains all of that information that  is in the NRC report.  And then what we do is in this high dimensional space,  if we're lucky, we're going to find clusters of data."
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 71.74,
+            "end": 90.33999999999999,
+            "text": " So this always happens.  If you ever take a very high dimensional data set  and put it into its very high dimensional representation  space, it's almost never the case  that the data is scattered sort of uniformly through the space."
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 90.33999999999999,
+            "end": 103.56,
+            "text": " If that were true, it wouldn't help us very much.  But generally, it's not true.  And what you find is that the data  tends to be on lower dimensional manifolds.  So it's in subsets of the space."
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 103.56,
+            "end": 120.92,
+            "text": " And so a lot of the trick in trying  to analyze this kind of data is figuring out  what those lower dimensional manifolds look like.  And often, you will find among a very large data  set a cluster of patients like this."
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 120.92,
+            "end": 137.66,
+            "text": " And then Zach's approach is to say, well, if your patient,  it's hard to represent three dimensions in two,  but if your patient falls somewhere  in the middle of such a cluster, then that probably  means that they're kind of normal for that cluster."
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 137.66,
+            "end": 154.38,
+            "text": " Whereas if they fall somewhere at the edge of such a cluster,  that probably means that there's  something odd going on that is worth investigating  because they're unusual.  So then he gave me an example of a patient of his."
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 154.38,
+            "end": 179.74,
+            "text": " And let me give you a minute to read this.  Yeah.  Yeah.  AUDIENCE 1 What's an armamentarium?  Where does it say armamentarium?"
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 179.74,
+            "end": 190.29999999999998,
+            "text": " Oh, yeah.  So an armamentarium historically is  the set of arms that are available to an army.  So this is the set of treatments that  are available to a doctor."
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 193.1,
+            "end": 201.14,
+            "text": " Is that the only word you don't know?  Yeah.  It's the only word.  If I start asking.  Based on context."
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 201.14,
+            "end": 213.42,
+            "text": " OK.  In the world.  It's one that I thought I could understand.  Well, you probably know what antibiotics are  and immunosuppressants you've probably heard of."
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 213.42,
+            "end": 232.01999999999998,
+            "text": " Anyway, it's a bunch of different therapies.  So this is what's called a sick puppy.  It's a kid who is not doing well.  They started life at age three with ulcerative colitis,  which was well-controlled by the kinds of medications"
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 232.01999999999998,
+            "end": 252.73999999999998,
+            "text": " that they normally give people with that disease.  And then all of a sudden, 10 years later,  he breaks out with this horrible abdominal pain and diarrhea  and blood in his stool.  And they try a bunch of stuff that they think ought to work,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 252.73999999999998,
+            "end": 276.78000000000003,
+            "text": " and it doesn't work.  So the kid was facing some fairly drastic options,  like cutting out the part of his colon that was inflamed.  So your colon's an important part of your digestive tract,  and so losing it is not fun and would have bad consequences"
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 276.78000000000003,
+            "end": 301.06,
+            "text": " for the rest of his life.  But what they did is they said, well,  why is he not responding to any of these therapies?  And the difficulty you can imagine  in that cloud of points picture is,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 301.06,
+            "end": 316.94,
+            "text": " how do you figure out whether the person is an outlier  or is in the middle of one of these clusters  when it depends on a lot of things?  In this kid's case, what it depended on most significantly  was the last six months of his experience,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 316.94,
+            "end": 333.26,
+            "text": " where before he was doing OK with the standard treatment.  So that cloud might have represented people  with ulcerative colitis who were well-controlled  by the standard treatment.  And now all of a sudden, he becomes an outlier."
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 333.26,
+            "end": 351.26,
+            "text": " So what happened in this case is they said,  well, maybe there are different groups  of ulcerative colitis patients.  So maybe there are ones who have a lifelong remission  after treatment with a commonly used monoclonal antibody."
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 351.26,
+            "end": 372.58000000000004,
+            "text": " So that's the cluster, the center of the cluster.  Maybe there are people who have multi-year remission  but become refractory to these drugs.  And after other treatments, they have to undergo a colectomy.  So that's the removal of the colon."
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 372.58000000000004,
+            "end": 391.74,
+            "text": " And then there are people who have initially a remission,  but then no standard therapy works.  So that's what this kid is in, this cluster.  So how do you treat this as a machine learning problem  from the point of view of having lots of data"
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 391.74,
+            "end": 407.94000000000005,
+            "text": " about lots of different patients?  And the challenges, of course, include things  like what's your distance function  in doing the kind of clustering that people typically do?  How do you define what an outlier is?"
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 407.94000000000005,
+            "end": 423.98,
+            "text": " Because there's always a continuum  where it just gets more and more diffuse.  What's the best representation for time varying data,  which is critical in this case?  What's the optimal weighting or normalization of dimensions?"
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 423.98,
+            "end": 437.82,
+            "text": " So does every dimension in this very high dimensional space  count the same?  Or are differences along certain dimensions  more important than those among others?  And does that, in fact, vary from problem to problem?"
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 437.82,
+            "end": 457.38,
+            "text": " The answer is probably yes.  So how do we find a neighborhood for the patient?  Well, I'm going to give you some clues by starting  with a shallow dive into genetics.  So if you've taken a molecular cell biology class,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 457.38,
+            "end": 469.24,
+            "text": " this should not be news to you.  And I'm going to run through it pretty quickly.  If you haven't, then I hope at least you'll  pick up some of the vocabulary.  So a wise biologist said biology"
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 469.24,
+            "end": 485.32,
+            "text": " is the science of exceptions.  There are almost no rules.  About 25 years ago, the biology department  here taught a special class for engineering faculty  to try to explain to us what they"
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 485.32,
+            "end": 499.18,
+            "text": " were teaching in their introductory molecular biology  classes.  And I remember I was sitting next to Jerry Sussman, one  of my colleagues.  And after we heard some lecture about the 47 ways"
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 499.18,
+            "end": 511.78,
+            "text": " that some theory doesn't apply in many, many cases,  Jerry turns to me and he says, you know,  the problem with this field is there are just  too many damned exceptions.  There are no theories."
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 511.78,
+            "end": 529.04,
+            "text": " It's all exceptions.  And so even biologists recognize this.  Now, people have observed for ever since human beings  walked the Earth that children tend  to be similar to their parents in many ways."
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 529.04,
+            "end": 543.8,
+            "text": " And until Gregor Mendel, this was a great mystery.  Why is it that you're like your parents?  I mean, you must have gotten something  from them that sort of carries through and makes  you similar to them."
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 543.8,
+            "end": 560.88,
+            "text": " So Mendel had this notion of having  discrete factors of inheritance, which he called genes.  He had no idea what these were.  But conceptually, he knew that they must exist.  And then he did a bunch of experiments on pea plants,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 560.88,
+            "end": 581.72,
+            "text": " showing that peas that are wrinkled  tend to have offspring peas that are also wrinkled.  And he worked out the genetics of what we now  call Mendelian inheritance, namely  dominant versus recessive inheritance patterns."
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 581.72,
+            "end": 604.36,
+            "text": " Then Johann Mischer came along some years later.  And he discovered a weird thing in cells  called nuclein, which is now known as DNA.  And in a study that he did, he found  that there was a very interesting gene"
+        },
+        {
+            "number": "lec20",
+            "title": "part.001.mp3",
+            "start": 604.36,
+            "end": 608.6,
+            "text": " that was called nuclein.  And it was a very interesting gene."
+        }
+    ],
+    "text": " appeared as a disease from the taxonomy. And if you talk to pulmonary people, they suspect that asthma, which is still a disease in our current lexicon, may be very much like dropsy. It's not a disease. It's a symptom of a whole bunch of underlying causes. And the idea is that we need to get good enough and precise enough at being able to figure out what these are. So I talked to my friend, Zach Kohane, at Harvard a few weeks ago when I started preparing this lecture. And he has the following idea. And the example I'm going to show you is from him. So he says, well, look, we should have this precision medicine modality space, which is this high dimensional space that contains all of that information that is in the NRC report. And then what we do is in this high dimensional space, if we're lucky, we're going to find clusters of data. So this always happens. If you ever take a very high dimensional data set and put it into its very high dimensional representation space, it's almost never the case that the data is scattered sort of uniformly through the space. If that were true, it wouldn't help us very much. But generally, it's not true. And what you find is that the data tends to be on lower dimensional manifolds. So it's in subsets of the space. And so a lot of the trick in trying to analyze this kind of data is figuring out what those lower dimensional manifolds look like. And often, you will find among a very large data set a cluster of patients like this. And then Zach's approach is to say, well, if your patient, it's hard to represent three dimensions in two, but if your patient falls somewhere in the middle of such a cluster, then that probably means that they're kind of normal for that cluster. Whereas if they fall somewhere at the edge of such a cluster, that probably means that there's something odd going on that is worth investigating because they're unusual. So then he gave me an example of a patient of his. And let me give you a minute to read this. Yeah. Yeah. AUDIENCE 1 What's an armamentarium? Where does it say armamentarium? Oh, yeah. So an armamentarium historically is the set of arms that are available to an army. So this is the set of treatments that are available to a doctor. Is that the only word you don't know? Yeah. It's the only word. If I start asking. Based on context. OK. In the world. It's one that I thought I could understand. Well, you probably know what antibiotics are and immunosuppressants you've probably heard of. Anyway, it's a bunch of different therapies. So this is what's called a sick puppy. It's a kid who is not doing well. They started life at age three with ulcerative colitis, which was well-controlled by the kinds of medications that they normally give people with that disease. And then all of a sudden, 10 years later, he breaks out with this horrible abdominal pain and diarrhea and blood in his stool. And they try a bunch of stuff that they think ought to work, and it doesn't work. So the kid was facing some fairly drastic options, like cutting out the part of his colon that was inflamed. So your colon's an important part of your digestive tract, and so losing it is not fun and would have bad consequences for the rest of his life. But what they did is they said, well, why is he not responding to any of these therapies? And the difficulty you can imagine in that cloud of points picture is, how do you figure out whether the person is an outlier or is in the middle of one of these clusters when it depends on a lot of things? In this kid's case, what it depended on most significantly was the last six months of his experience, where before he was doing OK with the standard treatment. So that cloud might have represented people with ulcerative colitis who were well-controlled by the standard treatment. And now all of a sudden, he becomes an outlier. So what happened in this case is they said, well, maybe there are different groups of ulcerative colitis patients. So maybe there are ones who have a lifelong remission after treatment with a commonly used monoclonal antibody. So that's the cluster, the center of the cluster. Maybe there are people who have multi-year remission but become refractory to these drugs. And after other treatments, they have to undergo a colectomy. So that's the removal of the colon. And then there are people who have initially a remission, but then no standard therapy works. So that's what this kid is in, this cluster. So how do you treat this as a machine learning problem from the point of view of having lots of data about lots of different patients? And the challenges, of course, include things like what's your distance function in doing the kind of clustering that people typically do? How do you define what an outlier is? Because there's always a continuum where it just gets more and more diffuse. What's the best representation for time varying data, which is critical in this case? What's the optimal weighting or normalization of dimensions? So does every dimension in this very high dimensional space count the same? Or are differences along certain dimensions more important than those among others? And does that, in fact, vary from problem to problem? The answer is probably yes. So how do we find a neighborhood for the patient? Well, I'm going to give you some clues by starting with a shallow dive into genetics. So if you've taken a molecular cell biology class, this should not be news to you. And I'm going to run through it pretty quickly. If you haven't, then I hope at least you'll pick up some of the vocabulary. So a wise biologist said biology is the science of exceptions. There are almost no rules. About 25 years ago, the biology department here taught a special class for engineering faculty to try to explain to us what they were teaching in their introductory molecular biology classes. And I remember I was sitting next to Jerry Sussman, one of my colleagues. And after we heard some lecture about the 47 ways that some theory doesn't apply in many, many cases, Jerry turns to me and he says, you know, the problem with this field is there are just too many damned exceptions. There are no theories. It's all exceptions. And so even biologists recognize this. Now, people have observed for ever since human beings walked the Earth that children tend to be similar to their parents in many ways. And until Gregor Mendel, this was a great mystery. Why is it that you're like your parents? I mean, you must have gotten something from them that sort of carries through and makes you similar to them. So Mendel had this notion of having discrete factors of inheritance, which he called genes. He had no idea what these were. But conceptually, he knew that they must exist. And then he did a bunch of experiments on pea plants, showing that peas that are wrinkled tend to have offspring peas that are also wrinkled. And he worked out the genetics of what we now call Mendelian inheritance, namely dominant versus recessive inheritance patterns. Then Johann Mischer came along some years later. And he discovered a weird thing in cells called nuclein, which is now known as DNA. And in a study that he did, he found that there was a very interesting gene that was called nuclein. And it was a very interesting gene."
+}

@@ -1,0 +1,306 @@
+{
+    "chunks": [
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 0.0,
+            "end": 12.0,
+            "text": " It's showing you what you get if you just  used a naive L1 regularized logistic regression  model with no domain knowledge to throw  in the bag of features.  And you want to be up there."
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 12.0,
+            "end": 27.94,
+            "text": " You want to be in that top left corner.  That's the goal here.  So you would like the curve, that blue curve, to be up there  and then all the way to the right.  Now, one way to try to quantify in a single number"
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 27.94,
+            "end": 44.18000000000001,
+            "text": " how useful any one ROC curve is is  by looking at what's called the area under the ROC curve.  And mathematically, this is exactly what you would expect.  This area is the area under the ROC curve.  So you could just integrate the curve,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 44.18000000000001,
+            "end": 56.260000000000005,
+            "text": " and you get that number out.  Now, remember I told you you want to be in the top left,  upper left quadrant.  And so the goal is to get an area under the ROC curve  of a 1."
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 56.26,
+            "end": 68.16,
+            "text": " Now, what would a random prediction give you?  Any idea?  So if you were to just flip a coin and guess, what do you  think?  0.5?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 72.34,
+            "end": 85.9,
+            "text": " Well, so I was a little bit misleading  when I said you just flip a coin.  You've got to flip a coin with different noise rates.  And each one of those will get you sort of a different place  along this curve."
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 85.94000000000001,
+            "end": 98.82000000000001,
+            "text": " And if you look at the curve that you  get from these random guesses, it's  going to be the straight line from 0 to 1.  And as you said, that will then have an AUC of 0.5.  So 0.5 is going to be random guessing."
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 98.82000000000001,
+            "end": 115.02000000000001,
+            "text": " 1 is perfect.  And your algorithm is going to be somewhere in between.  Now, of relevance to the rest of today's lecture  is going to be an alternative definition,  an alternative way of computing the area under the ROC curve."
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 115.02,
+            "end": 124.89999999999999,
+            "text": " So one way to compute it is literally as I said.  You create that curve, and you integrate  to get the area under it.  But one could show mathematically.  I'm not going to give you the derivation here,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 124.89999999999999,
+            "end": 138.85999999999999,
+            "text": " but you can look it up on Wikipedia.  One could show mathematically that an equivalent way  of computing the area under the ROC curve  is to compute the probability that an algorithm will  rank a positive-labeled patient over a negative-labeled"
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 138.85999999999999,
+            "end": 158.45999999999998,
+            "text": " patient.  So mathematically, what I'm talking about  is the following thing.  You're going to sum over pairs of patients,  where I'm going to call x1 is a patient with label y1 equals 1,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 158.45999999999998,
+            "end": 178.42000000000002,
+            "text": " and x2 is a patient with label y.  Actually, I'll call it, yeah, with label x2 equals 1.  So these are two different patients.  I think I'm going to rewrite it like this.  x i and x j, just for generality's sakes."
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 178.42000000000002,
+            "end": 194.42000000000002,
+            "text": " So we're going to sum this up over all choices of x i,  for all choices of i and j, such that y i and y j  have different labels.  So that should say y j equals 0.  And then you're going to look at what you want to happen."
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 194.42000000000002,
+            "end": 214.9,
+            "text": " Suppose that you were using a linear model here.  So your prediction is given to you  So your prediction is given to you by, let's say, w dot x0,  xj.  What you want is that this should be smaller than w dot xi."
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 217.9,
+            "end": 235.06,
+            "text": " So the j-th data point, remember,  was the one that got the 0-th label.  And the i-th data point is the one that got the 1 label.  So we want the score of the data point that  should have been 1 to be higher than the score of the data"
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 235.06,
+            "end": 244.18,
+            "text": " point which should have gotten the label 0.  And just count up.  This is an indicator function.  You just count up how many of those were correctly ordered.  And then you're just going to normalize"
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 244.18,
+            "end": 255.3,
+            "text": " by the total number of comparisons that you do.  And it turns out that that is exactly equal to the area  under the ROC curve.  And it really makes clear that this  is a notion that really cares about ranking."
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 255.3,
+            "end": 271.5,
+            "text": " Are you getting the ranking of patients correct?  Are you ranking the ones who should  have been given 1 higher than the ones that should  have gotten the label 0?  And importantly, this whole measure"
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 271.5,
+            "end": 288.5,
+            "text": " is actually invariant to the label imbalance.  So you might have a very imbalanced data set.  But if you were to resample with now making it a balanced data  set, your AUC of your predictive model wouldn't change.  And that's a nice property to have"
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 288.5,
+            "end": 301.78,
+            "text": " when it comes to evaluating settings  where you might have artificially created  a balanced data set for computational concerns,  even though the true setting is imbalanced.  There, at least, you know that the numbers are going"
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 301.78,
+            "end": 312.78,
+            "text": " to be the same in both settings.  On the other hand, it also has lots of disadvantages.  Because often, you don't care about the performance  of the whole entire curve.  Often, you care about particular parts along the curve."
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 312.82,
+            "end": 324.38,
+            "text": " So for example, in last week's lecture,  I argued that really what we often care about  is just the positive predictive value  for a particular threshold.  And we want that to be as high as possible"
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 324.38,
+            "end": 333.97999999999996,
+            "text": " for as few people as possible.  Like, find the 100 most risky people  and look at what fraction of them actually developed type 2  diabetes.  And in that setting, what you're really looking at"
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 333.97999999999996,
+            "end": 344.94,
+            "text": " is this part of the curve.  And so it turns out there are notions,  there are generalizations of area under the curve that  focus on parts of the curve.  And that goes by the name of partial AUC."
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 344.94,
+            "end": 357.14,
+            "text": " For example, if you just integrated from 0 up to,  let's say, 0.1 of the curve, then you could still  get a number to compare two different curves.  But it's sort of focusing on the area of the curve that's  actually relevant for your predictive purposes,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 357.14,
+            "end": 368.68,
+            "text": " for your task at hand.  So that's all I want to say about receiver operator  characteristic curves.  Any questions?  Yep."
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 368.68,
+            "end": 383.36,
+            "text": " AUDIENCE 2 Could you talk more about what the drawbacks  were of using this?  Like, does the class imbalance, is the class imbalance  always a positive thing?  So the thing is, when you want to use this approach,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 383.36,
+            "end": 397.08,
+            "text": " depending on how you're using the predictive,  you might not be able to tolerate a 0.8 false positive  rate.  So in some sense, what's going on in this part of the curve  might be completely irrelevant for your task."
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 397.08,
+            "end": 409.91999999999996,
+            "text": " So one of the algorithms, so one of these curves,  might look like it's doing really, really well over here  and pretty poorly over here.  But if you're looking at the full area under the ROC curve,  you won't notice that."
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 409.91999999999996,
+            "end": 419.91999999999996,
+            "text": " So that's one of the big problems.  Yeah.  AUDIENCE 2 And how does this, like,  when would you use this versus, like, the precision recall?  Yeah, so a lot of the community is also interested in precision"
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 419.91999999999996,
+            "end": 431.35999999999996,
+            "text": " recall curves.  And precision recall curves, as opposed to receiver operator  curves, have the property that they are not  invariant to class imbalance, which, in many settings,  is of interest, because it'll allow you to capture"
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 431.35999999999996,
+            "end": 439.44,
+            "text": " these types of quantities.  I'm not going to go into depth about reasons  for one or the other.  But that's something that you could read up about.  I encourage you to post a Piazza about it."
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 439.44,
+            "end": 458.67999999999995,
+            "text": " And we can have a discussion on Piazza.  So the last evaluation quantity that I want to talk about  is known as calibration.  And calibration, as of the finite here,  has to do with binary classification problems."
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 458.67999999999995,
+            "end": 471.71999999999997,
+            "text": " Now, before you dig into this figure, which  I'll explain in a moment, let me just give you  the gist of what I mean by calibration.  Suppose your model outputs a probability.  So you do logistic regression."
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 471.71999999999997,
+            "end": 494.28,
+            "text": " You get a probability out.  And your model says for these 10 patients  that their likelihood of dying in the next 48 hours is 0.7.  Suppose that's what your model output.  If you were the receiving end of that result,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 494.28,
+            "end": 507.68,
+            "text": " so you heard that number, 0.7, what should you  expect about those 10 people?  What fraction of them should actually  die in the next 48 hours?  Everyone could scream out loud."
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 507.68,
+            "end": 521.72,
+            "text": " AUDIENCE MEMBER 1.0  So seven of them, seven of the 10,  you would expect to die in the next 48 hours  if the probability for all of them that was output was 0.7.  That's what I mean by calibration."
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 521.72,
+            "end": 534.64,
+            "text": " So if, on the other hand, what you found was that only one of them  died, then it would be a very weird number  that you're outputting.  And so the reason why this notion of calibration,  which I'll define formally in a second, is so important"
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 534.64,
+            "end": 546.12,
+            "text": " is when you're outputting a probability  and when you don't really know how that probability is going  to be used.  If you knew, if you had some task loss in mind,  and you knew that all that mattered"
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 546.12,
+            "end": 561.0,
+            "text": " was the actual prediction, 1 or 0, then that would be fine.  But often, predictions in machine learning  are used in a much more subtle way.  For example, often, your doctor might have more information  than your computer has."
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 561.0,
+            "end": 572.04,
+            "text": " And so often, they might want to take the result  that your computer predicts and weigh that  against other evidence.  Or in some settings, it's not just  weighing by other evidence."
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 572.04,
+            "end": 590.8,
+            "text": " Maybe it's also about making a decision.  And that decision might take consideration  a utility of, for example, a patient preference  for suffering versus getting a treatment that could  have big adverse consequences."
+        },
+        {
+            "number": "lec5",
+            "title": "part.002.mp3",
+            "start": 590.8,
+            "end": 601.48,
+            "text": " And that's something that Pete is going  to talk about much more later in the semester, I think,  how to formalize that notion.  But at this point, I just want to thank you."
+        }
+    ],
+    "text": " It's showing you what you get if you just used a naive L1 regularized logistic regression model with no domain knowledge to throw in the bag of features. And you want to be up there. You want to be in that top left corner. That's the goal here. So you would like the curve, that blue curve, to be up there and then all the way to the right. Now, one way to try to quantify in a single number how useful any one ROC curve is is by looking at what's called the area under the ROC curve. And mathematically, this is exactly what you would expect. This area is the area under the ROC curve. So you could just integrate the curve, and you get that number out. Now, remember I told you you want to be in the top left, upper left quadrant. And so the goal is to get an area under the ROC curve of a 1. Now, what would a random prediction give you? Any idea? So if you were to just flip a coin and guess, what do you think? 0.5? Well, so I was a little bit misleading when I said you just flip a coin. You've got to flip a coin with different noise rates. And each one of those will get you sort of a different place along this curve. And if you look at the curve that you get from these random guesses, it's going to be the straight line from 0 to 1. And as you said, that will then have an AUC of 0.5. So 0.5 is going to be random guessing. 1 is perfect. And your algorithm is going to be somewhere in between. Now, of relevance to the rest of today's lecture is going to be an alternative definition, an alternative way of computing the area under the ROC curve. So one way to compute it is literally as I said. You create that curve, and you integrate to get the area under it. But one could show mathematically. I'm not going to give you the derivation here, but you can look it up on Wikipedia. One could show mathematically that an equivalent way of computing the area under the ROC curve is to compute the probability that an algorithm will rank a positive-labeled patient over a negative-labeled patient. So mathematically, what I'm talking about is the following thing. You're going to sum over pairs of patients, where I'm going to call x1 is a patient with label y1 equals 1, and x2 is a patient with label y. Actually, I'll call it, yeah, with label x2 equals 1. So these are two different patients. I think I'm going to rewrite it like this. x i and x j, just for generality's sakes. So we're going to sum this up over all choices of x i, for all choices of i and j, such that y i and y j have different labels. So that should say y j equals 0. And then you're going to look at what you want to happen. Suppose that you were using a linear model here. So your prediction is given to you So your prediction is given to you by, let's say, w dot x0, xj. What you want is that this should be smaller than w dot xi. So the j-th data point, remember, was the one that got the 0-th label. And the i-th data point is the one that got the 1 label. So we want the score of the data point that should have been 1 to be higher than the score of the data point which should have gotten the label 0. And just count up. This is an indicator function. You just count up how many of those were correctly ordered. And then you're just going to normalize by the total number of comparisons that you do. And it turns out that that is exactly equal to the area under the ROC curve. And it really makes clear that this is a notion that really cares about ranking. Are you getting the ranking of patients correct? Are you ranking the ones who should have been given 1 higher than the ones that should have gotten the label 0? And importantly, this whole measure is actually invariant to the label imbalance. So you might have a very imbalanced data set. But if you were to resample with now making it a balanced data set, your AUC of your predictive model wouldn't change. And that's a nice property to have when it comes to evaluating settings where you might have artificially created a balanced data set for computational concerns, even though the true setting is imbalanced. There, at least, you know that the numbers are going to be the same in both settings. On the other hand, it also has lots of disadvantages. Because often, you don't care about the performance of the whole entire curve. Often, you care about particular parts along the curve. So for example, in last week's lecture, I argued that really what we often care about is just the positive predictive value for a particular threshold. And we want that to be as high as possible for as few people as possible. Like, find the 100 most risky people and look at what fraction of them actually developed type 2 diabetes. And in that setting, what you're really looking at is this part of the curve. And so it turns out there are notions, there are generalizations of area under the curve that focus on parts of the curve. And that goes by the name of partial AUC. For example, if you just integrated from 0 up to, let's say, 0.1 of the curve, then you could still get a number to compare two different curves. But it's sort of focusing on the area of the curve that's actually relevant for your predictive purposes, for your task at hand. So that's all I want to say about receiver operator characteristic curves. Any questions? Yep. AUDIENCE 2 Could you talk more about what the drawbacks were of using this? Like, does the class imbalance, is the class imbalance always a positive thing? So the thing is, when you want to use this approach, depending on how you're using the predictive, you might not be able to tolerate a 0.8 false positive rate. So in some sense, what's going on in this part of the curve might be completely irrelevant for your task. So one of the algorithms, so one of these curves, might look like it's doing really, really well over here and pretty poorly over here. But if you're looking at the full area under the ROC curve, you won't notice that. So that's one of the big problems. Yeah. AUDIENCE 2 And how does this, like, when would you use this versus, like, the precision recall? Yeah, so a lot of the community is also interested in precision recall curves. And precision recall curves, as opposed to receiver operator curves, have the property that they are not invariant to class imbalance, which, in many settings, is of interest, because it'll allow you to capture these types of quantities. I'm not going to go into depth about reasons for one or the other. But that's something that you could read up about. I encourage you to post a Piazza about it. And we can have a discussion on Piazza. So the last evaluation quantity that I want to talk about is known as calibration. And calibration, as of the finite here, has to do with binary classification problems. Now, before you dig into this figure, which I'll explain in a moment, let me just give you the gist of what I mean by calibration. Suppose your model outputs a probability. So you do logistic regression. You get a probability out. And your model says for these 10 patients that their likelihood of dying in the next 48 hours is 0.7. Suppose that's what your model output. If you were the receiving end of that result, so you heard that number, 0.7, what should you expect about those 10 people? What fraction of them should actually die in the next 48 hours? Everyone could scream out loud. AUDIENCE MEMBER 1.0 So seven of them, seven of the 10, you would expect to die in the next 48 hours if the probability for all of them that was output was 0.7. That's what I mean by calibration. So if, on the other hand, what you found was that only one of them died, then it would be a very weird number that you're outputting. And so the reason why this notion of calibration, which I'll define formally in a second, is so important is when you're outputting a probability and when you don't really know how that probability is going to be used. If you knew, if you had some task loss in mind, and you knew that all that mattered was the actual prediction, 1 or 0, then that would be fine. But often, predictions in machine learning are used in a much more subtle way. For example, often, your doctor might have more information than your computer has. And so often, they might want to take the result that your computer predicts and weigh that against other evidence. Or in some settings, it's not just weighing by other evidence. Maybe it's also about making a decision. And that decision might take consideration a utility of, for example, a patient preference for suffering versus getting a treatment that could have big adverse consequences. And that's something that Pete is going to talk about much more later in the semester, I think, how to formalize that notion. But at this point, I just want to thank you."
+}

@@ -1,0 +1,257 @@
+{
+    "chunks": [
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 0.0,
+            "end": 17.84,
+            "text": " So tell me about your phlegm.  When did it start?  Last week?  OK.  I signed in as Paul because I didn't"
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 17.84,
+            "end": 33.0,
+            "text": " want to be associated with any of this data.  So was the phlegm bloody or pus-like or watery  or none of the above?  None of the above.  So what was it like?"
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 36.84,
+            "end": 56.08,
+            "text": " Is it any of these colors?  I think I'll make it yellow next.  Does it happen in the morning, midday, evening, nighttime,  or a specific time of year?  Specific time of year."
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 60.84,
+            "end": 76.2,
+            "text": " And does lying down or physical activity make it worse?  Physical activity is generally not good.  So that's physical activity.  Physical activity.  How often is this a problem?"
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 76.2,
+            "end": 92.2,
+            "text": " I don't know, a couple times a week maybe?  Did eating suspect food trigger your phlegm?  No.  I don't know what a suspect food is.  28% complete."
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 92.2,
+            "end": 109.76,
+            "text": " Yeah, this is going to kill most of my time.  Is it improving?  Sure, it's improving.  Can I think of another related symptom?  No."
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 109.76,
+            "end": 123.32,
+            "text": " I'm comparing your case to men aged 66 to 72.  Number of similar cases gets more refined.  Do I have shortness of breath?  No.  That's good."
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 123.32,
+            "end": 144.0,
+            "text": " All right.  Do I have a runny nose?  Yeah, sure I have a runny nose.  It's, I don't know, watery runny nose.  Well, I'm going to stop because it will just take,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 144.08,
+            "end": 156.0,
+            "text": " it takes too long to go through this.  But you get the idea.  So what this is doing is actually  running an algorithm that is a cousin of the acute renal  failure algorithm that I showed you."
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 156.0,
+            "end": 173.56,
+            "text": " So it's trying to optimize the questions that it's asking.  And it's trying to come up with a diagnostic conclusion.  Now, in order not to get in trouble with things  like the FDA, it winds up wimping out at the end.  And it says, if you're feeling really bad,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 173.6,
+            "end": 186.88,
+            "text": " go see a doctor.  But nevertheless, these kinds of things are now becoming real.  And they're getting better because they're  based on more and more data.  Yeah."
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 186.88,
+            "end": 201.4,
+            "text": " Which of the other did you answer?  Well, I can't get to the end because we're only at 36%.  Do you want me to erase the red one?  Yeah, here.  Somebody."
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 201.4,
+            "end": 209.62,
+            "text": " I think I need your finger.  No.  OK.  Just don't drain my bank account.  Yeah."
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 213.4,
+            "end": 234.0,
+            "text": " So the British Medical Journal did  a test of a bunch of symptom checkers,  of 23 symptom checkers like this, about four years ago.  And they said, well, can it, on 45 standardized patient  vignettes, can it find at least the right level of urgency"
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 234.0,
+            "end": 251.06,
+            "text": " to recommend whether you should go to the emergency room,  get other kinds of care, or just take care of yourself?  And then the goals were that if the diagnosis is  given by the program, it should be in the top 20 of the list  that it gives you."
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 251.06,
+            "end": 270.24,
+            "text": " And if triage is given, then it should  be the right level of urgency.  The correct diagnosis was first in 34% of the cases,  was within the top 20 in 58% of the cases.  And the correct triage was 57% accurate."
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 270.24,
+            "end": 286.22,
+            "text": " But notice it was more accurate in the emergent cases, which  is good because those are the ones where you really care.  So we have.  OK.  So based on what he said about me,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 286.22,
+            "end": 311.02,
+            "text": " I have an upper respiratory infection with 50% likelihood.  And I can ask what to do next.  Watch for symptoms like sore throat and fever.  Physicians often perform a physical exam,  explore other treatment options, and recovery"
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 311.02,
+            "end": 330.85999999999996,
+            "text": " for most cases like this is a matter of days to weeks.  And I can go back and say, all right, I might have the flu,  or I might have allergic rhinitis.  So that's actually reasonable.  I don't know exactly what you put in about me, but."
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 330.85999999999996,
+            "end": 341.42,
+            "text": " AUDIENCE MEMBER 2 What is the less than 50?  What is what?  The less than 50.  Patients like you.  Patients like you have the same demographics."
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 341.42,
+            "end": 358.65999999999997,
+            "text": " Yeah, I don't know what the less than 50 is supposed to mean.  It started with sort of 1,000 or something.  Oh, so this is based on a small number of patients.  So what happens, of course, is as you  slice and dice a population, it gets smaller and smaller."
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 358.65999999999997,
+            "end": 369.88,
+            "text": " So that's what we're seeing.  OK.  Thank you.  OK.  So two more topics I'm going to rush through."
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 369.88,
+            "end": 389.61999999999995,
+            "text": " One is that, as I mentioned in one of the much earlier slides,  every action has a cost.  It at least takes time.  And sometimes it induces potentially bad things  to happen to a patient."
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 389.61999999999995,
+            "end": 406.38,
+            "text": " And so people began studying a long time ago,  what does it mean to be rational under resource  constraints rather than rational just  in this homo economicus model?  And so Eric Horvitz, who's now a big cheese guy,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 406.38,
+            "end": 426.02000000000004,
+            "text": " he's head of Microsoft Research, but used  to be just a lowly graduate student at Stanford  when he started doing this work, said, well,  utility comes not only from what happens to the patient,  but also from the reasoning process,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 426.02000000000004,
+            "end": 444.88,
+            "text": " from the computational process itself.  And so consider, you guys watch MacGyver?  This is way out of date.  So if MacGyver is defusing some bomb that's ticking down  to zero and he runs out of time, then his utilities"
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 444.88,
+            "end": 460.06,
+            "text": " take a very sharp drop at that point.  So that's what this work is really about,  saying, well, what can we do when  we don't have all the time in the world  to do the computation, as well as"
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 460.06,
+            "end": 478.78,
+            "text": " having to try to maximize utility to the patient?  And Daniel Kahneman, who won the Nobel Prize a few years ago  in economics for this notion of bounded rationality,  that says that the way we would like to be rational  is not actually the way we behave."
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 478.78,
+            "end": 494.26,
+            "text": " And he wrote this popular book that I really like  called Thinking Faster and Slow that  says that if you're trying to figure out which house to buy,  you have a lot of time to do it.  And so you can deliberate and list"
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 494.26,
+            "end": 508.5,
+            "text": " all the advantages and disadvantages and costs  and so on of different houses and take  your time making a decision.  If you see a car barreling toward you  as you're crossing in a crosswalk,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 508.5,
+            "end": 526.94,
+            "text": " you don't stop and say, well, let me figure out  the pluses and minuses of moving to the left  or moving to the right.  Because by the time you figure it out, you're dead.  And so he claims that human beings have evolved in a way"
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 526.94,
+            "end": 543.6600000000001,
+            "text": " where we have a kind of instinctual, very fast  response, and that the deliberative process is only  invoked relatively rarely.  Now, he bemoans this fact because he  claims that people make too many decisions that they"
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 543.6600000000001,
+            "end": 560.26,
+            "text": " ought to be deliberative about based  on these sort of gut instincts.  For example, our current president.  But never mind.  So what Eric and his colleagues were doing"
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 560.26,
+            "end": 576.3,
+            "text": " was trying really to look at how this kind of meta-level  reasoning about how much reasoning  and what kind of reasoning is worth doing  plays into the decision-making process.  So the expected value of computation"
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 576.3,
+            "end": 590.6999999999999,
+            "text": " is a fundamental component of reflection  about alternative inference strategies.  So for example, I mentioned that QMR  had these alternative questioning methods,  depending on the length of the differential"
+        },
+        {
+            "number": "lec11",
+            "title": "part.006.mp3",
+            "start": 590.6999999999999,
+            "end": 601.46,
+            "text": " that it was working on.  So that's an example of a kind of meta-level reasoning  that says that it may be more effective to do  one kind of QMR."
+        }
+    ],
+    "text": " So tell me about your phlegm. When did it start? Last week? OK. I signed in as Paul because I didn't want to be associated with any of this data. So was the phlegm bloody or pus-like or watery or none of the above? None of the above. So what was it like? Is it any of these colors? I think I'll make it yellow next. Does it happen in the morning, midday, evening, nighttime, or a specific time of year? Specific time of year. And does lying down or physical activity make it worse? Physical activity is generally not good. So that's physical activity. Physical activity. How often is this a problem? I don't know, a couple times a week maybe? Did eating suspect food trigger your phlegm? No. I don't know what a suspect food is. 28% complete. Yeah, this is going to kill most of my time. Is it improving? Sure, it's improving. Can I think of another related symptom? No. I'm comparing your case to men aged 66 to 72. Number of similar cases gets more refined. Do I have shortness of breath? No. That's good. All right. Do I have a runny nose? Yeah, sure I have a runny nose. It's, I don't know, watery runny nose. Well, I'm going to stop because it will just take, it takes too long to go through this. But you get the idea. So what this is doing is actually running an algorithm that is a cousin of the acute renal failure algorithm that I showed you. So it's trying to optimize the questions that it's asking. And it's trying to come up with a diagnostic conclusion. Now, in order not to get in trouble with things like the FDA, it winds up wimping out at the end. And it says, if you're feeling really bad, go see a doctor. But nevertheless, these kinds of things are now becoming real. And they're getting better because they're based on more and more data. Yeah. Which of the other did you answer? Well, I can't get to the end because we're only at 36%. Do you want me to erase the red one? Yeah, here. Somebody. I think I need your finger. No. OK. Just don't drain my bank account. Yeah. So the British Medical Journal did a test of a bunch of symptom checkers, of 23 symptom checkers like this, about four years ago. And they said, well, can it, on 45 standardized patient vignettes, can it find at least the right level of urgency to recommend whether you should go to the emergency room, get other kinds of care, or just take care of yourself? And then the goals were that if the diagnosis is given by the program, it should be in the top 20 of the list that it gives you. And if triage is given, then it should be the right level of urgency. The correct diagnosis was first in 34% of the cases, was within the top 20 in 58% of the cases. And the correct triage was 57% accurate. But notice it was more accurate in the emergent cases, which is good because those are the ones where you really care. So we have. OK. So based on what he said about me, I have an upper respiratory infection with 50% likelihood. And I can ask what to do next. Watch for symptoms like sore throat and fever. Physicians often perform a physical exam, explore other treatment options, and recovery for most cases like this is a matter of days to weeks. And I can go back and say, all right, I might have the flu, or I might have allergic rhinitis. So that's actually reasonable. I don't know exactly what you put in about me, but. AUDIENCE MEMBER 2 What is the less than 50? What is what? The less than 50. Patients like you. Patients like you have the same demographics. Yeah, I don't know what the less than 50 is supposed to mean. It started with sort of 1,000 or something. Oh, so this is based on a small number of patients. So what happens, of course, is as you slice and dice a population, it gets smaller and smaller. So that's what we're seeing. OK. Thank you. OK. So two more topics I'm going to rush through. One is that, as I mentioned in one of the much earlier slides, every action has a cost. It at least takes time. And sometimes it induces potentially bad things to happen to a patient. And so people began studying a long time ago, what does it mean to be rational under resource constraints rather than rational just in this homo economicus model? And so Eric Horvitz, who's now a big cheese guy, he's head of Microsoft Research, but used to be just a lowly graduate student at Stanford when he started doing this work, said, well, utility comes not only from what happens to the patient, but also from the reasoning process, from the computational process itself. And so consider, you guys watch MacGyver? This is way out of date. So if MacGyver is defusing some bomb that's ticking down to zero and he runs out of time, then his utilities take a very sharp drop at that point. So that's what this work is really about, saying, well, what can we do when we don't have all the time in the world to do the computation, as well as having to try to maximize utility to the patient? And Daniel Kahneman, who won the Nobel Prize a few years ago in economics for this notion of bounded rationality, that says that the way we would like to be rational is not actually the way we behave. And he wrote this popular book that I really like called Thinking Faster and Slow that says that if you're trying to figure out which house to buy, you have a lot of time to do it. And so you can deliberate and list all the advantages and disadvantages and costs and so on of different houses and take your time making a decision. If you see a car barreling toward you as you're crossing in a crosswalk, you don't stop and say, well, let me figure out the pluses and minuses of moving to the left or moving to the right. Because by the time you figure it out, you're dead. And so he claims that human beings have evolved in a way where we have a kind of instinctual, very fast response, and that the deliberative process is only invoked relatively rarely. Now, he bemoans this fact because he claims that people make too many decisions that they ought to be deliberative about based on these sort of gut instincts. For example, our current president. But never mind. So what Eric and his colleagues were doing was trying really to look at how this kind of meta-level reasoning about how much reasoning and what kind of reasoning is worth doing plays into the decision-making process. So the expected value of computation is a fundamental component of reflection about alternative inference strategies. So for example, I mentioned that QMR had these alternative questioning methods, depending on the length of the differential that it was working on. So that's an example of a kind of meta-level reasoning that says that it may be more effective to do one kind of QMR."
+}

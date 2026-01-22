@@ -1,0 +1,180 @@
+{
+    "chunks": [
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 0.0,
+            "end": 40.260000000000005,
+            "text": " As David said, I've been at this for a long time.  I am not a medical doctor, but I've probably learned enough medicine to be able to play  one on television over the years.  And actually, that's relevant to today's lecture, because today's lecture is really  trying to set the scene for you to say, well, what are the kinds of problems that doctors"
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 40.260000000000005,
+            "end": 58.16,
+            "text": " are interested in by looking at what is it that they do?  So that's our goal for today.  So what we're going to do today is to talk about, in a very general way, what are the  goals of health care?  So how many of you are doctors?"
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 59.16,
+            "end": 64.92,
+            "text": " A couple.  Great.  OK.  So fix me when I blow it.  All right?"
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 64.92,
+            "end": 84.56,
+            "text": " Please feel free to interrupt.  So that's going to be my first task.  And then the second one is going to be, what are the things that people actually do in  order to try to achieve these goals?  What is the practice of medicine like?"
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 84.56,
+            "end": 108.26,
+            "text": " What is the process that generates the data that we're going to be using to learn from?  And then I can't resist talking a little bit about paying for health care at the end of  the lecture, because a lot of the problems that come up and a lot of the interest that  people show in doing the kind of analysis we're talking about, in fact, is motivated  by money."
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 108.26,
+            "end": 126.88000000000001,
+            "text": " They want to be able to save money or spend less money or something like that.  So it's important to know that.  OK.  Medicine's been around for a long time.  I think from probably the earliest of recorded history, there are discussions of people wondering"
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 126.88000000000001,
+            "end": 153.23999999999998,
+            "text": " what the cause of disease is, how to cure it.  They came up with some fairly cockamamie theories, because they didn't have a lot of scientific  modern approaches to it.  But for example, this is a photo on the left of a shaman, I think from a Canadian Indian  tribe, who's working on the boy lying there who's sick."
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 153.23999999999998,
+            "end": 174.84,
+            "text": " And this shaman would use his knowledge of experience that he'd had with other patients.  They did know a lot about medicinal plants.  They knew something about how to care for injuries and things like that.  This was an effective form of health care.  Not much record keeping."
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 174.84,
+            "end": 206.35999999999999,
+            "text": " You don't see electronic medical record system in that scene.  On the right is a modern shaman practicing at one of the New York area hospitals.  There are traditional cultures in which that sort of hands-on interaction with the healer  is considered a very important part of the practice of medicine.  If you listen to futurists, doctors talking about what medicine is likely to be like,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 206.35999999999999,
+            "end": 237.28,
+            "text": " they emphasize the fact that the role of a healer is not just to be a good automaton  who figures out the right things, but is to persuade a patient to trust him to do the  things that he or she is suggesting to the patient.  There are a lot of placebo effects that we know from lots and lots of experiments that  say that if you think you're going to get better, you are going to get better on average."
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 237.28,
+            "end": 261.71999999999997,
+            "text": " No guarantees.  Modern medicine actually looks more like this.  This is an intensive care unit.  What you see is a patient who has got all kinds of electrical leads and tubes and things  going into him and is surrounded by tons and tons of equipment which is monitoring"
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 262.59999999999997,
+            "end": 288.6,
+            "text": " him and perhaps keeping him alive.  This is the high-tech medicine that we think of as the contemporary version of clinical  care.  You might say, what does it mean to be healthy?  If the goal of medicine is to make people or keep people healthy, what is health?"
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 288.6,
+            "end": 310.64,
+            "text": " We turn to the World Health Organization and they have this lovely, very comprehensive  notion of the definition of health, a state of complete physical, mental, and social well-being,  not merely the absence of disease or infirmity.  Then they categorize this and they say, well, there's physical health, there's mental health,  and there's social health."
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 310.68,
+            "end": 329.03999999999996,
+            "text": " Social health is especially hard to measure.  I'll come back to that in a little while.  What's easiest to measure is how long people live.  We've had data on survival analysis for a long time.  This is kind of shocking."
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 329.03999999999996,
+            "end": 354.48,
+            "text": " If you look here, this lower curve is from around 1800.  What it shows you is that if you lived in India around 1800, your life expectancy was  about 25 years.  It's not very good.  If you lived in the richest countries, which in those days were typically European, in"
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 354.48,
+            "end": 377.91999999999996,
+            "text": " Belgium your life expectancy was way up there at 40 years.  How many of you knew that?  Okay, good.  I didn't until I started looking at this.  Now, by 1950, which is not that long ago, it was like 69 years ago, in Norway your expectation"
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 377.91999999999996,
+            "end": 402.64,
+            "text": " was that you'd live into your early 70s and in the US that you would live into your late  60s on average.  There was still a huge cliff where if you lived in Bhutan or Somalia or something, you  were still down around 30.  Today, well in 2012, we're doing a lot better."
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 402.64,
+            "end": 429.4,
+            "text": " The thing that's striking is not only that the people who were doing well have gotten  better, but that a lot of the people who were doing very poorly have also gotten better.  We're now up, India remember was at 25 years of life expectancy and now it's in the high  60s.  Now, of course, these are averages and so individuals vary a lot, but it's kind of interesting."
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 429.4,
+            "end": 462.28,
+            "text": " If you look at the numbers, you see that even on a shorter term there are big changes.  For example, if you're a male living in Rwanda, which is among the worst places in terms of  life expectancy, your life expectancy if you're born today is about 62 and a half years.  If you were born in 2001, it was only 38 years.  Now what was going on in Rwanda in 2001?"
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 462.28,
+            "end": 484.0,
+            "text": " Genocide.  Yeah, they were killing each other.  So that's sort of an exceptional situation and that's gotten much better because they've  stopped killing each other as genocidal attacks between the Hutu and the Tutsi, I think, if  I remember right."
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 484.0,
+            "end": 507.56,
+            "text": " What about South Africa?  What was going on in South Africa in 2001?  I'm not sure I heard you.  Failure to address the HIV crisis.  Yes, the government at the time was claiming that HIV was not the cause of AIDS and therefore"
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 507.56,
+            "end": 530.04,
+            "text": " there was no point in controlling HIV infections because AIDS was caused by something else.  Pretty crazy.  So that was terrible and they've gotten much better at it.  So that's what you tend to see in a lot of African countries.  What you also see is that there has really been improvement everywhere."
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 530.04,
+            "end": 568.24,
+            "text": " So in the US, we went from males expected to live 74 years to almost 78 years.  So about a four year increase in life expectancy over a period of just 17 years.  You women, by the way, are going to outlive us men on average.  There's some biological thing that seems to work that way.  So a typical way that people look at survival of a population is to say, well, given a cohort"
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 568.24,
+            "end": 591.36,
+            "text": " of people born at some instant zero, what fraction of them are still alive after a certain  period of time?  And what you see is that, of course, 2031 we haven't reached yet.  So these are projections based on theoretical extrapolations of actual data.  But the older data is real."
+        },
+        {
+            "number": "lec2",
+            "title": "part.000.mp3",
+            "start": 591.36,
+            "end": 598.36,
+            "text": " And what you see is that from 1851 to 2011, let's say, the average age of people who are"
+        }
+    ],
+    "text": " As David said, I've been at this for a long time. I am not a medical doctor, but I've probably learned enough medicine to be able to play one on television over the years. And actually, that's relevant to today's lecture, because today's lecture is really trying to set the scene for you to say, well, what are the kinds of problems that doctors are interested in by looking at what is it that they do? So that's our goal for today. So what we're going to do today is to talk about, in a very general way, what are the goals of health care? So how many of you are doctors? A couple. Great. OK. So fix me when I blow it. All right? Please feel free to interrupt. So that's going to be my first task. And then the second one is going to be, what are the things that people actually do in order to try to achieve these goals? What is the practice of medicine like? What is the process that generates the data that we're going to be using to learn from? And then I can't resist talking a little bit about paying for health care at the end of the lecture, because a lot of the problems that come up and a lot of the interest that people show in doing the kind of analysis we're talking about, in fact, is motivated by money. They want to be able to save money or spend less money or something like that. So it's important to know that. OK. Medicine's been around for a long time. I think from probably the earliest of recorded history, there are discussions of people wondering what the cause of disease is, how to cure it. They came up with some fairly cockamamie theories, because they didn't have a lot of scientific modern approaches to it. But for example, this is a photo on the left of a shaman, I think from a Canadian Indian tribe, who's working on the boy lying there who's sick. And this shaman would use his knowledge of experience that he'd had with other patients. They did know a lot about medicinal plants. They knew something about how to care for injuries and things like that. This was an effective form of health care. Not much record keeping. You don't see electronic medical record system in that scene. On the right is a modern shaman practicing at one of the New York area hospitals. There are traditional cultures in which that sort of hands-on interaction with the healer is considered a very important part of the practice of medicine. If you listen to futurists, doctors talking about what medicine is likely to be like, they emphasize the fact that the role of a healer is not just to be a good automaton who figures out the right things, but is to persuade a patient to trust him to do the things that he or she is suggesting to the patient. There are a lot of placebo effects that we know from lots and lots of experiments that say that if you think you're going to get better, you are going to get better on average. No guarantees. Modern medicine actually looks more like this. This is an intensive care unit. What you see is a patient who has got all kinds of electrical leads and tubes and things going into him and is surrounded by tons and tons of equipment which is monitoring him and perhaps keeping him alive. This is the high-tech medicine that we think of as the contemporary version of clinical care. You might say, what does it mean to be healthy? If the goal of medicine is to make people or keep people healthy, what is health? We turn to the World Health Organization and they have this lovely, very comprehensive notion of the definition of health, a state of complete physical, mental, and social well-being, not merely the absence of disease or infirmity. Then they categorize this and they say, well, there's physical health, there's mental health, and there's social health. Social health is especially hard to measure. I'll come back to that in a little while. What's easiest to measure is how long people live. We've had data on survival analysis for a long time. This is kind of shocking. If you look here, this lower curve is from around 1800. What it shows you is that if you lived in India around 1800, your life expectancy was about 25 years. It's not very good. If you lived in the richest countries, which in those days were typically European, in Belgium your life expectancy was way up there at 40 years. How many of you knew that? Okay, good. I didn't until I started looking at this. Now, by 1950, which is not that long ago, it was like 69 years ago, in Norway your expectation was that you'd live into your early 70s and in the US that you would live into your late 60s on average. There was still a huge cliff where if you lived in Bhutan or Somalia or something, you were still down around 30. Today, well in 2012, we're doing a lot better. The thing that's striking is not only that the people who were doing well have gotten better, but that a lot of the people who were doing very poorly have also gotten better. We're now up, India remember was at 25 years of life expectancy and now it's in the high 60s. Now, of course, these are averages and so individuals vary a lot, but it's kind of interesting. If you look at the numbers, you see that even on a shorter term there are big changes. For example, if you're a male living in Rwanda, which is among the worst places in terms of life expectancy, your life expectancy if you're born today is about 62 and a half years. If you were born in 2001, it was only 38 years. Now what was going on in Rwanda in 2001? Genocide. Yeah, they were killing each other. So that's sort of an exceptional situation and that's gotten much better because they've stopped killing each other as genocidal attacks between the Hutu and the Tutsi, I think, if I remember right. What about South Africa? What was going on in South Africa in 2001? I'm not sure I heard you. Failure to address the HIV crisis. Yes, the government at the time was claiming that HIV was not the cause of AIDS and therefore there was no point in controlling HIV infections because AIDS was caused by something else. Pretty crazy. So that was terrible and they've gotten much better at it. So that's what you tend to see in a lot of African countries. What you also see is that there has really been improvement everywhere. So in the US, we went from males expected to live 74 years to almost 78 years. So about a four year increase in life expectancy over a period of just 17 years. You women, by the way, are going to outlive us men on average. There's some biological thing that seems to work that way. So a typical way that people look at survival of a population is to say, well, given a cohort of people born at some instant zero, what fraction of them are still alive after a certain period of time? And what you see is that, of course, 2031 we haven't reached yet. So these are projections based on theoretical extrapolations of actual data. But the older data is real. And what you see is that from 1851 to 2011, let's say, the average age of people who are"
+}

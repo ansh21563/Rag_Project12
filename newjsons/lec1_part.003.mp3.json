@@ -1,0 +1,306 @@
+{
+    "chunks": [
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 0.0,
+            "end": 10.78,
+            "text": " throughout the semester.  So we've talked about data.  We've talked about standards.  And the third wheel is breakthroughs  in machine learning."
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 10.78,
+            "end": 25.34,
+            "text": " And this should be no surprise to anyone in this room.  We've been seeing time and time again over the last five years  benchmark after benchmark being improved upon  and human performance beaten by state-of-the-art machine  learning algorithms."
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 25.34,
+            "end": 39.34,
+            "text": " Here, I'm just showing you a figure that I imagine many of you  have seen on the error rates on the ImageNet competition  for object recognition.  Error rates in 2011 were 25%.  And just a few years ago, it already"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 39.34,
+            "end": 59.06,
+            "text": " surpassed human level to under 5%.  Now, the changes that have led to those advances  in object recognition are going to have  some parallels in health care, but only up to some point.  For example, there was big data, large training sets"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 59.06,
+            "end": 74.66,
+            "text": " that were critical for this.  There were algorithmic advances, in particular,  in convolutional neural networks that played a huge role.  And there was open source software  that was created, things like TensorFlow and PyTorch, which"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 74.66,
+            "end": 93.44000000000001,
+            "text": " allow a researcher or industry worker in one place  to very, very quickly build upon successes  from other researchers in other places,  and then release the code so that one can really  accelerate the rate of progress in this field."
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 93.44000000000001,
+            "end": 106.60000000000001,
+            "text": " Now, in terms of those algorithmic advances  that have made a big difference, the ones that I would really  like to point out because of their relevance to this course  are learning with high dimensional features.  So this was really the advances in the early 2000s,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 106.60000000000001,
+            "end": 120.8,
+            "text": " for example, in support vector machines  and learning with L1 regularization  as a type of sparsity.  And then more recently, in the last six years,  on stochastic gradient descent-like methods"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 120.8,
+            "end": 131.04,
+            "text": " for very rapidly solving these convex optimization problems.  That will play a huge role in what  we'll be doing in this course.  In the last few years, there have  been a huge amount of progress in unsupervised and"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 131.04,
+            "end": 142.48000000000002,
+            "text": " semi-supervised learning algorithms.  And as I'll tell you about much later,  one of the major challenges in health care  is that despite the fact that we have a large amount of data,  we have very little labeled data."
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 142.48,
+            "end": 154.92,
+            "text": " And so these semi-supervised learning algorithms  are going to play a major role in being  able to really take advantage of the data that we do have.  And then, of course, the modern deep learning algorithms,  convolutional neural networks, recurrent neural networks,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 154.92,
+            "end": 165.51999999999998,
+            "text": " and ways of trying to train them.  So those played a major role in the advances  in the tech industry.  And to some extent, they'll play a major role in health care,  as well."
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 165.51999999999998,
+            "end": 184.12,
+            "text": " And I'll point out a few examples of that  in the rest of today's lecture.  So all of this coming together, the data availability,  the advances in other fields of machine learning,  and the huge amount of potential financial gain in health care"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 184.12,
+            "end": 194.32,
+            "text": " and the potential social impact it could have  has not gone unnoticed.  And there's a huge amount of industry interest in this  field.  These are just some examples from names"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 194.32,
+            "end": 207.86,
+            "text": " I think many of you are familiar with, like DeepMind Health  and IBM Watson, to startup companies  like Bay Labs and PathAI, which is here in Boston,  all of which are really trying to build  the next generation of tools for health care"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 207.86,
+            "end": 223.02,
+            "text": " now based on machine learning algorithms.  There's been quite billions of dollars  of funding in the recent quarters  towards digital health efforts with hundreds  of different startups that are focused specifically"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 223.02,
+            "end": 240.84,
+            "text": " on using artificial intelligence in health care.  And the recognition that data is so essential to this process  has led to a all-out purchasing effort  to try to get as much of that data as you can.  So for example, IBM purchased a company"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 240.84,
+            "end": 257.54,
+            "text": " called Merge, which made medical imaging software  and thus had accumulated a large amount of medical imaging data  for $1 billion in 2015.  They purchased Truven for $2.6 billion in 2016.  Flatiron Health, which is a company in New York City"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 257.54,
+            "end": 269.46000000000004,
+            "text": " focused on oncology, was purchased for almost $2 billion  by Roche, a pharmaceutical company, just last year.  And there's several more of these industry moves.  And again, I'm just trying to get  you thinking about what it really takes in this field."
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 269.46000000000004,
+            "end": 287.09999999999997,
+            "text": " And access to data is actually a really important one,  obviously.  So let's now move on to some examples  of how machine learning will transform health care.  To begin with, I want to really lay out the landscape here"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 287.09999999999997,
+            "end": 299.06,
+            "text": " and define some language.  There are a number of different players when it comes  to the health care space.  There are us, patients, consumers.  There are the doctors that we go to,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 299.06,
+            "end": 315.5,
+            "text": " which you could think about as providers.  But of course, they're not just doctors.  They're also nurses and community health workers  and so on.  There are payers, where these edges are really"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 315.5,
+            "end": 327.92,
+            "text": " showing relationships between the different players.  So our consumers, we often, either from our job  or directly from us, we will pay premiums  for a health insurance company to a health insurance company.  And then that health insurance company"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 327.92,
+            "end": 342.68,
+            "text": " is responsible for payments to the providers  to provide services to us patients.  Now, here in the US, the payers are both commercial  and governmental.  So many of you will know companies"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 342.68,
+            "end": 359.32,
+            "text": " like Cigna or Aetna or Blue Cross,  which are commercial providers of health insurance.  But there are also governmental ones.  For example, the Veterans Health Administration  runs one of the biggest health organizations"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 359.32,
+            "end": 373.82,
+            "text": " in the United States, servicing our veterans,  people who retired from the Department of Defense, which  has one of the second biggest health systems, the Defense  Health Agency.  And that is an organization where"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 373.82,
+            "end": 391.58,
+            "text": " both of those organizations, where  both the payer and the provider are really one.  The Center for Medicare and Medicaid Services  here in the US provides health insurance  for all retirees in the United States."
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 391.58,
+            "end": 407.54,
+            "text": " And also Medicaid, which is run at a state level,  provides health insurance to a variety of individuals  who would otherwise have difficulty  purchasing or obtaining their own health insurance.  And those are examples of state-run or federally-run"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 407.54,
+            "end": 422.2,
+            "text": " health insurance agencies.  And then internationally, sometimes the lines  are even more blurred.  So of course, in places like the United Kingdom,  where you have a government-run health system, the National"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 422.2,
+            "end": 438.48,
+            "text": " Health Service, you have the same system,  both paying for and providing the services.  Now, the reason why this is really  important for us to think about already in Lecture 1  is because what's so essential about this field"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 438.48,
+            "end": 449.36,
+            "text": " is figuring out where are the knobs that you can turn  to try to improve health care.  Where can we deploy machine learning algorithms  within health care?  And so some algorithms are going to be better run by providers."
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 449.36,
+            "end": 462.96,
+            "text": " Others are going to be better run by payers.  Others are going to be directly provided to patients,  and some all of the above.  We also have to think about industrial questions,  in terms of what is it going to take to develop a new product?"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 462.96,
+            "end": 479.64,
+            "text": " Who will pay for this product?  Which is, again, an important question when it comes  to deploying algorithms here.  So I'll run through a couple of very high-level examples,  driven from my own work, focused on the provider space."
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 479.64,
+            "end": 493.03999999999996,
+            "text": " And then I'll bump up to talk a bit more broadly.  So for the last seven or eight years,  I've been doing a lot of work in collaboration  with Beth Israel Deaconess Medical Center across the river  with their emergency department."
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 493.03999999999996,
+            "end": 505.14,
+            "text": " And the emergency department is a really interesting clinical  setting, because you have a very short period of time  from when a patient comes into the hospital  to diagnose what's going on with them, to initiate therapy,  and then to decide what to do next."
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 505.14,
+            "end": 516.76,
+            "text": " Do you keep them in the hospital?  Do you send them home?  For each one of those things, what  should the most immediate actions be?  And at least here in the US, we're always understaffed."
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 516.76,
+            "end": 529.58,
+            "text": " So we've got limited resources and very critical decisions  to make.  So this is one example of a setting  where algorithms that are running behind the scenes  could potentially really help with some of the challenges"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 529.58,
+            "end": 540.4399999999999,
+            "text": " I mentioned earlier.  So for example, one can imagine an algorithm  which builds on techniques like what  I mentioned to you for Internist 1,  or quick medical reference, try to reason"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 540.4399999999999,
+            "end": 554.16,
+            "text": " about what's going on with the patient based  on the data that's available for the patient, the symptoms.  But the modern view of this shouldn't, of course,  use binary indicators of each symptom, which  have to be entered in manually."
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 554.16,
+            "end": 565.62,
+            "text": " But rather, all of these things should be automatically  extracted from the electronic medical record  or elicited as necessary.  And then if one could reason about what's  going on with the patient, we wouldn't necessarily"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 565.62,
+            "end": 575.98,
+            "text": " want to use it for diagnosis, although in some cases,  you might use it for earlier diagnosis.  But it could also be used for a number of other more subtle  interventions.  For example, better triage to figure out which patients"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 575.98,
+            "end": 593.74,
+            "text": " need to be seen first, early detection of adverse events,  or recognition that there might be some unusual actions, which  might actually be medical errors that you want to surface now  and draw attention to.  Now, you could also use this understanding"
+        },
+        {
+            "number": "lec1",
+            "title": "part.003.mp3",
+            "start": 593.74,
+            "end": 602.38,
+            "text": " of what's gone with the patient to change the way  that clinicians interact with patient data.  So for example, let's say I'm a clinician."
+        }
+    ],
+    "text": " throughout the semester. So we've talked about data. We've talked about standards. And the third wheel is breakthroughs in machine learning. And this should be no surprise to anyone in this room. We've been seeing time and time again over the last five years benchmark after benchmark being improved upon and human performance beaten by state-of-the-art machine learning algorithms. Here, I'm just showing you a figure that I imagine many of you have seen on the error rates on the ImageNet competition for object recognition. Error rates in 2011 were 25%. And just a few years ago, it already surpassed human level to under 5%. Now, the changes that have led to those advances in object recognition are going to have some parallels in health care, but only up to some point. For example, there was big data, large training sets that were critical for this. There were algorithmic advances, in particular, in convolutional neural networks that played a huge role. And there was open source software that was created, things like TensorFlow and PyTorch, which allow a researcher or industry worker in one place to very, very quickly build upon successes from other researchers in other places, and then release the code so that one can really accelerate the rate of progress in this field. Now, in terms of those algorithmic advances that have made a big difference, the ones that I would really like to point out because of their relevance to this course are learning with high dimensional features. So this was really the advances in the early 2000s, for example, in support vector machines and learning with L1 regularization as a type of sparsity. And then more recently, in the last six years, on stochastic gradient descent-like methods for very rapidly solving these convex optimization problems. That will play a huge role in what we'll be doing in this course. In the last few years, there have been a huge amount of progress in unsupervised and semi-supervised learning algorithms. And as I'll tell you about much later, one of the major challenges in health care is that despite the fact that we have a large amount of data, we have very little labeled data. And so these semi-supervised learning algorithms are going to play a major role in being able to really take advantage of the data that we do have. And then, of course, the modern deep learning algorithms, convolutional neural networks, recurrent neural networks, and ways of trying to train them. So those played a major role in the advances in the tech industry. And to some extent, they'll play a major role in health care, as well. And I'll point out a few examples of that in the rest of today's lecture. So all of this coming together, the data availability, the advances in other fields of machine learning, and the huge amount of potential financial gain in health care and the potential social impact it could have has not gone unnoticed. And there's a huge amount of industry interest in this field. These are just some examples from names I think many of you are familiar with, like DeepMind Health and IBM Watson, to startup companies like Bay Labs and PathAI, which is here in Boston, all of which are really trying to build the next generation of tools for health care now based on machine learning algorithms. There's been quite billions of dollars of funding in the recent quarters towards digital health efforts with hundreds of different startups that are focused specifically on using artificial intelligence in health care. And the recognition that data is so essential to this process has led to a all-out purchasing effort to try to get as much of that data as you can. So for example, IBM purchased a company called Merge, which made medical imaging software and thus had accumulated a large amount of medical imaging data for $1 billion in 2015. They purchased Truven for $2.6 billion in 2016. Flatiron Health, which is a company in New York City focused on oncology, was purchased for almost $2 billion by Roche, a pharmaceutical company, just last year. And there's several more of these industry moves. And again, I'm just trying to get you thinking about what it really takes in this field. And access to data is actually a really important one, obviously. So let's now move on to some examples of how machine learning will transform health care. To begin with, I want to really lay out the landscape here and define some language. There are a number of different players when it comes to the health care space. There are us, patients, consumers. There are the doctors that we go to, which you could think about as providers. But of course, they're not just doctors. They're also nurses and community health workers and so on. There are payers, where these edges are really showing relationships between the different players. So our consumers, we often, either from our job or directly from us, we will pay premiums for a health insurance company to a health insurance company. And then that health insurance company is responsible for payments to the providers to provide services to us patients. Now, here in the US, the payers are both commercial and governmental. So many of you will know companies like Cigna or Aetna or Blue Cross, which are commercial providers of health insurance. But there are also governmental ones. For example, the Veterans Health Administration runs one of the biggest health organizations in the United States, servicing our veterans, people who retired from the Department of Defense, which has one of the second biggest health systems, the Defense Health Agency. And that is an organization where both of those organizations, where both the payer and the provider are really one. The Center for Medicare and Medicaid Services here in the US provides health insurance for all retirees in the United States. And also Medicaid, which is run at a state level, provides health insurance to a variety of individuals who would otherwise have difficulty purchasing or obtaining their own health insurance. And those are examples of state-run or federally-run health insurance agencies. And then internationally, sometimes the lines are even more blurred. So of course, in places like the United Kingdom, where you have a government-run health system, the National Health Service, you have the same system, both paying for and providing the services. Now, the reason why this is really important for us to think about already in Lecture 1 is because what's so essential about this field is figuring out where are the knobs that you can turn to try to improve health care. Where can we deploy machine learning algorithms within health care? And so some algorithms are going to be better run by providers. Others are going to be better run by payers. Others are going to be directly provided to patients, and some all of the above. We also have to think about industrial questions, in terms of what is it going to take to develop a new product? Who will pay for this product? Which is, again, an important question when it comes to deploying algorithms here. So I'll run through a couple of very high-level examples, driven from my own work, focused on the provider space. And then I'll bump up to talk a bit more broadly. So for the last seven or eight years, I've been doing a lot of work in collaboration with Beth Israel Deaconess Medical Center across the river with their emergency department. And the emergency department is a really interesting clinical setting, because you have a very short period of time from when a patient comes into the hospital to diagnose what's going on with them, to initiate therapy, and then to decide what to do next. Do you keep them in the hospital? Do you send them home? For each one of those things, what should the most immediate actions be? And at least here in the US, we're always understaffed. So we've got limited resources and very critical decisions to make. So this is one example of a setting where algorithms that are running behind the scenes could potentially really help with some of the challenges I mentioned earlier. So for example, one can imagine an algorithm which builds on techniques like what I mentioned to you for Internist 1, or quick medical reference, try to reason about what's going on with the patient based on the data that's available for the patient, the symptoms. But the modern view of this shouldn't, of course, use binary indicators of each symptom, which have to be entered in manually. But rather, all of these things should be automatically extracted from the electronic medical record or elicited as necessary. And then if one could reason about what's going on with the patient, we wouldn't necessarily want to use it for diagnosis, although in some cases, you might use it for earlier diagnosis. But it could also be used for a number of other more subtle interventions. For example, better triage to figure out which patients need to be seen first, early detection of adverse events, or recognition that there might be some unusual actions, which might actually be medical errors that you want to surface now and draw attention to. Now, you could also use this understanding of what's gone with the patient to change the way that clinicians interact with patient data. So for example, let's say I'm a clinician."
+}

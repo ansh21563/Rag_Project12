@@ -1,0 +1,292 @@
+{
+    "chunks": [
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 0.0,
+            "end": 20.48,
+            "text": " heart rates, and so on, to imaging data, to blood test  results as they're made available, and outcomes,  and of course, also medications that are being prescribed  as it goes.  And so this is a wealth of data that now one"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 20.48,
+            "end": 34.160000000000004,
+            "text": " could use to try to study, at least  study in a very narrow setting of the intensive care unit,  how machine learning could be used in that location.  And I don't want to underemphasize  the importance of this database, both to this course"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 34.160000000000004,
+            "end": 44.120000000000005,
+            "text": " and to the broader field.  This is really the only publicly available electronic medical  record data set of any reasonable size  in the whole world.  And it was created here at MIT."
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 44.120000000000005,
+            "end": 59.839999999999996,
+            "text": " And we'll be using it extensively in our homework  assignments as a result.  There are other data sets that aren't publicly available,  but which have been gathered by industry.  And one prime example is the Truven market scan database,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 59.839999999999996,
+            "end": 75.4,
+            "text": " which was created by a company called Truven, which  was later acquired by IBM, as I'll tell you  about more in a few minutes.  Now, this data, and there are many competing companies  that have similar data sets, is created not"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 75.4,
+            "end": 87.84,
+            "text": " from electronic medical records, but rather from, typically,  it's created from insurance claims.  So every time you go to see a doctor,  there's usually some record of that  that is associated to the billing of that visit."
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 87.84,
+            "end": 110.54,
+            "text": " So your provider will send a bill to your health insurance  saying basically what happened, so what procedures were  performed, providing diagnoses that  are used to justify the cost of those procedures and tests.  And from that data, you now get a holistic view,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 110.54,
+            "end": 124.26,
+            "text": " a longitudinal view, of what's happened  to that patient's health.  And then there is a lot of money that  passes behind the scenes between insurers and hospitals  to corporate companies, such as Truven, which collect that data"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 124.26,
+            "end": 138.8,
+            "text": " and then resell it for research purposes.  And one of the biggest purchasers of data like this  is the pharmaceutical industry.  So this data, unfortunately, is not usually publicly available.  And that's actually a big problem,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 138.8,
+            "end": 147.2,
+            "text": " both in the US and elsewhere.  It's a big obstacle to research in this field  that only people who have millions of dollars to pay  for it really get access to it.  And it's something that I'm going to return"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 147.2,
+            "end": 155.72,
+            "text": " to throughout the semester.  It's, again, something where I think policy  can make a big difference.  But luckily, here at MIT, the story  is going to be a bit different."
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 155.72,
+            "end": 169.48,
+            "text": " So thanks to the MIT IBM Watson AI Lab,  MIT has a close relationship with IBM.  And fingers crossed, it looks like we'll  get access to this database for our homework and projects  for this semester."
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 173.32,
+            "end": 187.07999999999998,
+            "text": " Now, there are a lot of other initiatives  that are creating large data sets.  A really important example here in the US  is President Obama's Precision Medicine Initiative,  which has since been renamed to the All of Us Initiative."
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 187.07999999999998,
+            "end": 201.88,
+            "text": " And this initiative is creating a data set of 1 million  patients drawn in a representative manner  from across the United States to capture patients,  both poor and rich, patients who are healthy  and have chronic disease, with the goal of trying"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 201.92,
+            "end": 214.64,
+            "text": " to create a research database where all of us  and other people, both inside and outside the US,  could do research to make medical discoveries.  And this will include data such as data  from a baseline health exam, where the typical vitals"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 214.64,
+            "end": 227.64,
+            "text": " are taken, blood is drawn.  It'll combine data of the previous two types  I've mentioned, including both data  from electronic medical records and health insurance claims.  And then a lot of this work is also happening here in Boston."
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 227.64,
+            "end": 241.24,
+            "text": " So right across the street at the Broad Institute,  there's a team which is creating all of the software  infrastructure to accommodate this data.  And there are a large number of accruement sites  here in the broader Boston area where patients, or any one"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 241.24,
+            "end": 250.8,
+            "text": " of you, really, could go and volunteer  to be part of the study.  I just got a mail.  I got a letter in the mail last week inviting me to go,  and I was really excited to see that."
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 250.8,
+            "end": 263.84,
+            "text": " So all sorts of different data is  being created as a result of these trends  that I've been mentioning.  And it ranges from unstructured data, like clinical notes,  to imaging, lab tests, vital signs."
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 263.84,
+            "end": 278.4,
+            "text": " Nowadays, what we used to think about just as clinical data  now has started to really come to have a very tight tie  to what we think about as biological data.  So data from genomics and proteomics  is starting to play a major role in both clinical research"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 278.4,
+            "end": 293.4,
+            "text": " and clinical practice.  Of course, not everything that we traditionally  think about health care data, there  are also some nontraditional sources of views on health.  So for example, social media is an interesting way"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 293.4,
+            "end": 309.68,
+            "text": " of thinking through both psychiatric disorders, where  many of us will post things on Facebook and other places  about our mental health, which give a lens  on our mental health.  Your phone, which is tracking your activity,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 309.68,
+            "end": 326.4,
+            "text": " will give us a view on how active we are.  It might help us diagnose early a variety of conditions  as well that I'll mention later.  So this whole theme now is about what's  changed since the previous approaches at AI medicine."
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 326.4,
+            "end": 343.44,
+            "text": " I've just talked about data, but data alone is not nearly enough.  The other major change is that there  has been decades worth of work on standardizing health data.  So for example, when I mentioned to you  that when you go to a doctor's office and they send a bill,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 343.44,
+            "end": 358.68,
+            "text": " that bill is associated with a diagnosis,  the diagnosis is coded in a system called ICD-9 or ICD-10,  which is a standardized system where for many, not all,  but many diseases, there is a corresponding code associated  with it."
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 358.68,
+            "end": 374.36,
+            "text": " ICD-10, which was recently rolled out nationwide  about a year ago, is much more detailed  than the previous coding system, includes  some interesting categories.  For example, bitten by a turtle has a code for it."
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 374.36,
+            "end": 388.94,
+            "text": " Bitten by a sea lion, struck by a macaw.  So it's starting to get really detailed here,  which has its benefits and its disadvantages  when it comes to research using that data.  But certainly, we can do more with detailed data"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 388.94,
+            "end": 403.76,
+            "text": " than we could with less detailed data.  Laboratory test results are standardized  using a system called LOINC here in the United States.  It's, again, every lab test order  has an associated code for it."
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 403.76,
+            "end": 422.76,
+            "text": " I just want to point out briefly that the values associated  with those lab tests are less standardized.  Pharmacy, national drug codes should be very familiar to you.  If you take any medication that you've been prescribed  and you look carefully, you'll see a number on it."
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 422.76,
+            "end": 440.40000000000003,
+            "text": " NDC 0015347911, that number is unique to that medication.  In fact, it's even unique to the brand of that medication.  And there's an associated taxonomy with it.  And so one can really understand in a very structured way  what medications the patient is on"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 440.40000000000003,
+            "end": 459.18,
+            "text": " and how those medications relate to one another.  A lot of medical data is found not in this structured form,  but in free text and notes written by doctors.  And these notes have often lots of mentions of symptoms  and conditions in them."
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 459.18,
+            "end": 474.4,
+            "text": " And one can try to standardize those  by mapping them to what's called the Unified Medical  Language System, which is an ontology with millions  of different medical concepts in them.  So I'm not going to go too much more into these."
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 474.4,
+            "end": 492.40000000000003,
+            "text": " They'll be the subject of much discussion in this semester,  but particularly in the next two lectures by Pete.  But I want to talk very briefly about what  you can do once you have a standardized vocabulary.  So one thing you can do is you could build APIs,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 492.40000000000003,
+            "end": 516.32,
+            "text": " or application programming interfaces,  for now sending that data from place to place.  And FHIR, F-H-I-R, is a new standard  which has widespread adoption now here in the United States  for hospitals to provide data both to downstream"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 516.32,
+            "end": 534.74,
+            "text": " clinical purposes, but also directly to patients.  And in this standard, it will use  many of the vocabularies I mentioned to you  in the previous slides to encode diagnoses, medications,  allergies, problems, and even financial aspects that"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 534.74,
+            "end": 548.1999999999999,
+            "text": " are relevant to the care of this patient.  And for those of you who have an Apple phone, for example,  if you open up Apple Health Records,  it makes use of this standard to receive data  from over 50 different hospitals."
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 548.2,
+            "end": 559.48,
+            "text": " And you should expect to see many competitors to them  in the future because of the fact  that it's now an open standard.  Now, other types of data, like the health insurance claims  I mentioned earlier, is often encoded in a slightly different"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 559.48,
+            "end": 576.36,
+            "text": " data model.  One which my lab works quite a bit with is called OMOP.  And it's being maintained by a nonprofit organization called  the Observational Health Data Sciences Initiative, Odyssey.  And this common data model gives a standard way"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 576.4,
+            "end": 589.16,
+            "text": " of taking data from an institution which  might have its own intricacies and really mapping it  to this common language so that if you write a machine learning  algorithm once and that machine learning algorithm reads  in data in this format, you could then apply it"
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 589.16,
+            "end": 598.6800000000001,
+            "text": " somewhere else very easily.  And the importance of these standards  really can't be understated.  The importance for translating what  we're doing in this class into clinical practice."
+        },
+        {
+            "number": "lec1",
+            "title": "part.002.mp3",
+            "start": 598.6800000000001,
+            "end": 602.2,
+            "text": " And so we'll be returning to these things  in the next few slides."
+        }
+    ],
+    "text": " heart rates, and so on, to imaging data, to blood test results as they're made available, and outcomes, and of course, also medications that are being prescribed as it goes. And so this is a wealth of data that now one could use to try to study, at least study in a very narrow setting of the intensive care unit, how machine learning could be used in that location. And I don't want to underemphasize the importance of this database, both to this course and to the broader field. This is really the only publicly available electronic medical record data set of any reasonable size in the whole world. And it was created here at MIT. And we'll be using it extensively in our homework assignments as a result. There are other data sets that aren't publicly available, but which have been gathered by industry. And one prime example is the Truven market scan database, which was created by a company called Truven, which was later acquired by IBM, as I'll tell you about more in a few minutes. Now, this data, and there are many competing companies that have similar data sets, is created not from electronic medical records, but rather from, typically, it's created from insurance claims. So every time you go to see a doctor, there's usually some record of that that is associated to the billing of that visit. So your provider will send a bill to your health insurance saying basically what happened, so what procedures were performed, providing diagnoses that are used to justify the cost of those procedures and tests. And from that data, you now get a holistic view, a longitudinal view, of what's happened to that patient's health. And then there is a lot of money that passes behind the scenes between insurers and hospitals to corporate companies, such as Truven, which collect that data and then resell it for research purposes. And one of the biggest purchasers of data like this is the pharmaceutical industry. So this data, unfortunately, is not usually publicly available. And that's actually a big problem, both in the US and elsewhere. It's a big obstacle to research in this field that only people who have millions of dollars to pay for it really get access to it. And it's something that I'm going to return to throughout the semester. It's, again, something where I think policy can make a big difference. But luckily, here at MIT, the story is going to be a bit different. So thanks to the MIT IBM Watson AI Lab, MIT has a close relationship with IBM. And fingers crossed, it looks like we'll get access to this database for our homework and projects for this semester. Now, there are a lot of other initiatives that are creating large data sets. A really important example here in the US is President Obama's Precision Medicine Initiative, which has since been renamed to the All of Us Initiative. And this initiative is creating a data set of 1 million patients drawn in a representative manner from across the United States to capture patients, both poor and rich, patients who are healthy and have chronic disease, with the goal of trying to create a research database where all of us and other people, both inside and outside the US, could do research to make medical discoveries. And this will include data such as data from a baseline health exam, where the typical vitals are taken, blood is drawn. It'll combine data of the previous two types I've mentioned, including both data from electronic medical records and health insurance claims. And then a lot of this work is also happening here in Boston. So right across the street at the Broad Institute, there's a team which is creating all of the software infrastructure to accommodate this data. And there are a large number of accruement sites here in the broader Boston area where patients, or any one of you, really, could go and volunteer to be part of the study. I just got a mail. I got a letter in the mail last week inviting me to go, and I was really excited to see that. So all sorts of different data is being created as a result of these trends that I've been mentioning. And it ranges from unstructured data, like clinical notes, to imaging, lab tests, vital signs. Nowadays, what we used to think about just as clinical data now has started to really come to have a very tight tie to what we think about as biological data. So data from genomics and proteomics is starting to play a major role in both clinical research and clinical practice. Of course, not everything that we traditionally think about health care data, there are also some nontraditional sources of views on health. So for example, social media is an interesting way of thinking through both psychiatric disorders, where many of us will post things on Facebook and other places about our mental health, which give a lens on our mental health. Your phone, which is tracking your activity, will give us a view on how active we are. It might help us diagnose early a variety of conditions as well that I'll mention later. So this whole theme now is about what's changed since the previous approaches at AI medicine. I've just talked about data, but data alone is not nearly enough. The other major change is that there has been decades worth of work on standardizing health data. So for example, when I mentioned to you that when you go to a doctor's office and they send a bill, that bill is associated with a diagnosis, the diagnosis is coded in a system called ICD-9 or ICD-10, which is a standardized system where for many, not all, but many diseases, there is a corresponding code associated with it. ICD-10, which was recently rolled out nationwide about a year ago, is much more detailed than the previous coding system, includes some interesting categories. For example, bitten by a turtle has a code for it. Bitten by a sea lion, struck by a macaw. So it's starting to get really detailed here, which has its benefits and its disadvantages when it comes to research using that data. But certainly, we can do more with detailed data than we could with less detailed data. Laboratory test results are standardized using a system called LOINC here in the United States. It's, again, every lab test order has an associated code for it. I just want to point out briefly that the values associated with those lab tests are less standardized. Pharmacy, national drug codes should be very familiar to you. If you take any medication that you've been prescribed and you look carefully, you'll see a number on it. NDC 0015347911, that number is unique to that medication. In fact, it's even unique to the brand of that medication. And there's an associated taxonomy with it. And so one can really understand in a very structured way what medications the patient is on and how those medications relate to one another. A lot of medical data is found not in this structured form, but in free text and notes written by doctors. And these notes have often lots of mentions of symptoms and conditions in them. And one can try to standardize those by mapping them to what's called the Unified Medical Language System, which is an ontology with millions of different medical concepts in them. So I'm not going to go too much more into these. They'll be the subject of much discussion in this semester, but particularly in the next two lectures by Pete. But I want to talk very briefly about what you can do once you have a standardized vocabulary. So one thing you can do is you could build APIs, or application programming interfaces, for now sending that data from place to place. And FHIR, F-H-I-R, is a new standard which has widespread adoption now here in the United States for hospitals to provide data both to downstream clinical purposes, but also directly to patients. And in this standard, it will use many of the vocabularies I mentioned to you in the previous slides to encode diagnoses, medications, allergies, problems, and even financial aspects that are relevant to the care of this patient. And for those of you who have an Apple phone, for example, if you open up Apple Health Records, it makes use of this standard to receive data from over 50 different hospitals. And you should expect to see many competitors to them in the future because of the fact that it's now an open standard. Now, other types of data, like the health insurance claims I mentioned earlier, is often encoded in a slightly different data model. One which my lab works quite a bit with is called OMOP. And it's being maintained by a nonprofit organization called the Observational Health Data Sciences Initiative, Odyssey. And this common data model gives a standard way of taking data from an institution which might have its own intricacies and really mapping it to this common language so that if you write a machine learning algorithm once and that machine learning algorithm reads in data in this format, you could then apply it somewhere else very easily. And the importance of these standards really can't be understated. The importance for translating what we're doing in this class into clinical practice. And so we'll be returning to these things in the next few slides."
+}

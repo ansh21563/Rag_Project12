@@ -1,0 +1,320 @@
+{
+    "chunks": [
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 0.0,
+            "end": 14.280000000000001,
+            "text": " I only told you about one estimator in today's lecture,  and that's known as the likelihood-based estimator.  But there's a whole other estimation approach  for survival modeling, which is very important to know about.  They're called partial likelihood estimators."
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 14.280000000000001,
+            "end": 26.16,
+            "text": " And for those of you who've heard of Cox proportional  hazards models, and I know they were discussed  in Friday's recitation, that's an example  of a class of model that's commonly  used within this partial likelihood estimator."
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 26.16,
+            "end": 40.8,
+            "text": " Now, at a very intuitive level, what  this partial likelihood estimator is doing  is it's working with something like the C-statistic.  So notice how the C-statistic only  looks at relative orderings of events,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 40.8,
+            "end": 61.42,
+            "text": " of their event occurrences.  It doesn't care about exactly when the event occurred or not.  In some sense, there's a constant  in this survival function, which could be divided out  from both sides of this inequality,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 61.42,
+            "end": 74.52000000000001,
+            "text": " and it wouldn't affect anything about the statistic.  And so one could think about other ways  of learning these models by saying, well,  we want to learn a survival function such  that it gets the ordering correct between data points."
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 74.52000000000001,
+            "end": 91.3,
+            "text": " Now, such a survival function wouldn't do a very good job.  There's no reason it would do any good  at getting the precise time of when an event occurs.  But if your goal were to just figure out  what is the sorted order of patients by risk"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 91.3,
+            "end": 102.36,
+            "text": " so that you're going to do an intervention on the 10 most  risky people, then getting that order incorrect  is going to be enough.  And that's precisely the intuition  used behind these partial likelihood estimators."
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 102.36,
+            "end": 112.68,
+            "text": " They focus on something which is a little bit less  than the original goal, but in doing so,  they can have much better statistical complexity,  meaning the amount of data they need in order  to fit those models well."
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 112.68,
+            "end": 126.60000000000001,
+            "text": " And again, this is a very rich topic.  All I wanted to do is give you a pointer to it  so that you can go read more about it  if this is something of interest to you.  So now moving on into the recap, one"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 126.60000000000001,
+            "end": 136.12,
+            "text": " of the most important points that we discussed last week  was about non-stationarity.  And there was a question posted to Piazza  which was really interesting, which is, how do you actually  deal with non-stationarity?"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 136.12,
+            "end": 148.32000000000002,
+            "text": " And I spoke a lot about it existing,  and I talked about how to test for it,  but I didn't say what to do if you have it.  So I thought this was such an interesting question  that I would also talk about it a bit during lecture."
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 148.32000000000002,
+            "end": 162.38,
+            "text": " So the short answer is, if you have to have a solution  that you deploy tomorrow, then here's  the hack that sometimes works.  You take your most recent data, like the last three months  data, and you hope that there's not"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 162.38,
+            "end": 177.88,
+            "text": " much non-stationarity within the last three months.  You throw out all the historical data,  and you just train using the most recent data.  So a bit unsatisfying, because you might have now  extremely little data left to learn with,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 177.88,
+            "end": 190.16,
+            "text": " but if you have enough volume, it might be good enough.  But the really interesting question from a research  perspective is, how could you optimally  use that historical data?  So here are three different ways."
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 190.16,
+            "end": 207.72,
+            "text": " So one way has to do with imputation.  Imagine that the way in which your data was non-stationary  was because there were, let's say, parts of time  when certain features were just unavailable.  And I gave you this example last week of laboratory test results"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 207.72,
+            "end": 217.88,
+            "text": " across time, and I showed you how there's sometimes  these really big blocks of time where no lab tests are  available or very few are available.  Well, luckily, we live in a world  with high dimensional data."
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 217.88,
+            "end": 230.52,
+            "text": " And what that means is there's often  a lot of redundancy in the data.  So what you could imagine doing is imputing features  that you observe to be missing, such  that the missingness properties, in fact,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 230.52,
+            "end": 243.56,
+            "text": " aren't changing as much across time after imputation.  If you do that as a preprocessing step,  it may allow you to make use of much more  of the historical data.  A different approach, which is intimately tied to that,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 243.56,
+            "end": 257.2,
+            "text": " has to do with transforming the data.  Instead of imputing it, transforming it  into another representation altogether,  such that that presentation is invariant across time.  And here I'm giving you a reference to this paper"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 257.2,
+            "end": 268.0,
+            "text": " by Gan et al from the Journal of Machine Learning Research  2016, which talks about how to do domain and variant  learning of neural networks.  And that's one approach to do so.  And I view those two as being very similar,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 268.0,
+            "end": 279.68,
+            "text": " imputation and transformations.  A second approach is to reweight the data  to look like the current data.  So imagine that you go back in time, and you say,  you know what?"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 279.68,
+            "end": 296.71999999999997,
+            "text": " I see the 10 codes for some very weird reason.  This is not true, by the way.  I see the 10 codes in this untrue world  happen to be used between March and April of 2003.  And then they weren't used again until 2015."
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 296.71999999999997,
+            "end": 309.32,
+            "text": " All right, so instead of throwing away  all of the previous data, we're going  to recognize that that three-month interval 10 years  ago was actually drawn from a very similar distribution  as what we're going to be testing on today."
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 309.32,
+            "end": 321.56,
+            "text": " So we're going to weight those data points up very much  and downweight the data points that are  less like the ones from today.  That's the intuition behind these reweighting approaches.  And we're going to talk much more"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 321.56,
+            "end": 334.92,
+            "text": " about that in the context of causal inference,  not because these two have to do each other,  but they end up using a very similar technique for how  to deal with data set shift or covariate shift.  And the final technique that I'll mention"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 334.92,
+            "end": 353.92,
+            "text": " is based on online learning algorithms.  The idea there is that there might be cut points, change  points across time.  So maybe the data looks one way up until this change point,  and then suddenly the data looks really"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 353.92,
+            "end": 364.6,
+            "text": " different until this change point,  and then suddenly the data looks very different  into the future.  So here I'm showing you there are two change points in which  data set shift happens."
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 364.6,
+            "end": 378.64,
+            "text": " What these online learning algorithms do is they say,  suppose we were forced to make predictions  throughout this time period using only the historical data  to make predictions at each point in time.  Well, if we could somehow recognize"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 378.64,
+            "end": 390.36,
+            "text": " that there might be these shifts,  we could design algorithms that are going  to be robust to those shifts.  And then one could try to mathematically analyze  those algorithms based on the amount of regret"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 390.36,
+            "end": 401.68,
+            "text": " they would have to, for example, an algorithm that knew exactly  when those changes were.  And of course, we don't know precisely  when those changes were.  And so there's a whole field of algorithms trying to do that."
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 401.68,
+            "end": 416.52,
+            "text": " And here I'm just giving you one citation for a recent work.  So to conclude risk stratification,  this is the last slide here.  I just maybe ask you a question after class.  We've talked about two approaches"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 416.52,
+            "end": 428.23999999999995,
+            "text": " for formalizing risk stratification,  first as binary classification, second as regression.  And in the regression framework, one  has to think about censoring, which is why  we call it survival modeling."
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 431.09999999999997,
+            "end": 453.0,
+            "text": " Second, in our examples, and again,  in your homework assignment that's coming up next week,  we'll see that often the variables, the features that  are most predictive make a lot of sense.  In the diabetes case, we said we saw"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 453.04,
+            "end": 469.88,
+            "text": " how patients having comorbidities of diabetes,  like hypertension, or patients being obese,  were very predictive of patients getting diabetes.  So you might ask yourself, is there something causal there?  Are those features that are very predictive, in fact,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 469.88,
+            "end": 485.24,
+            "text": " what's causing the patient to develop type 2 diabetes,  like, for example, obesity causing diabetes?  And this is where I want to caution you.  You shouldn't interpret these very predictive features  in a causal fashion, particularly not"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 485.24,
+            "end": 500.56,
+            "text": " when one starts to work with high dimensional data,  as we do in this course.  The reason for that is very subtle.  And we'll talk about that in the causal inference lectures.  But I just wanted to give you a pointer now"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 500.56,
+            "end": 515.64,
+            "text": " that you shouldn't think about it in that way,  and you'll understand why in just a few weeks.  And finally, we talked about ways  of dealing with missing data.  I gave you one feature representation"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 515.64,
+            "end": 530.68,
+            "text": " for the diabetes case, which was designed  to deal with missing data.  It said, was there any diagnosis code 250.01  in the last three months?  And if there was, you have a 1."
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 530.68,
+            "end": 541.52,
+            "text": " If you don't, it's 0.  So it's designed to recognize that you don't have  information, perhaps, for some large chunk of time  in that window.  But that missing data could also be dangerous"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 541.52,
+            "end": 554.48,
+            "text": " if that missingness itself is caused  due to non-stationarity, which is then  going to result in your test distribution looking different  from your train distribution.  And that's where approaches that are based on imputation"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 554.48,
+            "end": 566.6999999999999,
+            "text": " could actually be very valuable, not because they improve  your predictive accuracy when everything goes right,  but because they might improve your predictive accuracy when  things go wrong.  And so one of your readings for last week's lecture"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 566.6999999999999,
+            "end": 577.6,
+            "text": " was actually an example of that, where  they used a Gaussian process model  to impute much of the missing data in a patient's  continuous vital signs.  And then they used a recurrent neural network"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 577.6,
+            "end": 593.24,
+            "text": " to predict based on that imputed data.  So in that case, there are really two things going on.  First is this robustness to data set shift.  But there's a second thing which is going on as well, which  has to do with a trade-off between the amount of data"
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 593.24,
+            "end": 610.28,
+            "text": " you have and the complexity of the prediction problem.  By doing imputation [? state ?] shift,  you can actually get modernized test distributions  resulting from tell mediums for different coordinates  of your multipled directions, at random."
+        },
+        {
+            "number": "lec6",
+            "title": "part.002.mp3",
+            "start": 610.28,
+            "end": 618.74,
+            "text": " For one thing, you might those pills  for the\ufffd\ufffdgree e showed exposing\u5f8c of new features"
+        }
+    ],
+    "text": " I only told you about one estimator in today's lecture, and that's known as the likelihood-based estimator. But there's a whole other estimation approach for survival modeling, which is very important to know about. They're called partial likelihood estimators. And for those of you who've heard of Cox proportional hazards models, and I know they were discussed in Friday's recitation, that's an example of a class of model that's commonly used within this partial likelihood estimator. Now, at a very intuitive level, what this partial likelihood estimator is doing is it's working with something like the C-statistic. So notice how the C-statistic only looks at relative orderings of events, of their event occurrences. It doesn't care about exactly when the event occurred or not. In some sense, there's a constant in this survival function, which could be divided out from both sides of this inequality, and it wouldn't affect anything about the statistic. And so one could think about other ways of learning these models by saying, well, we want to learn a survival function such that it gets the ordering correct between data points. Now, such a survival function wouldn't do a very good job. There's no reason it would do any good at getting the precise time of when an event occurs. But if your goal were to just figure out what is the sorted order of patients by risk so that you're going to do an intervention on the 10 most risky people, then getting that order incorrect is going to be enough. And that's precisely the intuition used behind these partial likelihood estimators. They focus on something which is a little bit less than the original goal, but in doing so, they can have much better statistical complexity, meaning the amount of data they need in order to fit those models well. And again, this is a very rich topic. All I wanted to do is give you a pointer to it so that you can go read more about it if this is something of interest to you. So now moving on into the recap, one of the most important points that we discussed last week was about non-stationarity. And there was a question posted to Piazza which was really interesting, which is, how do you actually deal with non-stationarity? And I spoke a lot about it existing, and I talked about how to test for it, but I didn't say what to do if you have it. So I thought this was such an interesting question that I would also talk about it a bit during lecture. So the short answer is, if you have to have a solution that you deploy tomorrow, then here's the hack that sometimes works. You take your most recent data, like the last three months data, and you hope that there's not much non-stationarity within the last three months. You throw out all the historical data, and you just train using the most recent data. So a bit unsatisfying, because you might have now extremely little data left to learn with, but if you have enough volume, it might be good enough. But the really interesting question from a research perspective is, how could you optimally use that historical data? So here are three different ways. So one way has to do with imputation. Imagine that the way in which your data was non-stationary was because there were, let's say, parts of time when certain features were just unavailable. And I gave you this example last week of laboratory test results across time, and I showed you how there's sometimes these really big blocks of time where no lab tests are available or very few are available. Well, luckily, we live in a world with high dimensional data. And what that means is there's often a lot of redundancy in the data. So what you could imagine doing is imputing features that you observe to be missing, such that the missingness properties, in fact, aren't changing as much across time after imputation. If you do that as a preprocessing step, it may allow you to make use of much more of the historical data. A different approach, which is intimately tied to that, has to do with transforming the data. Instead of imputing it, transforming it into another representation altogether, such that that presentation is invariant across time. And here I'm giving you a reference to this paper by Gan et al from the Journal of Machine Learning Research 2016, which talks about how to do domain and variant learning of neural networks. And that's one approach to do so. And I view those two as being very similar, imputation and transformations. A second approach is to reweight the data to look like the current data. So imagine that you go back in time, and you say, you know what? I see the 10 codes for some very weird reason. This is not true, by the way. I see the 10 codes in this untrue world happen to be used between March and April of 2003. And then they weren't used again until 2015. All right, so instead of throwing away all of the previous data, we're going to recognize that that three-month interval 10 years ago was actually drawn from a very similar distribution as what we're going to be testing on today. So we're going to weight those data points up very much and downweight the data points that are less like the ones from today. That's the intuition behind these reweighting approaches. And we're going to talk much more about that in the context of causal inference, not because these two have to do each other, but they end up using a very similar technique for how to deal with data set shift or covariate shift. And the final technique that I'll mention is based on online learning algorithms. The idea there is that there might be cut points, change points across time. So maybe the data looks one way up until this change point, and then suddenly the data looks really different until this change point, and then suddenly the data looks very different into the future. So here I'm showing you there are two change points in which data set shift happens. What these online learning algorithms do is they say, suppose we were forced to make predictions throughout this time period using only the historical data to make predictions at each point in time. Well, if we could somehow recognize that there might be these shifts, we could design algorithms that are going to be robust to those shifts. And then one could try to mathematically analyze those algorithms based on the amount of regret they would have to, for example, an algorithm that knew exactly when those changes were. And of course, we don't know precisely when those changes were. And so there's a whole field of algorithms trying to do that. And here I'm just giving you one citation for a recent work. So to conclude risk stratification, this is the last slide here. I just maybe ask you a question after class. We've talked about two approaches for formalizing risk stratification, first as binary classification, second as regression. And in the regression framework, one has to think about censoring, which is why we call it survival modeling. Second, in our examples, and again, in your homework assignment that's coming up next week, we'll see that often the variables, the features that are most predictive make a lot of sense. In the diabetes case, we said we saw how patients having comorbidities of diabetes, like hypertension, or patients being obese, were very predictive of patients getting diabetes. So you might ask yourself, is there something causal there? Are those features that are very predictive, in fact, what's causing the patient to develop type 2 diabetes, like, for example, obesity causing diabetes? And this is where I want to caution you. You shouldn't interpret these very predictive features in a causal fashion, particularly not when one starts to work with high dimensional data, as we do in this course. The reason for that is very subtle. And we'll talk about that in the causal inference lectures. But I just wanted to give you a pointer now that you shouldn't think about it in that way, and you'll understand why in just a few weeks. And finally, we talked about ways of dealing with missing data. I gave you one feature representation for the diabetes case, which was designed to deal with missing data. It said, was there any diagnosis code 250.01 in the last three months? And if there was, you have a 1. If you don't, it's 0. So it's designed to recognize that you don't have information, perhaps, for some large chunk of time in that window. But that missing data could also be dangerous if that missingness itself is caused due to non-stationarity, which is then going to result in your test distribution looking different from your train distribution. And that's where approaches that are based on imputation could actually be very valuable, not because they improve your predictive accuracy when everything goes right, but because they might improve your predictive accuracy when things go wrong. And so one of your readings for last week's lecture was actually an example of that, where they used a Gaussian process model to impute much of the missing data in a patient's continuous vital signs. And then they used a recurrent neural network to predict based on that imputed data. So in that case, there are really two things going on. First is this robustness to data set shift. But there's a second thing which is going on as well, which has to do with a trade-off between the amount of data you have and the complexity of the prediction problem. By doing imputation [? state ?] shift, you can actually get modernized test distributions resulting from tell mediums for different coordinates of your multipled directions, at random. For one thing, you might those pills for the\ufffd\ufffdgree e showed exposing\u5f8c of new features"
+}

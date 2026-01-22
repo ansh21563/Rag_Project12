@@ -1,0 +1,334 @@
+{
+    "chunks": [
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 0.0,
+            "end": 12.64,
+            "text": " to make that really accurate.  And so the question is, when you have that many variables,  can a human develop and maintain that logic?  Or would we be better off trying to use a machine learning  system to do that?"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 12.64,
+            "end": 25.52,
+            "text": " Would that really work or not?  So how far are we from being able to use a machine learning  system to do that?  Yeah, I think that the biggest challenge, honestly,  relates to the scope of availability and accuracy"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 25.52,
+            "end": 38.92,
+            "text": " of the data in our systems.  So Epic, which is the EHR that we're using, and Cerner,  and Allscripts, and most of the major systems  have various ways to run even kind of sophisticated machine  learning models, either inside of the system"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 38.92,
+            "end": 47.88,
+            "text": " or sort of kind of bolted onto the system  and then feeding model inferences back  into the system.  When I was giving that example of the pneumococcal  vaccination, one of the major problems"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 47.88,
+            "end": 60.72,
+            "text": " is that there's not always a really good structured way  in the system that we indicate that a patient is  at the end of life and receiving comfort measures only,  or that the patient is in a really extreme state,  that we're in the middle of the code blue"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 60.72,
+            "end": 70.52,
+            "text": " and that we need to sort of pause for a second  and stop giving these kind of friendly preventive care  suggestions.  And so I would actually say that the biggest barrier  to really good machine learning-based decision"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 70.52,
+            "end": 83.48,
+            "text": " support is just the lack of good, reliably documented,  coded, usable features.  I think that the second challenge, obviously,  is workflow.  You said it's sometimes hard to know in the hospital who"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 83.48,
+            "end": 93.8,
+            "text": " a patient's doctor is.  If a patient is admitted and on the care team  is an intern, a junior resident, and a fellow,  and attending several specialists,  a couple of nurses, who should get that message?"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 93.8,
+            "end": 102.88,
+            "text": " Or who should get that page?  Workflow is second.  This is where I think you may say,  I have some optimism.  I actually think that the technical ability of our EHR"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 102.88,
+            "end": 116.32000000000001,
+            "text": " software to run these models is better than it  was three or five years ago.  And it's actually usually not the barrier in the studies  that we've done.  So there were attempts, again, 20 years ago,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 116.32000000000001,
+            "end": 136.0,
+            "text": " to create kind of formal rules about who gets notified  under what circumstances.  I remember one of the doctors I worked with at Tufts Medical  Center was going crazy because when they implemented a new lab  information system, it would alert on every abnormal lab."
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 136.0,
+            "end": 149.72,
+            "text": " And this is crazy.  But there were other hospitals that said, well,  let's be a little more sophisticated about when  it's necessary to alert.  And then if somebody doesn't respond"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 149.72,
+            "end": 162.52,
+            "text": " to an alert within a very short period of time,  then we escalate it to somebody higher up  or somebody else on the care team.  And that seemed like a reasonable idea to me.  But are there things like that in place now?"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 162.52,
+            "end": 169.56,
+            "text": " There are.  It works very differently in the inpatient  and the outpatient setting.  The inpatient setting, we're writing very kind of acute care  to a patient."
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 169.56,
+            "end": 180.28,
+            "text": " And so we have processes where people sort of sign in and out  of the care team.  And in fact, the sort of prevalence  of these automated messages is an incentive  to sort of do that well."
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 180.28,
+            "end": 190.8,
+            "text": " So if I go home, I better sign myself out of that patient.  Otherwise, I'm going to get all these pages all night  about them.  And the system sort of will always  make sure that somebody is the responding provider."
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 190.8,
+            "end": 202.8,
+            "text": " It becomes a little thornier in the outpatient setting  because a lot of the academic doctors at the Brigham  only have clinic half a day a week.  And so the question is, if an abnormal result comes back,  should I send it to that doctor?"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 202.8,
+            "end": 214.84,
+            "text": " Should I send it to the person sort of on call in that clinic?  Should I send it to the head of the clinic?  There are also these sort of edge cases  that sort of messes up a lot.  And so a classic one is a patient is in the hospital."
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 214.84,
+            "end": 223.36,
+            "text": " I've ordered some lab tests.  They're looking well.  So I discharge the patient.  The test is still pending at the time the patient is discharged.  And now, who does that go to?"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 223.36,
+            "end": 233.56,
+            "text": " Should it go to the patient's primary care doctor?  Do they have a primary care doctor?  Should it go to the person that ordered the test?  That person may be on vacation now.  If it's a test that takes a few weeks to come back."
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 233.56,
+            "end": 244.8,
+            "text": " So we still struggle with what we call those TPADs,  test pending at discharge.  We still struggle with some of those edge cases.  But I think in the core, we're pretty good at it.  So one of the things we talked about"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 244.8,
+            "end": 262.52,
+            "text": " is an experience I've had and you've probably had,  that, for example, a few years ago,  I was working with the people who run the clinical labs  at Mass General.  And they run some ancient laboratory information system"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 262.52,
+            "end": 273.84,
+            "text": " that, as you said, can add and subtract,  but not multiply or divide.  It can add and multiply, but not subtract or divide.  Yes.  And it doesn't support negative numbers, only unsigned integers."
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 273.84,
+            "end": 293.0,
+            "text": " So there are these wonderful legacy systems  around that really create horrendous problems.  Because if you try to build anything,  even a risk prediction calculator,  it really helps to be able to divide as well as multiply."
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 293.0,
+            "end": 311.88,
+            "text": " And so we've struggled in that project,  and I'm sure you've had similar experiences,  with how do we incorporate a decision support  system into some of this creaky old technology that just  doesn't support it."
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 311.92,
+            "end": 324.08,
+            "text": " So what's the right approach to that?  There are a lot of architectures,  and they all have pros and cons.  I'm not sure if any one of them is the right approach.  I think we often do favor using the creaky old technology"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 324.08,
+            "end": 335.2,
+            "text": " or the new technology.  So Epic has a built-in rule engine.  That laboratory system that you're talking about  has a basic calculation engine with some significant  limitations to it."
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 335.2,
+            "end": 348.44,
+            "text": " So where we can, we often will try  to build rules internally using these systems.  Those tend to have real-time availability of data,  the best ability to push alerts to the person  right in their workflow and make those alerts actionable."
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 348.44,
+            "end": 360.36,
+            "text": " In cases where we can't do that, like for example,  a model that's too complex to execute in the system,  one thing that we've often done is run that model  against our data warehouse.  So we have a data warehouse that extracts"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 360.36,
+            "end": 371.48,
+            "text": " the data from the electronic health record  every night at midnight.  And so if we don't need real-time data,  it's possible to extract the data, run a model,  and then actually write a risk score or a flag"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 371.48,
+            "end": 382.96000000000004,
+            "text": " back into the patient's record that can then  be shown to the clinician or used to drive an alert  or something like that.  That works really well, except that a lot of things  that happen particularly in patient setting,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 382.96000000000004,
+            "end": 396.16,
+            "text": " like predicting sepsis, depend on real-time data,  data that we need right away.  And so we run into the challenge where  that particular approach only works  kind of on a 24-hour kind of retrospective basis."
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 396.16,
+            "end": 410.68,
+            "text": " We have also developed systems that depend on messages.  So there's this HL7 as a standard format  for exchanging data with an electronic health record.  There's various versions and profiles of HL7.  But you can set up an infrastructure"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 410.68,
+            "end": 425.56,
+            "text": " that sits outside of the EHR and gets messages in real time  from the EHR and makes inferences and sends messages  back into the EHR.  Increasingly, EHRs also do support web service approaches  so that you can register a hook and say,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 425.56,
+            "end": 438.88,
+            "text": " call my hook whenever this thing happens.  Or you can pull the EHR to get data out  and use another web service to write data back in.  That's worked really well for us.  You can also sort of ask the EHR to sort of embed"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 438.88,
+            "end": 451.56,
+            "text": " an app that you develop.  So people here may have heard or should hear at some point  about Smart on Fire, which is a open kind of API that  allows you to sort of develop an application  and embed that application into an electronic health record."
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 451.56,
+            "end": 461.88,
+            "text": " We've increasingly been building  some of those applications.  The downside right now of the smart apps  is that they're really good for sort of reading data out  of the record and sort of visualizing or displaying it."
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 461.88,
+            "end": 474.28,
+            "text": " But they don't always have a lot of capability  to sort of write data back into the record or take actions.  Most of the EHR vendors also have a proprietary approach,  like an app store.  So Epic calls theirs the App Orchard."
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 474.28,
+            "end": 486.2,
+            "text": " And most of the EHRs have something similar,  where you can join a developer program  and sort of build an application.  And those are often more full-featured.  They tend to be proprietary."
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 486.2,
+            "end": 499.2,
+            "text": " So if you build one Epic app, you  have to then build a Cerner app and an Allscripts app  and a Clinical Works app separately.  There are often heavy fees for joining those programs,  although the EHR vendors, Epic in particular,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 499.2,
+            "end": 513.0600000000001,
+            "text": " have lowered their prices a lot.  And the federal government, the Office  of the National Coordinating for Health IT,  just about a week and a half ago released some new regulations  really limit the rate at which vendors can charge application"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 513.0600000000001,
+            "end": 525.86,
+            "text": " developers for API access, basically to almost nothing  except for kind of incremental computation  costs or special support.  And so I think that may change everything  now that that regulation has been promulgated."
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 525.86,
+            "end": 542.34,
+            "text": " So we'll see.  So contrary to my pessimistic beginning,  this actually is the thing that makes me most optimistic,  that even five years ago, if you looked  at many of these systems, they essentially locked you out."
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 542.34,
+            "end": 562.3800000000001,
+            "text": " I remember in the early 2000s, I was  at the University of Pittsburgh, where  they had one of the first centers that was  doing heart-lung transplants.  And so there, people had built a special application"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 562.38,
+            "end": 581.74,
+            "text": " for supporting heart-lung transplant patients  in their own homemade electronic medical record system.  And then UPMC went to Cerner at the time.  And I remember I was at some meeting  where the doctors who ran this heart-lung transplant unit"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 581.74,
+            "end": 596.94,
+            "text": " were talking to the Cerner people and saying,  how could we get something to support our special needs  for our patients?  And Cerner's answer was, well, commercially, it  doesn't make sense for us to do this, because at the time,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.005.mp3",
+            "start": 596.94,
+            "end": 601.5,
+            "text": " there were like four hospitals in the country that did this."
+        }
+    ],
+    "text": " to make that really accurate. And so the question is, when you have that many variables, can a human develop and maintain that logic? Or would we be better off trying to use a machine learning system to do that? Would that really work or not? So how far are we from being able to use a machine learning system to do that? Yeah, I think that the biggest challenge, honestly, relates to the scope of availability and accuracy of the data in our systems. So Epic, which is the EHR that we're using, and Cerner, and Allscripts, and most of the major systems have various ways to run even kind of sophisticated machine learning models, either inside of the system or sort of kind of bolted onto the system and then feeding model inferences back into the system. When I was giving that example of the pneumococcal vaccination, one of the major problems is that there's not always a really good structured way in the system that we indicate that a patient is at the end of life and receiving comfort measures only, or that the patient is in a really extreme state, that we're in the middle of the code blue and that we need to sort of pause for a second and stop giving these kind of friendly preventive care suggestions. And so I would actually say that the biggest barrier to really good machine learning-based decision support is just the lack of good, reliably documented, coded, usable features. I think that the second challenge, obviously, is workflow. You said it's sometimes hard to know in the hospital who a patient's doctor is. If a patient is admitted and on the care team is an intern, a junior resident, and a fellow, and attending several specialists, a couple of nurses, who should get that message? Or who should get that page? Workflow is second. This is where I think you may say, I have some optimism. I actually think that the technical ability of our EHR software to run these models is better than it was three or five years ago. And it's actually usually not the barrier in the studies that we've done. So there were attempts, again, 20 years ago, to create kind of formal rules about who gets notified under what circumstances. I remember one of the doctors I worked with at Tufts Medical Center was going crazy because when they implemented a new lab information system, it would alert on every abnormal lab. And this is crazy. But there were other hospitals that said, well, let's be a little more sophisticated about when it's necessary to alert. And then if somebody doesn't respond to an alert within a very short period of time, then we escalate it to somebody higher up or somebody else on the care team. And that seemed like a reasonable idea to me. But are there things like that in place now? There are. It works very differently in the inpatient and the outpatient setting. The inpatient setting, we're writing very kind of acute care to a patient. And so we have processes where people sort of sign in and out of the care team. And in fact, the sort of prevalence of these automated messages is an incentive to sort of do that well. So if I go home, I better sign myself out of that patient. Otherwise, I'm going to get all these pages all night about them. And the system sort of will always make sure that somebody is the responding provider. It becomes a little thornier in the outpatient setting because a lot of the academic doctors at the Brigham only have clinic half a day a week. And so the question is, if an abnormal result comes back, should I send it to that doctor? Should I send it to the person sort of on call in that clinic? Should I send it to the head of the clinic? There are also these sort of edge cases that sort of messes up a lot. And so a classic one is a patient is in the hospital. I've ordered some lab tests. They're looking well. So I discharge the patient. The test is still pending at the time the patient is discharged. And now, who does that go to? Should it go to the patient's primary care doctor? Do they have a primary care doctor? Should it go to the person that ordered the test? That person may be on vacation now. If it's a test that takes a few weeks to come back. So we still struggle with what we call those TPADs, test pending at discharge. We still struggle with some of those edge cases. But I think in the core, we're pretty good at it. So one of the things we talked about is an experience I've had and you've probably had, that, for example, a few years ago, I was working with the people who run the clinical labs at Mass General. And they run some ancient laboratory information system that, as you said, can add and subtract, but not multiply or divide. It can add and multiply, but not subtract or divide. Yes. And it doesn't support negative numbers, only unsigned integers. So there are these wonderful legacy systems around that really create horrendous problems. Because if you try to build anything, even a risk prediction calculator, it really helps to be able to divide as well as multiply. And so we've struggled in that project, and I'm sure you've had similar experiences, with how do we incorporate a decision support system into some of this creaky old technology that just doesn't support it. So what's the right approach to that? There are a lot of architectures, and they all have pros and cons. I'm not sure if any one of them is the right approach. I think we often do favor using the creaky old technology or the new technology. So Epic has a built-in rule engine. That laboratory system that you're talking about has a basic calculation engine with some significant limitations to it. So where we can, we often will try to build rules internally using these systems. Those tend to have real-time availability of data, the best ability to push alerts to the person right in their workflow and make those alerts actionable. In cases where we can't do that, like for example, a model that's too complex to execute in the system, one thing that we've often done is run that model against our data warehouse. So we have a data warehouse that extracts the data from the electronic health record every night at midnight. And so if we don't need real-time data, it's possible to extract the data, run a model, and then actually write a risk score or a flag back into the patient's record that can then be shown to the clinician or used to drive an alert or something like that. That works really well, except that a lot of things that happen particularly in patient setting, like predicting sepsis, depend on real-time data, data that we need right away. And so we run into the challenge where that particular approach only works kind of on a 24-hour kind of retrospective basis. We have also developed systems that depend on messages. So there's this HL7 as a standard format for exchanging data with an electronic health record. There's various versions and profiles of HL7. But you can set up an infrastructure that sits outside of the EHR and gets messages in real time from the EHR and makes inferences and sends messages back into the EHR. Increasingly, EHRs also do support web service approaches so that you can register a hook and say, call my hook whenever this thing happens. Or you can pull the EHR to get data out and use another web service to write data back in. That's worked really well for us. You can also sort of ask the EHR to sort of embed an app that you develop. So people here may have heard or should hear at some point about Smart on Fire, which is a open kind of API that allows you to sort of develop an application and embed that application into an electronic health record. We've increasingly been building some of those applications. The downside right now of the smart apps is that they're really good for sort of reading data out of the record and sort of visualizing or displaying it. But they don't always have a lot of capability to sort of write data back into the record or take actions. Most of the EHR vendors also have a proprietary approach, like an app store. So Epic calls theirs the App Orchard. And most of the EHRs have something similar, where you can join a developer program and sort of build an application. And those are often more full-featured. They tend to be proprietary. So if you build one Epic app, you have to then build a Cerner app and an Allscripts app and a Clinical Works app separately. There are often heavy fees for joining those programs, although the EHR vendors, Epic in particular, have lowered their prices a lot. And the federal government, the Office of the National Coordinating for Health IT, just about a week and a half ago released some new regulations really limit the rate at which vendors can charge application developers for API access, basically to almost nothing except for kind of incremental computation costs or special support. And so I think that may change everything now that that regulation has been promulgated. So we'll see. So contrary to my pessimistic beginning, this actually is the thing that makes me most optimistic, that even five years ago, if you looked at many of these systems, they essentially locked you out. I remember in the early 2000s, I was at the University of Pittsburgh, where they had one of the first centers that was doing heart-lung transplants. And so there, people had built a special application for supporting heart-lung transplant patients in their own homemade electronic medical record system. And then UPMC went to Cerner at the time. And I remember I was at some meeting where the doctors who ran this heart-lung transplant unit were talking to the Cerner people and saying, how could we get something to support our special needs for our patients? And Cerner's answer was, well, commercially, it doesn't make sense for us to do this, because at the time, there were like four hospitals in the country that did this."
+}

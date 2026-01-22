@@ -1,0 +1,369 @@
+{
+    "chunks": [
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 0.0,
+            "end": 19.2,
+            "text": " When CT reconstruction started, I remember seeing some papers  where people said, well, we know roughly what  the anatomy should look like.  And so we can fill in missing details.  Like in those days, the slices were rather far apart."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 19.2,
+            "end": 34.72,
+            "text": " And so they would hallucinate what the structure looked like.  And of course, that has the benefit  of giving you a better model.  But it also has the risk that it's hallucinated data.  Have you guys tried doing that with some of the?"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 34.72,
+            "end": 45.84,
+            "text": " Yeah, that's a great point.  So OK, so the question was, cardiac imaging  has a very long history.  And so there was a period of time  where there's these kind of active modelers"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 45.84,
+            "end": 55.1,
+            "text": " around morphologies of the heart.  And so people have these sort of models  around what the heart should look like from many, many, many  studies.  And they were using that back at the time"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 55.1,
+            "end": 67.26,
+            "text": " when we had these relatively coarse multi-slice scanners  for a CT.  They would reconstruct the 3D image of the heart  based on some pre-existing geometric model  for what the heart should look like."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 67.26,
+            "end": 76.5,
+            "text": " And there is, of course, a benefit to that,  but some risk in the sense that somebody  may be very different in the space that's missing.  And so the question is whether those kind of priors  can be introduced in some way."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 76.5,
+            "end": 89.46000000000001,
+            "text": " And it hasn't been straightforward  as to how to do that.  I mean, whenever you look at these sort of ridiculously poor  segmentations, you're like, this is idiotic.  We should be able to introduce some of that."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 89.46000000000001,
+            "end": 100.58000000000001,
+            "text": " And I've seen people, for example, put an autoencoder.  And that's not exactly getting at it,  but it's actually getting at some of these kind of coarser  features.  But no, I think in terms of using"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 100.58000000000001,
+            "end": 112.1,
+            "text": " kind of some degree of geometric priors,  I think I may have seen some literature in that space.  We haven't tried anything there.  We don't have any data to do that, unfortunately.  And I suspect, yeah, I just don't"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 112.1,
+            "end": 126.33999999999999,
+            "text": " know how difficult that is.  I mean, you mentioned that you don't  want to see a small additional atrium at a distance.  So that's in a way building in knowledge.  Yeah, no, I remember when I was starting in this space,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 126.33999999999999,
+            "end": 136.01999999999998,
+            "text": " I was like, this is idiotic.  Why can't we do this?  Why don't we have some way of doing that?  We couldn't find at that time any architectures  that were straightforward to be able to do that."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 136.02,
+            "end": 152.82000000000002,
+            "text": " But I'm sure there is something in that space.  And we didn't also have the data for those priors ourselves.  I mean, there's a long history of these kind  of de Nobile heart modelers that exist out there from Oxford  and the New Zealand group, for that matter,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 152.82000000000002,
+            "end": 161.62,
+            "text": " who've been doing some of this kind of multi-scale modeling.  I'm sure there is.  I mean, it'll be interesting to see whether or not  there is anybody who kind of pushes forward in that space.  Or is it just more data?"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 161.62,
+            "end": 176.9,
+            "text": " I think that's always that tension.  Yeah?  Can I ask about ultrasounds?  Yeah.  You didn't show us ultrasounds, right?"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 176.9,
+            "end": 182.66000000000003,
+            "text": " Yeah.  Oh, you did?  Yeah, the Echo is an ultrasound.  Oh, OK.  But that's a really expensive ultrasound, right?"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 182.66000000000003,
+            "end": 201.58,
+            "text": " There are cheaper ultrasounds that you  could imagine that you constantly do, right?  Yeah, so there is a company that just came out  with a $2,000 handheld ultrasound with a subscription model.  So Philips has a handheld device around the $8,000 marker."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 201.58,
+            "end": 212.14000000000001,
+            "text": " So $2,000 is getting quite cheap.  So that's, I think, the space for handheld devices.  We're talking about resource-poor countries.  Yeah.  In a developing country where maybe they"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 212.14000000000001,
+            "end": 225.94,
+            "text": " have very few doctors per population kind of thing,  what kind of imaging might be useful that we could then  apply computer vision algorithms to do?  I still think ultrasound is that sweet spot.  It has versatility."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 225.94,
+            "end": 235.46,
+            "text": " And its cost is about where.  And I'm sure those companies rent it out  for much lower costs in those kinds of places, too.  So we're putting together, or I put together, actually,  it may not have been funded."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 235.46,
+            "end": 247.58,
+            "text": " I'm not sure.  But looking at sub-Saharan Africa  and collaborating with one of the Brigham Doctors  who travels out to sub-Saharan Africa  and looking to try to build some of these automated detection"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 247.58,
+            "end": 260.18,
+            "text": " type of things in that space.  So no, I think there is definite kind of interest in that.  There may be a much bigger win there  than the sort of stuff I'm proposing.  But yeah, I think that's a very good point."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 260.18,
+            "end": 270.78000000000003,
+            "text": " And that would be, it's also, it's portable.  You can have a phone-based sort of thing.  So it's actually, it's very attractive from that standpoint.  Take five minutes to finish.  All right."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 270.78000000000003,
+            "end": 280.34000000000003,
+            "text": " I feel like I'm changing the topic substantially,  but not totally.  OK.  So this is that slide I showed.  And I pitched it in a way to try to motivate"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 280.34000000000003,
+            "end": 292.06,
+            "text": " you to think about ultrasound.  I'm not sure ultrasound really achieves all these things  in the sense, I wouldn't call it the greatest biological tool  to get at kind of underlying disease pathways.  Some of these things may be late, like David said,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 292.06,
+            "end": 307.22,
+            "text": " or maybe not so reversible.  So we've been given at this One Brave Idea thing $85 million  now to make some dent in a specific disease,  so coronary heart disease.  It's that kind of arrogant tech thing"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 307.22,
+            "end": 315.62,
+            "text": " where you just dump a lot of money somewhere  and think you're going to solve all problems.  And I'm happy to take it, but I think  that there are some problems.  And so this is what I wanted to do."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 315.62,
+            "end": 325.14000000000004,
+            "text": " So I wanted to do this for probably the last five, six  years before I even started here.  And this has kind of motivated me in part for quite a while.  And so here's our problems.  OK."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 325.14000000000004,
+            "end": 335.34000000000003,
+            "text": " So we're studying heart disease.  So coronary heart disease is the arteries in the heart.  You can't get at those.  So you can't do any biology.  You can't do the stuff that cancer people do."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 335.34000000000003,
+            "end": 345.06,
+            "text": " You can't biopsy that.  You can't do anything there.  So you're stuck with the thing that you want to get at  is inaccessible.  I talked about how a lot of the imaging is expensive,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 345.06,
+            "end": 357.7,
+            "text": " but all those other omics stuff is really expensive too.  So that's going to be not so possible.  And you're not going to be able to do serial $1,000 proteomics  on people either.  That's not happening anytime soon."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 357.7,
+            "end": 369.22,
+            "text": " And then everything I talked about,  we're woefully inadequate in terms of sample size,  especially if we want to characterize underlying  complex biological processes.  So we expect we're going to need high dimensional data."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 369.22,
+            "end": 377.74,
+            "text": " And we're going to need huge sample size.  There's Vladimir Vaknik over there.  And then here's another problem.  This stuff takes time.  These diseases take time."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 377.74,
+            "end": 387.62,
+            "text": " So if I introduce a new assay right now,  how am I going to show that any of this  is going to be beneficial?  Because this disease develops over 10 to 20 years.  So I'm not going to talk about the solution to that."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 387.62,
+            "end": 398.70000000000005,
+            "text": " A little bit.  So one of the issues with a lot of the data that's out there  is it's not particularly expressive.  It's a lot of just the same clinical stuff,  the same imaging stuff."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 398.74,
+            "end": 410.46,
+            "text": " So all these big studies, these billion dollar big studies  ultimately just have echoes and MRIs and maybe  a little bit of genetics.  But they really don't have stuff that  is this kind of low cost expressive biological stuff"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 410.46,
+            "end": 422.53999999999996,
+            "text": " that we ideally want to be able to do.  So this is really expensive.  It makes $85 million look like a joke.  And it's not all that rich in terms of complexity.  So we wanted to do something different."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 422.53999999999996,
+            "end": 435.26,
+            "text": " And so this is the crazy thing.  We're focusing on circulating cells.  And so this is kind of a compromise.  And there's a reasonably good case  to be made for their involvement."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 435.26,
+            "end": 447.02000000000004,
+            "text": " So there's lots of data to suggest  that these are causal mediators of coronary artery disease  or coronary heart disease.  So you can find them in the plaques.  So patients who have autoimmune diseases certainly"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 447.02000000000004,
+            "end": 458.38,
+            "text": " have accelerated forms of atherosclerosis.  There are drugs.  There's a drug called ketakinumab that inhibits IL-1  beta secretion from macrophages.  And this has mortality benefit in coronary artery disease."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 458.38,
+            "end": 467.82,
+            "text": " There are mutations in the white blood cell population  themselves that are associated with early heart attacks.  So there's a lot there.  And this is going actually.  And there's plenty of mouse models"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 467.82,
+            "end": 478.46,
+            "text": " that show that if you make mutations only  in the white blood cell compartment,  that you will completely change the disease course itself.  So it's a good kind of amount of data  out there to suggest that there is an informative kind"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 478.46,
+            "end": 486.98,
+            "text": " of cell type there.  It's accessible.  There's lots of predictive models already there  that could be done with some of this.  And they express many of the genes that are involved."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 486.98,
+            "end": 498.62,
+            "text": " And there's a window on many of these biological processes.  So we're focusing on computer vision approaches  to this data.  So we decided if we can't do the omics stuff,  because it costs too much, we're going to take slides"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 498.62,
+            "end": 512.78,
+            "text": " and have tens of thousands of cells per individual.  And then we can introduce fluorescent dyes  that can focus on lots of different organelles.  And then we can potentially expand the phenotypic space  by adding all kinds of perturbations"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 512.78,
+            "end": 524.5,
+            "text": " that can be able to unmask attributes of people that may  not even be relatively there at baseline.  And I think I've been empowered by the computer vision  experience with the echo stuff.  And I'm like, hey, I can do this."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 524.5,
+            "end": 536.54,
+            "text": " I can train these models.  So we're in a position now where this stuff  costs a few dollars per person.  It's cheap.  And you can just keep on expanding phenotypic space."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 536.54,
+            "end": 547.54,
+            "text": " You can bring in drugs.  You can bring in whatever you want here.  And you're still in the sort of dollars type range.  So we just piggyback, and we just hover around.  So with just a couple of research assistants,"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 547.54,
+            "end": 561.74,
+            "text": " we're hovering around clinics.  And we can do 1,000 patients a month,  so tens of thousands of patients a year.  So we can get into kind of deep learning sample size here.  And so we want these sort of primary assays"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 561.74,
+            "end": 571.4799999999999,
+            "text": " to be low cost, reproducible, expressive,  ideally responsive to therapy.  So that's kind of the space here.  And there's lots of stuff that we have.  We have all the medical record data on all these people."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 571.48,
+            "end": 579.96,
+            "text": " And we can selectively do somatic sequencing.  We can do genome associations.  We have all the ECG data.  We have selective positron remission data.  So it's lots of additional stuff."
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 579.96,
+            "end": 591.28,
+            "text": " And we want to be able to walk our cheap assay  towards those things that are sort of more expensive,  but for which there's much more historical data.  So that's what I do with my life these days.  And the time problem has been solved"
+        },
+        {
+            "number": "lec10",
+            "title": "part.007.mp3",
+            "start": 591.28,
+            "end": 599.88,
+            "text": " because we found a collaborator at MGH who  has 3 and 1 half million of these records in terms  of cell counting and cytometer data going back  for about three years."
+        }
+    ],
+    "text": " When CT reconstruction started, I remember seeing some papers where people said, well, we know roughly what the anatomy should look like. And so we can fill in missing details. Like in those days, the slices were rather far apart. And so they would hallucinate what the structure looked like. And of course, that has the benefit of giving you a better model. But it also has the risk that it's hallucinated data. Have you guys tried doing that with some of the? Yeah, that's a great point. So OK, so the question was, cardiac imaging has a very long history. And so there was a period of time where there's these kind of active modelers around morphologies of the heart. And so people have these sort of models around what the heart should look like from many, many, many studies. And they were using that back at the time when we had these relatively coarse multi-slice scanners for a CT. They would reconstruct the 3D image of the heart based on some pre-existing geometric model for what the heart should look like. And there is, of course, a benefit to that, but some risk in the sense that somebody may be very different in the space that's missing. And so the question is whether those kind of priors can be introduced in some way. And it hasn't been straightforward as to how to do that. I mean, whenever you look at these sort of ridiculously poor segmentations, you're like, this is idiotic. We should be able to introduce some of that. And I've seen people, for example, put an autoencoder. And that's not exactly getting at it, but it's actually getting at some of these kind of coarser features. But no, I think in terms of using kind of some degree of geometric priors, I think I may have seen some literature in that space. We haven't tried anything there. We don't have any data to do that, unfortunately. And I suspect, yeah, I just don't know how difficult that is. I mean, you mentioned that you don't want to see a small additional atrium at a distance. So that's in a way building in knowledge. Yeah, no, I remember when I was starting in this space, I was like, this is idiotic. Why can't we do this? Why don't we have some way of doing that? We couldn't find at that time any architectures that were straightforward to be able to do that. But I'm sure there is something in that space. And we didn't also have the data for those priors ourselves. I mean, there's a long history of these kind of de Nobile heart modelers that exist out there from Oxford and the New Zealand group, for that matter, who've been doing some of this kind of multi-scale modeling. I'm sure there is. I mean, it'll be interesting to see whether or not there is anybody who kind of pushes forward in that space. Or is it just more data? I think that's always that tension. Yeah? Can I ask about ultrasounds? Yeah. You didn't show us ultrasounds, right? Yeah. Oh, you did? Yeah, the Echo is an ultrasound. Oh, OK. But that's a really expensive ultrasound, right? There are cheaper ultrasounds that you could imagine that you constantly do, right? Yeah, so there is a company that just came out with a $2,000 handheld ultrasound with a subscription model. So Philips has a handheld device around the $8,000 marker. So $2,000 is getting quite cheap. So that's, I think, the space for handheld devices. We're talking about resource-poor countries. Yeah. In a developing country where maybe they have very few doctors per population kind of thing, what kind of imaging might be useful that we could then apply computer vision algorithms to do? I still think ultrasound is that sweet spot. It has versatility. And its cost is about where. And I'm sure those companies rent it out for much lower costs in those kinds of places, too. So we're putting together, or I put together, actually, it may not have been funded. I'm not sure. But looking at sub-Saharan Africa and collaborating with one of the Brigham Doctors who travels out to sub-Saharan Africa and looking to try to build some of these automated detection type of things in that space. So no, I think there is definite kind of interest in that. There may be a much bigger win there than the sort of stuff I'm proposing. But yeah, I think that's a very good point. And that would be, it's also, it's portable. You can have a phone-based sort of thing. So it's actually, it's very attractive from that standpoint. Take five minutes to finish. All right. I feel like I'm changing the topic substantially, but not totally. OK. So this is that slide I showed. And I pitched it in a way to try to motivate you to think about ultrasound. I'm not sure ultrasound really achieves all these things in the sense, I wouldn't call it the greatest biological tool to get at kind of underlying disease pathways. Some of these things may be late, like David said, or maybe not so reversible. So we've been given at this One Brave Idea thing $85 million now to make some dent in a specific disease, so coronary heart disease. It's that kind of arrogant tech thing where you just dump a lot of money somewhere and think you're going to solve all problems. And I'm happy to take it, but I think that there are some problems. And so this is what I wanted to do. So I wanted to do this for probably the last five, six years before I even started here. And this has kind of motivated me in part for quite a while. And so here's our problems. OK. So we're studying heart disease. So coronary heart disease is the arteries in the heart. You can't get at those. So you can't do any biology. You can't do the stuff that cancer people do. You can't biopsy that. You can't do anything there. So you're stuck with the thing that you want to get at is inaccessible. I talked about how a lot of the imaging is expensive, but all those other omics stuff is really expensive too. So that's going to be not so possible. And you're not going to be able to do serial $1,000 proteomics on people either. That's not happening anytime soon. And then everything I talked about, we're woefully inadequate in terms of sample size, especially if we want to characterize underlying complex biological processes. So we expect we're going to need high dimensional data. And we're going to need huge sample size. There's Vladimir Vaknik over there. And then here's another problem. This stuff takes time. These diseases take time. So if I introduce a new assay right now, how am I going to show that any of this is going to be beneficial? Because this disease develops over 10 to 20 years. So I'm not going to talk about the solution to that. A little bit. So one of the issues with a lot of the data that's out there is it's not particularly expressive. It's a lot of just the same clinical stuff, the same imaging stuff. So all these big studies, these billion dollar big studies ultimately just have echoes and MRIs and maybe a little bit of genetics. But they really don't have stuff that is this kind of low cost expressive biological stuff that we ideally want to be able to do. So this is really expensive. It makes $85 million look like a joke. And it's not all that rich in terms of complexity. So we wanted to do something different. And so this is the crazy thing. We're focusing on circulating cells. And so this is kind of a compromise. And there's a reasonably good case to be made for their involvement. So there's lots of data to suggest that these are causal mediators of coronary artery disease or coronary heart disease. So you can find them in the plaques. So patients who have autoimmune diseases certainly have accelerated forms of atherosclerosis. There are drugs. There's a drug called ketakinumab that inhibits IL-1 beta secretion from macrophages. And this has mortality benefit in coronary artery disease. There are mutations in the white blood cell population themselves that are associated with early heart attacks. So there's a lot there. And this is going actually. And there's plenty of mouse models that show that if you make mutations only in the white blood cell compartment, that you will completely change the disease course itself. So it's a good kind of amount of data out there to suggest that there is an informative kind of cell type there. It's accessible. There's lots of predictive models already there that could be done with some of this. And they express many of the genes that are involved. And there's a window on many of these biological processes. So we're focusing on computer vision approaches to this data. So we decided if we can't do the omics stuff, because it costs too much, we're going to take slides and have tens of thousands of cells per individual. And then we can introduce fluorescent dyes that can focus on lots of different organelles. And then we can potentially expand the phenotypic space by adding all kinds of perturbations that can be able to unmask attributes of people that may not even be relatively there at baseline. And I think I've been empowered by the computer vision experience with the echo stuff. And I'm like, hey, I can do this. I can train these models. So we're in a position now where this stuff costs a few dollars per person. It's cheap. And you can just keep on expanding phenotypic space. You can bring in drugs. You can bring in whatever you want here. And you're still in the sort of dollars type range. So we just piggyback, and we just hover around. So with just a couple of research assistants, we're hovering around clinics. And we can do 1,000 patients a month, so tens of thousands of patients a year. So we can get into kind of deep learning sample size here. And so we want these sort of primary assays to be low cost, reproducible, expressive, ideally responsive to therapy. So that's kind of the space here. And there's lots of stuff that we have. We have all the medical record data on all these people. And we can selectively do somatic sequencing. We can do genome associations. We have all the ECG data. We have selective positron remission data. So it's lots of additional stuff. And we want to be able to walk our cheap assay towards those things that are sort of more expensive, but for which there's much more historical data. So that's what I do with my life these days. And the time problem has been solved because we found a collaborator at MGH who has 3 and 1 half million of these records in terms of cell counting and cytometer data going back for about three years."
+}

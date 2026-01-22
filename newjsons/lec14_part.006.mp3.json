@@ -1,0 +1,299 @@
+{
+    "chunks": [
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 0.0,
+            "end": 23.36,
+            "text": " which takes as input x and t, and its goal is to predict y.  So intuitively, you should think about f  as this conditional probability distribution.  It's predicting y given x and t.  So t is going to be an input to the machine learning"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 23.36,
+            "end": 46.28,
+            "text": " algorithm, which is going to predict what  would be the potential outcome y for this individual described  by features x1 through xd under intervention t.  So this is just from the previous slide.  And what we're going to do now are,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 46.28,
+            "end": 63.92,
+            "text": " this is now where we get the reduction to machine learning,  is we're going to use empirical risk minimization,  or maybe some regularized empirical risk minimization,  to fit a function f which approximates  the expected value of yt given capital T equals little t."
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 63.92,
+            "end": 77.08,
+            "text": " Got my x.  And then once you have that function,  we're going to be able to use that to estimate  the average treatment effect by just comparing,  by just implementing now this formula here."
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 77.08,
+            "end": 88.41999999999999,
+            "text": " So we're going to first take an expectation  with respect to individuals in the data set.  So this is, we're going to approximate that  with an empirical expectation where  sum over the little n individuals in your data set."
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 88.41999999999999,
+            "end": 105.96,
+            "text": " Then what we're going to do is we're  going to estimate the first term, which is f of xi comma 1,  because that's approximating the expected value of y1  given t comma x, t equals 1 comma x.  And we're going to approximate the second term, which"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 105.96,
+            "end": 122.66,
+            "text": " is just plugging in now 0 for t instead of 1.  And we're going to take the difference between them.  And that will be our estimator of the average treatment  effect.  Here's a natural place to ask a question."
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 127.22,
+            "end": 143.26000000000002,
+            "text": " One thing you might wonder is in your data set,  you actually did observe something  for that individual, right?  Notice how your raw data doesn't show up in this at all.  Because I've done machine learning,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 143.26000000000002,
+            "end": 159.14000000000001,
+            "text": " and then I've thrown away the observed y's,  and I use this estimator.  So what you could have done, an alternative formula,  which by the way is also a consistent estimator,  would have been to use the observed y for whatever"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 159.14000000000001,
+            "end": 169.74,
+            "text": " the factual is and the imputed y for the counterfactual using  f.  And that would have also been a consistent estimator  for the average treatment effect.  You could have done either."
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 170.58,
+            "end": 183.9,
+            "text": " OK.  OK, so now sometimes you're not interested in just  the average treatment effect, but you're actually  interested in understanding the heterogeneity  in the population."
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 183.9,
+            "end": 197.94,
+            "text": " Well, this also now gives you an opportunity  to try to explore that heterogeneity.  So for each individual xi, you can look at just  the difference between what f predicts for treatment 1  and what f predicts given treatment 0."
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 197.94,
+            "end": 205.46,
+            "text": " And the difference between those is  your estimate of your conditional average treatment  effect.  So for example, we want to figure out for this individual,  what is the optimal policy?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 205.46,
+            "end": 221.18,
+            "text": " You might look to see is kate positive or negative,  or is it greater than some threshold, for example.  So let's look at some pictures.  Now what we're using is we're using that function f in order  to impute those counterfactuals."
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 221.18,
+            "end": 235.5,
+            "text": " And now we have those observed, and we can actually  compute the kates and averaging over those.  So you can estimate now the average treatment effect.  Yep?  How is f not biased?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 235.5,
+            "end": 244.66,
+            "text": " Good, so where can this go wrong?  So what do you mean by biased first?  I'll ask that.  For instance, as we've seen in the paper,  with pneumonia and people who have asthma,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 244.66,
+            "end": 259.26,
+            "text": " asthma was a negative prediction of mortality  because they were treated more aggressively.  Oh, thank you so much for bringing that back up.  So you're referring to one of the readings for the course  from several weeks ago where we talked about using just"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 259.26,
+            "end": 272.62,
+            "text": " a pure machine learning algorithm to try to predict  outcomes in a hospital setting, in particular,  what happens for patients who have pneumonia in the emergency  department.  And if you all remember, there was this asthma example"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 272.62,
+            "end": 288.62,
+            "text": " where patients with asthma were predicted  to have better outcomes than patients without asthma.  And you're calling that bias.  But remember, when I taught about this,  I called it bias due to a particular thing."
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 288.62,
+            "end": 306.38,
+            "text": " What's the language I used?  I said bias due to intervention, maybe, is what I called it.  I can't remember exactly what I said.  Right?  So the thing is, make it up."
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 306.38,
+            "end": 324.61999999999995,
+            "text": " Now a textbook will be written with bias by intervention.  OK, so the problem there is that they didn't formalize  the prediction problem correctly.  The question that they should have asked is,  for asthma patients, what you really want to ask"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 324.61999999999995,
+            "end": 351.38,
+            "text": " is the question of x and then t and y,  where t are the interventions that are done for asthmatics.  So the failure of that paper is that it  ignored the causal inference question, which  was hidden in the data."
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 351.38,
+            "end": 362.94,
+            "text": " And it just went to predict y given x,  marginalizing over t altogether.  So t was never in the predictive model.  And so differently, they never asked  counterfactual questions of what would have happened"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 362.94,
+            "end": 371.85999999999996,
+            "text": " had you done a different t.  And then they still used it to try to guide some treatment  decisions, like, for example, should you  send this person home, or should you keep them  for careful monitoring, or so on."
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 372.66,
+            "end": 384.54,
+            "text": " This is exactly the same example as I  gave in the beginning of the lecture, where I said,  if you just use a risk stratification model  to make some decisions, you run the risk  that you're making the wrong decisions"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 384.54,
+            "end": 395.98,
+            "text": " because those predictions were biased  by decisions in your data.  So that doesn't happen here because we're explicitly  accounting for t in all of our analyses.  Yeah?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 395.98,
+            "end": 408.26,
+            "text": " AUDIENCE 1 In the data sets that we use,  like we mentioned, how much treatment information exists?  So how much treatment information is in MIMIC?  A ton.  So in fact, one of the readings for next week"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 408.26,
+            "end": 427.7,
+            "text": " is going to be about trying to understand  how one could manage sepsis, which is a condition caused  by an infection, which is managed by, for example,  giving broad spectrum antibiotics,  giving fluids, giving pressors and ventilators."
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 427.7,
+            "end": 436.18,
+            "text": " And all of those are interventions.  All those interventions are recorded in the data  so that one could then ask counterfactual questions  from the data, like what would have happened  if this patient had they received"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 436.18,
+            "end": 448.18,
+            "text": " a different set of interventions?  Would we have prolonged their life, for example?  And so in an intensive care unit setting,  most of the questions that we want to ask about, not all,  but many of them are about dynamic treatments"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 448.18,
+            "end": 460.3,
+            "text": " because it's not just a single treatment,  but really about a sort of a sequence of treatments  responding to the current patient condition.  And so that's where we'll really start getting  material next week, not in today's lecture."
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 460.3,
+            "end": 470.94,
+            "text": " Yep?  How do you make sure that your f function really  learns the relationship between t and the outcome?  That's a phenomenal question.  Where were you this whole course?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 470.94,
+            "end": 484.74,
+            "text": " Thank you for asking it.  So I'll repeat it.  How do you know that your function f actually  learned something about the relationship between the input  x and the treatment t and the outcome?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 484.78000000000003,
+            "end": 507.62,
+            "text": " And that really gets to the question of,  is my reduction actually valid?  So I've taken this problem, and I've  reduced it to this machine learning problem  where I take my data and literally just learn"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 507.62,
+            "end": 518.8000000000001,
+            "text": " a function f to try to predict well  the observations in the data.  And how do we know that that function f actually  does a good job at estimating something  like average treatment effect?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 518.8000000000001,
+            "end": 532.48,
+            "text": " In fact, it might not.  And this is where things start to get really tricky,  particularly with high dimensional data.  Because it could happen, for example,  that your treatment decision is only"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 532.48,
+            "end": 545.64,
+            "text": " one of a huge number of factors that affect the outcome y.  And it could be that a much more important factor is hidden  in x.  And because you don't have much data,  and because you have to regularize your learning"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 545.64,
+            "end": 562.12,
+            "text": " algorithm, let's say with L1 or L2 regularization,  or maybe early stopping for using deep neural network,  your algorithm might never learn the actual dependence on t.  It might learn just to throw away t  and just use x to predict y."
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 562.12,
+            "end": 574.0,
+            "text": " And if that's the case, you will never  be able to infer these average treatment effects accurately.  You'll have huge errors.  And that gets back to one of the slides that I skipped,  where I started out from this picture."
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 574.0,
+            "end": 584.8399999999999,
+            "text": " This is the machine learning picture, saying, OK,  a reduction to machine learning is now  you add an additional feature, which  is your treatment decision, and you learn that black box  function f."
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 584.8399999999999,
+            "end": 597.64,
+            "text": " But this is where machine learning causal inference  starts to differ.  Because we don't actually care about the quality  of predicting y.  We can measure your root mean squared error"
+        },
+        {
+            "number": "lec14",
+            "title": "part.006.mp3",
+            "start": 597.64,
+            "end": 600.0799999999999,
+            "text": " in predicting y given your x's and t's."
+        }
+    ],
+    "text": " which takes as input x and t, and its goal is to predict y. So intuitively, you should think about f as this conditional probability distribution. It's predicting y given x and t. So t is going to be an input to the machine learning algorithm, which is going to predict what would be the potential outcome y for this individual described by features x1 through xd under intervention t. So this is just from the previous slide. And what we're going to do now are, this is now where we get the reduction to machine learning, is we're going to use empirical risk minimization, or maybe some regularized empirical risk minimization, to fit a function f which approximates the expected value of yt given capital T equals little t. Got my x. And then once you have that function, we're going to be able to use that to estimate the average treatment effect by just comparing, by just implementing now this formula here. So we're going to first take an expectation with respect to individuals in the data set. So this is, we're going to approximate that with an empirical expectation where sum over the little n individuals in your data set. Then what we're going to do is we're going to estimate the first term, which is f of xi comma 1, because that's approximating the expected value of y1 given t comma x, t equals 1 comma x. And we're going to approximate the second term, which is just plugging in now 0 for t instead of 1. And we're going to take the difference between them. And that will be our estimator of the average treatment effect. Here's a natural place to ask a question. One thing you might wonder is in your data set, you actually did observe something for that individual, right? Notice how your raw data doesn't show up in this at all. Because I've done machine learning, and then I've thrown away the observed y's, and I use this estimator. So what you could have done, an alternative formula, which by the way is also a consistent estimator, would have been to use the observed y for whatever the factual is and the imputed y for the counterfactual using f. And that would have also been a consistent estimator for the average treatment effect. You could have done either. OK. OK, so now sometimes you're not interested in just the average treatment effect, but you're actually interested in understanding the heterogeneity in the population. Well, this also now gives you an opportunity to try to explore that heterogeneity. So for each individual xi, you can look at just the difference between what f predicts for treatment 1 and what f predicts given treatment 0. And the difference between those is your estimate of your conditional average treatment effect. So for example, we want to figure out for this individual, what is the optimal policy? You might look to see is kate positive or negative, or is it greater than some threshold, for example. So let's look at some pictures. Now what we're using is we're using that function f in order to impute those counterfactuals. And now we have those observed, and we can actually compute the kates and averaging over those. So you can estimate now the average treatment effect. Yep? How is f not biased? Good, so where can this go wrong? So what do you mean by biased first? I'll ask that. For instance, as we've seen in the paper, with pneumonia and people who have asthma, asthma was a negative prediction of mortality because they were treated more aggressively. Oh, thank you so much for bringing that back up. So you're referring to one of the readings for the course from several weeks ago where we talked about using just a pure machine learning algorithm to try to predict outcomes in a hospital setting, in particular, what happens for patients who have pneumonia in the emergency department. And if you all remember, there was this asthma example where patients with asthma were predicted to have better outcomes than patients without asthma. And you're calling that bias. But remember, when I taught about this, I called it bias due to a particular thing. What's the language I used? I said bias due to intervention, maybe, is what I called it. I can't remember exactly what I said. Right? So the thing is, make it up. Now a textbook will be written with bias by intervention. OK, so the problem there is that they didn't formalize the prediction problem correctly. The question that they should have asked is, for asthma patients, what you really want to ask is the question of x and then t and y, where t are the interventions that are done for asthmatics. So the failure of that paper is that it ignored the causal inference question, which was hidden in the data. And it just went to predict y given x, marginalizing over t altogether. So t was never in the predictive model. And so differently, they never asked counterfactual questions of what would have happened had you done a different t. And then they still used it to try to guide some treatment decisions, like, for example, should you send this person home, or should you keep them for careful monitoring, or so on. This is exactly the same example as I gave in the beginning of the lecture, where I said, if you just use a risk stratification model to make some decisions, you run the risk that you're making the wrong decisions because those predictions were biased by decisions in your data. So that doesn't happen here because we're explicitly accounting for t in all of our analyses. Yeah? AUDIENCE 1 In the data sets that we use, like we mentioned, how much treatment information exists? So how much treatment information is in MIMIC? A ton. So in fact, one of the readings for next week is going to be about trying to understand how one could manage sepsis, which is a condition caused by an infection, which is managed by, for example, giving broad spectrum antibiotics, giving fluids, giving pressors and ventilators. And all of those are interventions. All those interventions are recorded in the data so that one could then ask counterfactual questions from the data, like what would have happened if this patient had they received a different set of interventions? Would we have prolonged their life, for example? And so in an intensive care unit setting, most of the questions that we want to ask about, not all, but many of them are about dynamic treatments because it's not just a single treatment, but really about a sort of a sequence of treatments responding to the current patient condition. And so that's where we'll really start getting material next week, not in today's lecture. Yep? How do you make sure that your f function really learns the relationship between t and the outcome? That's a phenomenal question. Where were you this whole course? Thank you for asking it. So I'll repeat it. How do you know that your function f actually learned something about the relationship between the input x and the treatment t and the outcome? And that really gets to the question of, is my reduction actually valid? So I've taken this problem, and I've reduced it to this machine learning problem where I take my data and literally just learn a function f to try to predict well the observations in the data. And how do we know that that function f actually does a good job at estimating something like average treatment effect? In fact, it might not. And this is where things start to get really tricky, particularly with high dimensional data. Because it could happen, for example, that your treatment decision is only one of a huge number of factors that affect the outcome y. And it could be that a much more important factor is hidden in x. And because you don't have much data, and because you have to regularize your learning algorithm, let's say with L1 or L2 regularization, or maybe early stopping for using deep neural network, your algorithm might never learn the actual dependence on t. It might learn just to throw away t and just use x to predict y. And if that's the case, you will never be able to infer these average treatment effects accurately. You'll have huge errors. And that gets back to one of the slides that I skipped, where I started out from this picture. This is the machine learning picture, saying, OK, a reduction to machine learning is now you add an additional feature, which is your treatment decision, and you learn that black box function f. But this is where machine learning causal inference starts to differ. Because we don't actually care about the quality of predicting y. We can measure your root mean squared error in predicting y given your x's and t's."
+}

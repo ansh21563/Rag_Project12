@@ -1,0 +1,131 @@
+{
+    "chunks": [
+        {
+            "number": "lec15",
+            "title": "part.001.mp3",
+            "start": 0.0,
+            "end": 35.56,
+            "text": " that goes from T to X. In particular, the distribution of individuals in the country  is obviously a function of the country, not the other way around. But despite the fact  that there is that difference in directionality, all of the techniques that we've been teaching  you in this course are still applicable for trying to ask a causal question about the  impact of intervening on a country. And that's really because, in some sense, these two distributions"
+        },
+        {
+            "number": "lec15",
+            "title": "part.001.mp3",
+            "start": 35.56,
+            "end": 66.58,
+            "text": " at an observational level are equivalent. And if you want to dig a little bit deeper  into this example, and I want to stress that this is just for educational purposes, don't  read anything into these numbers, I would go to this CoLab notebook after the course.  So all of this was just a little bit of setup to help frame where causal inference shows  up in some things that we've been thinking and really very worried and stressed about"
+        },
+        {
+            "number": "lec15",
+            "title": "part.001.mp3",
+            "start": 66.58,
+            "end": 95.98,
+            "text": " ourselves personally recently. And I want to now shift gears to starting to get back  to the course material. And in particular, I want to start today's more theoretical parts  of the lecture is by returning to covariate adjustment, which we ended on a Tuesday.  In covariate adjustment, one will use a machine learning approach to learn some model, which  I'll call F. So you can imagine a black box machine learning algorithm, which takes as"
+        },
+        {
+            "number": "lec15",
+            "title": "part.001.mp3",
+            "start": 95.98,
+            "end": 125.04,
+            "text": " input both x and t. So x are your covariates of the individual that are going to receive  the treatment. And t is that treatment decision, which for today's lecture, you can just assume  is binary 0, 1, and uses those together now to predict the outcome y.  Now what we showed in Tuesday was that under ignorability, where ignorability, remember,  was the assumption of no hidden confounding, then the conditional average treatment effect"
+        },
+        {
+            "number": "lec15",
+            "title": "part.001.mp3",
+            "start": 125.04,
+            "end": 162.0,
+            "text": " could be defined as just the difference. Could be computed as the expectation of y1  now conditioned on t equals 1. So this is the piece that I've added in here. And minus  the expectation of y0 now conditioned on t equals 0. And it's that conditioning which  is really important, because that's what enables you to estimate y1 from data where treatment  y1 was observed, whereas you never get to observe y1 in data when treatment 0 was performed."
+        },
+        {
+            "number": "lec15",
+            "title": "part.001.mp3",
+            "start": 162.0,
+            "end": 193.46,
+            "text": " So we have this formula. And after fitting that model F, one could then use it to try  to estimate kate by just taking that learned function, plugging in the number 1 for the  treatment variable in order to get your estimate of this expectation, and then plugging in  the number 0 for the treatment variable when you want to get your estimate of this expectation.  Taking the difference between those then gives you your estimate of the conditional average"
+        },
+        {
+            "number": "lec15",
+            "title": "part.001.mp3",
+            "start": 193.46,
+            "end": 227.79999999999998,
+            "text": " treatment effect. So that's the approach. And what we didn't talk about so much was  the modeling choices of what should your function class be. So this is going to turn out to  be really important. And really, the punchline of the next several slides is going to be  a major difference in philosophy between machine learning and statistics, and between prediction  and causal inference. So let's now consider the following simple model, where I'm going"
+        },
+        {
+            "number": "lec15",
+            "title": "part.001.mp3",
+            "start": 227.79999999999998,
+            "end": 264.98,
+            "text": " to assume that the ground truth in the real world has that the potential outcome yt of  x, where t again is the treatment, is equal to some simple linear model involving the  covariates x and the treatment t. So in this very simple setting, I'm going to assume that  we just have a single feature or covariate for the individual, which is their age. And  I'm going to assume that this model doesn't have any terms with an interaction between"
+        },
+        {
+            "number": "lec15",
+            "title": "part.001.mp3",
+            "start": 265.0,
+            "end": 300.65999999999997,
+            "text": " x and t. So it's fully linear in x and t. So this is an assumption about the true potential  outcomes. And what we'll do over the next couple of slides is think about what would  happen if you now modeled y of t, so modeling it with some function f, where f was, let's  say, a linear function versus a nonlinear function, if f took this form or a different  form. And by the way, I'm going to assume that the noise here, epsilon t, can be arbitrary,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.001.mp3",
+            "start": 300.65999999999997,
+            "end": 337.92,
+            "text": " but that it has zero mean. So let's get started by trying to estimate what the true kate is,  or conditional average treatment effect, for this potential outcome model. Well, just by  definition, the kate is the expectation of y1 minus y0. We're going to take this formula,  and we're going to plug it in for the first term using t equals one. And that's why you  get this term over here with gamma. And the gamma is because again, t is equal to one,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.001.mp3",
+            "start": 337.92,
+            "end": 369.38,
+            "text": " we're also going to take this and we're going to plug it in for now this term over here  where t is equal to zero. And when t is equal to zero, then the gamma term just disappears.  And so what you just get beta x plus epsilon zero. So all I've done so far is plug in the  y1 and y0 according to the assumed form. But notice now that there are some terms that  cancel out. In particular, the beta x term over here cancels out with a beta x term over"
+        },
+        {
+            "number": "lec15",
+            "title": "part.001.mp3",
+            "start": 369.44,
+            "end": 403.3,
+            "text": " here. And because epsilon one has a zero mean, and epsilon zero also has a zero mean,  the only thing left is that gamma term and expectation of a constant is obviously that  constant. And so what we conclude from this is that the kate value is gamma. Now,  the average treatment effect, which is the average of kate over all individuals x,  will then also be gamma, obviously. Okay, so we've done something pretty interesting here."
+        },
+        {
+            "number": "lec15",
+            "title": "part.001.mp3",
+            "start": 403.3,
+            "end": 437.68,
+            "text": " We started from the assumption that the true potential outcome model is linear. And what  we concluded is that the average treatment effect is precisely the coefficient of the  treatment variable in this linear model. So what that means is that if what you're interested in  is causal inference, and suppose that we were lucky enough to know that the true model were  linear, and so we attempted to fit some function f, which had precisely the same form, we get some"
+        },
+        {
+            "number": "lec15",
+            "title": "part.001.mp3",
+            "start": 437.68,
+            "end": 471.56,
+            "text": " beta hats and some gamma hats out from the learning algorithm. All we need to do is look at  that gamma hat in order to conclude something about the average treatment effect. No need to  do this complicated thing of plugging in to estimate kate. And again, the reason it's such  a trivial conclusion is because of our assumption of linearity. Now, what that also means is that  if you have errors in learning, in particular, suppose, for example, that you are estimating"
+        },
+        {
+            "number": "lec15",
+            "title": "part.001.mp3",
+            "start": 471.56,
+            "end": 508.34,
+            "text": " your gamma hat wrongly, then that means you're also going to be getting wrong your estimates  of your conditional and average treatment effects. There's a question here, which I was  lucky enough to see, that says, what does gamma represent in terms of the medication? Thank you  for that question. So gamma is, well, literally speaking, gamma tells you the conditional average  effect, meaning if you were to give the treatment versus not giving the treatment, how that affects"
+        },
+        {
+            "number": "lec15",
+            "title": "part.001.mp3",
+            "start": 508.34,
+            "end": 537.24,
+            "text": " the outcome. Think about the outcome of interest being the patient's blood pressure, their being  confounding, potential confounding factor, the patient's age, and T being one of two different  blood pressure measurements. If gamma is positive, then it means that treatment one is more effective,  treatment one increases the patient's blood pressure relative to treatment zero. And if  gamma is negative, it means that treatment one decreases the patient's blood pressure relative"
+        },
+        {
+            "number": "lec15",
+            "title": "part.001.mp3",
+            "start": 537.24,
+            "end": 575.58,
+            "text": " to treatment zero. So in machine learning, I typically tell my students, don't attempt to  interpret your coefficients, or at least don't interpret them too much. Don't put too much weight  into them. And that's because when you're learning very high dimensional models, there could be a lot  of redundancy between your features. But when you talk to statisticians, often they pay really close  attention to their coefficients. And they try to interpret those coefficients, often with the"
+        },
+        {
+            "number": "lec15",
+            "title": "part.001.mp3",
+            "start": 575.58,
+            "end": 600.56,
+            "text": " causal lens. And when I first started in this field, I couldn't understand why are they paying  attention to those coefficients so much? Why are they coming up with these causal hypotheses based  on which coefficients are positive, which are the negative? And this is the answer. It really comes  down to an interpretation of the prediction problem in terms of the feature of relevance  being a treatment. That treatment being a treatment."
+        }
+    ],
+    "text": " that goes from T to X. In particular, the distribution of individuals in the country is obviously a function of the country, not the other way around. But despite the fact that there is that difference in directionality, all of the techniques that we've been teaching you in this course are still applicable for trying to ask a causal question about the impact of intervening on a country. And that's really because, in some sense, these two distributions at an observational level are equivalent. And if you want to dig a little bit deeper into this example, and I want to stress that this is just for educational purposes, don't read anything into these numbers, I would go to this CoLab notebook after the course. So all of this was just a little bit of setup to help frame where causal inference shows up in some things that we've been thinking and really very worried and stressed about ourselves personally recently. And I want to now shift gears to starting to get back to the course material. And in particular, I want to start today's more theoretical parts of the lecture is by returning to covariate adjustment, which we ended on a Tuesday. In covariate adjustment, one will use a machine learning approach to learn some model, which I'll call F. So you can imagine a black box machine learning algorithm, which takes as input both x and t. So x are your covariates of the individual that are going to receive the treatment. And t is that treatment decision, which for today's lecture, you can just assume is binary 0, 1, and uses those together now to predict the outcome y. Now what we showed in Tuesday was that under ignorability, where ignorability, remember, was the assumption of no hidden confounding, then the conditional average treatment effect could be defined as just the difference. Could be computed as the expectation of y1 now conditioned on t equals 1. So this is the piece that I've added in here. And minus the expectation of y0 now conditioned on t equals 0. And it's that conditioning which is really important, because that's what enables you to estimate y1 from data where treatment y1 was observed, whereas you never get to observe y1 in data when treatment 0 was performed. So we have this formula. And after fitting that model F, one could then use it to try to estimate kate by just taking that learned function, plugging in the number 1 for the treatment variable in order to get your estimate of this expectation, and then plugging in the number 0 for the treatment variable when you want to get your estimate of this expectation. Taking the difference between those then gives you your estimate of the conditional average treatment effect. So that's the approach. And what we didn't talk about so much was the modeling choices of what should your function class be. So this is going to turn out to be really important. And really, the punchline of the next several slides is going to be a major difference in philosophy between machine learning and statistics, and between prediction and causal inference. So let's now consider the following simple model, where I'm going to assume that the ground truth in the real world has that the potential outcome yt of x, where t again is the treatment, is equal to some simple linear model involving the covariates x and the treatment t. So in this very simple setting, I'm going to assume that we just have a single feature or covariate for the individual, which is their age. And I'm going to assume that this model doesn't have any terms with an interaction between x and t. So it's fully linear in x and t. So this is an assumption about the true potential outcomes. And what we'll do over the next couple of slides is think about what would happen if you now modeled y of t, so modeling it with some function f, where f was, let's say, a linear function versus a nonlinear function, if f took this form or a different form. And by the way, I'm going to assume that the noise here, epsilon t, can be arbitrary, but that it has zero mean. So let's get started by trying to estimate what the true kate is, or conditional average treatment effect, for this potential outcome model. Well, just by definition, the kate is the expectation of y1 minus y0. We're going to take this formula, and we're going to plug it in for the first term using t equals one. And that's why you get this term over here with gamma. And the gamma is because again, t is equal to one, we're also going to take this and we're going to plug it in for now this term over here where t is equal to zero. And when t is equal to zero, then the gamma term just disappears. And so what you just get beta x plus epsilon zero. So all I've done so far is plug in the y1 and y0 according to the assumed form. But notice now that there are some terms that cancel out. In particular, the beta x term over here cancels out with a beta x term over here. And because epsilon one has a zero mean, and epsilon zero also has a zero mean, the only thing left is that gamma term and expectation of a constant is obviously that constant. And so what we conclude from this is that the kate value is gamma. Now, the average treatment effect, which is the average of kate over all individuals x, will then also be gamma, obviously. Okay, so we've done something pretty interesting here. We started from the assumption that the true potential outcome model is linear. And what we concluded is that the average treatment effect is precisely the coefficient of the treatment variable in this linear model. So what that means is that if what you're interested in is causal inference, and suppose that we were lucky enough to know that the true model were linear, and so we attempted to fit some function f, which had precisely the same form, we get some beta hats and some gamma hats out from the learning algorithm. All we need to do is look at that gamma hat in order to conclude something about the average treatment effect. No need to do this complicated thing of plugging in to estimate kate. And again, the reason it's such a trivial conclusion is because of our assumption of linearity. Now, what that also means is that if you have errors in learning, in particular, suppose, for example, that you are estimating your gamma hat wrongly, then that means you're also going to be getting wrong your estimates of your conditional and average treatment effects. There's a question here, which I was lucky enough to see, that says, what does gamma represent in terms of the medication? Thank you for that question. So gamma is, well, literally speaking, gamma tells you the conditional average effect, meaning if you were to give the treatment versus not giving the treatment, how that affects the outcome. Think about the outcome of interest being the patient's blood pressure, their being confounding, potential confounding factor, the patient's age, and T being one of two different blood pressure measurements. If gamma is positive, then it means that treatment one is more effective, treatment one increases the patient's blood pressure relative to treatment zero. And if gamma is negative, it means that treatment one decreases the patient's blood pressure relative to treatment zero. So in machine learning, I typically tell my students, don't attempt to interpret your coefficients, or at least don't interpret them too much. Don't put too much weight into them. And that's because when you're learning very high dimensional models, there could be a lot of redundancy between your features. But when you talk to statisticians, often they pay really close attention to their coefficients. And they try to interpret those coefficients, often with the causal lens. And when I first started in this field, I couldn't understand why are they paying attention to those coefficients so much? Why are they coming up with these causal hypotheses based on which coefficients are positive, which are the negative? And this is the answer. It really comes down to an interpretation of the prediction problem in terms of the feature of relevance being a treatment. That treatment being a treatment."
+}

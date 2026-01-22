@@ -1,0 +1,257 @@
+{
+    "chunks": [
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 0.0,
+            "end": 31.9,
+            "text": " So today, I'm going to talk about precision medicine.  And we don't really have a very precise idea  of what precision medicine is.  And so I'm going to start by talking about that a little bit.  David talked about disease subtyping."
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 31.9,
+            "end": 46.0,
+            "text": " And if you think about how do you figure out  what are the subtypes of a disease,  you do it by some kind of clustering  on a bunch of different sorts of data.  And so we have data like demographics, comorbidities,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 46.0,
+            "end": 64.84,
+            "text": " vital signs, medications, procedures, disease  trajectories, whatever those mean, image similarities.  And today, mostly, I'm going to focus on genetics,  because this was the great hope of the Human Genome Project,  that as we understood more about the genetic influences"
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 64.84,
+            "end": 84.28,
+            "text": " on disease, it would help us create precise ways of dealing  with various diseases and figuring out  the right therapies for them and so on.  So I want to start by reviewing a little bit a study that  was done by the National Research Council,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 84.28,
+            "end": 99.76,
+            "text": " so the National Academies.  And it's called Tewart Precision Medicine.  This was fairly recent, 2017.  And they have some interesting observations.  So they start off and they say, well,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 99.76,
+            "end": 114.28,
+            "text": " why is this relevant now when it may not  have been relevant before?  And of course, the biggie is new capabilities  to compile molecular data on patients  on a scale that was unimaginable 20 years ago."
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 114.28,
+            "end": 134.48,
+            "text": " So people estimated that getting the first human genome  cost about $3 billion.  Today, getting a human genome costs less than $1,000.  I have some figures later in the talk showing some of the ads  that people are running."
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 134.48,
+            "end": 151.1,
+            "text": " Increasing success in utilizing molecular information  to improve diagnosis and treatment.  We'll talk about some of those.  Advances in IT so that we have bigger capabilities of dealing  with so-called big data."
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 151.1,
+            "end": 166.92,
+            "text": " A perfect storm among stakeholders  that has made them much more receptive  to this kind of information.  So the fact that costs in the health care system in the US  keep rising and quality doesn't keep rising proportionately"
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 166.92,
+            "end": 186.04000000000002,
+            "text": " makes everybody desperate to come up  with new ways of dealing with this problem.  And so this looks like the next great hope for how to do it.  And shifting public attitudes toward molecular data.  So how many of you have seen the movie Gattaca?"
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 186.04000000000002,
+            "end": 200.6,
+            "text": " A few.  So that's a dystopian view of what  happens when people are genotyped  and can therefore be tracked by their genetics.  And it is true that there are horror stories that can happen."
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 200.6,
+            "end": 221.28,
+            "text": " But nevertheless, people seem to be more relaxed today  about allowing that kind of data to be collected and used  because they see the potential benefits outweighing the costs.  Not everybody, but that continues  to be a serious issue."
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 221.28,
+            "end": 237.28,
+            "text": " So this report goes on and says, let's  think about how to integrate all kinds of different data  about individuals.  And they start off and they say, you  know, one good example of this has been Google Maps."
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 237.28,
+            "end": 252.04,
+            "text": " So Google Maps has a coordinate system,  which is basically longitude and latitude  for every point on the Earth.  And they can use that coordinate system in order  to layer on top of each other information"
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 252.04,
+            "end": 268.94,
+            "text": " about postal codes, built structures, census tracts,  land use, transportation, everything.  And they said, wow, this is really cool.  If only we could do this in health care.  And so their vision is to try to do that in health care"
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 268.94,
+            "end": 287.92,
+            "text": " by saying, well, what corresponds  to latitude and longitude is individual patients.  And these individual patients have various kinds  of data about them, including their microbiome,  their epigenome, their genome, clinical signs and symptoms,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 287.92,
+            "end": 307.52000000000004,
+            "text": " the exposome, what are they exposed to.  And so there's been a real attempt  to go out and create large collections of data  that bring together all of this kind of information.  One of those that is notable is the Department of Health,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 307.52,
+            "end": 323.15999999999997,
+            "text": " well, NIH basically started a project about a year and a half  ago called All of Us.  Sounds sort of menacing.  But it's really a million of us.  And they have asked institutions around the United States"
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 323.15999999999997,
+            "end": 341.78,
+            "text": " to get volunteers to volunteer to provide  their genetic information, their clinical data, where they live,  where they commute, things like that,  so that they can get environmental data about them.  And then it's meant to be an ongoing collection of data"
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 341.78,
+            "end": 357.02,
+            "text": " about a million people who are supposed  to be a representative sample of the United States.  So you'll see in some of the projects  I talk about later today that many of the studies  have been done in populations of European ancestry."
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 357.02,
+            "end": 376.18,
+            "text": " And so they may not apply to people of other ethnicities.  This is attempting to sample accurately  so that the fraction of African-Americans and Asians  and Hispanics and so on corresponds  to the sample in the United States population."
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 376.18,
+            "end": 389.36,
+            "text": " There's a long history.  How many of you have heard of the Framingham Heart Study?  A lot of people.  So Framingham in the 1940s agreed  to become the subject of a long-term experiment."
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 389.36,
+            "end": 409.94,
+            "text": " I think it's now run by Boston University, where  every year or two, they go out and they survey,  I can't remember the number of people.  It's something started as something like 50,000 people  about their habits and whether they smoke"
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 409.94,
+            "end": 422.82,
+            "text": " and what their weight and height is  and any clinical problems they've had,  surgical procedures, et cetera.  And they've been collecting that database now  over several generations of people"
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 422.86,
+            "end": 441.5,
+            "text": " that descend from those.  And they've started collecting genetic data as well.  So all of us is really doing this on a very large scale.  Now, the vision of this study was  to say that we're going to build this information commons, which"
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 441.5,
+            "end": 456.26,
+            "text": " collects all this kind of information.  And then we're going to develop knowledge  from that information or from that data.  And that knowledge will become the substrate  on which biomedical research can rest."
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 456.26,
+            "end": 469.9,
+            "text": " So if we find significant associations,  then that suggests that one should do studies,  which will not necessarily be answered by the data  that they've collected.  You may have to grow knockout mice or something in order"
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 469.9,
+            "end": 482.48,
+            "text": " to test whether an idea really works.  But this is a way of integrating all  of that type of information.  And of course, it can affect diagnosis, treatment,  and health outcomes, which are the holy grail for what"
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 482.48,
+            "end": 506.32,
+            "text": " you'd like to do in medicine.  Now, here's an interesting problem.  So the focus, notice, was on taxonomies.  So Sam Johnson was a very famous 17th century British writer.  And he built encyclopedias and dictionaries"
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 506.32,
+            "end": 523.04,
+            "text": " and was a poet and a reviewer and a commentator  and did all kinds of fancy things.  And one of his quotes is, my diseases  are an asthma and a dropsy and what is less curable,  75 years old."
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 523.04,
+            "end": 538.1999999999999,
+            "text": " So he was funny, too.  Now, if you look up dropsy in a dictionary, how many of you  have heard of dropsy?  A couple.  So how did you hear of it?"
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 541.88,
+            "end": 548.64,
+            "text": " Sorry?  From a novel?  Yeah.  AUDIENCE MEMBER 2.  Yeah, so they had dropsy in London."
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 548.64,
+            "end": 567.04,
+            "text": " Yeah, I mean, I learned about it by watching masterpiece theater  with 19th century people where the grandmother would  take to her bed with the dropsy.  And it didn't turn out well, typically,  but it took a long time for those people to die."
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 567.04,
+            "end": 582.2,
+            "text": " So dropsy is water sickness, swelling, edema, et cetera.  It's actually not a disease.  It's a symptom of a whole bunch of diseases.  So it could be pulmonary disease, heart failure,  kidney disease, et cetera."
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 582.2,
+            "end": 595.2,
+            "text": " And it's interesting.  I look back on this.  I couldn't find it for putting together this lecture.  But at one point, I did discover that the last time dropsy  was listed as the cause of death of a patient in the United"
+        },
+        {
+            "number": "lec20",
+            "title": "part.000.mp3",
+            "start": 595.2,
+            "end": 601.48,
+            "text": " States was in 1949.  So since then, it's disappeared."
+        }
+    ],
+    "text": " So today, I'm going to talk about precision medicine. And we don't really have a very precise idea of what precision medicine is. And so I'm going to start by talking about that a little bit. David talked about disease subtyping. And if you think about how do you figure out what are the subtypes of a disease, you do it by some kind of clustering on a bunch of different sorts of data. And so we have data like demographics, comorbidities, vital signs, medications, procedures, disease trajectories, whatever those mean, image similarities. And today, mostly, I'm going to focus on genetics, because this was the great hope of the Human Genome Project, that as we understood more about the genetic influences on disease, it would help us create precise ways of dealing with various diseases and figuring out the right therapies for them and so on. So I want to start by reviewing a little bit a study that was done by the National Research Council, so the National Academies. And it's called Tewart Precision Medicine. This was fairly recent, 2017. And they have some interesting observations. So they start off and they say, well, why is this relevant now when it may not have been relevant before? And of course, the biggie is new capabilities to compile molecular data on patients on a scale that was unimaginable 20 years ago. So people estimated that getting the first human genome cost about $3 billion. Today, getting a human genome costs less than $1,000. I have some figures later in the talk showing some of the ads that people are running. Increasing success in utilizing molecular information to improve diagnosis and treatment. We'll talk about some of those. Advances in IT so that we have bigger capabilities of dealing with so-called big data. A perfect storm among stakeholders that has made them much more receptive to this kind of information. So the fact that costs in the health care system in the US keep rising and quality doesn't keep rising proportionately makes everybody desperate to come up with new ways of dealing with this problem. And so this looks like the next great hope for how to do it. And shifting public attitudes toward molecular data. So how many of you have seen the movie Gattaca? A few. So that's a dystopian view of what happens when people are genotyped and can therefore be tracked by their genetics. And it is true that there are horror stories that can happen. But nevertheless, people seem to be more relaxed today about allowing that kind of data to be collected and used because they see the potential benefits outweighing the costs. Not everybody, but that continues to be a serious issue. So this report goes on and says, let's think about how to integrate all kinds of different data about individuals. And they start off and they say, you know, one good example of this has been Google Maps. So Google Maps has a coordinate system, which is basically longitude and latitude for every point on the Earth. And they can use that coordinate system in order to layer on top of each other information about postal codes, built structures, census tracts, land use, transportation, everything. And they said, wow, this is really cool. If only we could do this in health care. And so their vision is to try to do that in health care by saying, well, what corresponds to latitude and longitude is individual patients. And these individual patients have various kinds of data about them, including their microbiome, their epigenome, their genome, clinical signs and symptoms, the exposome, what are they exposed to. And so there's been a real attempt to go out and create large collections of data that bring together all of this kind of information. One of those that is notable is the Department of Health, well, NIH basically started a project about a year and a half ago called All of Us. Sounds sort of menacing. But it's really a million of us. And they have asked institutions around the United States to get volunteers to volunteer to provide their genetic information, their clinical data, where they live, where they commute, things like that, so that they can get environmental data about them. And then it's meant to be an ongoing collection of data about a million people who are supposed to be a representative sample of the United States. So you'll see in some of the projects I talk about later today that many of the studies have been done in populations of European ancestry. And so they may not apply to people of other ethnicities. This is attempting to sample accurately so that the fraction of African-Americans and Asians and Hispanics and so on corresponds to the sample in the United States population. There's a long history. How many of you have heard of the Framingham Heart Study? A lot of people. So Framingham in the 1940s agreed to become the subject of a long-term experiment. I think it's now run by Boston University, where every year or two, they go out and they survey, I can't remember the number of people. It's something started as something like 50,000 people about their habits and whether they smoke and what their weight and height is and any clinical problems they've had, surgical procedures, et cetera. And they've been collecting that database now over several generations of people that descend from those. And they've started collecting genetic data as well. So all of us is really doing this on a very large scale. Now, the vision of this study was to say that we're going to build this information commons, which collects all this kind of information. And then we're going to develop knowledge from that information or from that data. And that knowledge will become the substrate on which biomedical research can rest. So if we find significant associations, then that suggests that one should do studies, which will not necessarily be answered by the data that they've collected. You may have to grow knockout mice or something in order to test whether an idea really works. But this is a way of integrating all of that type of information. And of course, it can affect diagnosis, treatment, and health outcomes, which are the holy grail for what you'd like to do in medicine. Now, here's an interesting problem. So the focus, notice, was on taxonomies. So Sam Johnson was a very famous 17th century British writer. And he built encyclopedias and dictionaries and was a poet and a reviewer and a commentator and did all kinds of fancy things. And one of his quotes is, my diseases are an asthma and a dropsy and what is less curable, 75 years old. So he was funny, too. Now, if you look up dropsy in a dictionary, how many of you have heard of dropsy? A couple. So how did you hear of it? Sorry? From a novel? Yeah. AUDIENCE MEMBER 2. Yeah, so they had dropsy in London. Yeah, I mean, I learned about it by watching masterpiece theater with 19th century people where the grandmother would take to her bed with the dropsy. And it didn't turn out well, typically, but it took a long time for those people to die. So dropsy is water sickness, swelling, edema, et cetera. It's actually not a disease. It's a symptom of a whole bunch of diseases. So it could be pulmonary disease, heart failure, kidney disease, et cetera. And it's interesting. I look back on this. I couldn't find it for putting together this lecture. But at one point, I did discover that the last time dropsy was listed as the cause of death of a patient in the United States was in 1949. So since then, it's disappeared."
+}

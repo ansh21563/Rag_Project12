@@ -1,0 +1,257 @@
+{
+    "chunks": [
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 0.0,
+            "end": 25.32,
+            "text": " OK, well, a cautionary tale is IBM's Watson Health.  So I assume most of you remember when  Watson hit the big time by beating the Jeopardy champions.  This was back in the early 2010s or something.  I don't remember exactly which year."
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 25.32,
+            "end": 42.68,
+            "text": " And they had, in fact, built a really impressive set  of technologies that went out and read  all kinds of online sources and distilled them  into a kind of representation that they could very quickly  look up things when they were challenged with the Jeopardy"
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 42.68,
+            "end": 57.36,
+            "text": " question.  And then it had a sophisticated set  of algorithms that would try to find the best  answer for some question.  And they even had all kinds of bizarre special purpose things."
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 57.36,
+            "end": 75.02,
+            "text": " I remember there was a probabilistic model  that figured out where the daily double squares were most  likely to be on the Jeopardy board.  And then they did a utility theoretic calculation  to figure out if they did hit the daily double, what"
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 75.02,
+            "end": 91.88,
+            "text": " was the optimum amount of money to bet based  on the machine's performance in order to optimize.  They decided that humans typically  don't bet enough when they have a chance on the daily double.  So there was a lot of very special purpose stuff"
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 91.88,
+            "end": 106.88,
+            "text": " done for this.  So this was a huge publicity bonanza.  And IBM decided that next they were going to tackle medicine.  And so they were going to take this technology  and apply it to medicine."
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 106.88,
+            "end": 123.68,
+            "text": " They were going to read all of the medical journals  and all of the electronic medical records  that they could get their hands on.  And somehow this technology would, again,  distill the right information so that they could answer"
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 123.68,
+            "end": 137.48000000000002,
+            "text": " questions like a Jeopardy question,  except not stated in its funny backward way,  where you might say, OK, for this patient,  what is the optimum therapy?  And it would go out and use the same technology"
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 137.48,
+            "end": 155.67999999999998,
+            "text": " to figure that out.  Now, that was a perfectly reasonable thing to try.  The problem they ran into was this hype cycle  that the people who made this publicly known  were their marketing people and not their technical people."
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 155.67999999999998,
+            "end": 169.44,
+            "text": " And the marketing people over-promised like crazy.  They said, surely this is just going  to solve all these problems.  And we won't need any more research in this area  because, man, we got it."
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 169.44,
+            "end": 190.76,
+            "text": " I'm overstating it, even from the marketing point of view.  And so Watson, for oncology, used this cloud-based  supercomputer to digest massive amounts of data.  And that data included all kinds of different things.  So I'm going to go into a little bit of detail"
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 190.76,
+            "end": 209.04,
+            "text": " about what some of their problems were.  This is from an article in this journal, Stat News,  which did an investigative piece on what happened with Watson.  And so they say what I just said,  breathlessly promoting its signature brand,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 209.04,
+            "end": 222.74,
+            "text": " IBM sought to capture the world's imagination  and quickly zeroed in on a high-profile target, which  was cancer.  So this was going to solve the problem of some patient shows  up as diagnosed with cancer."
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 222.98000000000002,
+            "end": 233.5,
+            "text": " And you want to know how to treat this person.  So this would use all of the literature  and all of everything that it had  gathered from previous treatments  of previous patients."
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 233.5,
+            "end": 251.58,
+            "text": " And it would give you the optimal solution.  Now, it has not been a success.  There are a few dozen hospitals that have adopted the system,  very few of them in the United States, more of them abroad.  And the foreigners complained that its advice"
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 251.62,
+            "end": 265.74,
+            "text": " is biased toward American patients  and American approaches.  To me, the biggest problem is that they haven't actually  published anything that validates,  in a scientific sense, that this is a good idea,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 265.74,
+            "end": 279.78000000000003,
+            "text": " that it's getting the right answers.  And my guess is the reason for this  is because it's not getting the right answers a lot  of the time.  But that doesn't prevent marketing from selling it."
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 279.78,
+            "end": 295.7,
+            "text": " The other problem is that they made a deal with Memorial Sloan  Kettering, which is one of the leading cancer  hospitals in the country, to say,  we're going to work with you guys and your oncologists  in order to figure out what really is the right answer."
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 295.7,
+            "end": 309.58,
+            "text": " And so I think they tried to do what their marketing says  that they're doing, which is to really derive  the right answer from reading all of the literature  and looking at past cases.  But I don't think that worked well enough."
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 309.88,
+            "end": 321.34,
+            "text": " And so what they wound up doing is  turning to real oncologists saying,  what would you do under these circumstances?  And so what they wound up building  is something like a rule-based system that"
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 321.34,
+            "end": 337.7,
+            "text": " says, if you see the following symptoms  and you have the following genetic defects,  then this is the right treatment.  And so the promise that this was going  to be a machine learning system that revolutionized cancer care"
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 337.7,
+            "end": 354.06,
+            "text": " by finding the optimal treatment really  is not what they provided.  And as the article says, the system doesn't really  create new knowledge.  And so it's AI only in the sense of providing a search engine"
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 354.06,
+            "end": 373.06,
+            "text": " that, when it makes a recommendation,  can point you to articles that are a reasonable reflection  of what it's recommending.  Well, I'm going to stop going through this litany.  But you'll see it in the slides, which we'll post."
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 373.06,
+            "end": 387.94,
+            "text": " They had a big contract with MD Anderson,  which is another leading cancer center in the United States.  MD Anderson spent about $60 million  on this contract implementing it.  And they pulled the plug on it because they decided that it"
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 387.94,
+            "end": 411.46,
+            "text": " just wasn't doing the job.  Now, by contrast, there was a much more successful attempt  years ago, which was less driven by marketing and more  driven by medical need.  And the idea here was CPOE stands for computerized"
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 411.46,
+            "end": 430.06,
+            "text": " physician order entry.  The idea behind CPOE was that, if you  want to affect the behavior of clinicians in ordering tests  or drugs or procedures, what you want to do  is to make sure that they are interacting with the computer"
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 430.06,
+            "end": 446.38,
+            "text": " so that when they order, for example,  some insanely expensive drug, the system can come back  and say, hey, do you realize that there's  a drug that costs 1 100th as much, which,  according to the clinical trials that we have on record,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 446.38,
+            "end": 461.08,
+            "text": " is just as effective as the one that you've ordered.  And so, for example, here at the Beth Israel, many years ago,  they implemented a system like that.  And in the first year, they showed  that they saved something like $16 million"
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 461.08,
+            "end": 478.88,
+            "text": " in the pharmacy just by ordering cheaper  variants of drugs that could have been very expensive.  And they also found that the doctors who  were doing the ordering were perfectly satisfied with that  because they just didn't know how expensive these drugs were."
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 478.88,
+            "end": 492.62,
+            "text": " That's not one of the things that they pay attention to.  So there are many applications like that  that are driven by this.  And again, here are some statistics.  You can reduce error rates by half."
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 492.62,
+            "end": 513.72,
+            "text": " You can reduce severe medication errors by 88%.  You can have a 70% reduction in antibiotic-related adverse drug  events.  You can reduce length of stay, which is another big goal  that people go after."
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 513.72,
+            "end": 533.52,
+            "text": " And at least if you're an optimist,  you can believe these extrapolations that say,  well, we could prevent 3 million adverse drug  events at big city hospitals in the United States  if everybody used systems like this."
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 533.52,
+            "end": 549.96,
+            "text": " So the benefits are that it prompts  with warnings against possible drug interactions, allergies,  or overdoses.  It can be kept up to date by some sort of mechanism  where people read the literature and keep"
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 549.96,
+            "end": 567.88,
+            "text": " updating the databases that this is driven from.  And it can do sort of mechanical things  like eliminate confusion about drug names that sound similar  and stuff like that.  And so the leapfrog group, which does a lot of meta-analyses"
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 567.88,
+            "end": 583.92,
+            "text": " and studies of what's effective, really is behind this  and pushing it very strongly.  Potential future benefits, of course,  are that if the kinds of machine learning techniques  that we talk about become widely used,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.001.mp3",
+            "start": 583.92,
+            "end": 600.16,
+            "text": " then these systems can be updated automatically  rather than by manual review.  And you can gain the advantages of immediate feedback  as new information becomes available.  Now, the adoption of CPOE."
+        }
+    ],
+    "text": " OK, well, a cautionary tale is IBM's Watson Health. So I assume most of you remember when Watson hit the big time by beating the Jeopardy champions. This was back in the early 2010s or something. I don't remember exactly which year. And they had, in fact, built a really impressive set of technologies that went out and read all kinds of online sources and distilled them into a kind of representation that they could very quickly look up things when they were challenged with the Jeopardy question. And then it had a sophisticated set of algorithms that would try to find the best answer for some question. And they even had all kinds of bizarre special purpose things. I remember there was a probabilistic model that figured out where the daily double squares were most likely to be on the Jeopardy board. And then they did a utility theoretic calculation to figure out if they did hit the daily double, what was the optimum amount of money to bet based on the machine's performance in order to optimize. They decided that humans typically don't bet enough when they have a chance on the daily double. So there was a lot of very special purpose stuff done for this. So this was a huge publicity bonanza. And IBM decided that next they were going to tackle medicine. And so they were going to take this technology and apply it to medicine. They were going to read all of the medical journals and all of the electronic medical records that they could get their hands on. And somehow this technology would, again, distill the right information so that they could answer questions like a Jeopardy question, except not stated in its funny backward way, where you might say, OK, for this patient, what is the optimum therapy? And it would go out and use the same technology to figure that out. Now, that was a perfectly reasonable thing to try. The problem they ran into was this hype cycle that the people who made this publicly known were their marketing people and not their technical people. And the marketing people over-promised like crazy. They said, surely this is just going to solve all these problems. And we won't need any more research in this area because, man, we got it. I'm overstating it, even from the marketing point of view. And so Watson, for oncology, used this cloud-based supercomputer to digest massive amounts of data. And that data included all kinds of different things. So I'm going to go into a little bit of detail about what some of their problems were. This is from an article in this journal, Stat News, which did an investigative piece on what happened with Watson. And so they say what I just said, breathlessly promoting its signature brand, IBM sought to capture the world's imagination and quickly zeroed in on a high-profile target, which was cancer. So this was going to solve the problem of some patient shows up as diagnosed with cancer. And you want to know how to treat this person. So this would use all of the literature and all of everything that it had gathered from previous treatments of previous patients. And it would give you the optimal solution. Now, it has not been a success. There are a few dozen hospitals that have adopted the system, very few of them in the United States, more of them abroad. And the foreigners complained that its advice is biased toward American patients and American approaches. To me, the biggest problem is that they haven't actually published anything that validates, in a scientific sense, that this is a good idea, that it's getting the right answers. And my guess is the reason for this is because it's not getting the right answers a lot of the time. But that doesn't prevent marketing from selling it. The other problem is that they made a deal with Memorial Sloan Kettering, which is one of the leading cancer hospitals in the country, to say, we're going to work with you guys and your oncologists in order to figure out what really is the right answer. And so I think they tried to do what their marketing says that they're doing, which is to really derive the right answer from reading all of the literature and looking at past cases. But I don't think that worked well enough. And so what they wound up doing is turning to real oncologists saying, what would you do under these circumstances? And so what they wound up building is something like a rule-based system that says, if you see the following symptoms and you have the following genetic defects, then this is the right treatment. And so the promise that this was going to be a machine learning system that revolutionized cancer care by finding the optimal treatment really is not what they provided. And as the article says, the system doesn't really create new knowledge. And so it's AI only in the sense of providing a search engine that, when it makes a recommendation, can point you to articles that are a reasonable reflection of what it's recommending. Well, I'm going to stop going through this litany. But you'll see it in the slides, which we'll post. They had a big contract with MD Anderson, which is another leading cancer center in the United States. MD Anderson spent about $60 million on this contract implementing it. And they pulled the plug on it because they decided that it just wasn't doing the job. Now, by contrast, there was a much more successful attempt years ago, which was less driven by marketing and more driven by medical need. And the idea here was CPOE stands for computerized physician order entry. The idea behind CPOE was that, if you want to affect the behavior of clinicians in ordering tests or drugs or procedures, what you want to do is to make sure that they are interacting with the computer so that when they order, for example, some insanely expensive drug, the system can come back and say, hey, do you realize that there's a drug that costs 1 100th as much, which, according to the clinical trials that we have on record, is just as effective as the one that you've ordered. And so, for example, here at the Beth Israel, many years ago, they implemented a system like that. And in the first year, they showed that they saved something like $16 million in the pharmacy just by ordering cheaper variants of drugs that could have been very expensive. And they also found that the doctors who were doing the ordering were perfectly satisfied with that because they just didn't know how expensive these drugs were. That's not one of the things that they pay attention to. So there are many applications like that that are driven by this. And again, here are some statistics. You can reduce error rates by half. You can reduce severe medication errors by 88%. You can have a 70% reduction in antibiotic-related adverse drug events. You can reduce length of stay, which is another big goal that people go after. And at least if you're an optimist, you can believe these extrapolations that say, well, we could prevent 3 million adverse drug events at big city hospitals in the United States if everybody used systems like this. So the benefits are that it prompts with warnings against possible drug interactions, allergies, or overdoses. It can be kept up to date by some sort of mechanism where people read the literature and keep updating the databases that this is driven from. And it can do sort of mechanical things like eliminate confusion about drug names that sound similar and stuff like that. And so the leapfrog group, which does a lot of meta-analyses and studies of what's effective, really is behind this and pushing it very strongly. Potential future benefits, of course, are that if the kinds of machine learning techniques that we talk about become widely used, then these systems can be updated automatically rather than by manual review. And you can gain the advantages of immediate feedback as new information becomes available. Now, the adoption of CPOE."
+}

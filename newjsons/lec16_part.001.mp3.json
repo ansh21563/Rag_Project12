@@ -1,0 +1,341 @@
+{
+    "chunks": [
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 0.0,
+            "end": 12.22,
+            "text": " that we produce as machine learners  might not be appropriate for a healthcare setting.  And we have to somehow restrict ourselves  to something that's realistic.  I won't focus very much on this today."
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 12.22,
+            "end": 22.14,
+            "text": " It's something that will come up  in the discussion tomorrow, hopefully.  And also the notion of evaluating something  for use in the healthcare system  will also be talked about tomorrow."
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 23.14,
+            "end": 34.32,
+            "text": " What's that?  Thursday, sorry, Thursday.  Next time.  Okay, so I'll start by just briefly mentioning  some success stories."
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 34.32,
+            "end": 50.480000000000004,
+            "text": " And these are not from the healthcare setting,  as you can guess from the pictures.  How many have seen some of these pictures?  Okay, great, great, almost everyone.  Yeah, so these are from various video games,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 50.480000000000004,
+            "end": 65.62,
+            "text": " almost all of them.  Well, games anyhow.  And these are good examples  of when reinforcement learning works, essentially.  That's why I use this in this slide here."
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 65.62,
+            "end": 76.5,
+            "text": " Because essentially, it's very hard to argue  that the computer or the program  that eventually beat Lee Sedol,  I think it's in this picture,  but also later Go champions, essentially,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 76.5,
+            "end": 89.41999999999999,
+            "text": " in the AlphaGo picture in the top left,  it's hard to argue that they're not doing a good job  because they clearly beat humans here.  But one of the things I want you to keep in mind  is throughout this talk is what is different"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 89.41999999999999,
+            "end": 100.16,
+            "text": " between these kinds of scenarios,  and we'll come back to that later,  and what is different to the healthcare setting, essentially.  So I simply added another example here.  That's why I recognize."
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 100.16,
+            "end": 109.41999999999999,
+            "text": " So there was recently one  that's a little bit closer to my heart,  which is AlphaStar that plays StarCraft.  I like StarCraft, so you know,  should be on the slide."
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 109.41999999999999,
+            "end": 122.74,
+            "text": " Anyway, let's move on.  Broadly speaking, these can be summarized  in the following picture, what goes into those systems.  There's a lot more nuance  when it comes to something like Go,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 122.74,
+            "end": 134.01999999999998,
+            "text": " but for the purpose of this class,  we will summarize them with a slide.  So essentially, one of the three quantities  that matters for reinforcement learning  is the state of the environment,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 134.01999999999998,
+            "end": 148.6,
+            "text": " the state of the game, the state of the patient,  the state of the thing that we want to optimize, essentially.  So in this case, I've chosen tic-tac-toe here.  We have a state which represents  the current positions of the circles and crosses."
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 148.6,
+            "end": 162.51999999999998,
+            "text": " And given that state of the game,  my job as a player is to choose one of the possible,  or yeah, the possible actions,  one of the three squares to put my cross in.  So I'm the blue player here,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 162.51999999999998,
+            "end": 175.78,
+            "text": " and I can consider these five, is it, choices  for where to put my next cross,  and each of those will lead me to a new state of the game.  If I put my cross over here,  that means that I'm now in this box,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 175.78,
+            "end": 188.17999999999998,
+            "text": " and I have a new set of actions available to me  for the next round, depending on what the red player does.  So we have the state, we have the actions,  and we have the next state, essentially.  We have a trajectory, or a transition of states."
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 188.17999999999998,
+            "end": 197.17999999999998,
+            "text": " And the last quantity that we need  is the notion of a reward.  That's very important for reinforcement learning,  because that's what's drive the learning itself.  We strive to optimize the reward"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 197.17999999999998,
+            "end": 208.04,
+            "text": " or the outcome of something.  So if we look at the action to the farthest right here,  essentially, I left myself open  to an attack by the red player here,  because I didn't put my cross there,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 208.04,
+            "end": 218.46,
+            "text": " which means that probably if the red player is decent,  he will put his circle here,  and I will incur a loss, essentially.  So my reward will be negative  if we take positive to be good,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 218.46,
+            "end": 230.20000000000002,
+            "text": " and this is something that I can learn from going forward.  Essentially, what I want to avoid  is ending up in the state  that's shown in the bottom right here.  This is the basic idea of reinforcement learning"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 230.20000000000002,
+            "end": 246.16,
+            "text": " for video games and for anything else.  So if we take this board analogy, or this example,  and move to the healthcare setting,  we can think of the state of a patient  as the game board, or the state of the game."
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 246.16,
+            "end": 258.12,
+            "text": " We will always call this ST in this talk.  The treatments that we prescribe, or interventions,  will be AT, and these are like the actions  in the game, obviously,  but the outcomes of a patient,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 258.12,
+            "end": 267.24,
+            "text": " could be mortality, could be managing vitals,  will be like the rewards in the game,  having lost or won.  And then I put at the end here  what could possibly go wrong."
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 267.24,
+            "end": 277.68,
+            "text": " Well, as I alluded to before,  healthcare is not a game in the sense  that a video game is a game,  but they share a lot of mathematical structure,  so that's why I make the analogy here."
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 278.64,
+            "end": 294.18,
+            "text": " These quantities here, S, A, and R,  will form something called a decision process,  and that's what we'll talk about next.  This is the outline for today and Thursday.  I won't get to this today,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 294.18,
+            "end": 310.58,
+            "text": " but these are the topics we're considering.  So a decision process is essentially  the world that describes the data that we access,  or the world that we're managing our agent in.  And it's often, very often,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 310.58,
+            "end": 321.35999999999996,
+            "text": " if you've ever seen reinforcement learning taught,  you have seen this picture in some form, usually.  Sometimes there's a mouse and some cheese,  and there's other things going on,  but you know what I'm talking about."
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 321.35999999999996,
+            "end": 332.56,
+            "text": " Okay.  But there are the same basic components.  So there's the concept of an agent,  let's think doctor for now,  that takes actions repeatedly over time."
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 332.56,
+            "end": 343.86,
+            "text": " So this T here indicates an index of time,  and we see that's essentially increasing  as we spin around this wheel here.  We move forward in time.  So an agent takes an action,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 343.86,
+            "end": 358.78000000000003,
+            "text": " and at any time point receives a reward for that action,  and that would be RT, as I said before.  The environment is responsible for giving that reward.  So for example, if I'm the doctor, I'm the agent,  I make an action or an intervention to my patient,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 358.78000000000003,
+            "end": 369.76,
+            "text": " the patient will be the environment,  and essentially responds  or does not respond to my intervention.  The state here is the state of the patient,  as I mentioned before, for example,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 370.48,
+            "end": 382.9,
+            "text": " but it might also be a state of more broadly  than the patient,  like the settings of the machine that they're attached to,  or the availability of certain drugs in the hospital,  or something like that."
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 382.9,
+            "end": 391.58,
+            "text": " So we can think a little bit more broadly  than the patient too.  I said partially observed here  in that I might not actually know everything  about the patient that's relevant to me,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 391.58,
+            "end": 402.32,
+            "text": " and we'll come back a little bit later to that.  So there are two different formalizations  that are very close to each other,  which is when you know everything about S  and when you don't."
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 402.32,
+            "end": 414.0,
+            "text": " We'll, for the longest part of this talk,  focus on where I know everything  that is relevant about the environment.  Okay, to make this all a bit more concrete,  I'll return to the picture that I showed you before,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 414.0,
+            "end": 429.62,
+            "text": " but now put it in context of the paper that you read, right?  Was that the compulsory one, the mechanical ventilation?  Okay, great.  So in this case,  they had an interesting reward structure, essentially."
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 429.62,
+            "end": 441.54,
+            "text": " The thing that they were trying to optimize  was a reward related to the vitals of the patient,  but also to whether they were kept  on mechanical ventilation or not.  And the idea of this paper is that"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 441.54,
+            "end": 450.78000000000003,
+            "text": " you don't want to keep a patient  unnecessarily on mechanical ventilation,  because it has the side effects  that we talked about before.  So at any point in time,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 450.78000000000003,
+            "end": 466.08,
+            "text": " essentially we can think about taking a patient on or off,  and also dealing with the sedatives  that are prescribed to them.  So in this example,  the state that they considered in this application"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 467.76,
+            "end": 479.44,
+            "text": " included the demographic information of the patient,  which doesn't really change over time,  their physiological measurements, ventilator settings,  consciousness level,  the dosages of the sedatives they use,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 479.44,
+            "end": 494.06,
+            "text": " which could be an action, I suppose,  and a number of other things.  And these are the values that we have to keep track on  of moving forward in time.  The actions concretely included"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 494.06,
+            "end": 511.71999999999997,
+            "text": " whether to intubate or extubate the patient,  as well as the administer and dosing the sedatives.  So this is, again, an example of a so-called decision process  and essentially,  the process is the distribution of these quantities"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 511.71999999999997,
+            "end": 525.1400000000001,
+            "text": " that I've been talking about over time.  So we have the states, the actions, and the rewards,  they all traverse or they all evolve over time.  And the loss of how that happens is a decision process.  I mentioned before"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 525.1400000000001,
+            "end": 537.1400000000001,
+            "text": " that we will be talking about policies today.  And typically, there's a distinction  between what is called a behavior policy  and a target policy,  or there are different words for this."
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 537.1400000000001,
+            "end": 546.48,
+            "text": " Essentially, the thing that we observe  is usually called a behavior policy.  By that, I mean, if we go to a hospital  and watch what's happening there at the moment,  that will be the behavior policy"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 546.48,
+            "end": 565.32,
+            "text": " and I will denote that mu.  So that is what we have to learn from, essentially.  So decision processes so far are incredibly general.  I haven't said anything about what this distribution is like  but the absolutely dominant restriction that people make"
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 565.32,
+            "end": 576.34,
+            "text": " when they study decision processes  is to look at a mark of decision processes.  And these have a specific conditional independent structure  that I will illustrate in the next slide,  but I'll just define it mathematically here."
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 576.34,
+            "end": 588.08,
+            "text": " It says essentially that all of the quantities  that we care about, the states,  I guess I should say state,  rewards and the actions only depend  on the most recent state and action."
+        },
+        {
+            "number": "lec16",
+            "title": "part.001.mp3",
+            "start": 589.0600000000001,
+            "end": 599.46,
+            "text": " So if we want to, or if we observe an action  taken by a doctor in the hospital, for example,  to make a mark of assumption would say"
+        }
+    ],
+    "text": " that we produce as machine learners might not be appropriate for a healthcare setting. And we have to somehow restrict ourselves to something that's realistic. I won't focus very much on this today. It's something that will come up in the discussion tomorrow, hopefully. And also the notion of evaluating something for use in the healthcare system will also be talked about tomorrow. What's that? Thursday, sorry, Thursday. Next time. Okay, so I'll start by just briefly mentioning some success stories. And these are not from the healthcare setting, as you can guess from the pictures. How many have seen some of these pictures? Okay, great, great, almost everyone. Yeah, so these are from various video games, almost all of them. Well, games anyhow. And these are good examples of when reinforcement learning works, essentially. That's why I use this in this slide here. Because essentially, it's very hard to argue that the computer or the program that eventually beat Lee Sedol, I think it's in this picture, but also later Go champions, essentially, in the AlphaGo picture in the top left, it's hard to argue that they're not doing a good job because they clearly beat humans here. But one of the things I want you to keep in mind is throughout this talk is what is different between these kinds of scenarios, and we'll come back to that later, and what is different to the healthcare setting, essentially. So I simply added another example here. That's why I recognize. So there was recently one that's a little bit closer to my heart, which is AlphaStar that plays StarCraft. I like StarCraft, so you know, should be on the slide. Anyway, let's move on. Broadly speaking, these can be summarized in the following picture, what goes into those systems. There's a lot more nuance when it comes to something like Go, but for the purpose of this class, we will summarize them with a slide. So essentially, one of the three quantities that matters for reinforcement learning is the state of the environment, the state of the game, the state of the patient, the state of the thing that we want to optimize, essentially. So in this case, I've chosen tic-tac-toe here. We have a state which represents the current positions of the circles and crosses. And given that state of the game, my job as a player is to choose one of the possible, or yeah, the possible actions, one of the three squares to put my cross in. So I'm the blue player here, and I can consider these five, is it, choices for where to put my next cross, and each of those will lead me to a new state of the game. If I put my cross over here, that means that I'm now in this box, and I have a new set of actions available to me for the next round, depending on what the red player does. So we have the state, we have the actions, and we have the next state, essentially. We have a trajectory, or a transition of states. And the last quantity that we need is the notion of a reward. That's very important for reinforcement learning, because that's what's drive the learning itself. We strive to optimize the reward or the outcome of something. So if we look at the action to the farthest right here, essentially, I left myself open to an attack by the red player here, because I didn't put my cross there, which means that probably if the red player is decent, he will put his circle here, and I will incur a loss, essentially. So my reward will be negative if we take positive to be good, and this is something that I can learn from going forward. Essentially, what I want to avoid is ending up in the state that's shown in the bottom right here. This is the basic idea of reinforcement learning for video games and for anything else. So if we take this board analogy, or this example, and move to the healthcare setting, we can think of the state of a patient as the game board, or the state of the game. We will always call this ST in this talk. The treatments that we prescribe, or interventions, will be AT, and these are like the actions in the game, obviously, but the outcomes of a patient, could be mortality, could be managing vitals, will be like the rewards in the game, having lost or won. And then I put at the end here what could possibly go wrong. Well, as I alluded to before, healthcare is not a game in the sense that a video game is a game, but they share a lot of mathematical structure, so that's why I make the analogy here. These quantities here, S, A, and R, will form something called a decision process, and that's what we'll talk about next. This is the outline for today and Thursday. I won't get to this today, but these are the topics we're considering. So a decision process is essentially the world that describes the data that we access, or the world that we're managing our agent in. And it's often, very often, if you've ever seen reinforcement learning taught, you have seen this picture in some form, usually. Sometimes there's a mouse and some cheese, and there's other things going on, but you know what I'm talking about. Okay. But there are the same basic components. So there's the concept of an agent, let's think doctor for now, that takes actions repeatedly over time. So this T here indicates an index of time, and we see that's essentially increasing as we spin around this wheel here. We move forward in time. So an agent takes an action, and at any time point receives a reward for that action, and that would be RT, as I said before. The environment is responsible for giving that reward. So for example, if I'm the doctor, I'm the agent, I make an action or an intervention to my patient, the patient will be the environment, and essentially responds or does not respond to my intervention. The state here is the state of the patient, as I mentioned before, for example, but it might also be a state of more broadly than the patient, like the settings of the machine that they're attached to, or the availability of certain drugs in the hospital, or something like that. So we can think a little bit more broadly than the patient too. I said partially observed here in that I might not actually know everything about the patient that's relevant to me, and we'll come back a little bit later to that. So there are two different formalizations that are very close to each other, which is when you know everything about S and when you don't. We'll, for the longest part of this talk, focus on where I know everything that is relevant about the environment. Okay, to make this all a bit more concrete, I'll return to the picture that I showed you before, but now put it in context of the paper that you read, right? Was that the compulsory one, the mechanical ventilation? Okay, great. So in this case, they had an interesting reward structure, essentially. The thing that they were trying to optimize was a reward related to the vitals of the patient, but also to whether they were kept on mechanical ventilation or not. And the idea of this paper is that you don't want to keep a patient unnecessarily on mechanical ventilation, because it has the side effects that we talked about before. So at any point in time, essentially we can think about taking a patient on or off, and also dealing with the sedatives that are prescribed to them. So in this example, the state that they considered in this application included the demographic information of the patient, which doesn't really change over time, their physiological measurements, ventilator settings, consciousness level, the dosages of the sedatives they use, which could be an action, I suppose, and a number of other things. And these are the values that we have to keep track on of moving forward in time. The actions concretely included whether to intubate or extubate the patient, as well as the administer and dosing the sedatives. So this is, again, an example of a so-called decision process and essentially, the process is the distribution of these quantities that I've been talking about over time. So we have the states, the actions, and the rewards, they all traverse or they all evolve over time. And the loss of how that happens is a decision process. I mentioned before that we will be talking about policies today. And typically, there's a distinction between what is called a behavior policy and a target policy, or there are different words for this. Essentially, the thing that we observe is usually called a behavior policy. By that, I mean, if we go to a hospital and watch what's happening there at the moment, that will be the behavior policy and I will denote that mu. So that is what we have to learn from, essentially. So decision processes so far are incredibly general. I haven't said anything about what this distribution is like but the absolutely dominant restriction that people make when they study decision processes is to look at a mark of decision processes. And these have a specific conditional independent structure that I will illustrate in the next slide, but I'll just define it mathematically here. It says essentially that all of the quantities that we care about, the states, I guess I should say state, rewards and the actions only depend on the most recent state and action. So if we want to, or if we observe an action taken by a doctor in the hospital, for example, to make a mark of assumption would say"
+}

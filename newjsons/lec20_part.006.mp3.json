@@ -1,0 +1,257 @@
+{
+    "chunks": [
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 0.0,
+            "end": 13.72,
+            "text": " diseases, coronary artery disease, renal function,  et cetera.  And let me come back to this.  So what they did is they said, OK, here's  the way we're going to model this."
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 13.72,
+            "end": 26.88,
+            "text": " We have an association matrix that is 47 traits  by 94 genetic factors.  So we make a matrix out of that.  And then they did something funny.  So they doubled the traits."
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 26.88,
+            "end": 43.4,
+            "text": " The technology for matrix factorization  is called non-negative matrix factorization.  And since many of those associations were negative,  what they did is for each trait that  had both positive and negative values,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 43.4,
+            "end": 59.36,
+            "text": " they duplicated the column.  They created one column that had positive associations  and one column that had the negation  of the negative associations with zeros everywhere else.  So that's how they dealt with that problem."
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 59.36,
+            "end": 77.08,
+            "text": " And then they said, OK, we're going to apply matrix  factorization to factor x into two matrices, w and h.  And I drew those here on the board.  So you have one matrix that, well,  this is your original 47 by 94 matrix."
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 77.08,
+            "end": 94.52,
+            "text": " And the question is, can you find two smaller matrices that  are 47 by k and k by 94 that when you multiply these  together, you get back some close approximation  to that matrix?  Now, if you've been looking at the literature,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 94.52,
+            "end": 110.84,
+            "text": " there are all kinds of ideas like autoencoders.  And these are all basically the same underlying idea.  It's an unsupervised method that says,  can we find interesting patterns in the data  by doing some kind of dimension reduction?"
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 110.84,
+            "end": 130.8,
+            "text": " And this is one of those methods  for doing dimension reduction.  So what's nice about this one is that when  they get their w and h, they predict x from that.  And then they know, of course, what the error is."
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 130.8,
+            "end": 145.88,
+            "text": " And they say, well, minimizing that error is our objective.  So that also lets them get at the question  of what's the right k.  And that's an important problem because normally,  clustering methods like hierarchical clustering,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 145.88,
+            "end": 162.44,
+            "text": " you have to specify what the number of clusters  is that you're looking for.  And that's hard to do a priori, whereas this technique  can suggest at least which one fits the data best.  And so the loss function is some regularized L2 distance"
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 162.44,
+            "end": 181.6,
+            "text": " between the reconstruction w times h and x  and some penalty terms based on the size of w and h,  coupled by these relevance weights  that you can look at the paper, which I think I referred to  in here and I asked you to read."
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 181.6,
+            "end": 198.48,
+            "text": " And then they do Gibbs sampling and a whole bunch  of computational tricks to speed up the process.  So they got about 17,000 people from four different studies.  They're all of European ancestry.  So there's the usual generalization problem"
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 198.48,
+            "end": 217.39999999999998,
+            "text": " of how do you apply this to people  from other parts of the world.  And they did individual level analyses  of all the individuals with type 2 diabetes from these.  And the results were that they found five subtypes, again,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 217.4,
+            "end": 242.44,
+            "text": " five, which were present on 82.3% of iterations.  By the way, total random aside, there's a wonderful video  at Caltech of the woman who just made the picture  of the black hole shadow.  And she makes arguments very much like this."
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 242.44,
+            "end": 255.6,
+            "text": " We tried a whole bunch of different ways  of coming up with this picture.  And what we decided was true is whatever  showed up in almost all of the different methods  of reconstructing it."
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 255.6,
+            "end": 271.24,
+            "text": " So this is kind of a similar argument.  And their interpretations medically  are that one of them is involved with variations  in the beta cells.  So these are the cells in your pancreas that make insulin."
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 271.24,
+            "end": 290.68,
+            "text": " One of them is in variations in pro-insulin,  which is a predecessor of insulin that  is under different controls.  And then three others have to do with obesity,  bad things about your lipid metabolism,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 290.68,
+            "end": 314.03999999999996,
+            "text": " and then your liver function.  And if you look at their results,  the top spider diagrams, so the way to interpret these  is that the middle circle octagon,  the one in the very middle, is the one with negative data."
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 314.03999999999996,
+            "end": 329.88,
+            "text": " The one in between that and the outside  is with zero correlation.  And the outside one is with positive correlation.  And what you see is that different factors  have different influences in these different clusters."
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 329.88,
+            "end": 342.72,
+            "text": " So these are the factors that are  most informative in figuring out which  cluster somebody belongs to.  And they indeed look considerably different.  I'm not going to have you read this,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 342.72,
+            "end": 353.04,
+            "text": " but it'll be in the slides.  Now, one thing that's interesting,  again, this won't be on the final exam,  but look at these numbers.  They're all tiny."
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 356.96,
+            "end": 380.12,
+            "text": " Right?  Some of them are hugely statistically significant.  So DI, whatever that is, contributes 0.05 units  to having beta cell type of this disease at a p-value of 6.6  times 10 to the minus 37th."
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 380.12,
+            "end": 393.88,
+            "text": " So it's definitely there.  It's definitely an effect.  But it's not a very big effect.  And what strikes me every time I look at studies like this  is just how small those effects are,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 393.88,
+            "end": 407.16,
+            "text": " whether you're predicting some output  like the level of insulin in the patient,  or whether you're predicting something  like a category membership, as in this table.  OK."
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 407.16,
+            "end": 432.88,
+            "text": " So as I said, PHEWAS is a reverse GWAS.  And the first paper that introduced the terminology  was by Josh Denny and colleagues at Vanderbilt in 2010.  And so they did not quite a phenome-wide association.  But they said, we're going to take 25,000 samples"
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 432.88,
+            "end": 444.56,
+            "text": " from the Vanderbilt biobank.  And we're going to take the first 6,000  European-Americans with samples, no other criteria  for selection.  Why European-Americans?"
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 444.56,
+            "end": 459.64,
+            "text": " Because all the GWAS data is about European-Americans.  So they wanted to be able to compare to that.  And then they said, let's pick not one SNP,  but five different SNPs that we're interested in.  So they picked these, which are known"
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 459.64,
+            "end": 475.96,
+            "text": " to be associated with coronary artery disease and carotid  artery stenosis, atrial fibrillation,  multiple sclerosis and lupus, rheumatoid arthritis,  and Crohn's disease.  So it's a nice grab bag of interesting disease"
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 475.96,
+            "end": 496.0,
+            "text": " associations.  And then the hard work they did was  they went through the tens of thousands  of different billing codes that were available.  And they, by hand, clustered them into 744 case groups"
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 496.0,
+            "end": 512.32,
+            "text": " and said, OK, these are the phenotypes  that we're interested in.  And that data set, by the way, is still available.  And it's been used by a lot of other people  because nobody wants to repeat that analysis."
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 512.32,
+            "end": 526.08,
+            "text": " So now what you see is something very similar to what  you saw in GWAS, except here what we have  is the ICD-9 code group.  I guess by the time this got published,  it was up to 1,000."
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 526.08,
+            "end": 553.64,
+            "text": " And these are the same kinds of odds ratios  for the genetic expression of those markers.  And what you find, again, is that this is the p equal 0.05.  That's the Bonferroni corrected version.  And only multiple sclerosis comes up"
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 553.64,
+            "end": 570.5600000000001,
+            "text": " for this particular SNP, which was one of the ones  that they expected to come up.  But they were interested to see what else lights up  when you do this sort of analysis.  And what they discovered is that malignant neoplasm"
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 570.5600000000001,
+            "end": 587.4000000000001,
+            "text": " of the rectum, benign digestive tract neoplasms.  So there's something going on about cancer  that is somehow related to the single nucleotide polymorphism,  not at a statistically high enough level,  but it's still kind of intriguing"
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 587.4,
+            "end": 595.76,
+            "text": " that there may be some relationship there.  Yeah?  AUDIENCE 2 So is this data at all public?  Or is this at one particular hospital?  Or who has this data?"
+        },
+        {
+            "number": "lec20",
+            "title": "part.006.mp3",
+            "start": 595.76,
+            "end": 601.72,
+            "text": " Like, what do they combine?  PETER SZOLOVITSKY Yeah, I don't believe  that you can get that."
+        }
+    ],
+    "text": " diseases, coronary artery disease, renal function, et cetera. And let me come back to this. So what they did is they said, OK, here's the way we're going to model this. We have an association matrix that is 47 traits by 94 genetic factors. So we make a matrix out of that. And then they did something funny. So they doubled the traits. The technology for matrix factorization is called non-negative matrix factorization. And since many of those associations were negative, what they did is for each trait that had both positive and negative values, they duplicated the column. They created one column that had positive associations and one column that had the negation of the negative associations with zeros everywhere else. So that's how they dealt with that problem. And then they said, OK, we're going to apply matrix factorization to factor x into two matrices, w and h. And I drew those here on the board. So you have one matrix that, well, this is your original 47 by 94 matrix. And the question is, can you find two smaller matrices that are 47 by k and k by 94 that when you multiply these together, you get back some close approximation to that matrix? Now, if you've been looking at the literature, there are all kinds of ideas like autoencoders. And these are all basically the same underlying idea. It's an unsupervised method that says, can we find interesting patterns in the data by doing some kind of dimension reduction? And this is one of those methods for doing dimension reduction. So what's nice about this one is that when they get their w and h, they predict x from that. And then they know, of course, what the error is. And they say, well, minimizing that error is our objective. So that also lets them get at the question of what's the right k. And that's an important problem because normally, clustering methods like hierarchical clustering, you have to specify what the number of clusters is that you're looking for. And that's hard to do a priori, whereas this technique can suggest at least which one fits the data best. And so the loss function is some regularized L2 distance between the reconstruction w times h and x and some penalty terms based on the size of w and h, coupled by these relevance weights that you can look at the paper, which I think I referred to in here and I asked you to read. And then they do Gibbs sampling and a whole bunch of computational tricks to speed up the process. So they got about 17,000 people from four different studies. They're all of European ancestry. So there's the usual generalization problem of how do you apply this to people from other parts of the world. And they did individual level analyses of all the individuals with type 2 diabetes from these. And the results were that they found five subtypes, again, five, which were present on 82.3% of iterations. By the way, total random aside, there's a wonderful video at Caltech of the woman who just made the picture of the black hole shadow. And she makes arguments very much like this. We tried a whole bunch of different ways of coming up with this picture. And what we decided was true is whatever showed up in almost all of the different methods of reconstructing it. So this is kind of a similar argument. And their interpretations medically are that one of them is involved with variations in the beta cells. So these are the cells in your pancreas that make insulin. One of them is in variations in pro-insulin, which is a predecessor of insulin that is under different controls. And then three others have to do with obesity, bad things about your lipid metabolism, and then your liver function. And if you look at their results, the top spider diagrams, so the way to interpret these is that the middle circle octagon, the one in the very middle, is the one with negative data. The one in between that and the outside is with zero correlation. And the outside one is with positive correlation. And what you see is that different factors have different influences in these different clusters. So these are the factors that are most informative in figuring out which cluster somebody belongs to. And they indeed look considerably different. I'm not going to have you read this, but it'll be in the slides. Now, one thing that's interesting, again, this won't be on the final exam, but look at these numbers. They're all tiny. Right? Some of them are hugely statistically significant. So DI, whatever that is, contributes 0.05 units to having beta cell type of this disease at a p-value of 6.6 times 10 to the minus 37th. So it's definitely there. It's definitely an effect. But it's not a very big effect. And what strikes me every time I look at studies like this is just how small those effects are, whether you're predicting some output like the level of insulin in the patient, or whether you're predicting something like a category membership, as in this table. OK. So as I said, PHEWAS is a reverse GWAS. And the first paper that introduced the terminology was by Josh Denny and colleagues at Vanderbilt in 2010. And so they did not quite a phenome-wide association. But they said, we're going to take 25,000 samples from the Vanderbilt biobank. And we're going to take the first 6,000 European-Americans with samples, no other criteria for selection. Why European-Americans? Because all the GWAS data is about European-Americans. So they wanted to be able to compare to that. And then they said, let's pick not one SNP, but five different SNPs that we're interested in. So they picked these, which are known to be associated with coronary artery disease and carotid artery stenosis, atrial fibrillation, multiple sclerosis and lupus, rheumatoid arthritis, and Crohn's disease. So it's a nice grab bag of interesting disease associations. And then the hard work they did was they went through the tens of thousands of different billing codes that were available. And they, by hand, clustered them into 744 case groups and said, OK, these are the phenotypes that we're interested in. And that data set, by the way, is still available. And it's been used by a lot of other people because nobody wants to repeat that analysis. So now what you see is something very similar to what you saw in GWAS, except here what we have is the ICD-9 code group. I guess by the time this got published, it was up to 1,000. And these are the same kinds of odds ratios for the genetic expression of those markers. And what you find, again, is that this is the p equal 0.05. That's the Bonferroni corrected version. And only multiple sclerosis comes up for this particular SNP, which was one of the ones that they expected to come up. But they were interested to see what else lights up when you do this sort of analysis. And what they discovered is that malignant neoplasm of the rectum, benign digestive tract neoplasms. So there's something going on about cancer that is somehow related to the single nucleotide polymorphism, not at a statistically high enough level, but it's still kind of intriguing that there may be some relationship there. Yeah? AUDIENCE 2 So is this data at all public? Or is this at one particular hospital? Or who has this data? Like, what do they combine? PETER SZOLOVITSKY Yeah, I don't believe that you can get that."
+}

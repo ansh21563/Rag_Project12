@@ -1,0 +1,243 @@
+{
+    "chunks": [
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 0.0,
+            "end": 17.92,
+            "text": " distributions, and you would get a perfect result.  And so typically, you get something in between.  And so normally, if you do a study and you're AUC,  the area under this receiver operator characteristics curve  is barely over 1.5."
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 17.92,
+            "end": 32.44,
+            "text": " You're pretty close to worthless.  Whereas if it's close to 1, then you  have a really good method for distinguishing  these categories of patients.  OK, next topic."
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 32.44,
+            "end": 48.599999999999994,
+            "text": " What does it mean to be rational?  Could have a philosophy course here.  Talk about pi?  Sorry?  Talk about pi?"
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 48.599999999999994,
+            "end": 64.96000000000001,
+            "text": " Pi is irrational, but that's not what I'm talking about.  Well, so there's this principle of rationality  that says that what you want to do  is to act in such a way as to maximize  your expected utility."
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 64.96000000000001,
+            "end": 83.4,
+            "text": " So for example, if you're a gambler  and you have a choice of various ways of betting in some poker  game or something, then if you were a perfect calculator  of the odds of getting a queen on your next draw,  then you could make some rational decision"
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 83.4,
+            "end": 104.04,
+            "text": " about whether to bet more or less.  But you'd also have to take into account things  like how could I convince my opponent that I am not bluffing  if I am bluffing, and how could I convince him  that I'm bluffing if I'm not bluffing, and so on."
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 104.04,
+            "end": 118.48,
+            "text": " So there's a complicated model there.  But nevertheless, the idea is that you  should behave in a way that will give you  the best expected outcome.  So people joke that this is homo economicus"
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 118.48,
+            "end": 132.72,
+            "text": " because economists make the assumption that this  is how people behave.  And we now know that that's not really how people behave,  but it's a pretty common model of their behavior  because it's easy to compute and it has"
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 132.72,
+            "end": 151.08,
+            "text": " some appropriate characteristics.  So as I mentioned, every action has a cost,  and utility measures the value or the goodness  of some outcome, which is the amount of money you've won,  or whether you live or die, or quality adjusted life"
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 151.08,
+            "end": 169.0,
+            "text": " years, or various other measures of utility,  how much it costs for your hospitalization.  So let me give you an example.  This actually comes from a decision analysis service  at New England Medical Center, Tufts Hospital,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 169.0,
+            "end": 184.04,
+            "text": " in the late 1970s.  So this was an elderly Chinese gentleman  whose foot had gangrene.  So gangrene is an infection that usually people  who have bad circulation can get these."
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 184.04,
+            "end": 199.54,
+            "text": " And what he was facing was a choice  of whether to amputate his foot or to try to treat him  medically.  To treat him medically means injecting antibiotics  into a system and hoping that his circulation is"
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 199.57999999999998,
+            "end": 215.34,
+            "text": " good enough to get them to the infected areas.  And so the choice becomes a little more complicated  because if the medical treatment fails, then, of course,  the patient may die.  It's a bad outcome."
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 215.34,
+            "end": 235.38,
+            "text": " Or you may have to now amputate the whole leg  because the gangrene has spread from his foot up the foot,  and now you're cutting off his leg.  So what should you do, and how should you reason about this?  So Pauker's staff came up with this decision tree."
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 235.38,
+            "end": 253.54,
+            "text": " By the way, decision tree in this literature  means something different from decision tree in, like, C4.5.  So your choices here are to amputate the foot  or start with medical care.  And if you amputate the foot, let's"
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 253.54,
+            "end": 277.74,
+            "text": " say there's a 99% chance that the patient will live.  There's a 1% chance that maybe the anesthesia will kill him.  And if we treat him medically, they  estimated that there was a 70% chance of full recovery,  25% chance that he'd get worse, 5% chance that he would die."
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 277.74,
+            "end": 293.02,
+            "text": " If he got worse, you're now faced  with another decision, which is do we amputate the whole leg  or continue pushing medicine?  And again, there are various outcomes  with various estimated probabilities."
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 293.02,
+            "end": 309.86,
+            "text": " Now, the critical thing here that this group was pushing  was the idea that these decisions shouldn't  be based on what the doctor thinks is good for you.  They should be based on what you think is good for you.  And so they worked very hard to try"
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 309.86,
+            "end": 335.21999999999997,
+            "text": " to elicit individualized utilities from patients.  So for example, this guy said that having your foot amputated  was worth 850 points on a scale of 1,000,  where being healthy was 1 and being dead was 0.  Now, you could imagine that that number"
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 335.21999999999997,
+            "end": 351.14000000000004,
+            "text": " would be very different for different individuals.  If you asked LeBron James how bad  would it be to have your foot amputated,  he might think that it's much worse than I would,  because it would be a pain to have my foot amputated."
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 351.14000000000004,
+            "end": 367.70000000000005,
+            "text": " But I could still do most of the things  that I do professionally, whereas he probably couldn't  as a star basketball player.  So how do you solve a problem like this?  Well, you say, OK, at every chance node,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 367.70000000000005,
+            "end": 386.06,
+            "text": " I can calculate the expected value of what happens here.  So here it's 0.6 times 995, 0.4 times 0.  That gets me a value for this decision.  Do the same thing here.  I compare the values here and choose the best one."
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 386.06,
+            "end": 402.88,
+            "text": " That gives me a value for this decision.  So I fold back this decision tree.  And my next slide should have, yeah,  so these are the numbers that you get.  And what you discover is that the utility"
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 402.88,
+            "end": 421.55999999999995,
+            "text": " of trying medical treatment is somewhat  higher than the utility of immediately amputating  the foot, if you believe these numbers and those utilities,  these probabilities and those utilities.  Now, the difficulty is that these numbers are fickle."
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 421.55999999999995,
+            "end": 439.04,
+            "text": " And so you'd like to do some sort of sensitivity analysis.  And you say, for example, what if this gentleman  valued his living with an amputated foot at 900  rather than 850?  And now you discover that amputating the foot"
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 439.04,
+            "end": 459.74,
+            "text": " looks like a slightly better decision than the other.  So this is actually applied in clinical medicine.  And there are now thousands of doctors  who have been trained in these techniques  and really try to work through this with individual patients."
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 459.74,
+            "end": 468.7,
+            "text": " Of course, it's used much more on an epidemiological basis  when people look at large populations.  AUDIENCE MEMBER 2.  Quick question.  PETER SZOLOVITSZ-MARTINEZ Yeah."
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 468.7,
+            "end": 481.52,
+            "text": " AUDIENCE MEMBER 2.  How are the probabilities assessed?  So the service that did the study  would read the literature.  And they would look in databases."
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 481.52,
+            "end": 501.66,
+            "text": " And they would try to estimate those probabilities.  We can do a lot better today than they could at that time,  because we have a lot more data that you can look in.  But you could say, OK, for people, men of this age  who have gangrenous feet, what fraction of them"
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 501.66,
+            "end": 522.3399999999999,
+            "text": " have the following experience?  And that's how these are estimated.  Some of it feels like 5% to me.  Yeah.  OK, so I just said this."
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 522.3399999999999,
+            "end": 546.36,
+            "text": " And then the question of where do you get these utilities  is a tricky one.  So one way is to do the standard gamble, which says, OK,  Mr. Szolovitsz, we're going to play this game.  We're going to roll a fair die or something that"
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 546.36,
+            "end": 569.2800000000001,
+            "text": " will come up with some continuous number between 0  and 1.  And then I'm going to play the game where either I chop off  your foot or I roll this die.  And if it exceeds some threshold, then I kill you."
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 569.28,
+            "end": 591.92,
+            "text": " Nice game.  So now, if you find the point at which I'm indifferent,  if I say, well, 0.8, that's a 20% chance of dying.  That seems like a lot.  But maybe I'll go for 0.9."
+        },
+        {
+            "number": "lec11",
+            "title": "part.002.mp3",
+            "start": 591.92,
+            "end": 601.1,
+            "text": " Now you've said, OK, well, that means  that you value living without a foot at 0.9  of the value of being healthy."
+        }
+    ],
+    "text": " distributions, and you would get a perfect result. And so typically, you get something in between. And so normally, if you do a study and you're AUC, the area under this receiver operator characteristics curve is barely over 1.5. You're pretty close to worthless. Whereas if it's close to 1, then you have a really good method for distinguishing these categories of patients. OK, next topic. What does it mean to be rational? Could have a philosophy course here. Talk about pi? Sorry? Talk about pi? Pi is irrational, but that's not what I'm talking about. Well, so there's this principle of rationality that says that what you want to do is to act in such a way as to maximize your expected utility. So for example, if you're a gambler and you have a choice of various ways of betting in some poker game or something, then if you were a perfect calculator of the odds of getting a queen on your next draw, then you could make some rational decision about whether to bet more or less. But you'd also have to take into account things like how could I convince my opponent that I am not bluffing if I am bluffing, and how could I convince him that I'm bluffing if I'm not bluffing, and so on. So there's a complicated model there. But nevertheless, the idea is that you should behave in a way that will give you the best expected outcome. So people joke that this is homo economicus because economists make the assumption that this is how people behave. And we now know that that's not really how people behave, but it's a pretty common model of their behavior because it's easy to compute and it has some appropriate characteristics. So as I mentioned, every action has a cost, and utility measures the value or the goodness of some outcome, which is the amount of money you've won, or whether you live or die, or quality adjusted life years, or various other measures of utility, how much it costs for your hospitalization. So let me give you an example. This actually comes from a decision analysis service at New England Medical Center, Tufts Hospital, in the late 1970s. So this was an elderly Chinese gentleman whose foot had gangrene. So gangrene is an infection that usually people who have bad circulation can get these. And what he was facing was a choice of whether to amputate his foot or to try to treat him medically. To treat him medically means injecting antibiotics into a system and hoping that his circulation is good enough to get them to the infected areas. And so the choice becomes a little more complicated because if the medical treatment fails, then, of course, the patient may die. It's a bad outcome. Or you may have to now amputate the whole leg because the gangrene has spread from his foot up the foot, and now you're cutting off his leg. So what should you do, and how should you reason about this? So Pauker's staff came up with this decision tree. By the way, decision tree in this literature means something different from decision tree in, like, C4.5. So your choices here are to amputate the foot or start with medical care. And if you amputate the foot, let's say there's a 99% chance that the patient will live. There's a 1% chance that maybe the anesthesia will kill him. And if we treat him medically, they estimated that there was a 70% chance of full recovery, 25% chance that he'd get worse, 5% chance that he would die. If he got worse, you're now faced with another decision, which is do we amputate the whole leg or continue pushing medicine? And again, there are various outcomes with various estimated probabilities. Now, the critical thing here that this group was pushing was the idea that these decisions shouldn't be based on what the doctor thinks is good for you. They should be based on what you think is good for you. And so they worked very hard to try to elicit individualized utilities from patients. So for example, this guy said that having your foot amputated was worth 850 points on a scale of 1,000, where being healthy was 1 and being dead was 0. Now, you could imagine that that number would be very different for different individuals. If you asked LeBron James how bad would it be to have your foot amputated, he might think that it's much worse than I would, because it would be a pain to have my foot amputated. But I could still do most of the things that I do professionally, whereas he probably couldn't as a star basketball player. So how do you solve a problem like this? Well, you say, OK, at every chance node, I can calculate the expected value of what happens here. So here it's 0.6 times 995, 0.4 times 0. That gets me a value for this decision. Do the same thing here. I compare the values here and choose the best one. That gives me a value for this decision. So I fold back this decision tree. And my next slide should have, yeah, so these are the numbers that you get. And what you discover is that the utility of trying medical treatment is somewhat higher than the utility of immediately amputating the foot, if you believe these numbers and those utilities, these probabilities and those utilities. Now, the difficulty is that these numbers are fickle. And so you'd like to do some sort of sensitivity analysis. And you say, for example, what if this gentleman valued his living with an amputated foot at 900 rather than 850? And now you discover that amputating the foot looks like a slightly better decision than the other. So this is actually applied in clinical medicine. And there are now thousands of doctors who have been trained in these techniques and really try to work through this with individual patients. Of course, it's used much more on an epidemiological basis when people look at large populations. AUDIENCE MEMBER 2. Quick question. PETER SZOLOVITSZ-MARTINEZ Yeah. AUDIENCE MEMBER 2. How are the probabilities assessed? So the service that did the study would read the literature. And they would look in databases. And they would try to estimate those probabilities. We can do a lot better today than they could at that time, because we have a lot more data that you can look in. But you could say, OK, for people, men of this age who have gangrenous feet, what fraction of them have the following experience? And that's how these are estimated. Some of it feels like 5% to me. Yeah. OK, so I just said this. And then the question of where do you get these utilities is a tricky one. So one way is to do the standard gamble, which says, OK, Mr. Szolovitsz, we're going to play this game. We're going to roll a fair die or something that will come up with some continuous number between 0 and 1. And then I'm going to play the game where either I chop off your foot or I roll this die. And if it exceeds some threshold, then I kill you. Nice game. So now, if you find the point at which I'm indifferent, if I say, well, 0.8, that's a 20% chance of dying. That seems like a lot. But maybe I'll go for 0.9. Now you've said, OK, well, that means that you value living without a foot at 0.9 of the value of being healthy."
+}

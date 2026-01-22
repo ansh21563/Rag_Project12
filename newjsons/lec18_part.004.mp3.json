@@ -1,0 +1,264 @@
+{
+    "chunks": [
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 0.0,
+            "end": 17.84,
+            "text": " I'm going to have a graph where I have one node for every task  and an edge between tasks, between nodes,  if those two tasks we want to encourage their weights  to be similar to another.  So what are our tasks here?"
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 17.84,
+            "end": 44.480000000000004,
+            "text": " W6, W12.  So in what you're suggesting, you  would have the following graph.  W6 goes to W12, goes to W24, goes to W36, goes to W48.  Now, the way that we're going to transform a graph"
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 44.480000000000004,
+            "end": 70.24,
+            "text": " into an optimization problem is going to be as follows.  I'm going to now suppose that I'm going to let,  I'm going to define a graph on V comma E. V, in this case,  is going to be the set 6, 12, 24, and so on.  And I'll denote edges by S comma T and E."
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 70.24,
+            "end": 88.2,
+            "text": " It's going to refer to a particular two tasks.  So for example, the task of 6 predicting at 6 months  and the task of predicting at 12 months.  Then what we'll do is we'll say that the new optimization  problem is going to be a sum over all"
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 88.2,
+            "end": 101.48,
+            "text": " of the tasks of the loss function for that task.  So I'm going to ignore what that is.  I'm just going to simply write over there,  I had two different loss functions  for two different tasks."
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 101.48,
+            "end": 122.88,
+            "text": " I'm just going to add those together.  I'm just going to leave that in this abstract form.  And then I'm going to now sum over the edges, S comma T,  and E, in this graph that I've just defined,  of WS minus WT squared."
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 127.16,
+            "end": 144.96,
+            "text": " So in the example that I go over there, in the very top,  there were only two tasks, W6 and W12.  And we had an edge between them, and we penalized it exactly  in that way.  But in the general case, one could"
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 144.96,
+            "end": 157.92,
+            "text": " imagine many different solutions.  Like for example, you could imagine a solution  where you have a complete graph.  So you might have four time points,  and you might penalize every pair of them"
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 157.92,
+            "end": 170.26,
+            "text": " to be similar to one another.  Or, as was just suggested, you might  think that there might be some ordering of the tasks.  And you might say that you want that instead  of a complete graph, you're going"
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 170.35999999999999,
+            "end": 182.57999999999998,
+            "text": " to just have a chain graph, where  with respect to that ordering, you  want every pair of them along that ordering  to be close to each other.  And in fact, I think that's probably"
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 182.57999999999998,
+            "end": 198.5,
+            "text": " the most reasonable thing to do in the setting of disease  progression modeling, because in fact, we  have some smoothness type prior in our head about these values.  The values should be similar to one another  when they're very close time points."
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 198.5,
+            "end": 209.16,
+            "text": " I just want to mention one other thing,  which is that from an optimization perspective,  if this is what you had wanted to do,  there's a much cleaner way of doing it.  And that's to introduce a dummy node."
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 209.16,
+            "end": 226.64,
+            "text": " I wish I had more colors.  So one could instead introduce a new weight vector.  I'll call it w.  I'll just call it w, OK?  So with no subscript."
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 226.64,
+            "end": 242.04,
+            "text": " And I'm going to say that every other task is going  to be connected to it in a star.  So here we've introduced a dummy task,  and we're connecting every other task to it.  And then now you'd have a linear number"
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 242.04,
+            "end": 258.0,
+            "text": " of these regularization terms in the number of tasks.  But yet, you were not making any assumption  that there exists some ordering between them in the task.  And w is never used for prediction ever.  It's just used during optimization."
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 258.0,
+            "end": 273.08,
+            "text": " Why do you need a w0 instead of just doing it based on w1?  Well, if you do it based on w1, then it's  basically saying that w1 is special in some way.  And so everything is sort of pulled towards it,  whereas it's not clear that that's actually"
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 273.08,
+            "end": 287.88,
+            "text": " the right thing to do.  So you'll get different answers.  And I leave that as an exercise for you to try to derive.  So this is the general idea for how  one can do multitask learning using linear models."
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 287.88,
+            "end": 301.8,
+            "text": " And I'll also leave it as an exercise  for you to think through how you could take the same idea  and now apply it to, for example, deep neural networks.  And you can believe me that these ideas do generalize  in the ways that you would expect them to do."
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 301.8,
+            "end": 318.82,
+            "text": " And it's a very powerful concept.  And so whenever you are tasked with,  you tackle problems like this, and you're  in settings where a linear model might do well,  before you believe that someone's"
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 318.82,
+            "end": 336.92,
+            "text": " results using a very complicated approach is interesting,  you should ask, well, what about this simplest  possible multitask learning approach?  So we already talked about one way  to try to make the regularization a bit more"
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 336.92,
+            "end": 352.28000000000003,
+            "text": " interesting.  For example, we could attempt to regularize only some  of the features' values to be similar to another.  In this paper, which was tackling this disease  progression modeling problem for Alzheimer's,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 352.28000000000003,
+            "end": 367.72,
+            "text": " they developed a slightly more complicated approach,  but not too much more complicated,  which they call the convex fused sparse group lasso.  And it does the same idea that I gave here,  where you're going to now learn a matrix W."
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 367.72,
+            "end": 381.36,
+            "text": " And that matrix W is precisely the same notion.  You have a different weight vector per task.  You just stack them all up into a matrix.  L of W, that's just what I mean by the sum of the loss  functions."
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 381.36,
+            "end": 397.20000000000005,
+            "text": " That's the same thing.  The first term in the optimization problem,  lambda 1 times the L1 norm of W, is simply saying,  it's exactly like the sparsity penalty  that we typically see when we're doing regression."
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 397.20000000000005,
+            "end": 407.52000000000004,
+            "text": " So it's simply saying that we're going  to encourage the weights across all of the tasks  to be as small as possible.  And because it's an L1 penalty, it  has the effect of actually trying to encourage sparsity."
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 407.52000000000004,
+            "end": 434.8,
+            "text": " So it's going to push things to 0 wherever possible.  The second term in this optimization problem,  this lambda 2 RW squared, is also a sparsity penalty.  But it's now pre-multiplying the W by this R matrix.  And this example is shown by this."
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 434.8,
+            "end": 451.04,
+            "text": " And this is just one way to implement precisely this idea  that I had on the board here.  So what this R matrix is going to say  is it's going to have one.  You can have as many rows as you have edges."
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 451.04,
+            "end": 469.24,
+            "text": " And you're going to have, for the corresponding task, which  is S, you have a 1.  And for the corresponding task, which is T, you have a minus 1.  And then if you multiply this R matrix by W transpose,  what you get is precisely these types"
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 469.24,
+            "end": 491.16,
+            "text": " of pairwise comparisons out.  The only difference being that here, instead  of using a L2 norm, they penalized using an L1 norm.  So that's what that second term is, lambda 2 RW transposed.  It's simply an implementation of precisely this idea."
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 491.16,
+            "end": 505.56,
+            "text": " And that final term is just a group loss or penalty.  It's nothing really interesting happening there.  Just want to comment.  I'd forgotten to mention this.  The loss term is going to be precisely a squared loss."
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 505.56,
+            "end": 523.04,
+            "text": " This F refers to a Frobenius norm,  because we've just stacked together  all of the different tasks into one.  And the only interesting thing that's happening here  is this S, which we're doing an element-wise multiplication."
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 523.04,
+            "end": 538.84,
+            "text": " What that S is is simply a masking function.  It's saying, if we don't observe a value at some time point,  like if, for example, if either this is unknown or it's  censored, then we're just going to zero it out.  So there will not be any loss for that particular element."
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 538.84,
+            "end": 553.44,
+            "text": " So that S is just the mask, which  allows you to account for the fact  that you might have some missing data.  So this is the approach used in that KDD paper from 2012.  And returning out to the Alzheimer's example,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 553.44,
+            "end": 572.44,
+            "text": " they used a pretty simple feature set with 370 features.  The first set of features were derived from MRI scans  of the patient's brain.  In this case, they just derived some pre-established features  that characterize the amount of white matter and so on."
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 572.44,
+            "end": 584.8800000000001,
+            "text": " And that includes some genetic information,  a bunch of cognitive scores.  So MMSE was one example of an input to this model.  At baseline is critical.  So there are a number of different types of cognitive"
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 584.8800000000001,
+            "end": 594.2800000000001,
+            "text": " scores that were collected at baseline.  And each one of those makes up some feature.  And then a number of laboratory tests,  which I'm just denoting as random numbers here.  But they have some significance."
+        },
+        {
+            "number": "lec18",
+            "title": "part.004.mp3",
+            "start": 597.32,
+            "end": 599.9200000000001,
+            "text": " Now, one of the most interesting things about the results"
+        }
+    ],
+    "text": " I'm going to have a graph where I have one node for every task and an edge between tasks, between nodes, if those two tasks we want to encourage their weights to be similar to another. So what are our tasks here? W6, W12. So in what you're suggesting, you would have the following graph. W6 goes to W12, goes to W24, goes to W36, goes to W48. Now, the way that we're going to transform a graph into an optimization problem is going to be as follows. I'm going to now suppose that I'm going to let, I'm going to define a graph on V comma E. V, in this case, is going to be the set 6, 12, 24, and so on. And I'll denote edges by S comma T and E. It's going to refer to a particular two tasks. So for example, the task of 6 predicting at 6 months and the task of predicting at 12 months. Then what we'll do is we'll say that the new optimization problem is going to be a sum over all of the tasks of the loss function for that task. So I'm going to ignore what that is. I'm just going to simply write over there, I had two different loss functions for two different tasks. I'm just going to add those together. I'm just going to leave that in this abstract form. And then I'm going to now sum over the edges, S comma T, and E, in this graph that I've just defined, of WS minus WT squared. So in the example that I go over there, in the very top, there were only two tasks, W6 and W12. And we had an edge between them, and we penalized it exactly in that way. But in the general case, one could imagine many different solutions. Like for example, you could imagine a solution where you have a complete graph. So you might have four time points, and you might penalize every pair of them to be similar to one another. Or, as was just suggested, you might think that there might be some ordering of the tasks. And you might say that you want that instead of a complete graph, you're going to just have a chain graph, where with respect to that ordering, you want every pair of them along that ordering to be close to each other. And in fact, I think that's probably the most reasonable thing to do in the setting of disease progression modeling, because in fact, we have some smoothness type prior in our head about these values. The values should be similar to one another when they're very close time points. I just want to mention one other thing, which is that from an optimization perspective, if this is what you had wanted to do, there's a much cleaner way of doing it. And that's to introduce a dummy node. I wish I had more colors. So one could instead introduce a new weight vector. I'll call it w. I'll just call it w, OK? So with no subscript. And I'm going to say that every other task is going to be connected to it in a star. So here we've introduced a dummy task, and we're connecting every other task to it. And then now you'd have a linear number of these regularization terms in the number of tasks. But yet, you were not making any assumption that there exists some ordering between them in the task. And w is never used for prediction ever. It's just used during optimization. Why do you need a w0 instead of just doing it based on w1? Well, if you do it based on w1, then it's basically saying that w1 is special in some way. And so everything is sort of pulled towards it, whereas it's not clear that that's actually the right thing to do. So you'll get different answers. And I leave that as an exercise for you to try to derive. So this is the general idea for how one can do multitask learning using linear models. And I'll also leave it as an exercise for you to think through how you could take the same idea and now apply it to, for example, deep neural networks. And you can believe me that these ideas do generalize in the ways that you would expect them to do. And it's a very powerful concept. And so whenever you are tasked with, you tackle problems like this, and you're in settings where a linear model might do well, before you believe that someone's results using a very complicated approach is interesting, you should ask, well, what about this simplest possible multitask learning approach? So we already talked about one way to try to make the regularization a bit more interesting. For example, we could attempt to regularize only some of the features' values to be similar to another. In this paper, which was tackling this disease progression modeling problem for Alzheimer's, they developed a slightly more complicated approach, but not too much more complicated, which they call the convex fused sparse group lasso. And it does the same idea that I gave here, where you're going to now learn a matrix W. And that matrix W is precisely the same notion. You have a different weight vector per task. You just stack them all up into a matrix. L of W, that's just what I mean by the sum of the loss functions. That's the same thing. The first term in the optimization problem, lambda 1 times the L1 norm of W, is simply saying, it's exactly like the sparsity penalty that we typically see when we're doing regression. So it's simply saying that we're going to encourage the weights across all of the tasks to be as small as possible. And because it's an L1 penalty, it has the effect of actually trying to encourage sparsity. So it's going to push things to 0 wherever possible. The second term in this optimization problem, this lambda 2 RW squared, is also a sparsity penalty. But it's now pre-multiplying the W by this R matrix. And this example is shown by this. And this is just one way to implement precisely this idea that I had on the board here. So what this R matrix is going to say is it's going to have one. You can have as many rows as you have edges. And you're going to have, for the corresponding task, which is S, you have a 1. And for the corresponding task, which is T, you have a minus 1. And then if you multiply this R matrix by W transpose, what you get is precisely these types of pairwise comparisons out. The only difference being that here, instead of using a L2 norm, they penalized using an L1 norm. So that's what that second term is, lambda 2 RW transposed. It's simply an implementation of precisely this idea. And that final term is just a group loss or penalty. It's nothing really interesting happening there. Just want to comment. I'd forgotten to mention this. The loss term is going to be precisely a squared loss. This F refers to a Frobenius norm, because we've just stacked together all of the different tasks into one. And the only interesting thing that's happening here is this S, which we're doing an element-wise multiplication. What that S is is simply a masking function. It's saying, if we don't observe a value at some time point, like if, for example, if either this is unknown or it's censored, then we're just going to zero it out. So there will not be any loss for that particular element. So that S is just the mask, which allows you to account for the fact that you might have some missing data. So this is the approach used in that KDD paper from 2012. And returning out to the Alzheimer's example, they used a pretty simple feature set with 370 features. The first set of features were derived from MRI scans of the patient's brain. In this case, they just derived some pre-established features that characterize the amount of white matter and so on. And that includes some genetic information, a bunch of cognitive scores. So MMSE was one example of an input to this model. At baseline is critical. So there are a number of different types of cognitive scores that were collected at baseline. And each one of those makes up some feature. And then a number of laboratory tests, which I'm just denoting as random numbers here. But they have some significance. Now, one of the most interesting things about the results"
+}

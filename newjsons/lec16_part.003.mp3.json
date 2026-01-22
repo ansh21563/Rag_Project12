@@ -1,0 +1,355 @@
+{
+    "chunks": [
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 0.0,
+            "end": 11.22,
+            "text": " Fill in the question mark with an arrow pointing  in some direction.  We know that transitions will be stochastic,  so you might need to take that into account.  But essentially, figure out how do"
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 11.22,
+            "end": 23.900000000000002,
+            "text": " I have a policy that gives me the biggest expected reward.  And I'll ask you in a few minutes if one of you  is brave enough to put it on the board or something.  OK?  Please start at the discount bill for 20."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 23.900000000000002,
+            "end": 38.42,
+            "text": " There's no discount.  Can we talk to our neighbor?  Yes.  It's encouraged.  So I had a question."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 38.42,
+            "end": 50.3,
+            "text": " What is the action space?  And essentially, the action space  is always up, down, left, or right,  depending on if there's a wall or not.  So you can't go right here, for example."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 50.3,
+            "end": 58.3,
+            "text": " Yeah, so that's it.  You can't go left either.  You can't go left either, exactly.  Good point.  So each box at the end, when you're done,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 58.3,
+            "end": 70.66,
+            "text": " should contain an arrow pointing in some direction.  All right, I think we'll see if anybody  has solved this problem now.  Who thinks they have solved it?  Great."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 70.66,
+            "end": 81.17999999999999,
+            "text": " Would you like to share your solution?  Yes?  Yeah, so I think it's good to go up first.  OK.  Hang on, I'm going to try and replicate this."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 81.17999999999999,
+            "end": 92.69999999999999,
+            "text": " Sorry about that.  OK, you're saying up here?  OK.  The basic idea is you want to reduce the chance  that you're ever adjacent to the red box."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 92.69999999999999,
+            "end": 100.97999999999999,
+            "text": " Yes.  So just do everything you can to stay far from it.  OK.  Yeah, so attempt to go up.  And then once you eventually get there, attempt to go right."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 100.97999999999999,
+            "end": 112.06,
+            "text": " OK.  And then?  OK.  So what about these ones?  This is also part of the policy, by the way."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 114.89999999999999,
+            "end": 120.58,
+            "text": " I haven't thought about this.  OK.  All right.  Those depend on the various discount, right?  No."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 120.58,
+            "end": 134.46,
+            "text": " But what's this minus 0.04?  Oh, so discount usually means something else.  We'll get to that later.  But that is a reward for just taking any step.  So it's, yeah, if you move into a space that is not terminal,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 134.46,
+            "end": 142.58,
+            "text": " you incur that negative reward.  So if you keep bouncing around a really long time,  it's going to incur a long negative reward.  Exactly.  If we had this, there's some chance I'd never get out."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 142.58,
+            "end": 152.18,
+            "text": " Well, there's very little chance I'd never get out.  But it's a very bad policy, because you  keep moving back and forth.  All right.  We had an arm somewhere."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 152.18,
+            "end": 156.84,
+            "text": " What should I do here?  You can vote.  Huh?  You can take a vote.  OK."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 156.84,
+            "end": 163.38,
+            "text": " Who thinks right?  Really?  Who thinks left?  OK.  Interesting."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 163.38,
+            "end": 175.54,
+            "text": " I don't actually remember.  Let's see.  So this is the, well, go ahead.  Yeah, so this is the part that we already determined.  If we had deterministic transitions,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 175.62,
+            "end": 193.7,
+            "text": " this would be great, because we don't have  to think about the other ones.  This is what Peter put on the slide.  So I'm going to have to disagree with the vote there, actually.  And it depends, actually, heavily on the minus 0.04."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 193.7,
+            "end": 202.29999999999998,
+            "text": " So if you increase that by a little bit,  you might want to go that way instead.  Or if you decrease it, I don't remember.  Decrease, exactly.  And if you increase it, you might get something else."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 202.29999999999998,
+            "end": 211.7,
+            "text": " It might actually be good to terminate.  So those details matters a little bit,  but I think you got the general idea.  And especially, I like that you commented that you want  to stay away from the red one."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 211.7,
+            "end": 222.01999999999998,
+            "text": " Because if you look at these different paths,  you go up there and there.  They have the same number of states,  but there's less chance you end up in the red box  if you take the upper route."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 222.01999999999998,
+            "end": 231.85999999999999,
+            "text": " Great.  So we have an example of a policy,  and we have an example of a decision process.  And things are working out so far.  But how do we do this?"
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 232.54000000000002,
+            "end": 246.82000000000002,
+            "text": " As far as the class goes, this was a black box experiment.  I don't know anything about how you figured that out.  So reinforcement learning is about that.  Reinforcement learning is to try and come up  with a policy in a rigorous way, hopefully, ideally."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 246.82000000000002,
+            "end": 260.7,
+            "text": " So that will be the next topic here.  Up until this point, are there any questions  that you've been dying to ask but haven't?  I'm curious how much behavioral biases  could play into the first Markov assumption."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 260.7,
+            "end": 276.5,
+            "text": " For example, if your clinician has been working for 30 years  and you're just really used to giving a certain treatment,  an action that you gave in the past,  that habit might influence an action in the future.  And if that is a worry, how one might think about addressing it?"
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 276.5,
+            "end": 292.9,
+            "text": " Interesting.  I guess it depends a little bit on how it manifests,  in that if it also influenced your most recent action,  maybe you have an observation of that already in some sense.  It's a very broad question, what effect will that have?"
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 292.9,
+            "end": 309.21999999999997,
+            "text": " Did you have something specific in mind?  I guess I was just wondering if it violated that assumption  that sort of like an action in the past would influence an action.  So I guess my response there is that the action didn't really  depend on the choice of action before,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 309.21999999999997,
+            "end": 322.82,
+            "text": " because the policy remained the same.  You could have a bias towards an action  without that being dependent on what you gave in the past.  What you gave as action before, if you know what I mean.  Say that my probability of giving action one is one,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 322.82,
+            "end": 334.73999999999995,
+            "text": " then it doesn't matter that I gave it in the past.  My policy is still the same.  So not necessarily.  It could have other consequences that we  might have reason to come back to that question later."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 334.73999999999995,
+            "end": 346.58,
+            "text": " Yep?  Practically, I would think that a doctor  would want to be consistent.  And so you wouldn't, for example,  want to put somebody on a ventilator"
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 346.58,
+            "end": 356.53999999999996,
+            "text": " and then immediately take them off,  and then immediately put them back on again.  So that would be an example where the past action influences  what you're doing.  Completely, yeah."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 356.53999999999996,
+            "end": 371.65999999999997,
+            "text": " I think that's a great example.  And what you would hope is that the state variable  in that case includes some notion of treatment history.  That's what your job is then.  So that's why state can be somewhat misleading as a term,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 371.65999999999997,
+            "end": 382.65999999999997,
+            "text": " at least for me.  I don't know.  I'm not American or English speaking.  But yeah, I think of it as too instantaneous sometimes.  So we'll move into reinforcement learning now."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 382.65999999999997,
+            "end": 398.3,
+            "text": " And what I had you do on the last slide,  well, I don't know which method you used,  but most likely the middle one.  There are three very common paradigms  for reinforcement learning."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 398.3,
+            "end": 412.94,
+            "text": " And they are essentially divided by what  they focus on modeling.  Unsurprisingly, model-based RL focused  well, it has some sort of model in it, at least.  And the model that they, what do you"
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 412.94,
+            "end": 427.26,
+            "text": " mean by model in this case, is a model of the transitions.  So what state will I end up in given  the action in the state I'm in at the moment?  So model-based RL tries to essentially create  a model for the environment or of the environment."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 427.26,
+            "end": 439.02000000000004,
+            "text": " And there are many, well, there are several examples  of model-based RL.  One of them is g computation, which  comes out of the statistics literature, if you like.  And MDPs are essentially, the MDPs"
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 439.02000000000004,
+            "end": 453.1,
+            "text": " stands for Markov Decision Process,  which is essentially trying to estimate the whole distribution  that we talked about before.  There are various ups and downsides of this.  We won't have time to go into all of these paradigms today."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 453.1,
+            "end": 470.46,
+            "text": " We will actually focus only on value-based RL today.  But yeah, you can ask me offline if you're  interested in model-based RL.  The rightmost one here is policy-based RL,  where you essentially focus only on modeling the policy that"
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 470.46,
+            "end": 485.02,
+            "text": " was used in the data that you observe,  and the policy that you want to essentially arrive at.  So you're optimizing a policy, and you're  estimating a policy that was used in the past.  And the middle one focuses on neither of those,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 485.02,
+            "end": 498.34,
+            "text": " and focus on only estimating the return, that was the g,  or the reward function as a function of your actions  and states.  And it's kind of interesting to me that you  can kind of pick any of the variables, a, s, and r,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 498.34,
+            "end": 507.58,
+            "text": " and model those.  And you can arrive at something reasonable in reinforcement  learning.  This one is particularly interesting,  because it doesn't even look at, yeah,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 507.58,
+            "end": 520.5799999999999,
+            "text": " it doesn't try to understand how do you  arrive at a certain return based on the actions and the states.  It's just optimize the policy directly.  And it has some obvious, well, not obvious,  but it has some downsides not doing that."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 520.5799999999999,
+            "end": 534.02,
+            "text": " So anyway, we're going to focus on value-based RL.  And the very, very dominant instantiation of value-based  RL is Q-learning.  I'm sure you've heard of it.  It is what drove the success stories"
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 534.02,
+            "end": 546.5799999999999,
+            "text": " that I showed before, the goal, and the StarCraft,  and everything.  G-estimation is another example of this,  which again, is coming from the statistic literature.  But we'll focus on Q-learning today."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 546.58,
+            "end": 555.94,
+            "text": " So Q-learning is an example of dynamic programming,  in some sense.  That's how it's usually explained.  And I just wanted to check, how many  have heard the phrase dynamic programming before?"
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 555.94,
+            "end": 571.5,
+            "text": " OK, great.  So I won't go into details of dynamic programming in general,  but the general idea is one of recursion,  that in this case, you know something  about what is a good terminal state,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 571.5,
+            "end": 581.44,
+            "text": " and then you want to figure out how to get there,  and how to get to the state before that,  and the state before that, and so on.  That is the recursion that we will be talking about.  With the end state that is the best here,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 581.44,
+            "end": 597.0,
+            "text": " it's fairly obvious that it's the plus 1 here.  And the best way, or the only way to get there  is by stopping here first, because you can't move from  here, since it's a terminal state.  So your only bet is that one."
+        },
+        {
+            "number": "lec16",
+            "title": "part.003.mp3",
+            "start": 597.0,
+            "end": 600.5600000000001,
+            "text": " And then we can ask, what is the best way to get to 3, 1?  How do we get to 3, 1?"
+        }
+    ],
+    "text": " Fill in the question mark with an arrow pointing in some direction. We know that transitions will be stochastic, so you might need to take that into account. But essentially, figure out how do I have a policy that gives me the biggest expected reward. And I'll ask you in a few minutes if one of you is brave enough to put it on the board or something. OK? Please start at the discount bill for 20. There's no discount. Can we talk to our neighbor? Yes. It's encouraged. So I had a question. What is the action space? And essentially, the action space is always up, down, left, or right, depending on if there's a wall or not. So you can't go right here, for example. Yeah, so that's it. You can't go left either. You can't go left either, exactly. Good point. So each box at the end, when you're done, should contain an arrow pointing in some direction. All right, I think we'll see if anybody has solved this problem now. Who thinks they have solved it? Great. Would you like to share your solution? Yes? Yeah, so I think it's good to go up first. OK. Hang on, I'm going to try and replicate this. Sorry about that. OK, you're saying up here? OK. The basic idea is you want to reduce the chance that you're ever adjacent to the red box. Yes. So just do everything you can to stay far from it. OK. Yeah, so attempt to go up. And then once you eventually get there, attempt to go right. OK. And then? OK. So what about these ones? This is also part of the policy, by the way. I haven't thought about this. OK. All right. Those depend on the various discount, right? No. But what's this minus 0.04? Oh, so discount usually means something else. We'll get to that later. But that is a reward for just taking any step. So it's, yeah, if you move into a space that is not terminal, you incur that negative reward. So if you keep bouncing around a really long time, it's going to incur a long negative reward. Exactly. If we had this, there's some chance I'd never get out. Well, there's very little chance I'd never get out. But it's a very bad policy, because you keep moving back and forth. All right. We had an arm somewhere. What should I do here? You can vote. Huh? You can take a vote. OK. Who thinks right? Really? Who thinks left? OK. Interesting. I don't actually remember. Let's see. So this is the, well, go ahead. Yeah, so this is the part that we already determined. If we had deterministic transitions, this would be great, because we don't have to think about the other ones. This is what Peter put on the slide. So I'm going to have to disagree with the vote there, actually. And it depends, actually, heavily on the minus 0.04. So if you increase that by a little bit, you might want to go that way instead. Or if you decrease it, I don't remember. Decrease, exactly. And if you increase it, you might get something else. It might actually be good to terminate. So those details matters a little bit, but I think you got the general idea. And especially, I like that you commented that you want to stay away from the red one. Because if you look at these different paths, you go up there and there. They have the same number of states, but there's less chance you end up in the red box if you take the upper route. Great. So we have an example of a policy, and we have an example of a decision process. And things are working out so far. But how do we do this? As far as the class goes, this was a black box experiment. I don't know anything about how you figured that out. So reinforcement learning is about that. Reinforcement learning is to try and come up with a policy in a rigorous way, hopefully, ideally. So that will be the next topic here. Up until this point, are there any questions that you've been dying to ask but haven't? I'm curious how much behavioral biases could play into the first Markov assumption. For example, if your clinician has been working for 30 years and you're just really used to giving a certain treatment, an action that you gave in the past, that habit might influence an action in the future. And if that is a worry, how one might think about addressing it? Interesting. I guess it depends a little bit on how it manifests, in that if it also influenced your most recent action, maybe you have an observation of that already in some sense. It's a very broad question, what effect will that have? Did you have something specific in mind? I guess I was just wondering if it violated that assumption that sort of like an action in the past would influence an action. So I guess my response there is that the action didn't really depend on the choice of action before, because the policy remained the same. You could have a bias towards an action without that being dependent on what you gave in the past. What you gave as action before, if you know what I mean. Say that my probability of giving action one is one, then it doesn't matter that I gave it in the past. My policy is still the same. So not necessarily. It could have other consequences that we might have reason to come back to that question later. Yep? Practically, I would think that a doctor would want to be consistent. And so you wouldn't, for example, want to put somebody on a ventilator and then immediately take them off, and then immediately put them back on again. So that would be an example where the past action influences what you're doing. Completely, yeah. I think that's a great example. And what you would hope is that the state variable in that case includes some notion of treatment history. That's what your job is then. So that's why state can be somewhat misleading as a term, at least for me. I don't know. I'm not American or English speaking. But yeah, I think of it as too instantaneous sometimes. So we'll move into reinforcement learning now. And what I had you do on the last slide, well, I don't know which method you used, but most likely the middle one. There are three very common paradigms for reinforcement learning. And they are essentially divided by what they focus on modeling. Unsurprisingly, model-based RL focused well, it has some sort of model in it, at least. And the model that they, what do you mean by model in this case, is a model of the transitions. So what state will I end up in given the action in the state I'm in at the moment? So model-based RL tries to essentially create a model for the environment or of the environment. And there are many, well, there are several examples of model-based RL. One of them is g computation, which comes out of the statistics literature, if you like. And MDPs are essentially, the MDPs stands for Markov Decision Process, which is essentially trying to estimate the whole distribution that we talked about before. There are various ups and downsides of this. We won't have time to go into all of these paradigms today. We will actually focus only on value-based RL today. But yeah, you can ask me offline if you're interested in model-based RL. The rightmost one here is policy-based RL, where you essentially focus only on modeling the policy that was used in the data that you observe, and the policy that you want to essentially arrive at. So you're optimizing a policy, and you're estimating a policy that was used in the past. And the middle one focuses on neither of those, and focus on only estimating the return, that was the g, or the reward function as a function of your actions and states. And it's kind of interesting to me that you can kind of pick any of the variables, a, s, and r, and model those. And you can arrive at something reasonable in reinforcement learning. This one is particularly interesting, because it doesn't even look at, yeah, it doesn't try to understand how do you arrive at a certain return based on the actions and the states. It's just optimize the policy directly. And it has some obvious, well, not obvious, but it has some downsides not doing that. So anyway, we're going to focus on value-based RL. And the very, very dominant instantiation of value-based RL is Q-learning. I'm sure you've heard of it. It is what drove the success stories that I showed before, the goal, and the StarCraft, and everything. G-estimation is another example of this, which again, is coming from the statistic literature. But we'll focus on Q-learning today. So Q-learning is an example of dynamic programming, in some sense. That's how it's usually explained. And I just wanted to check, how many have heard the phrase dynamic programming before? OK, great. So I won't go into details of dynamic programming in general, but the general idea is one of recursion, that in this case, you know something about what is a good terminal state, and then you want to figure out how to get there, and how to get to the state before that, and the state before that, and so on. That is the recursion that we will be talking about. With the end state that is the best here, it's fairly obvious that it's the plus 1 here. And the best way, or the only way to get there is by stopping here first, because you can't move from here, since it's a terminal state. So your only bet is that one. And then we can ask, what is the best way to get to 3, 1? How do we get to 3, 1?"
+}

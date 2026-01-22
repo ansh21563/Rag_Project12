@@ -1,0 +1,47 @@
+{
+    "chunks": [
+        {
+            "number": "lec18",
+            "title": "part.008.mp3",
+            "start": 0.0,
+            "end": 11.8,
+            "text": " The second limitation of these approaches  is that they only used one time point per patient,  whereas in reality, such as you saw here,  we might have multiple time points.  And we might want to, for example,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.008.mp3",
+            "start": 11.8,
+            "end": 23.48,
+            "text": " do clustering using multiple time points,  or we might want to use multiple time points  to understand something about disease progression.  The third limitation is that they  assume that there was a single factor, let's say,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.008.mp3",
+            "start": 23.48,
+            "end": 34.24,
+            "text": " disease subtype, that explained all variation in the patients.  In fact, there might be other factors,  patient-specific factors, that one  would like to use in your noise model.  When you use an algorithm like k-means for clustering,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.008.mp3",
+            "start": 34.24,
+            "end": 44.519999999999996,
+            "text": " it presents no opportunity for doing that,  because it has such a naive distance function.  And so in next week's lecture, we're  going to move in to start talking  about probabilistic modeling approaches to these problems,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.008.mp3",
+            "start": 44.519999999999996,
+            "end": 56.08,
+            "text": " which will give us a very natural way of characterizing  variation along other axes.  And finally, a natural question you should ask  is, does it have to be unsupervised or supervised?  Or is there a way to combine those two approaches?"
+        },
+        {
+            "number": "lec18",
+            "title": "part.008.mp3",
+            "start": 56.08,
+            "end": 61.080000000000005,
+            "text": " All right, we'll get back to that in just a second.  That's all.  Thank you."
+        }
+    ],
+    "text": " The second limitation of these approaches is that they only used one time point per patient, whereas in reality, such as you saw here, we might have multiple time points. And we might want to, for example, do clustering using multiple time points, or we might want to use multiple time points to understand something about disease progression. The third limitation is that they assume that there was a single factor, let's say, disease subtype, that explained all variation in the patients. In fact, there might be other factors, patient-specific factors, that one would like to use in your noise model. When you use an algorithm like k-means for clustering, it presents no opportunity for doing that, because it has such a naive distance function. And so in next week's lecture, we're going to move in to start talking about probabilistic modeling approaches to these problems, which will give us a very natural way of characterizing variation along other axes. And finally, a natural question you should ask is, does it have to be unsupervised or supervised? Or is there a way to combine those two approaches? All right, we'll get back to that in just a second. That's all. Thank you."
+}

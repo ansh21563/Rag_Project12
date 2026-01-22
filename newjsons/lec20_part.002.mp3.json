@@ -1,0 +1,243 @@
+{
+    "chunks": [
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 0.0,
+            "end": 22.080000000000002,
+            "text": " But it wasn't until 1952 that Hershey and Chase said,  hey, it's DNA that is carrying this genetic information  from generation to generation.  And then, of course, Watson, Crick, and Franklin  the following year deciphered the structure of DNA,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 22.080000000000002,
+            "end": 44.44,
+            "text": " that it's this double helix, and then figured out  what the mechanism must be that allows DNA to transmit  this information.  So you have a double helix.  You match the four letters ACTG opposite each other."
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 44.44,
+            "end": 57.84,
+            "text": " And you can replicate this DNA by splitting it apart  and growing another strand that is  the complement of the first one.  Now you have two, and you can have children pass  on this information to them."
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 57.88,
+            "end": 73.72,
+            "text": " So that was a big deal.  So a gene is defined by the National Center  for Biotechnology Information as a fundamental physical  and functional unit of heredity that's  a DNA sequence located on a specific site"
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 73.72,
+            "end": 90.0,
+            "text": " on a chromosome which encodes a specific functional product,  namely RNA or a protein.  I'll come back to that in a minute.  Remaining mysteries, it's still very hard  to figure out what parts of DNA code genes."
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 90.0,
+            "end": 105.24000000000001,
+            "text": " So you would think we might have solved this,  but we haven't quite.  And what does the rest, which is the vast majority of the DNA,  do if it's not encoding genes?  And then how does the folding and the geometry,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 105.24000000000001,
+            "end": 123.75999999999999,
+            "text": " the topology of these structures influence their function?  So I went back, and I read some of Francis Crick's work  from the 1950s.  And it's very interesting.  This hypothesis was considered controversial and tentative"
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 123.75999999999999,
+            "end": 138.2,
+            "text": " at the time.  So he said the specificity of a piece of nucleic acid  is expressed solely by the sequence of its bases.  And this sequence is a simple code  for the amino acid sequence of a particular protein."
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 138.83999999999997,
+            "end": 152.56,
+            "text": " And there were people arguing that he was just flat wrong,  that this was not true.  Of course, it turned out he was right.  And then the central dogma is the transfer of information  from nucleic acid to nucleic acid"
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 152.56,
+            "end": 171.28,
+            "text": " or from nucleic acid to protein may be possible,  but transfer from protein to protein  or from protein to nucleic acid is impossible.  And that's not quite true, but it's  And that's not quite true, but it's a good first approximation."
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 171.28,
+            "end": 187.52,
+            "text": " So this is where things stood back about 60 years ago.  And then a few Nobel Prizes later,  we began to understand some of the mechanism of how  this works.  And of course, how it works is that you"
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 187.52,
+            "end": 210.36,
+            "text": " have DNA, which is these four bases, double-stranded.  RNA gets produced in the process of transcription.  So this thing unfolds.  An RNA strand is built along the DNA  and separates from the DNA, creating a single-stranded RNA."
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 210.36,
+            "end": 226.5,
+            "text": " And then it goes and hooks up with the ribosome.  And the ribosome takes that RNA and takes the codes  in triplets.  And each triplet stands for a particular amino acid,  which it then assembles in sequence"
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 226.5,
+            "end": 245.32,
+            "text": " and creates proteins, which are sequences of amino acids.  Now, it's very complicated because there's  three-dimensionality, and there's time involved,  and there are rate constants.  This is chemistry, after all."
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 245.32,
+            "end": 267.96,
+            "text": " So again, a few more Nobel Prizes later,  we have that transcription, that process of turning DNA into RNA  is regulated by promoter, repressor, and enhancer regions  on the genome.  And the proteins mediate this process by binding to the DNA"
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 267.96,
+            "end": 286.8,
+            "text": " and causing the beginning of transcription  or causing it to run faster or causing it to run slower  or they interfere with it, et cetera.  There are also these enhancers, some of which  are very far away from the coding region,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 286.8,
+            "end": 303.78,
+            "text": " that make huge differences in how much of the RNA  and therefore how much of the protein is made.  And the current understanding of that  is that if here's the gene, it may  that the strand of DNA loops around,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 303.78,
+            "end": 323.1,
+            "text": " and the enhancer, even though it's distant in genetic units,  is actually in close physical proximity  and therefore can encourage more of this transcription  to take place.  By the way, if you're interested in this stuff,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 323.1,
+            "end": 339.82,
+            "text": " of course, MIT teaches a lot of courses in how to do this.  Dave Gifford and Manolis Kellis both  teach computational courses in how  to apply computational methods to try to decipher  this kind of activity."
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 339.82,
+            "end": 362.54,
+            "text": " So repressors prevent activator from binding  or alters the activator in order to change the rate constants.  And so this is another mechanism.  Now, one of the problems is that if you  look at the total amount of DNA in your cells,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 362.54,
+            "end": 379.62,
+            "text": " only about 1 and 1 half percent are exons,  which are the parts that code for mRNA and eventually  protein.  So the question is, what does the other 98 and 1 half percent  do?"
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 379.62,
+            "end": 399.58,
+            "text": " There was this unfortunate tendency in the biology  community to call that junk DNA, which, of course,  is a terrible notion, because evolution would certainly  have gotten rid of it if it was truly junk,  because our cells spend a lot of energy building the stuff."
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 399.58,
+            "end": 414.9,
+            "text": " And every time a cell divides, it  rebuilds all that so-called junk DNA.  So it can't possibly be junk.  But the question is, what does it do?  And we don't really know for a lot of it."
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 414.9,
+            "end": 425.9,
+            "text": " So there are introns.  I'll show you a picture.  There are segments of the coding region  that don't wind up as part of the RNA.  They're spliced out."
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 425.9,
+            "end": 445.98,
+            "text": " And we don't quite know why.  There are these regulatory sequences,  which is only about 5%, that are those promoters and repressors  and enhancers that I talked about.  And then there's a whole bunch of repetitive DNA"
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 445.98,
+            "end": 467.66,
+            "text": " that includes transposable elements, related sequences.  And mostly, we don't understand what it all does.  Hypotheses are things like, well, maybe it's  a storehouse of potentially useful DNA,  so that if environmental conditions change a lot,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 467.66,
+            "end": 481.54,
+            "text": " then the cell doesn't have to reinvent the stuff  from scratch.  It saved it from previous times in evolution  when that may have been useful.  But that's pretty much pure speculation at this point."
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 481.54,
+            "end": 501.68,
+            "text": " So just recently, the Killian lecture  was given by Gerald Fink, who's a geneticist here.  And his claim is that a gene is not  any segment of DNA that produces RNA or a protein,  but it's any segment of DNA that is transcribed into RNA that"
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 501.68,
+            "end": 524.54,
+            "text": " has some function, whatever it is,  not necessarily building proteins, but just anything.  And I think that view is becoming accepted.  So I promised you a little bit of more complexity.  So when you look at your DNA in eukaryotes, like us,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 524.54,
+            "end": 543.14,
+            "text": " here's the promoter, and then here's  the sequence of the genome.  When this gets transcribed, it gets  transcribed into something called pre-mRNA, messenger RNA.  And then there's this process of alternative splicing"
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 543.14,
+            "end": 559.84,
+            "text": " that splices out the introns and leaves only the exons.  But sometimes it doesn't leave all the exons.  It only leaves some of them.  And so the same gene can, under various circumstances,  produce different mRNA, which then"
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 559.84,
+            "end": 577.48,
+            "text": " produces different proteins.  And again, there's a lot of mysteries about exactly  how all this works.  Nevertheless, that's the basic mechanism.  And then here I've just listed a few of the complexity"
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 577.48,
+            "end": 595.4000000000001,
+            "text": " problems.  There are things like RNA can turn into DNA.  This is a trick that viruses use a lot.  They incorporate themselves into your cell,  create a DNA complement to the RNA,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.002.mp3",
+            "start": 595.4000000000001,
+            "end": 601.76,
+            "text": " and then use that to generate more viruses.  So this is very typical of RNA."
+        }
+    ],
+    "text": " But it wasn't until 1952 that Hershey and Chase said, hey, it's DNA that is carrying this genetic information from generation to generation. And then, of course, Watson, Crick, and Franklin the following year deciphered the structure of DNA, that it's this double helix, and then figured out what the mechanism must be that allows DNA to transmit this information. So you have a double helix. You match the four letters ACTG opposite each other. And you can replicate this DNA by splitting it apart and growing another strand that is the complement of the first one. Now you have two, and you can have children pass on this information to them. So that was a big deal. So a gene is defined by the National Center for Biotechnology Information as a fundamental physical and functional unit of heredity that's a DNA sequence located on a specific site on a chromosome which encodes a specific functional product, namely RNA or a protein. I'll come back to that in a minute. Remaining mysteries, it's still very hard to figure out what parts of DNA code genes. So you would think we might have solved this, but we haven't quite. And what does the rest, which is the vast majority of the DNA, do if it's not encoding genes? And then how does the folding and the geometry, the topology of these structures influence their function? So I went back, and I read some of Francis Crick's work from the 1950s. And it's very interesting. This hypothesis was considered controversial and tentative at the time. So he said the specificity of a piece of nucleic acid is expressed solely by the sequence of its bases. And this sequence is a simple code for the amino acid sequence of a particular protein. And there were people arguing that he was just flat wrong, that this was not true. Of course, it turned out he was right. And then the central dogma is the transfer of information from nucleic acid to nucleic acid or from nucleic acid to protein may be possible, but transfer from protein to protein or from protein to nucleic acid is impossible. And that's not quite true, but it's And that's not quite true, but it's a good first approximation. So this is where things stood back about 60 years ago. And then a few Nobel Prizes later, we began to understand some of the mechanism of how this works. And of course, how it works is that you have DNA, which is these four bases, double-stranded. RNA gets produced in the process of transcription. So this thing unfolds. An RNA strand is built along the DNA and separates from the DNA, creating a single-stranded RNA. And then it goes and hooks up with the ribosome. And the ribosome takes that RNA and takes the codes in triplets. And each triplet stands for a particular amino acid, which it then assembles in sequence and creates proteins, which are sequences of amino acids. Now, it's very complicated because there's three-dimensionality, and there's time involved, and there are rate constants. This is chemistry, after all. So again, a few more Nobel Prizes later, we have that transcription, that process of turning DNA into RNA is regulated by promoter, repressor, and enhancer regions on the genome. And the proteins mediate this process by binding to the DNA and causing the beginning of transcription or causing it to run faster or causing it to run slower or they interfere with it, et cetera. There are also these enhancers, some of which are very far away from the coding region, that make huge differences in how much of the RNA and therefore how much of the protein is made. And the current understanding of that is that if here's the gene, it may that the strand of DNA loops around, and the enhancer, even though it's distant in genetic units, is actually in close physical proximity and therefore can encourage more of this transcription to take place. By the way, if you're interested in this stuff, of course, MIT teaches a lot of courses in how to do this. Dave Gifford and Manolis Kellis both teach computational courses in how to apply computational methods to try to decipher this kind of activity. So repressors prevent activator from binding or alters the activator in order to change the rate constants. And so this is another mechanism. Now, one of the problems is that if you look at the total amount of DNA in your cells, only about 1 and 1 half percent are exons, which are the parts that code for mRNA and eventually protein. So the question is, what does the other 98 and 1 half percent do? There was this unfortunate tendency in the biology community to call that junk DNA, which, of course, is a terrible notion, because evolution would certainly have gotten rid of it if it was truly junk, because our cells spend a lot of energy building the stuff. And every time a cell divides, it rebuilds all that so-called junk DNA. So it can't possibly be junk. But the question is, what does it do? And we don't really know for a lot of it. So there are introns. I'll show you a picture. There are segments of the coding region that don't wind up as part of the RNA. They're spliced out. And we don't quite know why. There are these regulatory sequences, which is only about 5%, that are those promoters and repressors and enhancers that I talked about. And then there's a whole bunch of repetitive DNA that includes transposable elements, related sequences. And mostly, we don't understand what it all does. Hypotheses are things like, well, maybe it's a storehouse of potentially useful DNA, so that if environmental conditions change a lot, then the cell doesn't have to reinvent the stuff from scratch. It saved it from previous times in evolution when that may have been useful. But that's pretty much pure speculation at this point. So just recently, the Killian lecture was given by Gerald Fink, who's a geneticist here. And his claim is that a gene is not any segment of DNA that produces RNA or a protein, but it's any segment of DNA that is transcribed into RNA that has some function, whatever it is, not necessarily building proteins, but just anything. And I think that view is becoming accepted. So I promised you a little bit of more complexity. So when you look at your DNA in eukaryotes, like us, here's the promoter, and then here's the sequence of the genome. When this gets transcribed, it gets transcribed into something called pre-mRNA, messenger RNA. And then there's this process of alternative splicing that splices out the introns and leaves only the exons. But sometimes it doesn't leave all the exons. It only leaves some of them. And so the same gene can, under various circumstances, produce different mRNA, which then produces different proteins. And again, there's a lot of mysteries about exactly how all this works. Nevertheless, that's the basic mechanism. And then here I've just listed a few of the complexity problems. There are things like RNA can turn into DNA. This is a trick that viruses use a lot. They incorporate themselves into your cell, create a DNA complement to the RNA, and then use that to generate more viruses. So this is very typical of RNA."
+}

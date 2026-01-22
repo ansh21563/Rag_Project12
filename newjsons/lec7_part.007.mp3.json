@@ -1,0 +1,194 @@
+{
+    "chunks": [
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 0.0,
+            "end": 10.700000000000001,
+            "text": " rheumatoid arthritis, rheumatoid factor positive,  rheumatoid arthritis, rheumatoid factor negative,  and under each category is RA of the right wrist,  RA of the left wrist, RA of the right knee, left knee.  Can you imagine?"
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 10.700000000000001,
+            "end": 23.16,
+            "text": " So we're clicking off all of these.  And so as it turns out, surprisingly,  so we did, we've actually,  we're about to publish a small study now  where like how did, is RA any more accurate"
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 23.16,
+            "end": 35.4,
+            "text": " now that you have all these granular,  it turns out, I think we got annoyed  because it's actually less accurate now than the ICD-9.  So that's one thing, but that's, you know,  only two or three years of data."
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 35.4,
+            "end": 50.94,
+            "text": " I think it's gonna become pretty equivalent.  The other thing is you'll see an explosion  in the number of ICD codes.  So you have to think about how do you deal with  back before October 1st, 2015, when you had one RA code,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 50.94,
+            "end": 60.76,
+            "text": " but after 2015, you know,  it depends on when the patient comes in.  They may have RA of the right wrist on one day  then on the left knee the other day.  That looks like a different code."
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 60.76,
+            "end": 75.66,
+            "text": " So right now we have to think of  systematic systems to roll up.  I think the biggest challenge right now is the mapping.  So ICD-9, you know, is now,  doesn't map directly to ICD-10 or back"
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 75.66,
+            "end": 88.32000000000001,
+            "text": " because there are diseases that we didn't know  when they developed ICD-9 that exist in ICD-10.  In ICD-10, they talk about diseases  in ways that weren't described in ICD-9.  So when you're trying to harmonize the data,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 88.32000000000001,
+            "end": 105.88000000000001,
+            "text": " this is actively something we're dealing with  right now at the VA, how do you now count the ICD codes?  How do you consider that someone has an ICD code for RA?  So those are all things that are being developed now.  CMS, Center for Medicaid and Medicare,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 105.88000000000001,
+            "end": 120.72,
+            "text": " again, this is for billing purposes,  has come up with a mapping system  that many of us are using now, given what we have.  And by the way, the committee that is designing ICD-11  has been very active for years."
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 120.72,
+            "end": 127.60000000000001,
+            "text": " And so there's another one coming down the pike.  Although from what I understand-  Are you involved with that?  No.  No."
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 128.84,
+            "end": 136.12,
+            "text": " But Chris Schutt-  Yes, I saw.  Don't do it.  Was head of it.  Well, so, but actually I'm a little bit optimistic"
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 136.12,
+            "end": 154.60000000000002,
+            "text": " because unlike the traditional ICD system,  this one is based on SNOMED,  which has a much more logical structure.  So, you know, my favorite ICD-10 code is  closed fracture of the left femur"
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 154.60000000000002,
+            "end": 165.76000000000002,
+            "text": " due to spacecraft accident.  Mm-hmm.  I didn't even know that existed.  Okay.  As far as I know, that code has never been applied"
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 165.76000000000002,
+            "end": 176.79999999999998,
+            "text": " to anybody, but it's there just in case.  So, yeah.  So wait, then for the ICD-11,  you don't think code like that will exist  because of the more logical structure?"
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 176.79999999999998,
+            "end": 188.96,
+            "text": " So ICD-11, well, I don't know what it's going to be  because they haven't defined it yet.  But the idea behind SNOMED is that  it's more a combinatorial system.  So it's more like a grammar of descriptions"
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 188.96,
+            "end": 206.32,
+            "text": " that you can assemble according to certain rules  of what assemblies make sense.  And so that means that you don't have to explicitly  mention something like the spacecraft accident one.  But if that ever arises,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 206.32,
+            "end": 220.96,
+            "text": " then there is a way to construct something  that would describe that situation.  Chris, I ran into Chris at a meeting  and he said something along the lines  that he thinks it's going to be more NLP-based even."
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 220.96,
+            "end": 226.28,
+            "text": " I don't know.  Is it going to be more like a language?  Well, you need to ask him.  I don't know.  He hinted at it."
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 226.28,
+            "end": 242.28,
+            "text": " I said, oh, I was like, okay, this will be interesting.  I think it's definitely going to be more like a language,  but it'll be more like the old Fred Thompson  or the diamond diagram kind of language.  It's a designed language that you're going to have to learn"
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 242.28,
+            "end": 254.68,
+            "text": " in order to figure out how to describe things appropriately.  Or at least your billing clerk will have to learn it.  Yeah.  No, we're close to the end,  but I just had a question about when a clinician"
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 254.68,
+            "end": 269.24,
+            "text": " is trying to label data, for example, training data,  are there any ambiguities ever where sometimes  this is definitely this person is RA,  this person I'm not really sure,  and how do you take that into account"
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 269.24,
+            "end": 278.92,
+            "text": " when you're actually training a test?  Yeah, so we actually have three categories,  definite, possible, and no.  So there's always ambiguity,  and then you always want to have more than one reviewer."
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 278.92,
+            "end": 288.88,
+            "text": " So in clinical trials, when you have outcomes,  you have what we call adjudication.  So you have some kind of system  where you have to first sit down,  you have to define the phenotype,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 288.88,
+            "end": 298.72,
+            "text": " because not everybody's going to agree,  even for a really clear disease,  how do you define the disease?  What are the components that has to happen?  For that, they're usually, for societies,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 298.72,
+            "end": 309.68,
+            "text": " there are classification criteria for research.  So there actually is one for RA,  for coronary artery disease.  And then it is having those different categories  and a very structured system for adjudicating."
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 309.68,
+            "end": 323.84000000000003,
+            "text": " Blindly having two reviewers review 20,  let's say 20 of the same notes,  and see, look at the inter-rater reliability.  Yeah, so it's a big issue.  All right, I think we have expired."
+        },
+        {
+            "number": "lec7",
+            "title": "part.007.mp3",
+            "start": 324.84000000000003,
+            "end": 338.52,
+            "text": " So, Kat, thank you very much.  Thank you, everybody.  Thank you."
+        }
+    ],
+    "text": " rheumatoid arthritis, rheumatoid factor positive, rheumatoid arthritis, rheumatoid factor negative, and under each category is RA of the right wrist, RA of the left wrist, RA of the right knee, left knee. Can you imagine? So we're clicking off all of these. And so as it turns out, surprisingly, so we did, we've actually, we're about to publish a small study now where like how did, is RA any more accurate now that you have all these granular, it turns out, I think we got annoyed because it's actually less accurate now than the ICD-9. So that's one thing, but that's, you know, only two or three years of data. I think it's gonna become pretty equivalent. The other thing is you'll see an explosion in the number of ICD codes. So you have to think about how do you deal with back before October 1st, 2015, when you had one RA code, but after 2015, you know, it depends on when the patient comes in. They may have RA of the right wrist on one day then on the left knee the other day. That looks like a different code. So right now we have to think of systematic systems to roll up. I think the biggest challenge right now is the mapping. So ICD-9, you know, is now, doesn't map directly to ICD-10 or back because there are diseases that we didn't know when they developed ICD-9 that exist in ICD-10. In ICD-10, they talk about diseases in ways that weren't described in ICD-9. So when you're trying to harmonize the data, this is actively something we're dealing with right now at the VA, how do you now count the ICD codes? How do you consider that someone has an ICD code for RA? So those are all things that are being developed now. CMS, Center for Medicaid and Medicare, again, this is for billing purposes, has come up with a mapping system that many of us are using now, given what we have. And by the way, the committee that is designing ICD-11 has been very active for years. And so there's another one coming down the pike. Although from what I understand- Are you involved with that? No. No. But Chris Schutt- Yes, I saw. Don't do it. Was head of it. Well, so, but actually I'm a little bit optimistic because unlike the traditional ICD system, this one is based on SNOMED, which has a much more logical structure. So, you know, my favorite ICD-10 code is closed fracture of the left femur due to spacecraft accident. Mm-hmm. I didn't even know that existed. Okay. As far as I know, that code has never been applied to anybody, but it's there just in case. So, yeah. So wait, then for the ICD-11, you don't think code like that will exist because of the more logical structure? So ICD-11, well, I don't know what it's going to be because they haven't defined it yet. But the idea behind SNOMED is that it's more a combinatorial system. So it's more like a grammar of descriptions that you can assemble according to certain rules of what assemblies make sense. And so that means that you don't have to explicitly mention something like the spacecraft accident one. But if that ever arises, then there is a way to construct something that would describe that situation. Chris, I ran into Chris at a meeting and he said something along the lines that he thinks it's going to be more NLP-based even. I don't know. Is it going to be more like a language? Well, you need to ask him. I don't know. He hinted at it. I said, oh, I was like, okay, this will be interesting. I think it's definitely going to be more like a language, but it'll be more like the old Fred Thompson or the diamond diagram kind of language. It's a designed language that you're going to have to learn in order to figure out how to describe things appropriately. Or at least your billing clerk will have to learn it. Yeah. No, we're close to the end, but I just had a question about when a clinician is trying to label data, for example, training data, are there any ambiguities ever where sometimes this is definitely this person is RA, this person I'm not really sure, and how do you take that into account when you're actually training a test? Yeah, so we actually have three categories, definite, possible, and no. So there's always ambiguity, and then you always want to have more than one reviewer. So in clinical trials, when you have outcomes, you have what we call adjudication. So you have some kind of system where you have to first sit down, you have to define the phenotype, because not everybody's going to agree, even for a really clear disease, how do you define the disease? What are the components that has to happen? For that, they're usually, for societies, there are classification criteria for research. So there actually is one for RA, for coronary artery disease. And then it is having those different categories and a very structured system for adjudicating. Blindly having two reviewers review 20, let's say 20 of the same notes, and see, look at the inter-rater reliability. Yeah, so it's a big issue. All right, I think we have expired. So, Kat, thank you very much. Thank you, everybody. Thank you."
+}

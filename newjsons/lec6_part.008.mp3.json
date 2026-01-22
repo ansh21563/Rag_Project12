@@ -1,0 +1,47 @@
+{
+    "chunks": [
+        {
+            "number": "lec6",
+            "title": "part.008.mp3",
+            "start": 0.0,
+            "end": 10.5,
+            "text": " see deployed now.  So for those of you who have purchased these Apple watches,  these Samsung watches, I don't know exactly what they're  using, but I wouldn't be surprised if they're using  techniques similar to this."
+        },
+        {
+            "number": "lec6",
+            "title": "part.008.mp3",
+            "start": 10.5,
+            "end": 20.580000000000002,
+            "text": " And you're going to see much more of that in the future.  So this is going to be really the first example  in this course so far of something that's  really been deployed.  And so in summary, we're very often"
+        },
+        {
+            "number": "lec6",
+            "title": "part.008.mp3",
+            "start": 20.580000000000002,
+            "end": 37.94,
+            "text": " in the realm of not enough data.  And in this lecture today, we gave two examples  of how you can deal with that.  First, you can try to use mechanistic and statistical  models to try to work in settings where"
+        },
+        {
+            "number": "lec6",
+            "title": "part.008.mp3",
+            "start": 37.94,
+            "end": 45.82,
+            "text": " you don't have much data.  And in other extremes, you do have a lot of data,  and you can try to ignore that and just use these black box  approaches.  That's all for today."
+        },
+        {
+            "number": "lec6",
+            "title": "part.008.mp3",
+            "start": 45.82,
+            "end": 48.82,
+            "text": " Thank you.  Thank you.  Thank you.  Thank you.  Thank you."
+        },
+        {
+            "number": "lec6",
+            "title": "part.008.mp3",
+            "start": 48.82,
+            "end": 57.54,
+            "text": " Thank you.  Thank you.  Thank you.  Thank you."
+        }
+    ],
+    "text": " see deployed now. So for those of you who have purchased these Apple watches, these Samsung watches, I don't know exactly what they're using, but I wouldn't be surprised if they're using techniques similar to this. And you're going to see much more of that in the future. So this is going to be really the first example in this course so far of something that's really been deployed. And so in summary, we're very often in the realm of not enough data. And in this lecture today, we gave two examples of how you can deal with that. First, you can try to use mechanistic and statistical models to try to work in settings where you don't have much data. And in other extremes, you do have a lot of data, and you can try to ignore that and just use these black box approaches. That's all for today. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you."
+}

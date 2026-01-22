@@ -1,0 +1,166 @@
+{
+    "chunks": [
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 0.0,
+            "end": 24.900000000000002,
+            "text": " this formula. And I like trying to get to intuition by looking at a special case.  So the simplest special case that we might be familiar with is that of a randomized controlled trial,  where because you're flipping a coin and each data point either gets treatment 0 or treatment 1, then the propensity score is precisely  deterministically equal to 0.5. So let's take this now.  No machine learning done here."
+        },
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 25.119999999999997,
+            "end": 48.980000000000004,
+            "text": " Let's just plug it in to see if we get back the formula that I showed you earlier for  the estimate of the average treatment effect in a randomized controlled trial. So we plug that in over there.  This now becomes 0.5 and  plug that in over here. This also becomes 0.5.  Then what we're going to do is we're just going to take that 0.5,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 48.980000000000004,
+            "end": 72.14,
+            "text": " we're going to bring that out, and this is going to become a 2 over here and same a 2 over here.  And you get to the following formula, which is if you were to compare to the formula from a few slides ago,  it's almost identical,  except that a few slides ago over here, I had 1 over n1.  And over here, I had"
+        },
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 72.6,
+            "end": 101.9,
+            "text": " 1 over n0.  Now these two are two different estimators for the same thing. And the reason why you can see they're the same thing is that  in a randomized controlled trial, the number of individuals that receive treatment 1 is on average n over 2.  Similarly, the number of individuals that receive treatment 0 are on average n over 2.  That n over 2 sort of cancels out with this 2 over n is what gets you a correct estimator."
+        },
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 101.9,
+            "end": 148.34,
+            "text": " So this is a slightly different estimator, but nearly identical to the one that I showed you earlier.  And by this argument is a consistent estimator of the average treatment effect in a randomized controlled trial.  So any questions before I try to derive this formula for you?  Okay, so  one student asks, so the propensity score is the quote-unquote bias of how likely people are assigned to y equal to"
+        },
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 149.44,
+            "end": 173.26,
+            "text": " t equals 1 or t equals 0?  Yes, that's exactly right. So if you were to imagine  taking an individual where  this probability for that individual is, let's say, very close to 1,  it means that there are very few other people in the data set who receive treatment 1."
+        },
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 173.29999999999998,
+            "end": 205.18,
+            "text": " They're a  red data point in a sea of blue data points.  And by dividing by that, we're going to be trying to remove that bias, and that's exactly right.  Thank you for that question. Are there other questions?  Okay, I really appreciate the questions via the chat window, so thank you."
+        },
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 207.95999999999998,
+            "end": 232.70000000000002,
+            "text": " All right, so let's now try to derive this formula.  Recall the definition of average treatment effect.  And for those who are paying very close attention, you might notice that I removed the expectation over y1.  And for this derivation that I'm going to give you, I'm going to suppose,  I'm going to assume that the potential outcomes are all deterministic, because it makes the math easier, but is without loss of generality."
+        },
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 233.88,
+            "end": 257.62,
+            "text": " So the average treatment effect is the expectation with respect to all  individuals of the potential outcome y1 minus the expectation with respect to all individuals of the potential outcome y0.  So this term over here is going to be our estimate of that, and  this term over here is going to be our estimate of this expectation.  So naively, if you were to just take the observed data,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 258.02,
+            "end": 282.26,
+            "text": " it would allow you to compute, if you for example just average the values of y for the  individuals who receive treatment one, that would give you this expectation that I'm showing on the bottom here.  I want you to compare that to the one that's actually needed in average treatment effect.  Whereas over here is an expectation with respect to individuals that receive treatment one.  Up here, this was an expectation with respect to all individuals."
+        },
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 282.82,
+            "end": 304.18,
+            "text": " But the thing inside the expectation is exactly identical, and that's the key point that we're going to work with, which is that we want  an expectation with respect to a different distribution than the one that we actually have.  And again, this should be ringing bells,  because this sounds very, very familiar to the data set shift story that we talked about a few lectures ago.  So,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 304.18,
+            "end": 327.41999999999996,
+            "text": " I'm going to show you how to derive an estimator for just this first term, and the second term is obviously going to be identical.  So let's start out with the following.  We know that P of X given T times P of T is  equal to P of X times P of T given X. So what I've just done here is  use two different"
+        },
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 327.7,
+            "end": 347.34,
+            "text": " formulas for  for the rule of  for a joint distribution, and then I've divided by P of T given X in order to get the formula that I showed you a second ago.  I'm not going to attempt to erase it. I'll leave it up there.  So the next thing we're going to do is we're going to say, okay,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 347.85999999999996,
+            "end": 378.34000000000003,
+            "text": " if we were to compute an expectation with respect to  P of X given T equals 1, and if we were to now take the value that we observe,  Y1, which we can get observations for all individuals who receive treatment 1, and if we were to reweight  this observation by this ratio, where remember this ratio  showed up in the previous bullet point,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 378.94,
+            "end": 400.7,
+            "text": " then  what I'm going to show you in just a moment is that this is equal to the quantity that we actually wanted.  Well, why is that? Well, if you  if you expand this expectation,  this expectation is an integral with respect to P of X"
+        },
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 401.82,
+            "end": 424.06,
+            "text": " conditioned on T equals 1  times the thing inside the brackets, and  because we know that P of  because we know from up here that P of X conditioned on T equals 1  times P of T equals 1 divided by P of T equals 1 conditioned on X is equal to P of X,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 424.78000000000003,
+            "end": 452.38,
+            "text": " this whole thing is going to be equal to an integral times of P of X times  times Y1, which is precisely the definition of the expectation that we want.  So this was a very simple derivation to show you that the reweighting gets you what you need.  Now we can estimate this expectation empirically as follows.  The estimate that we're going to now sum over all data points that receive treatment 1. We're going to take an average,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 452.38,
+            "end": 480.42,
+            "text": " so we're dividing by the number of data points that receive treatment 1. For P of T equals 1,  we're just going to use the empirical estimate of how many individuals receive treatment 1 in the dataset divided by the total number of individuals in the dataset,  that's n1 divided by n. And for the denominator, P of T equals 1 conditioned on X,  we just plug in now the propensity score, which we had previously estimated, and we're done.  And so that now is our estimate for the first term in the average treatment effect,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 480.42,
+            "end": 506.90000000000003,
+            "text": " and you could do that now for Ti equals 0. And I've shown you the full proof of why this is an unbiased estimator for  average treatment effect.  So I'm going to be concluding now in the next few minutes. First, I just wanted to comment on what we just saw.  So we saw a different way to estimate the average treatment effect,  which only required estimating the propensity score. In particular,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 507.02,
+            "end": 534.78,
+            "text": " we never had to use a model to predict Y in this approach for estimating the average treatment effect.  And that's a good thing and a bad thing. It's a good thing because  if you had  errors in estimating your model Y, as I showed you in the very beginning of today's lecture, that could have a very big impact on  your estimate of the average treatment effect, and so that doesn't show up here. On the other hand, this has its own disadvantages."
+        },
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 535.62,
+            "end": 550.86,
+            "text": " So for example,  the propensity score is going to be really,  really affected by lack of overlap.  Because when you have lack of overlap,  it means there's some data points where the propensity score is very close to 0 or very close to 1, and then that really leads"
+        },
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 550.86,
+            "end": 571.9399999999999,
+            "text": " to very large variance in your estimators.  And a very common trick which is used to try to address that concern is known as clipping.  We simply clip the propensity score so that they're always bounded away from 0 and 1, but that's really just a heuristic.  And it can, of course, then lead to biased estimates of the average treatment effect.  So there's a whole family of"
+        },
+        {
+            "number": "lec15",
+            "title": "part.005.mp3",
+            "start": 572.5,
+            "end": 600.34,
+            "text": " causal inference algorithms that attempt to use ideas from both covariant adjustment and  inverse propensity weighting.  For example, there's a method called doubly robust estimators, and we'll try to provide a citation for  those estimators in the scribe notes. And these doubly robust estimators are a different family of estimators that actually bring in both of  these techniques together. And they have a really nice property, which is that if either one of them fail, you still get valid estimates."
+        }
+    ],
+    "text": " this formula. And I like trying to get to intuition by looking at a special case. So the simplest special case that we might be familiar with is that of a randomized controlled trial, where because you're flipping a coin and each data point either gets treatment 0 or treatment 1, then the propensity score is precisely deterministically equal to 0.5. So let's take this now. No machine learning done here. Let's just plug it in to see if we get back the formula that I showed you earlier for the estimate of the average treatment effect in a randomized controlled trial. So we plug that in over there. This now becomes 0.5 and plug that in over here. This also becomes 0.5. Then what we're going to do is we're just going to take that 0.5, we're going to bring that out, and this is going to become a 2 over here and same a 2 over here. And you get to the following formula, which is if you were to compare to the formula from a few slides ago, it's almost identical, except that a few slides ago over here, I had 1 over n1. And over here, I had 1 over n0. Now these two are two different estimators for the same thing. And the reason why you can see they're the same thing is that in a randomized controlled trial, the number of individuals that receive treatment 1 is on average n over 2. Similarly, the number of individuals that receive treatment 0 are on average n over 2. That n over 2 sort of cancels out with this 2 over n is what gets you a correct estimator. So this is a slightly different estimator, but nearly identical to the one that I showed you earlier. And by this argument is a consistent estimator of the average treatment effect in a randomized controlled trial. So any questions before I try to derive this formula for you? Okay, so one student asks, so the propensity score is the quote-unquote bias of how likely people are assigned to y equal to t equals 1 or t equals 0? Yes, that's exactly right. So if you were to imagine taking an individual where this probability for that individual is, let's say, very close to 1, it means that there are very few other people in the data set who receive treatment 1. They're a red data point in a sea of blue data points. And by dividing by that, we're going to be trying to remove that bias, and that's exactly right. Thank you for that question. Are there other questions? Okay, I really appreciate the questions via the chat window, so thank you. All right, so let's now try to derive this formula. Recall the definition of average treatment effect. And for those who are paying very close attention, you might notice that I removed the expectation over y1. And for this derivation that I'm going to give you, I'm going to suppose, I'm going to assume that the potential outcomes are all deterministic, because it makes the math easier, but is without loss of generality. So the average treatment effect is the expectation with respect to all individuals of the potential outcome y1 minus the expectation with respect to all individuals of the potential outcome y0. So this term over here is going to be our estimate of that, and this term over here is going to be our estimate of this expectation. So naively, if you were to just take the observed data, it would allow you to compute, if you for example just average the values of y for the individuals who receive treatment one, that would give you this expectation that I'm showing on the bottom here. I want you to compare that to the one that's actually needed in average treatment effect. Whereas over here is an expectation with respect to individuals that receive treatment one. Up here, this was an expectation with respect to all individuals. But the thing inside the expectation is exactly identical, and that's the key point that we're going to work with, which is that we want an expectation with respect to a different distribution than the one that we actually have. And again, this should be ringing bells, because this sounds very, very familiar to the data set shift story that we talked about a few lectures ago. So, I'm going to show you how to derive an estimator for just this first term, and the second term is obviously going to be identical. So let's start out with the following. We know that P of X given T times P of T is equal to P of X times P of T given X. So what I've just done here is use two different formulas for for the rule of for a joint distribution, and then I've divided by P of T given X in order to get the formula that I showed you a second ago. I'm not going to attempt to erase it. I'll leave it up there. So the next thing we're going to do is we're going to say, okay, if we were to compute an expectation with respect to P of X given T equals 1, and if we were to now take the value that we observe, Y1, which we can get observations for all individuals who receive treatment 1, and if we were to reweight this observation by this ratio, where remember this ratio showed up in the previous bullet point, then what I'm going to show you in just a moment is that this is equal to the quantity that we actually wanted. Well, why is that? Well, if you if you expand this expectation, this expectation is an integral with respect to P of X conditioned on T equals 1 times the thing inside the brackets, and because we know that P of because we know from up here that P of X conditioned on T equals 1 times P of T equals 1 divided by P of T equals 1 conditioned on X is equal to P of X, this whole thing is going to be equal to an integral times of P of X times times Y1, which is precisely the definition of the expectation that we want. So this was a very simple derivation to show you that the reweighting gets you what you need. Now we can estimate this expectation empirically as follows. The estimate that we're going to now sum over all data points that receive treatment 1. We're going to take an average, so we're dividing by the number of data points that receive treatment 1. For P of T equals 1, we're just going to use the empirical estimate of how many individuals receive treatment 1 in the dataset divided by the total number of individuals in the dataset, that's n1 divided by n. And for the denominator, P of T equals 1 conditioned on X, we just plug in now the propensity score, which we had previously estimated, and we're done. And so that now is our estimate for the first term in the average treatment effect, and you could do that now for Ti equals 0. And I've shown you the full proof of why this is an unbiased estimator for average treatment effect. So I'm going to be concluding now in the next few minutes. First, I just wanted to comment on what we just saw. So we saw a different way to estimate the average treatment effect, which only required estimating the propensity score. In particular, we never had to use a model to predict Y in this approach for estimating the average treatment effect. And that's a good thing and a bad thing. It's a good thing because if you had errors in estimating your model Y, as I showed you in the very beginning of today's lecture, that could have a very big impact on your estimate of the average treatment effect, and so that doesn't show up here. On the other hand, this has its own disadvantages. So for example, the propensity score is going to be really, really affected by lack of overlap. Because when you have lack of overlap, it means there's some data points where the propensity score is very close to 0 or very close to 1, and then that really leads to very large variance in your estimators. And a very common trick which is used to try to address that concern is known as clipping. We simply clip the propensity score so that they're always bounded away from 0 and 1, but that's really just a heuristic. And it can, of course, then lead to biased estimates of the average treatment effect. So there's a whole family of causal inference algorithms that attempt to use ideas from both covariant adjustment and inverse propensity weighting. For example, there's a method called doubly robust estimators, and we'll try to provide a citation for those estimators in the scribe notes. And these doubly robust estimators are a different family of estimators that actually bring in both of these techniques together. And they have a really nice property, which is that if either one of them fail, you still get valid estimates."
+}

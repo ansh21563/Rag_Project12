@@ -1,0 +1,334 @@
+{
+    "chunks": [
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 0.0,
+            "end": 12.96,
+            "text": " What fraction of those patients went on to actually develop  type 2 diabetes?  And of course, this is done using held-up data.  Now, the reason why you might be interested in different levels  is because you might want to target"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 12.96,
+            "end": 32.56,
+            "text": " different interventions depending on the risk and cost.  For example, a very low-cost intervention, one of the ones  that we did was sending a text message  to patients who are suspected to have  high risk of developing type 2 diabetes,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 32.56,
+            "end": 43.040000000000006,
+            "text": " if they've not been to see their eye doctor in the last year,  we send them a text message saying,  maybe you want to go see your eye doctor.  Remember, you get a free eye checkup.  And this is a very cheap intervention."
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 43.040000000000006,
+            "end": 55.14,
+            "text": " And it's a very subtle intervention.  The reason why it can be effective  is because patients who develop type 2 diabetes,  once that diabetes progresses, it  leads to something called diabetic retinopathy, which"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 55.14,
+            "end": 68.04,
+            "text": " is often caught in an eye exam.  So that could be one mechanism for patients to be diagnosed.  And since it's so cheap, you could do it for 10,000 people.  So you take the 10,000 most risky people,  you apply the intervention for them,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 68.04,
+            "end": 79.88,
+            "text": " and you look to see which of those people  actually had developed diabetes in the future.  And the model that I showed you, 10% of that population  went on to develop type 2 diabetes one to three years  from then."
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 79.88,
+            "end": 93.36,
+            "text": " The comparison point I'm showing you here, this blue bar,  is if you use a model which is derived  using a very small number of features,  so not a machine learning based approach.  And there, only 6% of the people went on"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 93.36,
+            "end": 103.03999999999999,
+            "text": " to develop type 2 diabetes from the top 10,000.  On the other hand, other interventions you might want to do  are much more expensive.  So for example, you might only be  able to do that intervention for 100 people"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 103.03999999999999,
+            "end": 112.44,
+            "text": " because it costs so much money, and you have a limited budget  as a health insurer.  And so for those people, you could  ask, well, what is the positive predictive value of those top  100 predictions?"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 112.44,
+            "end": 128.28,
+            "text": " And here, that was 15% using the machine learning based model,  and less than half of that using the more traditional approach.  So I'm going to stop here.  There's a lot more that I can and will say,  but I'll have to get to it in next Thursday's lecture"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 128.28,
+            "end": 143.08,
+            "text": " because I'd like our guest to come down,  and we will have a bit of a discussion.  To be clear, this is the first time  that we've ever had this type of in-class interaction,  which is why, by the way, I ran a little bit late"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 143.08,
+            "end": 155.28,
+            "text": " because I hadn't ever done something like this before.  So it's an experiment.  Let's see what happens.  So did you say Len or?  LEN D'ABOLIO-SILVA-GILES-DURAGO-MARTINEZ-MARTINEZ"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 155.28,
+            "end": 162.64000000000001,
+            "text": " Len's fine.  Len, OK.  So Len, could you please introduce yourself?  Sure.  My name is Len D'Abolio."
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 162.64000000000001,
+            "end": 174.36,
+            "text": " I'm an assistant professor at Harvard Medical School.  I'm also the CEO and founder of a company called Zift.  A little background?  Yeah, a little bit of background.  So you work at the VA, for example?"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 174.36,
+            "end": 186.52,
+            "text": " Yeah.  So I've spent probably the last 15 years or so  trying to help health care learn from its data in new ways.  And of all the fields that need your help,  I would say health care for both societal,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 186.52,
+            "end": 202.92,
+            "text": " but also just from where we're at with our ability  to use data standpoint is a great place for you  guys to invest your time.  I've been doing this for government, in academia  as a researcher, publishing papers."
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 202.92,
+            "end": 216.32,
+            "text": " I've been doing this for nonprofits in this country  and a few others.  But every single project that I've been a part of  has been an effort to bring in data that has always  been there, but we haven't been able to learn from until now."
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 216.32,
+            "end": 229.0,
+            "text": " And whether that's at the VA building out  their genomic science infrastructure  and recruiting and enrolling a million veterans  to donate their blood and their EMR,  or at Ariadne Labs out of Harvard School of Public Health"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 229.0,
+            "end": 241.4,
+            "text": " in the Brigham, improving childbirth in India,  it's all about how can we get a little bit better  over and over again to make health care a better  place for folks.  So tell me, what is risk stratification"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 241.4,
+            "end": 247.68,
+            "text": " from your perspective?  Defining that I found to be one of the most difficult parts  of today's lecture.  Well, thank you for challenging me with it.  I'm sorry."
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 251.02,
+            "end": 261.46000000000004,
+            "text": " So it's a rather generic term, and I  think it depends entirely on the problem you're trying to solve.  And every time I go at this, you really  have to ground yourself in the problem that you're  trying to solve."
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 261.46000000000004,
+            "end": 275.82,
+            "text": " Risk could be running out of a medical supply  in an operating room.  Risk could be an APGAR score.  Risk could be from pre-diabetic to diabetic.  Risk could be an older person falling down in their home."
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 276.82,
+            "end": 292.74,
+            "text": " What is it to me?  I'm very much caught up in the tools analogy.  These are wonderful tools with which a skilled craftsman,  surrounded by others that have skills,  could go ahead and solve very specific problems."
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 292.74,
+            "end": 305.5,
+            "text": " So this is a hammer.  It's one that we spend a lot of time refining and applying  to solve problems in health care.  So why don't you tell us about some of the areas  where your company has been applying risk certification"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 305.5,
+            "end": 317.97999999999996,
+            "text": " today at a very high level, and then we'll  choose one of them to dive a bit deeper into.  Sure.  So the way we describe what we do  is it's performance improvement."
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 317.97999999999996,
+            "end": 330.38,
+            "text": " And I'm just giving you a little background,  because it'll tell you which problems I'm focused on.  So it's performance improvement.  And to be candid, the types of things  we like to improve the performance of"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 330.42,
+            "end": 343.3,
+            "text": " are how do we keep people out of the hospital.  I'm not going to soapbox on this too much,  but I think it matters.  Like the example that you gave that you  were employed to help solve was buy and insure."
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 343.3,
+            "end": 352.26,
+            "text": " And insurance companies, there's probably  30 industries in health care.  It's not one industry.  And every one of them has different and oftentimes  competing incentives."
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 352.26,
+            "end": 371.34000000000003,
+            "text": " And so the most logical application  for these technologies is to help do preventative things.  But only about, depending on your math,  between 8% and 12% of health care  is financially incentivized to do preventative things."
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 371.34000000000003,
+            "end": 386.62,
+            "text": " The rest are the hospitals and the clinics.  And when you think of health care,  you probably think of those types of organizations.  They don't typically pay to keep you out of those facilities.  As a company, you've got to make a profit eventually."
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 386.62,
+            "end": 396.66,
+            "text": " So you need to focus on the ones where  there's a financial incentive.  You focus on where there's a financial incentive.  And in my case, I wanted to build a company  where the financial incentive aligned"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 396.66,
+            "end": 406.18,
+            "text": " with keeping people healthy.  So what are some of these examples?  Sure.  So we do a lot with older populations.  And so with older populations, it"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 406.18,
+            "end": 421.5,
+            "text": " becomes very important to understand  who care managers should approach,  because their risk levels are rising.  A lot of risk stratification, the old way that you described,  identifies people that are already at their most acute."
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 421.5,
+            "end": 435.46,
+            "text": " So it's sort of skating to where the puck has been.  You're getting attention, because you  are at the absolute peak of your acuity.  We're trying to help care management organizations find  people that are rising risk."
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 435.46,
+            "end": 447.78,
+            "text": " And even when we do that, we try to get,  I mean, the power of these technologies  is to move away from one size fits all.  So when we think about rising risk, we think about, all right,  so in a behavioral health environment,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 447.78,
+            "end": 460.15999999999997,
+            "text": " it is the rising risk of an inpatient  psychiatric admission.  That is a very specific application.  There are things we can do about it, as opposed to risk,  which, I mean, if you think about what's"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 460.15999999999997,
+            "end": 473.41999999999996,
+            "text": " being done in other industries, Amazon does not  consider us all consumers.  There are individuals that are very likely to react  to certain offers at certain times.  And so we're trying to bring this sort of more granular"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 473.41999999999996,
+            "end": 489.14,
+            "text": " approach into health care, where we sit with teams,  and they're used to just having generic risk scores.  We're trying to help them think through which older people are  likely to fall down, which we do work in diabetes also.  So which children with type 1 diabetes"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 489.14,
+            "end": 503.58000000000004,
+            "text": " shouldn't just be scheduled for an appointment every three  months, but you should go to them right now.  So those are some examples, but the themes are very consistent.  It's helping organizations move away  from rather generic, rather one-size-fits-all,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 503.58000000000004,
+            "end": 517.54,
+            "text": " toward, well, what are the more actionable?  So even graduation from care management,  because now you should be having serious illness conversations  because you're nearing end of life,  or palliative care referrals, or hospice referrals."
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 517.54,
+            "end": 529.7,
+            "text": " OK, so I want to choose a single one to dive into,  and I want to choose one that you've worked on the longest  and where you're already doing at least the initial parts  of an evaluation of it.  So I think when we talked on the phone,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 529.7,
+            "end": 541.86,
+            "text": " Psyche-ER was one of those examples.  Tell us a bit about that one.  Yeah, so I'll just walk you through the problem  to be solved.  So sure, so we work with a large behavioral health care"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 541.86,
+            "end": 557.54,
+            "text": " organization.  They are contracted by health plans,  in effect, to treat people that have mental health challenges.  And the traditional way of identifying anyone for care  management is, again, you get a risk score"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 557.54,
+            "end": 571.2199999999999,
+            "text": " because when you sort the highest  ranking in terms of odds ratio variables,  it's because you were already admitted, because you're older,  because you have more medications.  So they were using a similar approach,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 571.2199999999999,
+            "end": 582.6999999999999,
+            "text": " finding the most acute people.  So the very first thing we do in all of our engagements  is an understanding.  Where is the greatest opportunity?  And this has very little to do with machine learning."
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 582.6999999999999,
+            "end": 597.1800000000001,
+            "text": " It's just, well, what's happening today?  Where are these things happening?  Who is caring for these folks?  Everyone wants to reduce hospital admissions,  but there's a difference between hospital admissions"
+        },
+        {
+            "number": "lec4",
+            "title": "part.004.mp3",
+            "start": 597.1800000000001,
+            "end": 602.46,
+            "text": " because you're not taking your meds and hospital admissions  because you're not taking your meds."
+        }
+    ],
+    "text": " What fraction of those patients went on to actually develop type 2 diabetes? And of course, this is done using held-up data. Now, the reason why you might be interested in different levels is because you might want to target different interventions depending on the risk and cost. For example, a very low-cost intervention, one of the ones that we did was sending a text message to patients who are suspected to have high risk of developing type 2 diabetes, if they've not been to see their eye doctor in the last year, we send them a text message saying, maybe you want to go see your eye doctor. Remember, you get a free eye checkup. And this is a very cheap intervention. And it's a very subtle intervention. The reason why it can be effective is because patients who develop type 2 diabetes, once that diabetes progresses, it leads to something called diabetic retinopathy, which is often caught in an eye exam. So that could be one mechanism for patients to be diagnosed. And since it's so cheap, you could do it for 10,000 people. So you take the 10,000 most risky people, you apply the intervention for them, and you look to see which of those people actually had developed diabetes in the future. And the model that I showed you, 10% of that population went on to develop type 2 diabetes one to three years from then. The comparison point I'm showing you here, this blue bar, is if you use a model which is derived using a very small number of features, so not a machine learning based approach. And there, only 6% of the people went on to develop type 2 diabetes from the top 10,000. On the other hand, other interventions you might want to do are much more expensive. So for example, you might only be able to do that intervention for 100 people because it costs so much money, and you have a limited budget as a health insurer. And so for those people, you could ask, well, what is the positive predictive value of those top 100 predictions? And here, that was 15% using the machine learning based model, and less than half of that using the more traditional approach. So I'm going to stop here. There's a lot more that I can and will say, but I'll have to get to it in next Thursday's lecture because I'd like our guest to come down, and we will have a bit of a discussion. To be clear, this is the first time that we've ever had this type of in-class interaction, which is why, by the way, I ran a little bit late because I hadn't ever done something like this before. So it's an experiment. Let's see what happens. So did you say Len or? LEN D'ABOLIO-SILVA-GILES-DURAGO-MARTINEZ-MARTINEZ Len's fine. Len, OK. So Len, could you please introduce yourself? Sure. My name is Len D'Abolio. I'm an assistant professor at Harvard Medical School. I'm also the CEO and founder of a company called Zift. A little background? Yeah, a little bit of background. So you work at the VA, for example? Yeah. So I've spent probably the last 15 years or so trying to help health care learn from its data in new ways. And of all the fields that need your help, I would say health care for both societal, but also just from where we're at with our ability to use data standpoint is a great place for you guys to invest your time. I've been doing this for government, in academia as a researcher, publishing papers. I've been doing this for nonprofits in this country and a few others. But every single project that I've been a part of has been an effort to bring in data that has always been there, but we haven't been able to learn from until now. And whether that's at the VA building out their genomic science infrastructure and recruiting and enrolling a million veterans to donate their blood and their EMR, or at Ariadne Labs out of Harvard School of Public Health in the Brigham, improving childbirth in India, it's all about how can we get a little bit better over and over again to make health care a better place for folks. So tell me, what is risk stratification from your perspective? Defining that I found to be one of the most difficult parts of today's lecture. Well, thank you for challenging me with it. I'm sorry. So it's a rather generic term, and I think it depends entirely on the problem you're trying to solve. And every time I go at this, you really have to ground yourself in the problem that you're trying to solve. Risk could be running out of a medical supply in an operating room. Risk could be an APGAR score. Risk could be from pre-diabetic to diabetic. Risk could be an older person falling down in their home. What is it to me? I'm very much caught up in the tools analogy. These are wonderful tools with which a skilled craftsman, surrounded by others that have skills, could go ahead and solve very specific problems. So this is a hammer. It's one that we spend a lot of time refining and applying to solve problems in health care. So why don't you tell us about some of the areas where your company has been applying risk certification today at a very high level, and then we'll choose one of them to dive a bit deeper into. Sure. So the way we describe what we do is it's performance improvement. And I'm just giving you a little background, because it'll tell you which problems I'm focused on. So it's performance improvement. And to be candid, the types of things we like to improve the performance of are how do we keep people out of the hospital. I'm not going to soapbox on this too much, but I think it matters. Like the example that you gave that you were employed to help solve was buy and insure. And insurance companies, there's probably 30 industries in health care. It's not one industry. And every one of them has different and oftentimes competing incentives. And so the most logical application for these technologies is to help do preventative things. But only about, depending on your math, between 8% and 12% of health care is financially incentivized to do preventative things. The rest are the hospitals and the clinics. And when you think of health care, you probably think of those types of organizations. They don't typically pay to keep you out of those facilities. As a company, you've got to make a profit eventually. So you need to focus on the ones where there's a financial incentive. You focus on where there's a financial incentive. And in my case, I wanted to build a company where the financial incentive aligned with keeping people healthy. So what are some of these examples? Sure. So we do a lot with older populations. And so with older populations, it becomes very important to understand who care managers should approach, because their risk levels are rising. A lot of risk stratification, the old way that you described, identifies people that are already at their most acute. So it's sort of skating to where the puck has been. You're getting attention, because you are at the absolute peak of your acuity. We're trying to help care management organizations find people that are rising risk. And even when we do that, we try to get, I mean, the power of these technologies is to move away from one size fits all. So when we think about rising risk, we think about, all right, so in a behavioral health environment, it is the rising risk of an inpatient psychiatric admission. That is a very specific application. There are things we can do about it, as opposed to risk, which, I mean, if you think about what's being done in other industries, Amazon does not consider us all consumers. There are individuals that are very likely to react to certain offers at certain times. And so we're trying to bring this sort of more granular approach into health care, where we sit with teams, and they're used to just having generic risk scores. We're trying to help them think through which older people are likely to fall down, which we do work in diabetes also. So which children with type 1 diabetes shouldn't just be scheduled for an appointment every three months, but you should go to them right now. So those are some examples, but the themes are very consistent. It's helping organizations move away from rather generic, rather one-size-fits-all, toward, well, what are the more actionable? So even graduation from care management, because now you should be having serious illness conversations because you're nearing end of life, or palliative care referrals, or hospice referrals. OK, so I want to choose a single one to dive into, and I want to choose one that you've worked on the longest and where you're already doing at least the initial parts of an evaluation of it. So I think when we talked on the phone, Psyche-ER was one of those examples. Tell us a bit about that one. Yeah, so I'll just walk you through the problem to be solved. So sure, so we work with a large behavioral health care organization. They are contracted by health plans, in effect, to treat people that have mental health challenges. And the traditional way of identifying anyone for care management is, again, you get a risk score because when you sort the highest ranking in terms of odds ratio variables, it's because you were already admitted, because you're older, because you have more medications. So they were using a similar approach, finding the most acute people. So the very first thing we do in all of our engagements is an understanding. Where is the greatest opportunity? And this has very little to do with machine learning. It's just, well, what's happening today? Where are these things happening? Who is caring for these folks? Everyone wants to reduce hospital admissions, but there's a difference between hospital admissions because you're not taking your meds and hospital admissions because you're not taking your meds."
+}

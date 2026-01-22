@@ -1,0 +1,243 @@
+{
+    "chunks": [
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 0.0,
+            "end": 16.48,
+            "text": " Hospital stay.  Well, a little more about standards.  So NDC is probably the best of the coding systems,  and it's developed by the FDA.  The picture up on the top right shows"
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 16.48,
+            "end": 37.879999999999995,
+            "text": " that the first four digits are the so-called labeler.  That's usually the person who produced the drugs,  or at least the person who distributes them.  The second four-digit number is the form of the drug.  So whether it's capsules or tablets or liquid or whatever,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 37.879999999999995,
+            "end": 53.64,
+            "text": " and the dose.  And then the last two digits are a package code,  which translates into the total number of doses  that are in a package.  So this is a godsend, and all of the robotic pharmacies"
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 53.64,
+            "end": 75.8,
+            "text": " and so on rely on using this kind of information nowadays.  Unfortunately, they ran out of four-digit numbers,  and so there's now a, they added an extra digit,  but they didn't do it systematically.  And so sometimes they added an extra digit to the labeler"
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 75.8,
+            "end": 88.67999999999999,
+            "text": " and sometimes to the product code.  And so there's a nightmare of translations  between the old codes and the new codes,  and you have to have a code dictionary in order  to do it properly and so on."
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 88.67999999999999,
+            "end": 105.84,
+            "text": " OK, well, if that weren't good enough,  the International Council for the Harmonization  of Technical Requirements for Pharmaceuticals for Human Use  developed another coding system called MedDRA,  which is also used in various places."
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 105.84,
+            "end": 126.88,
+            "text": " And this is an international standard,  which is, of course, incompatible with the NDC.  CPT is the Common Procedural Terminology, which  we'll talk about in a little bit.  And they have a sub-range of their codes"
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 126.88,
+            "end": 149.22,
+            "text": " which also correspond to medication administration.  And so this is yet another way of coding giving medicines.  And then the HCPCS is yet another set  of codes for specifying what medicines  you've given to somebody."
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 149.22,
+            "end": 166.3,
+            "text": " And then I had mentioned this GSN number, which apparently  the Beth Israel uses.  This is a commercial coding system  from a company called First Data Bank that  is in the business of trying to produce standards."
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 166.3,
+            "end": 181.42000000000002,
+            "text": " But in this case, they're producing  ones that are pretty redundant with other existing standards.  But nevertheless, for historical reasons  or for whatever reasons, people are using these.  OK, enough of drugs."
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 181.42000000000002,
+            "end": 200.38,
+            "text": " So what procedures were done to a patient?  If you look in MIMIC, there are three tables.  There's procedures ICD, which has ICD-9 codes for about  a quarter million procedures.  There's CPT events, which has about half a million,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 200.38,
+            "end": 223.28,
+            "text": " 600,000 events that are coded in the CPT terminology.  And then MetaVision, the newer of the two systems,  has about a quarter million procedure events  that are coded in that system.  So some examples, here's the most common ICD-9 procedure"
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 223.28,
+            "end": 242.98,
+            "text": " codes.  So ICD-9 code 3893, of which there are 14,000 instances,  is venous catheterization, not elsewhere classified.  So what's venous catheterization?  It's when somebody sticks an IV in your vein."
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 245.54,
+            "end": 261.74,
+            "text": " Very common.  You show up at a hospital.  Before they ask you your name, they stick an IV in your arm.  That's a billable event, too.  Insertion of an endotracheal tube."
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 261.74,
+            "end": 276.3,
+            "text": " If you're having any problems like that,  they stick something down your throat.  Enteral infusion of concentrated nutritional substances.  So if you're not able to eat, then they feed you  through a stomach tube."
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 277.1,
+            "end": 295.98,
+            "text": " So that is continuous invasive mechanical ventilation  for less than 96 consecutive hours.  So this is being put on a ventilator that's  breathing for you, et cetera.  So you see that there's a very long tail of these."
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 295.98,
+            "end": 312.21999999999997,
+            "text": " So those are the ICD-9 codes.  Now, CPT has its own procedure codes  that go into a tremendous amount of detail.  So for example, this is the medicine subsection.  And it shows you the kinds of drugs"
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 312.21999999999997,
+            "end": 329.82,
+            "text": " that you're being administered that  are involved in dialysis or psychiatry or vaccines  or whatever.  And then here are the surgical and the radiological codes.  And there's tons and tons of detail on these."
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 329.82,
+            "end": 345.65999999999997,
+            "text": " Yeah?  So how can they put these codes as 1,000 to 1,022?  This seems really annoying for anyone.  No, these are categories.  So if you drill down, there's a fan out of that tree."
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 345.65999999999997,
+            "end": 363.97999999999996,
+            "text": " And you get down to individual codes.  Just as a nasty surprise, CPT is owned by the American College  of Physicians.  And they could sue me if I showed you the actual codes,  because they're copyrighted."
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 366.94,
+            "end": 384.85999999999996,
+            "text": " And you have to pay them if you use those codes.  It's crazy.  So if you look at the number of all of these codes  per admission, you see a distribution like this.  Or if I separate them out, you see"
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 384.85999999999996,
+            "end": 403.78000000000003,
+            "text": " that there are more ICD-9 codes and fewer of the CPT  and the codes that are in MetaVision.  But they look somewhat similar in their distributions.  OK, lab measurements.  So you send off a sputum sample, blood, urine,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 403.78000000000003,
+            "end": 417.46000000000004,
+            "text": " piece of your brain, something.  They stick it in some goo and measure something about it.  So what is it that they're measuring?  Well, it turns out that hematocrit  is the most common measurement."
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 417.46,
+            "end": 436.29999999999995,
+            "text": " So this is how much hemoglobin is in your blood  or what fraction in your blood and is  very important for sick people.  And the second most important is potassium, then sodium,  creatinine, chloride, urea, nitrogen, bicarbonate, et"
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 436.29999999999995,
+            "end": 449.78,
+            "text": " cetera.  So this is a long, long list of different things  that can be measured.  And all this stuff is in the database.  So for example, here's patient number two in the database."
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 449.78,
+            "end": 477.68,
+            "text": " And on July 17 of 2138, this is part  of the de-identification process to make  it difficult to figure out who the patient actually is.  This person got a test for their blood.  And they reported atypical lymphocytes."
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 477.68,
+            "end": 494.32,
+            "text": " So there are a couple of interesting things to note here.  One is that some things have a value and others don't.  So this is a qualitative measure.  So there's no value associated with it.  Just the fact of the label tells you"
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 494.32,
+            "end": 508.06,
+            "text": " what the result of the test was.  The other thing that's interesting  is this last column, which is LOINC.  And I'll say a word about that in a minute,  actually, right now."
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 508.06,
+            "end": 524.1,
+            "text": " So LOINC is the Logical Observation Identifiers, Names  and Codes.  It was developed by our colleagues  at Regenstrief Clinic in Indiana about 15 years ago,  maybe 20 years ago at this point."
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 524.1,
+            "end": 541.4200000000001,
+            "text": " And the attempt was to say every different type of laboratory  test ought to have a unique name.  And they ought to be hierarchical so that if you  have, for example, three different ways of measuring  serum potassium, that they're related to each other,"
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 541.4200000000001,
+            "end": 556.46,
+            "text": " but that they're distinct from each other.  Because there may be circumstances  under which the errors that you get from one measurement  versus another are different.  And so this is the standard way."
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 556.46,
+            "end": 573.6600000000001,
+            "text": " If you send off your blood sample to a lab,  they send back a string like this to the hospital  or to your doctor's office that says  it's coded in this OBX coding system.  And here is the LOINC code."
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 573.6600000000001,
+            "end": 592.3000000000001,
+            "text": " And this is the SNOMED interpretation.  And so this string is the way that your hospital's EHR  or your doctor's office system figures out  what the result of the test was.  HL7 is this 30-something-year-old organization"
+        },
+        {
+            "number": "lec3",
+            "title": "part.004.mp3",
+            "start": 592.3000000000001,
+            "end": 600.22,
+            "text": " that has been working on standardizing stuff like this.  And LOINC is part of their standardization."
+        }
+    ],
+    "text": " Hospital stay. Well, a little more about standards. So NDC is probably the best of the coding systems, and it's developed by the FDA. The picture up on the top right shows that the first four digits are the so-called labeler. That's usually the person who produced the drugs, or at least the person who distributes them. The second four-digit number is the form of the drug. So whether it's capsules or tablets or liquid or whatever, and the dose. And then the last two digits are a package code, which translates into the total number of doses that are in a package. So this is a godsend, and all of the robotic pharmacies and so on rely on using this kind of information nowadays. Unfortunately, they ran out of four-digit numbers, and so there's now a, they added an extra digit, but they didn't do it systematically. And so sometimes they added an extra digit to the labeler and sometimes to the product code. And so there's a nightmare of translations between the old codes and the new codes, and you have to have a code dictionary in order to do it properly and so on. OK, well, if that weren't good enough, the International Council for the Harmonization of Technical Requirements for Pharmaceuticals for Human Use developed another coding system called MedDRA, which is also used in various places. And this is an international standard, which is, of course, incompatible with the NDC. CPT is the Common Procedural Terminology, which we'll talk about in a little bit. And they have a sub-range of their codes which also correspond to medication administration. And so this is yet another way of coding giving medicines. And then the HCPCS is yet another set of codes for specifying what medicines you've given to somebody. And then I had mentioned this GSN number, which apparently the Beth Israel uses. This is a commercial coding system from a company called First Data Bank that is in the business of trying to produce standards. But in this case, they're producing ones that are pretty redundant with other existing standards. But nevertheless, for historical reasons or for whatever reasons, people are using these. OK, enough of drugs. So what procedures were done to a patient? If you look in MIMIC, there are three tables. There's procedures ICD, which has ICD-9 codes for about a quarter million procedures. There's CPT events, which has about half a million, 600,000 events that are coded in the CPT terminology. And then MetaVision, the newer of the two systems, has about a quarter million procedure events that are coded in that system. So some examples, here's the most common ICD-9 procedure codes. So ICD-9 code 3893, of which there are 14,000 instances, is venous catheterization, not elsewhere classified. So what's venous catheterization? It's when somebody sticks an IV in your vein. Very common. You show up at a hospital. Before they ask you your name, they stick an IV in your arm. That's a billable event, too. Insertion of an endotracheal tube. If you're having any problems like that, they stick something down your throat. Enteral infusion of concentrated nutritional substances. So if you're not able to eat, then they feed you through a stomach tube. So that is continuous invasive mechanical ventilation for less than 96 consecutive hours. So this is being put on a ventilator that's breathing for you, et cetera. So you see that there's a very long tail of these. So those are the ICD-9 codes. Now, CPT has its own procedure codes that go into a tremendous amount of detail. So for example, this is the medicine subsection. And it shows you the kinds of drugs that you're being administered that are involved in dialysis or psychiatry or vaccines or whatever. And then here are the surgical and the radiological codes. And there's tons and tons of detail on these. Yeah? So how can they put these codes as 1,000 to 1,022? This seems really annoying for anyone. No, these are categories. So if you drill down, there's a fan out of that tree. And you get down to individual codes. Just as a nasty surprise, CPT is owned by the American College of Physicians. And they could sue me if I showed you the actual codes, because they're copyrighted. And you have to pay them if you use those codes. It's crazy. So if you look at the number of all of these codes per admission, you see a distribution like this. Or if I separate them out, you see that there are more ICD-9 codes and fewer of the CPT and the codes that are in MetaVision. But they look somewhat similar in their distributions. OK, lab measurements. So you send off a sputum sample, blood, urine, piece of your brain, something. They stick it in some goo and measure something about it. So what is it that they're measuring? Well, it turns out that hematocrit is the most common measurement. So this is how much hemoglobin is in your blood or what fraction in your blood and is very important for sick people. And the second most important is potassium, then sodium, creatinine, chloride, urea, nitrogen, bicarbonate, et cetera. So this is a long, long list of different things that can be measured. And all this stuff is in the database. So for example, here's patient number two in the database. And on July 17 of 2138, this is part of the de-identification process to make it difficult to figure out who the patient actually is. This person got a test for their blood. And they reported atypical lymphocytes. So there are a couple of interesting things to note here. One is that some things have a value and others don't. So this is a qualitative measure. So there's no value associated with it. Just the fact of the label tells you what the result of the test was. The other thing that's interesting is this last column, which is LOINC. And I'll say a word about that in a minute, actually, right now. So LOINC is the Logical Observation Identifiers, Names and Codes. It was developed by our colleagues at Regenstrief Clinic in Indiana about 15 years ago, maybe 20 years ago at this point. And the attempt was to say every different type of laboratory test ought to have a unique name. And they ought to be hierarchical so that if you have, for example, three different ways of measuring serum potassium, that they're related to each other, but that they're distinct from each other. Because there may be circumstances under which the errors that you get from one measurement versus another are different. And so this is the standard way. If you send off your blood sample to a lab, they send back a string like this to the hospital or to your doctor's office that says it's coded in this OBX coding system. And here is the LOINC code. And this is the SNOMED interpretation. And so this string is the way that your hospital's EHR or your doctor's office system figures out what the result of the test was. HL7 is this 30-something-year-old organization that has been working on standardizing stuff like this. And LOINC is part of their standardization."
+}

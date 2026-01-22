@@ -1,0 +1,215 @@
+{
+    "chunks": [
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 0.0,
+            "end": 37.92,
+            "text": " So I want to begin by trying to build some intuition for how one might be able to do  staging from cross-sectional data.  And we'll return to this question of combined staging and subtyping only much later.  So imagine that we had data that lived in one dimension.  Here each data point is an individual."
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 37.92,
+            "end": 59.2,
+            "text": " We observed their data at just one point in time.  And suppose we knew exactly which biomarker to look at.  So I gave you an example of that here when you might look at some antibody expression  level, and that might be what I'll call biomarker A.  And so if you knew exactly what biomarker to look at, you might just put each person"
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 59.2,
+            "end": 76.92,
+            "text": " along this line.  And you might conjecture that maybe on one side of the line, this is the early disease.  And on the other side of the line, maybe that's the late disease.  Why might that be a reasonable conjecture?  What would be an alternative conjecture?"
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 76.92,
+            "end": 100.76,
+            "text": " Why don't you talk to your neighbors and see if you guys can come up with some alternative  conjectures?  Let's go.  All right, that's enough.  It's a hopefully simple question, so I won't give you too much time."
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 100.76,
+            "end": 118.12,
+            "text": " All right, so what would be another conjecture?  So again, our goal is we have one observation per individual.  Each individual is in some unknown stage of the disease.  We'd like to be able to sort individuals into early and late stages of the disease.  I gave you one conjecture of how to do that sorting."
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 118.12,
+            "end": 141.95999999999998,
+            "text": " What would be another reasonable conjecture?  Raise your hand.  Yeah?  That they have different types of the same disease, and that it could just one of the  subtypes might be similar."
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 141.95999999999998,
+            "end": 150.88,
+            "text": " Yeah, so you're going back to the example I gave here, where you could conflate these  things.  I want to stick with a simple story.  Let's suppose there's only one subtype of the disease.  What would be another way to sort the patients, given this data, where the data is these points"
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 150.88,
+            "end": 172.72,
+            "text": " that you see here?  Yeah?  Are there any diseases in the mid-range, and then as you go up with subtypes?  OK, so maybe early disease is right over here.  And when things get bad, this biomarker starts to become abnormal, and abnormality, for whatever"
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 172.72,
+            "end": 197.04,
+            "text": " reason, might be to the right or to the left.  Now I think that is a conjecture one could have.  I would argue that that's perhaps not a very natural conjecture, given what we know about  common biomarkers that are measured from the human body, and the way that they respond  to disease progression, unless you're in the situation of having multiple disease subtypes,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 197.04,
+            "end": 214.84,
+            "text": " where for example, going to the right might correspond to one disease subtype, and going  to the left might correspond to another disease subtype.  What would be another conjecture?  You guys are missing the easy one.  Yeah, in the back."
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 214.84,
+            "end": 225.84,
+            "text": " It might just be one where the high values are early disease, and the low values are  later ones.  Exactly, thank you.  So this might be early disease, and that might be late disease.  It says vice versa on the slide."
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 225.84,
+            "end": 233.84,
+            "text": " Oh, does it really?  Yeah.  Oh, shoot.  Well, it's still the same thing.  Breakfast."
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 233.84,
+            "end": 243.84,
+            "text": " Right, right, OK.  Thank you.  Next time I'll take out that word, breakfast.  That's why you guys aren't saying that.  OK, so this is good."
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 243.84,
+            "end": 267.84,
+            "text": " Now I think we're all on the same page, and we have some idea of what are some of the  assumptions that one might need to make in order to actually do anything here.  Like for example, we'll probably have to make some assumption about continuity, that there  might be some gradual progression of the biomarker irrelevance from early to late, and it might  be getting larger, it might be getting smaller."
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 267.84,
+            "end": 295.84,
+            "text": " If it's indeed the scenario that we talked about earlier, where we said early disease  might be here, and late disease might be going to either side, in that case, I think one  could easily argue that with just information we have here, disease progression, disease  stage is unidentifiable, because you wouldn't know where should that transition point be.  Is it here, here, here, here, here, here?"
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 295.84,
+            "end": 309.84,
+            "text": " In fact, the same problem arises here.  You don't know, is it early disease, is it going this way, or is it going that way?  What would be one way to try to disentangle this, just to try to get us all on the same  page?  So suppose it was only going this direction or going that direction."
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 309.84,
+            "end": 331.84,
+            "text": " How can we figure out which is which?  Yeah?  Maybe we had data on...  Well, we had other data about how much time they have left.  Maybe we can correlate that."
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 331.84,
+            "end": 360.84,
+            "text": " Yeah, no, that's great.  So maybe we had data on, let's say, death information, or even just age.  And if we started from a very, very rough assumption that disease stage, let's say,  grows monotonically with age, then...  And if you made an additional assumption that the disease stages are..."
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 360.84,
+            "end": 384.84,
+            "text": " That the people who are coming in are uniformly drawn from across disease stages, with those  two assumptions alone, then you could, for example, look at the average age of individuals  over here and the average age of individuals over here, and you'd say the one with the  larger average age is the late disease one.  Or you could look at time to death."
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 384.84,
+            "end": 402.84,
+            "text": " If you had, for each data point, you also knew how long until the individual died.  You could look at average time to death for these individuals versus those individuals  and try to tease it apart in that way.  That's what you meant.  OK, so I'm just trying to give you some intuition for how this might be possible."
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 402.84,
+            "end": 425.84,
+            "text": " What about if your data looked like this?  So now you have two biomarkers.  So we've only gone up by one dimension only.  And we want to figure out where's early, where's late.  Already it starts to become more challenging, right?"
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 427.84,
+            "end": 448.84,
+            "text": " So the intuition that I want you to have is that we're going to have to make some assumptions  about disease progression, such as the ones we were just discussing.  And we also have to get lucky in some way.  So, for example, one way of getting lucky would be to have a real lot of data.  So if you had a ton, ton of data, and you made an additional assumption"
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 448.84,
+            "end": 466.84,
+            "text": " that your data lives on some low-dimensional manifold,  where on one side of the manifold is early disease  and the other side of the manifold is late disease,  then you might be able to discover that manifold from this data,  and you might conjecture that the manifold is something like that,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 466.84,
+            "end": 486.84,
+            "text": " sort of that trajectory that I'm outlining there with my hand.  But for you to be able to do that, of course, you need to have enough data.  So it's going to be now a trade-off between just having cross-sectional data might be OK,  so long as you have a real lot of that data,  so you can sort of fill in the spaces and really identify that manifold."
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 487.84,
+            "end": 508.84,
+            "text": " A different approach might be, well, maybe you don't have just purely cross-sectional data.  Maybe you have two or maybe three samples from each patient.  And then you can color-code this.  You might say, OK, green is patient 1, or patient A, we'll call it,  and this is the first time point from patient A,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 508.84,
+            "end": 530.84,
+            "text": " second time point from patient A, third and fourth time points from patient A.  Red is patient B, and you have two time points from patient B,  and blue here is patient C, and you have one, two, three time points from patient C.  Now, again, it's not very dense data.  We can't really draw curves out, but now we can start to get a sense of the ordering."
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 530.84,
+            "end": 552.84,
+            "text": " And again, now we can, even though we're not in a dense setting like we're here,  here we're still nonetheless able to figure out that probably the manifold looks a little bit like this.  Right?  And so, again, I'm just trying to build intuition around  when disease progression modeling for cross-sectional data might be possible."
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 553.84,
+            "end": 570.84,
+            "text": " But this is a wide-open field.  And so today I'll be telling you about a few algorithms  that try to build on some of these intuitions for doing disease progression modeling.  But they will break down very, very easily.  They'll break down when these assumptions I gave you don't hold."
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 570.84,
+            "end": 588.84,
+            "text": " They'll break down when your data is high-dimensional.  They'll break down when your data looks like this,  where you don't just have a single subtype, but perhaps multiple subtypes.  And so this is really a very active area of research.  And it's an area that I think we could make a lot of progress on in the field in the next several years."
+        },
+        {
+            "number": "lec19",
+            "title": "part.000.mp3",
+            "start": 590.84,
+            "end": 599.84,
+            "text": " So I'll begin with one case study coming from my own work,  where we developed an algorithm for learning from cross-sectional data."
+        }
+    ],
+    "text": " So I want to begin by trying to build some intuition for how one might be able to do staging from cross-sectional data. And we'll return to this question of combined staging and subtyping only much later. So imagine that we had data that lived in one dimension. Here each data point is an individual. We observed their data at just one point in time. And suppose we knew exactly which biomarker to look at. So I gave you an example of that here when you might look at some antibody expression level, and that might be what I'll call biomarker A. And so if you knew exactly what biomarker to look at, you might just put each person along this line. And you might conjecture that maybe on one side of the line, this is the early disease. And on the other side of the line, maybe that's the late disease. Why might that be a reasonable conjecture? What would be an alternative conjecture? Why don't you talk to your neighbors and see if you guys can come up with some alternative conjectures? Let's go. All right, that's enough. It's a hopefully simple question, so I won't give you too much time. All right, so what would be another conjecture? So again, our goal is we have one observation per individual. Each individual is in some unknown stage of the disease. We'd like to be able to sort individuals into early and late stages of the disease. I gave you one conjecture of how to do that sorting. What would be another reasonable conjecture? Raise your hand. Yeah? That they have different types of the same disease, and that it could just one of the subtypes might be similar. Yeah, so you're going back to the example I gave here, where you could conflate these things. I want to stick with a simple story. Let's suppose there's only one subtype of the disease. What would be another way to sort the patients, given this data, where the data is these points that you see here? Yeah? Are there any diseases in the mid-range, and then as you go up with subtypes? OK, so maybe early disease is right over here. And when things get bad, this biomarker starts to become abnormal, and abnormality, for whatever reason, might be to the right or to the left. Now I think that is a conjecture one could have. I would argue that that's perhaps not a very natural conjecture, given what we know about common biomarkers that are measured from the human body, and the way that they respond to disease progression, unless you're in the situation of having multiple disease subtypes, where for example, going to the right might correspond to one disease subtype, and going to the left might correspond to another disease subtype. What would be another conjecture? You guys are missing the easy one. Yeah, in the back. It might just be one where the high values are early disease, and the low values are later ones. Exactly, thank you. So this might be early disease, and that might be late disease. It says vice versa on the slide. Oh, does it really? Yeah. Oh, shoot. Well, it's still the same thing. Breakfast. Right, right, OK. Thank you. Next time I'll take out that word, breakfast. That's why you guys aren't saying that. OK, so this is good. Now I think we're all on the same page, and we have some idea of what are some of the assumptions that one might need to make in order to actually do anything here. Like for example, we'll probably have to make some assumption about continuity, that there might be some gradual progression of the biomarker irrelevance from early to late, and it might be getting larger, it might be getting smaller. If it's indeed the scenario that we talked about earlier, where we said early disease might be here, and late disease might be going to either side, in that case, I think one could easily argue that with just information we have here, disease progression, disease stage is unidentifiable, because you wouldn't know where should that transition point be. Is it here, here, here, here, here, here? In fact, the same problem arises here. You don't know, is it early disease, is it going this way, or is it going that way? What would be one way to try to disentangle this, just to try to get us all on the same page? So suppose it was only going this direction or going that direction. How can we figure out which is which? Yeah? Maybe we had data on... Well, we had other data about how much time they have left. Maybe we can correlate that. Yeah, no, that's great. So maybe we had data on, let's say, death information, or even just age. And if we started from a very, very rough assumption that disease stage, let's say, grows monotonically with age, then... And if you made an additional assumption that the disease stages are... That the people who are coming in are uniformly drawn from across disease stages, with those two assumptions alone, then you could, for example, look at the average age of individuals over here and the average age of individuals over here, and you'd say the one with the larger average age is the late disease one. Or you could look at time to death. If you had, for each data point, you also knew how long until the individual died. You could look at average time to death for these individuals versus those individuals and try to tease it apart in that way. That's what you meant. OK, so I'm just trying to give you some intuition for how this might be possible. What about if your data looked like this? So now you have two biomarkers. So we've only gone up by one dimension only. And we want to figure out where's early, where's late. Already it starts to become more challenging, right? So the intuition that I want you to have is that we're going to have to make some assumptions about disease progression, such as the ones we were just discussing. And we also have to get lucky in some way. So, for example, one way of getting lucky would be to have a real lot of data. So if you had a ton, ton of data, and you made an additional assumption that your data lives on some low-dimensional manifold, where on one side of the manifold is early disease and the other side of the manifold is late disease, then you might be able to discover that manifold from this data, and you might conjecture that the manifold is something like that, sort of that trajectory that I'm outlining there with my hand. But for you to be able to do that, of course, you need to have enough data. So it's going to be now a trade-off between just having cross-sectional data might be OK, so long as you have a real lot of that data, so you can sort of fill in the spaces and really identify that manifold. A different approach might be, well, maybe you don't have just purely cross-sectional data. Maybe you have two or maybe three samples from each patient. And then you can color-code this. You might say, OK, green is patient 1, or patient A, we'll call it, and this is the first time point from patient A, second time point from patient A, third and fourth time points from patient A. Red is patient B, and you have two time points from patient B, and blue here is patient C, and you have one, two, three time points from patient C. Now, again, it's not very dense data. We can't really draw curves out, but now we can start to get a sense of the ordering. And again, now we can, even though we're not in a dense setting like we're here, here we're still nonetheless able to figure out that probably the manifold looks a little bit like this. Right? And so, again, I'm just trying to build intuition around when disease progression modeling for cross-sectional data might be possible. But this is a wide-open field. And so today I'll be telling you about a few algorithms that try to build on some of these intuitions for doing disease progression modeling. But they will break down very, very easily. They'll break down when these assumptions I gave you don't hold. They'll break down when your data is high-dimensional. They'll break down when your data looks like this, where you don't just have a single subtype, but perhaps multiple subtypes. And so this is really a very active area of research. And it's an area that I think we could make a lot of progress on in the field in the next several years. So I'll begin with one case study coming from my own work, where we developed an algorithm for learning from cross-sectional data."
+}

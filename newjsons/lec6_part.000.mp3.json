@@ -1,0 +1,306 @@
+{
+    "chunks": [
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 0.0,
+            "end": 25.68,
+            "text": " All right.  So I'll begin today's lecture by giving a brief recap  of risk stratification.  We didn't get to finish talking about survival modeling  on Thursday, and so I'll go a little bit more into that."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 25.68,
+            "end": 35.16,
+            "text": " And I'll answer some of the questions  that arose during our discussions and on Piazza  Sins.  And then the vast majority of today's lecture,  we'll be talking about a new topic,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 35.16,
+            "end": 47.84,
+            "text": " in particular, physiological time series modeling.  I'll give two examples of physiological time series  modeling, the first one coming from monitoring patients  in intensive care units, and the second one  asking a very different type of question,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 47.84,
+            "end": 62.24,
+            "text": " that of diagnosing patient's heart conditions using EKGs.  And both of these correspond to readings  that you had for today's lecture,  and we'll go into much more depth of those papers today,  and I'll provide much more color around them."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 65.28,
+            "end": 77.64,
+            "text": " So just to briefly remind you where we were on Thursday,  we talked about how one could form-wise risk stratification  instead of as a classification problem of what would happen,  let's say, in some predefined time period,  rather thinking about risk stratification"
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 77.64,
+            "end": 91.16,
+            "text": " as a regression question or regression task.  Given what you know about a patient at time 0,  predicting time to event.  So for example, here, the events might be death, divorce,  college graduation."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 91.16,
+            "end": 107.7,
+            "text": " At patient 1, that event happened at time step 9.  Patient 2, that event happened at time step 12.  And for patient 4, we don't know when that event happened  because it was censored.  In particular, after time step 7,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 107.7,
+            "end": 121.76,
+            "text": " we no longer get a view of any of the patient's data,  and so we don't know when that red dot would be,  sometime in the future or never.  So this is what we mean by right-censored data, which  is precisely what survival modeling is aiming to solve."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 121.76,
+            "end": 134.76,
+            "text": " Are there questions about this setup first?  AUDIENCE MEMBER 2 You flipped the X and the O.  Yeah, I realized that.  I flipped the X and the O in today's presentation,  but that's not relevant."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 134.76,
+            "end": 146.16,
+            "text": " So f of t is the probability of death or the event occurring  at time step t.  And although in this slide, I'm showing it  as an unconditional model, in general,  you should think about this as a conditional density."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 146.16,
+            "end": 159.79999999999998,
+            "text": " So you might be conditioning on some covariance or features  that you have for that patient at baseline.  And very important for survival modeling  and for the next things I'll tell you  are the survival function, denoted as capital S of t."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 159.79999999999998,
+            "end": 176.76,
+            "text": " And that's simply 1 minus the cumulative density function.  So it's the probability that the event occurrence, which  is denoted here as capital T, occurs greater  than some little t.  So it's this function, which is simply"
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 176.76,
+            "end": 187.92,
+            "text": " given to you by the integral from 0  to infinity of the density.  So in pictures, this is the density.  On the x-axis is time.  The y-axis is the density function."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 187.92,
+            "end": 203.76,
+            "text": " And this black curve is what I'm denoting as f of t.  And this white area is capital S of t, the survival probability  or survival function.  Yes?  AUDIENCE 2 All right, so I just want to be clear."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 203.76,
+            "end": 221.04,
+            "text": " So if you were to integrate the entire curve,  it would come out as 1, right?  Because by infinity, you're going to be n.  PROFESSOR 1 In the way that I described it to you here,  yes, because we're talking about the time to event."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 221.04,
+            "end": 235.26,
+            "text": " But often, we might be in scenarios  where the event may never occur.  And so you can formalize that in a couple of different ways.  You could put it at a point mass at S of infinity.  Or you could simply say that the integral from 0 to infinity"
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 235.26,
+            "end": 247.24,
+            "text": " is some quantity less than 1.  And in the readings that I'm referencing at the very bottom  of the slides, it shows you how you can very easily modify  all of the frameworks I'm talking about here  to deal with that scenario where the event may never occur."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 247.24,
+            "end": 262.21999999999997,
+            "text": " But for the purposes of my presentation,  you can assume that the event will always occur at some point.  It's a very minor modification where, in essence,  divide the densities by a constant, which  accounts for the fact that it wouldn't"
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 262.21999999999997,
+            "end": 278.03999999999996,
+            "text": " integrate to 1 otherwise.  Now, a key question that has to be  solved when trying to use a parametric approach  to survival modeling is, what should that f of t look like?  What should that density function look like?"
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 278.03999999999996,
+            "end": 292.2,
+            "text": " And what I'm showing you here is a table  of some very commonly used density functions.  And what you see in these two columns,  the right-hand column is the density function f of t itself.  Lambda denotes some parameter of the model."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 292.2,
+            "end": 308.32,
+            "text": " t is the time.  And on this second middle column is the survival function.  So this is obtained for these particular parametric forms  by an analytical solution.  In essence, solving that integral from t to infinity,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 308.32,
+            "end": 321.2,
+            "text": " this is the analytic solution for that.  So these go by common names of exponential, Weibull,  log-normal, and so on.  And critically, all of these have support only  on the positive real numbers, because the events can never"
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 321.2,
+            "end": 341.0,
+            "text": " occur at negative time.  Now, we live in a day and age where we no longer  have to make standard parametric assumptions for densities.  We could, for example, try to formalize the density  as some output of some deep neural network."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 341.0,
+            "end": 356.64,
+            "text": " But if we don't use a parametric approach,  so there are two ways to try to do that.  One way to do that would be to say  that we're going to model the distribution f of t  as one of these things, where lambda,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 356.64,
+            "end": 368.48,
+            "text": " or whatever the parameters of the distribution,  are given to you by the output of, let's say,  a deep neural network on the covariate x.  So that would be one approach.  A very different approach would be a nonparametric distribution,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 368.48,
+            "end": 382.48,
+            "text": " where you say, OK, I'm going to define f of t extremely  flexibly, not as one of these forms.  And there, one runs into a slightly different challenge.  Because as I'll show you in the next slide,  to do maximum likelihood estimation"
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 382.48,
+            "end": 399.18,
+            "text": " of these distributions from sensor data,  one needs to make use of this survival function, s of t.  And so if your f of t is complex,  and you don't have a nice analytic solution for s of t,  then you're going to have to somehow use"
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 399.18,
+            "end": 411.52,
+            "text": " a numerical approximation of s of t during learning.  So it's definitely possible, but it's  going to be a little bit more effort.  So now here's where I'm going to get into maximum likelihood  estimation of these distributions."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 411.52,
+            "end": 425.72,
+            "text": " And to define for you the likelihood function,  I'm going to break it down into two different settings.  The first setting is an observation  which is uncensored, meaning we do  observe when the event, death, for example, occurs."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 425.72,
+            "end": 439.6,
+            "text": " And in that case, the probability of the event,  it's very simple.  It's just probability of the event occurring at capital T,  random variable t equals little t is just f of t.  Done."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 439.6,
+            "end": 453.8,
+            "text": " However, what happens if for this data point,  you don't observe when the event occurred because of censoring?  Well, of course, you could just throw away that data point,  not use it in your estimation.  But that's precisely what we mentioned"
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 453.8,
+            "end": 468.12,
+            "text": " at the very beginning of last week's lecture  was the goal of survival modeling  to not do that because we did that to introduce bias  into our estimation procedure.  So we would like to be able to use that observation"
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 468.12,
+            "end": 485.4,
+            "text": " that this data point was censored.  But the only information we can get from that observation  is that capital T, the event time,  must have occurred some time larger  than the time of censoring, which is little t here."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 485.4,
+            "end": 498.98,
+            "text": " So we don't know precisely when capital T was,  but we know it's something larger  than the observed censoring time, little t.  And that, remember, is precisely what the survival function  is capturing."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 498.98,
+            "end": 511.06,
+            "text": " So for a censored observation, we're  going to use capital S of t within the likelihood.  So now we can then combine these two  for censored and uncensored data.  And what we get is the following likelihood objective."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 511.06,
+            "end": 527.1800000000001,
+            "text": " I'm showing you here the log likelihood objective.  Recall from last week that little b of i  simply denotes is this observation censored or not.  So if bi is 1, it means the time that you're given  is the time of the censoring event."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 527.1800000000001,
+            "end": 540.66,
+            "text": " And if bi is 0, it means the time you're given  is the time that the event occurs.  So here, what we're going to do is now  sum over all of the data points in your data set  from little i equals 1 to little n of bi times"
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 540.66,
+            "end": 552.86,
+            "text": " log of the probability under the censored model  plus 1 minus bi times log of probability  under the uncensored model.  And so this bi is just going to switch on which of these two  you're going to use for that given data point."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 552.86,
+            "end": 565.76,
+            "text": " So the learning objective for maximum likelihood estimation  here is very similar to what you're  used to in learning distributions,  with the big difference that for censored data,  we're going to use this survival function"
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 565.76,
+            "end": 583.5600000000001,
+            "text": " to estimate its probability.  Are there any questions?  And this, of course, could then be optimized  via your favorite algorithm, whether it  be stochastic gradient descent or second-order method"
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 583.5600000000001,
+            "end": 591.32,
+            "text": " and so on.  Yep?  AUDIENCE 2 A question about the kind of side question.  You mentioned that we could use equal network  and then combine it with the parametric function."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 591.32,
+            "end": 599.28,
+            "text": " So is it true that we did this?  We still have a parametric assumption  that we kind of map the input to the parameters?  PROFESSOR 1 Exactly.  That's exactly right."
+        },
+        {
+            "number": "lec6",
+            "title": "part.000.mp3",
+            "start": 599.28,
+            "end": 600.84,
+            "text": " So."
+        }
+    ],
+    "text": " All right. So I'll begin today's lecture by giving a brief recap of risk stratification. We didn't get to finish talking about survival modeling on Thursday, and so I'll go a little bit more into that. And I'll answer some of the questions that arose during our discussions and on Piazza Sins. And then the vast majority of today's lecture, we'll be talking about a new topic, in particular, physiological time series modeling. I'll give two examples of physiological time series modeling, the first one coming from monitoring patients in intensive care units, and the second one asking a very different type of question, that of diagnosing patient's heart conditions using EKGs. And both of these correspond to readings that you had for today's lecture, and we'll go into much more depth of those papers today, and I'll provide much more color around them. So just to briefly remind you where we were on Thursday, we talked about how one could form-wise risk stratification instead of as a classification problem of what would happen, let's say, in some predefined time period, rather thinking about risk stratification as a regression question or regression task. Given what you know about a patient at time 0, predicting time to event. So for example, here, the events might be death, divorce, college graduation. At patient 1, that event happened at time step 9. Patient 2, that event happened at time step 12. And for patient 4, we don't know when that event happened because it was censored. In particular, after time step 7, we no longer get a view of any of the patient's data, and so we don't know when that red dot would be, sometime in the future or never. So this is what we mean by right-censored data, which is precisely what survival modeling is aiming to solve. Are there questions about this setup first? AUDIENCE MEMBER 2 You flipped the X and the O. Yeah, I realized that. I flipped the X and the O in today's presentation, but that's not relevant. So f of t is the probability of death or the event occurring at time step t. And although in this slide, I'm showing it as an unconditional model, in general, you should think about this as a conditional density. So you might be conditioning on some covariance or features that you have for that patient at baseline. And very important for survival modeling and for the next things I'll tell you are the survival function, denoted as capital S of t. And that's simply 1 minus the cumulative density function. So it's the probability that the event occurrence, which is denoted here as capital T, occurs greater than some little t. So it's this function, which is simply given to you by the integral from 0 to infinity of the density. So in pictures, this is the density. On the x-axis is time. The y-axis is the density function. And this black curve is what I'm denoting as f of t. And this white area is capital S of t, the survival probability or survival function. Yes? AUDIENCE 2 All right, so I just want to be clear. So if you were to integrate the entire curve, it would come out as 1, right? Because by infinity, you're going to be n. PROFESSOR 1 In the way that I described it to you here, yes, because we're talking about the time to event. But often, we might be in scenarios where the event may never occur. And so you can formalize that in a couple of different ways. You could put it at a point mass at S of infinity. Or you could simply say that the integral from 0 to infinity is some quantity less than 1. And in the readings that I'm referencing at the very bottom of the slides, it shows you how you can very easily modify all of the frameworks I'm talking about here to deal with that scenario where the event may never occur. But for the purposes of my presentation, you can assume that the event will always occur at some point. It's a very minor modification where, in essence, divide the densities by a constant, which accounts for the fact that it wouldn't integrate to 1 otherwise. Now, a key question that has to be solved when trying to use a parametric approach to survival modeling is, what should that f of t look like? What should that density function look like? And what I'm showing you here is a table of some very commonly used density functions. And what you see in these two columns, the right-hand column is the density function f of t itself. Lambda denotes some parameter of the model. t is the time. And on this second middle column is the survival function. So this is obtained for these particular parametric forms by an analytical solution. In essence, solving that integral from t to infinity, this is the analytic solution for that. So these go by common names of exponential, Weibull, log-normal, and so on. And critically, all of these have support only on the positive real numbers, because the events can never occur at negative time. Now, we live in a day and age where we no longer have to make standard parametric assumptions for densities. We could, for example, try to formalize the density as some output of some deep neural network. But if we don't use a parametric approach, so there are two ways to try to do that. One way to do that would be to say that we're going to model the distribution f of t as one of these things, where lambda, or whatever the parameters of the distribution, are given to you by the output of, let's say, a deep neural network on the covariate x. So that would be one approach. A very different approach would be a nonparametric distribution, where you say, OK, I'm going to define f of t extremely flexibly, not as one of these forms. And there, one runs into a slightly different challenge. Because as I'll show you in the next slide, to do maximum likelihood estimation of these distributions from sensor data, one needs to make use of this survival function, s of t. And so if your f of t is complex, and you don't have a nice analytic solution for s of t, then you're going to have to somehow use a numerical approximation of s of t during learning. So it's definitely possible, but it's going to be a little bit more effort. So now here's where I'm going to get into maximum likelihood estimation of these distributions. And to define for you the likelihood function, I'm going to break it down into two different settings. The first setting is an observation which is uncensored, meaning we do observe when the event, death, for example, occurs. And in that case, the probability of the event, it's very simple. It's just probability of the event occurring at capital T, random variable t equals little t is just f of t. Done. However, what happens if for this data point, you don't observe when the event occurred because of censoring? Well, of course, you could just throw away that data point, not use it in your estimation. But that's precisely what we mentioned at the very beginning of last week's lecture was the goal of survival modeling to not do that because we did that to introduce bias into our estimation procedure. So we would like to be able to use that observation that this data point was censored. But the only information we can get from that observation is that capital T, the event time, must have occurred some time larger than the time of censoring, which is little t here. So we don't know precisely when capital T was, but we know it's something larger than the observed censoring time, little t. And that, remember, is precisely what the survival function is capturing. So for a censored observation, we're going to use capital S of t within the likelihood. So now we can then combine these two for censored and uncensored data. And what we get is the following likelihood objective. I'm showing you here the log likelihood objective. Recall from last week that little b of i simply denotes is this observation censored or not. So if bi is 1, it means the time that you're given is the time of the censoring event. And if bi is 0, it means the time you're given is the time that the event occurs. So here, what we're going to do is now sum over all of the data points in your data set from little i equals 1 to little n of bi times log of the probability under the censored model plus 1 minus bi times log of probability under the uncensored model. And so this bi is just going to switch on which of these two you're going to use for that given data point. So the learning objective for maximum likelihood estimation here is very similar to what you're used to in learning distributions, with the big difference that for censored data, we're going to use this survival function to estimate its probability. Are there any questions? And this, of course, could then be optimized via your favorite algorithm, whether it be stochastic gradient descent or second-order method and so on. Yep? AUDIENCE 2 A question about the kind of side question. You mentioned that we could use equal network and then combine it with the parametric function. So is it true that we did this? We still have a parametric assumption that we kind of map the input to the parameters? PROFESSOR 1 Exactly. That's exactly right. So."
+}

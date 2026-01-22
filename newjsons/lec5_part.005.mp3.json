@@ -1,0 +1,334 @@
+{
+    "chunks": [
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 0.0,
+            "end": 15.6,
+            "text": " the ICD-10 data, you don't want to just throw away the ICD-9  data, is there a way to use it?  So the naive answer, which is what the community is largely  using today, is come up with a mapping.  Come up with a manual mapping from ICD-9 to ICD-10"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 15.6,
+            "end": 28.92,
+            "text": " so that you can manually transform your data  into this new format such that the models you  learn from this older time is useful in the future time.  That's the boring and simple answer.  But I think we could do much better."
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 28.92,
+            "end": 44.24,
+            "text": " For example, we could learn new representations of the data.  We could learn that mapping directly  in order to optimize for your most recent performance.  And there's a whole bunch more that we can talk about later.  If there was indeed a non-stationary change,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 44.24,
+            "end": 55.84,
+            "text": " this would enable you to detect it,  but this does not ensure robustness to future?  Correct.  So this allows you to detect that a non-stationarity has  happened."
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 55.84,
+            "end": 67.36,
+            "text": " And it allows you to say that your model is  going to generalize to 2014, 2016.  But of course, that doesn't mean that your model's  going to generalize to 2016, 2018.  And so how do you do that?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 67.36,
+            "end": 80.44,
+            "text": " How do you get confidence in that?  Well, that's a really interesting research question.  We don't have good answers to that today.  From a practical perspective, the best I can answer,  the best I can offer you today is"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 80.44,
+            "end": 93.52000000000001,
+            "text": " build in these checks and balances all the time.  So continuously evaluate how you're  doing on the most recent data.  If you see big changes, throw a red flag.  Build more checks and balances into your deployment process."
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 93.52000000000001,
+            "end": 103.64,
+            "text": " If you see a bunch of patients who  are getting predicted probabilities of 1,  and in the past you never predicted probability 1,  that might tell you something.  And much later in the semester, we'll"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 103.64,
+            "end": 113.38,
+            "text": " talk about robust machine learning approaches.  For example, approaches that have  been designed to be robust against adversaries.  And those type of approaches as well  will allow you to be much more robust to particular types"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 113.38,
+            "end": 121.6,
+            "text": " of data set shift, of which non-stationarity is one  example.  It's a big open research field.  Yeah?  So just to make sure I have the other thing correct,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 121.6,
+            "end": 134.96,
+            "text": " theoretically, if you could map everything  from the old data set to the new data set, like the encodings,  would it still be OK, like the results  you get on the future data set?  If you could do a perfect mapping and it's one to one"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 134.96,
+            "end": 146.24,
+            "text": " and the distributions of those things also didn't change,  then yeah.  Really what you need to assess is, is there data set shift?  Is your training distribution after mapping  the same as your testing distribution?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 146.24,
+            "end": 155.32000000000002,
+            "text": " And the answer is yes, you're all good.  If you're not, you're in trouble.  Yep?  What's the test set and the train set here?  What's used here, one and three?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 155.32000000000002,
+            "end": 170.04000000000002,
+            "text": " So one is using data only from 2007 and 2013.  Three is using data only from 2014 and 2016.  In the case, if the outcome you care about  happens in 2007, 2013, then that observation would be not.  You could, wouldn't be using it."
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 170.04000000000002,
+            "end": 179.28,
+            "text": " Yeah, so for the diabetes problem,  there's all sorts of inclusion and exclusion criteria  that you have to deal with.  For what I'm showing you here, I'm  talking about a setting where you"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 179.28,
+            "end": 187.84,
+            "text": " might be making multiple predictions for patients  across time.  So it's a much more myopic prediction task.  But one can come up with an analogy  to this for the diabetes setting."
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 187.84,
+            "end": 215.39999999999998,
+            "text": " Like, for example, just hold out half of the patients  at random, and then for your training set,  use data up to 2009 and evaluate on data only up to 2013.  And for your test set, pretend as if it was January 1, 2013,  and look at performance up to 2017."
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 215.39999999999998,
+            "end": 233.2,
+            "text": " And so that would be, you're changing your prediction time  to use more recent data.  So the next subtlety is, here's a name that I put on data.  This isn't a standard name.  This is what I'm calling intervention-tainted outcomes."
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 236.11999999999998,
+            "end": 250.04,
+            "text": " And so the example here came from your reading for today.  The reading was this paper on intelligible models  for health care, predicting pneumonia risk in hospital 30  day admissions from K to D, 2015.  So in that paper, they give an example."
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 250.04,
+            "end": 264.72,
+            "text": " It's a very old example of trying  to use a predictive model to understand a patient's risk  of mortality when they come into the hospital.  And what they learned in this, they  used a rule-based learning algorithm."
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 264.72,
+            "end": 280.28,
+            "text": " And what they discovered was a rule that said,  if the patient has asthma, then they have low risk of dying.  So these are all patients who have pneumonia.  So a patient who comes in with pneumonia and asthma  has a lower risk of dying than a patient who"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 280.28,
+            "end": 296.12,
+            "text": " comes in with pneumonia and does not have a history of asthma.  That's what this rule says.  And this paper argued that there's something  wrong with that learned model.  Any of you remember what that was?"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 296.12,
+            "end": 307.52,
+            "text": " Someone who hasn't talked today, please?  Yeah, in the back.  It was that those with asthma had more aggressive treatment.  So that means that they had a higher chance of surviving.  Patients with asthma had more aggressive treatment."
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 307.52,
+            "end": 317.11999999999995,
+            "text": " In particular, they might have been  admitted to the intensive care unit  for more careful vigilance.  And as a result, they had better outcomes.  Yes, that's exactly right."
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 317.11999999999995,
+            "end": 330.35999999999996,
+            "text": " So the real story behind this is that risk stratification,  as we talked about in the last couple weeks,  it's used to drive interventions.  And those interventions, if they happened in the past data,  would change the outcomes."
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 330.35999999999996,
+            "end": 340.44,
+            "text": " So in this case, you might imagine  using the learned predictive model  to say a new patient comes in.  This new patient has asthma.  And so we're going to say they're low risk."
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 340.44,
+            "end": 351.12,
+            "text": " And if we took a naive action based on that prediction,  we'd say, OK, let's send them home.  They're at low risk of dying.  But if we did that, we could be killing people.  Because the reason why they were low risk"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 351.12,
+            "end": 366.08,
+            "text": " is because they had those interventions in the past.  So here's what's going on in a picture.  You have your data, x.  And you're trying to make a prediction at some point  in time, let's say, emergency department triage."
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 366.08,
+            "end": 382.32000000000005,
+            "text": " You want to predict some outcome y,  let's say, whether the patient dies at some defined  point in the future.  Now, the challenge is that, as stated in the machine learning  task that you saw there, all you had access to was x and y,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 382.32000000000005,
+            "end": 396.92,
+            "text": " the covariates, the features, and the outcome.  And so you're predicting y from x,  but you're marginalizing over everything  that happens in between, in this case, the treatment.  So the good outcomes, people surviving,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 396.92,
+            "end": 408.2,
+            "text": " might have been due to what's going on in between.  But what's going on in between is not even  the data necessarily.  So how do we address this problem?  Well, the first thing I want you to think about"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 408.2,
+            "end": 421.28,
+            "text": " is, can we even recognize that this is a problem?  And that's where that article really  suggests that using an intelligible model, a model  that you can introspect and try to understand a little bit,  is actually really important for even recognizing"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 421.28,
+            "end": 433.36,
+            "text": " that weird things are happening.  And this is a topic which we will talk about in a lecture  towards the end of the semester.  And much more depth, we'll talk about algorithms  interpreting machine learning models."
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 433.36,
+            "end": 443.36,
+            "text": " So that's important.  You've got to recognize what's going on.  But what do you do about it?  So here are some hacks.  Hack number one, modify the model."
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 443.36,
+            "end": 456.8,
+            "text": " This is the solution that was proposed in the paper you read.  They said, OK, if it's a simple rule-based prediction  that the learning algorithm outputs to you,  you could see the rule that doesn't make sense.  You could use your clinical insight"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 456.8,
+            "end": 469.68,
+            "text": " to recognize it doesn't make sense.  You might even be able to explain why it happened.  And then you just remove that rule.  So you manually modify the model to push it towards something  that's more sensible."
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 469.68,
+            "end": 481.84000000000003,
+            "text": " So that's what was suggested.  I think it's nonsense.  I don't think that's ever going to work in today's world.  In today's world of high-dimensional models,  there's always going to be surrogates which are somehow"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 481.84000000000003,
+            "end": 490.8,
+            "text": " picked up by your learning algorithm  that you will not even recognize.  And it'll be really hard to modify it  in the way that you want.  Maybe it's impossible using a simple approach."
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 490.8,
+            "end": 498.98,
+            "text": " By the way, another interesting research question.  How do you actually make this work  in a high-dimensional setting?  But for now, let's say we don't know how to do it  in a high-dimensional setting."
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 498.98,
+            "end": 512.38,
+            "text": " So what are your other choices?  Hack number two is to redefine the outcome altogether,  to change what you're predicting.  So for example, if you go back to this picture,  and instead of trying to predict why death,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 512.38,
+            "end": 526.74,
+            "text": " if you could try to find some surrogate for the thing you  care about, which is pretreatment,  and you predict that thing instead,  then you'll be back in business.  And so for example, in one of the optional readings for,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 526.74,
+            "end": 541.86,
+            "text": " actually, I think in the second required reading  for today's class, it was a paper about risk stratification  for sepsis, which is often caused by infection.  And what they show in that article  is that there are laboratory test results, such as lactate"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 541.86,
+            "end": 557.72,
+            "text": " and there are others, which can give you a hint that this  patient might be on a path to clinical deterioration.  And that test might precede the interventions  to try to take care of that condition.  And so if you change your outcome"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 557.72,
+            "end": 576.0999999999999,
+            "text": " to be predicting that surrogate, then you're  getting around this problem that I just pointed out.  Now, a third hack is from one of the optional readings  from today's lecture, this paper by Suchi Saria and her students  from Science Translational Medicine 2015."
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 576.0999999999999,
+            "end": 585.9,
+            "text": " It's a really well-written paper.  I highly recommend reading it.  And in that paper, they suggest formalizing the problem  as one of censoring, which is what  we'll be talking about for the very last third"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 585.9,
+            "end": 598.8199999999999,
+            "text": " of today's lecture.  In particular, what they say is, suppose  you see that a patient is treated for the condition.  Let's say they're treated for sepsis.  Then if the patient is treated for that condition,"
+        },
+        {
+            "number": "lec5",
+            "title": "part.005.mp3",
+            "start": 598.8199999999999,
+            "end": 601.14,
+            "text": " then we don't know what the condition is."
+        }
+    ],
+    "text": " the ICD-10 data, you don't want to just throw away the ICD-9 data, is there a way to use it? So the naive answer, which is what the community is largely using today, is come up with a mapping. Come up with a manual mapping from ICD-9 to ICD-10 so that you can manually transform your data into this new format such that the models you learn from this older time is useful in the future time. That's the boring and simple answer. But I think we could do much better. For example, we could learn new representations of the data. We could learn that mapping directly in order to optimize for your most recent performance. And there's a whole bunch more that we can talk about later. If there was indeed a non-stationary change, this would enable you to detect it, but this does not ensure robustness to future? Correct. So this allows you to detect that a non-stationarity has happened. And it allows you to say that your model is going to generalize to 2014, 2016. But of course, that doesn't mean that your model's going to generalize to 2016, 2018. And so how do you do that? How do you get confidence in that? Well, that's a really interesting research question. We don't have good answers to that today. From a practical perspective, the best I can answer, the best I can offer you today is build in these checks and balances all the time. So continuously evaluate how you're doing on the most recent data. If you see big changes, throw a red flag. Build more checks and balances into your deployment process. If you see a bunch of patients who are getting predicted probabilities of 1, and in the past you never predicted probability 1, that might tell you something. And much later in the semester, we'll talk about robust machine learning approaches. For example, approaches that have been designed to be robust against adversaries. And those type of approaches as well will allow you to be much more robust to particular types of data set shift, of which non-stationarity is one example. It's a big open research field. Yeah? So just to make sure I have the other thing correct, theoretically, if you could map everything from the old data set to the new data set, like the encodings, would it still be OK, like the results you get on the future data set? If you could do a perfect mapping and it's one to one and the distributions of those things also didn't change, then yeah. Really what you need to assess is, is there data set shift? Is your training distribution after mapping the same as your testing distribution? And the answer is yes, you're all good. If you're not, you're in trouble. Yep? What's the test set and the train set here? What's used here, one and three? So one is using data only from 2007 and 2013. Three is using data only from 2014 and 2016. In the case, if the outcome you care about happens in 2007, 2013, then that observation would be not. You could, wouldn't be using it. Yeah, so for the diabetes problem, there's all sorts of inclusion and exclusion criteria that you have to deal with. For what I'm showing you here, I'm talking about a setting where you might be making multiple predictions for patients across time. So it's a much more myopic prediction task. But one can come up with an analogy to this for the diabetes setting. Like, for example, just hold out half of the patients at random, and then for your training set, use data up to 2009 and evaluate on data only up to 2013. And for your test set, pretend as if it was January 1, 2013, and look at performance up to 2017. And so that would be, you're changing your prediction time to use more recent data. So the next subtlety is, here's a name that I put on data. This isn't a standard name. This is what I'm calling intervention-tainted outcomes. And so the example here came from your reading for today. The reading was this paper on intelligible models for health care, predicting pneumonia risk in hospital 30 day admissions from K to D, 2015. So in that paper, they give an example. It's a very old example of trying to use a predictive model to understand a patient's risk of mortality when they come into the hospital. And what they learned in this, they used a rule-based learning algorithm. And what they discovered was a rule that said, if the patient has asthma, then they have low risk of dying. So these are all patients who have pneumonia. So a patient who comes in with pneumonia and asthma has a lower risk of dying than a patient who comes in with pneumonia and does not have a history of asthma. That's what this rule says. And this paper argued that there's something wrong with that learned model. Any of you remember what that was? Someone who hasn't talked today, please? Yeah, in the back. It was that those with asthma had more aggressive treatment. So that means that they had a higher chance of surviving. Patients with asthma had more aggressive treatment. In particular, they might have been admitted to the intensive care unit for more careful vigilance. And as a result, they had better outcomes. Yes, that's exactly right. So the real story behind this is that risk stratification, as we talked about in the last couple weeks, it's used to drive interventions. And those interventions, if they happened in the past data, would change the outcomes. So in this case, you might imagine using the learned predictive model to say a new patient comes in. This new patient has asthma. And so we're going to say they're low risk. And if we took a naive action based on that prediction, we'd say, OK, let's send them home. They're at low risk of dying. But if we did that, we could be killing people. Because the reason why they were low risk is because they had those interventions in the past. So here's what's going on in a picture. You have your data, x. And you're trying to make a prediction at some point in time, let's say, emergency department triage. You want to predict some outcome y, let's say, whether the patient dies at some defined point in the future. Now, the challenge is that, as stated in the machine learning task that you saw there, all you had access to was x and y, the covariates, the features, and the outcome. And so you're predicting y from x, but you're marginalizing over everything that happens in between, in this case, the treatment. So the good outcomes, people surviving, might have been due to what's going on in between. But what's going on in between is not even the data necessarily. So how do we address this problem? Well, the first thing I want you to think about is, can we even recognize that this is a problem? And that's where that article really suggests that using an intelligible model, a model that you can introspect and try to understand a little bit, is actually really important for even recognizing that weird things are happening. And this is a topic which we will talk about in a lecture towards the end of the semester. And much more depth, we'll talk about algorithms interpreting machine learning models. So that's important. You've got to recognize what's going on. But what do you do about it? So here are some hacks. Hack number one, modify the model. This is the solution that was proposed in the paper you read. They said, OK, if it's a simple rule-based prediction that the learning algorithm outputs to you, you could see the rule that doesn't make sense. You could use your clinical insight to recognize it doesn't make sense. You might even be able to explain why it happened. And then you just remove that rule. So you manually modify the model to push it towards something that's more sensible. So that's what was suggested. I think it's nonsense. I don't think that's ever going to work in today's world. In today's world of high-dimensional models, there's always going to be surrogates which are somehow picked up by your learning algorithm that you will not even recognize. And it'll be really hard to modify it in the way that you want. Maybe it's impossible using a simple approach. By the way, another interesting research question. How do you actually make this work in a high-dimensional setting? But for now, let's say we don't know how to do it in a high-dimensional setting. So what are your other choices? Hack number two is to redefine the outcome altogether, to change what you're predicting. So for example, if you go back to this picture, and instead of trying to predict why death, if you could try to find some surrogate for the thing you care about, which is pretreatment, and you predict that thing instead, then you'll be back in business. And so for example, in one of the optional readings for, actually, I think in the second required reading for today's class, it was a paper about risk stratification for sepsis, which is often caused by infection. And what they show in that article is that there are laboratory test results, such as lactate and there are others, which can give you a hint that this patient might be on a path to clinical deterioration. And that test might precede the interventions to try to take care of that condition. And so if you change your outcome to be predicting that surrogate, then you're getting around this problem that I just pointed out. Now, a third hack is from one of the optional readings from today's lecture, this paper by Suchi Saria and her students from Science Translational Medicine 2015. It's a really well-written paper. I highly recommend reading it. And in that paper, they suggest formalizing the problem as one of censoring, which is what we'll be talking about for the very last third of today's lecture. In particular, what they say is, suppose you see that a patient is treated for the condition. Let's say they're treated for sepsis. Then if the patient is treated for that condition, then we don't know what the condition is."
+}

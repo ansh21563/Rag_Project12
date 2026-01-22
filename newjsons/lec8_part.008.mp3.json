@@ -1,0 +1,89 @@
+{
+    "chunks": [
+        {
+            "number": "lec8",
+            "title": "part.008.mp3",
+            "start": 0.0,
+            "end": 15.200000000000001,
+            "text": " about it, claims that these examples are not even  cherry-picked.  If you go to that page and pick sample 1, 2, 3, 4, 5, 6,  et cetera, you get different examples  that they claim are not cherry-picked."
+        },
+        {
+            "number": "lec8",
+            "title": "part.008.mp3",
+            "start": 15.200000000000001,
+            "end": 30.54,
+            "text": " And every one of them is really good.  I mean, you could imagine this being an actual article  about this actual event.  So somehow or other, in this enormous model  and with this transformer technology"
+        },
+        {
+            "number": "lec8",
+            "title": "part.008.mp3",
+            "start": 30.54,
+            "end": 48.879999999999995,
+            "text": " and with the multitask training that they've done,  they have managed to capture so much  of the regularity of the English language  that they can generate these fake news articles based  on a prompt and make them look unbelievably realistic."
+        },
+        {
+            "number": "lec8",
+            "title": "part.008.mp3",
+            "start": 48.879999999999995,
+            "end": 64.32,
+            "text": " Now, interestingly, they have chosen  not to release that trained model  because they're worried that people will, in fact, do this  and that they will generate fake news articles all the time.  They've released a much smaller model"
+        },
+        {
+            "number": "lec8",
+            "title": "part.008.mp3",
+            "start": 64.32,
+            "end": 81.44,
+            "text": " that is not nearly as good in terms of its realism.  So that's the state of the art in language modeling  at the moment.  And as I say, the general domain is ahead of the medical domain.  But you can bet that there are tons of people"
+        },
+        {
+            "number": "lec8",
+            "title": "part.008.mp3",
+            "start": 81.44,
+            "end": 99.16,
+            "text": " who are sitting around looking at exactly these results  and saying, well, we ought to be able to take advantage of this  to build much better language models for the medical domain  and to exploit them in order to do phenotyping,  in order to do entity recognition,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.008.mp3",
+            "start": 99.16,
+            "end": 116.92,
+            "text": " in order to do inference, in order to do question  answering, in order to do any of these kinds of topics.  Now, I was talking to Patrick Winston,  who is one of the good old-fashioned AI people  as he characterizes himself."
+        },
+        {
+            "number": "lec8",
+            "title": "part.008.mp3",
+            "start": 116.92,
+            "end": 134.84,
+            "text": " And the thing that's a little troublesome about this  is that this technology has virtually nothing  to do with anything that we understand about language  or about inference or about question answering  or about anything."
+        },
+        {
+            "number": "lec8",
+            "title": "part.008.mp3",
+            "start": 134.84,
+            "end": 149.2,
+            "text": " And so one is left with this queasy feeling  that here is a wonderful engineering solution  to a whole set of problems.  But it's unclear how it relates to the original goal  of artificial intelligence, which"
+        },
+        {
+            "number": "lec8",
+            "title": "part.008.mp3",
+            "start": 149.2,
+            "end": 164.6,
+            "text": " is to understand something about human intelligence  by simulating it in a computer.  Maybe our BCS friends will discover  that there are, in fact, transformer mechanisms deeply  buried in our brain."
+        },
+        {
+            "number": "lec8",
+            "title": "part.008.mp3",
+            "start": 164.6,
+            "end": 177.12,
+            "text": " But I would be surprised if that turned out  to be exactly the case.  But perhaps there is something like that going on.  And so this leaves an interesting scientific  conundrum of exactly what have we"
+        },
+        {
+            "number": "lec8",
+            "title": "part.008.mp3",
+            "start": 177.12,
+            "end": 198.32,
+            "text": " learned from this type of very, very successful model building.  OK, thank you.  Thank you."
+        }
+    ],
+    "text": " about it, claims that these examples are not even cherry-picked. If you go to that page and pick sample 1, 2, 3, 4, 5, 6, et cetera, you get different examples that they claim are not cherry-picked. And every one of them is really good. I mean, you could imagine this being an actual article about this actual event. So somehow or other, in this enormous model and with this transformer technology and with the multitask training that they've done, they have managed to capture so much of the regularity of the English language that they can generate these fake news articles based on a prompt and make them look unbelievably realistic. Now, interestingly, they have chosen not to release that trained model because they're worried that people will, in fact, do this and that they will generate fake news articles all the time. They've released a much smaller model that is not nearly as good in terms of its realism. So that's the state of the art in language modeling at the moment. And as I say, the general domain is ahead of the medical domain. But you can bet that there are tons of people who are sitting around looking at exactly these results and saying, well, we ought to be able to take advantage of this to build much better language models for the medical domain and to exploit them in order to do phenotyping, in order to do entity recognition, in order to do inference, in order to do question answering, in order to do any of these kinds of topics. Now, I was talking to Patrick Winston, who is one of the good old-fashioned AI people as he characterizes himself. And the thing that's a little troublesome about this is that this technology has virtually nothing to do with anything that we understand about language or about inference or about question answering or about anything. And so one is left with this queasy feeling that here is a wonderful engineering solution to a whole set of problems. But it's unclear how it relates to the original goal of artificial intelligence, which is to understand something about human intelligence by simulating it in a computer. Maybe our BCS friends will discover that there are, in fact, transformer mechanisms deeply buried in our brain. But I would be surprised if that turned out to be exactly the case. But perhaps there is something like that going on. And so this leaves an interesting scientific conundrum of exactly what have we learned from this type of very, very successful model building. OK, thank you. Thank you."
+}

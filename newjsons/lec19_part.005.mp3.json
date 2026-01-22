@@ -1,0 +1,292 @@
+{
+    "chunks": [
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 0.0,
+            "end": 11.74,
+            "text": " And this should look a lot like what  you would see when you do topic modeling on a text corpora.  You would discover a topic.  This is analogous to a topic.  It's a discrete topic, meaning it either occurs or doesn't"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 11.74,
+            "end": 25.86,
+            "text": " occur for a patient.  And you would discover some word topic distribution.  This is analogous to that word topic  distribution for a topic in a topic model.  So one could then use the model to answer"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 25.86,
+            "end": 41.14,
+            "text": " a couple of the original questions we set out to solve.  The first one is, given a patient's data, which  I'm illustrating here on the bottom,  I have artificially separated it out  into three different comorbidities."
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 41.14,
+            "end": 54.900000000000006,
+            "text": " And a star denotes an observation  of a data type of that one.  But this was artificially done by us.  And it was not given to the learning algorithm.  One can infer when a patient initiated,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 54.900000000000006,
+            "end": 64.24,
+            "text": " started with each one of these comorbidities,  and also when.  So for the full three-year time range  that we have data for the patient,  what stage was the patient in in the disease"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 64.24,
+            "end": 80.9,
+            "text": " at any one point in time?  So this model infers that the patient starts out in stage 1.  And about half the year through the data collection process  transitions into stage 2 of COPD.  Another thing that one could do using this model"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 80.9,
+            "end": 93.25999999999999,
+            "text": " is to simulate from the model and answer  the question of what would, let's say, a 20-year trajectory  of the disease look like.  Here I'm showing you a 10-year trajectory.  And again, only one to three years of data"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 93.25999999999999,
+            "end": 106.46,
+            "text": " was used for any one patient during learning.  So this is the first time where you  see those axes, those comorbidities, really  start to show up as being important as the way of reading  out from the model."
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 106.46,
+            "end": 118.26,
+            "text": " Here we've thrown away those O's, those diagnosis codes,  altogether.  We only care about what we conjecture  is truly happening to the patient, those x variables,  which are unobserved during training."
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 118.26,
+            "end": 136.82,
+            "text": " So what we conjecture is that kidney disease is very uncommon  in stage 1 of the disease and increases slowly  as you transition from stage 2, stage 3,  to stage 4 of the disease, and then really bumps up  towards stage 5 and stage 6 of the disease."
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 136.82,
+            "end": 155.42,
+            "text": " So you should read this as saying  that in stage 6 of the disease, over 60% of people  have kidney disease.  Now, the time intervals here, so how I've chosen these,  where to put these triangles, I've"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 155.42,
+            "end": 172.7,
+            "text": " chosen them based on the average amount of time  it takes to transition from one stage to the next stage  according to the learned parameters of the model.  So you can see that stages 1, 2, and 3, and 4  take a long amount of time to transition"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 172.7,
+            "end": 182.38,
+            "text": " between those four stages.  And then there's a very small amount  of time between transitioning from stage 5 to stage 6  on average.  So that's for kidney disease."
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 182.38,
+            "end": 198.54,
+            "text": " One could also read this out for other of the comorbidities.  So in orange here, in yellow here is diabetes.  In black here is musculoskeletal conditions.  And in red here is cardiovascular disease.  And so one of the interesting inferences"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 198.54,
+            "end": 211.14,
+            "text": " made by this learning algorithm is that even in stage 1 of COPD,  very early in the trajectory, we are  seeing patients with large amounts  of cardiovascular disease.  Again, this is something that one could look"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 211.14,
+            "end": 223.34,
+            "text": " at the medical literature to see does it  align with what we expect.  And it does.  So even in patients with mild to moderate CPD,  the leading cause of morbidity is cardiovascular disease."
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 223.34,
+            "end": 240.7,
+            "text": " Again, this is just a sanity check  that what this model is learning for a common disease  actually aligns with medical knowledge.  So that's all I wanted to say about this probabilistic model  approach to disease progression modeling"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 240.7,
+            "end": 250.98,
+            "text": " from cross-sectional data.  I want you to hold your questions  so I can get through the rest of the material.  And you could ask me after class.  So next, I want to talk about these pseudotime methods, which"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 250.98,
+            "end": 268.68,
+            "text": " are a very different approach for trying to align patients  into early to late disease stage.  These approaches were really popularized in the last five  years due to the explosion in single-cell sequencing  experiments in the biology community."
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 268.68,
+            "end": 285.59999999999997,
+            "text": " Single-cell sequencing is a way to really understand  not just what is the average gene expression,  but on a cell-by-cell basis, can we  understand what is expressed in each cell.  So at a very high level, the way this works"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 285.59999999999997,
+            "end": 300.96,
+            "text": " is you take a solid tissue.  You do a number of procedures in order  to isolate out individual cells from that tissue.  Then you're going to extract the RNA  from those individual cells."
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 300.96,
+            "end": 319.47999999999996,
+            "text": " You go through another complex procedure, which somehow  barcodes each of the RNA from each individual cell,  mixes them all together, does sequencing of it,  and then deconvolves it so that you  can see what was the original RNA expression for each"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 319.47999999999996,
+            "end": 341.91999999999996,
+            "text": " of the individual cells.  Now, the goal of these pseudotime algorithms  is to take that type of data and then  to attempt to align cells to some trajectory.  So if you look at the very top of this figure, part figure A,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 341.92,
+            "end": 366.96000000000004,
+            "text": " that's the picture that you should have in your mind.  In the real world, cells are evolving with time.  For example, B cells will have a well-characterized evolution  between different cellular states.  And what we'd like to be able to understand,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 366.96000000000004,
+            "end": 382.56,
+            "text": " given that you have cross-sectional data,  so you can imagine you have a whole collection of cells,  each one in a different stage of differentiation,  could you somehow order them into where  they were in different stages of differentiation?"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 382.56,
+            "end": 393.22,
+            "text": " So that's the goal.  We want to take this.  So there exists some true ordering  that I'm showing from dark to light.  The capture process is going to ignore what the ordering"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 393.22,
+            "end": 406.68,
+            "text": " information was, because all we're doing  is getting a collection of cells that are in different stages.  And then we're going to use this pseudotime method  to try to re-sort them so that you could figure out,  oh, these were the cells in the early stage,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 406.68,
+            "end": 420.16,
+            "text": " and these were the cells in the late stage.  And of course, there's an analogy here  to the pictures I showed you in the earlier part of the lecture.  Once you have this alignment of cells into stages,  then you could answer some really interesting scientific"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 420.16,
+            "end": 435.8,
+            "text": " questions.  For example, you could ask a variety of different genes  which genes are expressed at which points in time.  And you might see that gene A is very highly expressed  and very early in this cell's differentiation"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 435.8,
+            "end": 452.88,
+            "text": " and is not expressed very much towards the end.  And that might give you new biological insights.  So these methods could immediately  be applied, I believe, to disease progression modeling,  where I want you to think about each cell as now a patient."
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 452.88,
+            "end": 466.68,
+            "text": " And that patient has a number of observations.  For this data, the observations are  an expression for that cell.  But in our data, the observations  might be symptoms that we observe for the patient,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 466.68,
+            "end": 478.44,
+            "text": " for example.  And then the goal is, given those cross-sectional  observations, to sort them.  And once you have that sorting, then you  could answer scientific questions,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 478.44,
+            "end": 492.52,
+            "text": " such as I mentioned of a number of different genes, which  genes are expressed when.  So here I'm showing you the density  of when this particular gene is expressed  as a function of pseudotime."
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 492.52,
+            "end": 505.56,
+            "text": " Analogously for disease progression modeling,  you should think of that as being a symptom.  So you could ask, OK, suppose there  is some true progression of the disease.  When do patients typically develop diabetes"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 505.56,
+            "end": 517.2,
+            "text": " or cardiovascular symptoms?  And so for cardiovascular, going back to the COPD example,  you might imagine that there's a peak very early in the disease  stage.  Diabetes might be in a later disease stage."
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 517.2,
+            "end": 538.48,
+            "text": " So is the analogy clear?  So this community, which has been developing methods  for studying single-cell gene expression data,  has just exploded in the last 10 years.  So I lost count of how many different methods there are."
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 538.48,
+            "end": 554.88,
+            "text": " But if I had to guess, I'd say 50 to 200 different methods  for this problem.  There was a paper, which is one of the optional readings  for today's lecture, that just came out earlier this month,  which looks at a comparison of these different trajectory"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 554.88,
+            "end": 566.0,
+            "text": " inference methods.  And this picture gives a really interesting illustration  of what are some of the assumptions made  by these algorithms.  So for example, the first question"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 566.0,
+            "end": 578.36,
+            "text": " when you try to figure out which method of these tons  of methods to use is, do you expect  multiple disconnected trajectories?  What might be a reason why you would  expect multiple disconnected trajectories for disease"
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 578.36,
+            "end": 598.92,
+            "text": " progression modeling?  TAs should not answer.  Different subtypes would be an example.  So suppose the answer is no, as we've  been assuming for most of this lecture."
+        },
+        {
+            "number": "lec19",
+            "title": "part.005.mp3",
+            "start": 598.92,
+            "end": 600.92,
+            "text": " Then you might ask."
+        }
+    ],
+    "text": " And this should look a lot like what you would see when you do topic modeling on a text corpora. You would discover a topic. This is analogous to a topic. It's a discrete topic, meaning it either occurs or doesn't occur for a patient. And you would discover some word topic distribution. This is analogous to that word topic distribution for a topic in a topic model. So one could then use the model to answer a couple of the original questions we set out to solve. The first one is, given a patient's data, which I'm illustrating here on the bottom, I have artificially separated it out into three different comorbidities. And a star denotes an observation of a data type of that one. But this was artificially done by us. And it was not given to the learning algorithm. One can infer when a patient initiated, started with each one of these comorbidities, and also when. So for the full three-year time range that we have data for the patient, what stage was the patient in in the disease at any one point in time? So this model infers that the patient starts out in stage 1. And about half the year through the data collection process transitions into stage 2 of COPD. Another thing that one could do using this model is to simulate from the model and answer the question of what would, let's say, a 20-year trajectory of the disease look like. Here I'm showing you a 10-year trajectory. And again, only one to three years of data was used for any one patient during learning. So this is the first time where you see those axes, those comorbidities, really start to show up as being important as the way of reading out from the model. Here we've thrown away those O's, those diagnosis codes, altogether. We only care about what we conjecture is truly happening to the patient, those x variables, which are unobserved during training. So what we conjecture is that kidney disease is very uncommon in stage 1 of the disease and increases slowly as you transition from stage 2, stage 3, to stage 4 of the disease, and then really bumps up towards stage 5 and stage 6 of the disease. So you should read this as saying that in stage 6 of the disease, over 60% of people have kidney disease. Now, the time intervals here, so how I've chosen these, where to put these triangles, I've chosen them based on the average amount of time it takes to transition from one stage to the next stage according to the learned parameters of the model. So you can see that stages 1, 2, and 3, and 4 take a long amount of time to transition between those four stages. And then there's a very small amount of time between transitioning from stage 5 to stage 6 on average. So that's for kidney disease. One could also read this out for other of the comorbidities. So in orange here, in yellow here is diabetes. In black here is musculoskeletal conditions. And in red here is cardiovascular disease. And so one of the interesting inferences made by this learning algorithm is that even in stage 1 of COPD, very early in the trajectory, we are seeing patients with large amounts of cardiovascular disease. Again, this is something that one could look at the medical literature to see does it align with what we expect. And it does. So even in patients with mild to moderate CPD, the leading cause of morbidity is cardiovascular disease. Again, this is just a sanity check that what this model is learning for a common disease actually aligns with medical knowledge. So that's all I wanted to say about this probabilistic model approach to disease progression modeling from cross-sectional data. I want you to hold your questions so I can get through the rest of the material. And you could ask me after class. So next, I want to talk about these pseudotime methods, which are a very different approach for trying to align patients into early to late disease stage. These approaches were really popularized in the last five years due to the explosion in single-cell sequencing experiments in the biology community. Single-cell sequencing is a way to really understand not just what is the average gene expression, but on a cell-by-cell basis, can we understand what is expressed in each cell. So at a very high level, the way this works is you take a solid tissue. You do a number of procedures in order to isolate out individual cells from that tissue. Then you're going to extract the RNA from those individual cells. You go through another complex procedure, which somehow barcodes each of the RNA from each individual cell, mixes them all together, does sequencing of it, and then deconvolves it so that you can see what was the original RNA expression for each of the individual cells. Now, the goal of these pseudotime algorithms is to take that type of data and then to attempt to align cells to some trajectory. So if you look at the very top of this figure, part figure A, that's the picture that you should have in your mind. In the real world, cells are evolving with time. For example, B cells will have a well-characterized evolution between different cellular states. And what we'd like to be able to understand, given that you have cross-sectional data, so you can imagine you have a whole collection of cells, each one in a different stage of differentiation, could you somehow order them into where they were in different stages of differentiation? So that's the goal. We want to take this. So there exists some true ordering that I'm showing from dark to light. The capture process is going to ignore what the ordering information was, because all we're doing is getting a collection of cells that are in different stages. And then we're going to use this pseudotime method to try to re-sort them so that you could figure out, oh, these were the cells in the early stage, and these were the cells in the late stage. And of course, there's an analogy here to the pictures I showed you in the earlier part of the lecture. Once you have this alignment of cells into stages, then you could answer some really interesting scientific questions. For example, you could ask a variety of different genes which genes are expressed at which points in time. And you might see that gene A is very highly expressed and very early in this cell's differentiation and is not expressed very much towards the end. And that might give you new biological insights. So these methods could immediately be applied, I believe, to disease progression modeling, where I want you to think about each cell as now a patient. And that patient has a number of observations. For this data, the observations are an expression for that cell. But in our data, the observations might be symptoms that we observe for the patient, for example. And then the goal is, given those cross-sectional observations, to sort them. And once you have that sorting, then you could answer scientific questions, such as I mentioned of a number of different genes, which genes are expressed when. So here I'm showing you the density of when this particular gene is expressed as a function of pseudotime. Analogously for disease progression modeling, you should think of that as being a symptom. So you could ask, OK, suppose there is some true progression of the disease. When do patients typically develop diabetes or cardiovascular symptoms? And so for cardiovascular, going back to the COPD example, you might imagine that there's a peak very early in the disease stage. Diabetes might be in a later disease stage. So is the analogy clear? So this community, which has been developing methods for studying single-cell gene expression data, has just exploded in the last 10 years. So I lost count of how many different methods there are. But if I had to guess, I'd say 50 to 200 different methods for this problem. There was a paper, which is one of the optional readings for today's lecture, that just came out earlier this month, which looks at a comparison of these different trajectory inference methods. And this picture gives a really interesting illustration of what are some of the assumptions made by these algorithms. So for example, the first question when you try to figure out which method of these tons of methods to use is, do you expect multiple disconnected trajectories? What might be a reason why you would expect multiple disconnected trajectories for disease progression modeling? TAs should not answer. Different subtypes would be an example. So suppose the answer is no, as we've been assuming for most of this lecture. Then you might ask."
+}

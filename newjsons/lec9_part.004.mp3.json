@@ -1,0 +1,348 @@
+{
+    "chunks": [
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 0.0,
+            "end": 16.68,
+            "text": " who writes a lot about the future of medicine.  And he actually goes through tons and tons  of examples of not only the systems that  have been approved by FDA, but also things  that are in the works that he's very optimistic that these will,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 16.68,
+            "end": 33.08,
+            "text": " again, revolutionize the practice of medicine.  Bob Wachter, who wrote the book on the left a couple of years  ago, is a little bit more cautious  because he's chief of medicine at UC San Francisco.  And he wrote this book in response"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 33.08,
+            "end": 49.76,
+            "text": " to them almost killing a kid by giving him  a 39x overdose of a medication.  They didn't quite succeed in killing the kid,  so it turned out OK.  But he was really concerned about"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 49.76,
+            "end": 65.88,
+            "text": " how this wonderful technology led  to such a disastrous outcome.  And so he spent a year studying how these systems are being  used and writes a more cautionary tale.  OK, so let me turn to Adam, who, as I said,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 65.88,
+            "end": 81.0,
+            "text": " is a professor at the Brigham and Harvard Medical School.  And please come and join me, and we can have a conversation.  So my name is Adam Wright.  I'm an associate professor of medicine  at Harvard Medical School."
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 81.0,
+            "end": 90.72,
+            "text": " In that role, I lead a research program,  and I teach the Introduction to Biomedical Informatics courses  at the medical school.  So if you're interested in the topics  that Pete was talking about today,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 90.72,
+            "end": 104.19999999999999,
+            "text": " you should definitely consider cross-registering in BMI 701  or 702 at the medical school.  We certainly always could use a few more  enthusiastic, technically-minded machine learning experts  in our course."
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 104.19999999999999,
+            "end": 117.32000000000001,
+            "text": " And then I have a operational job at Partners.  Partners is the health system that  includes Mass General Hospital and the Brigham  and then some community hospitals.  And I work on Partners eCare, which"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 117.32000000000001,
+            "end": 130.56,
+            "text": " is our kind of cool brand name for Epic.  So Epic is an EHR that we use at Partners.  And I help oversee the clinical decision support there.  So we have a decision support team.  And I'm the clinical lead for monitoring and evaluation."
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 130.56,
+            "end": 141.6,
+            "text": " And so I help make sure that our decision support  systems of the type that Pete's talking about work correctly.  So that's my job at the Brigham and Partners.  Cool.  And I appreciate it very much."
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 141.6,
+            "end": 150.32,
+            "text": " So thanks.  I appreciate the invitation.  It's fun to be here.  So Adam, first obvious question is,  so what kind of decision support systems"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 150.32,
+            "end": 161.24,
+            "text": " have you guys actually put in place?  Absolutely.  So I mean, we've had a long history at the Brigham  and Partners of using decision support.  Historically, we developed our own electronic health record,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 161.24,
+            "end": 170.34,
+            "text": " which was a little bit unusual.  About three years ago, we switched  from our self-developed system to Epic,  which is a very widely used commercial electronic health  record."
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 170.34,
+            "end": 179.22,
+            "text": " And to the point that you gave, we really  started with a lot of medication-related decision  support.  So that's things like drug interaction, alerting.  So you prescribe two drugs that might"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 179.22,
+            "end": 188.4,
+            "text": " interact with each other.  And we use a table, no machine learning  or anything particularly complicated,  that says we think this drug might interact with this.  We raise an alert to the doctor or to the pharmacist."
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 188.4,
+            "end": 197.52,
+            "text": " And they make a decision using their expertise  as the learned intermediary.  But we're going to continue with that prescription.  We also have some dosing support, allergy checking,  and things like that."
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 197.52,
+            "end": 209.32000000000002,
+            "text": " So our first kind of set of decision support  really was around medications.  And then we turned to kind of a broader set of things  like preventive care reminders, so identifying patients  that are overdue for a mammogram or a cap smear"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 209.32000000000002,
+            "end": 222.84,
+            "text": " or that might benefit from a statin or something like that  or a beta blocker in the case of acute myocardial infarction.  And we make suggestions to the doctor  or to other members of the care team to do those things.  Again, those historically have largely been rule-based."
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 222.84,
+            "end": 235.32,
+            "text": " So some experts sat down and wrote Boolean, if-then rules,  using variables that are in a patient's chart.  We have increasingly, though, started  trying to use some predictive models for things  like readmission or whether a patient is"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 235.32,
+            "end": 243.92,
+            "text": " at risk of falling down in the hospital.  A big problem that patients often encounter  is they're in the hospital.  They're kind of delirious.  The hospital is a weird place."
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 243.92,
+            "end": 251.79999999999998,
+            "text": " It's dark.  They get up to go to the bathroom.  They trip on their IV tubing.  And then they fall and are injured.  And so we would like to prevent that from happening"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 251.79999999999998,
+            "end": 261.28,
+            "text": " because that's obviously kind of a bad thing  to happen to you once you're in the hospital.  And so we have some machine-learning-based tools  for predicting patients that are at risk for falls.  And then there is a set of interventions"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 261.28,
+            "end": 273.46,
+            "text": " like putting the bed rails up or putting an alarm that  buzzes if they get out of bed or, in more extreme cases,  having a sitter, like a person who actually  sits in the room with them and tries  to keep them from getting up or assists them to the bathroom"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 273.46,
+            "end": 285.24,
+            "text": " or calls someone who can assist them to the bathroom.  So we have increasingly started using those machine-learning  tools, some of which we get from third parties,  like from our electronic health record vendor,  and some of which we sort of train ourselves"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 285.24,
+            "end": 301.16,
+            "text": " on our own data.  That's a newer pursuit for us is this machine-learning.  So when you have something like a risk model,  how do you decide where to set the threshold?  If I'm at 53% risk of falling, should you"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 301.16,
+            "end": 310.6,
+            "text": " get a sitter to sit by my bedside?  It's complicated, right?  I mean, I would like to say that what we do  is sort of a full kind of utility analysis,  where we say we pay a sitter this much per hour,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 310.6,
+            "end": 325.03999999999996,
+            "text": " and the risk of falling is this much, and the cost of a fall.  Most patients who fall aren't hurt, but some are.  You would sort of calculate the cost benefit  of each of those things and sort of figure out  where on the ROC curve you want to place yourself."
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 325.03999999999996,
+            "end": 337.55999999999995,
+            "text": " In practice, I think we often just play it by ear,  in part because a lot of our things  are intended to be suggestions.  So our threshold for saying to the doctor, hey,  this patient is at elevated risk for a fall,"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 337.55999999999995,
+            "end": 350.52,
+            "text": " consider doing something, is pretty low.  If the system were, say, automatically ordering a sitter,  we might set it higher.  I would say that's an area of research.  I would also say that one challenge we have"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 350.52,
+            "end": 361.52,
+            "text": " is we often set and forget these kinds of systems, right?  And so there's kind of feature drift,  and patients change over time.  We probably should do a better job of then looking back  to see how well they're actually working and making"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 361.52,
+            "end": 378.52,
+            "text": " tweaks to the thresholds.  Really good question.  But these are, of course, very complicated decisions.  I remember 50 years ago talking to some people in the Air  Force about how much should they invest in safety measures."
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 378.52,
+            "end": 390.36,
+            "text": " And they had a utility theoretic model that said, OK,  how much does it cost to replace a pilot if you kill him?  Yeah.  Yikes.  Yeah."
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 390.36,
+            "end": 398.90000000000003,
+            "text": " Yeah.  And this was not publicized a lot.  No, I mean, we do calculate things  like quality-adjusted life years and disability-adjusted life  years."
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 398.90000000000003,
+            "end": 408.84,
+            "text": " So there is, in all of medicine, right,  as people deploy resources, kind of this calculus.  And I think we tend to assign a really high weight  to patient harm, right?  Because patient harm is the, if you"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 408.84,
+            "end": 420.2,
+            "text": " think about the kind of the oath that doctors swear, right?  First, do no harm.  The worst thing we can do is harm you in the hospital.  So I think we have a pretty strong aversion to do that.  But it's hard to, it's very hard to weigh these things."
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 420.2,
+            "end": 431.64,
+            "text": " I think one of the challenges we often run into  is that different doctors would make different decisions, right?  So if you put the same patient in front of 10 doctors  and said, does this patient need a sitter,  maybe half would say yes and half would say no."
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 431.64,
+            "end": 441.91999999999996,
+            "text": " And so it's especially hard to know  what to do with a decision support system  if the humans can't agree on what you should  do in a particular situation.  So the other thing we talked about on the phone yesterday"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 441.91999999999996,
+            "end": 464.28000000000003,
+            "text": " is I was concerned a few years ago I  was visiting one of these august Boston area hospitals  and asked to see an example of somebody interacting  with this computerized physician order entry system.  And the senior resident who was taking me around"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 464.28000000000003,
+            "end": 479.76000000000005,
+            "text": " went up to the computer and said,  well, I think I remember how to use this.  And I said, wait a minute.  This is something you're expected to use daily.  But in reality, what happens is that it's not"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 479.76000000000005,
+            "end": 497.8,
+            "text": " the senior doctors or even the medium senior doctors.  It's the interns and the junior residents  who actually use the system.  And the concern I had was that it  takes a junior resident with a lot of guts"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 497.8,
+            "end": 514.28,
+            "text": " to go up to the chief of your service  and say, Dr. X, even though you asked me to order  this drug for this patient, the computer  is arguing back that you should use this other one instead.  Yeah, it does."
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 514.28,
+            "end": 525.14,
+            "text": " And in fact, I actually thought of this  a little more after we chatted about it.  We've heard from residents that people have said to them,  if you dare page me with an epic suggestion  in the middle of the night, I'll never talk to you again."
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 525.14,
+            "end": 540.94,
+            "text": " So just override all of those alerts.  So I think that one of the challenges is,  and there's some, it was a cool ability on our part,  is that a lot of these alerts we give  are to have a PPV of 10% or 20%."
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 540.94,
+            "end": 550.38,
+            "text": " They are usually wrong.  We think it's really important, so we really  raise these alerts a lot.  But people experience this kind of alert fatigue,  or what people call alarm fatigue."
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 550.38,
+            "end": 558.0600000000001,
+            "text": " You see this in cockpits, too.  But people get too many alerts, and they  start ignoring the alerts.  They assume that they're wrong.  They tell the resident not to page them"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 558.0600000000001,
+            "end": 569.94,
+            "text": " in the middle of the night, no matter what the computer says.  So I do think that we have some responsibility to improve  the accuracy of these alerts.  And I do think machine learning could help us.  We're actually just having a meeting about a pneumococcal"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 569.94,
+            "end": 581.64,
+            "text": " vaccination alert.  This is something that helps people remember  to prescribe this vaccination to help you not get pneumonia.  It takes four or five variables into account.  We started looking at the cases where people would override"
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 581.64,
+            "end": 593.46,
+            "text": " the alert, and they were mostly appropriate.  So the patient is in a really extreme state right now.  Or conversely, the patient is close to the end of life,  and they're not going to benefit from this vaccination.  Or the patient has a phobia of needles."
+        },
+        {
+            "number": "lec9",
+            "title": "part.004.mp3",
+            "start": 593.46,
+            "end": 600.5799999999999,
+            "text": " The patient has an insurance problem.  And we think there's probably more like 30 or 40 variables  that you would need to take into account."
+        }
+    ],
+    "text": " who writes a lot about the future of medicine. And he actually goes through tons and tons of examples of not only the systems that have been approved by FDA, but also things that are in the works that he's very optimistic that these will, again, revolutionize the practice of medicine. Bob Wachter, who wrote the book on the left a couple of years ago, is a little bit more cautious because he's chief of medicine at UC San Francisco. And he wrote this book in response to them almost killing a kid by giving him a 39x overdose of a medication. They didn't quite succeed in killing the kid, so it turned out OK. But he was really concerned about how this wonderful technology led to such a disastrous outcome. And so he spent a year studying how these systems are being used and writes a more cautionary tale. OK, so let me turn to Adam, who, as I said, is a professor at the Brigham and Harvard Medical School. And please come and join me, and we can have a conversation. So my name is Adam Wright. I'm an associate professor of medicine at Harvard Medical School. In that role, I lead a research program, and I teach the Introduction to Biomedical Informatics courses at the medical school. So if you're interested in the topics that Pete was talking about today, you should definitely consider cross-registering in BMI 701 or 702 at the medical school. We certainly always could use a few more enthusiastic, technically-minded machine learning experts in our course. And then I have a operational job at Partners. Partners is the health system that includes Mass General Hospital and the Brigham and then some community hospitals. And I work on Partners eCare, which is our kind of cool brand name for Epic. So Epic is an EHR that we use at Partners. And I help oversee the clinical decision support there. So we have a decision support team. And I'm the clinical lead for monitoring and evaluation. And so I help make sure that our decision support systems of the type that Pete's talking about work correctly. So that's my job at the Brigham and Partners. Cool. And I appreciate it very much. So thanks. I appreciate the invitation. It's fun to be here. So Adam, first obvious question is, so what kind of decision support systems have you guys actually put in place? Absolutely. So I mean, we've had a long history at the Brigham and Partners of using decision support. Historically, we developed our own electronic health record, which was a little bit unusual. About three years ago, we switched from our self-developed system to Epic, which is a very widely used commercial electronic health record. And to the point that you gave, we really started with a lot of medication-related decision support. So that's things like drug interaction, alerting. So you prescribe two drugs that might interact with each other. And we use a table, no machine learning or anything particularly complicated, that says we think this drug might interact with this. We raise an alert to the doctor or to the pharmacist. And they make a decision using their expertise as the learned intermediary. But we're going to continue with that prescription. We also have some dosing support, allergy checking, and things like that. So our first kind of set of decision support really was around medications. And then we turned to kind of a broader set of things like preventive care reminders, so identifying patients that are overdue for a mammogram or a cap smear or that might benefit from a statin or something like that or a beta blocker in the case of acute myocardial infarction. And we make suggestions to the doctor or to other members of the care team to do those things. Again, those historically have largely been rule-based. So some experts sat down and wrote Boolean, if-then rules, using variables that are in a patient's chart. We have increasingly, though, started trying to use some predictive models for things like readmission or whether a patient is at risk of falling down in the hospital. A big problem that patients often encounter is they're in the hospital. They're kind of delirious. The hospital is a weird place. It's dark. They get up to go to the bathroom. They trip on their IV tubing. And then they fall and are injured. And so we would like to prevent that from happening because that's obviously kind of a bad thing to happen to you once you're in the hospital. And so we have some machine-learning-based tools for predicting patients that are at risk for falls. And then there is a set of interventions like putting the bed rails up or putting an alarm that buzzes if they get out of bed or, in more extreme cases, having a sitter, like a person who actually sits in the room with them and tries to keep them from getting up or assists them to the bathroom or calls someone who can assist them to the bathroom. So we have increasingly started using those machine-learning tools, some of which we get from third parties, like from our electronic health record vendor, and some of which we sort of train ourselves on our own data. That's a newer pursuit for us is this machine-learning. So when you have something like a risk model, how do you decide where to set the threshold? If I'm at 53% risk of falling, should you get a sitter to sit by my bedside? It's complicated, right? I mean, I would like to say that what we do is sort of a full kind of utility analysis, where we say we pay a sitter this much per hour, and the risk of falling is this much, and the cost of a fall. Most patients who fall aren't hurt, but some are. You would sort of calculate the cost benefit of each of those things and sort of figure out where on the ROC curve you want to place yourself. In practice, I think we often just play it by ear, in part because a lot of our things are intended to be suggestions. So our threshold for saying to the doctor, hey, this patient is at elevated risk for a fall, consider doing something, is pretty low. If the system were, say, automatically ordering a sitter, we might set it higher. I would say that's an area of research. I would also say that one challenge we have is we often set and forget these kinds of systems, right? And so there's kind of feature drift, and patients change over time. We probably should do a better job of then looking back to see how well they're actually working and making tweaks to the thresholds. Really good question. But these are, of course, very complicated decisions. I remember 50 years ago talking to some people in the Air Force about how much should they invest in safety measures. And they had a utility theoretic model that said, OK, how much does it cost to replace a pilot if you kill him? Yeah. Yikes. Yeah. Yeah. And this was not publicized a lot. No, I mean, we do calculate things like quality-adjusted life years and disability-adjusted life years. So there is, in all of medicine, right, as people deploy resources, kind of this calculus. And I think we tend to assign a really high weight to patient harm, right? Because patient harm is the, if you think about the kind of the oath that doctors swear, right? First, do no harm. The worst thing we can do is harm you in the hospital. So I think we have a pretty strong aversion to do that. But it's hard to, it's very hard to weigh these things. I think one of the challenges we often run into is that different doctors would make different decisions, right? So if you put the same patient in front of 10 doctors and said, does this patient need a sitter, maybe half would say yes and half would say no. And so it's especially hard to know what to do with a decision support system if the humans can't agree on what you should do in a particular situation. So the other thing we talked about on the phone yesterday is I was concerned a few years ago I was visiting one of these august Boston area hospitals and asked to see an example of somebody interacting with this computerized physician order entry system. And the senior resident who was taking me around went up to the computer and said, well, I think I remember how to use this. And I said, wait a minute. This is something you're expected to use daily. But in reality, what happens is that it's not the senior doctors or even the medium senior doctors. It's the interns and the junior residents who actually use the system. And the concern I had was that it takes a junior resident with a lot of guts to go up to the chief of your service and say, Dr. X, even though you asked me to order this drug for this patient, the computer is arguing back that you should use this other one instead. Yeah, it does. And in fact, I actually thought of this a little more after we chatted about it. We've heard from residents that people have said to them, if you dare page me with an epic suggestion in the middle of the night, I'll never talk to you again. So just override all of those alerts. So I think that one of the challenges is, and there's some, it was a cool ability on our part, is that a lot of these alerts we give are to have a PPV of 10% or 20%. They are usually wrong. We think it's really important, so we really raise these alerts a lot. But people experience this kind of alert fatigue, or what people call alarm fatigue. You see this in cockpits, too. But people get too many alerts, and they start ignoring the alerts. They assume that they're wrong. They tell the resident not to page them in the middle of the night, no matter what the computer says. So I do think that we have some responsibility to improve the accuracy of these alerts. And I do think machine learning could help us. We're actually just having a meeting about a pneumococcal vaccination alert. This is something that helps people remember to prescribe this vaccination to help you not get pneumonia. It takes four or five variables into account. We started looking at the cases where people would override the alert, and they were mostly appropriate. So the patient is in a really extreme state right now. Or conversely, the patient is close to the end of life, and they're not going to benefit from this vaccination. Or the patient has a phobia of needles. The patient has an insurance problem. And we think there's probably more like 30 or 40 variables that you would need to take into account."
+}

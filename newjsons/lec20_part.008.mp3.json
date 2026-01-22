@@ -1,0 +1,117 @@
+{
+    "chunks": [
+        {
+            "number": "lec20",
+            "title": "part.008.mp3",
+            "start": 0.0,
+            "end": 19.26,
+            "text": " they say, well, the heritability of height is pretty good.  It's about 0.46, with a p-value of 10 to the minus 109th.  So your height is definitely determined in large part  by your parents' height.  But what's interesting is that whether you get a college"
+        },
+        {
+            "number": "lec20",
+            "title": "part.008.mp3",
+            "start": 19.26,
+            "end": 36.8,
+            "text": " degree or not is determined by whether your parents got  a college degree or not.  This is probably not genetic, or it's only partly genetic.  But it clearly has confounders from money and social status  and various things like that."
+        },
+        {
+            "number": "lec20",
+            "title": "part.008.mp3",
+            "start": 36.8,
+            "end": 57.08,
+            "text": " And then what I found amusing is that even TV watching  is partly inheritable from your genetics.  Who knew?  Fortunately, my parents watch a lot of TV.  The last thing I wanted to mention,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.008.mp3",
+            "start": 57.08,
+            "end": 71.36,
+            "text": " but I'm not going to have time to get into it,  is this notion of gene set enrichment analysis.  It's what I was saying before, that genes typically  don't act by themselves.  And so if you think back on high school biology,"
+        },
+        {
+            "number": "lec20",
+            "title": "part.008.mp3",
+            "start": 71.36,
+            "end": 84.52,
+            "text": " you probably learned about the Krebs cycle  that powers cellular mechanisms.  So if you break any part of that cycle,  your cells don't get enough energy.  And so it stands to reason that if you"
+        },
+        {
+            "number": "lec20",
+            "title": "part.008.mp3",
+            "start": 84.52,
+            "end": 99.4,
+            "text": " want to understand that sort of metabolism,  you shouldn't be looking at an individual gene,  but you should be looking at all of the genes that  are involved in that process.  And so there have been many attempts to try to do this."
+        },
+        {
+            "number": "lec20",
+            "title": "part.008.mp3",
+            "start": 99.4,
+            "end": 115.68,
+            "text": " The Broad Institute here has a set of originally 1,300  biologically defined gene sets.  So these were ones that interacted  with each other in controlling some important mechanism  in the body."
+        },
+        {
+            "number": "lec20",
+            "title": "part.008.mp3",
+            "start": 115.68,
+            "end": 130.96,
+            "text": " There are now up to 18,000.  For example, genes involved in oxidative phosphorylation  in muscle tissue show reduced expression in diabetics,  although the average decrease per gene is only 20%.  So they have these sets."
+        },
+        {
+            "number": "lec20",
+            "title": "part.008.mp3",
+            "start": 130.96,
+            "end": 153.68,
+            "text": " And from those, there is a very nice technique  that is able to pull.  It's essentially a way of strengthening  the gene-wide associations by allowing  you to associate them with these sets of genes."
+        },
+        {
+            "number": "lec20",
+            "title": "part.008.mp3",
+            "start": 153.68,
+            "end": 172.36,
+            "text": " And the approach that they take is quite clever.  They say, if we take all the genes in a gene set  and we order them by their correlation  with whatever trait we're interested in,  then the genes that are closer to the beginning of that"
+        },
+        {
+            "number": "lec20",
+            "title": "part.008.mp3",
+            "start": 172.36,
+            "end": 188.06,
+            "text": " are more likely to be involved because they're  the ones that are most strongly associated.  And so they have this random walk process  that finds sort of the maximum place where  you can say anything before that is likely to be associated"
+        },
+        {
+            "number": "lec20",
+            "title": "part.008.mp3",
+            "start": 188.06,
+            "end": 206.6,
+            "text": " with the disease that you're interested in.  And they've had a number of successes  of showing enrichment in various diseases  and various biological factors.  The last thing I want to say is a little bit disappointing."
+        },
+        {
+            "number": "lec20",
+            "title": "part.008.mp3",
+            "start": 206.6,
+            "end": 225.6,
+            "text": " I was really looking for the killer paper  to talk about that uses some really sophisticated deep  learning, machine learning.  And as far as I can tell, it doesn't exist yet.  So most of these methods are based on clustering techniques"
+        },
+        {
+            "number": "lec20",
+            "title": "part.008.mp3",
+            "start": 225.6,
+            "end": 243.79999999999998,
+            "text": " on clever ideas like the one for gene set enrichment analysis.  But they're not neural network types of techniques.  They're not immensely sophisticated.  So what you see coming up is things  like Bayesian networks and clustering and matrix"
+        },
+        {
+            "number": "lec20",
+            "title": "part.008.mp3",
+            "start": 243.79999999999998,
+            "end": 263.04,
+            "text": " factorization and so on, which sort of sound  like 10-, 15-, 20-year-old technologies.  And I haven't seen examples yet of the hot off the presses.  We built a 83-layer neural network that  outperforms these other methods."
+        },
+        {
+            "number": "lec20",
+            "title": "part.008.mp3",
+            "start": 263.04,
+            "end": 278.44,
+            "text": " I suspect that that's coming.  It just hasn't hit yet as far as I know.  If you know of such papers, by all means, let me know.  All right, thank you.  Thank you."
+        }
+    ],
+    "text": " they say, well, the heritability of height is pretty good. It's about 0.46, with a p-value of 10 to the minus 109th. So your height is definitely determined in large part by your parents' height. But what's interesting is that whether you get a college degree or not is determined by whether your parents got a college degree or not. This is probably not genetic, or it's only partly genetic. But it clearly has confounders from money and social status and various things like that. And then what I found amusing is that even TV watching is partly inheritable from your genetics. Who knew? Fortunately, my parents watch a lot of TV. The last thing I wanted to mention, but I'm not going to have time to get into it, is this notion of gene set enrichment analysis. It's what I was saying before, that genes typically don't act by themselves. And so if you think back on high school biology, you probably learned about the Krebs cycle that powers cellular mechanisms. So if you break any part of that cycle, your cells don't get enough energy. And so it stands to reason that if you want to understand that sort of metabolism, you shouldn't be looking at an individual gene, but you should be looking at all of the genes that are involved in that process. And so there have been many attempts to try to do this. The Broad Institute here has a set of originally 1,300 biologically defined gene sets. So these were ones that interacted with each other in controlling some important mechanism in the body. There are now up to 18,000. For example, genes involved in oxidative phosphorylation in muscle tissue show reduced expression in diabetics, although the average decrease per gene is only 20%. So they have these sets. And from those, there is a very nice technique that is able to pull. It's essentially a way of strengthening the gene-wide associations by allowing you to associate them with these sets of genes. And the approach that they take is quite clever. They say, if we take all the genes in a gene set and we order them by their correlation with whatever trait we're interested in, then the genes that are closer to the beginning of that are more likely to be involved because they're the ones that are most strongly associated. And so they have this random walk process that finds sort of the maximum place where you can say anything before that is likely to be associated with the disease that you're interested in. And they've had a number of successes of showing enrichment in various diseases and various biological factors. The last thing I want to say is a little bit disappointing. I was really looking for the killer paper to talk about that uses some really sophisticated deep learning, machine learning. And as far as I can tell, it doesn't exist yet. So most of these methods are based on clustering techniques on clever ideas like the one for gene set enrichment analysis. But they're not neural network types of techniques. They're not immensely sophisticated. So what you see coming up is things like Bayesian networks and clustering and matrix factorization and so on, which sort of sound like 10-, 15-, 20-year-old technologies. And I haven't seen examples yet of the hot off the presses. We built a 83-layer neural network that outperforms these other methods. I suspect that that's coming. It just hasn't hit yet as far as I know. If you know of such papers, by all means, let me know. All right, thank you. Thank you."
+}

@@ -1,0 +1,292 @@
+{
+    "chunks": [
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 0.0,
+            "end": 19.36,
+            "text": " is this blue point over here.  And so if you wanted to know, OK, well,  we observed some y1 for this individual.  We observed some y0 for this individual.  And if you wanted to know, well, what"
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 19.36,
+            "end": 31.66,
+            "text": " would have happened to this individual  if they had received treatment 0 instead of treatment 1,  well, you could just look at what  happened to this blue point and say, OK, that's  what would have happened to this red point,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 31.66,
+            "end": 57.82,
+            "text": " because they're very close to each other.  Any questions about what matching would do  before I define it formally?  Yep, OK, good, one question.  What happens if the nearest neighbor is extremely far away?"
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 57.82,
+            "end": 73.78,
+            "text": " That's a great question.  So you can imagine that you have one red data point over here  and no blue data points nearby.  The matching approach wouldn't work very well.  So this data point, the nearest neighbor,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 73.78,
+            "end": 86.82,
+            "text": " is this blue point over here, which intuitively is  very far from this red point.  And so if we were to estimate this red point counterfactual  using that blue point, we're likely to get  a very bad estimate."
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 86.82,
+            "end": 105.96000000000001,
+            "text": " And in fact, that is going to be one  of the challenges of matching-based approaches.  It's going to work really well in a large sample setting,  where you can hope that you're likely to observe  a counterfactual for every individual."
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 105.96000000000001,
+            "end": 116.48,
+            "text": " And it won't work well if you have very limited data.  And of course, all of this is going  to be subject to the assumption of common support.  So one question is about how does that  translate into high dimensions."
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 116.48,
+            "end": 130.84,
+            "text": " The short answer, not very well.  We'll get back to that in a moment.  Can a single data point appear in multiple matchings?  Yes.  And I'll define in just a moment how and why."
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 130.84,
+            "end": 142.96,
+            "text": " It won't be a strict matching.  Are we trying to find a counterfactual  for each treated observation or one  for each control observation?  I'll answer that in just a second."
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 142.96,
+            "end": 153.64,
+            "text": " And finally, is it common for medical data sets  to find such matching pairs?  I'm going to reinterpret that question as saying,  is this technique used often in medicine?  And the answer is yes."
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 153.64,
+            "end": 168.72,
+            "text": " It's used all the time in clinical research,  despite the fact that biostatisticians  for quite a few years now have been  trying to argue that folks should not  use this technique for reasons that you'll see shortly."
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 168.72,
+            "end": 180.0,
+            "text": " So it's widely used.  It's very intuitive, which is why I'm teaching it.  And it's going to fit into a very general framework,  as you'll see in just a moment, which will give you  the natural solution for the problems I'm going to raise."
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 180.0,
+            "end": 194.56,
+            "text": " So moving on, and then I'll return  to any remaining questions.  So here I'll define one way of doing counterfactual inference  using matching.  And it's going to start, of course,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 194.56,
+            "end": 215.60000000000002,
+            "text": " by assuming that we have some distance metric  d between individuals.  Then we're going to say, for each individual i,  let's let j of i be the other individual j, obviously  different from i, who is closest to i, but critically, closest,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 215.60000000000002,
+            "end": 230.84,
+            "text": " but has a different treatment.  So where ti is different from tj.  And again, I'm assuming binary.  So tj is either 0 or 1.  With that definition, then, we're"
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 230.84,
+            "end": 244.72,
+            "text": " going to define that the estimate,  we're going to define our estimate  of the conditional average treatment effect  for an individual is whatever their actual observed  outcome was."
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 244.72,
+            "end": 259.56,
+            "text": " This I'm going to give for an individual that actually  received treatment 1.  So it's y1.  And the reason it's yi minus the imputed counterfactual  corresponding to t is equal to 0."
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 259.56,
+            "end": 273.36,
+            "text": " And the way we get that computed counterfactual  is by trying to find that nearest neighbor who  received treatment 0 instead of treatment 1  and looking at their y.  Analogously, if ti is equal to 0,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 273.36,
+            "end": 292.08000000000004,
+            "text": " then we're going to use the observed yi now over here  instead of over there, because it corresponds to y0.  And where we need to impute y1, capital Y1,  potential outcome y1, we're going  to use the observed outcome from the nearest neighbor"
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 292.08000000000004,
+            "end": 309.40000000000003,
+            "text": " of individual i who received treatment 1 instead of 0.  So this mathematically is what I mean  by our matching-based estimator.  And this also should answer one of the questions which  was raised, which is, do you really need to have a matching,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 309.40000000000003,
+            "end": 322.98,
+            "text": " or could a data point be used?  Could a data point be matched to multiple other data points?  And indeed, here, you see the answer to that last question  is yes, because you could have a setting where, for example,  there are two red points here."
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 322.98,
+            "end": 335.54,
+            "text": " And I can't draw blue, but I'll just  use a square for what I would have drawn as blue.  And then everything else is very far away.  And for both of these red points,  this blue point is the closest neighbor."
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 335.54,
+            "end": 348.3,
+            "text": " So both of the counterfactual estimates for these two points  would be using the same blue point.  So that's the answer to that question.  Now, I'm just going to rewrite this in a little bit more  convenient form."
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 348.3,
+            "end": 362.6,
+            "text": " So I'll take this formula shown over here.  And you can rewrite that as yi minus yji.  But you have to flip the sign depending on whether ti  is equal to 1 or 0.  And so that's what this term is going to do."
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 362.6,
+            "end": 377.7,
+            "text": " If ti is equal to 1, then this evaluates to 1.  If ti is equal to 0, this evaluates to minus 1.  So it flips the sign.  So now that we have the definition of kate,  we can now easily estimate the average treatment effect"
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 377.7,
+            "end": 390.18,
+            "text": " by just averaging these kates over all of the individuals  in your data set.  So this is now the definition of how to do one nearest neighbor  matching.  Any questions?"
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 396.42,
+            "end": 412.90000000000003,
+            "text": " So one question is, do we ever use the metric d  to weight how much we would, quote unquote,  trust the matching?  That's a good question.  So what Hannah is asking is, what"
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 412.90000000000003,
+            "end": 422.7,
+            "text": " happens if you have, for example, very many nearest  neighbors?  Or analogously, what happens if you  have some nearest neighbors that are really close,  some that are really far?"
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 422.7,
+            "end": 436.74,
+            "text": " You might imagine trying to weight your nearest neighbors  by the distance from the data point.  And you can imagine even doing that.  You can even imagine coming up with an estimator which  might discount certain data points"
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 436.74,
+            "end": 448.62,
+            "text": " if they don't have nearest neighbors near them at all  by the corresponding weighting factor.  Yes, that's a good idea.  Yes, you can come up with a consistent estimator  of the average treatment effect through such an idea."
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 448.62,
+            "end": 463.26,
+            "text": " There are probably a few hundred papers written about it.  And that's all I have to say about it.  So there's lots of variants of this.  And they all end up having the same theoretical justification  that I'm about to give in the next slide."
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 463.26,
+            "end": 476.38,
+            "text": " So one of the advantages of matching  is that you get some interpretability.  So if I was to ask you, well, what's  the reason why you tell me that this treatment is  going to work for John?"
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 476.38,
+            "end": 493.02000000000004,
+            "text": " Well, someone could respond, well, I used this technique.  And I found that the nearest neighbor to John  was Anna.  And Anna took this other treatment from John.  And this is what happened for Anna."
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 493.02000000000004,
+            "end": 507.86,
+            "text": " And that's why I conjecture that for John,  the difference between Y1 and Y0 is as follows.  And so then that can be criticized.  So for example, a clinician who has some domain expert  can look at Anna, look at John, and say, oh, wait a second."
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 507.86,
+            "end": 523.94,
+            "text": " These two individuals are really different from one another.  Let's say the treatment, for example,  had to do with something which was gender specific.  Then comparing two individuals which are of different genders  are obviously not going to be comparable to one other."
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 523.94,
+            "end": 534.98,
+            "text": " And so then the domain expert would  be able to reject that conclusion and say,  no, I don't trust any of this statistics.  Go back to the drawing board.  And so that type of interpretability"
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 534.98,
+            "end": 548.9,
+            "text": " is very attractive.  The second aspect of this which is very attractive  is that it's a non-parametric method,  non-parametric in the same way that neural networks or random  forests are non-parametric."
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 548.9,
+            "end": 565.14,
+            "text": " So this does not rely on any strong assumption  about the parametric form of the potential outcomes.  On the other hand, this approach is very  reliant on underlying metric.  If your distance function is a poor distance function,"
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 565.14,
+            "end": 577.98,
+            "text": " then it's going to give poor results.  And moreover, it could be very much  misled by features that don't affect  the outcome, which is not necessarily a property  that we want."
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 577.98,
+            "end": 593.6999999999999,
+            "text": " Now, here's that final slide that makes the connection.  Matching is equivalent to covariate adjustment.  It's exactly the same.  It's an instantiation of covariate adjustment  with a particular functional family for f."
+        },
+        {
+            "number": "lec15",
+            "title": "part.003.mp3",
+            "start": 593.6999999999999,
+            "end": 601.26,
+            "text": " So rather than assuming that your function f,  that black box, is a linear function or a neural network  or random forest or a..."
+        }
+    ],
+    "text": " is this blue point over here. And so if you wanted to know, OK, well, we observed some y1 for this individual. We observed some y0 for this individual. And if you wanted to know, well, what would have happened to this individual if they had received treatment 0 instead of treatment 1, well, you could just look at what happened to this blue point and say, OK, that's what would have happened to this red point, because they're very close to each other. Any questions about what matching would do before I define it formally? Yep, OK, good, one question. What happens if the nearest neighbor is extremely far away? That's a great question. So you can imagine that you have one red data point over here and no blue data points nearby. The matching approach wouldn't work very well. So this data point, the nearest neighbor, is this blue point over here, which intuitively is very far from this red point. And so if we were to estimate this red point counterfactual using that blue point, we're likely to get a very bad estimate. And in fact, that is going to be one of the challenges of matching-based approaches. It's going to work really well in a large sample setting, where you can hope that you're likely to observe a counterfactual for every individual. And it won't work well if you have very limited data. And of course, all of this is going to be subject to the assumption of common support. So one question is about how does that translate into high dimensions. The short answer, not very well. We'll get back to that in a moment. Can a single data point appear in multiple matchings? Yes. And I'll define in just a moment how and why. It won't be a strict matching. Are we trying to find a counterfactual for each treated observation or one for each control observation? I'll answer that in just a second. And finally, is it common for medical data sets to find such matching pairs? I'm going to reinterpret that question as saying, is this technique used often in medicine? And the answer is yes. It's used all the time in clinical research, despite the fact that biostatisticians for quite a few years now have been trying to argue that folks should not use this technique for reasons that you'll see shortly. So it's widely used. It's very intuitive, which is why I'm teaching it. And it's going to fit into a very general framework, as you'll see in just a moment, which will give you the natural solution for the problems I'm going to raise. So moving on, and then I'll return to any remaining questions. So here I'll define one way of doing counterfactual inference using matching. And it's going to start, of course, by assuming that we have some distance metric d between individuals. Then we're going to say, for each individual i, let's let j of i be the other individual j, obviously different from i, who is closest to i, but critically, closest, but has a different treatment. So where ti is different from tj. And again, I'm assuming binary. So tj is either 0 or 1. With that definition, then, we're going to define that the estimate, we're going to define our estimate of the conditional average treatment effect for an individual is whatever their actual observed outcome was. This I'm going to give for an individual that actually received treatment 1. So it's y1. And the reason it's yi minus the imputed counterfactual corresponding to t is equal to 0. And the way we get that computed counterfactual is by trying to find that nearest neighbor who received treatment 0 instead of treatment 1 and looking at their y. Analogously, if ti is equal to 0, then we're going to use the observed yi now over here instead of over there, because it corresponds to y0. And where we need to impute y1, capital Y1, potential outcome y1, we're going to use the observed outcome from the nearest neighbor of individual i who received treatment 1 instead of 0. So this mathematically is what I mean by our matching-based estimator. And this also should answer one of the questions which was raised, which is, do you really need to have a matching, or could a data point be used? Could a data point be matched to multiple other data points? And indeed, here, you see the answer to that last question is yes, because you could have a setting where, for example, there are two red points here. And I can't draw blue, but I'll just use a square for what I would have drawn as blue. And then everything else is very far away. And for both of these red points, this blue point is the closest neighbor. So both of the counterfactual estimates for these two points would be using the same blue point. So that's the answer to that question. Now, I'm just going to rewrite this in a little bit more convenient form. So I'll take this formula shown over here. And you can rewrite that as yi minus yji. But you have to flip the sign depending on whether ti is equal to 1 or 0. And so that's what this term is going to do. If ti is equal to 1, then this evaluates to 1. If ti is equal to 0, this evaluates to minus 1. So it flips the sign. So now that we have the definition of kate, we can now easily estimate the average treatment effect by just averaging these kates over all of the individuals in your data set. So this is now the definition of how to do one nearest neighbor matching. Any questions? So one question is, do we ever use the metric d to weight how much we would, quote unquote, trust the matching? That's a good question. So what Hannah is asking is, what happens if you have, for example, very many nearest neighbors? Or analogously, what happens if you have some nearest neighbors that are really close, some that are really far? You might imagine trying to weight your nearest neighbors by the distance from the data point. And you can imagine even doing that. You can even imagine coming up with an estimator which might discount certain data points if they don't have nearest neighbors near them at all by the corresponding weighting factor. Yes, that's a good idea. Yes, you can come up with a consistent estimator of the average treatment effect through such an idea. There are probably a few hundred papers written about it. And that's all I have to say about it. So there's lots of variants of this. And they all end up having the same theoretical justification that I'm about to give in the next slide. So one of the advantages of matching is that you get some interpretability. So if I was to ask you, well, what's the reason why you tell me that this treatment is going to work for John? Well, someone could respond, well, I used this technique. And I found that the nearest neighbor to John was Anna. And Anna took this other treatment from John. And this is what happened for Anna. And that's why I conjecture that for John, the difference between Y1 and Y0 is as follows. And so then that can be criticized. So for example, a clinician who has some domain expert can look at Anna, look at John, and say, oh, wait a second. These two individuals are really different from one another. Let's say the treatment, for example, had to do with something which was gender specific. Then comparing two individuals which are of different genders are obviously not going to be comparable to one other. And so then the domain expert would be able to reject that conclusion and say, no, I don't trust any of this statistics. Go back to the drawing board. And so that type of interpretability is very attractive. The second aspect of this which is very attractive is that it's a non-parametric method, non-parametric in the same way that neural networks or random forests are non-parametric. So this does not rely on any strong assumption about the parametric form of the potential outcomes. On the other hand, this approach is very reliant on underlying metric. If your distance function is a poor distance function, then it's going to give poor results. And moreover, it could be very much misled by features that don't affect the outcome, which is not necessarily a property that we want. Now, here's that final slide that makes the connection. Matching is equivalent to covariate adjustment. It's exactly the same. It's an instantiation of covariate adjustment with a particular functional family for f. So rather than assuming that your function f, that black box, is a linear function or a neural network or random forest or a..."
+}

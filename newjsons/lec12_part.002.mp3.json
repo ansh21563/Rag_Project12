@@ -1,0 +1,348 @@
+{
+    "chunks": [
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 0.0,
+            "end": 8.88,
+            "text": " analyze slides.  So a pathologist, the reason they're making so many errors  is they're just kind of overwhelmed.  I mean, there's two reasons.  One is humans aren't good at interpreting visual patterns."
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 8.88,
+            "end": 21.8,
+            "text": " Actually, that's not the real reason,  because humans are pretty darn good at that.  And there are difficult things people can disagree,  but when people focus on small images, frequently they agree.  But these images are enormous, and humans just"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 21.8,
+            "end": 31.96,
+            "text": " don't have enough time to study carefully  every cell and every slide.  Whereas the computer, in a real way,  can be forced to exhaustively analyze  every cell on every slide."
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 31.96,
+            "end": 39.44,
+            "text": " And that's just a huge difference.  It's quantitative.  I mean, this is one thing the computer is definitely  better at.  It can compute huge numerators, huge denominators,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 39.44,
+            "end": 49.6,
+            "text": " and exactly compute proportions.  Whereas when a person's looking at a slide,  they're really just eyeballing some percentage based  on a very small amount of data.  It's super efficient, so you can analyze."
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 49.6,
+            "end": 61.919999999999995,
+            "text": " This whole process is massively parallelizable,  so you can almost do a slide as fast as you want,  based on how much you're willing to spend on it.  And it allows you not only to do all  of these sort of automation tasks exhaustively,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 61.919999999999995,
+            "end": 71.67999999999999,
+            "text": " quantitatively, and efficiently, but also discover  a lot of new insights from the data, which I think we did  in a very early way back eight years ago,  when we had human extracted features,  correlate those with outcome."
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 71.67999999999999,
+            "end": 85.8,
+            "text": " But now you can really supervise the whole process  with machine learning of how you go  from the components of an image to patient outcomes  and learn new biology that you didn't know going in.  And everyone's always like, well,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 85.8,
+            "end": 101.44,
+            "text": " are you just going to replace pathologists?  And I really don't think this is, in any way, the future.  In almost every field where automation  is becoming very common, the demand  for people who are experts in that area is increasing."
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 101.44,
+            "end": 111.47999999999999,
+            "text": " And like airplane pilots is one I was just  learning about today.  They just do a completely different thing  than they did 20 years ago.  And now it's all about mission control of this big system"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 111.47999999999999,
+            "end": 120.8,
+            "text": " and understanding all the flight management systems  and understanding all the data they're getting.  And I think the job has not gotten necessarily simpler,  but they're much more effective and they're  doing much different types of work."
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 120.8,
+            "end": 133.04,
+            "text": " And I really think the pathologist  is going to move from staring into a microscope  with a literally very myopic focus on very small things  to being more of a consultant with physicians,  integrating lots of different types of data,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 133.04,
+            "end": 145.20000000000002,
+            "text": " things that AI is really bad at, a lot of reasoning  about specific instances, and then providing  that guidance to physicians.  So I think the job will look a lot different,  but we never really needed more diagnosticians in the future"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 145.20000000000002,
+            "end": 158.56,
+            "text": " than in the past.  So one example I think we sent out a reading about this  was this concept of breast cancer metastasis  is a good use case of machine learning.  And this is just like a patient example."
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 158.56,
+            "end": 171.24,
+            "text": " So a primary mass is discovered.  So one of the big determinants of the prognosis  for a primary tumor is has it spread to the lymph nodes?  Because that's one of the first areas  that tumors metastasize to."
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 171.24,
+            "end": 185.0,
+            "text": " And the way to diagnose whether tumors have metastasized  to lymph nodes is to take a biopsy  and then evaluate those for the presence of cancer  where it shouldn't be.  And this is a task that's very quantitative and very tedious."
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 185.0,
+            "end": 199.76000000000002,
+            "text": " So the International Symposium on Biomedical Imaging  organized this challenge called the Chameleon 16 Challenge,  where they put together almost 300 training  slides and 130 test slides.  And they asked a bunch of teams to build machine learning"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 199.79999999999998,
+            "end": 214.16,
+            "text": " based systems to automate the evaluation of the test slides,  both to diagnose whether the slide contained cancer or not,  as well as to actually identify where on the slides  the cancer was located.  And kind of the big machine learning challenge here,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 214.16,
+            "end": 235.36,
+            "text": " why you can't just throw it off the shelf  or on the web image classification tool,  is the images are so large that it's just not  feasible to throw the whole image  into any kind of neural net, because they"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 235.36,
+            "end": 250.72,
+            "text": " can be between 20,000 and 200,000 pixels on a side.  So they have millions of pixels.  And for that, we do this process where  we start with a labeled data set,  where there are these very large regions labeled"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 250.72,
+            "end": 262.12,
+            "text": " either as normal or tumor.  And then we build procedures, which  is actually a key component of getting  machine learning to work well, of sampling patches of images  and putting those patches into the model."
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 262.12,
+            "end": 272.44,
+            "text": " And this sampling procedure is actually  incredibly important for controlling  the behavior of the system, because you could  sample in all different ways.  You're never going to sample exhaustively just"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 272.44,
+            "end": 285.9,
+            "text": " because there's far too many possible patches.  So thinking about the right examples to show the system  has an enormous effect on both the performance  and the generalizability of the systems you're building.  And some of the insights we learned"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 285.9,
+            "end": 295.02,
+            "text": " is how best to do the sampling.  But once you have these samples, it's all data-driven.  Sure.  AUDIENCE 4.  Can you talk more about the sampling strategy, it seems?"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 295.02,
+            "end": 312.14,
+            "text": " ANDREW LOHRBACHER-SHAPIRON Yeah.  So from a high level, you want to go  from random sampling, which is a reasonable thing to do,  to more intelligent sampling based  on knowing what the computer needs to learn more about."
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 312.14,
+            "end": 324.86,
+            "text": " And one thing we've done, and so it's sort of like figuring it.  So the first step is sort of simple.  You can randomly sample.  But then the second part is a little harder  to figure out what examples do you"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 324.86,
+            "end": 336.38,
+            "text": " want to enrich your training set for to make the system perform  even better.  And there's different things you can optimize for for that.  So it's sort of like this whole sampling actually  being part of the machine learning procedure"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 336.38,
+            "end": 345.02,
+            "text": " is quite useful.  And you're not just going to be sampling once.  You could iterate on this and keep  providing different types of samples.  So for example, if you learn that it's"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 345.02,
+            "end": 358.53999999999996,
+            "text": " missing certain types of errors, or it hasn't  seen enough of certain, there's many ways of getting at it.  But if you know it hasn't seen enough types of examples  in your training set, you can oversample for that.  Or if you see, you have a confusion matrix"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 358.53999999999996,
+            "end": 371.5,
+            "text": " and you see it's failing on certain types,  you can try to figure out why is it failing on those  and alter the sampling procedure to enrich for that.  You could even provide outputs to humans  who can point you to the areas where it's making mistakes."
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 371.5,
+            "end": 380.82,
+            "text": " Because often you don't have exhaustively labeled.  In this case, we actually did have exhaustively labeled  slides.  It was somewhat easier.  But you can see there's even a lot of heterogeneity"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 380.82,
+            "end": 391.34000000000003,
+            "text": " within the different classes.  So you might do some clever tricks  to figure out what are the types of the red class  that it's getting wrong, and how am I going to fix that  by providing it with more examples."
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 391.34000000000003,
+            "end": 405.94,
+            "text": " So I think that's one of the easier things  to control, rather than trying to tune  other parameters within these super complicated networks.  In our experience, just playing with the training,  sampling, the sampling piece of the training,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 405.94,
+            "end": 419.26000000000005,
+            "text": " it should almost just be thought of as another parameter  to optimize for when you're dealing with a problem  where you have humongous slides and you can't  use all the training data.  So decades ago, I met some pathologists"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 419.26000000000005,
+            "end": 437.86,
+            "text": " who were looking at cervical cancer screening.  And they thought that you could detect a gradient  in the degree of atypia.  And so not a training time, but a testing time,  what they were trying to do was to follow that gradient"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 437.86,
+            "end": 454.22,
+            "text": " in order to find the most atypical part of the image.  Is that still believed to be true?  Yeah, that it's a continuum.  Yeah, definitely.  You mean within a sample?"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 454.22,
+            "end": 463.46,
+            "text": " It is like.  Yeah, I mean, you know what I mean?  Do you just mean like a continuum of aggressiveness?  Yeah, I think it is a continuum.  I mean, this is more of a binary task."
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 463.46,
+            "end": 474.42,
+            "text": " But there's going to be continuums  of grade within the cancer.  I mean, that's another level of adding on.  Like if we want to correlate this with outcome,  it would definitely be valuable to do that,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 474.42,
+            "end": 486.85999999999996,
+            "text": " to not just say quantitate the bulk of tumor,  but to estimate the malignancy of every individual nucleus,  which we can do also.  So you can actually classify not just tumor region,  but you can classify individual cells."
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 486.85999999999996,
+            "end": 499.34,
+            "text": " And you can classify them based on malignancy.  And then you can get the sort of gradient within a population.  In this study, it was just a region-based, not a cell-based.  But you can definitely do that.  And definitely, it's a spectrum."
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 499.34,
+            "end": 511.38,
+            "text": " I mean, it's kind of like the atypia idea.  Everything in biology is pretty much on a spectrum,  like from normal to atypical to low-grade cancer,  medium-grade cancer, high-grade cancer.  And these sorts of methods do allow"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 511.38,
+            "end": 524.8199999999999,
+            "text": " you to really more precisely estimate  where you are in that continuum.  And that's the basic approach.  We get the big whole site images.  We figure out how to sample patches"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 524.8199999999999,
+            "end": 535.86,
+            "text": " from the different regions to optimize performance  of the model during training time.  And then during testing time, we take a big whole site image.  We break it into millions of little patches,  send each patch individually."
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 535.86,
+            "end": 545.34,
+            "text": " You could potentially use spatial information  about how close they are to each other, which would  make the process less efficient.  We don't do that.  We just send them in individually"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 545.34,
+            "end": 562.46,
+            "text": " and then visualize the output as a heat map.  And this, I think, isn't in the reference I sent.  So the one I sent showed how you were  able to combine the estimates of the deep learning  system with the human pathologist estimate"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 562.46,
+            "end": 574.66,
+            "text": " to make the human pathologist error rate go down by like 85%  and get to less than 1%.  And the interesting thing about how these systems keep  getting better over time, and potentially they  overfit to the competition data set,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 574.66,
+            "end": 585.22,
+            "text": " because I think we submitted it maybe three times,  which isn't that many.  But over the course of like six months  after the first closing of the competition,  people kept competing and making systems better."
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 585.22,
+            "end": 597.1,
+            "text": " And actually, the fully automated system  on this data set achieved an error rate of less than 1%  by the final submission date, which  was significantly better than both the pathologist  and the competition, which is the error rate, I believe,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.002.mp3",
+            "start": 597.1,
+            "end": 600.22,
+            "text": " cited in the initial archive paper."
+        }
+    ],
+    "text": " analyze slides. So a pathologist, the reason they're making so many errors is they're just kind of overwhelmed. I mean, there's two reasons. One is humans aren't good at interpreting visual patterns. Actually, that's not the real reason, because humans are pretty darn good at that. And there are difficult things people can disagree, but when people focus on small images, frequently they agree. But these images are enormous, and humans just don't have enough time to study carefully every cell and every slide. Whereas the computer, in a real way, can be forced to exhaustively analyze every cell on every slide. And that's just a huge difference. It's quantitative. I mean, this is one thing the computer is definitely better at. It can compute huge numerators, huge denominators, and exactly compute proportions. Whereas when a person's looking at a slide, they're really just eyeballing some percentage based on a very small amount of data. It's super efficient, so you can analyze. This whole process is massively parallelizable, so you can almost do a slide as fast as you want, based on how much you're willing to spend on it. And it allows you not only to do all of these sort of automation tasks exhaustively, quantitatively, and efficiently, but also discover a lot of new insights from the data, which I think we did in a very early way back eight years ago, when we had human extracted features, correlate those with outcome. But now you can really supervise the whole process with machine learning of how you go from the components of an image to patient outcomes and learn new biology that you didn't know going in. And everyone's always like, well, are you just going to replace pathologists? And I really don't think this is, in any way, the future. In almost every field where automation is becoming very common, the demand for people who are experts in that area is increasing. And like airplane pilots is one I was just learning about today. They just do a completely different thing than they did 20 years ago. And now it's all about mission control of this big system and understanding all the flight management systems and understanding all the data they're getting. And I think the job has not gotten necessarily simpler, but they're much more effective and they're doing much different types of work. And I really think the pathologist is going to move from staring into a microscope with a literally very myopic focus on very small things to being more of a consultant with physicians, integrating lots of different types of data, things that AI is really bad at, a lot of reasoning about specific instances, and then providing that guidance to physicians. So I think the job will look a lot different, but we never really needed more diagnosticians in the future than in the past. So one example I think we sent out a reading about this was this concept of breast cancer metastasis is a good use case of machine learning. And this is just like a patient example. So a primary mass is discovered. So one of the big determinants of the prognosis for a primary tumor is has it spread to the lymph nodes? Because that's one of the first areas that tumors metastasize to. And the way to diagnose whether tumors have metastasized to lymph nodes is to take a biopsy and then evaluate those for the presence of cancer where it shouldn't be. And this is a task that's very quantitative and very tedious. So the International Symposium on Biomedical Imaging organized this challenge called the Chameleon 16 Challenge, where they put together almost 300 training slides and 130 test slides. And they asked a bunch of teams to build machine learning based systems to automate the evaluation of the test slides, both to diagnose whether the slide contained cancer or not, as well as to actually identify where on the slides the cancer was located. And kind of the big machine learning challenge here, why you can't just throw it off the shelf or on the web image classification tool, is the images are so large that it's just not feasible to throw the whole image into any kind of neural net, because they can be between 20,000 and 200,000 pixels on a side. So they have millions of pixels. And for that, we do this process where we start with a labeled data set, where there are these very large regions labeled either as normal or tumor. And then we build procedures, which is actually a key component of getting machine learning to work well, of sampling patches of images and putting those patches into the model. And this sampling procedure is actually incredibly important for controlling the behavior of the system, because you could sample in all different ways. You're never going to sample exhaustively just because there's far too many possible patches. So thinking about the right examples to show the system has an enormous effect on both the performance and the generalizability of the systems you're building. And some of the insights we learned is how best to do the sampling. But once you have these samples, it's all data-driven. Sure. AUDIENCE 4. Can you talk more about the sampling strategy, it seems? ANDREW LOHRBACHER-SHAPIRON Yeah. So from a high level, you want to go from random sampling, which is a reasonable thing to do, to more intelligent sampling based on knowing what the computer needs to learn more about. And one thing we've done, and so it's sort of like figuring it. So the first step is sort of simple. You can randomly sample. But then the second part is a little harder to figure out what examples do you want to enrich your training set for to make the system perform even better. And there's different things you can optimize for for that. So it's sort of like this whole sampling actually being part of the machine learning procedure is quite useful. And you're not just going to be sampling once. You could iterate on this and keep providing different types of samples. So for example, if you learn that it's missing certain types of errors, or it hasn't seen enough of certain, there's many ways of getting at it. But if you know it hasn't seen enough types of examples in your training set, you can oversample for that. Or if you see, you have a confusion matrix and you see it's failing on certain types, you can try to figure out why is it failing on those and alter the sampling procedure to enrich for that. You could even provide outputs to humans who can point you to the areas where it's making mistakes. Because often you don't have exhaustively labeled. In this case, we actually did have exhaustively labeled slides. It was somewhat easier. But you can see there's even a lot of heterogeneity within the different classes. So you might do some clever tricks to figure out what are the types of the red class that it's getting wrong, and how am I going to fix that by providing it with more examples. So I think that's one of the easier things to control, rather than trying to tune other parameters within these super complicated networks. In our experience, just playing with the training, sampling, the sampling piece of the training, it should almost just be thought of as another parameter to optimize for when you're dealing with a problem where you have humongous slides and you can't use all the training data. So decades ago, I met some pathologists who were looking at cervical cancer screening. And they thought that you could detect a gradient in the degree of atypia. And so not a training time, but a testing time, what they were trying to do was to follow that gradient in order to find the most atypical part of the image. Is that still believed to be true? Yeah, that it's a continuum. Yeah, definitely. You mean within a sample? It is like. Yeah, I mean, you know what I mean? Do you just mean like a continuum of aggressiveness? Yeah, I think it is a continuum. I mean, this is more of a binary task. But there's going to be continuums of grade within the cancer. I mean, that's another level of adding on. Like if we want to correlate this with outcome, it would definitely be valuable to do that, to not just say quantitate the bulk of tumor, but to estimate the malignancy of every individual nucleus, which we can do also. So you can actually classify not just tumor region, but you can classify individual cells. And you can classify them based on malignancy. And then you can get the sort of gradient within a population. In this study, it was just a region-based, not a cell-based. But you can definitely do that. And definitely, it's a spectrum. I mean, it's kind of like the atypia idea. Everything in biology is pretty much on a spectrum, like from normal to atypical to low-grade cancer, medium-grade cancer, high-grade cancer. And these sorts of methods do allow you to really more precisely estimate where you are in that continuum. And that's the basic approach. We get the big whole site images. We figure out how to sample patches from the different regions to optimize performance of the model during training time. And then during testing time, we take a big whole site image. We break it into millions of little patches, send each patch individually. You could potentially use spatial information about how close they are to each other, which would make the process less efficient. We don't do that. We just send them in individually and then visualize the output as a heat map. And this, I think, isn't in the reference I sent. So the one I sent showed how you were able to combine the estimates of the deep learning system with the human pathologist estimate to make the human pathologist error rate go down by like 85% and get to less than 1%. And the interesting thing about how these systems keep getting better over time, and potentially they overfit to the competition data set, because I think we submitted it maybe three times, which isn't that many. But over the course of like six months after the first closing of the competition, people kept competing and making systems better. And actually, the fully automated system on this data set achieved an error rate of less than 1% by the final submission date, which was significantly better than both the pathologist and the competition, which is the error rate, I believe, cited in the initial archive paper."
+}

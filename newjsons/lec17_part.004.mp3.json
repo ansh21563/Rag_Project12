@@ -1,0 +1,299 @@
+{
+    "chunks": [
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 0.0,
+            "end": 18.400000000000002,
+            "text": " subsequent decisions to treat with vasopressors.  We also know that hypotension, so again, blood pressure,  L1, affects survival based on our clinical knowledge.  And then in this DAG, we also have the node U,  which represents disease severity."
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 18.400000000000002,
+            "end": 37.519999999999996,
+            "text": " So these could be potentially unmeasured markers  of disease severity that are affecting your blood pressure  and also affecting your probability of survival.  So if we're interested in estimating  the effect of a sustained treatment strategy,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 37.519999999999996,
+            "end": 48.56,
+            "text": " then we want to know something about the total effect  of treatment at all time points.  We can see that L1 here is a confounder  for the effect of A1 on Y. So we have to do something  to adjust for that."
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 48.56,
+            "end": 62.64,
+            "text": " And if we were to apply a conventional statistical  method, we would essentially be conditioning on a collider  and inducing a selection bias, so an open path from A0 to L1  to U to Y.  What's the consequence of this?"
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 62.64,
+            "end": 79.08,
+            "text": " If we look in our data set, we may  see an association between A and Y.  But that association is not because there's necessarily  an effect of A on Y. It might not be causal.  It may be due to this selection bias that we created."
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 79.08,
+            "end": 95.08,
+            "text": " So this is the problem.  And so in these cases, we need a special type of method  that can handle these settings.  And so a class of methods that was designed specifically  to handle this is g-methods."
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 95.08,
+            "end": 108.08,
+            "text": " And so these are sometimes referred to as causal methods.  They've been developed by Jamie Robbins and colleagues  and collaborators since 1986.  And they include the parametric g-formula,  g-estimation of structural nested models,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 108.08,
+            "end": 126.28,
+            "text": " and inverse probability weighting  of marginal structural models.  So in my research, what I do is I combine g-methods  with large longitudinal databases  to try to evaluate dynamic treatment strategies."
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 126.28,
+            "end": 136.24,
+            "text": " So I'm particularly interested in bringing these methods  to cancer research because they haven't  been applied much there.  So a lot of my research questions  are focused on answering questions"
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 136.24,
+            "end": 154.92,
+            "text": " like, how and when can we intervene to best prevent,  detect, and treat cancer?  And so I'd like to share one example with you,  which focused on evaluating the effect of adhering  to guideline-based physical activity"
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 154.92,
+            "end": 168.64,
+            "text": " interventions on survival among men with prostate cancer.  So the motivation for this study,  there's a large clinical organization, ASCO,  the American Society of Clinical Oncology,  that had actually called for randomized trials"
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 168.64,
+            "end": 181.04000000000002,
+            "text": " to generate these estimates for several cancers.  The thing with prostate cancer is it's a very slowly  progressing disease.  So the feasibility of doing a trial to evaluate this  is very limited."
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 181.04000000000002,
+            "end": 195.20000000000002,
+            "text": " The trial would have to be 10 years long, probably.  So given that, given the absence of this randomized evidence,  we did the next best thing that we  could do to generate this estimate, which  was combine high-quality observational data"
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 195.20000000000002,
+            "end": 206.20000000000002,
+            "text": " with advanced epi methods, in this case,  parametric g-formula.  And so we leveraged data from the Health Professionals  Follow-Up Study, which is a well-characterized  prospective cohort study."
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 209.68,
+            "end": 224.72000000000003,
+            "text": " So in these cases, there's a three-step process  that we take to extract the most meaningful and actionable  insights from observational data.  So the first thing that we do is we  specify the protocol of the target trial"
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 224.72000000000003,
+            "end": 239.84,
+            "text": " that we would have liked to conduct had it been feasible.  The second thing we do is we make sure  that we measure enough covariates to approximately  adjust for confounding and achieve  conditional exchangeability."
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 239.84,
+            "end": 253.72,
+            "text": " And then the third thing we do is  we apply an appropriate method to compare the specified  treatment strategies under this assumption  of conditional exchangeability.  And so in this case, eligible men for this study"
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 253.72,
+            "end": 269.11999999999995,
+            "text": " had been diagnosed with non-metastatic prostate cancer.  And at baseline, they were free of cardiovascular and  neurologic conditions that may limit physical ability.  For the treatment strategies, men  were to initiate one of six physical activity"
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 269.11999999999995,
+            "end": 282.96,
+            "text": " strategies at diagnosis and continue it over follow-up  until the development of a condition limiting  physical activity.  So this is what made the strategies dynamic.  The intervention over time depended"
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 282.96,
+            "end": 299.84000000000003,
+            "text": " on these evolving conditions.  And so just to note, we pre-specified these strategies  that we were evaluating as well as the conditions.  Men were followed until diagnosis, until death,  end of follow-up, 10 years after diagnosis,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 299.84000000000003,
+            "end": 310.0,
+            "text": " or administrative end of follow-up,  whichever happened first.  Our outcome of interest was all-cause mortality  within 10 years.  And we were interested in estimating the per-protocol"
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 310.0,
+            "end": 324.72,
+            "text": " effect of not just initiating these strategies,  but adhering to them over follow-up.  And again, we applied the parametric G formula.  So I think you've already heard about the G formula  in a previous lecture, possibly in a slightly different way."
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 324.72,
+            "end": 339.48,
+            "text": " So I won't spend too much time on this.  So the G formula, essentially the way I think about it,  is a generalization of standardization  to time-varying exposures and confounders.  So it's basically a weighted average of risks,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 339.48,
+            "end": 354.0,
+            "text": " where you can think of the weights being the probability  density functions of the time-varying confounders,  which we estimate using parametric regression models.  And we approximate the weighted average  using Monte Carlo simulation."
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 354.0,
+            "end": 365.72,
+            "text": " So practically, how do we do this?  So the first thing we do is we fit parametric regression  models for all of the variables that we're  going to be studying.  So for treatment, confounders, and death"
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 365.72,
+            "end": 381.04,
+            "text": " at each follow-up time.  The next thing we do is Monte Carlo simulation,  where essentially what we want to do  is simulate the outcome distribution  under each treatment strategy that we're interested in."
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 381.04,
+            "end": 396.71999999999997,
+            "text": " And then we bootstrap the confidence intervals.  So I'd like to show you in a schematic what this looks like,  because it might be a little bit easier to see.  So again, the idea is we're going  to make copies of our data set, where in each copy,"
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 396.71999999999997,
+            "end": 410.32,
+            "text": " everyone is adhering to the strategy  that we're focusing on in that copy.  So how do we construct each of these copies of the data set?  We have to build them each from the ground up,  starting with time 0."
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 410.32,
+            "end": 427.88,
+            "text": " So the values of all of the time-varying covariates  at time 0 are sampled from their empirical distribution.  So these are actually observed values of the covariates.  How do we get the values at the next time point?  We use the parametric regression models"
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 427.88,
+            "end": 447.40000000000003,
+            "text": " that I mentioned that we fit in step 1.  Then what we do is we force the level of the intervention  variable to be whatever was specified by that intervention  strategy.  And then we estimate the risk of the outcome at each time period"
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 447.40000000000003,
+            "end": 465.52,
+            "text": " given these variables, again, using  the parametric regression model for the outcome now.  And so we repeat this over all time periods  to estimate a cumulative risk under that strategy, which  is taken as the average of the subject-specific risks."
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 465.52,
+            "end": 473.84000000000003,
+            "text": " So this is what I'm doing.  This is kind of under the hood what's  going on with this method.  So maybe we should try to put that in language, what  we saw in the class."
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 473.84000000000003,
+            "end": 491.32,
+            "text": " And let me know if I'm getting this wrong.  So you first estimate the Markov decision process,  which allows you, in essence, to simulate from the underlying  data distribution.  So you know the probability of the next sequence"
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 491.32,
+            "end": 504.08,
+            "text": " of observations given the previous sequence  and previous actions.  And then with that, then you could intervene and simulate  forward.  So that was, if you remember, Frederick"
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 504.08,
+            "end": 514.72,
+            "text": " gave you three different buckets of approaches.  And then he focused on the middle one.  This is the leftmost bucket.  Is that right?  So we didn't talk about it."
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 514.72,
+            "end": 525.72,
+            "text": " No, it's a model based model.  Yes.  But it's very sensible.  Yeah, it only seems very hard.  What's that?"
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 525.72,
+            "end": 535.6,
+            "text": " Sorry.  It seems very hard to model this in a medical.  Yeah, so that is a challenge.  That is the hardest part about this.  And it's relying on a lot of assumptions."
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 535.6,
+            "end": 550.76,
+            "text": " Yeah.  So the primary results that kind of come out  after we do all of this.  So this is the estimated risk of all-cause mortality  under several physical activity interventions."
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 550.76,
+            "end": 566.1600000000001,
+            "text": " So I'm not going to focus too much on the results.  I want to focus on two main kind of takeaways from this slide.  One thing to emphasize is we pre-specified the weekly  duration of physical activity.  Or you can think of this like the dose of the intervention."
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 566.1600000000001,
+            "end": 580.04,
+            "text": " We pre-specified that.  And this was based on current guidelines.  So the third row of each band, we  did look at some dose or level beyond the guidelines  to see if there might be additional survival benefits."
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 580.04,
+            "end": 592.1999999999999,
+            "text": " But these were all pre-specified.  We also pre-specified all of the time-varying covariates  that made these strategies dynamic.  So I mentioned that men were excused  from following the recommended physical activity"
+        },
+        {
+            "number": "lec17",
+            "title": "part.004.mp3",
+            "start": 592.1999999999999,
+            "end": 600.5999999999999,
+            "text": " levels if they developed one of these listed conditions,  metastasis, MI, stroke, et cetera.  We pre-specified that."
+        }
+    ],
+    "text": " subsequent decisions to treat with vasopressors. We also know that hypotension, so again, blood pressure, L1, affects survival based on our clinical knowledge. And then in this DAG, we also have the node U, which represents disease severity. So these could be potentially unmeasured markers of disease severity that are affecting your blood pressure and also affecting your probability of survival. So if we're interested in estimating the effect of a sustained treatment strategy, then we want to know something about the total effect of treatment at all time points. We can see that L1 here is a confounder for the effect of A1 on Y. So we have to do something to adjust for that. And if we were to apply a conventional statistical method, we would essentially be conditioning on a collider and inducing a selection bias, so an open path from A0 to L1 to U to Y. What's the consequence of this? If we look in our data set, we may see an association between A and Y. But that association is not because there's necessarily an effect of A on Y. It might not be causal. It may be due to this selection bias that we created. So this is the problem. And so in these cases, we need a special type of method that can handle these settings. And so a class of methods that was designed specifically to handle this is g-methods. And so these are sometimes referred to as causal methods. They've been developed by Jamie Robbins and colleagues and collaborators since 1986. And they include the parametric g-formula, g-estimation of structural nested models, and inverse probability weighting of marginal structural models. So in my research, what I do is I combine g-methods with large longitudinal databases to try to evaluate dynamic treatment strategies. So I'm particularly interested in bringing these methods to cancer research because they haven't been applied much there. So a lot of my research questions are focused on answering questions like, how and when can we intervene to best prevent, detect, and treat cancer? And so I'd like to share one example with you, which focused on evaluating the effect of adhering to guideline-based physical activity interventions on survival among men with prostate cancer. So the motivation for this study, there's a large clinical organization, ASCO, the American Society of Clinical Oncology, that had actually called for randomized trials to generate these estimates for several cancers. The thing with prostate cancer is it's a very slowly progressing disease. So the feasibility of doing a trial to evaluate this is very limited. The trial would have to be 10 years long, probably. So given that, given the absence of this randomized evidence, we did the next best thing that we could do to generate this estimate, which was combine high-quality observational data with advanced epi methods, in this case, parametric g-formula. And so we leveraged data from the Health Professionals Follow-Up Study, which is a well-characterized prospective cohort study. So in these cases, there's a three-step process that we take to extract the most meaningful and actionable insights from observational data. So the first thing that we do is we specify the protocol of the target trial that we would have liked to conduct had it been feasible. The second thing we do is we make sure that we measure enough covariates to approximately adjust for confounding and achieve conditional exchangeability. And then the third thing we do is we apply an appropriate method to compare the specified treatment strategies under this assumption of conditional exchangeability. And so in this case, eligible men for this study had been diagnosed with non-metastatic prostate cancer. And at baseline, they were free of cardiovascular and neurologic conditions that may limit physical ability. For the treatment strategies, men were to initiate one of six physical activity strategies at diagnosis and continue it over follow-up until the development of a condition limiting physical activity. So this is what made the strategies dynamic. The intervention over time depended on these evolving conditions. And so just to note, we pre-specified these strategies that we were evaluating as well as the conditions. Men were followed until diagnosis, until death, end of follow-up, 10 years after diagnosis, or administrative end of follow-up, whichever happened first. Our outcome of interest was all-cause mortality within 10 years. And we were interested in estimating the per-protocol effect of not just initiating these strategies, but adhering to them over follow-up. And again, we applied the parametric G formula. So I think you've already heard about the G formula in a previous lecture, possibly in a slightly different way. So I won't spend too much time on this. So the G formula, essentially the way I think about it, is a generalization of standardization to time-varying exposures and confounders. So it's basically a weighted average of risks, where you can think of the weights being the probability density functions of the time-varying confounders, which we estimate using parametric regression models. And we approximate the weighted average using Monte Carlo simulation. So practically, how do we do this? So the first thing we do is we fit parametric regression models for all of the variables that we're going to be studying. So for treatment, confounders, and death at each follow-up time. The next thing we do is Monte Carlo simulation, where essentially what we want to do is simulate the outcome distribution under each treatment strategy that we're interested in. And then we bootstrap the confidence intervals. So I'd like to show you in a schematic what this looks like, because it might be a little bit easier to see. So again, the idea is we're going to make copies of our data set, where in each copy, everyone is adhering to the strategy that we're focusing on in that copy. So how do we construct each of these copies of the data set? We have to build them each from the ground up, starting with time 0. So the values of all of the time-varying covariates at time 0 are sampled from their empirical distribution. So these are actually observed values of the covariates. How do we get the values at the next time point? We use the parametric regression models that I mentioned that we fit in step 1. Then what we do is we force the level of the intervention variable to be whatever was specified by that intervention strategy. And then we estimate the risk of the outcome at each time period given these variables, again, using the parametric regression model for the outcome now. And so we repeat this over all time periods to estimate a cumulative risk under that strategy, which is taken as the average of the subject-specific risks. So this is what I'm doing. This is kind of under the hood what's going on with this method. So maybe we should try to put that in language, what we saw in the class. And let me know if I'm getting this wrong. So you first estimate the Markov decision process, which allows you, in essence, to simulate from the underlying data distribution. So you know the probability of the next sequence of observations given the previous sequence and previous actions. And then with that, then you could intervene and simulate forward. So that was, if you remember, Frederick gave you three different buckets of approaches. And then he focused on the middle one. This is the leftmost bucket. Is that right? So we didn't talk about it. No, it's a model based model. Yes. But it's very sensible. Yeah, it only seems very hard. What's that? Sorry. It seems very hard to model this in a medical. Yeah, so that is a challenge. That is the hardest part about this. And it's relying on a lot of assumptions. Yeah. So the primary results that kind of come out after we do all of this. So this is the estimated risk of all-cause mortality under several physical activity interventions. So I'm not going to focus too much on the results. I want to focus on two main kind of takeaways from this slide. One thing to emphasize is we pre-specified the weekly duration of physical activity. Or you can think of this like the dose of the intervention. We pre-specified that. And this was based on current guidelines. So the third row of each band, we did look at some dose or level beyond the guidelines to see if there might be additional survival benefits. But these were all pre-specified. We also pre-specified all of the time-varying covariates that made these strategies dynamic. So I mentioned that men were excused from following the recommended physical activity levels if they developed one of these listed conditions, metastasis, MI, stroke, et cetera. We pre-specified that."
+}

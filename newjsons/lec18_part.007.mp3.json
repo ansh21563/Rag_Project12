@@ -1,0 +1,306 @@
+{
+    "chunks": [
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 0.0,
+            "end": 16.5,
+            "text": " or transformed prior to clustering  by taking the logarithm of the features.  And that's something that can be very useful when doing something  like k-means, because it can, in essence,  allow for that Euclidean distance function, which"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 16.5,
+            "end": 35.32,
+            "text": " is used in k-means, to be more meaningful by capturing  more of the dynamic range of the feature.  So these were the features that went into the clustering  algorithm.  And there are very, very few, so roughly 20, 30 features."
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 35.32,
+            "end": 55.28,
+            "text": " They range from the patient's gender and age  to their body mass index to measures of their lung  function to biomarkers, such as a sonofil count that  can be measured from the patient's sputum and more.  And there are a couple of other features"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 55.28,
+            "end": 74.36,
+            "text": " that I'll show you later as well.  And you can look to see, how do these populations differ?  So on this column, you see the primary care population.  You look at all of these features in that population.  You see that in the primary care population,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 74.36,
+            "end": 94.33999999999999,
+            "text": " the individuals are, on average, 54% of them are female.  In the secondary care population,  65% of them are female.  You notice that things like, if you look at some measures  of lung function, it's significantly worse"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 94.33999999999999,
+            "end": 108.03999999999999,
+            "text": " in that secondary care population,  as one would expect, because these are more severe patients  with asthma, patients with more severe asthma.  So next, after doing k-means clustering,  these are the three clusters that result."
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 108.03999999999999,
+            "end": 127.52000000000001,
+            "text": " And now I'm showing you the full set of features.  So let me first tell you how to read this.  This is clusters found in the primary care population.  This column here is just the average values  of those features across the full population."
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 127.52000000000001,
+            "end": 140.84,
+            "text": " And then for each one of these three clusters,  I'm showing you the average value  of the corresponding feature in just that cluster.  And that's, in essence, the same.  That's exactly the same as those red points"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 140.84,
+            "end": 152.24,
+            "text": " I was showing you when I described  decay means clustering.  It's the cluster center.  And one can also look at the standard deviation  of how much variance there is along that feature"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 152.24,
+            "end": 173.64000000000001,
+            "text": " in that cluster.  And that's what the numbers in parentheses are telling you.  So the first thing to note is that in cluster 1, which  the authors of the study named early onset atopic asthma,  these are very young patients, an average of 14,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 173.72,
+            "end": 190.39999999999998,
+            "text": " 15 years old, as opposed to cluster 2,  where the average age was 35 years old.  So dramatic difference there.  Moreover, we see that these are patients  who have actually been to the hospital recently."
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 190.39999999999998,
+            "end": 205.68,
+            "text": " So most of these patients have been to the hospital.  On average, these patients have been to the hospital  at least once recently.  And furthermore, they've had severe asthma exacerbations  in the past 12 months, at least on average twice per patient."
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 205.68,
+            "end": 216.76,
+            "text": " And those are very large numbers relative to what  you see in these other clusters.  So that's really describing something  that's very unusual about these very young patients  with pretty severe asthma."
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 216.76,
+            "end": 225.24,
+            "text": " Yep?  AUDIENCE 1 So just what is the p-value that the difference  are?  PROFESSOR 1 Yeah, I think the p-value,  I don't know if this is a pairwise comparison."
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 225.24,
+            "end": 238.94,
+            "text": " I don't remember off the top of my head.  But it's really looking at the difference between,  let's say, I don't know which of these.  I don't know if it's comparing two of them or not.  Let's say, for example, it might be looking at the difference"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 238.94,
+            "end": 252.16,
+            "text": " between this and that.  But I'm just hypothesizing.  I don't remember.  Cluster 2, on the other hand, was predominantly female.  So 81% of the patients were female there."
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 252.16,
+            "end": 269.12,
+            "text": " And they were largely overweight.  So their average body mass index was 36,  as opposed to the other two clusters  where the average body mass index was 26.  And cluster 3 consisted of patients"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 269.12,
+            "end": 285.28,
+            "text": " who really have not had that severe asthma.  So the average number of previous hospital admissions  and asthma exacerbations was dramatically smaller  than in the other two clusters.  So this is the result of the finding."
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 285.28,
+            "end": 298.6,
+            "text": " And then you might ask, well, how  does that generalize to the other two populations?  So they then went to the secondary care population.  And they re-ran the clustering algorithm from scratch.  And this is a completely disjoint set of patients."
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 298.6,
+            "end": 310.92,
+            "text": " And what they found, what they got out,  is that the first two clusters exactly  resembled clusters 1 and 2 from the previous study  on the primary care population.  But because this is a different population with much more"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 310.92,
+            "end": 324.52,
+            "text": " severe patients, that third cluster earlier of benign asthma  doesn't show up in this new population.  And there are two new clusters that show up  in this new population.  So the fact that those first two clusters"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 324.52,
+            "end": 334.91999999999996,
+            "text": " were consistent across two very different populations  gave the authors confidence that there  might be something real here.  And then they went and they explored that third population  where they had longitudinal data."
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 334.91999999999996,
+            "end": 354.35999999999996,
+            "text": " And that third population they were then using to ask,  so up until now, we've only used baseline information.  But now we're going to ask the following question.  If we took the baseline data from those 68 patients  and we're to separate them into three different clusters based"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 354.35999999999996,
+            "end": 368.4,
+            "text": " on the characterizations found in the other two data sets,  and then if we're to look at long-term outcomes  for each cluster, would they be different across the clusters?  And in particular, here we actually  looked at not just predicting a progression,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 368.4,
+            "end": 380.59999999999997,
+            "text": " but we're also looking at differences in treat response  because this was a randomized control trial.  And so there are going to be two arms here,  what's called the clinical arm, which  is the standard clinical care, what's"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 380.59999999999997,
+            "end": 396.56,
+            "text": " called the sputum arm, which consists  of doing regular monitoring of the airway inflammation,  and then titrating steroid therapy in order  to maintain normal esonophile counts.  And so this is comparing two different treatment strategies."
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 396.56,
+            "end": 411.03999999999996,
+            "text": " And the question is, do these two treatment strategies  result in differential outcomes?  So when the clinical trial was originally performed  and they computed the average treatment effect, which,  by the way, because this was an RCT, was particularly simple."
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 411.03999999999996,
+            "end": 422.4,
+            "text": " You just averaged outcomes across the two arms.  They found that there was no difference across the two arms.  So there was no difference in outcomes  across the two different therapies.  Now what these authors are going to do"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 422.4,
+            "end": 438.28000000000003,
+            "text": " is they're going to rerun the study.  And they're going to now, instead of just looking  at the average treatment effect for the whole population,  they're going to look at the average treatment  effect for each of the clusters by themselves."
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 438.28000000000003,
+            "end": 448.72,
+            "text": " And the hope there is that one might be  able to see now a difference.  Maybe there was heterogeneous treatment response,  and sometimes the therapy worked for some people, not  for others."
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 448.72,
+            "end": 460.84000000000003,
+            "text": " And these were the results.  So indeed, across these three clusters,  we see actually a very big difference.  So if you look here, for example,  the number of commenced on oral corticosteroids,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 460.84000000000003,
+            "end": 476.96000000000004,
+            "text": " which is a measure of an outcome.  So you might want this.  I can't remember if it's small or large.  But there's a big difference between these two clusters.  In this cluster, the number commenced under the first arm"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 476.96000000000004,
+            "end": 487.52,
+            "text": " is two.  In this other cluster, for patients  who got the second arm, nine.  And exactly the opposite for this third cluster.  The first cluster, by the way, had only three patients in it."
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 487.52,
+            "end": 500.56,
+            "text": " So I'm not going to make any comment about it.  Now, since these go in completely obvious directions,  it's not surprising that the average treatment  effect across the whole population was zero.  But what we're seeing now is that, in fact, there's"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 500.56,
+            "end": 513.56,
+            "text": " a difference.  And so it's possible that the therapy is actually effective,  but just for a smaller number of people.  Now, this study would have never been possible  had we not done this clustering beforehand,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 513.56,
+            "end": 526.1,
+            "text": " because it has so few patients, only 68 patients.  If you attempted to both search for the clustering  at the same time as, let's say, find clusters  to differentiate outcomes, you would overfit the data  very quickly."
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 526.1,
+            "end": 538.38,
+            "text": " So it was precisely because we did this unsupervised subtyping  first and then used the labels not for searching  for the subtypes, but only for evaluating the subtypes,  that we're actually able to do something interesting here.  So in summary, in today's lecture,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 538.38,
+            "end": 549.12,
+            "text": " I talked about two different approaches,  a supervised approach for predicting future disease  status and an unsupervised approach.  And there are a few major limitations  that I want to emphasize that we'll return to in the next"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 549.12,
+            "end": 563.0600000000001,
+            "text": " lecture and try to address.  The first major limitation is that none of these approaches  differentiated between disease stage and subtype.  In both of the two approaches, we  assumed that there was some amount of alignment"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 563.0600000000001,
+            "end": 574.36,
+            "text": " of patients at baseline.  For example, here, we assume that the patients at time 0  were somewhat similar to another.  For example, they might have been newly diagnosed  at that point in time."
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 574.36,
+            "end": 585.6800000000001,
+            "text": " But often, we have a data set where  we have no natural alignment of patients  in terms of disease stage.  And if we attempted to do some type of clustering  like I did in this last example, what you would get out,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 585.6800000000001,
+            "end": 597.48,
+            "text": " naively, would be one cluster for disease stage.  So patients who are very early in disease stage  might look very different patients who  are late in their disease stage.  And it'll completely conflate disease stage"
+        },
+        {
+            "number": "lec18",
+            "title": "part.007.mp3",
+            "start": 597.48,
+            "end": 600.08,
+            "text": " from disease subtype, which is what you might actually  want to discover."
+        }
+    ],
+    "text": " or transformed prior to clustering by taking the logarithm of the features. And that's something that can be very useful when doing something like k-means, because it can, in essence, allow for that Euclidean distance function, which is used in k-means, to be more meaningful by capturing more of the dynamic range of the feature. So these were the features that went into the clustering algorithm. And there are very, very few, so roughly 20, 30 features. They range from the patient's gender and age to their body mass index to measures of their lung function to biomarkers, such as a sonofil count that can be measured from the patient's sputum and more. And there are a couple of other features that I'll show you later as well. And you can look to see, how do these populations differ? So on this column, you see the primary care population. You look at all of these features in that population. You see that in the primary care population, the individuals are, on average, 54% of them are female. In the secondary care population, 65% of them are female. You notice that things like, if you look at some measures of lung function, it's significantly worse in that secondary care population, as one would expect, because these are more severe patients with asthma, patients with more severe asthma. So next, after doing k-means clustering, these are the three clusters that result. And now I'm showing you the full set of features. So let me first tell you how to read this. This is clusters found in the primary care population. This column here is just the average values of those features across the full population. And then for each one of these three clusters, I'm showing you the average value of the corresponding feature in just that cluster. And that's, in essence, the same. That's exactly the same as those red points I was showing you when I described decay means clustering. It's the cluster center. And one can also look at the standard deviation of how much variance there is along that feature in that cluster. And that's what the numbers in parentheses are telling you. So the first thing to note is that in cluster 1, which the authors of the study named early onset atopic asthma, these are very young patients, an average of 14, 15 years old, as opposed to cluster 2, where the average age was 35 years old. So dramatic difference there. Moreover, we see that these are patients who have actually been to the hospital recently. So most of these patients have been to the hospital. On average, these patients have been to the hospital at least once recently. And furthermore, they've had severe asthma exacerbations in the past 12 months, at least on average twice per patient. And those are very large numbers relative to what you see in these other clusters. So that's really describing something that's very unusual about these very young patients with pretty severe asthma. Yep? AUDIENCE 1 So just what is the p-value that the difference are? PROFESSOR 1 Yeah, I think the p-value, I don't know if this is a pairwise comparison. I don't remember off the top of my head. But it's really looking at the difference between, let's say, I don't know which of these. I don't know if it's comparing two of them or not. Let's say, for example, it might be looking at the difference between this and that. But I'm just hypothesizing. I don't remember. Cluster 2, on the other hand, was predominantly female. So 81% of the patients were female there. And they were largely overweight. So their average body mass index was 36, as opposed to the other two clusters where the average body mass index was 26. And cluster 3 consisted of patients who really have not had that severe asthma. So the average number of previous hospital admissions and asthma exacerbations was dramatically smaller than in the other two clusters. So this is the result of the finding. And then you might ask, well, how does that generalize to the other two populations? So they then went to the secondary care population. And they re-ran the clustering algorithm from scratch. And this is a completely disjoint set of patients. And what they found, what they got out, is that the first two clusters exactly resembled clusters 1 and 2 from the previous study on the primary care population. But because this is a different population with much more severe patients, that third cluster earlier of benign asthma doesn't show up in this new population. And there are two new clusters that show up in this new population. So the fact that those first two clusters were consistent across two very different populations gave the authors confidence that there might be something real here. And then they went and they explored that third population where they had longitudinal data. And that third population they were then using to ask, so up until now, we've only used baseline information. But now we're going to ask the following question. If we took the baseline data from those 68 patients and we're to separate them into three different clusters based on the characterizations found in the other two data sets, and then if we're to look at long-term outcomes for each cluster, would they be different across the clusters? And in particular, here we actually looked at not just predicting a progression, but we're also looking at differences in treat response because this was a randomized control trial. And so there are going to be two arms here, what's called the clinical arm, which is the standard clinical care, what's called the sputum arm, which consists of doing regular monitoring of the airway inflammation, and then titrating steroid therapy in order to maintain normal esonophile counts. And so this is comparing two different treatment strategies. And the question is, do these two treatment strategies result in differential outcomes? So when the clinical trial was originally performed and they computed the average treatment effect, which, by the way, because this was an RCT, was particularly simple. You just averaged outcomes across the two arms. They found that there was no difference across the two arms. So there was no difference in outcomes across the two different therapies. Now what these authors are going to do is they're going to rerun the study. And they're going to now, instead of just looking at the average treatment effect for the whole population, they're going to look at the average treatment effect for each of the clusters by themselves. And the hope there is that one might be able to see now a difference. Maybe there was heterogeneous treatment response, and sometimes the therapy worked for some people, not for others. And these were the results. So indeed, across these three clusters, we see actually a very big difference. So if you look here, for example, the number of commenced on oral corticosteroids, which is a measure of an outcome. So you might want this. I can't remember if it's small or large. But there's a big difference between these two clusters. In this cluster, the number commenced under the first arm is two. In this other cluster, for patients who got the second arm, nine. And exactly the opposite for this third cluster. The first cluster, by the way, had only three patients in it. So I'm not going to make any comment about it. Now, since these go in completely obvious directions, it's not surprising that the average treatment effect across the whole population was zero. But what we're seeing now is that, in fact, there's a difference. And so it's possible that the therapy is actually effective, but just for a smaller number of people. Now, this study would have never been possible had we not done this clustering beforehand, because it has so few patients, only 68 patients. If you attempted to both search for the clustering at the same time as, let's say, find clusters to differentiate outcomes, you would overfit the data very quickly. So it was precisely because we did this unsupervised subtyping first and then used the labels not for searching for the subtypes, but only for evaluating the subtypes, that we're actually able to do something interesting here. So in summary, in today's lecture, I talked about two different approaches, a supervised approach for predicting future disease status and an unsupervised approach. And there are a few major limitations that I want to emphasize that we'll return to in the next lecture and try to address. The first major limitation is that none of these approaches differentiated between disease stage and subtype. In both of the two approaches, we assumed that there was some amount of alignment of patients at baseline. For example, here, we assume that the patients at time 0 were somewhat similar to another. For example, they might have been newly diagnosed at that point in time. But often, we have a data set where we have no natural alignment of patients in terms of disease stage. And if we attempted to do some type of clustering like I did in this last example, what you would get out, naively, would be one cluster for disease stage. So patients who are very early in disease stage might look very different patients who are late in their disease stage. And it'll completely conflate disease stage from disease subtype, which is what you might actually want to discover."
+}

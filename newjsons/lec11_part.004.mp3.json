@@ -1,0 +1,250 @@
+{
+    "chunks": [
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 0.0,
+            "end": 13.58,
+            "text": " If there are multiple diseases, we  can build this kind of bipartite model  that says we have a list of diseases  and we have a list of manifestations.  And some subset of the diseases can"
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 13.58,
+            "end": 30.02,
+            "text": " cause some subset of the symptoms of the manifestations.  And so the manifestations depend only  on the diseases that are present, not on each other.  And therefore, we have conditional independence.  And this is a type of Bayesian network"
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 30.02,
+            "end": 50.1,
+            "text": " which can't be solved exactly because  of the computational complexity.  So a program I'll show you in a minute  had 400 or 500 diseases and thousands of manifestations.  And the computational complexity of exact solution techniques"
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 50.1,
+            "end": 67.4,
+            "text": " for these networks tends to go exponentially  with the number of undirected cycles in the network.  And of course, there are plenty of undirected cycles  in a network like that.  So there was a program developed originally"
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 67.4,
+            "end": 83.84,
+            "text": " in the early 1970s called Dialog.  And then they got sued because somebody owned that name.  And then they called it Internist.  And they got sued because somebody owned that name.  And then they called it QMR, which"
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 83.84,
+            "end": 100.7,
+            "text": " stands for Quick Medical Reference.  And nobody owned that name.  So around 1982, this program had about 500 diseases,  which they estimated represented about 70% to 75%  of major diagnoses in internal medicine,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 100.7,
+            "end": 120.4,
+            "text": " about 3,500 manifestations.  And it took about 15 man years of manual effort  to sit there and read medical textbooks and journal articles  and look at records of patients in their hospital.  The effort was led by a computer scientist"
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 120.4,
+            "end": 139.48000000000002,
+            "text": " at the University of Pittsburgh and the chief of medicine  at UPMC, the University of Pittsburgh Medical Center, who  was just a fanatic.  And he got all the medical school trainees  to spend hours and hours coming up with these databases."
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 139.48,
+            "end": 158.76,
+            "text": " By 1997, they had commercialized it  through a company that had bought the rights to it.  And that company had expanded it to about 750 diagnoses  and about 5,500 manifestations.  So they made it considerably larger."
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 158.76,
+            "end": 176.04,
+            "text": " Details are I've tried to put references on all the slides.  So here's what data in QMR looks like.  For each diagnosis, there is a list  of associated manifestations with evoking  strengths and frequencies."
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 176.04,
+            "end": 195.6,
+            "text": " So I'll explain that in a minute.  On average, there are about 75 manifestations per disease.  And for each manifestation, in addition to the data  you see here, there is also an importance measure  that says how critical is it to explain"
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 195.6,
+            "end": 208.32,
+            "text": " this particular symptom or sign or lab value  in the final diagnosis.  So for example, if you have a headache,  that could be incidental.  And it's not that important to explain it."
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 208.32,
+            "end": 223.2,
+            "text": " If you're bleeding from your gastrointestinal system,  that's really important to explain.  And you wouldn't expect a diagnosis  of that patient that doesn't explain to you  why they have that symptom."
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 223.2,
+            "end": 241.07999999999998,
+            "text": " And then here is an example of alcoholic hepatitis.  And the two numbers here are a so-called evoking strength  and a frequency.  These are both on scales.  Well, evoking strength is on a scale of 0 to 5."
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 241.07999999999998,
+            "end": 260.4,
+            "text": " And frequency is on a scale of 1 to 5.  And I'll show you what those are supposed to mean.  And so for example, what this says  is that if you're anorexic, that should not  make you think about alcoholic hepatitis as a disease."
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 260.4,
+            "end": 275.88,
+            "text": " But you should expect that if somebody  has alcoholic hepatitis, they're very likely to have anorexia.  So that's the frequency number.  This is the evoking strength number.  And you see that there is a variety of those."
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 275.88,
+            "end": 291.44,
+            "text": " So much of that many man years of effort  went into coming up with these lists  and coming up with those numbers.  Here are the scales.  So the evoking strength, 0 means nonspecific."
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 291.44,
+            "end": 305.68,
+            "text": " 5 means it's pathognomonic.  In other words, just seeing the symptom  is enough to convince you that the patient  must have this disease.  Similarly, frequency, 1 means that it occurs rarely."
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 305.72,
+            "end": 323.32,
+            "text": " And 5 means that it occurs in essentially all cases  with scaled values in between.  And these are kind of like odds ratios.  And they add them kind of as if they were log likelihood ratios.  And so there's been a big literature"
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 323.32,
+            "end": 336.52000000000004,
+            "text": " on trying to figure out exactly what these numbers mean.  Because there's no formal definition  in terms of you count the number of this  and divide by the number of that.  And that gives you the right answer."
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 336.52000000000004,
+            "end": 359.08000000000004,
+            "text": " These were sort of impressionistic kinds  of numbers.  So the logic in the system was that you would come to it  and give it a list of the manifestations of a case.  And to their credit, they went after very complicated cases."
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 359.08000000000004,
+            "end": 375.2,
+            "text": " So they took clinical pathological conference cases  from the New England Journal of Medicine.  These are cases selected to be difficult enough  that doctors are willing to read these.  And they're typically presented at grand rounds at MGH"
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 375.2,
+            "end": 392.88,
+            "text": " by somebody who is often stumped by the case.  So it's an opportunity to watch people reason interactively  about these things.  And so you evoke the diagnoses that  have a high evoking strength from the given manifestations."
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 392.88,
+            "end": 406.23999999999995,
+            "text": " And then you do a scoring calculation  based on those numbers.  The details of this are probably all wrong,  but that's the way they went about it.  And then you form a differential around the highest scoring"
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 406.23999999999995,
+            "end": 421.28,
+            "text": " diagnosis.  Now, this is actually an interesting idea.  It's a heuristic idea, but it's one that worked pretty well.  So suppose I have two diseases.  D1 can cause manifestations 1 through 4,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 421.28,
+            "end": 439.76,
+            "text": " and D2 can cause 3 through 6.  So are these competing to explain the same case,  or could they be complementary?  Well, until we know what symptoms the patient actually  has, we don't know."
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 439.76,
+            "end": 455.59999999999997,
+            "text": " But let's trace through this.  So suppose I tell you that the patient has  manifestations 3 and 4.  Well, you would say there's no reason  to think that the patient may have both diseases,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 455.59999999999997,
+            "end": 476.36,
+            "text": " because either of them can explain those manifestations.  So you would consider them to be competitors.  What about if I add M1?  So here, it's getting a little dicier.  Now, you're more likely to think that it's D1."
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 476.36,
+            "end": 497.6,
+            "text": " But if it's D1, that could explain all the manifestations,  and D2 is still viewable as a competitor.  On the other hand, if I also add M6,  now neither disease can explain all the manifestations.  And so it's more likely, somewhat more likely,"
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 497.6,
+            "end": 520.44,
+            "text": " that there may be two diseases present.  So what internist had was this interesting heuristic,  which said that when you get that complementary situation,  you form a differential around the top-ranked hypothesis.  In other words, you retain all those diseases that"
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 520.44,
+            "end": 536.9,
+            "text": " compete with that hypothesis.  And that defines a subproblem that  looks like the acute renal failure problem,  because now you have one set of factors  that you're trying to explain by one disease."
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 536.9,
+            "end": 550.6800000000001,
+            "text": " And you set aside all of the other manifestations  and all of the other diseases that  are potentially complementary.  And you don't worry about them for the moment.  Just focus on this cluster of things"
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 550.6800000000001,
+            "end": 568.1,
+            "text": " that are competitors to explain some subset  of the manifestations.  And then there are different questioning strategies.  So depending on the scores within these things,  if one of those diseases has a very high score"
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 568.1,
+            "end": 588.5,
+            "text": " and the others have relatively low scores,  you would choose a pursue strategy that says,  OK, I'm interested in asking questions that will more likely  convince me of the correctness of that leading hypothesis.  So you look for the things that it predicts strongly."
+        },
+        {
+            "number": "lec11",
+            "title": "part.004.mp3",
+            "start": 588.5,
+            "end": 601.5,
+            "text": " If you have a very large list in the differential,  you might say, I'm going to try to reduce  the size of the differential by looking for things  that are not."
+        }
+    ],
+    "text": " If there are multiple diseases, we can build this kind of bipartite model that says we have a list of diseases and we have a list of manifestations. And some subset of the diseases can cause some subset of the symptoms of the manifestations. And so the manifestations depend only on the diseases that are present, not on each other. And therefore, we have conditional independence. And this is a type of Bayesian network which can't be solved exactly because of the computational complexity. So a program I'll show you in a minute had 400 or 500 diseases and thousands of manifestations. And the computational complexity of exact solution techniques for these networks tends to go exponentially with the number of undirected cycles in the network. And of course, there are plenty of undirected cycles in a network like that. So there was a program developed originally in the early 1970s called Dialog. And then they got sued because somebody owned that name. And then they called it Internist. And they got sued because somebody owned that name. And then they called it QMR, which stands for Quick Medical Reference. And nobody owned that name. So around 1982, this program had about 500 diseases, which they estimated represented about 70% to 75% of major diagnoses in internal medicine, about 3,500 manifestations. And it took about 15 man years of manual effort to sit there and read medical textbooks and journal articles and look at records of patients in their hospital. The effort was led by a computer scientist at the University of Pittsburgh and the chief of medicine at UPMC, the University of Pittsburgh Medical Center, who was just a fanatic. And he got all the medical school trainees to spend hours and hours coming up with these databases. By 1997, they had commercialized it through a company that had bought the rights to it. And that company had expanded it to about 750 diagnoses and about 5,500 manifestations. So they made it considerably larger. Details are I've tried to put references on all the slides. So here's what data in QMR looks like. For each diagnosis, there is a list of associated manifestations with evoking strengths and frequencies. So I'll explain that in a minute. On average, there are about 75 manifestations per disease. And for each manifestation, in addition to the data you see here, there is also an importance measure that says how critical is it to explain this particular symptom or sign or lab value in the final diagnosis. So for example, if you have a headache, that could be incidental. And it's not that important to explain it. If you're bleeding from your gastrointestinal system, that's really important to explain. And you wouldn't expect a diagnosis of that patient that doesn't explain to you why they have that symptom. And then here is an example of alcoholic hepatitis. And the two numbers here are a so-called evoking strength and a frequency. These are both on scales. Well, evoking strength is on a scale of 0 to 5. And frequency is on a scale of 1 to 5. And I'll show you what those are supposed to mean. And so for example, what this says is that if you're anorexic, that should not make you think about alcoholic hepatitis as a disease. But you should expect that if somebody has alcoholic hepatitis, they're very likely to have anorexia. So that's the frequency number. This is the evoking strength number. And you see that there is a variety of those. So much of that many man years of effort went into coming up with these lists and coming up with those numbers. Here are the scales. So the evoking strength, 0 means nonspecific. 5 means it's pathognomonic. In other words, just seeing the symptom is enough to convince you that the patient must have this disease. Similarly, frequency, 1 means that it occurs rarely. And 5 means that it occurs in essentially all cases with scaled values in between. And these are kind of like odds ratios. And they add them kind of as if they were log likelihood ratios. And so there's been a big literature on trying to figure out exactly what these numbers mean. Because there's no formal definition in terms of you count the number of this and divide by the number of that. And that gives you the right answer. These were sort of impressionistic kinds of numbers. So the logic in the system was that you would come to it and give it a list of the manifestations of a case. And to their credit, they went after very complicated cases. So they took clinical pathological conference cases from the New England Journal of Medicine. These are cases selected to be difficult enough that doctors are willing to read these. And they're typically presented at grand rounds at MGH by somebody who is often stumped by the case. So it's an opportunity to watch people reason interactively about these things. And so you evoke the diagnoses that have a high evoking strength from the given manifestations. And then you do a scoring calculation based on those numbers. The details of this are probably all wrong, but that's the way they went about it. And then you form a differential around the highest scoring diagnosis. Now, this is actually an interesting idea. It's a heuristic idea, but it's one that worked pretty well. So suppose I have two diseases. D1 can cause manifestations 1 through 4, and D2 can cause 3 through 6. So are these competing to explain the same case, or could they be complementary? Well, until we know what symptoms the patient actually has, we don't know. But let's trace through this. So suppose I tell you that the patient has manifestations 3 and 4. Well, you would say there's no reason to think that the patient may have both diseases, because either of them can explain those manifestations. So you would consider them to be competitors. What about if I add M1? So here, it's getting a little dicier. Now, you're more likely to think that it's D1. But if it's D1, that could explain all the manifestations, and D2 is still viewable as a competitor. On the other hand, if I also add M6, now neither disease can explain all the manifestations. And so it's more likely, somewhat more likely, that there may be two diseases present. So what internist had was this interesting heuristic, which said that when you get that complementary situation, you form a differential around the top-ranked hypothesis. In other words, you retain all those diseases that compete with that hypothesis. And that defines a subproblem that looks like the acute renal failure problem, because now you have one set of factors that you're trying to explain by one disease. And you set aside all of the other manifestations and all of the other diseases that are potentially complementary. And you don't worry about them for the moment. Just focus on this cluster of things that are competitors to explain some subset of the manifestations. And then there are different questioning strategies. So depending on the scores within these things, if one of those diseases has a very high score and the others have relatively low scores, you would choose a pursue strategy that says, OK, I'm interested in asking questions that will more likely convince me of the correctness of that leading hypothesis. So you look for the things that it predicts strongly. If you have a very large list in the differential, you might say, I'm going to try to reduce the size of the differential by looking for things that are not."
+}

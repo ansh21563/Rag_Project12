@@ -16,12 +16,12 @@ def create_embedding(text_list):
     embedding = r.json()['embeddings']
     return embedding
 
-jsons = os.listdir("jsons") # List all the jsons 
+jsons = os.listdir("newjsons") # List all the jsons 
 my_dicts = []
 chunk_id = 0
 
 for json_file in jsons:
-    with open (f"jsons/{json_file}") as f:
+    with open (f"newjsons/{json_file}") as f:
         content = json.load(f)
     print(f"Creating Embeddings for {json_file}")    
     embeddings = create_embedding([c['text'] for c in content ['chunks']])

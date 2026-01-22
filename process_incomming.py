@@ -31,9 +31,10 @@ def inference(prompt):
     return response
 
 def inference_openai(prompt):
+    print("Thinking....")
     response = client.responses.create(
     model="gpt-4.1",
-    input="prompt"    
+    input=prompt    
     )
     
     return response.output_text
@@ -75,8 +76,9 @@ with open("prompt.txt", "w") as f:
 # print(response)
 
 response = inference_openai(prompt)
+print(response)
 
-with open("response.txt","w") as f:
+with open("response.txt","w",encoding="utf-8") as f:
     f.write(response)
 
 # for index, item in new_df.iterrows():

@@ -1,0 +1,250 @@
+{
+    "chunks": [
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 0.0,
+            "end": 16.48,
+            "text": " So that's what the discount factor does.  Now, who knows what the right discount rate is?  So in some of their work, they were doing crazy things  like taking the financial discount  factors about bank interest rates and things like that"
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 16.48,
+            "end": 27.48,
+            "text": " and applying them to these health things  just because they didn't have any better numbers to do.  That seems a little suspicious.  But nevertheless, methodologically,  it's a way of doing it."
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 27.48,
+            "end": 42.92,
+            "text": " OK, so how do you measure the quality of life?  Well, there's this notion of the activities of daily living.  So can you bathe and shower?  Can you brush your teeth and groom your hair?  Can you get dressed?"
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 42.92,
+            "end": 56.480000000000004,
+            "text": " Can you go to the toilet, clean yourself up?  Are you able to walk, get in and out of bed,  get in and out of a chair?  Can you feed yourself?  And then there are a bunch of instrumental factors,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 56.48,
+            "end": 70.47999999999999,
+            "text": " things like, are you able to clean your house?  And can you manage your money?  And so on.  So these are typically for older people.  But they are ways of trying to quantify that quality of life"
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 70.47999999999999,
+            "end": 90.92,
+            "text": " by saying, how many of these things are you able to do?  And there are a lot of federal regulations,  for example, that take advantage of quantification like this.  So if you're asking to be put on some sort of disability  where the government sends you a check to keep you alive,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 90.92,
+            "end": 105.24000000000001,
+            "text": " you have to demonstrate that you are  at a certain point on the scale that's  derived from these capabilities in order  to justifiably get that.  So occupational therapy is one of the things"
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 105.24000000000001,
+            "end": 125.24,
+            "text": " that people try to teach the elderly.  My parents died in their late 80s, and my dad was 90.  And I remember when he would have some medical problem,  then he would be put into the clutches  of an occupational therapist who would try to make sure"
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 125.24,
+            "end": 149.17999999999998,
+            "text": " that he was able to communicate and get around and not fall  for tricks where people wanted to get him to send  all his money to them or meal preparation  and stuff like that.  So occupational is a funny term for it,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 149.17999999999998,
+            "end": 164.48,
+            "text": " because this typically applies to people who are retired.  So it's not really an occupation,  but it's the sort of things that you  need to do in order to be able to have a decent life.  Well, now there's an interesting valuation question."
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 164.48,
+            "end": 179.83999999999997,
+            "text": " So if you look at the top right model,  we actually don't have very good data on anything  other than mortality.  So mortality is who dies.  So the blue curve there is the curve"
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 179.83999999999997,
+            "end": 202.92,
+            "text": " that you've seen before, which is of a cohort, how many people  are still alive after a certain number of years.  The red curve is a morbidity curve,  which says how many of those people are still alive  and have no sort of problematic chronic diseases."
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 202.92,
+            "end": 223.51999999999998,
+            "text": " So they're not in constant pain, and they're not immobilized,  and they're not unable to do the things that I just listed  on the previous slides.  And then disability is when you really  become incapable of taking care of yourself."
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 223.51999999999998,
+            "end": 240.28,
+            "text": " And it typically involves moving into an assisted living  facility or a nursing home or something  like that, which is kind of a nightmare for many people  and also very expensive for society.  So as I said, the blue curve there"
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 240.28,
+            "end": 262.08,
+            "text": " is based on actual data for American females in 1980.  The red curve is a hypothetical curve  where I just assumed that the rate of developing a morbidity  is about twice the rate of dying.  And the green curve, I assumed that the rate"
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 262.08,
+            "end": 277.24,
+            "text": " of developing a disability is, I can't remember,  I think three times as high as the rate of dying,  something like that.  So that's why those curves are lower,  and they look approximately right,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 277.24,
+            "end": 296.28000000000003,
+            "text": " but we don't have good data on those.  Now, the question that you have to ask  is, how do you want to change this?  So for example, suppose that we kept the same situation.  We reduced mortality to 20% of its actual rate,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 296.28000000000003,
+            "end": 318.02000000000004,
+            "text": " but we kept the disability and morbidity rates the same  as they are on the top left.  So what would that do?  Well, what that would do is create a huge number of people  who are disabled, because they're"
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 318.02000000000004,
+            "end": 329.28000000000003,
+            "text": " going to live longer beyond the point where  they're able to function fully.  So this is not, yeah?  AUDIENCE 2 Can I just ask, why does green not just  mean healthy?"
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 329.28000000000003,
+            "end": 334.44,
+            "text": " Like, to me, it just seems like it's just being healthy.  PETER SZOLOVITSKY Green just means healthy.  AUDIENCE 2 Oh, OK.  It does?  PETER SZOLOVITSKY Yeah."
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 334.44,
+            "end": 352.15999999999997,
+            "text": " So beyond green is what I meant is the morbidity curve,  and beyond red is the disability curve.  I may have misspoken.  So green is healthy.  Red means suffering from some morbidity,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 352.15999999999997,
+            "end": 375.04,
+            "text": " and blue means disabled.  So if we just extend life, but we don't make it any better,  then that's not a very attractive picture.  So other possibilities are compression of morbidity.  So for example, if we reduce the rate at which people get sick"
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 375.04,
+            "end": 400.52,
+            "text": " and die, but we decrease it initially and then increase it  so that, on average, people live about the same length of time  that they now do, then we're going  to have fewer people who are suffering from morbidity  or who are disabled, because you last doing well,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 400.52,
+            "end": 417.84000000000003,
+            "text": " and then you die.  So this is the wonderful one hors chaise,  where everything falls apart at once, which, frankly,  as somebody who's a little closer to the end  than you guys are, I wouldn't mind that kind of exit."
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 417.84000000000003,
+            "end": 435.84000000000003,
+            "text": " I don't want to be disabled for 20 years.  I'd rather live a long time healthy  and then drop dead at some point.  My dad used to say that he wanted to die  by being hit by a meteor."
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 435.84000000000003,
+            "end": 458.68,
+            "text": " He wouldn't know it's coming.  It's instant, no suffering, no pain, perfect.  He almost got it, but not quite.  And then the final story is lifespan extension,  which is where we simply lower the mortality rate and all"
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 458.68,
+            "end": 474.40000000000003,
+            "text": " the other rates in proportion.  And what happens is that you start  having healthy 107-year-olds and not so healthy  120-year-olds in the population in larger numbers  than we do now."
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 477.40000000000003,
+            "end": 493.24,
+            "text": " Social quality of life, that's a tough one.  So here's a naive theory.  We take the quality of life of every person on the planet.  We sum them up, and we say, OK, that's  the social quality of life."
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 496.08000000000004,
+            "end": 510.36,
+            "text": " Is that a good idea?  Probably not.  For one thing, it would say that we  ought to have as much population explosion as possible,  because then we have more people to integrate over,"
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 510.36,
+            "end": 528.12,
+            "text": " which doesn't seem sensible.  Now, obviously, if we start packing the world so  that it's super crowded, then the quality of life  will go down eventually enough that adding more people  is probably not optimal."
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 528.12,
+            "end": 543.92,
+            "text": " But nevertheless, that doesn't seem  like a real satisfying solution.  How about less?  It was popular about 10 years ago  for people to write these sort of speculative books"
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 543.92,
+            "end": 565.44,
+            "text": " about how would the world look if half the people died,  other than the trauma of the half the people dying.  They were proposing that this would  be some wonderful sylvan, sort of ideal, old-fashioned kind  of world."
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 565.44,
+            "end": 581.9200000000001,
+            "text": " I didn't buy that.  And of course, we don't know of a good way to get there.  Although it is true that in at least developed countries,  birth rates keep falling to the point  where populations are worried about underpopulation."
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 581.92,
+            "end": 595.56,
+            "text": " The Japanese, for example, have very strict immigration  policies.  So you can't become Japanese if you're not born Japanese.  And Japanese people aren't having enough kids  to replace themselves."
+        },
+        {
+            "number": "lec2",
+            "title": "part.002.mp3",
+            "start": 595.56,
+            "end": 601.9599999999999,
+            "text": " And so the natural population of Japan  is falling into that."
+        }
+    ],
+    "text": " So that's what the discount factor does. Now, who knows what the right discount rate is? So in some of their work, they were doing crazy things like taking the financial discount factors about bank interest rates and things like that and applying them to these health things just because they didn't have any better numbers to do. That seems a little suspicious. But nevertheless, methodologically, it's a way of doing it. OK, so how do you measure the quality of life? Well, there's this notion of the activities of daily living. So can you bathe and shower? Can you brush your teeth and groom your hair? Can you get dressed? Can you go to the toilet, clean yourself up? Are you able to walk, get in and out of bed, get in and out of a chair? Can you feed yourself? And then there are a bunch of instrumental factors, things like, are you able to clean your house? And can you manage your money? And so on. So these are typically for older people. But they are ways of trying to quantify that quality of life by saying, how many of these things are you able to do? And there are a lot of federal regulations, for example, that take advantage of quantification like this. So if you're asking to be put on some sort of disability where the government sends you a check to keep you alive, you have to demonstrate that you are at a certain point on the scale that's derived from these capabilities in order to justifiably get that. So occupational therapy is one of the things that people try to teach the elderly. My parents died in their late 80s, and my dad was 90. And I remember when he would have some medical problem, then he would be put into the clutches of an occupational therapist who would try to make sure that he was able to communicate and get around and not fall for tricks where people wanted to get him to send all his money to them or meal preparation and stuff like that. So occupational is a funny term for it, because this typically applies to people who are retired. So it's not really an occupation, but it's the sort of things that you need to do in order to be able to have a decent life. Well, now there's an interesting valuation question. So if you look at the top right model, we actually don't have very good data on anything other than mortality. So mortality is who dies. So the blue curve there is the curve that you've seen before, which is of a cohort, how many people are still alive after a certain number of years. The red curve is a morbidity curve, which says how many of those people are still alive and have no sort of problematic chronic diseases. So they're not in constant pain, and they're not immobilized, and they're not unable to do the things that I just listed on the previous slides. And then disability is when you really become incapable of taking care of yourself. And it typically involves moving into an assisted living facility or a nursing home or something like that, which is kind of a nightmare for many people and also very expensive for society. So as I said, the blue curve there is based on actual data for American females in 1980. The red curve is a hypothetical curve where I just assumed that the rate of developing a morbidity is about twice the rate of dying. And the green curve, I assumed that the rate of developing a disability is, I can't remember, I think three times as high as the rate of dying, something like that. So that's why those curves are lower, and they look approximately right, but we don't have good data on those. Now, the question that you have to ask is, how do you want to change this? So for example, suppose that we kept the same situation. We reduced mortality to 20% of its actual rate, but we kept the disability and morbidity rates the same as they are on the top left. So what would that do? Well, what that would do is create a huge number of people who are disabled, because they're going to live longer beyond the point where they're able to function fully. So this is not, yeah? AUDIENCE 2 Can I just ask, why does green not just mean healthy? Like, to me, it just seems like it's just being healthy. PETER SZOLOVITSKY Green just means healthy. AUDIENCE 2 Oh, OK. It does? PETER SZOLOVITSKY Yeah. So beyond green is what I meant is the morbidity curve, and beyond red is the disability curve. I may have misspoken. So green is healthy. Red means suffering from some morbidity, and blue means disabled. So if we just extend life, but we don't make it any better, then that's not a very attractive picture. So other possibilities are compression of morbidity. So for example, if we reduce the rate at which people get sick and die, but we decrease it initially and then increase it so that, on average, people live about the same length of time that they now do, then we're going to have fewer people who are suffering from morbidity or who are disabled, because you last doing well, and then you die. So this is the wonderful one hors chaise, where everything falls apart at once, which, frankly, as somebody who's a little closer to the end than you guys are, I wouldn't mind that kind of exit. I don't want to be disabled for 20 years. I'd rather live a long time healthy and then drop dead at some point. My dad used to say that he wanted to die by being hit by a meteor. He wouldn't know it's coming. It's instant, no suffering, no pain, perfect. He almost got it, but not quite. And then the final story is lifespan extension, which is where we simply lower the mortality rate and all the other rates in proportion. And what happens is that you start having healthy 107-year-olds and not so healthy 120-year-olds in the population in larger numbers than we do now. Social quality of life, that's a tough one. So here's a naive theory. We take the quality of life of every person on the planet. We sum them up, and we say, OK, that's the social quality of life. Is that a good idea? Probably not. For one thing, it would say that we ought to have as much population explosion as possible, because then we have more people to integrate over, which doesn't seem sensible. Now, obviously, if we start packing the world so that it's super crowded, then the quality of life will go down eventually enough that adding more people is probably not optimal. But nevertheless, that doesn't seem like a real satisfying solution. How about less? It was popular about 10 years ago for people to write these sort of speculative books about how would the world look if half the people died, other than the trauma of the half the people dying. They were proposing that this would be some wonderful sylvan, sort of ideal, old-fashioned kind of world. I didn't buy that. And of course, we don't know of a good way to get there. Although it is true that in at least developed countries, birth rates keep falling to the point where populations are worried about underpopulation. The Japanese, for example, have very strict immigration policies. So you can't become Japanese if you're not born Japanese. And Japanese people aren't having enough kids to replace themselves. And so the natural population of Japan is falling into that."
+}

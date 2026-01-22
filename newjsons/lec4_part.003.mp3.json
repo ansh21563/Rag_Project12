@@ -1,0 +1,327 @@
+{
+    "chunks": [
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 0.0,
+            "end": 16.68,
+            "text": " function subject to the solution having to be either on the ball,  which is what you would do if you were optimizing the L2  norm, versus living on this diamond, which  is what would happen if you were optimizing the L1 norm.  Well, the solution, the optimal solution,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 16.68,
+            "end": 33.76,
+            "text": " is going to be, in essence, the closest point along the circle,  which gets as close as possible to the middle of that level  set.  So over here, the closest point is that one.  And you'll see that this point has a non-zero W1 and W2."
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 33.76,
+            "end": 50.08,
+            "text": " Over here, the closest point is over here.  Notice that that has a zero value of W1  and a non-zero value of W2.  Thus, it's found a sparser solution than this one.  So this is just to give you some intuition about why"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 50.08,
+            "end": 70.72,
+            "text": " using L1 regularization results in sparse solutions  to your optimization problem.  And that can be beneficial for two purposes.  First, it can help prevent overfitting in settings  where there exists a very good risk model that uses"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 70.72,
+            "end": 82.88,
+            "text": " a small number of features.  And to point out, that's not a crazy idea  that there might exist a risk model that uses  a small number of features.  Because remember, think back to that Apgar score,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 82.88,
+            "end": 95.66,
+            "text": " or the FIN risk, which was used to predict diabetes  in Finland.  Each of those had only 5 to 20 questions.  And based on the answers to those 5 to 20 questions,  one could get a pretty good idea of what"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 95.66,
+            "end": 107.48,
+            "text": " the risk is of that patient.  So the fact that there might be a small number of features  that are together sufficient is actually  a very reasonable prior.  And it's one reason why L1 regularization is actually"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 107.48,
+            "end": 120.32,
+            "text": " very well suited to these types of risk stratification problems  on this type of data.  The second reason is one of interpretability.  If one wants to then ask, well, what  are the features that actually were used by this model"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 120.32,
+            "end": 133.0,
+            "text": " to make predictions, when you find only 20 or a few hundred  features, you can enumerate all of them  and look to see what they are.  And that way, understand what is going on into the predictions  that are made."
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 133.0,
+            "end": 143.12,
+            "text": " And that also has a very big impact  when it comes to translation.  So suppose you built a model using data  from this health insurance company.  And this health insurance company"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 143.12,
+            "end": 158.92000000000002,
+            "text": " just happened to have access to a huge number of features.  But now you want to go somewhere else and apply the same model.  If what you've learned is a model with only a few hundred  features, and so you're able to dwindle it down,  then it provides an opportunity to deploy your model much more"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 158.92000000000002,
+            "end": 169.8,
+            "text": " easily.  The next place you go to, you only  need to get access to those features  in order to make your predictions.  So I'll summarize the next."
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 169.8,
+            "end": 183.76,
+            "text": " I'll finish up in the next five minutes  in order to get to our discussion with Leonard.  But I just want to recap what are the features that  go into this model and what are some of the valuations  that we use."
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 183.76,
+            "end": 199.16,
+            "text": " So the features that we used here  were ones that were designed to take into consideration  that there is a lot of missing data for patients.  So rather than think through, do we impute this feature?  Do we not impute this feature?"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 199.16,
+            "end": 211.28,
+            "text": " We simply look to see, were these features ever observed?  So we choose our feature space in order  to already account for the fact that there's  a lot of missingness.  For example, we look to see, what types of specialists"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 211.28,
+            "end": 223.07999999999998,
+            "text": " has this doctor seen in the past, been to in the past?  For every possible specialist, we  put a 1 in the corresponding dimension  if the patient has seen that specialist, that type  of specialist, and 0 otherwise."
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 223.07999999999998,
+            "end": 239.56,
+            "text": " For the medications, for the top 1,000 most common medications,  has the patient ever taken this medication, yes or no?  Again, 0, 1 in the corresponding dimension.  For laboratory tests, that's where  we do something which is a little bit different."
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 239.56,
+            "end": 252.4,
+            "text": " We look to see, first of all, was that laboratory test ever  administered?  And then we say, OK, if it was administered,  was the result ever low, out of bounds on the lower side?  Was the result ever high?"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 252.4,
+            "end": 259.64,
+            "text": " Was the result ever normal?  Is the value increasing?  Is the value decreasing?  Is the value fluctuating?  And notice that each one of these quantities"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 259.64,
+            "end": 272.0,
+            "text": " is well-defined, even for patients  who don't ever have any laboratory test results  available.  The answer would be 0, it was never administered,  and 0, it was never low, 0 was never high, and so on."
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 272.0,
+            "end": 283.4,
+            "text": " OK?  Yep?  AUDIENCE 2 Is the value increasing?  Is it every time, or how do you define increasing?  So increasing here, first of all,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 283.4,
+            "end": 298.71999999999997,
+            "text": " if there is only a single value observed, then it's 0.  If there were at least two values observed,  then you look to see, was there ever  any adjacent pair of observations  where the second one was higher than the first one?"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 298.71999999999997,
+            "end": 308.15999999999997,
+            "text": " That's the way it was defined here.  AUDIENCE 2 Even if it has increased and then decreased,  you put 1 and 1 on the value increasing and decreasing?  Correct.  That's what we did here."
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 308.15999999999997,
+            "end": 322.94,
+            "text": " And it's extremely simple.  So there are lots of better ways that you could do this.  And in fact, this is an example which  we'll come back to perhaps a little bit in the next lecture  and then more in subsequent lectures"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 322.94,
+            "end": 332.36,
+            "text": " when we talk about using recurrent neural networks  to try to summarize time series data,  because one could imagine that using such an approach could  actually automatically learn such features.  Yep?"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 332.36,
+            "end": 342.82,
+            "text": " AUDIENCE 3 Is fluctuating one of the other two normal?  Fluctuating is exactly the scenario  that was just described.  It can go up, and then it goes down.  But then it has to do both."
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 342.82,
+            "end": 350.34,
+            "text": " Has to do both.  Yeah.  Yep?  AUDIENCE 4 Just having the two solutions,  isn't the first question simply dependent on the others?"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 350.34,
+            "end": 358.86,
+            "text": " Was the test server as we did, as administered,  what if that, like if any of the others is 1?  Correct.  So indeed, there's a huge amount of correlation  between these features."
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 358.86,
+            "end": 377.82000000000005,
+            "text": " If any of these were 1, then this is also going to be 1.  Now, yeah, but you would still want  to include this 1 in here.  So imagine that all of these were 0.  You don't know if they're 0 because these things didn't"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 377.82000000000005,
+            "end": 391.22,
+            "text": " happen or because the test was never performed.  AUDIENCE 5 Are the low, high, normal, odd, like standard?  They're just binary indicators here.  Does it have to fit into one category?  Well, no."
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 391.22,
+            "end": 402.02000000000004,
+            "text": " Oh, I see what you're saying.  So you're saying if the result was ever present,  then it would be at least one of these three.  Maybe.  It gets into some of the technical details,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 402.02,
+            "end": 413.14,
+            "text": " which I don't remember right now.  It's a good question.  And then, and this is the next most really important detail,  the way I just described this, there  was no notion of time in that."
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 413.14,
+            "end": 424.34,
+            "text": " But of course, when these things happened  can be really important.  So the next thing we do is we recompute  all of these features for different time buckets.  So we compute them for the last six months of history,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 424.34,
+            "end": 435.62,
+            "text": " for the last 24 months of history,  and then for all of the past history.  And we concatenate together all of those feature vectors.  And what you get out in this case  was something like a 42,000 dimensional feature vector."
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 435.62,
+            "end": 454.58,
+            "text": " By the way, it's 42,000 dimensional and not higher  because the features that we used for diagnosis codes  for this paper were not temporal in nature.  And one could easily make them temporal in nature,  in which case it would be more like 60,000 features."
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 454.58,
+            "end": 467.46,
+            "text": " I'm going to skip over the deriving labels  and get back to that next time.  I just want to briefly talk about how does one  evaluate these types of models.  And I'll give you one view on evaluations,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 467.46,
+            "end": 486.5,
+            "text": " and shortly we'll hear a very different type of view.  So here what I'm showing you are the variables  that have been selected by the model and have non-zero weight.  So for example, the very top you see  impaired fasting glucose, which is used by the model."
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 486.5,
+            "end": 495.68,
+            "text": " And it's not surprising because we're  trying to predict is the patient likely to develop  type 2 diabetes.  Now you might ask, if a patient has a diagnosis  code for impaired fasting glucose,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 495.68,
+            "end": 508.16,
+            "text": " aren't they already diabetic?  Shouldn't they have been excluded?  And the answer is no, because there are also  patients who are pre-diabetic in this data set, who have been  intentionally included because we don't know which of them"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 508.16,
+            "end": 521.26,
+            "text": " are going to go on to develop type 2 diabetes.  And so this is an indicator that the patient  has been previously flagged as being pre-diabetic.  And it obviously makes sense that that  would be at the very top of the predictive variables."
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 521.26,
+            "end": 534.48,
+            "text": " But there are also many things that  are a little bit less obvious.  For example, here we see obstructive sleep apnea  and esophageal reflux as being chosen by the model  to be predictive that the patient developing type 2"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 534.48,
+            "end": 548.3199999999999,
+            "text": " diabetes.  What we would conjecture is that those variables, in fact,  act as surrogates for the patient being obese,  because obesity is very seldom coded in commercial health  insurance claims."
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 548.3199999999999,
+            "end": 562.68,
+            "text": " And so with this variable, despite the fact  that the patient might be obese, if this variable is not  observed, then patients who are obese often  have what's called sleep apnea.  So they might stop breathing for short periods of time"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 562.68,
+            "end": 580.76,
+            "text": " during their sleep.  And so that, then, would be a sign of obesity.  So I talked about how the criteria which  we use to evaluate risk stratification models  are a little bit different from the criteria used"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 580.76,
+            "end": 597.0,
+            "text": " to evaluate diagnosis models.  Here, I'll tell you one of the measures that we often use.  And it's called positive predictive value.  So what we'll do is we'll look at,  after you've learned your model, look at the top 100 predictions,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.003.mp3",
+            "start": 597.0,
+            "end": 601.84,
+            "text": " top 1,000 predictions, top 10,000 predictions,  and look to see what happens."
+        }
+    ],
+    "text": " function subject to the solution having to be either on the ball, which is what you would do if you were optimizing the L2 norm, versus living on this diamond, which is what would happen if you were optimizing the L1 norm. Well, the solution, the optimal solution, is going to be, in essence, the closest point along the circle, which gets as close as possible to the middle of that level set. So over here, the closest point is that one. And you'll see that this point has a non-zero W1 and W2. Over here, the closest point is over here. Notice that that has a zero value of W1 and a non-zero value of W2. Thus, it's found a sparser solution than this one. So this is just to give you some intuition about why using L1 regularization results in sparse solutions to your optimization problem. And that can be beneficial for two purposes. First, it can help prevent overfitting in settings where there exists a very good risk model that uses a small number of features. And to point out, that's not a crazy idea that there might exist a risk model that uses a small number of features. Because remember, think back to that Apgar score, or the FIN risk, which was used to predict diabetes in Finland. Each of those had only 5 to 20 questions. And based on the answers to those 5 to 20 questions, one could get a pretty good idea of what the risk is of that patient. So the fact that there might be a small number of features that are together sufficient is actually a very reasonable prior. And it's one reason why L1 regularization is actually very well suited to these types of risk stratification problems on this type of data. The second reason is one of interpretability. If one wants to then ask, well, what are the features that actually were used by this model to make predictions, when you find only 20 or a few hundred features, you can enumerate all of them and look to see what they are. And that way, understand what is going on into the predictions that are made. And that also has a very big impact when it comes to translation. So suppose you built a model using data from this health insurance company. And this health insurance company just happened to have access to a huge number of features. But now you want to go somewhere else and apply the same model. If what you've learned is a model with only a few hundred features, and so you're able to dwindle it down, then it provides an opportunity to deploy your model much more easily. The next place you go to, you only need to get access to those features in order to make your predictions. So I'll summarize the next. I'll finish up in the next five minutes in order to get to our discussion with Leonard. But I just want to recap what are the features that go into this model and what are some of the valuations that we use. So the features that we used here were ones that were designed to take into consideration that there is a lot of missing data for patients. So rather than think through, do we impute this feature? Do we not impute this feature? We simply look to see, were these features ever observed? So we choose our feature space in order to already account for the fact that there's a lot of missingness. For example, we look to see, what types of specialists has this doctor seen in the past, been to in the past? For every possible specialist, we put a 1 in the corresponding dimension if the patient has seen that specialist, that type of specialist, and 0 otherwise. For the medications, for the top 1,000 most common medications, has the patient ever taken this medication, yes or no? Again, 0, 1 in the corresponding dimension. For laboratory tests, that's where we do something which is a little bit different. We look to see, first of all, was that laboratory test ever administered? And then we say, OK, if it was administered, was the result ever low, out of bounds on the lower side? Was the result ever high? Was the result ever normal? Is the value increasing? Is the value decreasing? Is the value fluctuating? And notice that each one of these quantities is well-defined, even for patients who don't ever have any laboratory test results available. The answer would be 0, it was never administered, and 0, it was never low, 0 was never high, and so on. OK? Yep? AUDIENCE 2 Is the value increasing? Is it every time, or how do you define increasing? So increasing here, first of all, if there is only a single value observed, then it's 0. If there were at least two values observed, then you look to see, was there ever any adjacent pair of observations where the second one was higher than the first one? That's the way it was defined here. AUDIENCE 2 Even if it has increased and then decreased, you put 1 and 1 on the value increasing and decreasing? Correct. That's what we did here. And it's extremely simple. So there are lots of better ways that you could do this. And in fact, this is an example which we'll come back to perhaps a little bit in the next lecture and then more in subsequent lectures when we talk about using recurrent neural networks to try to summarize time series data, because one could imagine that using such an approach could actually automatically learn such features. Yep? AUDIENCE 3 Is fluctuating one of the other two normal? Fluctuating is exactly the scenario that was just described. It can go up, and then it goes down. But then it has to do both. Has to do both. Yeah. Yep? AUDIENCE 4 Just having the two solutions, isn't the first question simply dependent on the others? Was the test server as we did, as administered, what if that, like if any of the others is 1? Correct. So indeed, there's a huge amount of correlation between these features. If any of these were 1, then this is also going to be 1. Now, yeah, but you would still want to include this 1 in here. So imagine that all of these were 0. You don't know if they're 0 because these things didn't happen or because the test was never performed. AUDIENCE 5 Are the low, high, normal, odd, like standard? They're just binary indicators here. Does it have to fit into one category? Well, no. Oh, I see what you're saying. So you're saying if the result was ever present, then it would be at least one of these three. Maybe. It gets into some of the technical details, which I don't remember right now. It's a good question. And then, and this is the next most really important detail, the way I just described this, there was no notion of time in that. But of course, when these things happened can be really important. So the next thing we do is we recompute all of these features for different time buckets. So we compute them for the last six months of history, for the last 24 months of history, and then for all of the past history. And we concatenate together all of those feature vectors. And what you get out in this case was something like a 42,000 dimensional feature vector. By the way, it's 42,000 dimensional and not higher because the features that we used for diagnosis codes for this paper were not temporal in nature. And one could easily make them temporal in nature, in which case it would be more like 60,000 features. I'm going to skip over the deriving labels and get back to that next time. I just want to briefly talk about how does one evaluate these types of models. And I'll give you one view on evaluations, and shortly we'll hear a very different type of view. So here what I'm showing you are the variables that have been selected by the model and have non-zero weight. So for example, the very top you see impaired fasting glucose, which is used by the model. And it's not surprising because we're trying to predict is the patient likely to develop type 2 diabetes. Now you might ask, if a patient has a diagnosis code for impaired fasting glucose, aren't they already diabetic? Shouldn't they have been excluded? And the answer is no, because there are also patients who are pre-diabetic in this data set, who have been intentionally included because we don't know which of them are going to go on to develop type 2 diabetes. And so this is an indicator that the patient has been previously flagged as being pre-diabetic. And it obviously makes sense that that would be at the very top of the predictive variables. But there are also many things that are a little bit less obvious. For example, here we see obstructive sleep apnea and esophageal reflux as being chosen by the model to be predictive that the patient developing type 2 diabetes. What we would conjecture is that those variables, in fact, act as surrogates for the patient being obese, because obesity is very seldom coded in commercial health insurance claims. And so with this variable, despite the fact that the patient might be obese, if this variable is not observed, then patients who are obese often have what's called sleep apnea. So they might stop breathing for short periods of time during their sleep. And so that, then, would be a sign of obesity. So I talked about how the criteria which we use to evaluate risk stratification models are a little bit different from the criteria used to evaluate diagnosis models. Here, I'll tell you one of the measures that we often use. And it's called positive predictive value. So what we'll do is we'll look at, after you've learned your model, look at the top 100 predictions, top 1,000 predictions, top 10,000 predictions, and look to see what happens."
+}

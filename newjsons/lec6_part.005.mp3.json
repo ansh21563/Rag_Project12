@@ -1,0 +1,271 @@
+{
+    "chunks": [
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 0.0,
+            "end": 20.8,
+            "text": " them typically will only reach a local maxima of the likelihood.  So this paper uses EM, which intuitively  iterates between inferring those missing variables,  so imputing the x's and the s's given the current model  and doing posterior inference to infer the missing variables"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 20.8,
+            "end": 32.32,
+            "text": " given the observed variables using the current model.  And then once you've imputed those variables,  attempting to refit the model.  So that's called the EM step for maximization,  which updates the model and just iterates"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 32.32,
+            "end": 44.68,
+            "text": " between those two things.  That's one learning algorithm, which  is guaranteed to reach a local maxima of the likelihood  under some regularity assumptions.  And so this paper uses that algorithm."
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 44.68,
+            "end": 58.32,
+            "text": " But you need to be asking yourself,  if all you ever reserve are the y's,  then will this algorithm ever recover anything  close to the true model?  For example, there might be large amounts"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 58.32,
+            "end": 76.32,
+            "text": " of non-identifiability here.  Could be that you could swap the meaning of the s's,  and you'd get a similar likelihood on the y's.  That's where bringing in domain knowledge becomes critical.  So this is going to be an example where"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 76.32,
+            "end": 93.48,
+            "text": " we have no labeled data or very little labeled data.  And we're going to do unsupervised learning  of this model, but we're going to use a ton of domain  knowledge in order to constrain the model as much as possible.  So what is that domain knowledge?"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 93.48,
+            "end": 116.28,
+            "text": " Well, first, we're going to use the fact  that we know that a true heart rate evolves  in a fashion that can be very well modeled  by an autoregressive process.  So the autoregressive process that's used in this paper"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 116.28,
+            "end": 126.88,
+            "text": " is used to model the normal heart rate dynamics.  In a moment, I'll tell you how to model the abnormal heart  rate observations.  And intuitively, I'll first go over the intuition,  then I'll give you the math."
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 126.88,
+            "end": 140.48,
+            "text": " Intuitively, what it does is it recognizes  that this complicated signal can be  decomposed into two pieces.  The first piece shown here is called a baseline signal.  And that, if you squint your eyes"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 140.48,
+            "end": 153.72,
+            "text": " and sort of ignore the very local fluctuations,  this is what you get out.  And then you can look at the residual  of subtracting this signal, subtracting this baseline  from this signal."
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 153.72,
+            "end": 169.72,
+            "text": " And what you get out looks like this.  And notice here, it's around 0 mean.  So it's a 0 mean signal with some random fluctuations.  And the fluctuations are happening here  at a much faster rate than for the original baseline."
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 169.72,
+            "end": 193.16,
+            "text": " And so the sum of bt and this residual  is exactly equal to the true heart rate.  And each of these two things we can model very well.  This we can model by a random walk, which goes very slowly.  And this we can model by a random walk,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 193.16,
+            "end": 206.56,
+            "text": " which goes very quickly.  And that is exactly what I'm now going  to show over here on the left-hand side.  bt, this baseline signal, we're going  to model as a Gaussian distribution, which"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 206.56,
+            "end": 221.51999999999998,
+            "text": " is parametrized as a function of not just bt minus 1,  but also bt minus 2 and bt minus 3.  And so we're going to be taking a weighted  average of the previous few time steps,  where we're smoothing out, in essence,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 221.51999999999998,
+            "end": 254.8,
+            "text": " the previous few observations.  If you were to, if you're being a keen observer,  you'll notice that this is no longer a Markov model.  For example, if this p1 and p2 are equal to 2,  this then corresponds to a second-order Markov model,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 254.94,
+            "end": 276.96000000000004,
+            "text": " because each random variable depends on the previous two  time steps of the Markov chain.  So you would model now bt by this process.  And you would probably be averaging  over a large number of previous time steps"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 276.96000000000004,
+            "end": 293.0,
+            "text": " to get this smooth property.  And then you model xt minus bt by this autoregressive  process, where you might, for example, just  be looking at just the previous couple of time steps,  and you recognize that you're just doing much more"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 293.0,
+            "end": 304.72,
+            "text": " random fluctuations.  And then, so that's how one would now model  normal Hartree dynamics.  And again, it's just, this is an example  of a statistical model."
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 304.72,
+            "end": 320.52000000000004,
+            "text": " There's no mechanistic knowledge of Hart's being used here.  But we can fit the data of normal Hart's  pretty well using this.  But the next question, and the most interesting one,  is how does one now model artifactual events?"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 320.52000000000004,
+            "end": 341.28000000000003,
+            "text": " So for that, that's where some mechanistic knowledge comes in.  So one model is that the probe dropouts  are given by recognizing that if a probe is removed  from the baby, then there should no longer be,  or at least if you, after a small amount of time,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 341.28000000000003,
+            "end": 352.8,
+            "text": " there should no longer be any dependence  on the true value of the baby.  For example, the blood pressure, once the blood pressure probe  is removed, is no longer related to the baby's true blood  pressure."
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 352.8,
+            "end": 367.72,
+            "text": " But there might be some delay to that lack of dependence.  And that is going to be encoded in some domain knowledge.  So for example, the temperature probe,  when you remove the temperature probe from the baby,  it starts heating up again, or it starts cooling,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 367.72,
+            "end": 377.44,
+            "text": " assuming that the ambient temperature is cooler  than the baby's temperature.  If you take it off the baby, it starts cooling down.  How fast does it cool down?  Well, you could assume that it cools down"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 377.44,
+            "end": 388.86,
+            "text": " with some exponential decay from the baby's temperature.  This is something that is very reasonable.  And you can imagine, maybe if you  had labeled data for just a few of the babies,  you could try to fit the parameters of that exponential"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 388.86,
+            "end": 405.6,
+            "text": " very quickly.  And in this way, now, we parameterize  the conditional distribution of the temperature probe,  given both the state and whether the artifact  occurred or not, using this very simple exponential decay."
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 405.6,
+            "end": 418.8,
+            "text": " And in this paper, they give a very similar type of,  they make similar types of analogous types  of assumptions for all of the other artifactual probes.  You should think about this as constraining  these conditional distributions I showed you here."
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 418.8,
+            "end": 431.40000000000003,
+            "text": " They're no longer allowed to be arbitrary distributions,  and so that when one does now expectation maximization  to try to maximize the marginal likelihood of the data,  you've now constrained it in a way that you hopefully  remove the unidentifiability of the learning problem."
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 431.40000000000003,
+            "end": 451.20000000000005,
+            "text": " It makes all of the difference in learning here.  So in this paper, their evaluation  did a little bit of fine tuning for each baby.  In particular, they assumed that the first 30 minutes  near the start consists of normal dynamics,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 451.20000000000005,
+            "end": 465.08,
+            "text": " so that there are no artifacts.  That's, of course, a big assumption,  but they used that to try to fine tune the dynamic model  to fine tune it for each baby for themselves.  And then they looked at the ability"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 465.08,
+            "end": 481.52,
+            "text": " to try to identify artifactual processes.  I want to go a little bit slowly through this plot,  because it's quite interesting.  So what I'm showing you here is a ROC curve of the ability  to predict each of the four different types of artifacts."
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 481.52,
+            "end": 493.76,
+            "text": " For example, at any one point in time,  was there a blood sample being taken or not?  At any one point in time, was there  a core temperature disconnect of the core temperature probe?  And to evaluate it, they're assuming"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 493.76,
+            "end": 511.12,
+            "text": " that they have some labeled data for evaluation purposes only.  And of course, you want to be in the very far top left corner  up here.  What we're showing here are three different curves.  The very faint dotted line, which"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 511.12,
+            "end": 524.3199999999999,
+            "text": " I'm going to trace out with my cursor,  is the baseline.  Think of that as a much worse algorithm.  OK?  Sorry, that's that line over there."
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 524.3199999999999,
+            "end": 540.12,
+            "text": " Can everyone see it?  And this approach are the other two lines.  Now, what's differentiating those other two lines  corresponds to the particular type of approximate inference  algorithm that's used."
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 540.12,
+            "end": 558.76,
+            "text": " To do this posterior inference, to infer  the true value of the x's given your noisy observations,  in the model given here is actually a very hard inference  problem.  Mathematically, I think one can show that it's"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 558.76,
+            "end": 571.12,
+            "text": " an NP-hard computational problem.  And so they have to approximate it in some way.  And they use two different approximations here.  The first approximation is based on what  they're calling a Gaussian sum approximation."
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 571.12,
+            "end": 584.0400000000001,
+            "text": " And it's a deterministic approximation.  The second approximation is based on a Monte Carlo method.  And what you see here is that the Gaussian sum  approximation is actually dramatically better.  So for example, in this blood sample one,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.005.mp3",
+            "start": 584.0400000000001,
+            "end": 597.8000000000001,
+            "text": " the ROC curve looks like this for the Gaussian sum  approximation, whereas for the Monte Carlo approximation,  it's actually significantly lower.  And this is just to point out that even in this setting"
+        }
+    ],
+    "text": " them typically will only reach a local maxima of the likelihood. So this paper uses EM, which intuitively iterates between inferring those missing variables, so imputing the x's and the s's given the current model and doing posterior inference to infer the missing variables given the observed variables using the current model. And then once you've imputed those variables, attempting to refit the model. So that's called the EM step for maximization, which updates the model and just iterates between those two things. That's one learning algorithm, which is guaranteed to reach a local maxima of the likelihood under some regularity assumptions. And so this paper uses that algorithm. But you need to be asking yourself, if all you ever reserve are the y's, then will this algorithm ever recover anything close to the true model? For example, there might be large amounts of non-identifiability here. Could be that you could swap the meaning of the s's, and you'd get a similar likelihood on the y's. That's where bringing in domain knowledge becomes critical. So this is going to be an example where we have no labeled data or very little labeled data. And we're going to do unsupervised learning of this model, but we're going to use a ton of domain knowledge in order to constrain the model as much as possible. So what is that domain knowledge? Well, first, we're going to use the fact that we know that a true heart rate evolves in a fashion that can be very well modeled by an autoregressive process. So the autoregressive process that's used in this paper is used to model the normal heart rate dynamics. In a moment, I'll tell you how to model the abnormal heart rate observations. And intuitively, I'll first go over the intuition, then I'll give you the math. Intuitively, what it does is it recognizes that this complicated signal can be decomposed into two pieces. The first piece shown here is called a baseline signal. And that, if you squint your eyes and sort of ignore the very local fluctuations, this is what you get out. And then you can look at the residual of subtracting this signal, subtracting this baseline from this signal. And what you get out looks like this. And notice here, it's around 0 mean. So it's a 0 mean signal with some random fluctuations. And the fluctuations are happening here at a much faster rate than for the original baseline. And so the sum of bt and this residual is exactly equal to the true heart rate. And each of these two things we can model very well. This we can model by a random walk, which goes very slowly. And this we can model by a random walk, which goes very quickly. And that is exactly what I'm now going to show over here on the left-hand side. bt, this baseline signal, we're going to model as a Gaussian distribution, which is parametrized as a function of not just bt minus 1, but also bt minus 2 and bt minus 3. And so we're going to be taking a weighted average of the previous few time steps, where we're smoothing out, in essence, the previous few observations. If you were to, if you're being a keen observer, you'll notice that this is no longer a Markov model. For example, if this p1 and p2 are equal to 2, this then corresponds to a second-order Markov model, because each random variable depends on the previous two time steps of the Markov chain. So you would model now bt by this process. And you would probably be averaging over a large number of previous time steps to get this smooth property. And then you model xt minus bt by this autoregressive process, where you might, for example, just be looking at just the previous couple of time steps, and you recognize that you're just doing much more random fluctuations. And then, so that's how one would now model normal Hartree dynamics. And again, it's just, this is an example of a statistical model. There's no mechanistic knowledge of Hart's being used here. But we can fit the data of normal Hart's pretty well using this. But the next question, and the most interesting one, is how does one now model artifactual events? So for that, that's where some mechanistic knowledge comes in. So one model is that the probe dropouts are given by recognizing that if a probe is removed from the baby, then there should no longer be, or at least if you, after a small amount of time, there should no longer be any dependence on the true value of the baby. For example, the blood pressure, once the blood pressure probe is removed, is no longer related to the baby's true blood pressure. But there might be some delay to that lack of dependence. And that is going to be encoded in some domain knowledge. So for example, the temperature probe, when you remove the temperature probe from the baby, it starts heating up again, or it starts cooling, assuming that the ambient temperature is cooler than the baby's temperature. If you take it off the baby, it starts cooling down. How fast does it cool down? Well, you could assume that it cools down with some exponential decay from the baby's temperature. This is something that is very reasonable. And you can imagine, maybe if you had labeled data for just a few of the babies, you could try to fit the parameters of that exponential very quickly. And in this way, now, we parameterize the conditional distribution of the temperature probe, given both the state and whether the artifact occurred or not, using this very simple exponential decay. And in this paper, they give a very similar type of, they make similar types of analogous types of assumptions for all of the other artifactual probes. You should think about this as constraining these conditional distributions I showed you here. They're no longer allowed to be arbitrary distributions, and so that when one does now expectation maximization to try to maximize the marginal likelihood of the data, you've now constrained it in a way that you hopefully remove the unidentifiability of the learning problem. It makes all of the difference in learning here. So in this paper, their evaluation did a little bit of fine tuning for each baby. In particular, they assumed that the first 30 minutes near the start consists of normal dynamics, so that there are no artifacts. That's, of course, a big assumption, but they used that to try to fine tune the dynamic model to fine tune it for each baby for themselves. And then they looked at the ability to try to identify artifactual processes. I want to go a little bit slowly through this plot, because it's quite interesting. So what I'm showing you here is a ROC curve of the ability to predict each of the four different types of artifacts. For example, at any one point in time, was there a blood sample being taken or not? At any one point in time, was there a core temperature disconnect of the core temperature probe? And to evaluate it, they're assuming that they have some labeled data for evaluation purposes only. And of course, you want to be in the very far top left corner up here. What we're showing here are three different curves. The very faint dotted line, which I'm going to trace out with my cursor, is the baseline. Think of that as a much worse algorithm. OK? Sorry, that's that line over there. Can everyone see it? And this approach are the other two lines. Now, what's differentiating those other two lines corresponds to the particular type of approximate inference algorithm that's used. To do this posterior inference, to infer the true value of the x's given your noisy observations, in the model given here is actually a very hard inference problem. Mathematically, I think one can show that it's an NP-hard computational problem. And so they have to approximate it in some way. And they use two different approximations here. The first approximation is based on what they're calling a Gaussian sum approximation. And it's a deterministic approximation. The second approximation is based on a Monte Carlo method. And what you see here is that the Gaussian sum approximation is actually dramatically better. So for example, in this blood sample one, the ROC curve looks like this for the Gaussian sum approximation, whereas for the Monte Carlo approximation, it's actually significantly lower. And this is just to point out that even in this setting"
+}

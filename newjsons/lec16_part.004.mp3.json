@@ -1,0 +1,313 @@
+{
+    "chunks": [
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 0.0,
+            "end": 13.4,
+            "text": " the state before the best state?  Well, we can say that one way is to go from here and one way  from here.  And as we got from the audience before,  this is a slightly worse way to get there than from there,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 13.4,
+            "end": 27.2,
+            "text": " because here we have a possibility of ending up  in minus 1.  So then we recurse further.  And essentially, we end up with something like this,  that says that the, what I will try to illustrate here"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 27.2,
+            "end": 39.44,
+            "text": " is that the green boxes, I hope you  I'm sorry for any colorblind members of the audience,  because this was a poor choice of mine.  Anyway, this bottom side here is mostly red  and this is mostly green."
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 39.44,
+            "end": 54.44,
+            "text": " And you can follow the green color here, essentially,  to get to the best end state.  And what I used here to color this in  is this idea of knowing how good a state is,  depending on how good the state after that state is."
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 54.44,
+            "end": 71.96000000000001,
+            "text": " So I knew that plus 1 is a good end state over there.  And that led me to recurse backwards, essentially.  So the question then is, how do we  know that that state over there is a good one?  When we have it visualized in front of us,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 71.96000000000001,
+            "end": 80.08,
+            "text": " it's very easy to see.  And it's very easy because we know that plus 1  is a terminal state here.  It ends there.  So those are the only sort of states"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 80.08,
+            "end": 95.03999999999999,
+            "text": " we need to consider in this case.  But more in general, how do we learn  what is the value of a state?  That will be the purpose of Q-learning.  If we have an idea of what is a good state,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 95.03999999999999,
+            "end": 107.92,
+            "text": " we can always sort of do that recursion  that I explained very briefly.  You find a state that has a high value  and you figure out how to get there.  OK."
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 107.92,
+            "end": 122.68,
+            "text": " So we're going to have to define now what I mean by value.  I've used that word a few different times.  I say recall here, but I don't know if I actually  had it on a slide before.  So let's just say this is the definition of value"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 122.68,
+            "end": 137.48000000000002,
+            "text": " that we will be working with.  So the value is, I think I had it on a slide before, actually.  This is the expected return.  Remember, this g here was the sum  of rewards going into the future, starting at time t."
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 137.48000000000002,
+            "end": 154.92000000000002,
+            "text": " And the value then of this state is  the expectation of such returns.  So before I said that the value of a policy  was the expectation of returns period,  and the value of a state and a policy"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 154.92000000000002,
+            "end": 172.72,
+            "text": " is the value of such returns starting in a certain state.  We can stratify this further, if we like,  and say that the value of a state action pair  is the expected return starting in a certain state  and taking an action a, and after that,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 172.72,
+            "end": 192.12,
+            "text": " following the policy pi.  This would be the so-called Q value of a state action pair,  S, a.  And this is where Q-learning gets its name.  So Q-learning attempts to estimate the Q function,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 192.12,
+            "end": 209.68,
+            "text": " the expected return starting in a state S  and taking action a from data.  And it does so, the Q-learning is also  associated with a deterministic policy.  So the policy and the Q function go together in this specific"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 209.68,
+            "end": 224.0,
+            "text": " way.  If we have a Q function, Q, that tries  to estimate the value of a policy pi,  the pi itself is the arg max according to that Q.  It sounds a little recursive, but hopefully it will be OK."
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 224.0,
+            "end": 237.68,
+            "text": " Maybe it's more obvious if we look here.  So Q, I said before, was the value  of starting in S, taking action a, and then following policy  pi.  This is defined by the decision process itself."
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 237.68,
+            "end": 251.72,
+            "text": " The best pi, the best policy, is the one that has the highest Q.  And this is what we call a Q star.  Well, that is not what we call a Q star.  This we'll call little Q star.  Q star, the best estimate of this"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 251.72,
+            "end": 261.6,
+            "text": " is obviously the thing itself.  So if you can find a good function that  assigns a value to a state action pair,  the best such function you can get  is the one that is equal to little q star."
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 264.32,
+            "end": 279.6,
+            "text": " Hope that wasn't too confusing.  I'll show on the next slide why that might be reasonable.  So Q learning is based on a general idea  from dynamic programming, which is the so-called Bellman  equation."
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 279.6,
+            "end": 298.72,
+            "text": " There we go.  So Bellman optimality says that this  is an instantiation of Bellman optimality, which  says that the best Q star, the best state action value  function, has the property that it"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 298.72,
+            "end": 314.52,
+            "text": " is equal to the immediate reward of taking action a in state S  plus this, which is the maximum Q value for the next state.  So we're going to stare at this for a bit,  because it's something to digest.  There's a bit here to digest."
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 314.52,
+            "end": 329.64,
+            "text": " Remember, Q star assigns a value to any state action pair.  So we have Q star here.  We have Q star here.  This thing here is supposed to represent the value going  forward in time after I've made this choice, action a instead"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 329.64,
+            "end": 342.42,
+            "text": " S.  So if I have a good idea of how good  it is to take action a instead S,  it should both incorporate the immediate reward  that I get, that's our T, and how good"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 342.42,
+            "end": 350.72,
+            "text": " that choice was going forward.  So think about mechanical ventilation.  As I said before, if we put a patient  on mechanical ventilation, we have  to do a bunch of other things after that."
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 350.72,
+            "end": 365.84000000000003,
+            "text": " If none of those other things lead to a good outcome,  this part will be low, even if the immediate return is good.  So for the optimal Q star, this quantity holds.  We know that.  We can prove that."
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 365.84000000000003,
+            "end": 375.96,
+            "text": " So the question is, how do we find this thing?  How do we find Q star?  Because Q star is not only the thing that  gives you the optimal policy.  It also satisfies this equality."
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 375.96,
+            "end": 388.5,
+            "text": " This is not true for every Q function,  but it's true for the optimal one.  Questions?  Yeah.  If you haven't seen this before, it"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 388.5,
+            "end": 399.96000000000004,
+            "text": " might be a little tough to digest.  Is the notation clear?  Essentially, here you have the state  that you arrive in at the next time.  A prime is the parameter of this here,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 399.96000000000004,
+            "end": 406.8,
+            "text": " or the argument to this.  You're taking the best possible Q star value in the state  that you arrive at after.  Yeah?  Go ahead."
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 406.8,
+            "end": 414.72,
+            "text": " Do you state it in the example you have on the board?  Yes.  Actually, I might do a full example  of Q learning in a second.  Yes, I will."
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 414.72,
+            "end": 426.56,
+            "text": " I'll get to that example.  OK.  Yeah, I was debating whether to do that.  It might take some time, but it could be useful.  So where are we?"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 427.32,
+            "end": 438.36,
+            "text": " Yes.  OK.  So what I showed you before, the Bellman inequality,  we know that this holds for the optimal thing.  And if there's a quality that is true at an optimum,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 438.36,
+            "end": 454.88,
+            "text": " one general idea in optimization is a so-called fixed point  iteration that you can do to arrive there.  And that's essentially what we will do to get to a good Q.  So a nice thing about Q learning is  that if your states and action spaces"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 454.88,
+            "end": 467.44,
+            "text": " are small and discrete, you can represent the Q function  as a table.  So all you have to keep track of is  how good is a certain action in a certain state,  or all actions in all states, rather."
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 467.44,
+            "end": 478.48,
+            "text": " So that's what we did here.  This is a table.  I've described to you the policy here.  But what we'll do next is to describe  the value of each action."
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 478.48,
+            "end": 494.12,
+            "text": " So you can think of it a value of taking the right one, bottom,  top, and left, essentially.  Those will be the values that we need to consider.  And so what Q learning can do with discrete states  is to essentially start from somewhere,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 494.12,
+            "end": 506.76,
+            "text": " start from some idea of what Q is.  It could be random.  It could be zero.  And then repeat the following fixed point iteration,  where you update your former idea of what Q should be"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 506.76,
+            "end": 520.4,
+            "text": " with its current value plus some, essentially,  a mixture of the immediate reward for taking action  at in that state and the future reward  as judged by your current estimate of the Q function.  So we'll do that now in practice."
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 520.4,
+            "end": 529.88,
+            "text": " Yeah?  Throughout this, where are we getting the transition  probabilities or the behavior of the game?  So they're not used here, actually.  A value-based RL, I didn't say that explicitly,"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 529.88,
+            "end": 540.4,
+            "text": " but they don't rely on knowing the transition probabilities.  What you might ask is, where do we get the S and the A's  and the R's from?  And we'll get to that.  How do we estimate these?"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 540.4,
+            "end": 551.48,
+            "text": " We'll get to that later.  Good question, though.  OK, I'm going to throw a very messy slide at you.  Here you go.  A lot of numbers."
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 551.48,
+            "end": 564.0400000000001,
+            "text": " So what I've done now here is a more exhaustive version  of what I put on the board.  For each little triangle here, it  represents the Q value for the state-action pair.  So this triangle is, again, for the action right"
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 564.0400000000001,
+            "end": 584.6800000000001,
+            "text": " if you're in this state.  OK, so what I've put on the first slide  here is the immediate reward of each action.  So we know that any step will cost us minus 0.04.  So that's why there's a lot of those here."
+        },
+        {
+            "number": "lec16",
+            "title": "part.004.mp3",
+            "start": 584.6800000000001,
+            "end": 601.7600000000001,
+            "text": " These white boxes here are not possible actions.  Up here, you have a 0.96, because it's  1, which is the immediate reward of going right here, minus 0.04.  These two are minus 1.04 for the same action."
+        }
+    ],
+    "text": " the state before the best state? Well, we can say that one way is to go from here and one way from here. And as we got from the audience before, this is a slightly worse way to get there than from there, because here we have a possibility of ending up in minus 1. So then we recurse further. And essentially, we end up with something like this, that says that the, what I will try to illustrate here is that the green boxes, I hope you I'm sorry for any colorblind members of the audience, because this was a poor choice of mine. Anyway, this bottom side here is mostly red and this is mostly green. And you can follow the green color here, essentially, to get to the best end state. And what I used here to color this in is this idea of knowing how good a state is, depending on how good the state after that state is. So I knew that plus 1 is a good end state over there. And that led me to recurse backwards, essentially. So the question then is, how do we know that that state over there is a good one? When we have it visualized in front of us, it's very easy to see. And it's very easy because we know that plus 1 is a terminal state here. It ends there. So those are the only sort of states we need to consider in this case. But more in general, how do we learn what is the value of a state? That will be the purpose of Q-learning. If we have an idea of what is a good state, we can always sort of do that recursion that I explained very briefly. You find a state that has a high value and you figure out how to get there. OK. So we're going to have to define now what I mean by value. I've used that word a few different times. I say recall here, but I don't know if I actually had it on a slide before. So let's just say this is the definition of value that we will be working with. So the value is, I think I had it on a slide before, actually. This is the expected return. Remember, this g here was the sum of rewards going into the future, starting at time t. And the value then of this state is the expectation of such returns. So before I said that the value of a policy was the expectation of returns period, and the value of a state and a policy is the value of such returns starting in a certain state. We can stratify this further, if we like, and say that the value of a state action pair is the expected return starting in a certain state and taking an action a, and after that, following the policy pi. This would be the so-called Q value of a state action pair, S, a. And this is where Q-learning gets its name. So Q-learning attempts to estimate the Q function, the expected return starting in a state S and taking action a from data. And it does so, the Q-learning is also associated with a deterministic policy. So the policy and the Q function go together in this specific way. If we have a Q function, Q, that tries to estimate the value of a policy pi, the pi itself is the arg max according to that Q. It sounds a little recursive, but hopefully it will be OK. Maybe it's more obvious if we look here. So Q, I said before, was the value of starting in S, taking action a, and then following policy pi. This is defined by the decision process itself. The best pi, the best policy, is the one that has the highest Q. And this is what we call a Q star. Well, that is not what we call a Q star. This we'll call little Q star. Q star, the best estimate of this is obviously the thing itself. So if you can find a good function that assigns a value to a state action pair, the best such function you can get is the one that is equal to little q star. Hope that wasn't too confusing. I'll show on the next slide why that might be reasonable. So Q learning is based on a general idea from dynamic programming, which is the so-called Bellman equation. There we go. So Bellman optimality says that this is an instantiation of Bellman optimality, which says that the best Q star, the best state action value function, has the property that it is equal to the immediate reward of taking action a in state S plus this, which is the maximum Q value for the next state. So we're going to stare at this for a bit, because it's something to digest. There's a bit here to digest. Remember, Q star assigns a value to any state action pair. So we have Q star here. We have Q star here. This thing here is supposed to represent the value going forward in time after I've made this choice, action a instead S. So if I have a good idea of how good it is to take action a instead S, it should both incorporate the immediate reward that I get, that's our T, and how good that choice was going forward. So think about mechanical ventilation. As I said before, if we put a patient on mechanical ventilation, we have to do a bunch of other things after that. If none of those other things lead to a good outcome, this part will be low, even if the immediate return is good. So for the optimal Q star, this quantity holds. We know that. We can prove that. So the question is, how do we find this thing? How do we find Q star? Because Q star is not only the thing that gives you the optimal policy. It also satisfies this equality. This is not true for every Q function, but it's true for the optimal one. Questions? Yeah. If you haven't seen this before, it might be a little tough to digest. Is the notation clear? Essentially, here you have the state that you arrive in at the next time. A prime is the parameter of this here, or the argument to this. You're taking the best possible Q star value in the state that you arrive at after. Yeah? Go ahead. Do you state it in the example you have on the board? Yes. Actually, I might do a full example of Q learning in a second. Yes, I will. I'll get to that example. OK. Yeah, I was debating whether to do that. It might take some time, but it could be useful. So where are we? Yes. OK. So what I showed you before, the Bellman inequality, we know that this holds for the optimal thing. And if there's a quality that is true at an optimum, one general idea in optimization is a so-called fixed point iteration that you can do to arrive there. And that's essentially what we will do to get to a good Q. So a nice thing about Q learning is that if your states and action spaces are small and discrete, you can represent the Q function as a table. So all you have to keep track of is how good is a certain action in a certain state, or all actions in all states, rather. So that's what we did here. This is a table. I've described to you the policy here. But what we'll do next is to describe the value of each action. So you can think of it a value of taking the right one, bottom, top, and left, essentially. Those will be the values that we need to consider. And so what Q learning can do with discrete states is to essentially start from somewhere, start from some idea of what Q is. It could be random. It could be zero. And then repeat the following fixed point iteration, where you update your former idea of what Q should be with its current value plus some, essentially, a mixture of the immediate reward for taking action at in that state and the future reward as judged by your current estimate of the Q function. So we'll do that now in practice. Yeah? Throughout this, where are we getting the transition probabilities or the behavior of the game? So they're not used here, actually. A value-based RL, I didn't say that explicitly, but they don't rely on knowing the transition probabilities. What you might ask is, where do we get the S and the A's and the R's from? And we'll get to that. How do we estimate these? We'll get to that later. Good question, though. OK, I'm going to throw a very messy slide at you. Here you go. A lot of numbers. So what I've done now here is a more exhaustive version of what I put on the board. For each little triangle here, it represents the Q value for the state-action pair. So this triangle is, again, for the action right if you're in this state. OK, so what I've put on the first slide here is the immediate reward of each action. So we know that any step will cost us minus 0.04. So that's why there's a lot of those here. These white boxes here are not possible actions. Up here, you have a 0.96, because it's 1, which is the immediate reward of going right here, minus 0.04. These two are minus 1.04 for the same action."
+}

@@ -1,0 +1,299 @@
+{
+    "chunks": [
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 0.0,
+            "end": 19.400000000000002,
+            "text": " for this population.  This population comes from Philadelphia.  So we look at the top diagnosis codes, for example.  We'll see that of 135,000 patients  who had laboratory data, there were over 400,000"
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 19.400000000000002,
+            "end": 34.839999999999996,
+            "text": " different diagnosis codes for hypertension.  You'll notice that's greater than the number of people.  That's because they occurred multiple times across time.  Other common diagnosis codes included hyperlipidemia,  hypertension, type 2 diabetes."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 34.839999999999996,
+            "end": 46.480000000000004,
+            "text": " And you'll notice that there's actually  quite a bit of interesting detail here.  Even in diagnosis codes, you'll find things  that sound more like symptoms, like fatigue, which  is over here."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 46.480000000000004,
+            "end": 59.22,
+            "text": " Or you see, oh, so you have records of procedures  in many cases, like they got a vaccination for influenza.  Here's another example.  This is now just telling you something  about the broad statistics of laboratory"
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 59.22,
+            "end": 76.8,
+            "text": " tests in this population.  Creatinine, potassium, glucose, liver enzymes  are all the most popular lab tests.  And that's not surprising, because often there  is a panel called the CBC panel, which"
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 76.8,
+            "end": 89.26,
+            "text": " is what you would get in your annual physical.  And that has many of these top laboratory test results.  But then as you look down into the tail,  there are many other laboratory test results  that are more specialized in nature."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 89.26,
+            "end": 104.52,
+            "text": " For example, hemoglobin A1C is used  to track a roughly three-month average of blood glucose  and is used to understand a patient's diabetes status.  So that's just to give you a sense of what  is the data behind the scenes."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 104.52,
+            "end": 117.18,
+            "text": " Now let's think about how do we really derive,  how do we tackle, how do we formulate this risk  stratification problem as a machine learning problem?  Well, today I'll give you one example  of how to formulate it as a machine learning problem."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 117.18,
+            "end": 130.68,
+            "text": " But in Tuesday's lecture, I'll tell you several other ways.  Here, we're going to think about a reduction  to binary classification.  And we're going to ask, we're going to go back in time.  We're going to pretend it's January 1, 2009."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 130.68,
+            "end": 144.16,
+            "text": " And we're going to say, suppose that we had run this risk  stratification algorithm on every single patient  on January 1, 2009.  We're going to construct features  from the data in the past, so the past few years."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 144.16,
+            "end": 154.1,
+            "text": " And we're going to predict something about the future.  And there are many things you could attempt  to predict about the future.  I'm showing you here three different prediction tasks  corresponding to different gaps, a zero year gap, a one year"
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 154.1,
+            "end": 164.88,
+            "text": " gap, and a two year gap.  And for each one of these, it asks,  will the patient newly develop type 2 diabetes  in that prediction window?  So for example, for this prediction task,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 164.88,
+            "end": 180.26000000000002,
+            "text": " we're going to exclude patients who  have developed type 2 diabetes between 2009 and 2011.  And we're only going to count as positives  for patients who get newly diagnosed  with type 2 diabetes between 2011 and 2013."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 180.26000000000002,
+            "end": 199.70000000000002,
+            "text": " And one of the reasons why you might  want to include a gap in the model  is because often there's label leakage.  So if you look at the very top setup, often what happens  is that a clinician might have a really good idea"
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 199.70000000000002,
+            "end": 214.82000000000002,
+            "text": " that the patient might be diabetic,  but it's not yet coded in a way which our algorithms can pick  up.  And so in 2009, in January 1, 2009,  the primary care physician, for example, for the patient"
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 214.82000000000002,
+            "end": 226.06,
+            "text": " might be well aware that this patient is diabetic,  might already be doing interventions based on it,  but our algorithm doesn't know that.  And so that patient, because of the signals that  are present in the data, is going"
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 226.06,
+            "end": 235.61999999999998,
+            "text": " to be at the very top of our prediction list.  We're going to say, this patient is someone  you should be going after.  But that's really not an interesting patient  to be going after, because the clinicians are probably"
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 235.61999999999998,
+            "end": 249.44,
+            "text": " already doing interventions that are relevant for that patient.  Rather, we want to find the patients  where the diabetes might be more unexpected.  And so this is one of the subtleties that really arises  when you try to use retrospective clinical data"
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 249.44,
+            "end": 263.54,
+            "text": " to derive your labels to use within machine learning  for risk stratification.  So in the result to tell you about,  I'm going to use a one-year gap.  Another problem is that the data is highly censored."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 263.54,
+            "end": 281.90000000000003,
+            "text": " So what I mean by censoring is that we often  don't have full visibility into the data for patients.  For example, patients might have only  come into the health insurance in 2013.  And so January 1, 2009, we have no data on them."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 281.90000000000003,
+            "end": 295.40000000000003,
+            "text": " They didn't even exist in the system at all.  So there are two types of censoring.  One type of censoring is called left censoring.  It means when we don't have data to the left, for example,  in the feature construction window."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 295.40000000000003,
+            "end": 308.70000000000005,
+            "text": " Another type of censoring is called right censoring.  It means when we don't have data about the patient  to the right of that timeline.  And for each one of these, in our work  here, we tackle it in a different way."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 308.70000000000005,
+            "end": 326.14,
+            "text": " For left censoring, we're going to deal with it.  We're going to say, OK, we might have limited data on patient.  But we will use data, whatever data  is available from the past two years,  in order to make our predictions."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 326.14,
+            "end": 339.21999999999997,
+            "text": " And for patients who have less data available, that's fine.  We have sort of a more sparse feature vector.  For right censoring, it's a little bit more  challenging to deal with in this binary reduction.  Because if you don't know what the label is,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 339.21999999999997,
+            "end": 349.52000000000004,
+            "text": " it's really hard to use within, for example,  a supervised machine learning approach.  In Tuesday's lecture, I'll talk about a way  to deal with right censoring.  In today's lecture, we're going to just ignore it."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 349.52000000000004,
+            "end": 365.14000000000004,
+            "text": " And the way that we'll ignore it is  by changing the inclusion and exclusion criteria.  We will exclude patients for whom we don't know the label.  And to be clear, that can be really problematic.  So for example, imagine that you,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 365.14000000000004,
+            "end": 378.88,
+            "text": " if you go back to this picture here,  imagine that we're in this scenario.  And imagine that we, if a patient,  if we only have data on a patient up to 2011,  we remove them from the data set."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 378.88,
+            "end": 396.28000000000003,
+            "text": " Because we don't have full visibility into the 2010  to 2012 time window.  Well, suppose that exactly the day  before the patient was going to be removed from the data set,  exactly right before the data disappears for the patient,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 396.28000000000003,
+            "end": 406.88,
+            "text": " because, for example, they might change health insurers,  they were diagnosed with type 2 diabetes.  And maybe the reason why they changed health insurers  had to do with them being diagnosed  with type 2 diabetes."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 406.88,
+            "end": 424.76,
+            "text": " Then we've excluded that patient from the population.  And we might be really biasing the results of the model  by now taking away a whole set of the population  where this model would have been really important to apply.  So thinking about how you really do this inclusion exclusion"
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 424.76,
+            "end": 441.35999999999996,
+            "text": " and how that changes the generalizability of the model  you get is something that should be at the top of your mind.  So the machine learning algorithm  used in that paper, which you've read,  is L1 regularized logistic regression."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 441.35999999999996,
+            "end": 455.32,
+            "text": " One of the reasons for using L1 regularized logistic regression  is because it provides a way to use  a high dimensional feature set.  But at the same time, it allows one to do feature selection.  So I'll go more into detail on that in just a moment."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 459.12,
+            "end": 472.94,
+            "text": " Imagine most of you have, sorry, all of you  should be familiar with the idea of formulating  machine learning as an optimization problem where  you have some loss function and you have some regularization  term."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 472.94,
+            "end": 487.18,
+            "text": " W in this case is the weights of your linear model,  which we're trying to learn.  For those of you who've seen support vector machines  before, support vector machines will  use what's called L2 regularization, where"
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 487.18,
+            "end": 498.78,
+            "text": " we'll be putting a penalty on the L2 norm of the weight  factor.  Instead, what we did in this paper  is we used L1 regularization.  So this penalty is defined over here."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 498.78,
+            "end": 519.46,
+            "text": " It's summing over the features and looking  at the absolute value of the weight for each of the weights  and summing those up.  So one of the reasons why L1 regularization  has what's known as a sparsity benefit"
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 519.5,
+            "end": 531.7,
+            "text": " can be explained by this picture.  So this is just a demonstration by sketch.  Suppose that we're trying to solve this optimization problem  here.  So this is the level set of your loss function."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 531.7,
+            "end": 546.46,
+            "text": " It's a quadratic function.  And suppose that instead of adding on your regularization  as a second term to your optimization problem,  you were to instead put in a constraint.  So you might say, we're going to minimize the loss subject"
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 546.5,
+            "end": 560.26,
+            "text": " to the L1 norm of your weight factor being less than 3.  Well, then what I'm showing you here is weight space.  I'm showing you two dimensions.  This x-axis is weight 1.  This y-axis is weight 2."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 560.26,
+            "end": 576.7,
+            "text": " And if you put a L1 constraint, for example,  you said that the sum of the absolute values of weight 1  and weight 2 have to be equal to 1,  then the solution space has to be along this diamond.  On the other hand, if you put an L2 prior,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 576.7,
+            "end": 591.58,
+            "text": " if you put an L2 constraint on your weight matrix,  on your weight vector, then it would correspond  to this feasibility space.  For example, this would say something like the L2 norm  of the weight vector has to be equal to 1."
+        },
+        {
+            "number": "lec4",
+            "title": "part.002.mp3",
+            "start": 591.58,
+            "end": 601.4200000000001,
+            "text": " So it would be a ball saying that the radius has  to always be equal to 1.  So suppose now you're trying to minimize  that objective feasibility space."
+        }
+    ],
+    "text": " for this population. This population comes from Philadelphia. So we look at the top diagnosis codes, for example. We'll see that of 135,000 patients who had laboratory data, there were over 400,000 different diagnosis codes for hypertension. You'll notice that's greater than the number of people. That's because they occurred multiple times across time. Other common diagnosis codes included hyperlipidemia, hypertension, type 2 diabetes. And you'll notice that there's actually quite a bit of interesting detail here. Even in diagnosis codes, you'll find things that sound more like symptoms, like fatigue, which is over here. Or you see, oh, so you have records of procedures in many cases, like they got a vaccination for influenza. Here's another example. This is now just telling you something about the broad statistics of laboratory tests in this population. Creatinine, potassium, glucose, liver enzymes are all the most popular lab tests. And that's not surprising, because often there is a panel called the CBC panel, which is what you would get in your annual physical. And that has many of these top laboratory test results. But then as you look down into the tail, there are many other laboratory test results that are more specialized in nature. For example, hemoglobin A1C is used to track a roughly three-month average of blood glucose and is used to understand a patient's diabetes status. So that's just to give you a sense of what is the data behind the scenes. Now let's think about how do we really derive, how do we tackle, how do we formulate this risk stratification problem as a machine learning problem? Well, today I'll give you one example of how to formulate it as a machine learning problem. But in Tuesday's lecture, I'll tell you several other ways. Here, we're going to think about a reduction to binary classification. And we're going to ask, we're going to go back in time. We're going to pretend it's January 1, 2009. And we're going to say, suppose that we had run this risk stratification algorithm on every single patient on January 1, 2009. We're going to construct features from the data in the past, so the past few years. And we're going to predict something about the future. And there are many things you could attempt to predict about the future. I'm showing you here three different prediction tasks corresponding to different gaps, a zero year gap, a one year gap, and a two year gap. And for each one of these, it asks, will the patient newly develop type 2 diabetes in that prediction window? So for example, for this prediction task, we're going to exclude patients who have developed type 2 diabetes between 2009 and 2011. And we're only going to count as positives for patients who get newly diagnosed with type 2 diabetes between 2011 and 2013. And one of the reasons why you might want to include a gap in the model is because often there's label leakage. So if you look at the very top setup, often what happens is that a clinician might have a really good idea that the patient might be diabetic, but it's not yet coded in a way which our algorithms can pick up. And so in 2009, in January 1, 2009, the primary care physician, for example, for the patient might be well aware that this patient is diabetic, might already be doing interventions based on it, but our algorithm doesn't know that. And so that patient, because of the signals that are present in the data, is going to be at the very top of our prediction list. We're going to say, this patient is someone you should be going after. But that's really not an interesting patient to be going after, because the clinicians are probably already doing interventions that are relevant for that patient. Rather, we want to find the patients where the diabetes might be more unexpected. And so this is one of the subtleties that really arises when you try to use retrospective clinical data to derive your labels to use within machine learning for risk stratification. So in the result to tell you about, I'm going to use a one-year gap. Another problem is that the data is highly censored. So what I mean by censoring is that we often don't have full visibility into the data for patients. For example, patients might have only come into the health insurance in 2013. And so January 1, 2009, we have no data on them. They didn't even exist in the system at all. So there are two types of censoring. One type of censoring is called left censoring. It means when we don't have data to the left, for example, in the feature construction window. Another type of censoring is called right censoring. It means when we don't have data about the patient to the right of that timeline. And for each one of these, in our work here, we tackle it in a different way. For left censoring, we're going to deal with it. We're going to say, OK, we might have limited data on patient. But we will use data, whatever data is available from the past two years, in order to make our predictions. And for patients who have less data available, that's fine. We have sort of a more sparse feature vector. For right censoring, it's a little bit more challenging to deal with in this binary reduction. Because if you don't know what the label is, it's really hard to use within, for example, a supervised machine learning approach. In Tuesday's lecture, I'll talk about a way to deal with right censoring. In today's lecture, we're going to just ignore it. And the way that we'll ignore it is by changing the inclusion and exclusion criteria. We will exclude patients for whom we don't know the label. And to be clear, that can be really problematic. So for example, imagine that you, if you go back to this picture here, imagine that we're in this scenario. And imagine that we, if a patient, if we only have data on a patient up to 2011, we remove them from the data set. Because we don't have full visibility into the 2010 to 2012 time window. Well, suppose that exactly the day before the patient was going to be removed from the data set, exactly right before the data disappears for the patient, because, for example, they might change health insurers, they were diagnosed with type 2 diabetes. And maybe the reason why they changed health insurers had to do with them being diagnosed with type 2 diabetes. Then we've excluded that patient from the population. And we might be really biasing the results of the model by now taking away a whole set of the population where this model would have been really important to apply. So thinking about how you really do this inclusion exclusion and how that changes the generalizability of the model you get is something that should be at the top of your mind. So the machine learning algorithm used in that paper, which you've read, is L1 regularized logistic regression. One of the reasons for using L1 regularized logistic regression is because it provides a way to use a high dimensional feature set. But at the same time, it allows one to do feature selection. So I'll go more into detail on that in just a moment. Imagine most of you have, sorry, all of you should be familiar with the idea of formulating machine learning as an optimization problem where you have some loss function and you have some regularization term. W in this case is the weights of your linear model, which we're trying to learn. For those of you who've seen support vector machines before, support vector machines will use what's called L2 regularization, where we'll be putting a penalty on the L2 norm of the weight factor. Instead, what we did in this paper is we used L1 regularization. So this penalty is defined over here. It's summing over the features and looking at the absolute value of the weight for each of the weights and summing those up. So one of the reasons why L1 regularization has what's known as a sparsity benefit can be explained by this picture. So this is just a demonstration by sketch. Suppose that we're trying to solve this optimization problem here. So this is the level set of your loss function. It's a quadratic function. And suppose that instead of adding on your regularization as a second term to your optimization problem, you were to instead put in a constraint. So you might say, we're going to minimize the loss subject to the L1 norm of your weight factor being less than 3. Well, then what I'm showing you here is weight space. I'm showing you two dimensions. This x-axis is weight 1. This y-axis is weight 2. And if you put a L1 constraint, for example, you said that the sum of the absolute values of weight 1 and weight 2 have to be equal to 1, then the solution space has to be along this diamond. On the other hand, if you put an L2 prior, if you put an L2 constraint on your weight matrix, on your weight vector, then it would correspond to this feasibility space. For example, this would say something like the L2 norm of the weight vector has to be equal to 1. So it would be a ball saying that the radius has to always be equal to 1. So suppose now you're trying to minimize that objective feasibility space."
+}

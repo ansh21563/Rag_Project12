@@ -1,0 +1,292 @@
+{
+    "chunks": [
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 0.0,
+            "end": 18.48,
+            "text": " Consider the following picture, where for this is time t,  and this is f of t.  You can imagine for any one patient,  you might have a different function.  But they might all be of the same parametric form."
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 18.48,
+            "end": 33.3,
+            "text": " So they might be like that, or maybe they're  shifted a little bit.  So you think about each of these three things  as being from the same parametric family  distributions, but with different means."
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 33.3,
+            "end": 43.5,
+            "text": " And in this case, then the mean is  given to you as the output of the deep neural network.  And so that would be the way it would be used.  And then one could just back propagate in the usual way  to do learning."
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 43.5,
+            "end": 50.94,
+            "text": " Yeah?  Can you just repeat what b sub i is?  Excuse me?  Can you repeat what b sub i is?  b sub i is just an indicator whether the i-th data point"
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 50.94,
+            "end": 60.4,
+            "text": " was censored or not censored.  Yes?  So for the uncensored light decode,  it's more like a probability density function.  But for a sensor like this?"
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 60.4,
+            "end": 72.03999999999999,
+            "text": " Cumulative density function.  Yeah.  But for a sensor like this, it's more like a cumulative.  No, for the uncensored, it's probability density function.  Yes, so just to just"
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 72.03999999999999,
+            "end": 83.56,
+            "text": " It's a complicated combiner.  Excuse me?  Will there be any problem to combine those two types there?  That's a very good question.  So the observation was that you have"
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 83.64,
+            "end": 98.8,
+            "text": " two different types of probabilities used here.  This is, in this case, we're using something  like the cumulative density, whereas here we're  using the probability density function.  The question was, are these two on different scales?"
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 98.8,
+            "end": 120.2,
+            "text": " It doesn't make sense to combine them  in this type of linear fashion with the same weighting.  And I think it does make sense.  So think about a setting where you have a very small time  range."
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 120.2,
+            "end": 137.56,
+            "text": " You're not exactly sure when this event occurs.  It's something in this time range.  In the setting of the sensor data,  where that time range could potentially be very large,  your model is providing."
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 137.56,
+            "end": 158.39999999999998,
+            "text": " So your log probability is somehow  going to be much more flat, because you're covering  much more probability mass.  And so that observation, I think,  intuitively is likely to have a bit of a smaller"
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 158.39999999999998,
+            "end": 176.35999999999999,
+            "text": " effect on the overall learning algorithm.  These observations, you know precisely where they are.  And so as you deviate from that, you  incur the corresponding log loss penalty.  But I do think that it makes sense to have them"
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 176.35999999999999,
+            "end": 191.16,
+            "text": " the same scale.  If anyone in the room has done work with survival modeling  and has a different answer to that, I'd love to hear it.  Not today, but maybe someone in the future  will answer this question differently."
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 191.16,
+            "end": 208.76,
+            "text": " I'm going to move on for now.  So the remaining question that I want to talk about today  is how one evaluates survival models.  So we talked about binary classification  a lot in the context of risk stratification"
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 208.76,
+            "end": 220.12,
+            "text": " in the beginning.  And we talked about how area under the ROC curve  is one measure of classification performance.  But here, we're doing something more akin to regression, not  classification."
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 220.12,
+            "end": 232.4,
+            "text": " A standard measure that's used to measure performance  is known as the C-statistic or concordance index.  Those are one and the same.  And it's defined as follows.  It has a very intuitive definition."
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 232.4,
+            "end": 256.03999999999996,
+            "text": " It sums over pairs of data points  that can be compared to one another.  And it says, OK, what is the likelihood of the event  happening for an event that occurs before another event?  And what you want is that the likelihood of the event that,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 256.03999999999996,
+            "end": 268.64,
+            "text": " on average, in essence, should occur later  should be larger than the event that should occur earlier.  I'm going to first illustrate it with this picture,  and then I'll work through the math.  So here's the picture, and then we'll talk about the math."
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 268.64,
+            "end": 285.15999999999997,
+            "text": " So what I'm showing you here are every single observation  in your data set.  And they're sorted by either the censoring time or the event  time.  So by black, I'm illustrating uncensored data points."
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 285.15999999999997,
+            "end": 302.34,
+            "text": " And by red, I'm denoting censored data points.  Now, here we see that this data point, the event  happened before this data point's censoring event.  Now, since this data point was censored,  it means it's true event time."
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 302.34,
+            "end": 329.21999999999997,
+            "text": " You could think about it sometime into the far future.  So what we'd want is that the model gives that the probability  that this event happens by this time  should be larger than the probability  that this event happens by this time,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 329.21999999999997,
+            "end": 343.17999999999995,
+            "text": " because this actually occurred first.  And these two are comparable to each other.  On the other hand, it wouldn't make sense to compare y2 and y4  because both of these were censored data points,  and we don't know precisely when they occurred."
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 343.17999999999995,
+            "end": 356.4,
+            "text": " So for example, it could have very well happened  that the event two happened after event four.  So what I'm showing you here with each of these lines  are the pairwise comparisons that  are actually possible to make."
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 356.4,
+            "end": 372.06,
+            "text": " You can make pairwise comparisons, of course,  between any pair of events that actually did occur.  And you can make pairwise comparisons  between censored events and events that occurred before it.  Now, if you now look at this formula,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 372.06,
+            "end": 384.70000000000005,
+            "text": " this is looking at an indicator of survival functions  between pairs of data points.  And which pairs of data points was precisely  those pairs of data points which I'm  showing comparisons of with these blue lines here."
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 384.70000000000005,
+            "end": 411.78000000000003,
+            "text": " So we're going to sum over i such that bi is equal to 0.  Remember, that means it is an uncensored data point.  And then we look at yi compared to all other yj.  That has a value greater than, both censored and uncensored.  Now, if your data had no sensor data points in it,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 411.78000000000003,
+            "end": 430.02,
+            "text": " then you can verify that, in fact, this corresponds.  Oh, so there's one other assumption one has to make,  which is that suppose that your outcome is binary.  And so if you might wonder how you get a binary outcome  from this, imagine that your density function looked"
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 430.02,
+            "end": 451.78,
+            "text": " a little bit like this, where it could occur either at time 1  or time 2.  So something like that.  All right, so if the event can occur at only two times,  not a whole range of times, then this"
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 451.78,
+            "end": 464.7,
+            "text": " is analogous to a binary outcome.  And so if you have a binary outcome like this  and no censoring, then in fact, that C statistic  is exactly equal to the area under the RLC curve.  So that just connects it a little bit back"
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 464.7,
+            "end": 473.94,
+            "text": " to things we're used to.  Yeah?  AUDIENCE 2 Just to make sure I understand,  so y1 is going to be we observe an event,  and y2 is going to be we know that no event occurred"
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 473.94,
+            "end": 484.1,
+            "text": " until that time?  DAVID SONTAG Every dot corresponds to one event,  either censored or not.  And they're sorted.  In this figure, they're sorted by the time"
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 484.1,
+            "end": 504.86,
+            "text": " of either the censoring or the event occurring.  So when I talked about C statistic,  that's one way to measure performance  of your survival modeling.  But you might remember that when we talked"
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 504.86,
+            "end": 514.1,
+            "text": " about binary classification, we said how area under the RLC  curve in itself is very limiting.  And so we should think through other performance  metrics of relevance.  So here are a few other things that you could do."
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 514.1,
+            "end": 525.5,
+            "text": " One thing you could do is you could use the mean squared  error.  So again, thinking about this as a regression problem.  But of course, that only makes sense for uncensored data  points."
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 525.5,
+            "end": 538.5,
+            "text": " So focus just on the uncensored data points.  Look to see how well we're doing at predicting  when the event occurs.  The second thing one could do, since you  have the ability to define the likelihood of an observation,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 538.5,
+            "end": 553.3,
+            "text": " censored or not censored, one could hold out data and look  at the held out likelihood or log likelihood  of that held out data.  The third thing you could do is you can,  after learning using this survival modeling framework,"
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 553.3,
+            "end": 567.4200000000001,
+            "text": " one could then turn it into a binary classification problem.  By, for example, artificially choosing time ranges.  Like greater than three months is 1.  Less than three months is 0.  That would be one crude definition."
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 567.4200000000001,
+            "end": 577.0200000000001,
+            "text": " And then once you've done a reduction  to a binary classification problem,  you could use all of the existing performance metrics  that you're used to thinking about for binary classification  to evaluate the performance there."
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 577.0200000000001,
+            "end": 589.74,
+            "text": " Things like positive predictive value, for example.  And you could, of course, choose different reductions  and get different performance statistics out.  So this is just a small subset of ways  to try to evaluate survival modeling."
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 589.74,
+            "end": 599.74,
+            "text": " But it's a very, very rich literature.  And again, on the bottom of these slides,  I pointed you to several references  that you could go to to learn more.  The final comment I wanted to make"
+        },
+        {
+            "number": "lec6",
+            "title": "part.001.mp3",
+            "start": 599.74,
+            "end": 602.3000000000001,
+            "text": " is that I'm not sure if I'm going to use this."
+        }
+    ],
+    "text": " Consider the following picture, where for this is time t, and this is f of t. You can imagine for any one patient, you might have a different function. But they might all be of the same parametric form. So they might be like that, or maybe they're shifted a little bit. So you think about each of these three things as being from the same parametric family distributions, but with different means. And in this case, then the mean is given to you as the output of the deep neural network. And so that would be the way it would be used. And then one could just back propagate in the usual way to do learning. Yeah? Can you just repeat what b sub i is? Excuse me? Can you repeat what b sub i is? b sub i is just an indicator whether the i-th data point was censored or not censored. Yes? So for the uncensored light decode, it's more like a probability density function. But for a sensor like this? Cumulative density function. Yeah. But for a sensor like this, it's more like a cumulative. No, for the uncensored, it's probability density function. Yes, so just to just It's a complicated combiner. Excuse me? Will there be any problem to combine those two types there? That's a very good question. So the observation was that you have two different types of probabilities used here. This is, in this case, we're using something like the cumulative density, whereas here we're using the probability density function. The question was, are these two on different scales? It doesn't make sense to combine them in this type of linear fashion with the same weighting. And I think it does make sense. So think about a setting where you have a very small time range. You're not exactly sure when this event occurs. It's something in this time range. In the setting of the sensor data, where that time range could potentially be very large, your model is providing. So your log probability is somehow going to be much more flat, because you're covering much more probability mass. And so that observation, I think, intuitively is likely to have a bit of a smaller effect on the overall learning algorithm. These observations, you know precisely where they are. And so as you deviate from that, you incur the corresponding log loss penalty. But I do think that it makes sense to have them the same scale. If anyone in the room has done work with survival modeling and has a different answer to that, I'd love to hear it. Not today, but maybe someone in the future will answer this question differently. I'm going to move on for now. So the remaining question that I want to talk about today is how one evaluates survival models. So we talked about binary classification a lot in the context of risk stratification in the beginning. And we talked about how area under the ROC curve is one measure of classification performance. But here, we're doing something more akin to regression, not classification. A standard measure that's used to measure performance is known as the C-statistic or concordance index. Those are one and the same. And it's defined as follows. It has a very intuitive definition. It sums over pairs of data points that can be compared to one another. And it says, OK, what is the likelihood of the event happening for an event that occurs before another event? And what you want is that the likelihood of the event that, on average, in essence, should occur later should be larger than the event that should occur earlier. I'm going to first illustrate it with this picture, and then I'll work through the math. So here's the picture, and then we'll talk about the math. So what I'm showing you here are every single observation in your data set. And they're sorted by either the censoring time or the event time. So by black, I'm illustrating uncensored data points. And by red, I'm denoting censored data points. Now, here we see that this data point, the event happened before this data point's censoring event. Now, since this data point was censored, it means it's true event time. You could think about it sometime into the far future. So what we'd want is that the model gives that the probability that this event happens by this time should be larger than the probability that this event happens by this time, because this actually occurred first. And these two are comparable to each other. On the other hand, it wouldn't make sense to compare y2 and y4 because both of these were censored data points, and we don't know precisely when they occurred. So for example, it could have very well happened that the event two happened after event four. So what I'm showing you here with each of these lines are the pairwise comparisons that are actually possible to make. You can make pairwise comparisons, of course, between any pair of events that actually did occur. And you can make pairwise comparisons between censored events and events that occurred before it. Now, if you now look at this formula, this is looking at an indicator of survival functions between pairs of data points. And which pairs of data points was precisely those pairs of data points which I'm showing comparisons of with these blue lines here. So we're going to sum over i such that bi is equal to 0. Remember, that means it is an uncensored data point. And then we look at yi compared to all other yj. That has a value greater than, both censored and uncensored. Now, if your data had no sensor data points in it, then you can verify that, in fact, this corresponds. Oh, so there's one other assumption one has to make, which is that suppose that your outcome is binary. And so if you might wonder how you get a binary outcome from this, imagine that your density function looked a little bit like this, where it could occur either at time 1 or time 2. So something like that. All right, so if the event can occur at only two times, not a whole range of times, then this is analogous to a binary outcome. And so if you have a binary outcome like this and no censoring, then in fact, that C statistic is exactly equal to the area under the RLC curve. So that just connects it a little bit back to things we're used to. Yeah? AUDIENCE 2 Just to make sure I understand, so y1 is going to be we observe an event, and y2 is going to be we know that no event occurred until that time? DAVID SONTAG Every dot corresponds to one event, either censored or not. And they're sorted. In this figure, they're sorted by the time of either the censoring or the event occurring. So when I talked about C statistic, that's one way to measure performance of your survival modeling. But you might remember that when we talked about binary classification, we said how area under the RLC curve in itself is very limiting. And so we should think through other performance metrics of relevance. So here are a few other things that you could do. One thing you could do is you could use the mean squared error. So again, thinking about this as a regression problem. But of course, that only makes sense for uncensored data points. So focus just on the uncensored data points. Look to see how well we're doing at predicting when the event occurs. The second thing one could do, since you have the ability to define the likelihood of an observation, censored or not censored, one could hold out data and look at the held out likelihood or log likelihood of that held out data. The third thing you could do is you can, after learning using this survival modeling framework, one could then turn it into a binary classification problem. By, for example, artificially choosing time ranges. Like greater than three months is 1. Less than three months is 0. That would be one crude definition. And then once you've done a reduction to a binary classification problem, you could use all of the existing performance metrics that you're used to thinking about for binary classification to evaluate the performance there. Things like positive predictive value, for example. And you could, of course, choose different reductions and get different performance statistics out. So this is just a small subset of ways to try to evaluate survival modeling. But it's a very, very rich literature. And again, on the bottom of these slides, I pointed you to several references that you could go to to learn more. The final comment I wanted to make is that I'm not sure if I'm going to use this."
+}

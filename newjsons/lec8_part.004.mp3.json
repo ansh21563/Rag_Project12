@@ -1,0 +1,250 @@
+{
+    "chunks": [
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 0.0,
+            "end": 16.4,
+            "text": " We can then build a generator.  So we can say, all right, suppose  I start with a token, which is the beginning of a sentence,  or the separator between sentences,  and I say, sample a random bigram starting"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 16.4,
+            "end": 34.92,
+            "text": " with the beginning of a sentence and a word  according to its probability, and then sample the next bigram  from that word and all the other words  according to its probability, and keep  doing that until you hit the end of sentence marker."
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 34.92,
+            "end": 53.120000000000005,
+            "text": " So for example, here I'm generating the sentence I,  starts with I, then followed by want, followed by to,  followed by get, followed by Chinese, followed by food,  followed by end of sentence.  So I've just generated I want to get"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 53.12,
+            "end": 70.4,
+            "text": " Chinese food, which sounds like a perfectly good sentence.  So here's what's interesting.  If you look back again at the Shakespeare corpus and say,  if we generated Shakespeare from unigrams,  you get stuff like at the top, to him swallowed,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 70.4,
+            "end": 87.96,
+            "text": " confess here both, which of save on trail for our I device  and wrote life have.  Doesn't sound terribly good, right?  It's not very grammatical.  It doesn't have that sort of English,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 87.96,
+            "end": 100.53999999999999,
+            "text": " Shakespearean English flavor, although you  do have words like knave and I and so on  that are vaguely reminiscent.  Now, if you go to bigrams, it starts  to sound a little better."
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 100.53999999999999,
+            "end": 111.89999999999999,
+            "text": " What means, sir, I confess she?  Then all sorts.  He is trim, captain.  Right?  That doesn't make any sense, but it starts"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 111.89999999999999,
+            "end": 128.74,
+            "text": " to sound a little better.  And with trigrams, we get sweet prince,  false staff shall die, hairy of Monmouth's grave, et cetera.  So this is beginning to sound a little Shakespearean.  And if you go to quadrograms, you get King Henry what?"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 128.74,
+            "end": 146.86,
+            "text": " I will go seek the traitor Gloucester.  Exunt some of the watch, a great banquet served in, et cetera.  I mean, when I first saw this, like 20 years ago or something,  I was stunned.  This is actually generating stuff"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 146.86,
+            "end": 165.94,
+            "text": " that sounds vaguely Shakespearean and vaguely  English-like.  Here's an example of generating the Wall Street Journal.  So from unigrams, months the Maya and issue  of year four in new exchanges September were recession."
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 165.94,
+            "end": 183.66,
+            "text": " It's word salad.  But if you go to trigrams, they also point to $99.6 billion  from 204.063% of the rates of interest stores  as Mexico and Brazil.  So you could imagine that this is some Wall Street Journal"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 183.66,
+            "end": 204.64,
+            "text": " writer on acid writing this text,  because it has a little bit of the right kind of flavor.  So more recently, people said, well,  we ought to be able to make use of this  in some systematic way to help us with our language analysis"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 204.64,
+            "end": 218.54,
+            "text": " tasks.  So to me, the first effort in this direction  was Wirtvec, which was Mikhailov's approach  to doing this.  And he developed two models."
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 218.54,
+            "end": 239.29999999999998,
+            "text": " He said, let's build a continuous bag of words model  that says what we're going to use  is co-occurrence data on a series of tokens in the text  that we're trying to model.  And we're going to use a neural network"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 239.29999999999998,
+            "end": 257.06,
+            "text": " model to predict the word from the words around it.  And in that process, we're going  to use the parameters of that neural network model  as a vector.  And that vector will be the representation of that word."
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 259.65999999999997,
+            "end": 274.09999999999997,
+            "text": " And so what we're going to find is  that words that tend to appear in the same context  will have similar representations  in this high-dimensional vector.  And by the way, high-dimensional people typically"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 274.1,
+            "end": 293.48,
+            "text": " use like 300 or 500-dimensional vectors.  So there's a lot of it's a big space.  And the words are scattered throughout this.  But you get this kind of cohesion  where words that are used in the same context"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 293.48,
+            "end": 306.41999999999996,
+            "text": " appear close to each other.  And the extrapolation of that is that if words  are used in the same context, maybe they  share something about meaning.  So the other model is a skip-gram model"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 306.41999999999996,
+            "end": 320.82,
+            "text": " where you're doing the prediction  in the other direction.  From a word, you're predicting the words that are around it.  And again, you're using a neural network model to do that.  And you use the parameters of that model"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 320.82,
+            "end": 345.5,
+            "text": " in order to represent the word that you're focused on.  So what came as a surprise to me is this claim that's  in his original paper, which is that not only do you  get this effect of locality as corresponding meaning,  but that you get relationships that"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 345.5,
+            "end": 365.54,
+            "text": " are geometrically represented in the space of these embeddings.  And so what you see is that if you  take the encoding of the word man and the word woman  and look at the vector difference between them  and then apply that same vector difference to king,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 365.54,
+            "end": 377.5,
+            "text": " you get close to queen.  And if you apply it to uncle, you get close to aunt.  And so they showed a number of examples.  And then people have studied this.  It doesn't hold up perfectly well."
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 377.5,
+            "end": 393.98,
+            "text": " I mean, it's not like we've solved the semantics problem.  But it is a genuine relationship.  The place where it doesn't work well  is when some of these things are much more frequent than others.  And so one of the examples that's often cited"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 393.98,
+            "end": 417.34,
+            "text": " is if you go London is to England as Paris is to France.  And that one works.  But then you say as Kuala Lumpur is to Malaysia,  and that one doesn't work so well.  And then you go as Ugudjuba or something"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 417.34,
+            "end": 433.14,
+            "text": " is to whatever country it's the capital of.  And since we don't write about Africa in our newspapers,  there's very little data on that.  And so that doesn't work so well.  So there was this other paper later"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 433.14,
+            "end": 448.94,
+            "text": " from van der Maarten and Jeff Hinton  where they came up with a visualization method  to take these high dimensional vectors  and visualize them in two dimensions.  And what you see is that if you take a bunch of concepts that"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 448.94,
+            "end": 468.98,
+            "text": " are count concepts, so 1, 1, 1, 3, 15, 5, 4, 2, 3, several,  some, many, et cetera, there is a geometric relationship  between them.  So they, in fact, do map to the same part of the space.  Similarly, minister, leader, president, chairman, director,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 468.98,
+            "end": 486.90000000000003,
+            "text": " spokesman, chief, head, et cetera,  form a kind of cluster in this space.  So there's definitely something to this.  OK, I promised you that I would get back to a different attempt  to try to take a core of concepts"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 486.90000000000003,
+            "end": 503.5,
+            "text": " that you want to use for term spotting  and develop an automated way of enlarging  that set of concepts in order to give you a richer vocabulary  by which to try to identify cases that you're interested in.  So this was by some of my colleagues,"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 503.5,
+            "end": 522.66,
+            "text": " including Kat, who you saw on Tuesday.  And they said, well, what we'd like  is a fully automated and robust unsupervised feature selection  method that leverages only publicly available  medical knowledge sources instead of EHR data."
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 522.66,
+            "end": 536.6999999999999,
+            "text": " So the method that David's group had developed,  which we talked about earlier, uses data  from electronic health records, which  means that you move to different hospitals,  and there may be different conventions."
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 536.6999999999999,
+            "end": 552.18,
+            "text": " And you might imagine that you have  to retrain that sort of method.  Whereas here, the idea is to derive these surrogate features  from knowledge sources.  So unlike that earlier model, here they"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 552.18,
+            "end": 569.8199999999999,
+            "text": " built a word2vec skipgram model from about 5 million Springer  articles.  So these are published medical articles  to yield 500 dimensional vectors for each word.  And then what they did is they took the concept names"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 569.8199999999999,
+            "end": 588.22,
+            "text": " that they were interested in and their definitions  from the UMLS.  And then they summed the word vectors  for each of these words weighted by inverse document frequency.  So it's sort of a TF-IDF-like approach"
+        },
+        {
+            "number": "lec8",
+            "title": "part.004.mp3",
+            "start": 588.22,
+            "end": 601.34,
+            "text": " to weight different words.  And then they went out and they said, OK,  for every disease that's mentioned in Wikipedia,  Medscape, eMedicine, the Merck manuals,  professional editions."
+        }
+    ],
+    "text": " We can then build a generator. So we can say, all right, suppose I start with a token, which is the beginning of a sentence, or the separator between sentences, and I say, sample a random bigram starting with the beginning of a sentence and a word according to its probability, and then sample the next bigram from that word and all the other words according to its probability, and keep doing that until you hit the end of sentence marker. So for example, here I'm generating the sentence I, starts with I, then followed by want, followed by to, followed by get, followed by Chinese, followed by food, followed by end of sentence. So I've just generated I want to get Chinese food, which sounds like a perfectly good sentence. So here's what's interesting. If you look back again at the Shakespeare corpus and say, if we generated Shakespeare from unigrams, you get stuff like at the top, to him swallowed, confess here both, which of save on trail for our I device and wrote life have. Doesn't sound terribly good, right? It's not very grammatical. It doesn't have that sort of English, Shakespearean English flavor, although you do have words like knave and I and so on that are vaguely reminiscent. Now, if you go to bigrams, it starts to sound a little better. What means, sir, I confess she? Then all sorts. He is trim, captain. Right? That doesn't make any sense, but it starts to sound a little better. And with trigrams, we get sweet prince, false staff shall die, hairy of Monmouth's grave, et cetera. So this is beginning to sound a little Shakespearean. And if you go to quadrograms, you get King Henry what? I will go seek the traitor Gloucester. Exunt some of the watch, a great banquet served in, et cetera. I mean, when I first saw this, like 20 years ago or something, I was stunned. This is actually generating stuff that sounds vaguely Shakespearean and vaguely English-like. Here's an example of generating the Wall Street Journal. So from unigrams, months the Maya and issue of year four in new exchanges September were recession. It's word salad. But if you go to trigrams, they also point to $99.6 billion from 204.063% of the rates of interest stores as Mexico and Brazil. So you could imagine that this is some Wall Street Journal writer on acid writing this text, because it has a little bit of the right kind of flavor. So more recently, people said, well, we ought to be able to make use of this in some systematic way to help us with our language analysis tasks. So to me, the first effort in this direction was Wirtvec, which was Mikhailov's approach to doing this. And he developed two models. He said, let's build a continuous bag of words model that says what we're going to use is co-occurrence data on a series of tokens in the text that we're trying to model. And we're going to use a neural network model to predict the word from the words around it. And in that process, we're going to use the parameters of that neural network model as a vector. And that vector will be the representation of that word. And so what we're going to find is that words that tend to appear in the same context will have similar representations in this high-dimensional vector. And by the way, high-dimensional people typically use like 300 or 500-dimensional vectors. So there's a lot of it's a big space. And the words are scattered throughout this. But you get this kind of cohesion where words that are used in the same context appear close to each other. And the extrapolation of that is that if words are used in the same context, maybe they share something about meaning. So the other model is a skip-gram model where you're doing the prediction in the other direction. From a word, you're predicting the words that are around it. And again, you're using a neural network model to do that. And you use the parameters of that model in order to represent the word that you're focused on. So what came as a surprise to me is this claim that's in his original paper, which is that not only do you get this effect of locality as corresponding meaning, but that you get relationships that are geometrically represented in the space of these embeddings. And so what you see is that if you take the encoding of the word man and the word woman and look at the vector difference between them and then apply that same vector difference to king, you get close to queen. And if you apply it to uncle, you get close to aunt. And so they showed a number of examples. And then people have studied this. It doesn't hold up perfectly well. I mean, it's not like we've solved the semantics problem. But it is a genuine relationship. The place where it doesn't work well is when some of these things are much more frequent than others. And so one of the examples that's often cited is if you go London is to England as Paris is to France. And that one works. But then you say as Kuala Lumpur is to Malaysia, and that one doesn't work so well. And then you go as Ugudjuba or something is to whatever country it's the capital of. And since we don't write about Africa in our newspapers, there's very little data on that. And so that doesn't work so well. So there was this other paper later from van der Maarten and Jeff Hinton where they came up with a visualization method to take these high dimensional vectors and visualize them in two dimensions. And what you see is that if you take a bunch of concepts that are count concepts, so 1, 1, 1, 3, 15, 5, 4, 2, 3, several, some, many, et cetera, there is a geometric relationship between them. So they, in fact, do map to the same part of the space. Similarly, minister, leader, president, chairman, director, spokesman, chief, head, et cetera, form a kind of cluster in this space. So there's definitely something to this. OK, I promised you that I would get back to a different attempt to try to take a core of concepts that you want to use for term spotting and develop an automated way of enlarging that set of concepts in order to give you a richer vocabulary by which to try to identify cases that you're interested in. So this was by some of my colleagues, including Kat, who you saw on Tuesday. And they said, well, what we'd like is a fully automated and robust unsupervised feature selection method that leverages only publicly available medical knowledge sources instead of EHR data. So the method that David's group had developed, which we talked about earlier, uses data from electronic health records, which means that you move to different hospitals, and there may be different conventions. And you might imagine that you have to retrain that sort of method. Whereas here, the idea is to derive these surrogate features from knowledge sources. So unlike that earlier model, here they built a word2vec skipgram model from about 5 million Springer articles. So these are published medical articles to yield 500 dimensional vectors for each word. And then what they did is they took the concept names that they were interested in and their definitions from the UMLS. And then they summed the word vectors for each of these words weighted by inverse document frequency. So it's sort of a TF-IDF-like approach to weight different words. And then they went out and they said, OK, for every disease that's mentioned in Wikipedia, Medscape, eMedicine, the Merck manuals, professional editions."
+}

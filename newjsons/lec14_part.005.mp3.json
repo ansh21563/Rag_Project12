@@ -1,0 +1,278 @@
+{
+    "chunks": [
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 0.0,
+            "end": 17.72,
+            "text": " Mm.  These are your axes.  And actually, we'll go back to the previous slide,  where it's a bit easier to see.  Here, we're going to ignore the outcome, the sugar levels."
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 17.72,
+            "end": 29.919999999999998,
+            "text": " Because remember, this only has to do  with probability of treatment given your covariance.  The y doesn't show up here at all.  So this thing on the right-hand side, the observed sugar level  is irrelevant for this question."
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 29.919999999999998,
+            "end": 37.839999999999996,
+            "text": " All we care about is what goes on over here.  So we look at this.  These are your axes.  And this is your treatment.  And you can look to see, OK, here, you"
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 37.839999999999996,
+            "end": 52.480000000000004,
+            "text": " have one 75-year-old male who does exercise frequently  and receive treatment A. Is there  anyone else in the data set who is 75 years old, male,  does exercise regularly, but receive treatment B?  Yes or no?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 52.480000000000004,
+            "end": 62.44,
+            "text": " No.  Good.  OK, so overlap is not satisfied here, at least not  empirically.  Now, you might argue that I'm being a bit too coarse here,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 62.44,
+            "end": 72.72,
+            "text": " that I'm, well, what happens if the individual is  74 and received treatment B?  Maybe that's close enough.  So there starts to become subtleties  in assessing these things when you have finite data."
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 72.72,
+            "end": 90.0,
+            "text": " But it is something at the fundamental level  that you could start to assess using data, as opposed  to ignorability, which you cannot test using data.  So you have to think about, are these assumptions  satisfied?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 90.0,
+            "end": 107.0,
+            "text": " And only once you've started to think through those questions  can you start to do your analysis.  And so that now brings me to the next part of this lecture,  which is, how do we actually, let's now believe David,  believe that these assumptions hold, how"
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 107.0,
+            "end": 116.25999999999999,
+            "text": " do we do that causal inference?  Yeah?  I just had a question on ignorability.  If we know that some patients, like healthy patients,  are not likely to get any treatment,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 116.25999999999999,
+            "end": 128.26,
+            "text": " should we just remove them, basically?  So the question is, what happens if you  have a violation of overlap?  For example, you have individuals  who you know that healthy individuals never"
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 128.26,
+            "end": 138.26,
+            "text": " receive any treatment.  Should you remove them from your data set?  Well, first of all, that has to do  with how do you formalize the question,  because not receiving a treatment is a treatment."
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 138.26,
+            "end": 156.89999999999998,
+            "text": " So that might be your control arm, just to be clear.  Now, if you're asking about the difference between two  treatments, two different classes of treatment  for a condition, then often one defines  the relevant inclusion criteria in order"
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 156.89999999999998,
+            "end": 168.92,
+            "text": " to have these conditions hold.  For example, we could try to redefine  the set of individuals that we're  asking about so that overlap does a hold.  But then in that situation, you have"
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 168.92,
+            "end": 187.77999999999997,
+            "text": " to just make sure that your policy is also modified.  You say, OK, I conclude that the average treatment  effect is blah for this type of people.  So how can we possibly compute the average treatment  effect from data?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 187.77999999999997,
+            "end": 201.26000000000002,
+            "text": " Remember, average treatment effect mathematically  is the expectation between potential outcome y1 minus y0.  The key tool which we'll use in order to estimate that  is what's known as the adjustment formula.  This goes by many names in the statistics community,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 201.26000000000002,
+            "end": 216.62,
+            "text": " such as the g formula as well.  Here I'll give you a derivation of it.  We're first going to recognize that this expectation is  actually two expectations in one.  It's the expectation over individuals x,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 216.62,
+            "end": 230.89999999999998,
+            "text": " and it's the expectation over potential outcomes y given x.  Potential outcomes y given x.  So I'm first just going to write it out  in terms of those two expectations,  and I'll write the expectations to x on the outside."
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 230.89999999999998,
+            "end": 247.82,
+            "text": " That goes by the name of law of total expectation.  This is trivial at this stage.  And by the way, I'm just writing out expectation of y1.  And in a few minutes, I'll show you expectation of y0,  but it's going to be exactly analogous."
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 247.82,
+            "end": 265.46,
+            "text": " Now, the next step is where we use ignorability.  So I told you I was going to give that one away.  So remember, we said that we're assuming  that y1 is conditionally independent of the treatment  T given x."
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 265.46,
+            "end": 291.26,
+            "text": " What that means is probability of y1 given x  is equal to probability of y1 given x comma T equals  whatever.  In this case, I'll say T equals 1.  This is implied by y1 being conditionally"
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 291.26,
+            "end": 310.74,
+            "text": " dependent of T given x.  So I can just stick in comma T equals 1 here.  And that's explicitly because of ignorability holding.  But now we're in a really good place, because notice that,  and here I've just done some short notation."
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 310.74,
+            "end": 333.86,
+            "text": " I'm just going to hide this expectation.  And by the way, you could do the same for y0, y1, y0.  And now notice that we can replace this average treatment  effect with now this expectation with respect  to all individuals x of the expectation of y1 given"
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 333.90000000000003,
+            "end": 352.34000000000003,
+            "text": " x comma T equals 1, and so on.  And these are mostly quantities that we  can now observe from our data.  So for example, we can look at the individuals  who receive treatment 1."
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 352.34000000000003,
+            "end": 364.34,
+            "text": " And for those individuals, we know  we have realizations of y1.  We can look at individuals who receive treatment 0.  And for those individuals, we have realizations of y0.  And we can just average those realizations"
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 364.34,
+            "end": 381.09999999999997,
+            "text": " to get estimates of the corresponding expectations.  So these we can easily estimate from our data.  And so we've made progress.  We can now estimate some part of this from our data.  But notice there are some things that we can't yet directly"
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 381.09999999999997,
+            "end": 397.18,
+            "text": " estimate from our data.  In particular, we can't estimate expectation of y0 given x comma  T equals 1, because we have no idea what  would have happened to this individual who actually  got treatment 1 if they had gotten treatment 0."
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 397.18,
+            "end": 412.3,
+            "text": " So these we don't know.  And similarly, OK, so these we don't know.  Now, what is the trick I'm playing on you?  How does it help that we can do this?  Well, the key point is that these quantities"
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 412.3,
+            "end": 433.74,
+            "text": " that we can estimate from data show up in that term.  In particular, if you look at the individuals x  that you've sampled from the full set of individuals P of x,  for that individual x for which, in fact, we observe T equals 1,  then we can estimate expectation of y1 given x comma T equals 1."
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 433.74,
+            "end": 447.82,
+            "text": " And similarly for y0.  But what we need to be able to do  is to extrapolate, because empirically, we only  have samples from P of x given T equals 1, P of x given T  equals 0 for those two potential outcomes correspondingly."
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 447.82,
+            "end": 464.38,
+            "text": " But we are going to also get samples of x such  that for those individuals in your data set,  you might have only observed T equals 0.  And to compute this formula, you have to answer for that x,  what would it have been if they got treatment equals 1?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 464.38,
+            "end": 475.14,
+            "text": " So there are going to be a set of individuals  that we have to extrapolate for in order  to use this adjustment formula for estimate.  Yep?  Not because common support is true,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 475.14,
+            "end": 493.9,
+            "text": " we have some patients that received each treatment  for a given type of x.  Yes.  But now, so yes, that's true.  But that's a statement about infinite data."
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 493.9,
+            "end": 513.6800000000001,
+            "text": " And in reality, one only has finite data.  And so although common support has to hold to some extent,  you can't just build on that to say that you always  observe the counterfactual for every individual,  such as the pictures I showed you earlier."
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 513.6800000000001,
+            "end": 531.0,
+            "text": " So I'm going to leave this slide up for just one more second  to let it sort of sink in and see what it's saying.  We started out from the goal of computing the average treatment  effect, expected value of y1 minus y0.  Using the adjustment formula, we've"
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 531.0,
+            "end": 548.08,
+            "text": " gotten to now an equivalent representation, which  is now an expectation with respect  to all of individuals sampling from p of x of expected value  of y1 given x comma t equals 1, expected value of y0  given x comma t equals 0."
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 548.08,
+            "end": 560.68,
+            "text": " For some of the individuals, you can observe this.  And for some of them, you have to extrapolate.  So there are many attempts now.  From here, there are many ways that one can go.  I'll hold your question for a little while."
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 563.2,
+            "end": 577.68,
+            "text": " So types of causal inference methods  that you will have heard of include things  like covariate adjustment, propensity score reweighting,  doubly robust estimators, matching, and so on.  And those are the tools of the causal inference trade."
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 577.68,
+            "end": 587.52,
+            "text": " And in this course, we're only going  to talk about the first two.  And today's lecture, we're only going  to talk about the first one, covariate adjustment.  On Thursday, we'll talk about the second one."
+        },
+        {
+            "number": "lec14",
+            "title": "part.005.mp3",
+            "start": 587.52,
+            "end": 600.36,
+            "text": " So covariate adjustment is a very natural way  to try to do that extrapolation.  It also goes by the name, by the way, of response service  modeling.  What we're going to do is we're going to learn a function f."
+        }
+    ],
+    "text": " Mm. These are your axes. And actually, we'll go back to the previous slide, where it's a bit easier to see. Here, we're going to ignore the outcome, the sugar levels. Because remember, this only has to do with probability of treatment given your covariance. The y doesn't show up here at all. So this thing on the right-hand side, the observed sugar level is irrelevant for this question. All we care about is what goes on over here. So we look at this. These are your axes. And this is your treatment. And you can look to see, OK, here, you have one 75-year-old male who does exercise frequently and receive treatment A. Is there anyone else in the data set who is 75 years old, male, does exercise regularly, but receive treatment B? Yes or no? No. Good. OK, so overlap is not satisfied here, at least not empirically. Now, you might argue that I'm being a bit too coarse here, that I'm, well, what happens if the individual is 74 and received treatment B? Maybe that's close enough. So there starts to become subtleties in assessing these things when you have finite data. But it is something at the fundamental level that you could start to assess using data, as opposed to ignorability, which you cannot test using data. So you have to think about, are these assumptions satisfied? And only once you've started to think through those questions can you start to do your analysis. And so that now brings me to the next part of this lecture, which is, how do we actually, let's now believe David, believe that these assumptions hold, how do we do that causal inference? Yeah? I just had a question on ignorability. If we know that some patients, like healthy patients, are not likely to get any treatment, should we just remove them, basically? So the question is, what happens if you have a violation of overlap? For example, you have individuals who you know that healthy individuals never receive any treatment. Should you remove them from your data set? Well, first of all, that has to do with how do you formalize the question, because not receiving a treatment is a treatment. So that might be your control arm, just to be clear. Now, if you're asking about the difference between two treatments, two different classes of treatment for a condition, then often one defines the relevant inclusion criteria in order to have these conditions hold. For example, we could try to redefine the set of individuals that we're asking about so that overlap does a hold. But then in that situation, you have to just make sure that your policy is also modified. You say, OK, I conclude that the average treatment effect is blah for this type of people. So how can we possibly compute the average treatment effect from data? Remember, average treatment effect mathematically is the expectation between potential outcome y1 minus y0. The key tool which we'll use in order to estimate that is what's known as the adjustment formula. This goes by many names in the statistics community, such as the g formula as well. Here I'll give you a derivation of it. We're first going to recognize that this expectation is actually two expectations in one. It's the expectation over individuals x, and it's the expectation over potential outcomes y given x. Potential outcomes y given x. So I'm first just going to write it out in terms of those two expectations, and I'll write the expectations to x on the outside. That goes by the name of law of total expectation. This is trivial at this stage. And by the way, I'm just writing out expectation of y1. And in a few minutes, I'll show you expectation of y0, but it's going to be exactly analogous. Now, the next step is where we use ignorability. So I told you I was going to give that one away. So remember, we said that we're assuming that y1 is conditionally independent of the treatment T given x. What that means is probability of y1 given x is equal to probability of y1 given x comma T equals whatever. In this case, I'll say T equals 1. This is implied by y1 being conditionally dependent of T given x. So I can just stick in comma T equals 1 here. And that's explicitly because of ignorability holding. But now we're in a really good place, because notice that, and here I've just done some short notation. I'm just going to hide this expectation. And by the way, you could do the same for y0, y1, y0. And now notice that we can replace this average treatment effect with now this expectation with respect to all individuals x of the expectation of y1 given x comma T equals 1, and so on. And these are mostly quantities that we can now observe from our data. So for example, we can look at the individuals who receive treatment 1. And for those individuals, we know we have realizations of y1. We can look at individuals who receive treatment 0. And for those individuals, we have realizations of y0. And we can just average those realizations to get estimates of the corresponding expectations. So these we can easily estimate from our data. And so we've made progress. We can now estimate some part of this from our data. But notice there are some things that we can't yet directly estimate from our data. In particular, we can't estimate expectation of y0 given x comma T equals 1, because we have no idea what would have happened to this individual who actually got treatment 1 if they had gotten treatment 0. So these we don't know. And similarly, OK, so these we don't know. Now, what is the trick I'm playing on you? How does it help that we can do this? Well, the key point is that these quantities that we can estimate from data show up in that term. In particular, if you look at the individuals x that you've sampled from the full set of individuals P of x, for that individual x for which, in fact, we observe T equals 1, then we can estimate expectation of y1 given x comma T equals 1. And similarly for y0. But what we need to be able to do is to extrapolate, because empirically, we only have samples from P of x given T equals 1, P of x given T equals 0 for those two potential outcomes correspondingly. But we are going to also get samples of x such that for those individuals in your data set, you might have only observed T equals 0. And to compute this formula, you have to answer for that x, what would it have been if they got treatment equals 1? So there are going to be a set of individuals that we have to extrapolate for in order to use this adjustment formula for estimate. Yep? Not because common support is true, we have some patients that received each treatment for a given type of x. Yes. But now, so yes, that's true. But that's a statement about infinite data. And in reality, one only has finite data. And so although common support has to hold to some extent, you can't just build on that to say that you always observe the counterfactual for every individual, such as the pictures I showed you earlier. So I'm going to leave this slide up for just one more second to let it sort of sink in and see what it's saying. We started out from the goal of computing the average treatment effect, expected value of y1 minus y0. Using the adjustment formula, we've gotten to now an equivalent representation, which is now an expectation with respect to all of individuals sampling from p of x of expected value of y1 given x comma t equals 1, expected value of y0 given x comma t equals 0. For some of the individuals, you can observe this. And for some of them, you have to extrapolate. So there are many attempts now. From here, there are many ways that one can go. I'll hold your question for a little while. So types of causal inference methods that you will have heard of include things like covariate adjustment, propensity score reweighting, doubly robust estimators, matching, and so on. And those are the tools of the causal inference trade. And in this course, we're only going to talk about the first two. And today's lecture, we're only going to talk about the first one, covariate adjustment. On Thursday, we'll talk about the second one. So covariate adjustment is a very natural way to try to do that extrapolation. It also goes by the name, by the way, of response service modeling. What we're going to do is we're going to learn a function f."
+}

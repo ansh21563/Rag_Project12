@@ -1,0 +1,278 @@
+{
+    "chunks": [
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 0.0,
+            "end": 10.44,
+            "text": " hidden variables.  But as you'll see in just a few minutes,  it is not going to pre-specify too much of the model.  The model is still going to learn a whole bunch  of other interesting things."
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 10.44,
+            "end": 27.1,
+            "text": " By the way, the way that we actually came up with this set  was by an iterative process.  We specified some of the hidden variables to have anchors,  but we also left some of them to be unanchored,  meaning free variables."
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 27.1,
+            "end": 36.36,
+            "text": " We did our learning algorithm, and just  like you would do in a topic model,  we discovered that there were some phenotypes that  really seemed to be characterized  by the patient's disease, that seemed"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 36.36,
+            "end": 49.18,
+            "text": " to characterize the patient's disease progression.  Then, in order to really dig deeper,  working in collaboration with the domain expert,  we specified anchors for those, and we iterated.  And in this way, we discovered the full set"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 49.18,
+            "end": 59.22,
+            "text": " of interesting variables that we wanted to model.  Yeah?  Did you measure how good an anchor these were?  Are some comorbidities better anchors than others?  Great, you'll see."
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 59.22,
+            "end": 71.94,
+            "text": " I think we'll answer that question in just a few minutes  when I show you what the graph looks like that's learned.  Yeah?  Were all the other weights in that x to o network 0?  They weren't part of an anchor?"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 71.94,
+            "end": 87.58,
+            "text": " They're explicitly non-zero, actually.  It's opposite.  So for an anchor, we say that it only has a single parent.  Everything that's not an anchor can have arbitrarily many  parents."
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 87.58,
+            "end": 96.5,
+            "text": " Is that clear?  Yeah?  So the anchors that you had in that leader table,  you iterated yourself on that?  Or did a doctor say that these are the ones that"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 96.5,
+            "end": 107.66,
+            "text": " are especially trustworthy?  We started out with just a subset of these conditions  as things that we wanted to model,  things that we wanted to understand what happens  along disease progression according to these axes,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 107.66,
+            "end": 120.06,
+            "text": " but just a subset of them originally.  And then we included a few additional hidden variables  that didn't have any anchors associated to them.  And after doing unsupervised learning  in a preliminary development stage,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 120.06,
+            "end": 132.86,
+            "text": " they discovered some topics.  We realized, oh, shoot, we should have included those  in there.  And then we added them in with corresponding anchors.  And so you can think of this as an exploratory data analysis"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 132.86,
+            "end": 142.9,
+            "text": " pipeline.  Yeah?  Is there a chance that these aren't anchors?  Yes.  So there's definitely the chance that these may not be anchors."
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 142.9,
+            "end": 165.54000000000002,
+            "text": " It's related to the question that was asked a second ago.  So for example, there might be some chance  that the morbid obesity diagnosis code might  be coded for a patient more often for a patient who has,  let's say, asthma."
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 165.54000000000002,
+            "end": 179.14,
+            "text": " This is a bad example.  And in which case, that would correspond to an assay.  They're truly existing an edge from asthma  to this anchor, which would be a violation of the anchor  assumption."
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 179.14,
+            "end": 192.22,
+            "text": " So we chose these to make that unlikely.  But it could happen.  And it's not easily testable.  So this is another example of an untestable assumption,  just like we saw lots of other examples"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 192.22,
+            "end": 201.45999999999998,
+            "text": " already in today's lecture and in the causal inference  lectures.  If we had some ground truth data, like if we had done chart  review for some number of patients  and we actually labeled these conditions,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 201.46,
+            "end": 211.26000000000002,
+            "text": " then we could test that anchor assumption.  But here, we're assuming that we don't actually  know the ground truth of these conditions.  AUDIENCE 2 Is there a reason why you choose such high level  comorbidities?"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 211.26000000000002,
+            "end": 222.14000000000001,
+            "text": " Like, I imagine you could go more specific.  Even say, in diabetes, you could try to subtype the diabetes  based on this other model and sort of use  that as a single layer.  But it seems to, at least this model"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 222.14000000000001,
+            "end": 233.70000000000002,
+            "text": " seems to choose the 12 to the high level.  I'm just curious the reason.  PROFESSOR 1 Yes, that was a design choice that we made.  There are many, many directions for follow-up work,  one of which would be to use a hierarchical model here."
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 233.70000000000002,
+            "end": 244.88,
+            "text": " But we hadn't gone that direction.  Another obvious direction for follow-up work  would be to do simultaneous subtyping with the staging  by introducing another random variable, which  is, let's say, the disease subtype,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 244.88,
+            "end": 263.9,
+            "text": " and making everything a function of that.  So I've talked about the vertical slice,  and I've talked about the topmost slice.  But what I still need to tell you about  is how these phenotypes relate to the observed disease stage."
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 267.14,
+            "end": 285.36,
+            "text": " So for this, we use, I don't remember  the exact technical terminology, a factored Markov model.  Is that right, Pete?  Factorized Markov model?  This is a term that exists in the graphical models literature,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 285.36,
+            "end": 323.18,
+            "text": " but I don't remember right now.  So what we're saying is that each of these Markov chains,  so each of these x1 up to xt, so this, we'll say,  is the first one I'll call diabetes.  This is the second one, which I'll say is depression."
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 330.53999999999996,
+            "end": 357.18,
+            "text": " We're going to assume that each one of these Markov chains  is conditionally independent of each other,  given the disease stage.  So it's the disease stage which ties everything together.  So the graphical model looks like this, and so on."
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 357.18,
+            "end": 372.97999999999996,
+            "text": " So in particular, there are no edges between, let's say,  the diabetes variable and the depression variable.  All correlations between these conditions  is assumed to be mediated by the disease stage variable.  And that's a critical assumption that we had to make."
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 372.97999999999996,
+            "end": 401.94,
+            "text": " Does anyone know why?  What would go wrong if we didn't make that assumption?  So for example, what would go wrong if we had something  look like this, x1 notation, x11, x12, x13,  and suppose we had edges between them, a complete graph,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 401.94,
+            "end": 415.28,
+            "text": " and we had, let's say, also the s variable  with edges to everything?  What would happen in that case, where we're not  assuming that the x's are conditionally independent given  s?"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 422.18,
+            "end": 437.15999999999997,
+            "text": " So I want you to think about this in terms of distributions.  So remember, we're going to learn  how to do disease progression through learning  the parameters of this model.  And so if we set this up, and if we set up the learning"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 437.15999999999997,
+            "end": 445.58,
+            "text": " problem in a way which is unidentifiable,  then we're going to be screwed.  We're not going to be able to learn anything  about disease progression.  So what would happen in this situation?"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 450.09999999999997,
+            "end": 469.58,
+            "text": " Someone who hasn't spoken today, ideally.  Do any of you remember from, let's say,  perhaps an earlier machine learning class,  what types of distributions a complete graph,  a complete Bayesian network, could represent?"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 477.02,
+            "end": 490.34,
+            "text": " So the answer is all distributions,  because it corresponds to any factorization  of the joint distribution.  And so if you allowed these x variables  to be fully connected to each other,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 490.34,
+            "end": 501.5,
+            "text": " so for example, saying that depression  depends on diabetes in addition to the stage,  then in fact, you don't even need this stage variable  in here.  You can fit any distribution on these x variables,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 501.5,
+            "end": 515.8199999999999,
+            "text": " even without that variable at all.  And so the model could learn to simply ignore  the s variable, which would be exactly not our goal,  because our goal is to learn something about the disease  stage."
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 515.8199999999999,
+            "end": 531.78,
+            "text": " And in fact, we're going to be wanting  to make assumptions on the progression of disease stage,  which is going to help us learn.  So by assuming conditional independence between these x  variables, it's going to force all of the correlations"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 531.78,
+            "end": 547.62,
+            "text": " to have to be mediated by that s variable,  and it's going to remove some of that unidentifiability  that would otherwise exist.  This is a subtle but very important point.  So the way that we're going to parametrize"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 547.62,
+            "end": 560.06,
+            "text": " the conditional distribution, so first of all,  I'm going to assume these x's are all binary.  So either the patient has diabetes  or they don't have diabetes.  I'm going to suppose that, and this is, again,"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 560.06,
+            "end": 575.18,
+            "text": " another assumption we're making, I'm  going to suppose that once you already have a comorbidity,  then you always have it.  So for example, once this is 1, then all subsequent ones  are also going to be 1."
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 575.18,
+            "end": 586.86,
+            "text": " Hold the questions for just a second.  I'm also going to make an assumption  that later stages of the disease are more likely to develop  the comorbidity.  So in particular, one can formalize that mathematically"
+        },
+        {
+            "number": "lec19",
+            "title": "part.003.mp3",
+            "start": 586.86,
+            "end": 601.4200000000001,
+            "text": " as probability of x, I'll just say x, i being 1."
+        }
+    ],
+    "text": " hidden variables. But as you'll see in just a few minutes, it is not going to pre-specify too much of the model. The model is still going to learn a whole bunch of other interesting things. By the way, the way that we actually came up with this set was by an iterative process. We specified some of the hidden variables to have anchors, but we also left some of them to be unanchored, meaning free variables. We did our learning algorithm, and just like you would do in a topic model, we discovered that there were some phenotypes that really seemed to be characterized by the patient's disease, that seemed to characterize the patient's disease progression. Then, in order to really dig deeper, working in collaboration with the domain expert, we specified anchors for those, and we iterated. And in this way, we discovered the full set of interesting variables that we wanted to model. Yeah? Did you measure how good an anchor these were? Are some comorbidities better anchors than others? Great, you'll see. I think we'll answer that question in just a few minutes when I show you what the graph looks like that's learned. Yeah? Were all the other weights in that x to o network 0? They weren't part of an anchor? They're explicitly non-zero, actually. It's opposite. So for an anchor, we say that it only has a single parent. Everything that's not an anchor can have arbitrarily many parents. Is that clear? Yeah? So the anchors that you had in that leader table, you iterated yourself on that? Or did a doctor say that these are the ones that are especially trustworthy? We started out with just a subset of these conditions as things that we wanted to model, things that we wanted to understand what happens along disease progression according to these axes, but just a subset of them originally. And then we included a few additional hidden variables that didn't have any anchors associated to them. And after doing unsupervised learning in a preliminary development stage, they discovered some topics. We realized, oh, shoot, we should have included those in there. And then we added them in with corresponding anchors. And so you can think of this as an exploratory data analysis pipeline. Yeah? Is there a chance that these aren't anchors? Yes. So there's definitely the chance that these may not be anchors. It's related to the question that was asked a second ago. So for example, there might be some chance that the morbid obesity diagnosis code might be coded for a patient more often for a patient who has, let's say, asthma. This is a bad example. And in which case, that would correspond to an assay. They're truly existing an edge from asthma to this anchor, which would be a violation of the anchor assumption. So we chose these to make that unlikely. But it could happen. And it's not easily testable. So this is another example of an untestable assumption, just like we saw lots of other examples already in today's lecture and in the causal inference lectures. If we had some ground truth data, like if we had done chart review for some number of patients and we actually labeled these conditions, then we could test that anchor assumption. But here, we're assuming that we don't actually know the ground truth of these conditions. AUDIENCE 2 Is there a reason why you choose such high level comorbidities? Like, I imagine you could go more specific. Even say, in diabetes, you could try to subtype the diabetes based on this other model and sort of use that as a single layer. But it seems to, at least this model seems to choose the 12 to the high level. I'm just curious the reason. PROFESSOR 1 Yes, that was a design choice that we made. There are many, many directions for follow-up work, one of which would be to use a hierarchical model here. But we hadn't gone that direction. Another obvious direction for follow-up work would be to do simultaneous subtyping with the staging by introducing another random variable, which is, let's say, the disease subtype, and making everything a function of that. So I've talked about the vertical slice, and I've talked about the topmost slice. But what I still need to tell you about is how these phenotypes relate to the observed disease stage. So for this, we use, I don't remember the exact technical terminology, a factored Markov model. Is that right, Pete? Factorized Markov model? This is a term that exists in the graphical models literature, but I don't remember right now. So what we're saying is that each of these Markov chains, so each of these x1 up to xt, so this, we'll say, is the first one I'll call diabetes. This is the second one, which I'll say is depression. We're going to assume that each one of these Markov chains is conditionally independent of each other, given the disease stage. So it's the disease stage which ties everything together. So the graphical model looks like this, and so on. So in particular, there are no edges between, let's say, the diabetes variable and the depression variable. All correlations between these conditions is assumed to be mediated by the disease stage variable. And that's a critical assumption that we had to make. Does anyone know why? What would go wrong if we didn't make that assumption? So for example, what would go wrong if we had something look like this, x1 notation, x11, x12, x13, and suppose we had edges between them, a complete graph, and we had, let's say, also the s variable with edges to everything? What would happen in that case, where we're not assuming that the x's are conditionally independent given s? So I want you to think about this in terms of distributions. So remember, we're going to learn how to do disease progression through learning the parameters of this model. And so if we set this up, and if we set up the learning problem in a way which is unidentifiable, then we're going to be screwed. We're not going to be able to learn anything about disease progression. So what would happen in this situation? Someone who hasn't spoken today, ideally. Do any of you remember from, let's say, perhaps an earlier machine learning class, what types of distributions a complete graph, a complete Bayesian network, could represent? So the answer is all distributions, because it corresponds to any factorization of the joint distribution. And so if you allowed these x variables to be fully connected to each other, so for example, saying that depression depends on diabetes in addition to the stage, then in fact, you don't even need this stage variable in here. You can fit any distribution on these x variables, even without that variable at all. And so the model could learn to simply ignore the s variable, which would be exactly not our goal, because our goal is to learn something about the disease stage. And in fact, we're going to be wanting to make assumptions on the progression of disease stage, which is going to help us learn. So by assuming conditional independence between these x variables, it's going to force all of the correlations to have to be mediated by that s variable, and it's going to remove some of that unidentifiability that would otherwise exist. This is a subtle but very important point. So the way that we're going to parametrize the conditional distribution, so first of all, I'm going to assume these x's are all binary. So either the patient has diabetes or they don't have diabetes. I'm going to suppose that, and this is, again, another assumption we're making, I'm going to suppose that once you already have a comorbidity, then you always have it. So for example, once this is 1, then all subsequent ones are also going to be 1. Hold the questions for just a second. I'm also going to make an assumption that later stages of the disease are more likely to develop the comorbidity. So in particular, one can formalize that mathematically as probability of x, I'll just say x, i being 1."
+}

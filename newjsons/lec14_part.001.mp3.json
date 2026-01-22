@@ -1,0 +1,278 @@
+{
+    "chunks": [
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 0.0,
+            "end": 22.84,
+            "text": " and outcomes or outputs.  So we now need to be having three quantities in mind.  And we have to start thinking about, well,  what is the causal relationship between these three?  So for those of you who have taken more graduate-level"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 22.84,
+            "end": 36.6,
+            "text": " machine learning classes, you might  be familiar with ideas such as Bayesian networks.  And when I went to undergrad and grad school  and I studied machine learning, for the longest time,  I thought causal inference had to do"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 36.6,
+            "end": 53.92,
+            "text": " with learning causal graphs.  So this is what I thought causal inference was about.  You have data of the following nature, 1, 0, 0, 1, dot, dot,  dot.  So here there are four random variables."
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 53.92,
+            "end": 64.67999999999999,
+            "text": " I'm showing the realizations of those four binary variables,  one per row.  And you have a data set like this.  And I thought causal inference had  to do with taking data like this and trying to figure out,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 64.67999999999999,
+            "end": 89.28,
+            "text": " is the underlying Bayesian network that created that data,  is it x1 goes to x2 goes to x3 to x4, where I'll say this  is x1, that's x2, x3, and x4?  Or maybe the causal graph is x1 to x2 to x3 to x4.  And trying to distinguish between"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 89.28,
+            "end": 104.0,
+            "text": " these different causal graphs from observational data  is one type of question that one can ask.  And the one thing you learn in traditional machine learning  treatments of this is that sometimes you  can't distinguish between these causal graphs"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 104.0,
+            "end": 121.96,
+            "text": " from the data you have.  For example, suppose you just had two random variables.  Because any distribution could be represented  by probability of x1 times probability of x2 given x1,  according to the Bayesian, according to just rule"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 121.96,
+            "end": 134.07999999999998,
+            "text": " of conditional probability.  And similarly, any distribution could  be represented as the opposite, probability of x2  times probability of x1 given x2,  which would look like this."
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 137.28,
+            "end": 151.32,
+            "text": " The statement that one would make  is that if you just had data involving x1 and x2,  you couldn't distinguish between these two causal graphs.  x1 causes x2, or x2 causes x1.  And usually, another treatment would say, OK,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 151.32,
+            "end": 168.84,
+            "text": " but if you have a third variable and you have a V structure,  something like x1 goes to x2, x1 goes to x3,  this you could distinguish from, let's say, a chain structure.  And then the final answer to what  is causal inference from this philosophy"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 168.84,
+            "end": 182.12,
+            "text": " would be something like, OK, if you're in a setting like this,  you can't distinguish between x1 causes x2, or x2 causes x1,  then you do some interventions.  Like you intervene on x1, and you  look to see what happens to x2."
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 182.12,
+            "end": 200.52,
+            "text": " And that'll help you disentangle these directions of causality.  None of this is what we're going to be talking about today.  OK?  Today, we're going to be talking about the simplest, simplest  possible setting you can imagine."
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 200.52,
+            "end": 220.48,
+            "text": " That graph shown up there.  You have three sets of random variables,  x, which is perhaps a vector, so it's high dimensional,  a single random variable, t, and a single random variable, y.  And we know the causal graph here."
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 220.48,
+            "end": 240.72,
+            "text": " We're going to suppose that we know the directionality,  that we know that x might cause t, and x and t might cause y.  And the only thing we don't know is the strength of the edges.  All right?  And so now let's try to think through this in context"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 240.72,
+            "end": 247.0,
+            "text": " of the previous examples.  Yeah, question?  AUDIENCE 1.  So t does not affect x in any way?  DAVID SONTAGEKANIS Correct."
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 247.0,
+            "end": 267.96,
+            "text": " That's the assumption we're going to make here.  So let's try to instantiate this.  So we'll start with this example.  x might be what you know about the patient at diagnosis.  t, I'm going to assume for the purposes of today's class,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 267.96,
+            "end": 284.32000000000005,
+            "text": " is a decision between two different treatment plans.  And I'm going to simplify the state of the world.  I'm going to say those treatment plans only  depend on what you know about the patient at diagnosis.  So at diagnosis, you decide I'm going"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 284.32000000000005,
+            "end": 295.96000000000004,
+            "text": " to be giving them this sequence of treatments  at this three-month interval or this other sequence  of treatments at maybe that four-month interval.  And you make that decision just based on diagnosis,  and you don't change it based on anything you observe."
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 298.08000000000004,
+            "end": 311.14000000000004,
+            "text": " Then the causal graph of relevance  there is based on what you know about the patient  at diagnosis, which I'm going to say x is a vector,  because maybe it's based on images,  your whole electronic health record."
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 311.15999999999997,
+            "end": 325.02,
+            "text": " There's a ton of data you have on the patient at diagnosis.  Based on that, you make some decision about a treatment  plan.  I'm going to call that t.  t could be binary, choice between two treatments."
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 325.02,
+            "end": 338.94,
+            "text": " It could be continuous.  Maybe you're deciding the dosage of the treatment.  Or it could be maybe even a vector.  For today's lecture, I'm going to suppose  that t is just binary, just involves two choices."
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 338.94,
+            "end": 352.62,
+            "text": " But most of what I'll tell you about  will generalize to the setting where t is non-binary as well.  But critically, I'm going to make the assumption  for today's lecture that you're not observing  new things in between."
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 352.62,
+            "end": 368.5,
+            "text": " So for example, in this whole week's lecture,  the following scenario will not happen.  Based on diagnosis, you make a decision about treatment plan.  Treatment plan starts.  You get new observations."
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 368.5,
+            "end": 379.9,
+            "text": " Based on those new observations,  you realize that treatment plan isn't working.  You change to another treatment plan and so on.  So that scenario goes by a different name,  which is called dynamic treatment regimes,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 379.9,
+            "end": 391.66,
+            "text": " or off-policy reinforcement learning.  And that we'll learn about next week.  So for today's and Thursday's lecture,  we're going to suppose, based on what  you know about the patient at this time, you make a decision."
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 391.66,
+            "end": 403.46,
+            "text": " You execute the decision.  And you look at some outcome.  So x causes t, not the other way around.  And that's pretty clear because of our prior knowledge  about this problem."
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 403.46,
+            "end": 416.06,
+            "text": " It's not that the treatment affects  what their diagnosis was.  And then there's the outcome y.  And there again, we suppose the outcome,  what happens to the patient, maybe survival time,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 416.06,
+            "end": 428.90000000000003,
+            "text": " for example, is a function of what treatment they're getting  and aspects about that patient.  So this is the causal graph.  We know it.  But we don't know, does that treatment do anything"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 428.90000000000003,
+            "end": 439.1,
+            "text": " to this patient?  For whom does this treatment help the most?  And those are the types of questions we're  going to try to answer today.  Is the setting clear?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 452.3,
+            "end": 468.29999999999995,
+            "text": " Now, these questions are not new questions.  They've been studied for decades  in fields such as political science, economics, statistics,  biostatistics.  And the reason why they're studied in those other fields"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 468.29999999999995,
+            "end": 487.82,
+            "text": " is because often you don't have the ability to intervene.  And one has to try to answer these questions  from observational data.  For example, you might ask, what will happen to the US economy  if the Federal Reserve raises US interest rates by 1%?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 487.82,
+            "end": 501.38,
+            "text": " Now, when's the last time you heard of the Federal Reserve  doing a randomized controlled trial?  And even if they had done a randomized controlled trial,  for example, flip the coin to decide which way the interest  rates would go, it wouldn't be comparable"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 501.38,
+            "end": 513.74,
+            "text": " had they done that experiment today  to if they had done that experiment two years from now.  Because the state of the world has changed in those years.  OK?  Let's talk about political science."
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 513.74,
+            "end": 534.06,
+            "text": " I have close colleagues of mine at NYU who look at Twitter.  And they want to ask questions like,  how can we influence elections?  Or how are elections influenced?  So you might look at some unnamed actors, possibly"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 534.06,
+            "end": 548.38,
+            "text": " people supported by the Russian government, who  are posting to Twitter or other social media.  And you might ask the question of, well,  did that actually influence the outcome  of the previous presidential election?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 548.38,
+            "end": 564.26,
+            "text": " Again, in that scenario, it's one of, well, we have this data.  Something happened in the world.  And we'd like to understand what was the effect of that action.  But we can't exactly go back and replay to do something else.  So these are fundamental questions"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 564.26,
+            "end": 574.94,
+            "text": " that appear all across the sciences.  And of course, they're extremely relevant in health care.  But yet, we don't teach them in our introduction  to machine learning classes.  We don't teach them in our undergraduate computer science"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 574.94,
+            "end": 588.54,
+            "text": " education.  And I view this as a major hole in our education, which  is why we're spending two weeks on it in this course.  There's still not enough.  Now, but what has changed between these fields?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.001.mp3",
+            "start": 588.54,
+            "end": 600.78,
+            "text": " And what is relevant in health care?  Well, the traditional way in which these questions were  asked in statistics were ones where  you took a huge amount of domain knowledge."
+        }
+    ],
+    "text": " and outcomes or outputs. So we now need to be having three quantities in mind. And we have to start thinking about, well, what is the causal relationship between these three? So for those of you who have taken more graduate-level machine learning classes, you might be familiar with ideas such as Bayesian networks. And when I went to undergrad and grad school and I studied machine learning, for the longest time, I thought causal inference had to do with learning causal graphs. So this is what I thought causal inference was about. You have data of the following nature, 1, 0, 0, 1, dot, dot, dot. So here there are four random variables. I'm showing the realizations of those four binary variables, one per row. And you have a data set like this. And I thought causal inference had to do with taking data like this and trying to figure out, is the underlying Bayesian network that created that data, is it x1 goes to x2 goes to x3 to x4, where I'll say this is x1, that's x2, x3, and x4? Or maybe the causal graph is x1 to x2 to x3 to x4. And trying to distinguish between these different causal graphs from observational data is one type of question that one can ask. And the one thing you learn in traditional machine learning treatments of this is that sometimes you can't distinguish between these causal graphs from the data you have. For example, suppose you just had two random variables. Because any distribution could be represented by probability of x1 times probability of x2 given x1, according to the Bayesian, according to just rule of conditional probability. And similarly, any distribution could be represented as the opposite, probability of x2 times probability of x1 given x2, which would look like this. The statement that one would make is that if you just had data involving x1 and x2, you couldn't distinguish between these two causal graphs. x1 causes x2, or x2 causes x1. And usually, another treatment would say, OK, but if you have a third variable and you have a V structure, something like x1 goes to x2, x1 goes to x3, this you could distinguish from, let's say, a chain structure. And then the final answer to what is causal inference from this philosophy would be something like, OK, if you're in a setting like this, you can't distinguish between x1 causes x2, or x2 causes x1, then you do some interventions. Like you intervene on x1, and you look to see what happens to x2. And that'll help you disentangle these directions of causality. None of this is what we're going to be talking about today. OK? Today, we're going to be talking about the simplest, simplest possible setting you can imagine. That graph shown up there. You have three sets of random variables, x, which is perhaps a vector, so it's high dimensional, a single random variable, t, and a single random variable, y. And we know the causal graph here. We're going to suppose that we know the directionality, that we know that x might cause t, and x and t might cause y. And the only thing we don't know is the strength of the edges. All right? And so now let's try to think through this in context of the previous examples. Yeah, question? AUDIENCE 1. So t does not affect x in any way? DAVID SONTAGEKANIS Correct. That's the assumption we're going to make here. So let's try to instantiate this. So we'll start with this example. x might be what you know about the patient at diagnosis. t, I'm going to assume for the purposes of today's class, is a decision between two different treatment plans. And I'm going to simplify the state of the world. I'm going to say those treatment plans only depend on what you know about the patient at diagnosis. So at diagnosis, you decide I'm going to be giving them this sequence of treatments at this three-month interval or this other sequence of treatments at maybe that four-month interval. And you make that decision just based on diagnosis, and you don't change it based on anything you observe. Then the causal graph of relevance there is based on what you know about the patient at diagnosis, which I'm going to say x is a vector, because maybe it's based on images, your whole electronic health record. There's a ton of data you have on the patient at diagnosis. Based on that, you make some decision about a treatment plan. I'm going to call that t. t could be binary, choice between two treatments. It could be continuous. Maybe you're deciding the dosage of the treatment. Or it could be maybe even a vector. For today's lecture, I'm going to suppose that t is just binary, just involves two choices. But most of what I'll tell you about will generalize to the setting where t is non-binary as well. But critically, I'm going to make the assumption for today's lecture that you're not observing new things in between. So for example, in this whole week's lecture, the following scenario will not happen. Based on diagnosis, you make a decision about treatment plan. Treatment plan starts. You get new observations. Based on those new observations, you realize that treatment plan isn't working. You change to another treatment plan and so on. So that scenario goes by a different name, which is called dynamic treatment regimes, or off-policy reinforcement learning. And that we'll learn about next week. So for today's and Thursday's lecture, we're going to suppose, based on what you know about the patient at this time, you make a decision. You execute the decision. And you look at some outcome. So x causes t, not the other way around. And that's pretty clear because of our prior knowledge about this problem. It's not that the treatment affects what their diagnosis was. And then there's the outcome y. And there again, we suppose the outcome, what happens to the patient, maybe survival time, for example, is a function of what treatment they're getting and aspects about that patient. So this is the causal graph. We know it. But we don't know, does that treatment do anything to this patient? For whom does this treatment help the most? And those are the types of questions we're going to try to answer today. Is the setting clear? Now, these questions are not new questions. They've been studied for decades in fields such as political science, economics, statistics, biostatistics. And the reason why they're studied in those other fields is because often you don't have the ability to intervene. And one has to try to answer these questions from observational data. For example, you might ask, what will happen to the US economy if the Federal Reserve raises US interest rates by 1%? Now, when's the last time you heard of the Federal Reserve doing a randomized controlled trial? And even if they had done a randomized controlled trial, for example, flip the coin to decide which way the interest rates would go, it wouldn't be comparable had they done that experiment today to if they had done that experiment two years from now. Because the state of the world has changed in those years. OK? Let's talk about political science. I have close colleagues of mine at NYU who look at Twitter. And they want to ask questions like, how can we influence elections? Or how are elections influenced? So you might look at some unnamed actors, possibly people supported by the Russian government, who are posting to Twitter or other social media. And you might ask the question of, well, did that actually influence the outcome of the previous presidential election? Again, in that scenario, it's one of, well, we have this data. Something happened in the world. And we'd like to understand what was the effect of that action. But we can't exactly go back and replay to do something else. So these are fundamental questions that appear all across the sciences. And of course, they're extremely relevant in health care. But yet, we don't teach them in our introduction to machine learning classes. We don't teach them in our undergraduate computer science education. And I view this as a major hole in our education, which is why we're spending two weeks on it in this course. There's still not enough. Now, but what has changed between these fields? And what is relevant in health care? Well, the traditional way in which these questions were asked in statistics were ones where you took a huge amount of domain knowledge."
+}

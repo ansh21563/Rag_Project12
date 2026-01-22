@@ -1,0 +1,264 @@
+{
+    "chunks": [
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 0.0,
+            "end": 15.24,
+            "text": " If you compare the predictive performance  of the multitask approach to the independent regressor approach.  So here, we're showing two different measures  of performance.  The first one is some normalized mean squared error,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 15.24,
+            "end": 29.240000000000002,
+            "text": " and we want that to be as low as possible.  And the second one is r, as in r squared,  and you want that to be as high as possible.  So one would be perfect prediction.  On this first column here, it's showing"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 29.24,
+            "end": 50.8,
+            "text": " the results of just using independent regressors.  So if instead of tying them together with that r matrix,  you had r equals to 0, for example.  And then in each of these subsequent columns,  it shows now learning with this objective function, where"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 50.8,
+            "end": 68.04,
+            "text": " we are pumping up increasingly high this lambda 2 coefficient.  So it's going to be asking for more and more similarity  across the tasks.  So you see that even with a moderate value of lambda 2,  you start to get improvements between this multitask learning"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 68.04,
+            "end": 85.28,
+            "text": " approach and the independent regressors.  So the average r squared, for example,  goes from 0.69 up to 0.77, and you  notice how we have 95% confidence intervals here  as well, and it seems to be significant."
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 86.0,
+            "end": 97.56,
+            "text": " As you pump that lambda value larger,  although I won't comment about the statistical significance  between these columns, we do see a trend,  which is that the performance gets increasingly better  as you encourage them to be closer and closer together."
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 102.56,
+            "end": 112.76,
+            "text": " So I don't think I want to mention anything else  about this result. Is there a question?  Is this on a test set?  Thank you.  Yes, so this is on a held out set."
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 112.76,
+            "end": 123.32,
+            "text": " Thank you.  And that also reminded me of one other thing  I wanted to mention, which is critical to this story, which  is that you see the results because there's not much data.  If you had a really large training set,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 123.32,
+            "end": 134.68,
+            "text": " you would see no difference between these columns.  Or in fact, if you had a really large data set,  these results would be worse.  As you pump lambda higher, the results  will get worse because allowing flexibility"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 134.68,
+            "end": 151.2,
+            "text": " among the different tasks is actually a better thing  if you have enough data for each task.  So this is particularly valuable in the data core regime.  One could also try to analyze the results  in terms of looking at the feature importances"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 151.2,
+            "end": 165.9,
+            "text": " as a function of time.  So one row here corresponds to the weight vector  for that time points predictor.  And so here, we're just looking at four of the time points,  four of the five time points."
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 165.9,
+            "end": 178.64,
+            "text": " And the columns correspond to different features  that were used in the predictions.  And the colors correspond to how important that feature  is to the prediction.  You could imagine that being something"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 178.64,
+            "end": 194.28,
+            "text": " like the norm of the corresponding weight  in the linear model or a normalized version of that.  What you see are some interesting things.  First, there are some features, such as these,  where they're important at all different time points."
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 194.28,
+            "end": 204.72,
+            "text": " That might be expected.  But then there also might be some features  that are really important for predicting  what's going to happen right away,  but are really not important to predicting longer term"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 204.72,
+            "end": 218.67999999999998,
+            "text": " outcomes.  And you start to see things like that over here,  where you see that, for example, these features are not  at all important for predicting for the 36th time point,  but were useful for the earlier time points."
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 223.73999999999998,
+            "end": 231.0,
+            "text": " So from here now, we're going to start changing gears  a little bit.  What I just gave you is an example  of a supervised approach.  Is there a question?"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 231.0,
+            "end": 239.67999999999998,
+            "text": " Yes.  If a faculty member may ask a question.  Yes.  I'll permit it today.  Thank you."
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 239.67999999999998,
+            "end": 255.51999999999998,
+            "text": " So it's really two questions.  But I like the linear model that one of our friends  suggested better than the fully coupled model,  because it seems more intuitive and plausible to me.  And indeed, it's the linear model"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 255.51999999999998,
+            "end": 275.40000000000003,
+            "text": " which is used in this paper.  Ah, OK.  Because you noticed how that r was sort of diagonal.  The other observation is that, in particular,  in Alzheimer's, given our current state of inability"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 275.40000000000003,
+            "end": 297.56,
+            "text": " to treat it, it never gets better.  And yet, that's not a constraint in the model.  And I wonder if it would help to know that.  That's a really interesting point.  So what Pete's suggesting is you could think about this as,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 297.56,
+            "end": 348.53999999999996,
+            "text": " you could think about putting an additional constraint in,  which is that, you can imagine saying that y,  we know that, let's say, yi6 is typically less than yi12,  which is typically less than yi24, and so on.  And if we were able to do perfect prediction,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 348.54,
+            "end": 384.5,
+            "text": " meaning if it were the case that your predicted y's are  equal to your true y's, then you should also  have that w6 dot xi is less than w12 dot xi, which should  be less than w24 dot xi.  And so one could imagine now introducing these"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 384.5,
+            "end": 396.97999999999996,
+            "text": " as new constraints in your learning problem.  In some sense, what it's saying is, well,  we may not care that much if we get  some errors in the predictions.  But we want to make sure that at least we're"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 396.98,
+            "end": 408.94,
+            "text": " able to sort the patients correctly,  given patients correctly.  So we want to ensure at least some monotonicity  in these values.  And one could easily try to translate"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 408.94,
+            "end": 422.62,
+            "text": " these types of constraints into a modification  to your learning algorithm.  For example, if you took any pair of these,  let's say I'll take these two together,  one could introduce something like a hinge loss,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 422.62,
+            "end": 438.86,
+            "text": " where you say you want that you're  going to add a new objective function, which  says something like you're going to penalize  the max of 0 and 1 minus.  And I'm going to screw up this order,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 438.86,
+            "end": 465.29999999999995,
+            "text": " but it'll be something like w.  So I'll derive it correctly.  This will be w12 minus w24 dot product with xi.  We want to be less than 0.  And so you could look at how far from 0 is it."
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 465.29999999999995,
+            "end": 484.94,
+            "text": " So you could look at w12.  You might imagine a loss function which says, OK,  if it's greater than 0, then you have a problem.  And we might penalize it at, let's say, a linear penalty,  however greater than 0 it is."
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 484.94,
+            "end": 499.18,
+            "text": " And if it's less than 0, you don't penalize at all.  So you say something like this, max of w12 minus w24 dot  product xi.  And you might add something like this to your learning objective.  That would try to encourage, that"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 499.18,
+            "end": 510.14000000000004,
+            "text": " would penalize violations of this constraint  using a hinge loss type loss function.  So that would be one approach to try  to put such constraints into your learning objective.  A very different approach would be"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 510.14000000000004,
+            "end": 525.6800000000001,
+            "text": " to think about it as a structured prediction problem,  where instead of trying to say that you're  going to be predicting a given time point by itself,  you want to predict the vector of time points.  And there's a whole field of what's"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 525.6800000000001,
+            "end": 542.32,
+            "text": " called structured prediction, which  would allow one to form-wise objective functions that  might encourage, for example, smoothness  in predictions across time that one could take advantage of.  I'm not going to go more into that for reasons of time."
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 542.32,
+            "end": 557.5600000000001,
+            "text": " OK.  Hold any more questions to then the lecture,  because I want to make sure I get through this last piece.  So what we've talked about so far  is a supervised learning approach"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 557.5600000000001,
+            "end": 571.88,
+            "text": " to trying to predict what's going  to happen to a patient given what you know at baseline.  But I'm now going to talk about a very different style  of thought, which is using an unsupervised learning  approach to this."
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 571.88,
+            "end": 584.18,
+            "text": " And there are going to be two goals  of doing unsupervised learning for tackling this problem.  The first goal is that of discovery,  which I mentioned at the very beginning of today's lecture.  We might not just be interested in prediction."
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 584.18,
+            "end": 595.14,
+            "text": " We might also be interested in understanding something,  getting some new insights about the disease,  like discovering that there might  be some subtypes of the disease.  And those subtypes might be useful, for example,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.005.mp3",
+            "start": 595.14,
+            "end": 600.4200000000001,
+            "text": " to help design new clinical trials.  Like maybe you want to say, OK, I"
+        }
+    ],
+    "text": " If you compare the predictive performance of the multitask approach to the independent regressor approach. So here, we're showing two different measures of performance. The first one is some normalized mean squared error, and we want that to be as low as possible. And the second one is r, as in r squared, and you want that to be as high as possible. So one would be perfect prediction. On this first column here, it's showing the results of just using independent regressors. So if instead of tying them together with that r matrix, you had r equals to 0, for example. And then in each of these subsequent columns, it shows now learning with this objective function, where we are pumping up increasingly high this lambda 2 coefficient. So it's going to be asking for more and more similarity across the tasks. So you see that even with a moderate value of lambda 2, you start to get improvements between this multitask learning approach and the independent regressors. So the average r squared, for example, goes from 0.69 up to 0.77, and you notice how we have 95% confidence intervals here as well, and it seems to be significant. As you pump that lambda value larger, although I won't comment about the statistical significance between these columns, we do see a trend, which is that the performance gets increasingly better as you encourage them to be closer and closer together. So I don't think I want to mention anything else about this result. Is there a question? Is this on a test set? Thank you. Yes, so this is on a held out set. Thank you. And that also reminded me of one other thing I wanted to mention, which is critical to this story, which is that you see the results because there's not much data. If you had a really large training set, you would see no difference between these columns. Or in fact, if you had a really large data set, these results would be worse. As you pump lambda higher, the results will get worse because allowing flexibility among the different tasks is actually a better thing if you have enough data for each task. So this is particularly valuable in the data core regime. One could also try to analyze the results in terms of looking at the feature importances as a function of time. So one row here corresponds to the weight vector for that time points predictor. And so here, we're just looking at four of the time points, four of the five time points. And the columns correspond to different features that were used in the predictions. And the colors correspond to how important that feature is to the prediction. You could imagine that being something like the norm of the corresponding weight in the linear model or a normalized version of that. What you see are some interesting things. First, there are some features, such as these, where they're important at all different time points. That might be expected. But then there also might be some features that are really important for predicting what's going to happen right away, but are really not important to predicting longer term outcomes. And you start to see things like that over here, where you see that, for example, these features are not at all important for predicting for the 36th time point, but were useful for the earlier time points. So from here now, we're going to start changing gears a little bit. What I just gave you is an example of a supervised approach. Is there a question? Yes. If a faculty member may ask a question. Yes. I'll permit it today. Thank you. So it's really two questions. But I like the linear model that one of our friends suggested better than the fully coupled model, because it seems more intuitive and plausible to me. And indeed, it's the linear model which is used in this paper. Ah, OK. Because you noticed how that r was sort of diagonal. The other observation is that, in particular, in Alzheimer's, given our current state of inability to treat it, it never gets better. And yet, that's not a constraint in the model. And I wonder if it would help to know that. That's a really interesting point. So what Pete's suggesting is you could think about this as, you could think about putting an additional constraint in, which is that, you can imagine saying that y, we know that, let's say, yi6 is typically less than yi12, which is typically less than yi24, and so on. And if we were able to do perfect prediction, meaning if it were the case that your predicted y's are equal to your true y's, then you should also have that w6 dot xi is less than w12 dot xi, which should be less than w24 dot xi. And so one could imagine now introducing these as new constraints in your learning problem. In some sense, what it's saying is, well, we may not care that much if we get some errors in the predictions. But we want to make sure that at least we're able to sort the patients correctly, given patients correctly. So we want to ensure at least some monotonicity in these values. And one could easily try to translate these types of constraints into a modification to your learning algorithm. For example, if you took any pair of these, let's say I'll take these two together, one could introduce something like a hinge loss, where you say you want that you're going to add a new objective function, which says something like you're going to penalize the max of 0 and 1 minus. And I'm going to screw up this order, but it'll be something like w. So I'll derive it correctly. This will be w12 minus w24 dot product with xi. We want to be less than 0. And so you could look at how far from 0 is it. So you could look at w12. You might imagine a loss function which says, OK, if it's greater than 0, then you have a problem. And we might penalize it at, let's say, a linear penalty, however greater than 0 it is. And if it's less than 0, you don't penalize at all. So you say something like this, max of w12 minus w24 dot product xi. And you might add something like this to your learning objective. That would try to encourage, that would penalize violations of this constraint using a hinge loss type loss function. So that would be one approach to try to put such constraints into your learning objective. A very different approach would be to think about it as a structured prediction problem, where instead of trying to say that you're going to be predicting a given time point by itself, you want to predict the vector of time points. And there's a whole field of what's called structured prediction, which would allow one to form-wise objective functions that might encourage, for example, smoothness in predictions across time that one could take advantage of. I'm not going to go more into that for reasons of time. OK. Hold any more questions to then the lecture, because I want to make sure I get through this last piece. So what we've talked about so far is a supervised learning approach to trying to predict what's going to happen to a patient given what you know at baseline. But I'm now going to talk about a very different style of thought, which is using an unsupervised learning approach to this. And there are going to be two goals of doing unsupervised learning for tackling this problem. The first goal is that of discovery, which I mentioned at the very beginning of today's lecture. We might not just be interested in prediction. We might also be interested in understanding something, getting some new insights about the disease, like discovering that there might be some subtypes of the disease. And those subtypes might be useful, for example, to help design new clinical trials. Like maybe you want to say, OK, I"
+}

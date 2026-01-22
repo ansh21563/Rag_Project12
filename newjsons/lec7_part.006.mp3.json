@@ -1,0 +1,306 @@
+{
+    "chunks": [
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 0.0,
+            "end": 15.92,
+            "text": " We're using a system that Sheng developed called NILE.  And it had to do with the fact that CTAKES, which  is a really robust system, it was too computationally  intensive.  And for the purposes of phenotyping,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 15.92,
+            "end": 25.2,
+            "text": " we didn't need that level of detail.  What we really needed was, was it mentioned?  What's the concept?  And the negation.  And so NILE is something that we've been using"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 25.2,
+            "end": 42.28,
+            "text": " and have kind of validated over time  with the different methods we've been testing.  So Tuesday, I'll talk a little bit  about that system and some of its successors.  So you'll get a sense of how that works."
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 42.28,
+            "end": 60.04,
+            "text": " I should mention also that one of the papers that  was on your reading list is a paper out of David Sontag's  group, which uses this anchors concept.  And that's very much along the same lines,  that it's a way of trying to automate,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 60.04,
+            "end": 81.32,
+            "text": " just as Kat was saying, if the doctors mention some term  and you discover that that term is very often used  with certain other terms by looking at Wikipedia  or at the Mayo Clinic data or wherever your sources are,  then that's a good clue that that other term might also"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 81.32,
+            "end": 93.75999999999999,
+            "text": " be useful.  So this is a formalization of that idea as a machine  learning problem.  So basically, that paper talks about how  to take some very certain terms that are highly"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 93.75999999999999,
+            "end": 113.19999999999999,
+            "text": " indicative of a disease and then use those as anchors in order  to train a machine learning model that identifies more  terms that are also likely to be useful.  So this notion of kind of, and David  talked about a similar idea in a previous lecture,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 113.2,
+            "end": 134.48000000000002,
+            "text": " where you get a silver standard instead of a gold standard.  And the silver standard can be derived from a smaller gold  standard using some machine learning algorithm.  And then you can use that in your further computations.  So what was the process like for partnering with academics"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 134.48000000000002,
+            "end": 141.52,
+            "text": " and machine learning folks?  Did you seek them out?  Did they seek you out?  Did you run into each other at the bus stop?  How does that work?"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 141.52,
+            "end": 153.20000000000002,
+            "text": " Well, I was really lucky.  There was a big study called the Informatics for Integrating  Biology, the Med-Sci Project, called I2B2, led by Zach Kohane.  And so that was already in place.  And Pete had already been pulled in and Tianxin."
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 153.20000000000002,
+            "end": 162.36,
+            "text": " So what they basically did was locked all of us  in a room for three hours every Friday.  And it was like, what's the problem?  What's the question?  And how do we get there?"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 162.36,
+            "end": 175.0,
+            "text": " And so I think that infrastructure was so helpful  in bringing everyone to the table because it's not easy,  because you're not rotating in the same space  and the way you think is very different.  So that's how we did it."
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 175.0,
+            "end": 186.39999999999998,
+            "text": " Now, there are, now that it's more mainstream,  I think when we first started, everyone was,  my colleagues joked with me.  They're like, what are you doing, R2D2?  What's going on?"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 186.39999999999998,
+            "end": 198.04,
+            "text": " Are you going off the deep end over there?  Because the type of research we do  was more along the ways of clinical trials and clinepi  projects.  But now, we have, I run a core at Brigham."
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 198.04,
+            "end": 214.26000000000002,
+            "text": " So it's run out of the Rheumatology Division.  And so we kind of try to connect people together.  I did post through our core the consulting session here.  But if there is interest, there's  ways, there's probably more groups"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 214.26000000000002,
+            "end": 230.98000000000002,
+            "text": " that are doing this where we can kind of more formally  have joint talks or connect people together.  Yeah, but it's not easy.  It's very, I have to say, it takes a lot of time  because when Pete put up that thing in what"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 230.98000000000002,
+            "end": 242.82,
+            "text": " looked like a different language, I mean,  I didn't even, it didn't even occur to me  that it was hard to read, right?  So it's like you're into these two different worlds.  And so you have to work to meet in the middle."
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 242.82,
+            "end": 259.58,
+            "text": " And it takes time.  It also takes the right people.  So I have to say that Zach was probably  very clever in bringing the right people to the table  and locking us into that room for three hours at a time."
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 259.58,
+            "end": 279.90000000000003,
+            "text": " Because for example, our biostatistician Tianxi Cai,  just she speaks AI, or she has learned to speak AI.  And there are still plenty of statisticians  who just have allergic reactions to the kinds of things  that we do."
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 279.90000000000003,
+            "end": 294.62,
+            "text": " And it would be very difficult to work with them.  So having the right combination of people  is also really, I think, critical.  As one of my mentors said, you have to kiss a lot of frogs.  So you kiss a lot of frogs."
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 294.62,
+            "end": 306.94,
+            "text": " Yeah.  I was wondering if you could say a bit more  about how you approach the alarm fatigue and sort of how  you balance statistical questions around how certain  you are versus clinical questions of how important"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 306.94,
+            "end": 320.5,
+            "text": " this is versus even psychological questions  of if I send this too often to a certain amount of people,  they're going to start a different psychology around.  Yeah, you've definitely hit the nail on the head.  One of the major barriers are several things."
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 320.5,
+            "end": 335.5,
+            "text": " But alarm fatigue is one of them.  So EMRs became more prominent in 2010.  But now along with the EMRs came a lot  of regulations on physicians.  So we literally, and then came getting"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 335.5,
+            "end": 349.24,
+            "text": " rid of our old systems for these new systems that  are now government compliant.  So Epic is this big monster system  that's being rolled out across the country where you literally  have, it's so complicated in places like Mayo,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 349.24,
+            "end": 357.52000000000004,
+            "text": " they hire scribes.  So the physician sits in the office  and there's another person who actually listens in  and types in and clicks all the buttons that you  need to get the information there."
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 357.52000000000004,
+            "end": 370.48,
+            "text": " So alarm fatigue is definitely one of the barriers.  But the other barrier is the fact  that the EMRs are so user unfriendly now.  They're not built for clinical care.  They're built for billing that we"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 370.48,
+            "end": 381.20000000000005,
+            "text": " have to be careful about how we roll this out.  And that's one reason why I think things  have been held up, actually.  Not necessarily the science.  It's the implementation part."
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 381.20000000000005,
+            "end": 393.72,
+            "text": " It's going to be very hard.  So that isn't new, by the way.  I remember a class I taught in biomedical computing  about 15 years ago.  David Bates, who's the chief of general internal medicine"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 393.72,
+            "end": 409.68,
+            "text": " or something at the Brigham, came and gave a guest  lecture.  And he was describing their experience  with a drug-drug interaction system  that they had implemented."
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 409.68,
+            "end": 427.48,
+            "text": " And they purchased a data set from a vendor called  First Data Bank that had scoured the literature  and found all the instances where people had reported  cases where a patient taking both this medication  and that medication had an apparent adverse event."
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 427.48,
+            "end": 441.40000000000003,
+            "text": " So there was some interaction between them.  And they bought this thing.  They implemented it.  And they discovered that on the majority of drug orders  that they were making through their pharmacy system,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 441.40000000000003,
+            "end": 458.08000000000004,
+            "text": " a big red alert would pop up saying,  are you aware of the fact that there  is a potential interaction between this drug  and some other drug that this patient is taking?  And the problem is that the incentives for the company that"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 458.08000000000004,
+            "end": 473.48,
+            "text": " curated this database were to make sure they didn't miss  anything, because they didn't want to be  responsible for failing to alarm.  But of course, there's no pushback  saying that if you warn on every second order,"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 473.48,
+            "end": 488.6,
+            "text": " then no one's going to pay any attention to any of them.  And so David's solution was to get a bunch of the senior  doctors together.  And they did some study of what actual adverse events  had they experienced at the hospital."
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 488.6,
+            "end": 500.36,
+            "text": " And they cut this list of thousands of drug interactions  down to 20.  And they said, OK, those are the only ones  we're going to alarm on.  And then they threw that out when Epic came in."
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 500.36,
+            "end": 509.32,
+            "text": " So now when I put in an order, I get a list of 10.  And I just click them all.  So that's the problem.  And the threshold is going to be,  so there's going to be an entire, I"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 509.32,
+            "end": 521.36,
+            "text": " think there's going to be an entire methods development  that's going to have to happen between figuring out  where that threshold is and the fatigue from the alarms.  Yes?  I have two questions."
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 521.36,
+            "end": 537.52,
+            "text": " One is about the shift between ICD-9 and ICD-9.  How did you approach that?  Because we talk about this in other contexts.  And the other one is, how can you  inform other countries regarding research done here?"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 537.56,
+            "end": 555.04,
+            "text": " Because at the end of the day, it's a global health issue.  And all those drug systems are different even  between US and UK.  So all the mapping you're doing here,  how could that inform EHR work elsewhere?"
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 555.04,
+            "end": 567.0,
+            "text": " Yeah, so let me answer the first one.  The second one is a work in progress.  So ICD-10 came to the US on October 1, 2015.  I remember.  It hurt us all."
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 567.0,
+            "end": 583.8,
+            "text": " So we actually don't have that much information on ICD-10 yet.  But it's definitely impacted our work.  So if you think about when Pete was pointing  to the number of ICD counts for ICD-9, for those of you  who don't know, ICD-9 was developed decades ago."
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 583.8,
+            "end": 597.92,
+            "text": " ICD-10 maybe two decades ago.  But what ICD-10 did was it added more granularity.  So for rheumatoid arthritis, I mentioned  it's a systemic chronic inflammatory joint disease.  We used to have a code that said rheumatoid arthritis."
+        },
+        {
+            "number": "lec7",
+            "title": "part.006.mp3",
+            "start": 597.92,
+            "end": 601.92,
+            "text": " In ICD-10, it now says rheumatoid arthritis."
+        }
+    ],
+    "text": " We're using a system that Sheng developed called NILE. And it had to do with the fact that CTAKES, which is a really robust system, it was too computationally intensive. And for the purposes of phenotyping, we didn't need that level of detail. What we really needed was, was it mentioned? What's the concept? And the negation. And so NILE is something that we've been using and have kind of validated over time with the different methods we've been testing. So Tuesday, I'll talk a little bit about that system and some of its successors. So you'll get a sense of how that works. I should mention also that one of the papers that was on your reading list is a paper out of David Sontag's group, which uses this anchors concept. And that's very much along the same lines, that it's a way of trying to automate, just as Kat was saying, if the doctors mention some term and you discover that that term is very often used with certain other terms by looking at Wikipedia or at the Mayo Clinic data or wherever your sources are, then that's a good clue that that other term might also be useful. So this is a formalization of that idea as a machine learning problem. So basically, that paper talks about how to take some very certain terms that are highly indicative of a disease and then use those as anchors in order to train a machine learning model that identifies more terms that are also likely to be useful. So this notion of kind of, and David talked about a similar idea in a previous lecture, where you get a silver standard instead of a gold standard. And the silver standard can be derived from a smaller gold standard using some machine learning algorithm. And then you can use that in your further computations. So what was the process like for partnering with academics and machine learning folks? Did you seek them out? Did they seek you out? Did you run into each other at the bus stop? How does that work? Well, I was really lucky. There was a big study called the Informatics for Integrating Biology, the Med-Sci Project, called I2B2, led by Zach Kohane. And so that was already in place. And Pete had already been pulled in and Tianxin. So what they basically did was locked all of us in a room for three hours every Friday. And it was like, what's the problem? What's the question? And how do we get there? And so I think that infrastructure was so helpful in bringing everyone to the table because it's not easy, because you're not rotating in the same space and the way you think is very different. So that's how we did it. Now, there are, now that it's more mainstream, I think when we first started, everyone was, my colleagues joked with me. They're like, what are you doing, R2D2? What's going on? Are you going off the deep end over there? Because the type of research we do was more along the ways of clinical trials and clinepi projects. But now, we have, I run a core at Brigham. So it's run out of the Rheumatology Division. And so we kind of try to connect people together. I did post through our core the consulting session here. But if there is interest, there's ways, there's probably more groups that are doing this where we can kind of more formally have joint talks or connect people together. Yeah, but it's not easy. It's very, I have to say, it takes a lot of time because when Pete put up that thing in what looked like a different language, I mean, I didn't even, it didn't even occur to me that it was hard to read, right? So it's like you're into these two different worlds. And so you have to work to meet in the middle. And it takes time. It also takes the right people. So I have to say that Zach was probably very clever in bringing the right people to the table and locking us into that room for three hours at a time. Because for example, our biostatistician Tianxi Cai, just she speaks AI, or she has learned to speak AI. And there are still plenty of statisticians who just have allergic reactions to the kinds of things that we do. And it would be very difficult to work with them. So having the right combination of people is also really, I think, critical. As one of my mentors said, you have to kiss a lot of frogs. So you kiss a lot of frogs. Yeah. I was wondering if you could say a bit more about how you approach the alarm fatigue and sort of how you balance statistical questions around how certain you are versus clinical questions of how important this is versus even psychological questions of if I send this too often to a certain amount of people, they're going to start a different psychology around. Yeah, you've definitely hit the nail on the head. One of the major barriers are several things. But alarm fatigue is one of them. So EMRs became more prominent in 2010. But now along with the EMRs came a lot of regulations on physicians. So we literally, and then came getting rid of our old systems for these new systems that are now government compliant. So Epic is this big monster system that's being rolled out across the country where you literally have, it's so complicated in places like Mayo, they hire scribes. So the physician sits in the office and there's another person who actually listens in and types in and clicks all the buttons that you need to get the information there. So alarm fatigue is definitely one of the barriers. But the other barrier is the fact that the EMRs are so user unfriendly now. They're not built for clinical care. They're built for billing that we have to be careful about how we roll this out. And that's one reason why I think things have been held up, actually. Not necessarily the science. It's the implementation part. It's going to be very hard. So that isn't new, by the way. I remember a class I taught in biomedical computing about 15 years ago. David Bates, who's the chief of general internal medicine or something at the Brigham, came and gave a guest lecture. And he was describing their experience with a drug-drug interaction system that they had implemented. And they purchased a data set from a vendor called First Data Bank that had scoured the literature and found all the instances where people had reported cases where a patient taking both this medication and that medication had an apparent adverse event. So there was some interaction between them. And they bought this thing. They implemented it. And they discovered that on the majority of drug orders that they were making through their pharmacy system, a big red alert would pop up saying, are you aware of the fact that there is a potential interaction between this drug and some other drug that this patient is taking? And the problem is that the incentives for the company that curated this database were to make sure they didn't miss anything, because they didn't want to be responsible for failing to alarm. But of course, there's no pushback saying that if you warn on every second order, then no one's going to pay any attention to any of them. And so David's solution was to get a bunch of the senior doctors together. And they did some study of what actual adverse events had they experienced at the hospital. And they cut this list of thousands of drug interactions down to 20. And they said, OK, those are the only ones we're going to alarm on. And then they threw that out when Epic came in. So now when I put in an order, I get a list of 10. And I just click them all. So that's the problem. And the threshold is going to be, so there's going to be an entire, I think there's going to be an entire methods development that's going to have to happen between figuring out where that threshold is and the fatigue from the alarms. Yes? I have two questions. One is about the shift between ICD-9 and ICD-9. How did you approach that? Because we talk about this in other contexts. And the other one is, how can you inform other countries regarding research done here? Because at the end of the day, it's a global health issue. And all those drug systems are different even between US and UK. So all the mapping you're doing here, how could that inform EHR work elsewhere? Yeah, so let me answer the first one. The second one is a work in progress. So ICD-10 came to the US on October 1, 2015. I remember. It hurt us all. So we actually don't have that much information on ICD-10 yet. But it's definitely impacted our work. So if you think about when Pete was pointing to the number of ICD counts for ICD-9, for those of you who don't know, ICD-9 was developed decades ago. ICD-10 maybe two decades ago. But what ICD-10 did was it added more granularity. So for rheumatoid arthritis, I mentioned it's a systemic chronic inflammatory joint disease. We used to have a code that said rheumatoid arthritis. In ICD-10, it now says rheumatoid arthritis."
+}

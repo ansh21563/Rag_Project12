@@ -1,0 +1,320 @@
+{
+    "chunks": [
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 0.0,
+            "end": 14.88,
+            "text": " So x are your covariates, t is your treatment decision.  And now I've drawn for you a slightly different graph.  Over here I said x goes to t, x and t go to y.  But now I don't have y.  Instead, I have y0 and y1."
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 14.88,
+            "end": 24.0,
+            "text": " I don't have any edge from t to them.  And that's because now I'm actually  using the potential outcomes notation.  y0 is a potential outcome of what  would have happened to this individual had"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 24.0,
+            "end": 31.92,
+            "text": " they received treatment 0.  And y1 is what would have happened to this individual  if they received treatment 1.  And because you already know what  treatment the individual has received,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 31.92,
+            "end": 41.24,
+            "text": " it doesn't make sense to talk about an edge  from t to those values.  That's why there's no edge there.  So then you might wonder, how could you possibly  have the violation of this conditional independence"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 41.24,
+            "end": 50.88,
+            "text": " assumption?  Well, before I give you that answer,  let me put some names to these things.  So we might think about x as being the age, gender, weight,  diet, and so on of the individual."
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 50.88,
+            "end": 64.48,
+            "text": " t might be a medication, like antihypertensive medication  to try to lower a patient's blood pressure.  And these would be the potential outcomes  after those two medications.  So an example of a violation of ignorability"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 64.48,
+            "end": 80.38,
+            "text": " is if there is something else, some hidden variable h,  which is not observed and which affects  both the decision of what treatment  the individual in your data set receives  and the potential outcomes."
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 80.38,
+            "end": 92.56,
+            "text": " And now it should be really clear  that this would be a violation of that conditional  independence assumption.  In this graph, y0 and y1 are not conditionally  independent of t given x."
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 92.56,
+            "end": 104.44,
+            "text": " All right, so what are these hidden confounders?  Well, they might be things, for example, which really  affect treatment decisions.  So maybe there's a treatment guideline  saying that for diabetic patients,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 104.44,
+            "end": 119.84,
+            "text": " they should receive treatment 0, that that's  the right thing to do.  And so a violation of this would be  if the fact that the patient's diabetic were not  recorded in the electronic health record."
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 119.84,
+            "end": 130.36,
+            "text": " So you don't know.  Like, that's not up there.  You don't know that, in fact, the reason the patient's  received treatment t was because of this h factor.  And it's critically another assumption,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 130.36,
+            "end": 143.44,
+            "text": " which is that h actually affects the outcomes, which  is why you have these edges from h to the y's.  If h were something which might have affected treatment  decision, but not the actual potential outcomes,  and that can happen, of course."
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 143.44,
+            "end": 160.28,
+            "text": " Things like gender can often affect treatment decisions,  but maybe for some diseases, might not affect outcomes.  In that situation, it wouldn't be a confounding factor  because it doesn't violate this assumption.  And in fact, one would be able to come up"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 160.28,
+            "end": 171.84,
+            "text": " with consistent estimators of average treatment effect  under that assumption.  Where things go to hell is when you have both of those edges.  All right?  So there can't be any of these edges."
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 171.84,
+            "end": 182.96,
+            "text": " You have to observe all things that affect  both treatment and outcomes.  The second big assumption.  Oh, yeah, question.  In practice, how good of a model is this?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 182.96,
+            "end": 192.4,
+            "text": " Of what I'm showing you here?  For hypertension?  Well, sure.  I have no idea.  But I think what you're really trying to get at here"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 192.4,
+            "end": 203.04,
+            "text": " and asking your question, how good of a model is this,  is, well, oh my god, how do I know  if I've observed everything?  Right?  All right, and that's where you need to start talking to domain"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 203.04,
+            "end": 219.04,
+            "text": " experts.  So this is the place where my starting place where I said,  no, I'm not going to attempt to fit the causal graph.  I'm going to assume I know the causal graph  and just try to estimate the effects."
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 219.04,
+            "end": 232.08,
+            "text": " That's where this starts to become really relevant.  Because if you notice, this is another causal graph, not  the one I drew in the board.  And so that's something where really talking with domain  experts would be relevant."
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 232.08,
+            "end": 250.54000000000002,
+            "text": " So if you say, OK, I'm going to be studying hypertension,  and this is the data I've observed on patients,  well, you can then go to a clinician, maybe a primary care  doctor who often treats patients with hypertension,  and you say, OK, what usually affects your treatment"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 250.54000000000002,
+            "end": 261.12,
+            "text": " decisions?  And you get a set of variables out,  and then you check to make sure, do I have all of those?  Or am I observing all of those variables,  at least variables that would also affect outcomes?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 261.12,
+            "end": 269.44,
+            "text": " And so often, there's going to be a back and forth  in that conversation to make sure that you've set up  your problem correctly.  And again, this is one area where  you see a critical difference between the way"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 269.44,
+            "end": 278.28,
+            "text": " that we do causal inference from the way  that we do machine learning.  Machine learning, if there's some unobserved variables,  so what?  I mean, maybe your predictive accuracy"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 278.28,
+            "end": 294.79999999999995,
+            "text": " isn't quite as good as it could have been, but whatever.  Here, your conclusions could be completely wrong  if you don't get those confounding factors right.  Now, in some of the optional readings for Thursday's  lecture, and we'll touch on it very briefly in Thursday,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 294.79999999999995,
+            "end": 308.15999999999997,
+            "text": " but there's not much time in this course,  I'll talk about ways, and you'll read about ways  to try to assess robustness to violations  of these assumptions.  And those go by the name of sensitivity analyses."
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 308.15999999999997,
+            "end": 325.44,
+            "text": " So for example, the type of question you might ask  is, how would my conclusions have changed  if there were a confounding factor which was Blas-strong?  And that's something that one could try to answer from data,  but is really starting to get beyond the scope"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 325.44,
+            "end": 337.36,
+            "text": " of this course.  So I'll give you some readings on it,  but I won't be able to talk about it in the lecture.  Now, the second major assumption that one needs  is what's known as common support."
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 337.36,
+            "end": 353.28,
+            "text": " And by the way, pay close attention here, because  at the end of today's lecture, and if I forget,  someone must remind me, I'm going  to ask you, where did these two assumptions come up  in the proof that I'm about to give you?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 353.28,
+            "end": 362.68,
+            "text": " The first one I'm going to give you dead getaway.  So I'm going to answer to you where ignorability comes up,  but it's up to you to figure out where does common support show  up.  So what is common support?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 362.68,
+            "end": 381.68,
+            "text": " Well, what common support says is  that there always must be some stochasticity in the treatment  decisions.  For example, if in your data patients only receive  treatment A and no patient received treatment B,"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 381.68,
+            "end": 399.84000000000003,
+            "text": " then you would never be able to figure out the counterfactual  of what would have happened if patients received treatment B.  But what happens if it's not quite that universal,  but maybe there's classes of people, some individuals X,  let's say people with blue hair, where people with blue hair"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 399.84,
+            "end": 416.47999999999996,
+            "text": " always receive treatment 0, and they never see treatment 1?  Well, for those people, if for some reason something  about them having blue hair was also  going to affect how they would respond to the treatment,  then you wouldn't be able to answer anything"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 416.47999999999996,
+            "end": 434.16,
+            "text": " about the counterfactual for those individuals.  This goes by the name of what's called a propensity score.  It's the probability of receiving some treatment  for each individual.  And we're going to assume that this propensity score is always"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 434.16,
+            "end": 448.0,
+            "text": " bounded between 0 and 1.  So it's between 1 minus epsilon and epsilon  for some small epsilon.  And violations of that assumption  are going to completely invalidate all conclusions"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 448.0,
+            "end": 463.08000000000004,
+            "text": " that we could draw from the data.  Now, in actual clinical practice,  you might wonder, can this ever hold?  Because there are clinical guidelines.  Well, a couple of places where you'll see this"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 463.08000000000004,
+            "end": 474.40000000000003,
+            "text": " are as follows.  First, often there are settings where  we haven't the faintest idea how to treat patients,  like second-line diabetes treatments.  You know that the first thing we start with is metformin."
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 474.40000000000003,
+            "end": 486.36,
+            "text": " But if metformin doesn't help control the patient's glucose  values, there are several second-line diabetic  treatments.  And right now, we don't really know which one to try.  So a clinician might start with treatments from one class."
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 486.36,
+            "end": 496.6,
+            "text": " And if that's not working, you try a different class,  and so on.  And it's a bit random which class you  start with for any one patient.  In other settings, there might be good clinical guidelines."
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 496.6,
+            "end": 513.76,
+            "text": " But there is randomness in other ways.  For example, clinicians who are trained on the West Coast  might be trained that this is the right way to do things.  And clinicians who are trained in the East Coast  might be trained that this is the right way to do things."
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 513.76,
+            "end": 528.96,
+            "text": " So even if any one clinician's treatment decisions  are deterministic in some way, you'll  see some stochasticity now across clinicians.  It's a bit subtle how to use that in your analyses.  But trust me, it can be done."
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 528.96,
+            "end": 545.5600000000001,
+            "text": " OK, so if you want to do causal inference  from observational data, you're going  to have to first start to formalize things mathematically  in terms of what is your x, what is your t, what is your y.  You have to think through, do these choices satisfy"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 545.5600000000001,
+            "end": 560.72,
+            "text": " these assumptions of ignorability and overlap?  Some of these things you can check in your data.  Ignorability you can't explicitly check in your data.  But overlap, this thing, you can test in your data.  By the way, how?"
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 560.72,
+            "end": 582.72,
+            "text": " Any idea?  Someone else who hasn't spoken today.  So just think back to the previous example.  You have this table, these x's, and treatment A or B,  and then sugar values."
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 582.72,
+            "end": 592.76,
+            "text": " How would you test this?  AUDIENCE 1 You'd use a frequentist approach  and just count how many things show up.  And if there is zero, then you could say that it's violated.  Good."
+        },
+        {
+            "number": "lec14",
+            "title": "part.004.mp3",
+            "start": 592.76,
+            "end": 600.4,
+            "text": " So you have this table.  Just go back to that table.  We have this table."
+        }
+    ],
+    "text": " So x are your covariates, t is your treatment decision. And now I've drawn for you a slightly different graph. Over here I said x goes to t, x and t go to y. But now I don't have y. Instead, I have y0 and y1. I don't have any edge from t to them. And that's because now I'm actually using the potential outcomes notation. y0 is a potential outcome of what would have happened to this individual had they received treatment 0. And y1 is what would have happened to this individual if they received treatment 1. And because you already know what treatment the individual has received, it doesn't make sense to talk about an edge from t to those values. That's why there's no edge there. So then you might wonder, how could you possibly have the violation of this conditional independence assumption? Well, before I give you that answer, let me put some names to these things. So we might think about x as being the age, gender, weight, diet, and so on of the individual. t might be a medication, like antihypertensive medication to try to lower a patient's blood pressure. And these would be the potential outcomes after those two medications. So an example of a violation of ignorability is if there is something else, some hidden variable h, which is not observed and which affects both the decision of what treatment the individual in your data set receives and the potential outcomes. And now it should be really clear that this would be a violation of that conditional independence assumption. In this graph, y0 and y1 are not conditionally independent of t given x. All right, so what are these hidden confounders? Well, they might be things, for example, which really affect treatment decisions. So maybe there's a treatment guideline saying that for diabetic patients, they should receive treatment 0, that that's the right thing to do. And so a violation of this would be if the fact that the patient's diabetic were not recorded in the electronic health record. So you don't know. Like, that's not up there. You don't know that, in fact, the reason the patient's received treatment t was because of this h factor. And it's critically another assumption, which is that h actually affects the outcomes, which is why you have these edges from h to the y's. If h were something which might have affected treatment decision, but not the actual potential outcomes, and that can happen, of course. Things like gender can often affect treatment decisions, but maybe for some diseases, might not affect outcomes. In that situation, it wouldn't be a confounding factor because it doesn't violate this assumption. And in fact, one would be able to come up with consistent estimators of average treatment effect under that assumption. Where things go to hell is when you have both of those edges. All right? So there can't be any of these edges. You have to observe all things that affect both treatment and outcomes. The second big assumption. Oh, yeah, question. In practice, how good of a model is this? Of what I'm showing you here? For hypertension? Well, sure. I have no idea. But I think what you're really trying to get at here and asking your question, how good of a model is this, is, well, oh my god, how do I know if I've observed everything? Right? All right, and that's where you need to start talking to domain experts. So this is the place where my starting place where I said, no, I'm not going to attempt to fit the causal graph. I'm going to assume I know the causal graph and just try to estimate the effects. That's where this starts to become really relevant. Because if you notice, this is another causal graph, not the one I drew in the board. And so that's something where really talking with domain experts would be relevant. So if you say, OK, I'm going to be studying hypertension, and this is the data I've observed on patients, well, you can then go to a clinician, maybe a primary care doctor who often treats patients with hypertension, and you say, OK, what usually affects your treatment decisions? And you get a set of variables out, and then you check to make sure, do I have all of those? Or am I observing all of those variables, at least variables that would also affect outcomes? And so often, there's going to be a back and forth in that conversation to make sure that you've set up your problem correctly. And again, this is one area where you see a critical difference between the way that we do causal inference from the way that we do machine learning. Machine learning, if there's some unobserved variables, so what? I mean, maybe your predictive accuracy isn't quite as good as it could have been, but whatever. Here, your conclusions could be completely wrong if you don't get those confounding factors right. Now, in some of the optional readings for Thursday's lecture, and we'll touch on it very briefly in Thursday, but there's not much time in this course, I'll talk about ways, and you'll read about ways to try to assess robustness to violations of these assumptions. And those go by the name of sensitivity analyses. So for example, the type of question you might ask is, how would my conclusions have changed if there were a confounding factor which was Blas-strong? And that's something that one could try to answer from data, but is really starting to get beyond the scope of this course. So I'll give you some readings on it, but I won't be able to talk about it in the lecture. Now, the second major assumption that one needs is what's known as common support. And by the way, pay close attention here, because at the end of today's lecture, and if I forget, someone must remind me, I'm going to ask you, where did these two assumptions come up in the proof that I'm about to give you? The first one I'm going to give you dead getaway. So I'm going to answer to you where ignorability comes up, but it's up to you to figure out where does common support show up. So what is common support? Well, what common support says is that there always must be some stochasticity in the treatment decisions. For example, if in your data patients only receive treatment A and no patient received treatment B, then you would never be able to figure out the counterfactual of what would have happened if patients received treatment B. But what happens if it's not quite that universal, but maybe there's classes of people, some individuals X, let's say people with blue hair, where people with blue hair always receive treatment 0, and they never see treatment 1? Well, for those people, if for some reason something about them having blue hair was also going to affect how they would respond to the treatment, then you wouldn't be able to answer anything about the counterfactual for those individuals. This goes by the name of what's called a propensity score. It's the probability of receiving some treatment for each individual. And we're going to assume that this propensity score is always bounded between 0 and 1. So it's between 1 minus epsilon and epsilon for some small epsilon. And violations of that assumption are going to completely invalidate all conclusions that we could draw from the data. Now, in actual clinical practice, you might wonder, can this ever hold? Because there are clinical guidelines. Well, a couple of places where you'll see this are as follows. First, often there are settings where we haven't the faintest idea how to treat patients, like second-line diabetes treatments. You know that the first thing we start with is metformin. But if metformin doesn't help control the patient's glucose values, there are several second-line diabetic treatments. And right now, we don't really know which one to try. So a clinician might start with treatments from one class. And if that's not working, you try a different class, and so on. And it's a bit random which class you start with for any one patient. In other settings, there might be good clinical guidelines. But there is randomness in other ways. For example, clinicians who are trained on the West Coast might be trained that this is the right way to do things. And clinicians who are trained in the East Coast might be trained that this is the right way to do things. So even if any one clinician's treatment decisions are deterministic in some way, you'll see some stochasticity now across clinicians. It's a bit subtle how to use that in your analyses. But trust me, it can be done. OK, so if you want to do causal inference from observational data, you're going to have to first start to formalize things mathematically in terms of what is your x, what is your t, what is your y. You have to think through, do these choices satisfy these assumptions of ignorability and overlap? Some of these things you can check in your data. Ignorability you can't explicitly check in your data. But overlap, this thing, you can test in your data. By the way, how? Any idea? Someone else who hasn't spoken today. So just think back to the previous example. You have this table, these x's, and treatment A or B, and then sugar values. How would you test this? AUDIENCE 1 You'd use a frequentist approach and just count how many things show up. And if there is zero, then you could say that it's violated. Good. So you have this table. Just go back to that table. We have this table."
+}

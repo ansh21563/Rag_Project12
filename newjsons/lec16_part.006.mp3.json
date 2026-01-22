@@ -1,0 +1,215 @@
+{
+    "chunks": [
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 0.0,
+            "end": 25.42,
+            "text": " I would say, is off policy, the one that we talked about this week, is off policy evaluation  or learning, in which case you observe health care records, for example, you observe registries,  you observe some data from the health care system where patients have already been treated  and you try to extract a good policy based on that information.  So that means that you see these transitions between a state and action in the next state"
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 25.42,
+            "end": 50.4,
+            "text": " and the reward, you see that based on what happened in the past and you have to figure  out a pattern there that helps you come up with a good action or a good policy.  So we'll focus on that one for now and I'll just end, the last part of this talk will  be about how we can, essentially what we have to be careful with when we learn with off  policy data."
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 50.4,
+            "end": 72.0,
+            "text": " Any questions up until this point?  Yep.  So when you get a data policy reference, are there any requirements that has to be met  by reference, like how we have accounts or other stuff from the cost of inference?  Yep, I'll get to that on the next set of slides."
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 72.0,
+            "end": 87.28,
+            "text": " I'll get to that on the next set of slides.  Yeah, thank you.  Any other questions about the Q-learning part?  A colleague of mine, Rahul, he said, or maybe he just paraphrased it from someone else,  but essentially you have to see RL 10 times before you get it or something to that effect."
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 87.28,
+            "end": 118.86,
+            "text": " I had the same experience, so hopefully you have questions for me after.  But I think what you should take from the last two sections, if not how to do Q-learning  in detail, because I lost over a lot of things, you should take with you the idea of dynamic  programming and figuring out how can I learn about what's good early on in my process from  what's good late, and the idea of moving towards a good state and not just arriving there immediately."
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 118.86,
+            "end": 135.5,
+            "text": " And there are many ways to think about that.  OK, we'll move into off policy learning.  And again, the setup here is that we receive trajectories of patient states, actions, and  results from some source.  We don't know what this source is necessarily."
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 135.5,
+            "end": 157.98000000000002,
+            "text": " Well, we probably know what the source is, but we don't know how these actions were performed,  i.e. we don't know what the policy was that generated these trajectories.  And this is the same setup as when you estimated causal effects last week to a large extent.  We say that the actions are drawn, again, according to some behavior policy unknown  to us, but we want to figure out what is the value of a new policy pi."
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 157.98,
+            "end": 179.1,
+            "text": " So what I showed you very early on, I wish I had that slide again, but essentially a  bunch of patient trajectories and some return, patient trajectories, some return, the average  of those is called the value.  If we have trajectories according to a certain policy, that is the value of that policy,  the average of these things."
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 179.1,
+            "end": 203.29999999999998,
+            "text": " But when we have trajectories according to one policy and want to figure out the value  of another one, that's the same problem as the covariate adjustment problem that you  had last week, essentially, or the confounding problem, essentially.  The trajectories that we draw are biased according to the policy of the clinician that created  them, and we want to figure out the value of a different policy."
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 203.29999999999998,
+            "end": 219.18,
+            "text": " So it's the same as the confounding problem from last time.  And because it is the same as the confounding problem from last time, we know that this  is at least as hard as doing that.  We have confounding.  I already alluded to variance issues, and you mentioned overlap or positivity as well."
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 219.18,
+            "end": 235.34,
+            "text": " And in fact, we need to make the same assumptions, but even stronger assumptions for this to  be possible.  These are sufficient conditions.  So under very certain circumstances, you don't need them.  But in the general case, well, I should say, these are fairly general assumptions that"
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 235.34,
+            "end": 243.46,
+            "text": " are still strict.  That's how I should put it.  So last time, we looked at something called strong ignorability.  I realize the text is pretty small here.  Can you see in the back?"
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 244.3,
+            "end": 265.32,
+            "text": " OK, great.  So strong ignorability said that the potential outcomes, y0 and y1, are conditionally independent  of the treatment T given the set of variables x or the variable x.  And that's saying that it doesn't matter if we know what treatment was given.  We can figure out just based on x what would happen under either treatment arm were we"
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 265.32,
+            "end": 291.12,
+            "text": " to treat this patient with T equals 0, T equals 1.  We had an idea of or an assumption of overlap, which says that any treatment could be observed  in any state or any context x.  And yeah, that's what that means.  And that is only to ensure that we can estimate at least a conditional average treatment effect"
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 291.12,
+            "end": 311.28000000000003,
+            "text": " at x.  And if we want to estimate the average treatment effect in a population, we would need to have  that for every x in that population.  So what happens in the sequential case is that we need even stronger assumptions.  There's some notation I haven't introduced here, and I apologize for that."
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 311.28000000000003,
+            "end": 330.66,
+            "text": " But there's a bar here over these s's and a's.  I don't know if you can see it.  That usually indicates in this literature that you're looking at the sequence up to  the index here.  So all the states up until T I've observed, and all the actions up until T minus 1."
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 330.66,
+            "end": 352.06,
+            "text": " Maybe this should, yeah, exactly, up until T minus 1.  So in order for the best policy to be identifiable or the value of a policy to be identifiable,  we need this strong condition.  So the return of a policy is independent of the current action given everything that happened  in the past."
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 352.06,
+            "end": 374.02,
+            "text": " This is weaker than the Markov assumption, to be clear, because there we said that anything  that happens in the future is conditionally independent given the current state.  So this is weaker, because we now just need to observe something in the history.  We need to observe all confounders in the history, in a sense.  We don't need to summarize them in s."
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 374.02,
+            "end": 391.94,
+            "text": " And we'll get back to this on the next slide.  Positivity is the real difficult one, though, because what we're saying is that at any point  in the trajectory, any action should be possible in order for us to estimate the value of any  possible policy.  And we know that that's not going to be true in practice."
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 391.94,
+            "end": 413.18,
+            "text": " We're not going to consider every possible action at every possible point in the health  care setting.  There's just no way.  So what that tells us is that we can't estimate the value of every possible policy.  We can only estimate the value of policies that are consistent with the support that"
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 413.18,
+            "end": 434.3,
+            "text": " we do have.  If we never see action four at time three, there's no way we can learn about a policy  that does that, that takes action four at time three.  That's what I'm trying to say.  So in some sense, this is stronger just because of how sequential settings work."
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 434.3,
+            "end": 453.3,
+            "text": " It's more about the application domain than anything, I would say.  In the next set of slides, we'll focus on sequential randomization or sequential ignorability,  as it's sometimes called.  And tomorrow, we'll talk a little bit about the statistics involved in or resulting from  the positivity assumption and things like importance weighting, et cetera."
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 453.3,
+            "end": 466.68,
+            "text": " Did I say tomorrow?  I meant Thursday.  So last recap on the potential outcome story.  This is a slide, I'm not sure if you showed this one, but it's one that we use in a lot  of talks."
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 466.68,
+            "end": 489.15999999999997,
+            "text": " And it, again, just serves to illustrate the idea of a one-time step decision.  So we have here Anna, a patient comes in.  She has high blood sugar and some other properties.  And we're debating whether to give her medication A or B. And to do that, we want to figure  out what would be her blood sugar under these different choices a few months down the line."
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 489.16,
+            "end": 506.56,
+            "text": " So I'm just using this here to introduce you to the patient Anna.  And we're going to talk about Anna a little bit more.  So treating Anna once, we can represent as this causal graph that you've seen a lot of  times now.  We had some treatment A. We had some state S and some outcome R. We want to figure out"
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 506.56,
+            "end": 533.8,
+            "text": " the effect of this A on the outcome R. Ignorability, in this case, just says that the potential  outcomes under each action A is conditionally independent of A given S.  And so we know that ignorability and overlap is sufficient conditions for identification  of this effect.  But what happens now if we add another time point?"
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 533.8,
+            "end": 559.72,
+            "text": " So in this case, if I have no extra errors here, I just have completely independent time  points, ignorability clearly still holds.  There's no links going from A to R. There's no from S to R, et cetera.  So ignorability is still fine.  If I somehow choose, or if Anna's health status in the future depends on the actions that"
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 559.72,
+            "end": 580.98,
+            "text": " I take now here, then I have to take, then the situation is a little bit different.  So this is now not completely independent actions that I make, but the actions here  influence the state in the future.  So we've seen this.  Again, this is a mark of decision process, as you've seen before."
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 580.98,
+            "end": 596.42,
+            "text": " And this is very likely.  This is very likely in practice.  Also, if Anna, for example, is diabetic, as we saw in the example that I mentioned, it's  likely that she will remain so.  So the previous state will influence the future state."
+        },
+        {
+            "number": "lec16",
+            "title": "part.006.mp3",
+            "start": 596.54,
+            "end": 600.5,
+            "text": " These things seem very reasonable, right?  But now I'm trying to argue about the future."
+        }
+    ],
+    "text": " I would say, is off policy, the one that we talked about this week, is off policy evaluation or learning, in which case you observe health care records, for example, you observe registries, you observe some data from the health care system where patients have already been treated and you try to extract a good policy based on that information. So that means that you see these transitions between a state and action in the next state and the reward, you see that based on what happened in the past and you have to figure out a pattern there that helps you come up with a good action or a good policy. So we'll focus on that one for now and I'll just end, the last part of this talk will be about how we can, essentially what we have to be careful with when we learn with off policy data. Any questions up until this point? Yep. So when you get a data policy reference, are there any requirements that has to be met by reference, like how we have accounts or other stuff from the cost of inference? Yep, I'll get to that on the next set of slides. I'll get to that on the next set of slides. Yeah, thank you. Any other questions about the Q-learning part? A colleague of mine, Rahul, he said, or maybe he just paraphrased it from someone else, but essentially you have to see RL 10 times before you get it or something to that effect. I had the same experience, so hopefully you have questions for me after. But I think what you should take from the last two sections, if not how to do Q-learning in detail, because I lost over a lot of things, you should take with you the idea of dynamic programming and figuring out how can I learn about what's good early on in my process from what's good late, and the idea of moving towards a good state and not just arriving there immediately. And there are many ways to think about that. OK, we'll move into off policy learning. And again, the setup here is that we receive trajectories of patient states, actions, and results from some source. We don't know what this source is necessarily. Well, we probably know what the source is, but we don't know how these actions were performed, i.e. we don't know what the policy was that generated these trajectories. And this is the same setup as when you estimated causal effects last week to a large extent. We say that the actions are drawn, again, according to some behavior policy unknown to us, but we want to figure out what is the value of a new policy pi. So what I showed you very early on, I wish I had that slide again, but essentially a bunch of patient trajectories and some return, patient trajectories, some return, the average of those is called the value. If we have trajectories according to a certain policy, that is the value of that policy, the average of these things. But when we have trajectories according to one policy and want to figure out the value of another one, that's the same problem as the covariate adjustment problem that you had last week, essentially, or the confounding problem, essentially. The trajectories that we draw are biased according to the policy of the clinician that created them, and we want to figure out the value of a different policy. So it's the same as the confounding problem from last time. And because it is the same as the confounding problem from last time, we know that this is at least as hard as doing that. We have confounding. I already alluded to variance issues, and you mentioned overlap or positivity as well. And in fact, we need to make the same assumptions, but even stronger assumptions for this to be possible. These are sufficient conditions. So under very certain circumstances, you don't need them. But in the general case, well, I should say, these are fairly general assumptions that are still strict. That's how I should put it. So last time, we looked at something called strong ignorability. I realize the text is pretty small here. Can you see in the back? OK, great. So strong ignorability said that the potential outcomes, y0 and y1, are conditionally independent of the treatment T given the set of variables x or the variable x. And that's saying that it doesn't matter if we know what treatment was given. We can figure out just based on x what would happen under either treatment arm were we to treat this patient with T equals 0, T equals 1. We had an idea of or an assumption of overlap, which says that any treatment could be observed in any state or any context x. And yeah, that's what that means. And that is only to ensure that we can estimate at least a conditional average treatment effect at x. And if we want to estimate the average treatment effect in a population, we would need to have that for every x in that population. So what happens in the sequential case is that we need even stronger assumptions. There's some notation I haven't introduced here, and I apologize for that. But there's a bar here over these s's and a's. I don't know if you can see it. That usually indicates in this literature that you're looking at the sequence up to the index here. So all the states up until T I've observed, and all the actions up until T minus 1. Maybe this should, yeah, exactly, up until T minus 1. So in order for the best policy to be identifiable or the value of a policy to be identifiable, we need this strong condition. So the return of a policy is independent of the current action given everything that happened in the past. This is weaker than the Markov assumption, to be clear, because there we said that anything that happens in the future is conditionally independent given the current state. So this is weaker, because we now just need to observe something in the history. We need to observe all confounders in the history, in a sense. We don't need to summarize them in s. And we'll get back to this on the next slide. Positivity is the real difficult one, though, because what we're saying is that at any point in the trajectory, any action should be possible in order for us to estimate the value of any possible policy. And we know that that's not going to be true in practice. We're not going to consider every possible action at every possible point in the health care setting. There's just no way. So what that tells us is that we can't estimate the value of every possible policy. We can only estimate the value of policies that are consistent with the support that we do have. If we never see action four at time three, there's no way we can learn about a policy that does that, that takes action four at time three. That's what I'm trying to say. So in some sense, this is stronger just because of how sequential settings work. It's more about the application domain than anything, I would say. In the next set of slides, we'll focus on sequential randomization or sequential ignorability, as it's sometimes called. And tomorrow, we'll talk a little bit about the statistics involved in or resulting from the positivity assumption and things like importance weighting, et cetera. Did I say tomorrow? I meant Thursday. So last recap on the potential outcome story. This is a slide, I'm not sure if you showed this one, but it's one that we use in a lot of talks. And it, again, just serves to illustrate the idea of a one-time step decision. So we have here Anna, a patient comes in. She has high blood sugar and some other properties. And we're debating whether to give her medication A or B. And to do that, we want to figure out what would be her blood sugar under these different choices a few months down the line. So I'm just using this here to introduce you to the patient Anna. And we're going to talk about Anna a little bit more. So treating Anna once, we can represent as this causal graph that you've seen a lot of times now. We had some treatment A. We had some state S and some outcome R. We want to figure out the effect of this A on the outcome R. Ignorability, in this case, just says that the potential outcomes under each action A is conditionally independent of A given S. And so we know that ignorability and overlap is sufficient conditions for identification of this effect. But what happens now if we add another time point? So in this case, if I have no extra errors here, I just have completely independent time points, ignorability clearly still holds. There's no links going from A to R. There's no from S to R, et cetera. So ignorability is still fine. If I somehow choose, or if Anna's health status in the future depends on the actions that I take now here, then I have to take, then the situation is a little bit different. So this is now not completely independent actions that I make, but the actions here influence the state in the future. So we've seen this. Again, this is a mark of decision process, as you've seen before. And this is very likely. This is very likely in practice. Also, if Anna, for example, is diabetic, as we saw in the example that I mentioned, it's likely that she will remain so. So the previous state will influence the future state. These things seem very reasonable, right? But now I'm trying to argue about the future."
+}

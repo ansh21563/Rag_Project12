@@ -1,0 +1,355 @@
+{
+    "chunks": [
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 0.0,
+            "end": 12.72,
+            "text": " And then we just ask, did we actually effectively create  two different groups of patients whose survival distribution  is significantly different?  So what this p-value is telling you  is the probability that these two curves come"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 12.72,
+            "end": 23.6,
+            "text": " from the same underlying distribution,  or that there's no difference between these two  curves across all of the time points.  And what we see here is there seems  to be a difference between the black line versus the red line,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 23.6,
+            "end": 37.0,
+            "text": " where, say, 10 years, the probability of survival  is about 80% in the low-risk group  and more like 60% in the high-risk group.  And overall, the p-value is very small  for there being a difference between those two curves."
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 37.0,
+            "end": 47.68,
+            "text": " So that's sort of like what a successful type Kaplan-Meier  plot would look like if you're trying to create a model that  separates patients into groups with different survival  distributions.  And then it's always important for these types of things"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 47.68,
+            "end": 61.32,
+            "text": " to try them on multiple data sets.  And here we show the same model applied to a different data  set showed pretty similar overall effectiveness  at stratifying patients into two groups.  So why do you think doing this might be useful?"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 61.32,
+            "end": 72.08,
+            "text": " I guess, yeah, anyone?  Because there's actually, I think, this type of curve  is often confused with one that actually is extremely useful,  which I would say, yeah.  Why don't you wait?"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 72.08,
+            "end": 86.12,
+            "text": " Sure.  Don't be shy.  You can call them for anything.  All right.  Probably, you use this to sort of bend the patients."
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 86.12,
+            "end": 95.44,
+            "text": " Patients who have high risk, probably at five years  if a patient has high risk, probably  can actually do a repeated follow-up.  Right, exactly.  Yeah."
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 95.44,
+            "end": 114.56,
+            "text": " Yep, so that would be a great use.  So it was saying if you know someone's  at a high risk of having an event prior to five years,  an event is when the curve goes down.  So definitely, the red group is at almost double or something"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 114.56,
+            "end": 125.4,
+            "text": " the risk of the black group.  So if you have certain interventions  you can do to help prevent these things,  such as giving an additional treatment  or giving more frequent monitoring for recurrence,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 125.4,
+            "end": 136.4,
+            "text": " like if you can do a follow-up scan in a month versus six  months, you could make that decision in a data-driven way  by knowing whether the patient's on the red curve  or the black curve.  So yeah, exactly right."
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 136.4,
+            "end": 144.48,
+            "text": " It helps you to make therapeutic decisions  when there's a bunch of things you can do,  either give more aggressive treatment  or do more aggressive monitoring of disease  depending on is it an aggressive disease"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 144.48,
+            "end": 155.76,
+            "text": " or a non-aggressive disease.  The other type of curve that I think often gets  confused with these that's quite useful  is one that directly tests that intervention.  So essentially, you could do a trial"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 155.76,
+            "end": 168.74,
+            "text": " of the usefulness, the clinical utility of this algorithm,  where on the one hand, you make the prediction on everyone  and don't do anything differently.  And then the other one is you make a prediction  on the patients and you actually use it"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 168.74,
+            "end": 180.0,
+            "text": " to make a decision, like more frequent treatment  or more frequent intervention.  And then you could do a curve saying,  among the high-risk patients where we actually acted on it,  that's black."
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 180.0,
+            "end": 193.56,
+            "text": " And if we didn't act on it, it's red.  And then if you do the experiment in the right way,  you can make the inference that you're actually  preventing death by 50% if the intervention is  causing black versus red."
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 193.56,
+            "end": 204.44,
+            "text": " Here, we're not doing anything with causality.  We're just observing how patients  do differently over time.  But frequently, you see these as the key figure  for a randomized controlled trial, where"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 204.44,
+            "end": 213.95999999999998,
+            "text": " the only thing different between the groups of patients  is the intervention.  And that really makes you make a powerful inference that  changes what care should be.  This one, you're just like, OK, maybe we"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 213.95999999999998,
+            "end": 221.92,
+            "text": " should do something differently, but not really sure.  But it makes intuitive sense.  But if you actually have something  from a randomized controlled trial or something else  that allows you to infer causality,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 221.92,
+            "end": 236.16,
+            "text": " this is the most important figure.  And you can actually infer how many lives are being saved  or things by doing something.  But this one's not about intervention.  It's just about observing how patients do over time."
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 236.16,
+            "end": 247.23999999999998,
+            "text": " So that was some of the work from eight years ago.  And none of this has really changed in practice.  Everyone is still using glass slides and microscopes  in the clinic.  Research is a totally different story."
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 247.23999999999998,
+            "end": 260.48,
+            "text": " But still, like 99% of clinic is using  these old-fashioned technologies, microscopes  from technology breakthroughs in the mid-1800s,  staining breakthroughs in the late 1800s.  Like the H&E stain is the key stain."
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 260.48,
+            "end": 273.76,
+            "text": " So aspects of pathology haven't moved forward at all.  And this has pretty significant consequences.  And here's just a couple of types  of figures that really allow you to see the primary data for what  a problem inter-observer variability really"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 273.76,
+            "end": 286.92,
+            "text": " is in clinical practice.  And this is just another, I think, really nice empirical way  of viewing raw data, where there's a ground truth  consensus of experts who sort of decided  what all of these 70 or so cases"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 286.92,
+            "end": 297.36,
+            "text": " were through experts always knowing the right answer.  And for all of these 70, called them  all the category of atypia, which  here is indicated in yellow.  And then they took all of these 70 cases"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 297.36,
+            "end": 307.04,
+            "text": " that the experts said were atypia  and sent them to hundreds of pathologists  across the country.  And for each one, just plotted the distribution  of different diagnoses they were receiving."
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 307.04,
+            "end": 316.5,
+            "text": " And quite strikingly, and this was  published in JAMA, a great journal,  about four years ago now, they show  this incredible distribution of different diagnoses  among each case."
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 316.5,
+            "end": 326.84,
+            "text": " So this is really why you might want a computational approach.  There should be the same color.  This should just be one big color or maybe a few outliers.  But for almost any case, there's a significant proportion  of people calling it normal, which"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 326.84,
+            "end": 339.74,
+            "text": " is yellow, or sorry, tan, then atypical, which is yellow,  and then actually cancer, which is orange or red.  What does atypical mean?  Yeah, so atypical is this border area  between totally normal and cancer,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 339.74,
+            "end": 352.06,
+            "text": " where the pathologist is saying it's not,  and which is actually the most important diagnosis,  because totally normal you do nothing, cancer,  there's well-described protocols for what to do.  Atypia, they often over-treat."
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 352.06,
+            "end": 362.90000000000003,
+            "text": " And that's sort of the bias in medicine,  is always assume the worst.  We get a certain diagnosis back.  So atypia has nuclear features of cancer,  but it doesn't fully maybe get seven of the 10 criteria"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 362.90000000000003,
+            "end": 373.74,
+            "text": " or three of the five criteria.  And it has to do with nuclei looking a little bigger  and a little weirder than expected,  but not enough where the pathologist feels  comfortable calling it cancer."
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 373.74,
+            "end": 384.36,
+            "text": " And that's part of the reason that that shows almost a coin  flip.  Of the ones the experts called atypia,  only 48% of it was agreed with in the community.  The other interesting thing the study"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 384.36,
+            "end": 397.46,
+            "text": " showed was intra-observer variability  is just as big of an issue as inter-observer.  So a person disagrees with themselves  eight months after an eight-month watch out period,  pretty much as often as they disagree with others."
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 397.46,
+            "end": 411.34,
+            "text": " So another reason why computational approaches would  be valuable and why this really is a problem,  and this is in breast biopsies, the same research group  showed quite similar results.  This was in British Medical Journal in skin biopsies,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 411.34,
+            "end": 424.62,
+            "text": " which is another super important area where, again, they  have the same type of visualization of data.  They have five different classes of severity of skin lesions,  ranging from a totally normal benign nevus,  like I'm sure many of us have on our skin,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 424.62,
+            "end": 438.74,
+            "text": " to a melanoma, which is a serious malignant cancer that  needs to be treated as soon as possible.  And here, the white color is totally benign.  The darker blue color is melanoma.  And again, they show lots of discordance,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 438.74,
+            "end": 453.22,
+            "text": " pretty much as bad as in the breast biopsies.  And here again, the intra-observer variability  within eight-month watch out period was about 33%.  So people disagreed with themselves one out of three  times."
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 453.22,
+            "end": 467.70000000000005,
+            "text": " And then these aren't totally outlier cases  or one research group.  The College of American Pathologists  did a big summary of 116 studies and showed overall  an 18.3% median discrepancy rate across all the studies"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 467.70000000000005,
+            "end": 480.02000000000004,
+            "text": " and a 6% major discrepancy rate, which  would be like a major clinical decision is the wrong one,  like surgery, no surgery, et cetera.  And those in the ballpark agree with the previously published  findings."
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 480.02000000000004,
+            "end": 491.5,
+            "text": " So a lot of reasons to be pessimistic,  but one reason to be very optimistic  is the one area where AI is not the winner.  Maybe one of two or three areas where AI is not total hype  is vision."
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 491.5,
+            "end": 503.5,
+            "text": " Like vision really started working well,  as I don't know if you've covered in this class,  but with deep convolutional neural nets in 2012.  And then all the groups just kept  getting incrementally better year over year."
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 503.5,
+            "end": 513.78,
+            "text": " And now this is like an old graph from 2015,  but there's been a huge development of methods  even since 2015 where now I think  we really understand the strengths and the weaknesses  of these approaches."
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 513.78,
+            "end": 525.9,
+            "text": " And pathology sort of has a lot of the strengths,  which is super well-defined, very focused questions.  And I think there's lots of failures  whenever you try to do anything more general.  But for the types of tasks where you know exactly what you're"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 525.9,
+            "end": 538.5,
+            "text": " looking for and you have that can generate the training data,  these systems can work really well.  So that's a lot of what we're focused on at PathAI  is how do we extract the most information out  of pathology images, really doing two things."
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 538.5,
+            "end": 551.5,
+            "text": " One is understanding what's inside the images.  The second is using deep learning  to sort of directly try to infer patient level phenotypes  and outcomes directly from the images.  And we use both traditional machine learning models"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 551.5,
+            "end": 567.9,
+            "text": " for certain things, like particularly making inference  at the patient level where n is often very small.  But anything that's directly operating on the image  is almost some variant always of deep convolutional neural nets,  which really are the state of the art for image processing."
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 567.9,
+            "end": 580.8199999999999,
+            "text": " And we sort of, a lot of what we think about at PathAI,  and I think what's really important in this area of ML  for medicine is generating the right data set  and then using things like deep learning  to optimize all of the features in a data-driven way,"
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 580.8199999999999,
+            "end": 592.5799999999999,
+            "text": " and then really thinking about how  to use the outputs of these models intelligently  and really validate them in a robust way,  because there's many ways to be fooled by artifacts  and other things."
+        },
+        {
+            "number": "lec12",
+            "title": "part.001.mp3",
+            "start": 592.5799999999999,
+            "end": 601.62,
+            "text": " So just some of the, not to belabor the points,  but why these approaches are really, really  valuable in this application is it allows you to exhaustively  analyze."
+        }
+    ],
+    "text": " And then we just ask, did we actually effectively create two different groups of patients whose survival distribution is significantly different? So what this p-value is telling you is the probability that these two curves come from the same underlying distribution, or that there's no difference between these two curves across all of the time points. And what we see here is there seems to be a difference between the black line versus the red line, where, say, 10 years, the probability of survival is about 80% in the low-risk group and more like 60% in the high-risk group. And overall, the p-value is very small for there being a difference between those two curves. So that's sort of like what a successful type Kaplan-Meier plot would look like if you're trying to create a model that separates patients into groups with different survival distributions. And then it's always important for these types of things to try them on multiple data sets. And here we show the same model applied to a different data set showed pretty similar overall effectiveness at stratifying patients into two groups. So why do you think doing this might be useful? I guess, yeah, anyone? Because there's actually, I think, this type of curve is often confused with one that actually is extremely useful, which I would say, yeah. Why don't you wait? Sure. Don't be shy. You can call them for anything. All right. Probably, you use this to sort of bend the patients. Patients who have high risk, probably at five years if a patient has high risk, probably can actually do a repeated follow-up. Right, exactly. Yeah. Yep, so that would be a great use. So it was saying if you know someone's at a high risk of having an event prior to five years, an event is when the curve goes down. So definitely, the red group is at almost double or something the risk of the black group. So if you have certain interventions you can do to help prevent these things, such as giving an additional treatment or giving more frequent monitoring for recurrence, like if you can do a follow-up scan in a month versus six months, you could make that decision in a data-driven way by knowing whether the patient's on the red curve or the black curve. So yeah, exactly right. It helps you to make therapeutic decisions when there's a bunch of things you can do, either give more aggressive treatment or do more aggressive monitoring of disease depending on is it an aggressive disease or a non-aggressive disease. The other type of curve that I think often gets confused with these that's quite useful is one that directly tests that intervention. So essentially, you could do a trial of the usefulness, the clinical utility of this algorithm, where on the one hand, you make the prediction on everyone and don't do anything differently. And then the other one is you make a prediction on the patients and you actually use it to make a decision, like more frequent treatment or more frequent intervention. And then you could do a curve saying, among the high-risk patients where we actually acted on it, that's black. And if we didn't act on it, it's red. And then if you do the experiment in the right way, you can make the inference that you're actually preventing death by 50% if the intervention is causing black versus red. Here, we're not doing anything with causality. We're just observing how patients do differently over time. But frequently, you see these as the key figure for a randomized controlled trial, where the only thing different between the groups of patients is the intervention. And that really makes you make a powerful inference that changes what care should be. This one, you're just like, OK, maybe we should do something differently, but not really sure. But it makes intuitive sense. But if you actually have something from a randomized controlled trial or something else that allows you to infer causality, this is the most important figure. And you can actually infer how many lives are being saved or things by doing something. But this one's not about intervention. It's just about observing how patients do over time. So that was some of the work from eight years ago. And none of this has really changed in practice. Everyone is still using glass slides and microscopes in the clinic. Research is a totally different story. But still, like 99% of clinic is using these old-fashioned technologies, microscopes from technology breakthroughs in the mid-1800s, staining breakthroughs in the late 1800s. Like the H&E stain is the key stain. So aspects of pathology haven't moved forward at all. And this has pretty significant consequences. And here's just a couple of types of figures that really allow you to see the primary data for what a problem inter-observer variability really is in clinical practice. And this is just another, I think, really nice empirical way of viewing raw data, where there's a ground truth consensus of experts who sort of decided what all of these 70 or so cases were through experts always knowing the right answer. And for all of these 70, called them all the category of atypia, which here is indicated in yellow. And then they took all of these 70 cases that the experts said were atypia and sent them to hundreds of pathologists across the country. And for each one, just plotted the distribution of different diagnoses they were receiving. And quite strikingly, and this was published in JAMA, a great journal, about four years ago now, they show this incredible distribution of different diagnoses among each case. So this is really why you might want a computational approach. There should be the same color. This should just be one big color or maybe a few outliers. But for almost any case, there's a significant proportion of people calling it normal, which is yellow, or sorry, tan, then atypical, which is yellow, and then actually cancer, which is orange or red. What does atypical mean? Yeah, so atypical is this border area between totally normal and cancer, where the pathologist is saying it's not, and which is actually the most important diagnosis, because totally normal you do nothing, cancer, there's well-described protocols for what to do. Atypia, they often over-treat. And that's sort of the bias in medicine, is always assume the worst. We get a certain diagnosis back. So atypia has nuclear features of cancer, but it doesn't fully maybe get seven of the 10 criteria or three of the five criteria. And it has to do with nuclei looking a little bigger and a little weirder than expected, but not enough where the pathologist feels comfortable calling it cancer. And that's part of the reason that that shows almost a coin flip. Of the ones the experts called atypia, only 48% of it was agreed with in the community. The other interesting thing the study showed was intra-observer variability is just as big of an issue as inter-observer. So a person disagrees with themselves eight months after an eight-month watch out period, pretty much as often as they disagree with others. So another reason why computational approaches would be valuable and why this really is a problem, and this is in breast biopsies, the same research group showed quite similar results. This was in British Medical Journal in skin biopsies, which is another super important area where, again, they have the same type of visualization of data. They have five different classes of severity of skin lesions, ranging from a totally normal benign nevus, like I'm sure many of us have on our skin, to a melanoma, which is a serious malignant cancer that needs to be treated as soon as possible. And here, the white color is totally benign. The darker blue color is melanoma. And again, they show lots of discordance, pretty much as bad as in the breast biopsies. And here again, the intra-observer variability within eight-month watch out period was about 33%. So people disagreed with themselves one out of three times. And then these aren't totally outlier cases or one research group. The College of American Pathologists did a big summary of 116 studies and showed overall an 18.3% median discrepancy rate across all the studies and a 6% major discrepancy rate, which would be like a major clinical decision is the wrong one, like surgery, no surgery, et cetera. And those in the ballpark agree with the previously published findings. So a lot of reasons to be pessimistic, but one reason to be very optimistic is the one area where AI is not the winner. Maybe one of two or three areas where AI is not total hype is vision. Like vision really started working well, as I don't know if you've covered in this class, but with deep convolutional neural nets in 2012. And then all the groups just kept getting incrementally better year over year. And now this is like an old graph from 2015, but there's been a huge development of methods even since 2015 where now I think we really understand the strengths and the weaknesses of these approaches. And pathology sort of has a lot of the strengths, which is super well-defined, very focused questions. And I think there's lots of failures whenever you try to do anything more general. But for the types of tasks where you know exactly what you're looking for and you have that can generate the training data, these systems can work really well. So that's a lot of what we're focused on at PathAI is how do we extract the most information out of pathology images, really doing two things. One is understanding what's inside the images. The second is using deep learning to sort of directly try to infer patient level phenotypes and outcomes directly from the images. And we use both traditional machine learning models for certain things, like particularly making inference at the patient level where n is often very small. But anything that's directly operating on the image is almost some variant always of deep convolutional neural nets, which really are the state of the art for image processing. And we sort of, a lot of what we think about at PathAI, and I think what's really important in this area of ML for medicine is generating the right data set and then using things like deep learning to optimize all of the features in a data-driven way, and then really thinking about how to use the outputs of these models intelligently and really validate them in a robust way, because there's many ways to be fooled by artifacts and other things. So just some of the, not to belabor the points, but why these approaches are really, really valuable in this application is it allows you to exhaustively analyze."
+}

@@ -1,0 +1,320 @@
+{
+    "chunks": [
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 0.0,
+            "end": 15.92,
+            "text": " because you're addicted to opioids and hospital admissions  because you have chronic complex bipolar schizophrenia.  So we wanted to first understand,  well, where is the greatest cost?  What types of things are happening most frequently?"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 15.92,
+            "end": 30.439999999999998,
+            "text": " And then you want to have the clinical team tell you,  well, these are the types of resources we have.  We have people that can address these issues,  or we have interventions designed to solve these problems.  And so you bring together,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 30.439999999999998,
+            "end": 45.519999999999996,
+            "text": " where is the greatest possible return on your investment  from both a data standpoint, a financial standpoint,  but also, and we can do something about it.  After you do that, it's only then,  after you have full agreement from executive teams"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 45.519999999999996,
+            "end": 55.92,
+            "text": " that this is the very narrow thing  that we think we can address,  then we begin to apply machine learning  to try to solve the problem.  So what did that funnel lead to?"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 55.92,
+            "end": 71.36,
+            "text": " What did you decide was the thing to address?  It was try to reduce inpatient psychiatric admissions.  And even then, the traditional way of reducing admissions,  just because it came out of this tradition  of 30-day readmissions,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 72.2,
+            "end": 84.24000000000001,
+            "text": " the traditional way of doing this  has always been thought of in terms of 30 days out.  But when we interviewed the teams,  they said, actually, for this particular condition,  it takes us more like 90 days to be able to have an impact."
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 84.83999999999999,
+            "end": 99.83999999999999,
+            "text": " And so that clinical understanding  mixed with what we have the resources to address,  that's what steers, then, the application  of machine learning to solve a specific problem.  Okay, so psychiatric inpatient admissions."
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 99.83999999999999,
+            "end": 110.67999999999999,
+            "text": " So these are patients who come to the ER  for some psychiatric-related problem,  and then when they're in the ER,  they're admitted to the hospital,  they're in the hospital for anywhere"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 110.67999999999999,
+            "end": 118.88000000000001,
+            "text": " from a day to a few days,  and you wanna find when are those gonna happen  in the future.  Yeah, and it could.  What type of data is useful for that?"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 118.88000000000001,
+            "end": 127.16,
+            "text": " Sure, and you don't have to just get through the ED,  though, that's the most common.  Any unplanned acute admission.  Got it.  So what kind of data is most useful for predicting that?"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 127.16,
+            "end": 141.92000000000002,
+            "text": " Yeah, so every, I think, a philosophy  that you all should take is whatever data you have  should be your competitive advantage  in solving the problem.  And that's different than the way this has been done"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 141.92,
+            "end": 154.88,
+            "text": " where folks are, they have made an algorithm somewhere else  and then they're coming and telling you,  hey, as long as you have claims data,  then plug in my variables and I can help you.  Our approach, and this is sort of derived"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 154.88,
+            "end": 168.79999999999998,
+            "text": " from my interest from the start in solving the problem  and trying to make the tools work faster,  our approach is whatever data you have,  we will bring it in and consider it.  What ultimately then wins is dependent on the problem,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 168.79999999999998,
+            "end": 178.84,
+            "text": " but you would not be surprised to learn  that there is some value in claims data.  But there's a lot of value, you put labs up,  there's a lot of value in labs.  When it comes to behavioral health,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 178.84,
+            "end": 194.4,
+            "text": " and this is where you really have to understand healthcare,  it's incredibly underdiagnosed.  There's a stigma attached to carrying diagnosis codes  that would describe you as having mental health challenges.  And so claims alone is not sufficient for that reason."
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 195.72,
+            "end": 208.35999999999999,
+            "text": " We find a lot of lift from care management.  So when you have a care manager,  that care manager is assessing you  and you're filling out forms and surveying you  and giving you different types of functional assessments"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 208.35999999999999,
+            "end": 223.16,
+            "text": " or activities of daily living assessments.  That data turns out to be very powerful.  And then a dark horse that most people aren't used to using,  we get a lot of lift out of the clinicians,  whether it's psychiatrists or care managers' notes."
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 223.16,
+            "end": 240.2,
+            "text": " So there's value in the written descriptions  of a nurse's or a care manager's impressions  of what's wrong, what has been done,  what hasn't been done, and so on.  So tell me a bit about the development process."
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 240.2,
+            "end": 253.96,
+            "text": " So you figure out what you wanna predict.  You at least have that in words.  You have your data in one place, then what?  Yeah.  Well, I mean, you wouldn't be surprised."
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 253.96,
+            "end": 265.28000000000003,
+            "text": " The very first thing we do is just try to throw  a logistic regression at it to see what,  we want the data, we want the story to make sense  to begin with, and we're always looking  for the simplest solution to the problem."
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 265.28000000000003,
+            "end": 275.92,
+            "text": " Then the team sort of iterates back and forth  through, well, based on how this data looks,  let's, and the characteristics of it,  the density, the sparsity,  based on what we understand about this data,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 275.92,
+            "end": 288.88,
+            "text": " these guys are in and out of the plan,  so we may have issues with data not existing  in the time windows that you described.  Then they're working their way through algorithms  and feature selection approaches that seem to fit"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 288.88,
+            "end": 296.8,
+            "text": " for the data that we have.  But what error metrics do you optimize for?  Well, you're gonna have to ask them.  It's been too long.  Okay."
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 296.8,
+            "end": 311.76,
+            "text": " I'm 10 years out of being allowed to write code.  But yeah, so, and then it's an iterative process  where we have to be, this is a big deal,  we have to be able to translate what,  we do positive predictive value, obviously,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 311.76,
+            "end": 323.40000000000003,
+            "text": " and I like the way you described that  because a lot of folks that have been trained  in statistics for medicine,  whether it's epidemiology or the like,  are always looking for an R squared or area under ROC,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 323.40000000000003,
+            "end": 339.16,
+            "text": " and we have to help them understand that in order,  that you can only care for so many people,  so you don't really care what the area under ROC is  for a population of, you know, for this client, 300,000  in the one plan that we were serving."
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 339.16,
+            "end": 352.38,
+            "text": " You really care about for the top 100 or 200,  and really that number should be derived  based on your capacity.  So if I can give you seven out of 10 for 100,  you might go knock on their door,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 352.38,
+            "end": 366.16,
+            "text": " but for, let's say, between 1,000 and 2,000,  that number goes down to four out of 10,  maybe you should go with a less expensive intervention.  Huge education component, helping people understand  what they're seeing and how to interpret it,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 366.16,
+            "end": 381.96,
+            "text": " and helping them connect it back  to what they're going to do with it.  And then I think you're probably, in courses to follow,  you'll go into all the challenges  with interpretability and the like, but they all exist."
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 382.12,
+            "end": 397.12,
+            "text": " So tell me a bit about how it's deployed.  So once you build a model,  how do you get your client to start using it?  Yeah, so you don't start getting them ready  when the model's ready."
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 397.12,
+            "end": 411.64000000000004,
+            "text": " I've learned the hard way that that's far too late  to involve them in the process.  And in fact, the one bullet you had up here  that I didn't completely agree with  was this idea that these approaches"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 411.64000000000004,
+            "end": 427.34000000000003,
+            "text": " are easier to plug into a workflow.  Putting a number into an electronic health record  may be easier, but when I think workflow,  it's not just that the number appears at the right time,  it's the culture of getting, put it this way,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 427.34,
+            "end": 441.34,
+            "text": " these care managers have spent the last 20, 30 years  learning who needs their help,  and everything about their training and their experience  is to care for the people that are most acute.  All of the red flags are going off,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 441.34,
+            "end": 457.14,
+            "text": " and here comes a bunch of nerds and computer science people  that are suggesting that no,  rather than your intuition and experience of 30 years,  you should trust what a computer says to do.  So there are two parts I want to understand better."
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 457.97999999999996,
+            "end": 472.02,
+            "text": " First, how you deal with that problem,  and second, I actually am curious about  the technical details.  Do you give them predictions on a piece of paper?  Do you use APIs?"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 472.02,
+            "end": 480.2,
+            "text": " Yeah, yeah.  All right, so let me answer the technical one first,  because it's a faster answer.  You remember at the beginning of this,  I said healthcare is pretty immature"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 480.2,
+            "end": 492.34,
+            "text": " from a technical standpoint.  So we have, it's never a piece of paper,  but it can be an Excel spreadsheet  delivered via secure FTP once a month,  because that's all they're able to take right now"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 492.34,
+            "end": 505.5,
+            "text": " based on their state of affairs.  It can be a real-time call to an API.  What we learned to do in forming a company  serving healthcare is do not create a new interface,  do not create a new login,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 505.5,
+            "end": 518.86,
+            "text": " accommodate whatever workflow and systems  they already have in place.  So build for flexibility,  as opposed to giving them something else to log into.  For all the reasons I'm sure people are,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 518.86,
+            "end": 531.74,
+            "text": " I mean, you have very little time,  and the other thing is clinicians hate  their information technology for the most,  they love their phones,  but they hate what their organization forces them to use."
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 531.74,
+            "end": 545.82,
+            "text": " Now that may be a gross generalization,  but I don't think it's too far off.  Data is sort of a four-letter word.  So over the last week,  the students have been learning about things like FHIR"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 545.82,
+            "end": 564.58,
+            "text": " and so on, are these any of the APIs that you use?  No, that's a...  No, so those are technologies with enormous potential.  You put up a paper that described  a risk stratification algorithm from 1984."
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 564.58,
+            "end": 580.46,
+            "text": " That paper, I'm sure, was supported with evidence  that it could make a big difference.  I'm getting awfully close to standing on a soapbox again,  but you have to understand that  healthcare is paid for based on delivering care,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 580.46,
+            "end": 596.34,
+            "text": " and the more complex the care is, the more you get paid.  And I'm not telling you this, I'm kind of sharing with you.  So the idea that a technology like FHIR  would open up EHRs to allow people  to just kind of drop things in and out,"
+        },
+        {
+            "number": "lec4",
+            "title": "part.005.mp3",
+            "start": 596.34,
+            "end": 601.46,
+            "text": " thereby taking away the monopoly  that the electronic healthcare system has."
+        }
+    ],
+    "text": " because you're addicted to opioids and hospital admissions because you have chronic complex bipolar schizophrenia. So we wanted to first understand, well, where is the greatest cost? What types of things are happening most frequently? And then you want to have the clinical team tell you, well, these are the types of resources we have. We have people that can address these issues, or we have interventions designed to solve these problems. And so you bring together, where is the greatest possible return on your investment from both a data standpoint, a financial standpoint, but also, and we can do something about it. After you do that, it's only then, after you have full agreement from executive teams that this is the very narrow thing that we think we can address, then we begin to apply machine learning to try to solve the problem. So what did that funnel lead to? What did you decide was the thing to address? It was try to reduce inpatient psychiatric admissions. And even then, the traditional way of reducing admissions, just because it came out of this tradition of 30-day readmissions, the traditional way of doing this has always been thought of in terms of 30 days out. But when we interviewed the teams, they said, actually, for this particular condition, it takes us more like 90 days to be able to have an impact. And so that clinical understanding mixed with what we have the resources to address, that's what steers, then, the application of machine learning to solve a specific problem. Okay, so psychiatric inpatient admissions. So these are patients who come to the ER for some psychiatric-related problem, and then when they're in the ER, they're admitted to the hospital, they're in the hospital for anywhere from a day to a few days, and you wanna find when are those gonna happen in the future. Yeah, and it could. What type of data is useful for that? Sure, and you don't have to just get through the ED, though, that's the most common. Any unplanned acute admission. Got it. So what kind of data is most useful for predicting that? Yeah, so every, I think, a philosophy that you all should take is whatever data you have should be your competitive advantage in solving the problem. And that's different than the way this has been done where folks are, they have made an algorithm somewhere else and then they're coming and telling you, hey, as long as you have claims data, then plug in my variables and I can help you. Our approach, and this is sort of derived from my interest from the start in solving the problem and trying to make the tools work faster, our approach is whatever data you have, we will bring it in and consider it. What ultimately then wins is dependent on the problem, but you would not be surprised to learn that there is some value in claims data. But there's a lot of value, you put labs up, there's a lot of value in labs. When it comes to behavioral health, and this is where you really have to understand healthcare, it's incredibly underdiagnosed. There's a stigma attached to carrying diagnosis codes that would describe you as having mental health challenges. And so claims alone is not sufficient for that reason. We find a lot of lift from care management. So when you have a care manager, that care manager is assessing you and you're filling out forms and surveying you and giving you different types of functional assessments or activities of daily living assessments. That data turns out to be very powerful. And then a dark horse that most people aren't used to using, we get a lot of lift out of the clinicians, whether it's psychiatrists or care managers' notes. So there's value in the written descriptions of a nurse's or a care manager's impressions of what's wrong, what has been done, what hasn't been done, and so on. So tell me a bit about the development process. So you figure out what you wanna predict. You at least have that in words. You have your data in one place, then what? Yeah. Well, I mean, you wouldn't be surprised. The very first thing we do is just try to throw a logistic regression at it to see what, we want the data, we want the story to make sense to begin with, and we're always looking for the simplest solution to the problem. Then the team sort of iterates back and forth through, well, based on how this data looks, let's, and the characteristics of it, the density, the sparsity, based on what we understand about this data, these guys are in and out of the plan, so we may have issues with data not existing in the time windows that you described. Then they're working their way through algorithms and feature selection approaches that seem to fit for the data that we have. But what error metrics do you optimize for? Well, you're gonna have to ask them. It's been too long. Okay. I'm 10 years out of being allowed to write code. But yeah, so, and then it's an iterative process where we have to be, this is a big deal, we have to be able to translate what, we do positive predictive value, obviously, and I like the way you described that because a lot of folks that have been trained in statistics for medicine, whether it's epidemiology or the like, are always looking for an R squared or area under ROC, and we have to help them understand that in order, that you can only care for so many people, so you don't really care what the area under ROC is for a population of, you know, for this client, 300,000 in the one plan that we were serving. You really care about for the top 100 or 200, and really that number should be derived based on your capacity. So if I can give you seven out of 10 for 100, you might go knock on their door, but for, let's say, between 1,000 and 2,000, that number goes down to four out of 10, maybe you should go with a less expensive intervention. Huge education component, helping people understand what they're seeing and how to interpret it, and helping them connect it back to what they're going to do with it. And then I think you're probably, in courses to follow, you'll go into all the challenges with interpretability and the like, but they all exist. So tell me a bit about how it's deployed. So once you build a model, how do you get your client to start using it? Yeah, so you don't start getting them ready when the model's ready. I've learned the hard way that that's far too late to involve them in the process. And in fact, the one bullet you had up here that I didn't completely agree with was this idea that these approaches are easier to plug into a workflow. Putting a number into an electronic health record may be easier, but when I think workflow, it's not just that the number appears at the right time, it's the culture of getting, put it this way, these care managers have spent the last 20, 30 years learning who needs their help, and everything about their training and their experience is to care for the people that are most acute. All of the red flags are going off, and here comes a bunch of nerds and computer science people that are suggesting that no, rather than your intuition and experience of 30 years, you should trust what a computer says to do. So there are two parts I want to understand better. First, how you deal with that problem, and second, I actually am curious about the technical details. Do you give them predictions on a piece of paper? Do you use APIs? Yeah, yeah. All right, so let me answer the technical one first, because it's a faster answer. You remember at the beginning of this, I said healthcare is pretty immature from a technical standpoint. So we have, it's never a piece of paper, but it can be an Excel spreadsheet delivered via secure FTP once a month, because that's all they're able to take right now based on their state of affairs. It can be a real-time call to an API. What we learned to do in forming a company serving healthcare is do not create a new interface, do not create a new login, accommodate whatever workflow and systems they already have in place. So build for flexibility, as opposed to giving them something else to log into. For all the reasons I'm sure people are, I mean, you have very little time, and the other thing is clinicians hate their information technology for the most, they love their phones, but they hate what their organization forces them to use. Now that may be a gross generalization, but I don't think it's too far off. Data is sort of a four-letter word. So over the last week, the students have been learning about things like FHIR and so on, are these any of the APIs that you use? No, that's a... No, so those are technologies with enormous potential. You put up a paper that described a risk stratification algorithm from 1984. That paper, I'm sure, was supported with evidence that it could make a big difference. I'm getting awfully close to standing on a soapbox again, but you have to understand that healthcare is paid for based on delivering care, and the more complex the care is, the more you get paid. And I'm not telling you this, I'm kind of sharing with you. So the idea that a technology like FHIR would open up EHRs to allow people to just kind of drop things in and out, thereby taking away the monopoly that the electronic healthcare system has."
+}

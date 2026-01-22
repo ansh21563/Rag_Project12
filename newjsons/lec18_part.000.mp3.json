@@ -1,0 +1,313 @@
+{
+    "chunks": [
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 0.0,
+            "end": 26.76,
+            "text": " So we're done with our segment on causal inference  and reinforcement learning.  And for the next week, today in Tuesday's lecture,  we'll be talking about disease progression modeling  and disease subtyping."
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 26.76,
+            "end": 40.8,
+            "text": " This is, from my perspective, a really exciting field.  It's one which has really a richness of literature,  going back to somewhat simple approaches  from a couple of decades ago, up to some really state  of the art methods, including one"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 40.8,
+            "end": 57.6,
+            "text": " which is in one of your readings for today's lecture.  And I could spend a few weeks just talking about this topic.  But instead, since we have a lot to cover in this course, what  I'll do today is give you a high-level overview of one  approach to try to think through these questions."
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 57.6,
+            "end": 68.2,
+            "text": " The methods in today's lecture will be somewhat simple.  They're meant to illustrate how simple methods can  go a long way.  And they're meant to illustrate also  how one could learn something really significant"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 68.2,
+            "end": 80.42,
+            "text": " about clinical outcomes and about predicting  disease progression from these simple methods.  And then in Tuesday's lecture, I'll ramp it up quite a bit.  And I'll talk about several more elaborate approaches  towards this problem, which tackle"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 80.42,
+            "end": 93.34,
+            "text": " some more substantial problems that will really elucidate  at the end of today's lecture.  So there's three types of questions  that we hope to answer when studying disease progression  modeling."
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 93.34,
+            "end": 103.06,
+            "text": " At a high level, I want you to think  about this type of picture and have  this in the back of your head throughout today  and Tuesday's lecture.  What you're seeing here is a single patient's disease"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 103.06,
+            "end": 115.3,
+            "text": " trajectory across time.  On the x-axis is time.  On the y-axis is some measure of disease burden.  So for example, you could think about that y-axis  as summarizing the amount of symptoms"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 115.3,
+            "end": 133.22,
+            "text": " that a patient is reporting or the amount of pain medication  that they're taking or some measure of what's  going on with them.  And initially, that disease burden might be somewhat low.  And maybe even the patient's in an undiagnosed disease"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 133.22,
+            "end": 143.54,
+            "text": " state at that time.  As the symptoms get worse and worse, at some point,  the patient might be diagnosed.  And that's what I'm illustrating by this gray curve.  This is the point in time which the patient is"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 143.54,
+            "end": 155.45999999999998,
+            "text": " diagnosed with their disease.  At the time of diagnosis, a variety of things might happen.  The patient might begin treatment.  And that treatment might, for example,  start to influence the disease burden."
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 155.45999999999998,
+            "end": 170.7,
+            "text": " And you might see a drop in disease burden initially.  If this is a cancer, unfortunately, often, we'll  see recurrences of the cancer.  And that might manifest by uphill peak  again, where the disease burden grows."
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 170.7,
+            "end": 184.45999999999998,
+            "text": " And once you start second line treatment,  that might succeed in lowering it again and so on.  And this might be a cycle that repeats over and over again.  For other diseases, for which have no cure, for example,  but which are managed on a day-to-day basis,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 184.45999999999998,
+            "end": 197.0,
+            "text": " and we'll talk about some of those,  you might see, even on a day-by-day basis, fluctuations.  Or you might see nothing happening for a while.  And then, for example, in autoimmune diseases,  you'll see these flare-ups, where the disease burden grows"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 197.0,
+            "end": 209.89999999999998,
+            "text": " a lot, then comes down again.  And it's really inexplicable why that happens.  So the types of questions that we'd like to really understand  here are, first, where is a patient in their disease  trajectory?"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 209.89999999999998,
+            "end": 225.57999999999998,
+            "text": " So a patient comes in today.  And they might be diagnosed today  because of symptoms somehow crossing some threshold  and then coming into the doctor's office.  But they could be anywhere in this disease trajectory"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 225.57999999999998,
+            "end": 239.98,
+            "text": " at the time of diagnosis.  And a key question is, can we stage patients  to understand, for example, things  like how long are they likely to live based on what's  currently going on with them?"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 239.98,
+            "end": 255.45999999999998,
+            "text": " A second question is, when will the disease progress?  So if you have a patient with kidney disease,  you might want to know something about,  when will this patient with kidney disease  need a transplant?"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 255.45999999999998,
+            "end": 267.54,
+            "text": " Another question is, how will treatment  affect that disease progression?  That I'm sort of hinting at here when  I'm showing these valleys that we conjecture  to be affected by treatment."
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 267.54,
+            "end": 279.88000000000005,
+            "text": " But one often wants to ask counterfactual questions,  like, what would happen to this patient's disease progression  if you did one treatment therapy versus another treatment  therapy?  So the example that I'm mentioning here in this slide"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 279.88000000000005,
+            "end": 291.96,
+            "text": " is a rare blood cancer named multiple myeloma.  It's rare.  And so you often won't find data sets  with that many patients in them.  So for example, this data set, which"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 291.96,
+            "end": 299.82,
+            "text": " I'm listing in the very bottom here  from the Multiple Myeloma Research Foundation Compass  Study, has roughly 1,000 patients.  And it's a publicly available data set.  Any of you can download it today."
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 299.82,
+            "end": 311.02,
+            "text": " And you can study questions like this about disease progression,  because you can look at laboratory tests across time.  You can look at when symptoms start to rise.  You have information about what treatments the patient is on.  And you have outcomes like death."
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 311.18,
+            "end": 324.34,
+            "text": " So for multiple myeloma, today's standard  for how one would attempt to stage a patient  looks a little bit like this.  Here I'm showing you two different staging systems.  On the left is the Duri-Salmon staging system,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 324.34,
+            "end": 334.26,
+            "text": " which is a bit older.  On the right is what's called the Revised International  Staging System.  A patient walks into their oncologist's office,  newly diagnosed with multiple myeloma."
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 334.26,
+            "end": 347.98,
+            "text": " And after doing a series of blood tests,  they're diagnosed with multiple myeloma.  And after doing a series of blood tests,  looking at quantities such as their hemoglobin rates,  amount of calcium in the blood, also doing, let's say,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 347.98,
+            "end": 366.62,
+            "text": " a biopsy of the patient's bone marrow  to measure amounts of different kinds of immunoglobulins,  doing gene expression assays to understand  various different genetic abnormalities,  that data would then feed into a staging system like this."
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 366.66,
+            "end": 382.18,
+            "text": " So in the Duri-Salmon staging system,  a patient who is in stage one is found  to have a very low M component production rate.  So that's what I'm showing over here.  And that really corresponds to the amount of disease activity"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 382.18,
+            "end": 404.18,
+            "text": " as measured by their immunoglobulins.  And since this is a blood cancer,  that's a very good marker of what's going on with the patient.  So this middle stage, which is called neither stage one  nor stage three, is characterized by, in this case,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 404.18,
+            "end": 416.58,
+            "text": " well, I'm not going to talk about that.  If you go to stage three for here,  you see that the M component levels are much higher.  If you look at X-ray studies of the patient's bones,  you'll see that there are lytic bone lesions, which"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 416.58,
+            "end": 428.44,
+            "text": " are caused by the disease and really  represent an advanced status of the disease.  And if you were to measure from the patient's urine  the amount of light chain production,  you see that it has much larger values as well."
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 428.44,
+            "end": 441.84,
+            "text": " Now, this is an older staging system.  In the middle now, I'm showing you a newer staging system,  which is both dramatically simpler and involves  some newer components.  So for example, in stage one, it looks at just four quantities."
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 441.84,
+            "end": 455.40000000000003,
+            "text": " First, it looks at the patient's albumin and beta-2  microglobulin levels.  Those are biomarkers that can be easily measured from the blood.  And it says no high-risk cytogenetics.  So now we're starting to bring in genetic quantities in terms"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 455.40000000000003,
+            "end": 470.06,
+            "text": " of quantifying risk levels.  Stage three is characterized by significantly higher  beta-2 microglobulin levels, translocations  corresponding to particular high-risk cytogenetics.  This will not be the focus of the next two lectures,"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 470.06,
+            "end": 487.40000000000003,
+            "text": " but Pete is going to go much more detail  into genetic aspects of precision medicine  in a week and a half from now.  And in this way, each one of these stages  represents something about the belief of how far along"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 487.40000000000003,
+            "end": 498.42,
+            "text": " the patient is and is really strongly used  to guide treatment therapy.  So for example, patient is in stage one,  and oncologist might decide we're not going  to treat this patient today."
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 503.12,
+            "end": 516.28,
+            "text": " So a different type of question, whereas you  can think about this as being one  of characterizing on a patient-specific level.  One patient walks in.  We want to stage that specific patient."
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 516.28,
+            "end": 528.64,
+            "text": " And we're going to look at some long-term outcomes  and look at the correlation between stage  and long-term outcomes.  A very different question is a descriptive type question.  Can we say, what will the typical trajectory"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 528.64,
+            "end": 540.52,
+            "text": " of this disease look like?  So for example, we'll talk about Parkinson's disease  for the next couple of minutes.  Parkinson's disease is a progressive nervous system  disorder."
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 540.52,
+            "end": 556.76,
+            "text": " It's a very common one as opposed to multiple myeloma.  Parkinson's affects over 1 in 100 people age 60 and above.  And like multiple myeloma, there is also  disease registries that are publicly available  and that you could study Parkinson's."
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 560.16,
+            "end": 568.6800000000001,
+            "text": " Now, various researchers have used those data sets  in the past.  And they've created something that  looks a little bit like this to try to characterize,  at now a population level, what it"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 568.6800000000001,
+            "end": 583.6,
+            "text": " means for a patient to progress through their disease.  So on the x-axis, again, I have time now.  On the y-axis, again, it denotes some level  of disease disability.  But what we're showing here now are"
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 583.6,
+            "end": 594.9200000000001,
+            "text": " symptoms that might arise at different parts of the disease  stage.  So very early in Parkinson's, you  might have some sleep behavior disorders, some depression,  maybe constipation, anxiety."
+        },
+        {
+            "number": "lec18",
+            "title": "part.000.mp3",
+            "start": 594.9200000000001,
+            "end": 601.28,
+            "text": " As the disease gets further and further along,  you'll see symptoms such as mild cognitive impairment."
+        }
+    ],
+    "text": " So we're done with our segment on causal inference and reinforcement learning. And for the next week, today in Tuesday's lecture, we'll be talking about disease progression modeling and disease subtyping. This is, from my perspective, a really exciting field. It's one which has really a richness of literature, going back to somewhat simple approaches from a couple of decades ago, up to some really state of the art methods, including one which is in one of your readings for today's lecture. And I could spend a few weeks just talking about this topic. But instead, since we have a lot to cover in this course, what I'll do today is give you a high-level overview of one approach to try to think through these questions. The methods in today's lecture will be somewhat simple. They're meant to illustrate how simple methods can go a long way. And they're meant to illustrate also how one could learn something really significant about clinical outcomes and about predicting disease progression from these simple methods. And then in Tuesday's lecture, I'll ramp it up quite a bit. And I'll talk about several more elaborate approaches towards this problem, which tackle some more substantial problems that will really elucidate at the end of today's lecture. So there's three types of questions that we hope to answer when studying disease progression modeling. At a high level, I want you to think about this type of picture and have this in the back of your head throughout today and Tuesday's lecture. What you're seeing here is a single patient's disease trajectory across time. On the x-axis is time. On the y-axis is some measure of disease burden. So for example, you could think about that y-axis as summarizing the amount of symptoms that a patient is reporting or the amount of pain medication that they're taking or some measure of what's going on with them. And initially, that disease burden might be somewhat low. And maybe even the patient's in an undiagnosed disease state at that time. As the symptoms get worse and worse, at some point, the patient might be diagnosed. And that's what I'm illustrating by this gray curve. This is the point in time which the patient is diagnosed with their disease. At the time of diagnosis, a variety of things might happen. The patient might begin treatment. And that treatment might, for example, start to influence the disease burden. And you might see a drop in disease burden initially. If this is a cancer, unfortunately, often, we'll see recurrences of the cancer. And that might manifest by uphill peak again, where the disease burden grows. And once you start second line treatment, that might succeed in lowering it again and so on. And this might be a cycle that repeats over and over again. For other diseases, for which have no cure, for example, but which are managed on a day-to-day basis, and we'll talk about some of those, you might see, even on a day-by-day basis, fluctuations. Or you might see nothing happening for a while. And then, for example, in autoimmune diseases, you'll see these flare-ups, where the disease burden grows a lot, then comes down again. And it's really inexplicable why that happens. So the types of questions that we'd like to really understand here are, first, where is a patient in their disease trajectory? So a patient comes in today. And they might be diagnosed today because of symptoms somehow crossing some threshold and then coming into the doctor's office. But they could be anywhere in this disease trajectory at the time of diagnosis. And a key question is, can we stage patients to understand, for example, things like how long are they likely to live based on what's currently going on with them? A second question is, when will the disease progress? So if you have a patient with kidney disease, you might want to know something about, when will this patient with kidney disease need a transplant? Another question is, how will treatment affect that disease progression? That I'm sort of hinting at here when I'm showing these valleys that we conjecture to be affected by treatment. But one often wants to ask counterfactual questions, like, what would happen to this patient's disease progression if you did one treatment therapy versus another treatment therapy? So the example that I'm mentioning here in this slide is a rare blood cancer named multiple myeloma. It's rare. And so you often won't find data sets with that many patients in them. So for example, this data set, which I'm listing in the very bottom here from the Multiple Myeloma Research Foundation Compass Study, has roughly 1,000 patients. And it's a publicly available data set. Any of you can download it today. And you can study questions like this about disease progression, because you can look at laboratory tests across time. You can look at when symptoms start to rise. You have information about what treatments the patient is on. And you have outcomes like death. So for multiple myeloma, today's standard for how one would attempt to stage a patient looks a little bit like this. Here I'm showing you two different staging systems. On the left is the Duri-Salmon staging system, which is a bit older. On the right is what's called the Revised International Staging System. A patient walks into their oncologist's office, newly diagnosed with multiple myeloma. And after doing a series of blood tests, they're diagnosed with multiple myeloma. And after doing a series of blood tests, looking at quantities such as their hemoglobin rates, amount of calcium in the blood, also doing, let's say, a biopsy of the patient's bone marrow to measure amounts of different kinds of immunoglobulins, doing gene expression assays to understand various different genetic abnormalities, that data would then feed into a staging system like this. So in the Duri-Salmon staging system, a patient who is in stage one is found to have a very low M component production rate. So that's what I'm showing over here. And that really corresponds to the amount of disease activity as measured by their immunoglobulins. And since this is a blood cancer, that's a very good marker of what's going on with the patient. So this middle stage, which is called neither stage one nor stage three, is characterized by, in this case, well, I'm not going to talk about that. If you go to stage three for here, you see that the M component levels are much higher. If you look at X-ray studies of the patient's bones, you'll see that there are lytic bone lesions, which are caused by the disease and really represent an advanced status of the disease. And if you were to measure from the patient's urine the amount of light chain production, you see that it has much larger values as well. Now, this is an older staging system. In the middle now, I'm showing you a newer staging system, which is both dramatically simpler and involves some newer components. So for example, in stage one, it looks at just four quantities. First, it looks at the patient's albumin and beta-2 microglobulin levels. Those are biomarkers that can be easily measured from the blood. And it says no high-risk cytogenetics. So now we're starting to bring in genetic quantities in terms of quantifying risk levels. Stage three is characterized by significantly higher beta-2 microglobulin levels, translocations corresponding to particular high-risk cytogenetics. This will not be the focus of the next two lectures, but Pete is going to go much more detail into genetic aspects of precision medicine in a week and a half from now. And in this way, each one of these stages represents something about the belief of how far along the patient is and is really strongly used to guide treatment therapy. So for example, patient is in stage one, and oncologist might decide we're not going to treat this patient today. So a different type of question, whereas you can think about this as being one of characterizing on a patient-specific level. One patient walks in. We want to stage that specific patient. And we're going to look at some long-term outcomes and look at the correlation between stage and long-term outcomes. A very different question is a descriptive type question. Can we say, what will the typical trajectory of this disease look like? So for example, we'll talk about Parkinson's disease for the next couple of minutes. Parkinson's disease is a progressive nervous system disorder. It's a very common one as opposed to multiple myeloma. Parkinson's affects over 1 in 100 people age 60 and above. And like multiple myeloma, there is also disease registries that are publicly available and that you could study Parkinson's. Now, various researchers have used those data sets in the past. And they've created something that looks a little bit like this to try to characterize, at now a population level, what it means for a patient to progress through their disease. So on the x-axis, again, I have time now. On the y-axis, again, it denotes some level of disease disability. But what we're showing here now are symptoms that might arise at different parts of the disease stage. So very early in Parkinson's, you might have some sleep behavior disorders, some depression, maybe constipation, anxiety. As the disease gets further and further along, you'll see symptoms such as mild cognitive impairment."
+}

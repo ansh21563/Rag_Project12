@@ -1,0 +1,306 @@
+{
+    "chunks": [
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 0.0,
+            "end": 11.34,
+            "text": " word in my explanation which should really hint at it.  I use the word clinical workflow.  And this, I think, is one of the biggest challenges,  which is that the algorithms were designed  to solve narrow problems."
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 11.34,
+            "end": 30.46,
+            "text": " They weren't necessarily even the most important problems,  because clinicians generally do a very good job at diagnosis.  And there was a big gap between the input  that they expected and the current clinical workflow.  So imagine that you have now a mainframe computer."
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 30.46,
+            "end": 47.46,
+            "text": " This was the 80s.  And you have a clinician who has to talk to the patient,  get some information, go back to the computer,  type in a structured data, the symptoms  that the patient's reporting, get information back"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 47.46,
+            "end": 62.44,
+            "text": " from the computer, and iterate.  As you can imagine, that takes a lot of time.  And time is money.  And unfortunately, it prevents it from being used.  Moreover, despite the fact that it took a lot of effort"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 62.44,
+            "end": 73.92,
+            "text": " to use when outside of existing clinical workflows,  these systems were also really difficult to maintain.  So I talked about how this was elicited  from 15-person years of work.  There was no machine learning here."
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 73.92,
+            "end": 86.08,
+            "text": " It was called artificial intelligence,  because one tries to reason in an artificial way  like humans might.  But there was no learning from data in this.  And so what that means is if you then go to a new place,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 86.08,
+            "end": 99.28,
+            "text": " let's say this was developed in Pittsburgh,  and now you go to Los Angeles or to Beijing or to London,  and you want to apply the same algorithms,  you suddenly have to rederive parts of this model  from scratch."
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 99.28,
+            "end": 110.64,
+            "text": " For example, the prior probabilities of the diseases  are going to be very different depending  on where you are in the world.  Now, you might want to go to a different domain outside  of primary care."
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 110.64,
+            "end": 125.88,
+            "text": " And again, one has to spend a huge amount of effort  to derive such models.  As new medicine discoveries are made,  one has to, again, update these models.  And this has been a huge blocker to deployment."
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 125.88,
+            "end": 141.96,
+            "text": " I'll move forward to one more example, also from the 1980s.  This is now for a different type of question,  not one of how do you do diagnosis,  but how do you actually do discovery?  So this is an example from Stanford."
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 141.96,
+            "end": 157.06,
+            "text": " And it was a really interesting case  where one took a data-driven approach to try  to make medical discoveries.  There was a database of what's called a disease registry  from patients with rheumatoid arthritis, which"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 157.06,
+            "end": 170.16,
+            "text": " is a chronic disease.  It's an autoimmune condition, where  for each patient over a series of different visits,  one would record, for example, here it shows,  this is visit number one."
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 170.16,
+            "end": 182.08,
+            "text": " The date was January 17, 1979.  The knee pain, the patient's knee pain  was reported as severe.  Their fatigue was moderate.  Temperature was 38.5 Celsius."
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 182.08,
+            "end": 197.39999999999998,
+            "text": " The diagnosis for this patient was actually  a different autoimmune condition called systemic lupus.  We have some laboratory test values  for their creatinine and blood urate nitrogen.  And we know something about their medication."
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 197.39999999999998,
+            "end": 212.26,
+            "text": " In this case, they were on prednisone, a steroid.  And one has this data at every point in time.  This was recorded, almost certainly  was recorded on paper.  And then later, these were collected into a computer"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 212.26,
+            "end": 220.6,
+            "text": " format.  But then it provides the possibility  to ask questions and make new discoveries.  So for example, in this work, there  was a discovery module, which would"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 220.6,
+            "end": 233.44,
+            "text": " make causal hypotheses about what aspects might cause  other aspects.  It would then do some basic statistics  to check about the statistical validity  of those causal hypotheses."
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 233.44,
+            "end": 246.44,
+            "text": " It would then present those to a domain expert  to try to check off, does this make sense or not?  For those that are accepted, it then  uses that knowledge that was just  learned to iterate to try to make new discoveries."
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 246.44,
+            "end": 257.52,
+            "text": " And one of the main findings from this paper  was that prednisone elevates cholesterol.  That was published in the Annals of Internal Medicine  in 1986.  So these are all very early examples"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 257.52,
+            "end": 270.03999999999996,
+            "text": " of data-driven approaches to improve  both medicine and health care.  Now flip forward to the 1990s, neural networks  started to become popular.  Not quite the neural networks that"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 270.03999999999996,
+            "end": 281.36,
+            "text": " we're familiar with in today's day and age,  but nonetheless, they shared very much  of the same elements.  So just in 1990, there were 88 published studies  using neural networks for various different medical"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 281.36,
+            "end": 294.04,
+            "text": " problems.  One of the things that really differentiated  those approaches to what we see in today's landscape  is that the number of features were very small.  So usually, features which were similar to what I showed you"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 294.04,
+            "end": 312.72,
+            "text": " in the previous slide, so structured data  that was manually curated for the purpose of using  in machine learning.  And there was nothing automatic about this.  So one would have to have assistants gather the data."
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 312.72,
+            "end": 325.72,
+            "text": " And because of that, typically, there  were very small number of samples for each study  that were used in machine learning.  Now, these models, although very effective,  and I'll show you some examples in the next slide,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 325.72,
+            "end": 335.44,
+            "text": " also suffered from the same challenges  I mentioned earlier.  They didn't fit well into clinical workflows.  It was hard to get enough training data because  of the manual efforts involved."
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 335.44,
+            "end": 350.48,
+            "text": " And what the community found, even in the early 1990s,  is that these algorithms did not generalize well.  If you went through this huge effort of collecting training  data, learning your model, and validating your model at one  institution, and you then take it to a different one,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 350.48,
+            "end": 360.82,
+            "text": " it just works much worse.  And that really prevented translation  of these technologies into clinical practice.  So what were these different domains that were studied?  Well, here are a few examples."
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 360.82,
+            "end": 382.92,
+            "text": " It's a bit small, so I'll read it out to you.  Study in breast cancer, myocardial infarction,  heart attack, lower back pain, used  to predict psychiatric length of stay for inpatient, skin  tumors, head injuries, prediction of dementia,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 382.92,
+            "end": 397.1,
+            "text": " understanding progression of diabetes,  and a variety of other problems, which, again,  are of the nature that we see about,  we read about in the news today in modern attempts  to apply machine learning in health care."
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 397.1,
+            "end": 410.34000000000003,
+            "text": " The number of training examples, as mentioned,  were very few, ranging from 39 to, in some cases, 3,000.  Those are individuals, humans.  And the networks, the neural networks,  they weren't completely shallow, but they"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 410.34000000000003,
+            "end": 422.58,
+            "text": " weren't very deep either.  So these were the architectures.  They might be 60 neurons, and then seven, and then six,  for example, in terms of each of the layers  of the neural network."
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 422.58,
+            "end": 435.3,
+            "text": " By the way, that sort of makes sense,  given the type of data that was fed into it.  So none of this is new in terms of the goals.  So what's changed?  Why do I think that, despite the fact"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 435.3,
+            "end": 447.38,
+            "text": " that we've had what could arguably  be called a failure for the last 30 or 40 years,  that we might actually have some chances of succeeding now?  And the big differentiator, what I'll call now the opportunity,  is data."
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 447.38,
+            "end": 464.1,
+            "text": " So whereas in the past, much of the work  in artificial intelligence in medicine was not data-driven,  it was based on trying to elicit as much domain knowledge as one  can from clinical domain experts,  in some cases, gathering a little bit of data,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 464.1,
+            "end": 478.66,
+            "text": " today we have an amazing opportunity  because of the prevalence of electronic medical records,  both in the United States and elsewhere.  Now, here in the United States, for example,  the story wasn't that way even back in 2008,"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 478.66,
+            "end": 496.38,
+            "text": " when the adoption of electronic medical records  was under 10% across the US.  But then there was an economic disaster in the US.  And as part of the economic stimulus package, which  President Obama initiated, there was something"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 496.38,
+            "end": 514.52,
+            "text": " like $30 billion allocated to hospitals purchasing  electronic medical records.  And this is already a first example that we see of policy  being really influential to open the stage to the types  of work that we're going to be able to do in this course"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 514.52,
+            "end": 527.66,
+            "text": " today.  So money was made available as incentives for hospitals  to purchase electronic medical records.  And as a result, the adoption increased dramatically.  This is a really old number from 2015 of 84% of hospitals."
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 527.66,
+            "end": 539.86,
+            "text": " And now today, it's actually much larger.  So data is being collected in electronic form.  And that presents an opportunity to try to do research on it.  It presents an opportunity to do machine learning on it.  And it presents an opportunity to start"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 539.86,
+            "end": 552.82,
+            "text": " to deploy machine learning algorithms, where  rather than having to manually input data for a patient,  we can just draw it automatically  from data that's already available in electronic form.  And so there are a number of data sets"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 552.82,
+            "end": 569.9599999999999,
+            "text": " that have been made available for research and development  in this space.  Here at MIT, there has been a major effort  pioneered by Professor Roger Marks in the ECS  and Institute for Medical Engineering departments"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 569.9599999999999,
+            "end": 582.8,
+            "text": " to create what's known as the Physionet or MIMIC databases.  MIMIC contains data from over 40,000 patients  in intensive care units.  And it's very rich data.  It contains basically everything that's"
+        },
+        {
+            "number": "lec1",
+            "title": "part.001.mp3",
+            "start": 582.8,
+            "end": 599.96,
+            "text": " being collected in the intensive care unit,  everything from notes that are written by both nurses  and by attendings to vital signs that  are being collected by monitors that are attached to patients,  collecting their blood pressure, oxygen saturation."
+        }
+    ],
+    "text": " word in my explanation which should really hint at it. I use the word clinical workflow. And this, I think, is one of the biggest challenges, which is that the algorithms were designed to solve narrow problems. They weren't necessarily even the most important problems, because clinicians generally do a very good job at diagnosis. And there was a big gap between the input that they expected and the current clinical workflow. So imagine that you have now a mainframe computer. This was the 80s. And you have a clinician who has to talk to the patient, get some information, go back to the computer, type in a structured data, the symptoms that the patient's reporting, get information back from the computer, and iterate. As you can imagine, that takes a lot of time. And time is money. And unfortunately, it prevents it from being used. Moreover, despite the fact that it took a lot of effort to use when outside of existing clinical workflows, these systems were also really difficult to maintain. So I talked about how this was elicited from 15-person years of work. There was no machine learning here. It was called artificial intelligence, because one tries to reason in an artificial way like humans might. But there was no learning from data in this. And so what that means is if you then go to a new place, let's say this was developed in Pittsburgh, and now you go to Los Angeles or to Beijing or to London, and you want to apply the same algorithms, you suddenly have to rederive parts of this model from scratch. For example, the prior probabilities of the diseases are going to be very different depending on where you are in the world. Now, you might want to go to a different domain outside of primary care. And again, one has to spend a huge amount of effort to derive such models. As new medicine discoveries are made, one has to, again, update these models. And this has been a huge blocker to deployment. I'll move forward to one more example, also from the 1980s. This is now for a different type of question, not one of how do you do diagnosis, but how do you actually do discovery? So this is an example from Stanford. And it was a really interesting case where one took a data-driven approach to try to make medical discoveries. There was a database of what's called a disease registry from patients with rheumatoid arthritis, which is a chronic disease. It's an autoimmune condition, where for each patient over a series of different visits, one would record, for example, here it shows, this is visit number one. The date was January 17, 1979. The knee pain, the patient's knee pain was reported as severe. Their fatigue was moderate. Temperature was 38.5 Celsius. The diagnosis for this patient was actually a different autoimmune condition called systemic lupus. We have some laboratory test values for their creatinine and blood urate nitrogen. And we know something about their medication. In this case, they were on prednisone, a steroid. And one has this data at every point in time. This was recorded, almost certainly was recorded on paper. And then later, these were collected into a computer format. But then it provides the possibility to ask questions and make new discoveries. So for example, in this work, there was a discovery module, which would make causal hypotheses about what aspects might cause other aspects. It would then do some basic statistics to check about the statistical validity of those causal hypotheses. It would then present those to a domain expert to try to check off, does this make sense or not? For those that are accepted, it then uses that knowledge that was just learned to iterate to try to make new discoveries. And one of the main findings from this paper was that prednisone elevates cholesterol. That was published in the Annals of Internal Medicine in 1986. So these are all very early examples of data-driven approaches to improve both medicine and health care. Now flip forward to the 1990s, neural networks started to become popular. Not quite the neural networks that we're familiar with in today's day and age, but nonetheless, they shared very much of the same elements. So just in 1990, there were 88 published studies using neural networks for various different medical problems. One of the things that really differentiated those approaches to what we see in today's landscape is that the number of features were very small. So usually, features which were similar to what I showed you in the previous slide, so structured data that was manually curated for the purpose of using in machine learning. And there was nothing automatic about this. So one would have to have assistants gather the data. And because of that, typically, there were very small number of samples for each study that were used in machine learning. Now, these models, although very effective, and I'll show you some examples in the next slide, also suffered from the same challenges I mentioned earlier. They didn't fit well into clinical workflows. It was hard to get enough training data because of the manual efforts involved. And what the community found, even in the early 1990s, is that these algorithms did not generalize well. If you went through this huge effort of collecting training data, learning your model, and validating your model at one institution, and you then take it to a different one, it just works much worse. And that really prevented translation of these technologies into clinical practice. So what were these different domains that were studied? Well, here are a few examples. It's a bit small, so I'll read it out to you. Study in breast cancer, myocardial infarction, heart attack, lower back pain, used to predict psychiatric length of stay for inpatient, skin tumors, head injuries, prediction of dementia, understanding progression of diabetes, and a variety of other problems, which, again, are of the nature that we see about, we read about in the news today in modern attempts to apply machine learning in health care. The number of training examples, as mentioned, were very few, ranging from 39 to, in some cases, 3,000. Those are individuals, humans. And the networks, the neural networks, they weren't completely shallow, but they weren't very deep either. So these were the architectures. They might be 60 neurons, and then seven, and then six, for example, in terms of each of the layers of the neural network. By the way, that sort of makes sense, given the type of data that was fed into it. So none of this is new in terms of the goals. So what's changed? Why do I think that, despite the fact that we've had what could arguably be called a failure for the last 30 or 40 years, that we might actually have some chances of succeeding now? And the big differentiator, what I'll call now the opportunity, is data. So whereas in the past, much of the work in artificial intelligence in medicine was not data-driven, it was based on trying to elicit as much domain knowledge as one can from clinical domain experts, in some cases, gathering a little bit of data, today we have an amazing opportunity because of the prevalence of electronic medical records, both in the United States and elsewhere. Now, here in the United States, for example, the story wasn't that way even back in 2008, when the adoption of electronic medical records was under 10% across the US. But then there was an economic disaster in the US. And as part of the economic stimulus package, which President Obama initiated, there was something like $30 billion allocated to hospitals purchasing electronic medical records. And this is already a first example that we see of policy being really influential to open the stage to the types of work that we're going to be able to do in this course today. So money was made available as incentives for hospitals to purchase electronic medical records. And as a result, the adoption increased dramatically. This is a really old number from 2015 of 84% of hospitals. And now today, it's actually much larger. So data is being collected in electronic form. And that presents an opportunity to try to do research on it. It presents an opportunity to do machine learning on it. And it presents an opportunity to start to deploy machine learning algorithms, where rather than having to manually input data for a patient, we can just draw it automatically from data that's already available in electronic form. And so there are a number of data sets that have been made available for research and development in this space. Here at MIT, there has been a major effort pioneered by Professor Roger Marks in the ECS and Institute for Medical Engineering departments to create what's known as the Physionet or MIMIC databases. MIMIC contains data from over 40,000 patients in intensive care units. And it's very rich data. It contains basically everything that's being collected in the intensive care unit, everything from notes that are written by both nurses and by attendings to vital signs that are being collected by monitors that are attached to patients, collecting their blood pressure, oxygen saturation."
+}
